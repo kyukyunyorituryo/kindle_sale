@@ -119,6 +119,19 @@ templeterender(picturebooks)
 for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
 }, false);
 }
+function searchword(){
+var searchbook = document.getElementById('search');
+searchbook.addEventListener('click', dosearch, false);
+}
+function dosearch(){
+nav=[]
+var searchtext = document.getElementById('searchtext').value;
+searchbooks = items.filter(word => word.Title.includes(searchtext));
+$('#frame').children().remove();
+templeterender(searchbooks)
+for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
+}
+
 //日付を選択して切り替える
 function selectdays(day){
 
@@ -167,7 +180,7 @@ otherfn()
 hobbyfn()
 literaturefn()
 picturebookfn()
-
+searchword()
 $('#datetimepicker1').on("dp.change", function(e){
 
 selectdays($(this).val())
