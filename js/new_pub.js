@@ -165,10 +165,14 @@ searchword()
 
 var items
 query=getQuery()
-
+if (query!==undefined){
+queryword=decodeURI(query)
+document.getElementById('searchtext').value=queryword
+}
 var url = location.href ;
 //frameに子要素がなかったら実行する
 child=document.getElementById('frame').children
+
 if (child.length==0){
 nextday='芳文社'
 json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+nextday+"j.json"
@@ -183,4 +187,5 @@ json_data = encodeURI(json_data)
 getJSON(json_data)
     for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
 }
+dosearch()
   });
