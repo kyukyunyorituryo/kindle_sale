@@ -132,26 +132,7 @@ templeterender(searchbooks)
 for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
 }
 
-//日付を選択して切り替える
-function selectdays(day){
 
-nav=[]
-var items
-json_data= "https://kyukyunyorituryo.github.io/new_epub/json/"+day+"j.json"
-getJSON(json_data)
-$('#frame').children().remove();
-for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
-document.getElementById('release').textContent=day+'の新刊'
-}
-
-function getNextYMD(now){
-    now.setDate(now.getDate() + 1);
-    var y = now.getFullYear();
-    var m = ("00" + (now.getMonth()+1)).slice(-2);
-    var d = ("00" + now.getDate()).slice(-2);
-    var result = y + m + d;
-    return result;
-  }
 var getQuery = function() {
 	var query_array = [];
 	
@@ -166,7 +147,7 @@ var getQuery = function() {
 		tmp_arr = e.split('=');
 		query_array[ tmp_arr[0] ] = tmp_arr[1];
 	})
-   query=query_array.day
+   query=query_array.search
 	return query; 
 }
 
@@ -181,11 +162,9 @@ hobbyfn()
 literaturefn()
 picturebookfn()
 searchword()
-$('#datetimepicker1').on("dp.change", function(e){
 
-selectdays($(this).val())
-});
 var items
+query=getQuery()
 
 var url = location.href ;
 //frameに子要素がなかったら実行する
