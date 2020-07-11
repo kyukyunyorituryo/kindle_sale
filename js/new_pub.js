@@ -126,7 +126,7 @@ searchbook.addEventListener('click', dosearch, false);
 function dosearch(){
 nav=[]
 var searchtext = document.getElementById('searchtext').value;
-searchbooks = items.filter(word => word.Title.includes(searchtext));
+searchbooks = items.filter(word => (word.Title.includes(searchtext)||word.Publisher.includes(searchtext)||word.Contributor.includes(searchtext)||word.Category.includes(searchtext)));
 $('#frame').children().remove();
 templeterender(searchbooks)
 for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
