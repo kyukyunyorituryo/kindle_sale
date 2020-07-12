@@ -181,7 +181,7 @@ getJSON(json_data)
     for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
 }
 else{
-date='芳文社'
+date=url.replace(/^.+kindle_sale\/(.+?).html/g, '$1')
 json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+date+"j.json"
 json_data = encodeURI(json_data)
 getJSON(json_data)
