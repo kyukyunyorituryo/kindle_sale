@@ -18,8 +18,8 @@
 <meta name="twitter:title" content="新刊チェック">
 <meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
 <meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" /> 
-<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
     <title>新刊チェック</title>
     <!-- BootstrapのCSS読み込み -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -102,12 +102,19 @@
             </ul>
         </div>
         <!-- snsボタン終了 -->
-        <h2 class="alert alert-success">絞り込み検索</h2>
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
         <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
                 <div class="form-inline my-2 my-lg-0">
                     <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
                     <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
                 </div>
+
 <div class="nondisplayFrame">
         <h2 class="alert alert-success">カテゴリの選択</h2>
 <button id='comic' type="button" class="btn btn-outline-primary">コミック</button>

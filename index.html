@@ -103,13 +103,22 @@
         
          <h2 class="alert alert-success">開催中のセール</h2>
     <p><a class="nav-link" href="list.html">リスト一覧</a></p>
-    
+<div>
+
+</div>
         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="js/hikaku.js"></script>
+<hr>
         <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
                 <div class="form-inline my-2 my-lg-0">
                     <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
                     <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
                 </div>
+
 <div class="nondisplayFrame">
         <h2 class="alert alert-success">カテゴリの選択</h2>
 <button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
