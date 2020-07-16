@@ -183,7 +183,7 @@ getJSON(json_data)
 else{
 
 var url = location.href ;
-date=url.replace(/^.+kindle_sale\/html\/(.+?)\.html(.+?)$/g, '$1')
+date=url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1]
 date=decodeURI(date)
 json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+date+"j.json"
 json_data = encodeURI(json_data)
