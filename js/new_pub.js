@@ -174,7 +174,7 @@ document.getElementById('searchtext').value=queryword
 child=document.getElementById('frame').children
 
 if (child.length==0){
-nextday='芳文社'
+nextday='グループゼロ'
 json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+nextday+"j.json"
 json_data = encodeURI(json_data)
 getJSON(json_data)
