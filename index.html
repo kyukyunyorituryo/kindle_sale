@@ -1,22 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--OGP -->
-    <meta property="og:title" content="kindleセール品のチェック" />
+    <meta property="og:title" content="セールチェック" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
 <meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
 <meta property="og:site_name" content="セールチェック" />
-<meta property="og:description" content="キンドルのセール品を一覧で表示する「セールチェック」" />
+<meta property="og:description" content="キンドルセール品を一覧で表示する「セールチェック」" />
     <!--Twitterカード -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@99nyorituryo">
 <meta name="twitter:creator" content="@99nyorituryo">
-<meta name="twitter:title" content="新刊チェック">
-<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
+<meta name="twitter:title" content="セールチェック">
+<meta name="twitter:description" content="キンドルセール品を一覧で表示する「セールチェック」">
 <meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" /> 
 <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
@@ -42,10 +42,16 @@
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <!-- datetimepicker読み込み -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/ja.js" type="text/javascript"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="js/share.js"></script>
 <script type="text/javascript" src="js/ejs.min.js"></script>
-<script type="text/javascript" src="js/new_pub.js"></script>
 </head>
 <body>
 
@@ -77,6 +83,11 @@
                   <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
                   </li>
 
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+                </form>
             </div><!-- /.navbar-collapse -->
         </nav>
     </header>
@@ -100,72 +111,41 @@
             </ul>
         </div>
         <!-- snsボタン終了 -->
-        
-         <h2 class="alert alert-success">開催中のセール</h2>
-    <p><a class="nav-link" href="list.html">リスト一覧</a></p>
-<div>
+        <h2 class="alert alert-success">開催中のセールリスト</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="html/グループゼロ.html">グループ・ゼロ、６円、１１円セール </a></li>
+                <li class="list-group-item"><a href="html/ナンバーナイン.html">ナンバーナイン、11円セール　7/24まで</li>
 
-</div>
-        <h2 class="alert alert-success">絞り込み検索</h2>
-<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
-<input type="file" id="csvfile" accept="text/csv,.csv">
+                <li class="list-group-item"><a href="html/ベンジャネット.html">ベンジャネット社１１円セール 7/25まで</li>
 
-<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
-<script src="js/hikaku.js"></script>
-<hr>
-        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
-                <div class="form-inline my-2 my-lg-0">
-                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
-                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
-                </div>
+                <li class="list-group-item"><a href="html/電書バト.html">電書バト１円～セール 7/24日まで</li>
+                <li class="list-group-item"><a href="html/角川.html">角川【対象50％OFF】異世界で成り上がっちゃった！フェア 7/30まで</li>
+                <li class="list-group-item"><a href="html/コミックフラッパー.html">MFコミックス　フラッパーシリーズ 50%OFF　7/30まで</li>
+                <li class="list-group-item"><a href="html/幻冬舎.html">幻冬舎 2020年上半期ベストフェア（7/30まで） </li>
+                <li class="list-group-item"><a href="html/夏の読書.html">夏の読書フェア ｰ ビジネス・IT・実用・ラノベなど（7/30まで） </li>
+                <li class="list-group-item"><a href="html/ブルーバックス.html">【夏☆電書2020】ブルーバックス ベストヒット２００フェア　7/30日まで</li>
+                <li class="list-group-item"><a href="html/森博嗣.html">【夏☆電書2020】電子書籍デビューを応援！ はじめての森博嗣フェア　7/30日まで</li>
+                <li class="list-group-item"><a href="html/今野敏.html">【夏☆電書2020】人気No.1エンタメ作家！今野敏フェア　7/30日まで</li>
+                <li class="list-group-item"><a href="html/若おかみ.html">キッズステーションにてアニメ放送開始！ 講談社『若おかみは小学生！』フェア　7/30日まで</li>
+                <li class="list-group-item"><a href="html/上巻.html">【夏☆電書2020】 上巻99円(税込)フェア　第2期　7/30日まで</li>
+                <li class="list-group-item"><a href="html/ディスカヴァー.html">ディスカヴァー・トウエンティワンの2020年上半期BEST　7/31日まで</li>
+                <li class="list-group-item"><a href="html/ハーパーコリンズ.html">100タイトル50％OFF！ ハーパーBOOKS 5周年フェア　7/30日まで</li>
+                <li class="list-group-item"><a href="html/ビブリア.html">KADOKAWA ビブリア古書堂の事件手帖×横溝正史フェア　30％OFF　7/30日まで</li>
+                <li class="list-group-item"><a href="html/ハードボイルド.html">【夏☆電書2020】講談社　 ハードボイルド&冒険小説特集　30％OFF　7/30日まで</li>
+                <li class="list-group-item"><a href="html/オールヒーロー.html">夏☆電書2020】 オールヒーローフェスティバル　50％OFF　7/30日まで</li>
+                <li class="list-group-item"><a href="html/月間ガンガン.html">ガンガン読もうぜ！スクエニ夏祭り!! 2020 月刊ガンガンJORKERバックナンバー特価　100円　7/30日まで</li>
 
-<div class="nondisplayFrame">
-        <h2 class="alert alert-success">カテゴリの選択</h2>
-<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
-<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
-<button id='bl' type="button" class="btn btn-outline-success">BL</button>
-<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
-<button id='other' type="button" class="btn btn-outline-warning">その他</button>
-<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
-<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
-<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
-</div>
-<style type="text/css">
-.nondisplayFrame {
-  display:inline;
-}
-</style>
-<!-- 
-後で追加
-<button  type="button" class="btn btn-outline-light">ムック</button>
--->
+                <li class="list-group-item"><a href="html/文学.html">「  文学・評論」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/ビジネス.html">「 ビジネス・経済」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/コンピューター.html">「コンピューター」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/趣味.html">「趣味・実用」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/ライトノベル.html">「ライトノベル」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/暮らし.html">「暮らし・健康・子育て」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/雑誌.html">「雑誌」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
+                <li class="list-group-item"><a href="html/マンガ.html">「マンガ」カテゴリ【最大50％還元】Kindle本ポイントキャンペーン　8月6日まで</li>
 
-<style type="text/css">
-img.mr-3 {
- max-width: 100%;
- max-height: 100%;
- width: auto;
- height: auto;
-  text-align: center;
-}
-.img-container--table-cell {
- position: relative;
- width: 180px;
- height: 250px;
- display: table-cell;
- vertical-align: middle;
- text-align: center;
- border: 1px solid darkgray;
- img.mr-3 {
- vertical-align: middle;
-    }
- }
-</style>
 
-        <h2 id='release' class="alert alert-success">セール本</h2>
-        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            </ul>
 
-        </ul>
-    </div>
 </body>
 </html>
