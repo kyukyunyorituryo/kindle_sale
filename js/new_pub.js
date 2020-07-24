@@ -7,7 +7,7 @@ for (let i = 0; i < items.length; i++) {
         title: items[i].Title,
         image_url: items[i].ImageURL,
         price:items[i].Price,
-        point:item[i].Points,
+        point:items[i].Points,
         url: items[i].URL,
         contributor:items[i].Contributor,
         publisher:items[i].Publisher,
