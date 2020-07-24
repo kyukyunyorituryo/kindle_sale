@@ -8,7 +8,8 @@
   "Booktype": "Kindle版",
   "Title": "やり抜く人の９つの習慣　コロンビア大学の成功の科学",
   "Price": 950,
-  "Category": "人生論・教訓,MBA(経営学修士),自己啓発,ビジネス教育,倫理学・道徳,自己啓発"
+  "Category": "人生論・教訓,MBA(経営学修士),自己啓発,ビジネス教育,倫理学・道徳,自己啓発",
+  "Points": 0
  },
  {
   "Asin": "B00MA671WW",
@@ -19,7 +20,8 @@
   "Booktype": "Kindle版",
   "Title": "コンサル一年目が学ぶこと",
   "Price": 1040,
-  "Category": "ロジカル・シンキング,ビジネス教育"
+  "Category": "ロジカル・シンキング,ビジネス教育",
+  "Points": 0
  },
  {
   "Asin": "B0831D258M",
@@ -30,7 +32,8 @@
   "Booktype": "Kindle版",
   "Title": "超雑談力　人づきあいがラクになる　誰とでも信頼関係が築ける",
   "Price": 1030,
-  "Category": "人生論・教訓,自己啓発,倫理学・道徳,自己啓発"
+  "Category": "人生論・教訓,自己啓発,倫理学・道徳,自己啓発",
+  "Points": 0
  },
  {
   "Asin": "B01MA6HDRV",
@@ -41,7 +44,8 @@
   "Booktype": "Kindle版",
   "Title": "鈍感な世界に生きる 敏感な人たち",
   "Price": 1040,
-  "Category": "ジャンル別,医学・薬学,科学・テクノロジー"
+  "Category": "ジャンル別,医学・薬学,科学・テクノロジー",
+  "Points": 0
  },
  {
   "Asin": "B00ZTXKHQ0",
@@ -52,7 +56,8 @@
   "Booktype": "Kindle版",
   "Title": "「学力」の経済学",
   "Price": 1267,
-  "Category": "一般,教育学,教育・学参・受験"
+  "Category": "一般,教育学,教育・学参・受験",
+  "Points": 0
  },
  {
   "Asin": "B084ZKJXNY",
@@ -63,7 +68,8 @@
   "Booktype": "Kindle版",
   "Title": "同じ勉強をしていて、なぜ差がつくのか？「自分の頭で考える子」に変わる10のマジックワード",
   "Price": 1040,
-  "Category": "一般,教育学,教育・学参・受験"
+  "Category": "一般,教育学,教育・学参・受験",
+  "Points": 0
  },
  {
   "Asin": "B075L7QTLB",
@@ -74,7 +80,8 @@
   "Booktype": "Kindle版",
   "Title": "心がつながるのが怖い　愛と自己防衛",
   "Price": 970,
-  "Category": "心理学入門,読みもの,心理学"
+  "Category": "心理学入門,読みもの,心理学",
+  "Points": 0
  },
  {
   "Asin": "B07T2CCC8K",
@@ -85,7 +92,8 @@
   "Booktype": "Kindle版",
   "Title": "いつも自分のせいにする罪悪感がすーっと消えてなくなる本",
   "Price": 1109,
-  "Category": "臨床心理学・精神分析,心理学"
+  "Category": "臨床心理学・精神分析,心理学",
+  "Points": 0
  },
  {
   "Asin": "B014J1FDIO",
@@ -96,7 +104,8 @@
   "Booktype": "Kindle版",
   "Title": "未来に先回りする思考法",
   "Price": 1267,
-  "Category": "遺伝学・遺伝子工学,ビジネス・経済"
+  "Category": "遺伝学・遺伝子工学,ビジネス・経済",
+  "Points": 0
  },
  {
   "Asin": "B009SKNUP0",
@@ -107,7 +116,8 @@
   "Booktype": "Kindle版",
   "Title": "３分間コーチ　ひとりでも部下のいる人のための世界一シンプルなマネジメント術",
   "Price": 1188,
-  "Category": "ジャンル別,ビジネス・経済"
+  "Category": "ジャンル別,ビジネス・経済",
+  "Points": 0
  },
  {
   "Asin": "B00A3ODQ4K",
@@ -118,7 +128,8 @@
   "Booktype": "Kindle版",
   "Title": "賢者の書",
   "Price": 950,
-  "Category": "ジャンル別,日本の小説・文芸"
+  "Category": "ジャンル別,日本の小説・文芸",
+  "Points": 0
  },
  {
   "Asin": "B07Q84X6BN",
@@ -129,7 +140,8 @@
   "Booktype": "Kindle版",
   "Title": "運転者　未来を変える過去からの使者",
   "Price": 1040,
-  "Category": "ジャンル別,日本の小説・文芸"
+  "Category": "ジャンル別,日本の小説・文芸",
+  "Points": 0
  },
  {
   "Asin": "B00A3ODQ4U",
@@ -140,7 +152,8 @@
   "Booktype": "Kindle版",
   "Title": "手紙屋～僕の就職活動を変えた十通の手紙～",
   "Price": 1188,
-  "Category": "ジャンル別,日本の小説・文芸"
+  "Category": "ジャンル別,日本の小説・文芸",
+  "Points": 0
  },
  {
   "Asin": "B00C67XWAU",
@@ -151,7 +164,8 @@
   "Booktype": "Kindle版",
   "Title": "経理以外の人のための　日本一やさしくて使える会計の本 (ディスカヴァー携書)",
   "Price": 792,
-  "Category": "ジャンル別,Featured Categories,実践経営・リーダーシップ"
+  "Category": "ジャンル別,Featured Categories,実践経営・リーダーシップ",
+  "Points": 0
  },
  {
   "Asin": "B00AZWTGFI",
@@ -162,7 +176,8 @@
   "Booktype": "Kindle版",
   "Title": "あした死ぬかもよ？　人生最後の日に笑って死ねる27の質問 名言セラピー",
   "Price": 950,
-  "Category": "人生論・教訓,自己啓発,倫理学・道徳,自己啓発"
+  "Category": "人生論・教訓,自己啓発,倫理学・道徳,自己啓発",
+  "Points": 0
  },
  {
   "Asin": "B07W9752HC",
@@ -173,7 +188,8 @@
   "Booktype": "Kindle版",
   "Title": "好きなことしか本気になれない。 人生100年時代のサバイバル仕事術",
   "Price": 1040,
-  "Category": "ジャンル別,ビジネス・経済"
+  "Category": "ジャンル別,ビジネス・経済",
+  "Points": 0
  },
  {
   "Asin": "B07C9884XP",
@@ -184,7 +200,8 @@
   "Booktype": "Kindle版",
   "Title": "「いつでもおしゃれ」を実現できる 幸せなクローゼットの育て方",
   "Price": 1188,
-  "Category": "ジャンル別,美容・ダイエット"
+  "Category": "ジャンル別,美容・ダイエット",
+  "Points": 0
  },
  {
   "Asin": "B07FD919GK",
@@ -195,7 +212,8 @@
   "Booktype": "Kindle版",
   "Title": "コンサルを超える　問題解決と価値創造の全技法",
   "Price": 1901,
-  "Category": "ジャンル別,ビジネス・経済"
+  "Category": "ジャンル別,ビジネス・経済",
+  "Points": 0
  },
  {
   "Asin": "B075L29T2F",
@@ -206,7 +224,8 @@
   "Booktype": "Kindle版",
   "Title": "子どもを叱り続ける人が知らない「5つの原則」",
   "Price": 1040,
-  "Category": "子育て,妊娠・出産・子育て"
+  "Category": "子育て,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B07PSH17RY",
@@ -217,7 +236,8 @@
   "Booktype": "Kindle版",
   "Title": "中学生からの勉強のやり方（新学習指導要領対応・改訂版）",
   "Price": 1040,
-  "Category": "一般,教育学,教育・学参・受験"
+  "Category": "一般,教育学,教育・学参・受験",
+  "Points": 0
  },
  {
   "Asin": "B07FD41PP1",
@@ -228,7 +248,8 @@
   "Booktype": "Kindle版",
   "Title": "「幸福学」が明らかにした　幸せな人生を送る子どもの育て方",
   "Price": 1188,
-  "Category": "子育て,妊娠・出産・子育て"
+  "Category": "子育て,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B00UV3TNSQ",
@@ -239,7 +260,8 @@
   "Booktype": "Kindle版",
   "Title": "子育てコーチングの教科書",
   "Price": 1040,
-  "Category": "子育て,妊娠・出産・子育て"
+  "Category": "子育て,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B019WTGKUI",
@@ -250,7 +272,8 @@
   "Booktype": "Kindle版",
   "Title": "勉強しない子には「1冊の手帳」を与えよう！",
   "Price": 901,
-  "Category": "子育て,妊娠・出産・子育て"
+  "Category": "子育て,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B01FSFLCIA",
@@ -261,7 +284,8 @@
   "Booktype": "Kindle版",
   "Title": "国語が得意科目になる「印つけ」読解法",
   "Price": 1188,
-  "Category": "一般,教育学,教育・学参・受験"
+  "Category": "一般,教育学,教育・学参・受験",
+  "Points": 0
  },
  {
   "Asin": "B01MRZWUB5",
@@ -272,7 +296,8 @@
   "Booktype": "Kindle版",
   "Title": "本番に強い子の育て方",
   "Price": 1109,
-  "Category": "子育て,妊娠・出産・子育て"
+  "Category": "子育て,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B0787WHHKJ",
@@ -283,7 +308,8 @@
   "Booktype": "Kindle版",
   "Title": "学習の作法（増補改訂版）",
   "Price": 1267,
-  "Category": "一般,教育学,教育・学参・受験"
+  "Category": "一般,教育学,教育・学参・受験",
+  "Points": 0
  },
  {
   "Asin": "B06ZZ34SWV",
@@ -294,7 +320,8 @@
   "Booktype": "Kindle版",
   "Title": "人工知能時代を生き抜く子どもの育て方",
   "Price": 1188,
-  "Category": "人工知能,子育て,コンピュータサイエンス,妊娠・出産・子育て"
+  "Category": "人工知能,子育て,コンピュータサイエンス,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B00G36N4ZI",
@@ -305,7 +332,8 @@
   "Booktype": "Kindle版",
   "Title": "だれも教えてくれなかった　ほんとうは楽しい仕事＆子育て両立ガイド",
   "Price": 1030,
-  "Category": "子育て,妊娠・出産・子育て"
+  "Category": "子育て,妊娠・出産・子育て",
+  "Points": 0
  },
  {
   "Asin": "B012VRJECY",
@@ -316,6 +344,7 @@
   "Booktype": "Kindle版",
   "Title": "勉強ができる子の育て方　携書版 (ディスカヴァー携書)",
   "Price": 792,
-  "Category": "子育て,中学教科書・参考書,Featured Categories,中学教科書・参考書,妊娠・出産・子育て"
+  "Category": "子育て,中学教科書・参考書,Featured Categories,中学教科書・参考書,妊娠・出産・子育て",
+  "Points": 0
  }
 ]
