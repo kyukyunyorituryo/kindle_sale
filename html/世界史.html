@@ -1,0 +1,933 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="セールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「セールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51hksILCxxL.jpg" class="mr-3" alt="池上彰の世界の見方 中国・香港・台湾"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 中国・香港・台湾</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MQQBVJ2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gzD87vAfL.jpg" class="mr-3" alt="世界史としての日本史（小学館新書）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界史としての日本史（小学館新書）</h5>
+                    <p>価格：600円、ポイント：6</p>
+                    <p>半藤一利(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：国際政治情勢,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B01JG1R1LO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51+NWUyf69L.jpg" class="mr-3" alt="池上彰の世界の見方 インド～混沌と発展のはざまで～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 インド～混沌と発展のはざまで～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BTJ7HC2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51dSG8dVEzL.jpg" class="mr-3" alt="世界はいっしょにまわってる～ヨコ軸でつなぐ日本史と世界史～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界はいっしょにまわってる～ヨコ軸でつなぐ日本史と世界史～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>稲田雅子(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：日本史一般,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B087BWNDV4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41lZf3-tX2L.jpg" class="mr-3" alt="逆説の世界史3　ギリシア神話と多神教文明の衝突"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逆説の世界史3　ギリシア神話と多神教文明の衝突</h5>
+                    <p>価格：1178円、ポイント：12</p>
+                    <p>井沢元彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B0811PGFRR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/512tVICyqqL.jpg" class="mr-3" alt="池上彰の世界の見方 朝鮮半島～日本はどう付き合うべきか～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 朝鮮半島～日本はどう付き合うべきか～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CWM4CS9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Tm-9AffTL.jpg" class="mr-3" alt="逆説の世界史2　一神教のタブーと民族差別"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逆説の世界史2　一神教のタブーと民族差別</h5>
+                    <p>価格：1139円、ポイント：11</p>
+                    <p>井沢元彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01GFN4WF4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-Yfh81PYL.jpg" class="mr-3" alt="池上彰のまんがでわかる現代史　東アジア (池上彰の世界の見方)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰のまんがでわかる現代史　東アジア (池上彰の世界の見方)</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZDKJHC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61WOsij-1ML.jpg" class="mr-3" alt="夢と冒険の旅　世界一周ガイド～小学生のミカタ～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢と冒険の旅　世界一周ガイド～小学生のミカタ～</h5>
+                    <p>価格：623円、ポイント：6</p>
+                    <p>吉田友和(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：世界遺産,地理・地域研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B084MFYHFZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51VBSdvACIL.jpg" class="mr-3" alt="池上彰の世界の見方 イギリスとＥＵ～揺れる連合王国～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 イギリスとＥＵ～揺れる連合王国～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B082HQ1SPD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jv74XNkxL.jpg" class="mr-3" alt="逆説の世界史1　古代エジプトと中華帝国の興廃 (小学館文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逆説の世界史1　古代エジプトと中華帝国の興廃 (小学館文庫)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>井沢元彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XP7H5L3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/513lg2rQIeL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ネルソン・マンデラ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ネルソン・マンデラ 小学館版 学習まんが人物館</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>新井淳也(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X7WWSX3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Vk1la-xpL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１７　冷戦と超大国"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１７　冷戦と超大国</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>山川出版社(その他)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFDK6YT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZbAZiN0CL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１６　第二次世界大戦"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１６　第二次世界大戦</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>高田靖彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THV8YWY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51C1gp3o-6L.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１５　第一次世界大戦とロシア革命"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１５　第一次世界大戦とロシア革命</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>村川和宏(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TD8TF3Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/517ktMuK9OL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１４　ゆれる中国"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１４　ゆれる中国</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>村川和宏(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFDJY9J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51eOLezWWgL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１３　イタリアとドイツの統一"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１３　イタリアとドイツの統一</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>小林たつよし(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THV67W9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51RbzbpOyqL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１２　産業革命とアメリカの独立"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１２　産業革命とアメリカの独立</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>小林たつよし(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THXRQH2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gdiv-DELL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１１　ナポレオンとつづく革命"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１１　ナポレオンとつづく革命</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>小林たつよし(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFDJKJ7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nEJUQBqGL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１０　イギリスとフランスの革命"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１０　イギリスとフランスの革命</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>新井淳也(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THSHPYX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rxics8h7L.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　９　絶対王政"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　９　絶対王政</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>新井淳也(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THV2QY5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/513MYQnWS7L.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　８　モンゴルと中国"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　８　モンゴルと中国</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>高田靖彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFDHSB6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/516vU60KxjL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　７　近世ヨーロッパ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　７　近世ヨーロッパ</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>高田靖彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFDJTZ1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51V+F68Z15L.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　６　中世ヨーロッパ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　６　中世ヨーロッパ</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>高田靖彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THT9H9M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/519P6p+hGaL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　５　古代中国２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　５　古代中国２</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>鶴岡孝雄(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THYCCCX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rxvzxNmYL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　４　古代中国１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　４　古代中国１</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>鶴岡孝雄(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFDJKQ3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51AtnUYaQGL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　３　ローマ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　３　ローマ</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>新井淳也(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TGHN9GR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51MGNW5UrEL.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　２　ギリシアとヘレニズム"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　２　ギリシアとヘレニズム</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>新井淳也(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07THX5PPR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51yHnpFDh0L.jpg" class="mr-3" alt="小学館版学習まんが　世界の歴史　１　メソポタミアとエジプト"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版学習まんが　世界の歴史　１　メソポタミアとエジプト</h5>
+                    <p>価格：677円、ポイント：7</p>
+                    <p>新井淳也(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,社会,学習まんが,コミック,小学教科書・参考書,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TD8SVSQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51fBdm-pskL.jpg" class="mr-3" alt="池上彰の世界の見方 東南アジア～ＡＳＥＡＮの国々～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 東南アジア～ＡＳＥＡＮの国々～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RGPHVFV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ldc-g2miL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ルイ・ブライユ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ルイ・ブライユ 小学館版 学習まんが人物館</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>新井隆広(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1RX8Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5171EZmWbbL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　スティーブ・ジョブズ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　スティーブ・ジョブズ 小学館版 学習まんが人物館</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>上川敦志(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1L8G1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511SRzKOy+L.jpg" class="mr-3" alt="小学館版　学習まんが人物館　クレオパトラ女王 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　クレオパトラ女王 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>梶川卓郎(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGZJGY2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51AB62tGDVL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ジャンヌ・ダルク 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ジャンヌ・ダルク 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>たまきちひろ(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1XSY2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51VLVc5opfL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　シートン 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　シートン 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>梶川卓郎(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1R7CR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51HNU2c337L.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ダーウィン 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ダーウィン 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>松田辰彦(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH126FS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xJxglBaTL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　レオナルド・ダ・ヴィンチ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　レオナルド・ダ・ヴィンチ 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>小林たつよし(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGZXYRR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51WE01URm6L.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ショパン 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ショパン 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>市川能里(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1VPWH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51dObwxxfGL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ナポレオン 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ナポレオン 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>小林たつよし(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGZYBFM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Vbjvx0BLL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　コロンブス 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　コロンブス 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>みやぞえ郁雄(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGYZ4QR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51T5fdrYSTL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　マリー・アントワネット 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　マリー・アントワネット 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>石井美樹子(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1XV1L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gArdMTTsL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　エリザベス女王 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　エリザベス女王 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>高瀬直子(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGZM7HW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51XnIALcWiL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ダイアナ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ダイアナ 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>市川能里(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGYYNVY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51yvAwmpprL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　サン＝テグジュペリ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　サン＝テグジュペリ 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>平松おさむ(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1P9LT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ptCWeUQuL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ベートーベン 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ベートーベン 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>市川能里(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGZ6B99?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51eloFPyPzL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ナイチンゲール 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ナイチンゲール 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>真斗(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1FRBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51NhM0thhML.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ゴッホ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ゴッホ 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>鈴木みつはる(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGYJ43L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ebLTTsgfL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ローラ・インガルス 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ローラ・インガルス 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>後藤ユタカ(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGYQV5B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JZ-eGVqcL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ファーブル 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ファーブル 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>あべさより(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：51-75回,ノンフィクション,学習まんが,コミック,日本の小説・文芸,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH168BL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51MpaHseOlL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ヘレン・ケラー 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ヘレン・ケラー 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>高瀬直子(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH35C5Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51mgrmbwPWL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　モーツァルト 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　モーツァルト 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>市川能里(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1RYX9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nqkFTQgxL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　エジソン 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　エジソン 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>小林たつよし(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1HM82?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511xeuvYYNL.jpg" class="mr-3" alt="小学館版　学習まんが人物館　キュリー夫人 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　キュリー夫人 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>あべさより(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LH1626K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51QaPXqjG9L.jpg" class="mr-3" alt="小学館版　学習まんが人物館　ケネディ 小学館版 学習まんが人物館"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学館版　学習まんが人物館　ケネディ 小学館版 学習まんが人物館</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>平松おさむ(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：ノンフィクション,学習まんが,コミック,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LGZTCQ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51J2n46FvfL.jpg" class="mr-3" alt="池上彰の世界の見方 ロシア～新帝国主義への野望～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 ロシア～新帝国主義への野望～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KW144RJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Q0m1X+LRL.jpg" class="mr-3" alt="池上彰の世界の見方 ドイツとＥＵ～理想と現実のギャップ～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 ドイツとＥＵ～理想と現実のギャップ～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B077T18TRV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jsmn4DyKL.jpg" class="mr-3" alt="池上彰の世界の見方 中東～混迷の本当の理由～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 中東～混迷の本当の理由～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B075277KBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZbPH8bC3L.jpg" class="mr-3" alt="池上彰の世界の見方 アメリカ～ナンバーワンから退場か～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 アメリカ～ナンバーワンから退場か～</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ESXXS80?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-scraYFaL.jpg" class="mr-3" alt="池上彰の世界の見方 15歳に語る現代世界の最前線"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>池上彰の世界の見方 15歳に語る現代世界の最前線</h5>
+                    <p>価格：970円、ポイント：10</p>
+                    <p>池上彰(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B019ETK1LU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
