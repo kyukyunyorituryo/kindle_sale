@@ -1,0 +1,1492 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="セールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「セールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jLOdsvmZL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>嵐山(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871WXHRZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ajmWVuqkL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 5 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 5 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>樽戸アキ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871WWB4G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51QJQ9nyX8L.jpg" class="mr-3" alt="パーティーから追放されたその治癒師、実は最強につき（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パーティーから追放されたその治癒師、実は最強につき（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>鳴海みわ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871X5FKM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xGXmg1PoL.jpg" class="mr-3" alt="規格外れの英雄に育てられた、常識外れの魔法剣士（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>規格外れの英雄に育てられた、常識外れの魔法剣士（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>雪月佳(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871XJX96?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518WxcUZ34L.jpg" class="mr-3" alt="箱庭の薬術師　神様に愛され女子の異世界生活（コミック） ： 1 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>箱庭の薬術師　神様に愛され女子の異世界生活（コミック） ： 1 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>ふじもとまめ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871X6F81?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51dVBJ4bTJL.jpg" class="mr-3" alt="異世界で 上前はねて 生きていく～再生魔法使いのゆるふわ人材派遣生活～（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界で 上前はねて 生きていく～再生魔法使いのゆるふわ人材派遣生活～（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>こばみそ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871WMR7W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51CWv5efrWL.jpg" class="mr-3" alt="異世界チート開拓記（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界チート開拓記（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>中村モリス(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NT6JCT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-5r6tvAOL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 6 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神眼の勇者（コミック） ： 6 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>白瀬岬(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NV4PTF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xMiPytMCL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 6 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村人転生 最強のスローライフ（コミック） ： 6 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>イチソウヨウ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NTRV5S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xY8IYhh5L.jpg" class="mr-3" alt="古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>ウメハナ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NV8FX1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/519M8pEgncL.jpg" class="mr-3" alt="悪役令嬢に選ばれたなら、優雅に演じてみせましょう！（コミック） ： 1 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>悪役令嬢に選ばれたなら、優雅に演じてみせましょう！（コミック） ： 1 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>イタチサナ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NTW4Y6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51q7TX6Sg-L.jpg" class="mr-3" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 3 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハズレポーションが醤油だったので料理することにしました（コミック） ： 3 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>リスノ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NTQFGW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jDn-RRJjL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 5 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 5 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>高上優里子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084Q87MNM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51XKwXJBn9L.jpg" class="mr-3" alt="転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>カズミヤアキラ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084QB33ZV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51sm6dk7OML.jpg" class="mr-3" alt="転職の神殿を開きました（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転職の神殿を開きました（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>吉沢はたろう(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084QG7QFN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jPVysCY9L.jpg" class="mr-3" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>栗山廉士(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084Q6F5RD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51CO+aBzbeL.jpg" class="mr-3" alt="勇者伝説の裏側で俺は英雄伝説を作ります　～王道殺しの英雄譚～（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者伝説の裏側で俺は英雄伝説を作ります　～王道殺しの英雄譚～（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>まお(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084Q4TW1P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51X7KGSXD8L.jpg" class="mr-3" alt="ヒトを勝手に参謀にするんじゃない、この覇王。～ゲーム世界に放り込まれたオタクの苦労～（コミック） ： 1 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヒトを勝手に参謀にするんじゃない、この覇王。～ゲーム世界に放り込まれたオタクの苦労～（コミック） ： 1 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>yos(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084QCZPLM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="なし" class="mr-3" alt="そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>橘白兎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CMTXHYX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51binNG893L.jpg" class="mr-3" alt="Aランク冒険者のスローライフ（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Aランク冒険者のスローライフ（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>蕨野くげ子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B083XSLZ37?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51WxT-JrbNL.jpg" class="mr-3" alt="ダンジョン＋ハーレム＋マスター（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョン＋ハーレム＋マスター（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>長次郎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B083XHB89W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511WTCmJbLL.jpg" class="mr-3" alt="払暁　男装魔術師と金の騎士（コミック） ： 3 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>払暁　男装魔術師と金の騎士（コミック） ： 3 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>明野たわ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B083XLDJQG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5166v0v0iML.jpg" class="mr-3" alt="神スキル【呼吸】するだけでレベルアップする僕は、神々のダンジョンへ挑む。（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神スキル【呼吸】するだけでレベルアップする僕は、神々のダンジョンへ挑む。（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>ぶたばら(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B083XQG72T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51c9zp3hc6L.jpg" class="mr-3" alt="クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>もりたかたかし(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082SMNB9C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51C8R5YONAL.jpg" class="mr-3" alt="魔王軍最強の魔術師は人間だった（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王軍最強の魔術師は人間だった（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>アナジロ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082SNZNYF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511ilA0SdoL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アラフォー社畜のゴーレムマスター（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>水無月十八(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082SNKVXD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JWI7mYkgL.jpg" class="mr-3" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>荒井空真(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082SMW1W4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51+i3YEUxlL.jpg" class="mr-3" alt="姉上。スカートをまくって股を開いて見せてくれませんか？（コミック）  ： 2 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉上。スカートをまくって股を開いて見せてくれませんか？（コミック）  ： 2 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>かりね。(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082SN95R6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rzo0ayELL.jpg" class="mr-3" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>二世(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B081K2HXZV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51zCX-wkpCL.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 5 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>モンスターのご主人様（コミック） ： 5 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>咲良宗一郎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B081JZYQVK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51WLwQYIMUL.jpg" class="mr-3" alt="エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：648円、ポイント：100</p>
+                    <p>タパ松(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B081K1DRZP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/514vBWqICeL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>そらの(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B081JYV612?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51G2-CQFX0L.jpg" class="mr-3" alt="再臨勇者の復讐譚（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>再臨勇者の復讐譚（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：648円、ポイント：321</p>
+                    <p>仁藤楓(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YWM2VR5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5186-T-Ah3L.jpg" class="mr-3" alt="魔王様、リトライ！（コミック） ： 5 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王様、リトライ！（コミック） ： 5 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>身ノ丈あまる(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YWKTFG9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZwIhqjCxL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界召喚は二度目です（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>嵐山(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YWLTT8M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/513jpTTXhQL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>樽戸アキ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YWLSF69?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51HZlf3qyDL.jpg" class="mr-3" alt="出雲のあやかしホテルに就職します（コミック） ： 1 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出雲のあやかしホテルに就職します（コミック） ： 1 (モンスターコミックスf)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>上原誠(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082D932G4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wKU-HbSSL.jpg" class="mr-3" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>ラサハン(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WMXFQHY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51V-pPOUDfL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 5 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村人転生 最強のスローライフ（コミック） ： 5 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>イチソウヨウ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XT3GC7Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51t-5OCvq3L.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 5 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神眼の勇者（コミック） ： 5 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>白瀬岬(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XT62N41?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51COEhgMWKL.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>雪月佳(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XTFJRVC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ULHG-p1dL.jpg" class="mr-3" alt="ギルドのチートな受付嬢（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ギルドのチートな受付嬢（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>八月明久(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XLJ8PJ3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Ubf+p9YNL.jpg" class="mr-3" alt="古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>ウメハナ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XTCW43V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51KLtcrwQtL.jpg" class="mr-3" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 2 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハズレポーションが醤油だったので料理することにしました（コミック） ： 2 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>リスノ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WMWRPGL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51AnJmbOW7L.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>高上優里子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WGVQZ5N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Bcg-5wmEL.jpg" class="mr-3" alt="転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>カズミヤアキラ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WFVRRP3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/515F9BXwYVL.jpg" class="mr-3" alt="バスカヴィル家の政略結婚（コミック） ： 1 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バスカヴィル家の政略結婚（コミック） ： 1 (モンスターコミックスf)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>貴里みち(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WK3QRK5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51J8iEmJMXL.jpg" class="mr-3" alt="払暁　男装魔術師と金の騎士（コミック） ： 2 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>払暁　男装魔術師と金の騎士（コミック） ： 2 (モンスターコミックスf)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>明野たわ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V4R67JJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51AWWoU58bL.jpg" class="mr-3" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：490円、ポイント：5</p>
+                    <p>荒井空真(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V7VKQTR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51scd724q9L.jpg" class="mr-3" alt="そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>橘白兎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V5TRZRG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51L0nPuH0eL.jpg" class="mr-3" alt="魔王軍最強の魔術師は人間だった（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王軍最強の魔術師は人間だった（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>アナジロ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6XGFYN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51G+SJDQOXL.jpg" class="mr-3" alt="クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>もりたかたかし(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T63XS69?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51szlM5PhDL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>そらの(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QNKFD1Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51V3iQhMMYL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アラフォー社畜のゴーレムマスター（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>水無月十八(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SZSVH5T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51fW4OoU7rL.jpg" class="mr-3" alt="Aランク冒険者のスローライフ（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Aランク冒険者のスローライフ（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>蕨野くげ子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T53XLVD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/517UQS4DKeL.jpg" class="mr-3" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>栗山廉士(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SZSTNZR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51iJ7wlC2YL.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>モンスターのご主人様（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>咲良宗一郎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RV9BQGY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51QjQV6IVdL.jpg" class="mr-3" alt="エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>タパ松(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RWLFZKT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51hHJMq85NL.jpg" class="mr-3" alt="姉上。スカートをまくって股を開いて見せてくれませんか？（コミック） ： 1 (モンスターコミックスf)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉上。スカートをまくって股を開いて見せてくれませんか？（コミック） ： 1 (モンスターコミックスf)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>かりね。(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RT45V8C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-QfFQ--RL.jpg" class="mr-3" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：490円、ポイント：5</p>
+                    <p>二世(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QPNJ5S1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uV5-PPhiL.jpg" class="mr-3" alt="魔王様、リトライ！（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王様、リトライ！（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>身ノ丈あまる(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QQSHVHH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61zG0DuLddL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>樽戸アキ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QRPZMX9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jXIZ3AV+L.jpg" class="mr-3" alt="必勝ダンジョン運営方法（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>必勝ダンジョン運営方法（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>山猫スズメ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QNKG5MN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Qhxs2ktpL.jpg" class="mr-3" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 1 (モンスターコミックスｆ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハズレポーションが醤油だったので料理することにしました（コミック） ： 1 (モンスターコミックスｆ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>リスノ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PRBN3JC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jLOdsvmZL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>嵐山(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871WXHRZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZpNIK3VfL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村人転生 最強のスローライフ（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>イチソウヨウ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PT81JYL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51DTo74ljjL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 4 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神眼の勇者（コミック） ： 4 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>白瀬岬(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PT5V1G3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Zc4kwO+nL.jpg" class="mr-3" alt="払暁　男装魔術師と金の騎士（コミック） ： 1 (モンスターコミックスｆ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>払暁　男装魔術師と金の騎士（コミック） ： 1 (モンスターコミックスｆ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>明野たわ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NVHM882?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xNd-nB1GL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>高上優里子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NVK4QLD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51SOIV1lgRL.jpg" class="mr-3" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>ラサハン(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NVJQQ6X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51KJB3mU-wL.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：648円、ポイント：7</p>
+                    <p>雪月佳(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NVJQ9LL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-GPyNUk1L.jpg" class="mr-3" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：490円、ポイント：5</p>
+                    <p>荒井空真(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MVWDVGB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51DplBDrVpL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アラフォー社畜のゴーレムマスター（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>水無月十八(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M8STMFC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xh3L0DZsL.jpg" class="mr-3" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>栗山廉士(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M5BGFNY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51h6gy2duKL.jpg" class="mr-3" alt="魔王様、リトライ！（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王様、リトライ！（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>身ノ丈あまる(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L55TZMS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5193iVe7nNL.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>モンスターのご主人様（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>咲良宗一郎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L55QRK7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xblykKDSL.jpg" class="mr-3" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>二世(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JZ1ZWBM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51p6UZ6C3JL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村人転生 最強のスローライフ（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>イチソウヨウ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JZ1WRF4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51FDyjsCHNL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>樽戸アキ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JZ15185?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qdU7UHdrL.jpg" class="mr-3" alt="ギルドのチートな受付嬢（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ギルドのチートな受付嬢（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>八月明久(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JZ1WDTR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51OGmoC09JL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界召喚は二度目です（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>嵐山(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HHWN6S2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/519u26t6RGL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 3 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神眼の勇者（コミック） ： 3 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>白瀬岬(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HHV4ZJN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51q5qaFx+VL.jpg" class="mr-3" alt="必勝ダンジョン運営方法（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>必勝ダンジョン運営方法（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>山猫スズメ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HHV5MQ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518xeJ+lUcL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：490円、ポイント：5</p>
+                    <p>そらの(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H2TM8QQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LoSaDRqbL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 2 (モンスターコミックスｆ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 2 (モンスターコミックスｆ)</h5>
+                    <p>価格：490円、ポイント：5</p>
+                    <p>高上優里子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H2V45D2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51BiXtw8yZL.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>雪月佳(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H2XHX7L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51E4rzk5PWL.jpg" class="mr-3" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>ラサハン(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FQ9P735?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="なし" class="mr-3" alt="魔王様、リトライ！R（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王様、リトライ！R（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>身ノ丈あまる(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08F7PKFV9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51y8u0MnkYL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アラフォー社畜のゴーレムマスター（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>水無月十八(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DRP5KVT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51E-hq+JD4L.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>モンスターのご主人様（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：490円、ポイント：5</p>
+                    <p>咲良宗一郎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DFGR8VM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51D81AzZHaL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神眼の勇者（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>白瀬岬(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D2BBLSG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Sp+K-olKL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>樽戸アキ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D2B1T68?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51itGjNzYFL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 2 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村人転生 最強のスローライフ（コミック） ： 2 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>イチソウヨウ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DFGVTHG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51y0dRTwWaL.jpg" class="mr-3" alt="ギルドのチートな受付嬢（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ギルドのチートな受付嬢（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>八月明久(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C5LQHB1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51D93lSIxaL.jpg" class="mr-3" alt="必勝ダンジョン運営方法（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>必勝ダンジョン運営方法（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>山猫スズメ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C5J9VV5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61J1pce9OHL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 1 (モンスターコミックスｆ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 1 (モンスターコミックスｆ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>高上優里子(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BHCXYYG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EkJaLMC4L.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>雪月佳(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BHHZFJ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51L8gsLkYKL.jpg" class="mr-3" alt="魔王様、リトライ！R（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王様、リトライ！R（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>身ノ丈あまる(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871WRCSJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ywa-p9-7L.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>モンスターのご主人様（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>咲良宗一郎(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B079VLM8Y4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61juDiSDfVL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>そらの(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B079VKHQ4L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Sp4LQWUgL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神眼の勇者（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>白瀬岬;ファースト;晃田ヒカ(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0792T7NP3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51lhYj-rCcL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 1 (モンスターコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村人転生 最強のスローライフ（コミック） ： 1 (モンスターコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>画：イチソウヨウ作：タカハシあん　キャラクター原案：のちた紳(著)</p>
+                    <p>出版社：双葉社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0792V1SQ5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
