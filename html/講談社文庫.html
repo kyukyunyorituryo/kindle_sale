@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bZx-DAvQL.jpg" class="mr-3" alt="天璋院篤姫（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51bZx-DAvQL.jpg" class="mr-3 lazyload" alt="天璋院篤姫（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>天璋院篤姫（上） (講談社文庫)</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51aEgxYhjCL.jpg" class="mr-3" alt="春秋戦国志（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51aEgxYhjCL.jpg" class="mr-3 lazyload" alt="春秋戦国志（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>春秋戦国志（上） (講談社文庫)</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51o4nuccMOL.jpg" class="mr-3" alt="新装版　白い航跡（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51o4nuccMOL.jpg" class="mr-3 lazyload" alt="新装版　白い航跡（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　白い航跡（上） (講談社文庫)</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51JPt5D5usL.jpg" class="mr-3" alt="隋唐演義（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51JPt5D5usL.jpg" class="mr-3 lazyload" alt="隋唐演義（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>隋唐演義（上） (講談社文庫)</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ud36V3qiL.jpg" class="mr-3" alt="新装版　落日の宴　勘定奉行川路聖謨（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ud36V3qiL.jpg" class="mr-3 lazyload" alt="新装版　落日の宴　勘定奉行川路聖謨（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　落日の宴　勘定奉行川路聖謨（上） (講談社文庫)</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pi9tZbt4L.jpg" class="mr-3" alt="ミッドウェー戦記（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pi9tZbt4L.jpg" class="mr-3 lazyload" alt="ミッドウェー戦記（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ミッドウェー戦記（上） (講談社文庫)</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51tH23txyTL.jpg" class="mr-3" alt="小説　盛田昭夫学校（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51tH23txyTL.jpg" class="mr-3 lazyload" alt="小説　盛田昭夫学校（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　盛田昭夫学校（上） (講談社文庫)</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pdwBpBuIL.jpg" class="mr-3" alt="新装版　北天の星（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pdwBpBuIL.jpg" class="mr-3 lazyload" alt="新装版　北天の星（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　北天の星（上） (講談社文庫)</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41fZAkmQPJL.jpg" class="mr-3" alt="反逆（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41fZAkmQPJL.jpg" class="mr-3 lazyload" alt="反逆（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>反逆（上） (講談社文庫)</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51j54hY-KjL.jpg" class="mr-3" alt="記憶の果て（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51j54hY-KjL.jpg" class="mr-3 lazyload" alt="記憶の果て（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>記憶の果て（上） (講談社文庫)</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51lH8DWnP1L.jpg" class="mr-3" alt="中華帝国志（上）　治乱興亡篇 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51lH8DWnP1L.jpg" class="mr-3 lazyload" alt="中華帝国志（上）　治乱興亡篇 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>中華帝国志（上）　治乱興亡篇 (講談社文庫)</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41Rewz+IMqL.jpg" class="mr-3" alt="井上ひさし笑劇全集（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41Rewz+IMqL.jpg" class="mr-3 lazyload" alt="井上ひさし笑劇全集（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>井上ひさし笑劇全集（上） (講談社文庫)</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+EjT2aneL.jpg" class="mr-3" alt="小説スーパーマーケット（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+EjT2aneL.jpg" class="mr-3 lazyload" alt="小説スーパーマーケット（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説スーパーマーケット（上） (講談社文庫)</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pU82vH98L.jpg" class="mr-3" alt="海霧（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pU82vH98L.jpg" class="mr-3 lazyload" alt="海霧（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>海霧（上） (講談社文庫)</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51vm-pV2VuL.jpg" class="mr-3" alt="一分ノ一（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51vm-pV2VuL.jpg" class="mr-3 lazyload" alt="一分ノ一（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>一分ノ一（上） (講談社文庫)</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51to8HmK67L.jpg" class="mr-3" alt="黄金の騎士団（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51to8HmK67L.jpg" class="mr-3 lazyload" alt="黄金の騎士団（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>黄金の騎士団（上） (講談社文庫)</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/411Le3RIFkL.jpg" class="mr-3" alt="鷲の歌（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/411Le3RIFkL.jpg" class="mr-3 lazyload" alt="鷲の歌（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>鷲の歌（上） (講談社文庫)</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41jWQIvHVbL.jpg" class="mr-3" alt="百年戦争（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41jWQIvHVbL.jpg" class="mr-3 lazyload" alt="百年戦争（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>百年戦争（上） (講談社文庫)</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-pw8iVmZL.jpg" class="mr-3" alt="青銅の悲劇（上）　瀕死の王 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51-pw8iVmZL.jpg" class="mr-3 lazyload" alt="青銅の悲劇（上）　瀕死の王 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>青銅の悲劇（上）　瀕死の王 (講談社文庫)</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51gN+d80EUL.jpg" class="mr-3" alt="人喰鉄道（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51gN+d80EUL.jpg" class="mr-3 lazyload" alt="人喰鉄道（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>人喰鉄道（上） (講談社文庫)</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51P8glPGZ7L.jpg" class="mr-3" alt="蓮如　夏の嵐（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51P8glPGZ7L.jpg" class="mr-3 lazyload" alt="蓮如　夏の嵐（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>蓮如　夏の嵐（上） (講談社文庫)</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51NMCWeNQxL.jpg" class="mr-3" alt="新・天狼星ヴァンパイア（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51NMCWeNQxL.jpg" class="mr-3 lazyload" alt="新・天狼星ヴァンパイア（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新・天狼星ヴァンパイア（上） (講談社文庫)</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51H7PGQ4TTL.jpg" class="mr-3" alt="風の砦（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51H7PGQ4TTL.jpg" class="mr-3 lazyload" alt="風の砦（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風の砦（上） (講談社文庫)</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+sj2lFgeL.jpg" class="mr-3" alt="双頭の蛇（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+sj2lFgeL.jpg" class="mr-3 lazyload" alt="双頭の蛇（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>双頭の蛇（上） (講談社文庫)</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51L2ckzjpEL.jpg" class="mr-3" alt="紫の火花（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51L2ckzjpEL.jpg" class="mr-3 lazyload" alt="紫の火花（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>紫の火花（上） (講談社文庫)</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/614cWfbOuzL.jpg" class="mr-3" alt="神州日月変（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/614cWfbOuzL.jpg" class="mr-3 lazyload" alt="神州日月変（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神州日月変（上） (講談社文庫)</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Mn07dIFyL.jpg" class="mr-3" alt="軍師　官兵衛（上）　群雲、関ヶ原へ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Mn07dIFyL.jpg" class="mr-3 lazyload" alt="軍師　官兵衛（上）　群雲、関ヶ原へ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>軍師　官兵衛（上）　群雲、関ヶ原へ (講談社文庫)</h5>
@@ -513,5 +515,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>

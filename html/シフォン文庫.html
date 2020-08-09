@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51K6z6B9XYL.jpg" class="mr-3" alt="平安あや解き草紙　～その女人達、ひとかたならず～ (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51K6z6B9XYL.jpg" class="mr-3 lazyload" alt="平安あや解き草紙　～その女人達、ひとかたならず～ (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>平安あや解き草紙　～その女人達、ひとかたならず～ (集英社オレンジ文庫)</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51dO7gMLIQL.jpg" class="mr-3" alt="流転の貴妃　或いは塞外の女王 (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51dO7gMLIQL.jpg" class="mr-3 lazyload" alt="流転の貴妃　或いは塞外の女王 (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>流転の貴妃　或いは塞外の女王 (集英社オレンジ文庫)</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51IbajE5G3L.jpg" class="mr-3" alt="平安あや解き草紙　～その恋、人騒がせなことこの上なし～ (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51IbajE5G3L.jpg" class="mr-3 lazyload" alt="平安あや解き草紙　～その恋、人騒がせなことこの上なし～ (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>平安あや解き草紙　～その恋、人騒がせなことこの上なし～ (集英社オレンジ文庫)</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51eYgnXkEJL.jpg" class="mr-3" alt="キスまでの距離　おいしいコーヒーのいれ方　I (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51eYgnXkEJL.jpg" class="mr-3 lazyload" alt="キスまでの距離　おいしいコーヒーのいれ方　I (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>キスまでの距離　おいしいコーヒーのいれ方　I (集英社文庫)</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bZ-SnE6QL.jpg" class="mr-3" alt="平安あや解き草紙　～その後宮、百花繚乱にて～ (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51bZ-SnE6QL.jpg" class="mr-3 lazyload" alt="平安あや解き草紙　～その後宮、百花繚乱にて～ (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>平安あや解き草紙　～その後宮、百花繚乱にて～ (集英社オレンジ文庫)</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61AUwcq5f9L.jpg" class="mr-3" alt="なんて素敵にジャパネスク (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61AUwcq5f9L.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク (集英社コバルト文庫)</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51MUTDQYU3L.jpg" class="mr-3" alt="地図のない旅　おいしいコーヒーのいれ方　Second Season　VIII (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51MUTDQYU3L.jpg" class="mr-3 lazyload" alt="地図のない旅　おいしいコーヒーのいれ方　Second Season　VIII (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>地図のない旅　おいしいコーヒーのいれ方　Second Season　VIII (集英社文庫)</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51en9NtcTAL.jpg" class="mr-3" alt="僕らの夏　おいしいコーヒーのいれ方　II (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51en9NtcTAL.jpg" class="mr-3 lazyload" alt="僕らの夏　おいしいコーヒーのいれ方　II (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>僕らの夏　おいしいコーヒーのいれ方　II (集英社文庫)</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/611y4OzrzlL.jpg" class="mr-3" alt="なんて素敵にジャパネスク（４）≪不倫編≫ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/611y4OzrzlL.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（４）≪不倫編≫ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（４）≪不倫編≫ (集英社コバルト文庫)</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+PN+MQQML.jpg" class="mr-3" alt="平安あや解き草紙　～その姫、後宮にて天職を知る～ (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+PN+MQQML.jpg" class="mr-3 lazyload" alt="平安あや解き草紙　～その姫、後宮にて天職を知る～ (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>平安あや解き草紙　～その姫、後宮にて天職を知る～ (集英社オレンジ文庫)</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61X2cwUyMAL.jpg" class="mr-3" alt="続ジャパネスク・アンコール！ なんて素敵にジャパネスク (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61X2cwUyMAL.jpg" class="mr-3 lazyload" alt="続ジャパネスク・アンコール！ なんて素敵にジャパネスク (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>続ジャパネスク・アンコール！ なんて素敵にジャパネスク (集英社コバルト文庫)</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pA7xFbRyL.jpg" class="mr-3" alt="なんて素敵にジャパネスク（２） (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pA7xFbRyL.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（２） (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（２） (集英社コバルト文庫)</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pCACfahoL.jpg" class="mr-3" alt="【合本版】おいしいコーヒーのいれ方　First Season（全10冊） (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pCACfahoL.jpg" class="mr-3 lazyload" alt="【合本版】おいしいコーヒーのいれ方　First Season（全10冊） (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【合本版】おいしいコーヒーのいれ方　First Season（全10冊） (集英社文庫)</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515xoJ7crTL.jpg" class="mr-3" alt="ジャパネスク・アンコール！ なんて素敵にジャパネスク (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515xoJ7crTL.jpg" class="mr-3 lazyload" alt="ジャパネスク・アンコール！ なんて素敵にジャパネスク (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ジャパネスク・アンコール！ なんて素敵にジャパネスク (集英社コバルト文庫)</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51lX20mGY3L.jpg" class="mr-3" alt="なんて素敵にジャパネスク（５）≪陰謀編≫ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51lX20mGY3L.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（５）≪陰謀編≫ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（５）≪陰謀編≫ (集英社コバルト文庫)</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512589ImczL.jpg" class="mr-3" alt="なんて素敵にジャパネスク（８）≪炎上編≫ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512589ImczL.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（８）≪炎上編≫ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（８）≪炎上編≫ (集英社コバルト文庫)</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5124Vc3hAlL.jpg" class="mr-3" alt="なんて素敵にジャパネスク（６）≪後宮編≫ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5124Vc3hAlL.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（６）≪後宮編≫ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（６）≪後宮編≫ (集英社コバルト文庫)</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61FsClamgLL.jpg" class="mr-3" alt="なんて素敵にジャパネスク（３）≪人妻編≫ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61FsClamgLL.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（３）≪人妻編≫ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（３）≪人妻編≫ (集英社コバルト文庫)</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41IscxVx9xL.jpg" class="mr-3" alt="【合本版】おいしいコーヒーのいれ方　Second Season（全９冊） (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41IscxVx9xL.jpg" class="mr-3 lazyload" alt="【合本版】おいしいコーヒーのいれ方　Second Season（全９冊） (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【合本版】おいしいコーヒーのいれ方　Second Season（全９冊） (集英社文庫)</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513IycT6L+L.jpg" class="mr-3" alt="なんて素敵にジャパネスク（７）≪逆襲編≫ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/513IycT6L+L.jpg" class="mr-3 lazyload" alt="なんて素敵にジャパネスク（７）≪逆襲編≫ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>なんて素敵にジャパネスク（７）≪逆襲編≫ (集英社コバルト文庫)</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ESoNas69L.jpg" class="mr-3" alt="彼女の朝　おいしいコーヒーのいれ方　III (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ESoNas69L.jpg" class="mr-3 lazyload" alt="彼女の朝　おいしいコーヒーのいれ方　III (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>彼女の朝　おいしいコーヒーのいれ方　III (集英社文庫)</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51gnLNepMJL.jpg" class="mr-3" alt="雲の果て　おいしいコーヒーのいれ方　Second Season　V (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51gnLNepMJL.jpg" class="mr-3 lazyload" alt="雲の果て　おいしいコーヒーのいれ方　Second Season　V (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>雲の果て　おいしいコーヒーのいれ方　Second Season　V (集英社文庫)</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mJ12MSbHL.jpg" class="mr-3" alt="夢のあとさき　おいしいコーヒーのいれ方　X (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51mJ12MSbHL.jpg" class="mr-3 lazyload" alt="夢のあとさき　おいしいコーヒーのいれ方　X (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>夢のあとさき　おいしいコーヒーのいれ方　X (集英社文庫)</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hTqnf51dL.jpg" class="mr-3" alt="【合本版】おいしいコーヒーのいれ方（全19冊） (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hTqnf51dL.jpg" class="mr-3 lazyload" alt="【合本版】おいしいコーヒーのいれ方（全19冊） (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【合本版】おいしいコーヒーのいれ方（全19冊） (集英社文庫)</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xKutSmODL.jpg" class="mr-3" alt="雪の降る音　おいしいコーヒーのいれ方　IV (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xKutSmODL.jpg" class="mr-3 lazyload" alt="雪の降る音　おいしいコーヒーのいれ方　IV (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>雪の降る音　おいしいコーヒーのいれ方　IV (集英社文庫)</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fKr65tC5L.jpg" class="mr-3" alt="記憶の海　おいしいコーヒーのいれ方　Second Season　VII (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51fKr65tC5L.jpg" class="mr-3 lazyload" alt="記憶の海　おいしいコーヒーのいれ方　Second Season　VII (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>記憶の海　おいしいコーヒーのいれ方　Second Season　VII (集英社文庫)</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51c0Kq3nXaL.jpg" class="mr-3" alt="彼方の声　おいしいコーヒーのいれ方　Second Season　VI (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51c0Kq3nXaL.jpg" class="mr-3 lazyload" alt="彼方の声　おいしいコーヒーのいれ方　Second Season　VI (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>彼方の声　おいしいコーヒーのいれ方　Second Season　VI (集英社文庫)</h5>
@@ -513,7 +515,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51gLvMmb+lL.jpg" class="mr-3" alt="緑の午後　おいしいコーヒーのいれ方　V (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51gLvMmb+lL.jpg" class="mr-3 lazyload" alt="緑の午後　おいしいコーヒーのいれ方　V (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>緑の午後　おいしいコーヒーのいれ方　V (集英社文庫)</h5>
@@ -526,7 +528,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41ZRFUXSMbL.jpg" class="mr-3" alt="凍える月　おいしいコーヒーのいれ方　Second Season　IV (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41ZRFUXSMbL.jpg" class="mr-3 lazyload" alt="凍える月　おいしいコーヒーのいれ方　Second Season　IV (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>凍える月　おいしいコーヒーのいれ方　Second Season　IV (集英社文庫)</h5>
@@ -539,7 +541,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41zwDGyOJBL.jpg" class="mr-3" alt="遠い背中　おいしいコーヒーのいれ方　VI (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41zwDGyOJBL.jpg" class="mr-3 lazyload" alt="遠い背中　おいしいコーヒーのいれ方　VI (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>遠い背中　おいしいコーヒーのいれ方　VI (集英社文庫)</h5>
@@ -552,7 +554,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HZRQ6OwBL.jpg" class="mr-3" alt="消せない告白　おいしいコーヒーのいれ方　Second Season　III (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HZRQ6OwBL.jpg" class="mr-3 lazyload" alt="消せない告白　おいしいコーヒーのいれ方　Second Season　III (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>消せない告白　おいしいコーヒーのいれ方　Second Season　III (集英社文庫)</h5>
@@ -565,7 +567,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BrqFXBk6L.jpg" class="mr-3" alt="旦那さまは年下狼！？　恥じらいノーブル・ウェディング【イラスト付き完全版】 (集英社シフォン文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51BrqFXBk6L.jpg" class="mr-3 lazyload" alt="旦那さまは年下狼！？　恥じらいノーブル・ウェディング【イラスト付き完全版】 (集英社シフォン文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>旦那さまは年下狼！？　恥じらいノーブル・ウェディング【イラスト付き完全版】 (集英社シフォン文庫)</h5>
@@ -578,7 +580,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51va9pdqPOL.jpg" class="mr-3" alt="優しい秘密　おいしいコーヒーのいれ方　VIII (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51va9pdqPOL.jpg" class="mr-3 lazyload" alt="優しい秘密　おいしいコーヒーのいれ方　VIII (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>優しい秘密　おいしいコーヒーのいれ方　VIII (集英社文庫)</h5>
@@ -591,7 +593,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41176z99JvL.jpg" class="mr-3" alt="蜂蜜色の瞳　おいしいコーヒーのいれ方　Second Season　I (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41176z99JvL.jpg" class="mr-3 lazyload" alt="蜂蜜色の瞳　おいしいコーヒーのいれ方　Second Season　I (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>蜂蜜色の瞳　おいしいコーヒーのいれ方　Second Season　I (集英社文庫)</h5>
@@ -604,7 +606,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Xcj3aEYSL.jpg" class="mr-3" alt="明日の約束　おいしいコーヒーのいれ方　Second Season　II (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Xcj3aEYSL.jpg" class="mr-3 lazyload" alt="明日の約束　おいしいコーヒーのいれ方　Second Season　II (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明日の約束　おいしいコーヒーのいれ方　Second Season　II (集英社文庫)</h5>
@@ -617,7 +619,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41NPd1Yaa7L.jpg" class="mr-3" alt="聞きたい言葉　おいしいコーヒーのいれ方　IX (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41NPd1Yaa7L.jpg" class="mr-3 lazyload" alt="聞きたい言葉　おいしいコーヒーのいれ方　IX (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>聞きたい言葉　おいしいコーヒーのいれ方　IX (集英社文庫)</h5>
@@ -630,7 +632,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/516JLbfE00L.jpg" class="mr-3" alt="坂の途中　おいしいコーヒーのいれ方　VII (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/516JLbfE00L.jpg" class="mr-3 lazyload" alt="坂の途中　おいしいコーヒーのいれ方　VII (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>坂の途中　おいしいコーヒーのいれ方　VII (集英社文庫)</h5>
@@ -643,7 +645,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PesL7QQdL.jpg" class="mr-3" alt="【電子オリジナル】経験豊富と呼ばないで！　出戻り処女な私は、年下童貞くんの甘いおねだりに逆らえない 【特典SS・オールカラーイラスト付き完全版】 (集英社シフォン文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PesL7QQdL.jpg" class="mr-3 lazyload" alt="【電子オリジナル】経験豊富と呼ばないで！　出戻り処女な私は、年下童貞くんの甘いおねだりに逆らえない 【特典SS・オールカラーイラスト付き完全版】 (集英社シフォン文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【電子オリジナル】経験豊富と呼ばないで！　出戻り処女な私は、年下童貞くんの甘いおねだりに逆らえない 【特典SS・オールカラーイラスト付き完全版】 (集英社シフォン文庫)</h5>
@@ -656,7 +658,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hmNUvY-+L.jpg" class="mr-3" alt="【電子オリジナル】後宮淫夜　「元」年下皇子による非凡な溺愛【イラスト付き完全版】 (集英社シフォン文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hmNUvY-+L.jpg" class="mr-3 lazyload" alt="【電子オリジナル】後宮淫夜　「元」年下皇子による非凡な溺愛【イラスト付き完全版】 (集英社シフォン文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【電子オリジナル】後宮淫夜　「元」年下皇子による非凡な溺愛【イラスト付き完全版】 (集英社シフォン文庫)</h5>
@@ -669,7 +671,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41J06PzYXqL.jpg" class="mr-3" alt="La Vie en Rose　ラヴィアンローズ (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41J06PzYXqL.jpg" class="mr-3 lazyload" alt="La Vie en Rose　ラヴィアンローズ (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>La Vie en Rose　ラヴィアンローズ (集英社文庫)</h5>
@@ -682,7 +684,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61hHdKLLhKL.jpg" class="mr-3" alt="【電子オリジナル】濡れ恋艶舞　年下皇子の一途な求愛【特典SS・オールカラーイラスト付き完全版】 (集英社シフォン文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61hHdKLLhKL.jpg" class="mr-3 lazyload" alt="【電子オリジナル】濡れ恋艶舞　年下皇子の一途な求愛【特典SS・オールカラーイラスト付き完全版】 (集英社シフォン文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【電子オリジナル】濡れ恋艶舞　年下皇子の一途な求愛【特典SS・オールカラーイラスト付き完全版】 (集英社シフォン文庫)</h5>
@@ -695,7 +697,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/4194tQc+rCL.jpg" class="mr-3" alt="天使の卵　エンジェルス・エッグ 天使の卵シリーズ (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/4194tQc+rCL.jpg" class="mr-3 lazyload" alt="天使の卵　エンジェルス・エッグ 天使の卵シリーズ (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>天使の卵　エンジェルス・エッグ 天使の卵シリーズ (集英社文庫)</h5>
@@ -708,7 +710,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/315hJEQ-0nL.jpg" class="mr-3" alt="天使の梯子 天使の卵シリーズ (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/315hJEQ-0nL.jpg" class="mr-3 lazyload" alt="天使の梯子 天使の卵シリーズ (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>天使の梯子 天使の卵シリーズ (集英社文庫)</h5>
@@ -721,7 +723,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41Q4QuAf1oL.jpg" class="mr-3" alt="【合本版】天使の卵（全４冊） (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41Q4QuAf1oL.jpg" class="mr-3 lazyload" alt="【合本版】天使の卵（全４冊） (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【合本版】天使の卵（全４冊） (集英社文庫)</h5>
@@ -734,7 +736,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KWkcNUPuL.jpg" class="mr-3" alt="姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51KWkcNUPuL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -747,7 +749,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/514hyhrmOmL.jpg" class="mr-3" alt="小説　初めて恋をした日に読む話 (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/514hyhrmOmL.jpg" class="mr-3 lazyload" alt="小説　初めて恋をした日に読む話 (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　初めて恋をした日に読む話 (集英社オレンジ文庫)</h5>
@@ -760,7 +762,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41TWpEYz8QL.jpg" class="mr-3" alt="天使の柩 天使の卵 (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41TWpEYz8QL.jpg" class="mr-3 lazyload" alt="天使の柩 天使の卵 (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>天使の柩 天使の卵 (集英社文庫)</h5>
@@ -773,7 +775,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51p8FlTIB4L.jpg" class="mr-3" alt="【電子オリジナル】その後のひきこもりたち　アレサンドリ神国の人々は今日も自由にあがいています（ひきこもりシリーズ短編集） (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51p8FlTIB4L.jpg" class="mr-3 lazyload" alt="【電子オリジナル】その後のひきこもりたち　アレサンドリ神国の人々は今日も自由にあがいています（ひきこもりシリーズ短編集） (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【電子オリジナル】その後のひきこもりたち　アレサンドリ神国の人々は今日も自由にあがいています（ひきこもりシリーズ短編集） (集英社コバルト文庫)</h5>
@@ -786,7 +788,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hwzo9BKYL.jpg" class="mr-3" alt="Everyday’s Shine　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hwzo9BKYL.jpg" class="mr-3 lazyload" alt="Everyday’s Shine　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Everyday’s Shine　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -799,7 +801,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51uAEK-leuL.jpg" class="mr-3" alt="【電子オリジナル】四つの蜜月物語　～「新婚小説」アンソロジー～ (集英社シフォン文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51uAEK-leuL.jpg" class="mr-3 lazyload" alt="【電子オリジナル】四つの蜜月物語　～「新婚小説」アンソロジー～ (集英社シフォン文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>【電子オリジナル】四つの蜜月物語　～「新婚小説」アンソロジー～ (集英社シフォン文庫)</h5>
@@ -812,7 +814,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41-8kT2n7cL.jpg" class="mr-3" alt="ヘヴンリー・ブルー 天使の卵 (集英社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41-8kT2n7cL.jpg" class="mr-3 lazyload" alt="ヘヴンリー・ブルー 天使の卵 (集英社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ヘヴンリー・ブルー 天使の卵 (集英社文庫)</h5>
@@ -825,7 +827,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511WkqQpj2L.jpg" class="mr-3" alt="姫神さまに願いを～享楽の宴～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/511WkqQpj2L.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～享楽の宴～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～享楽の宴～ (集英社コバルト文庫)</h5>
@@ -838,7 +840,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512AkIHxxFL.jpg" class="mr-3" alt="Ever Blooming Shine　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512AkIHxxFL.jpg" class="mr-3 lazyload" alt="Ever Blooming Shine　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Ever Blooming Shine　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -851,7 +853,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hxs7b9tSL.jpg" class="mr-3" alt="Pine After Shine　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hxs7b9tSL.jpg" class="mr-3 lazyload" alt="Pine After Shine　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Pine After Shine　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -864,7 +866,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BogzQ62lL.jpg" class="mr-3" alt="商人令嬢と猫かぶり王子　結婚？　興味ありません ひきこもりシリーズ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51BogzQ62lL.jpg" class="mr-3 lazyload" alt="商人令嬢と猫かぶり王子　結婚？　興味ありません ひきこもりシリーズ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>商人令嬢と猫かぶり王子　結婚？　興味ありません ひきこもりシリーズ (集英社コバルト文庫)</h5>
@@ -877,7 +879,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+D6Ye6k2L.jpg" class="mr-3" alt="ドＭ侍女と亡国の王子（笑）　不憫で自由な大団円！ ひきこもりシリーズ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+D6Ye6k2L.jpg" class="mr-3 lazyload" alt="ドＭ侍女と亡国の王子（笑）　不憫で自由な大団円！ ひきこもりシリーズ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ドＭ侍女と亡国の王子（笑）　不憫で自由な大団円！ ひきこもりシリーズ (集英社コバルト文庫)</h5>
@@ -890,7 +892,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51N3L6OZR5L.jpg" class="mr-3" alt="姫神さまに願いを～浪の下の都～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51N3L6OZR5L.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～浪の下の都～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～浪の下の都～ (集英社コバルト文庫)</h5>
@@ -903,7 +905,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511Km1uDDuL.jpg" class="mr-3" alt="Lost Shine　後編　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/511Km1uDDuL.jpg" class="mr-3 lazyload" alt="Lost Shine　後編　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Lost Shine　後編　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -916,7 +918,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bunirUMcL.jpg" class="mr-3" alt="うちの中学二年の弟が (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51bunirUMcL.jpg" class="mr-3 lazyload" alt="うちの中学二年の弟が (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>うちの中学二年の弟が (集英社オレンジ文庫)</h5>
@@ -929,7 +931,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hflxiutnL.jpg" class="mr-3" alt="Lost Shine　前編　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hflxiutnL.jpg" class="mr-3 lazyload" alt="Lost Shine　前編　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Lost Shine　前編　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -942,7 +944,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/615eTZPqXhL.jpg" class="mr-3" alt="悪魔のような花婿1 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/615eTZPqXhL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿1 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿1 (集英社コバルト文庫)</h5>
@@ -955,7 +957,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61842iXL33L.jpg" class="mr-3" alt="光源氏と不機嫌な花嫁　初恋は葵の秘めごと【イラスト付き完全版】 (集英社シフォン文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61842iXL33L.jpg" class="mr-3 lazyload" alt="光源氏と不機嫌な花嫁　初恋は葵の秘めごと【イラスト付き完全版】 (集英社シフォン文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>光源氏と不機嫌な花嫁　初恋は葵の秘めごと【イラスト付き完全版】 (集英社シフォン文庫)</h5>
@@ -968,7 +970,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51b5CfKoo0L.jpg" class="mr-3" alt="Jumble Up Shine　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51b5CfKoo0L.jpg" class="mr-3 lazyload" alt="Jumble Up Shine　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Jumble Up Shine　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -981,7 +983,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+gdhcD8kL.jpg" class="mr-3" alt="姫神さまに願いを～様々果恋草子～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+gdhcD8kL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～様々果恋草子～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～様々果恋草子～ (集英社コバルト文庫)</h5>
@@ -994,7 +996,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51dazjCWnLL.jpg" class="mr-3" alt="姫神さまに願いを～形見の夢標～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51dazjCWnLL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～形見の夢標～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～形見の夢標～ (集英社コバルト文庫)</h5>
@@ -1007,7 +1009,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+XBemMJXL.jpg" class="mr-3" alt="姫神さまに願いを～夢者の孤国～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+XBemMJXL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～夢者の孤国～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～夢者の孤国～ (集英社コバルト文庫)</h5>
@@ -1020,7 +1022,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511Kn3kDYfL.jpg" class="mr-3" alt="姫神さまに願いを～虚白の磐座～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/511Kn3kDYfL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～虚白の磐座～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～虚白の磐座～ (集英社コバルト文庫)</h5>
@@ -1033,7 +1035,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pixgAKCDL.jpg" class="mr-3" alt="姫神さまに願いを～久遠の夢の涯～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pixgAKCDL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～久遠の夢の涯～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～久遠の夢の涯～ (集英社コバルト文庫)</h5>
@@ -1046,7 +1048,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OfCZFtyrL.jpg" class="mr-3" alt="姫神さまに願いを～摘みし緋の扉～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51OfCZFtyrL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～摘みし緋の扉～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～摘みし緋の扉～ (集英社コバルト文庫)</h5>
@@ -1059,7 +1061,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51RBDTB8BsL.jpg" class="mr-3" alt="姫神さまに願いを～緋承ぎの形代～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51RBDTB8BsL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～緋承ぎの形代～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～緋承ぎの形代～ (集英社コバルト文庫)</h5>
@@ -1072,7 +1074,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51SFeSxPIpL.jpg" class="mr-3" alt="姫神さまに願いを～藍ちぎる瑠璃～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51SFeSxPIpL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～藍ちぎる瑠璃～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～藍ちぎる瑠璃～ (集英社コバルト文庫)</h5>
@@ -1085,7 +1087,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51JSRZBGG6L.jpg" class="mr-3" alt="姫神さまに願いを～空参鳥の幻～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51JSRZBGG6L.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～空参鳥の幻～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～空参鳥の幻～ (集英社コバルト文庫)</h5>
@@ -1098,7 +1100,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Oc4xB3O8L.jpg" class="mr-3" alt="姫神さまに願いを～空葬の瞳～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Oc4xB3O8L.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～空葬の瞳～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～空葬の瞳～ (集英社コバルト文庫)</h5>
@@ -1111,7 +1113,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51SlvKsLxSL.jpg" class="mr-3" alt="姫神さまに願いを～雪去りの紅～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51SlvKsLxSL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～雪去りの紅～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～雪去りの紅～ (集英社コバルト文庫)</h5>
@@ -1124,7 +1126,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513y1yURcfL.jpg" class="mr-3" alt="姫神さまに願いを～荊いだく蝶～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/513y1yURcfL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～荊いだく蝶～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～荊いだく蝶～ (集英社コバルト文庫)</h5>
@@ -1137,7 +1139,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51nOLzvwb5L.jpg" class="mr-3" alt="Farewell Shine　姫神さまに願いを (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51nOLzvwb5L.jpg" class="mr-3 lazyload" alt="Farewell Shine　姫神さまに願いを (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Farewell Shine　姫神さまに願いを (集英社コバルト文庫)</h5>
@@ -1150,7 +1152,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51uOztScWiL.jpg" class="mr-3" alt="Prayer of Shine　姫神さまに願いを　光の祈り人 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51uOztScWiL.jpg" class="mr-3 lazyload" alt="Prayer of Shine　姫神さまに願いを　光の祈り人 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Prayer of Shine　姫神さまに願いを　光の祈り人 (集英社コバルト文庫)</h5>
@@ -1163,7 +1165,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61zpeK2PECL.jpg" class="mr-3" alt="姫神さまに願いを～夢路の剣～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61zpeK2PECL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～夢路の剣～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～夢路の剣～ (集英社コバルト文庫)</h5>
@@ -1176,7 +1178,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51DLG4XEhjL.jpg" class="mr-3" alt="姫神さまに願いを～遠国散る恋華　前編～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51DLG4XEhjL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～遠国散る恋華　前編～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～遠国散る恋華　前編～ (集英社コバルト文庫)</h5>
@@ -1189,7 +1191,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PLO0SImkL.jpg" class="mr-3" alt="姫神さまに願いを～遠国散る恋華　後編～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PLO0SImkL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～遠国散る恋華　後編～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～遠国散る恋華　後編～ (集英社コバルト文庫)</h5>
@@ -1202,7 +1204,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Eq7477S3L.jpg" class="mr-3" alt="姫神さまに願いを～殉血の枷～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Eq7477S3L.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～殉血の枷～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～殉血の枷～ (集英社コバルト文庫)</h5>
@@ -1215,7 +1217,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Q5PMBqSwL.jpg" class="mr-3" alt="姫神さまに願いを～永遠国ゆく日～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Q5PMBqSwL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～永遠国ゆく日～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～永遠国ゆく日～ (集英社コバルト文庫)</h5>
@@ -1228,7 +1230,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51iMYCEVO7L.jpg" class="mr-3" alt="姫神さまに願いを～鏡語りの森～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51iMYCEVO7L.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～鏡語りの森～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～鏡語りの森～ (集英社コバルト文庫)</h5>
@@ -1241,7 +1243,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51GbqDwQJwL.jpg" class="mr-3" alt="姫神さまに願いを～血誓の毒～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51GbqDwQJwL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～血誓の毒～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～血誓の毒～ (集英社コバルト文庫)</h5>
@@ -1254,7 +1256,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51z90HpvLwL.jpg" class="mr-3" alt="姫神さまに願いを～月の碧き燿夜　後編～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51z90HpvLwL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～月の碧き燿夜　後編～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～月の碧き燿夜　後編～ (集英社コバルト文庫)</h5>
@@ -1267,7 +1269,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51X+xlkzuhL.jpg" class="mr-3" alt="姫神さまに願いを～月の碧き燿夜　前編～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51X+xlkzuhL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～月の碧き燿夜　前編～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～月の碧き燿夜　前編～ (集英社コバルト文庫)</h5>
@@ -1280,7 +1282,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QOAtEpSnL.jpg" class="mr-3" alt="姫神さまに願いを～巡恋夏城～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QOAtEpSnL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～巡恋夏城～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～巡恋夏城～ (集英社コバルト文庫)</h5>
@@ -1293,7 +1295,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51lBg+x1vJL.jpg" class="mr-3" alt="姫神さまに願いを～秘恋夏峡～ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51lBg+x1vJL.jpg" class="mr-3 lazyload" alt="姫神さまに願いを～秘恋夏峡～ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姫神さまに願いを～秘恋夏峡～ (集英社コバルト文庫)</h5>
@@ -1306,7 +1308,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Mg17v2rAL.jpg" class="mr-3" alt="きつね王子とひとつ屋根の下 (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Mg17v2rAL.jpg" class="mr-3 lazyload" alt="きつね王子とひとつ屋根の下 (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>きつね王子とひとつ屋根の下 (集英社オレンジ文庫)</h5>
@@ -1319,7 +1321,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61E4e18TYeL.jpg" class="mr-3" alt="悪魔のような花婿4　ダイヤモンドは淑女の親友 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61E4e18TYeL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿4　ダイヤモンドは淑女の親友 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿4　ダイヤモンドは淑女の親友 (集英社コバルト文庫)</h5>
@@ -1332,7 +1334,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Mb7AX-qfL.jpg" class="mr-3" alt="悪魔のような花婿9　エメラルド島の花嫁 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Mb7AX-qfL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿9　エメラルド島の花嫁 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿9　エメラルド島の花嫁 (集英社コバルト文庫)</h5>
@@ -1345,7 +1347,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Dlk7OmN6L.jpg" class="mr-3" alt="悪魔のような花婿10　プリンセス・フェスティバル (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Dlk7OmN6L.jpg" class="mr-3 lazyload" alt="悪魔のような花婿10　プリンセス・フェスティバル (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿10　プリンセス・フェスティバル (集英社コバルト文庫)</h5>
@@ -1358,7 +1360,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61yo8YjCprL.jpg" class="mr-3" alt="悪魔のような花婿7　魔法使いの恋人 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61yo8YjCprL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿7　魔法使いの恋人 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿7　魔法使いの恋人 (集英社コバルト文庫)</h5>
@@ -1371,7 +1373,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61STzGw-msL.jpg" class="mr-3" alt="悪魔のような花婿8　薔薇の祭典 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61STzGw-msL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿8　薔薇の祭典 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿8　薔薇の祭典 (集英社コバルト文庫)</h5>
@@ -1384,7 +1386,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61s6qi-oYoL.jpg" class="mr-3" alt="悪魔のような花婿6　魔女たちの仮面舞踏会 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61s6qi-oYoL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿6　魔女たちの仮面舞踏会 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿6　魔女たちの仮面舞踏会 (集英社コバルト文庫)</h5>
@@ -1397,7 +1399,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51SGK-ierEL.jpg" class="mr-3" alt="悪魔のような花婿5　愛と誘惑の黄金宮 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51SGK-ierEL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿5　愛と誘惑の黄金宮 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿5　愛と誘惑の黄金宮 (集英社コバルト文庫)</h5>
@@ -1410,7 +1412,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61qNlyHpR0L.jpg" class="mr-3" alt="悪魔のような花婿3　薔薇の横恋慕 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61qNlyHpR0L.jpg" class="mr-3 lazyload" alt="悪魔のような花婿3　薔薇の横恋慕 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿3　薔薇の横恋慕 (集英社コバルト文庫)</h5>
@@ -1423,7 +1425,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61vBkAHkRCL.jpg" class="mr-3" alt="悪魔のような花婿2　遅れてきた求婚者 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61vBkAHkRCL.jpg" class="mr-3 lazyload" alt="悪魔のような花婿2　遅れてきた求婚者 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔のような花婿2　遅れてきた求婚者 (集英社コバルト文庫)</h5>
@@ -1436,7 +1438,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OnA8nMttL.jpg" class="mr-3" alt="桜咲くまで勝負ですッ！ (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51OnA8nMttL.jpg" class="mr-3 lazyload" alt="桜咲くまで勝負ですッ！ (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>桜咲くまで勝負ですッ！ (集英社コバルト文庫)</h5>
@@ -1449,7 +1451,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61V-xHv9oOL.jpg" class="mr-3" alt="小説　スミカスミレ (集英社オレンジ文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61V-xHv9oOL.jpg" class="mr-3 lazyload" alt="小説　スミカスミレ (集英社オレンジ文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　スミカスミレ (集英社オレンジ文庫)</h5>
@@ -1462,7 +1464,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51JFXg+RO1L.jpg" class="mr-3" alt="夢みる嘘つき人形 (集英社コバルト文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51JFXg+RO1L.jpg" class="mr-3 lazyload" alt="夢みる嘘つき人形 (集英社コバルト文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>夢みる嘘つき人形 (集英社コバルト文庫)</h5>
@@ -1475,5 +1477,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>

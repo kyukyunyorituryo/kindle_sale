@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510RqerJR7L.jpg" class="mr-3" alt="徳川家康（1）　出生乱離の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510RqerJR7L.jpg" class="mr-3 lazyload" alt="徳川家康（1）　出生乱離の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（1）　出生乱離の巻 (山岡荘八歴史文庫)</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510M8s73G1L.jpg" class="mr-3" alt="小説　太平洋戦争(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510M8s73G1L.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(1) (山岡荘八歴史文庫)</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510rbQS-1xL.jpg" class="mr-3" alt="織田信長(1)　無門三略の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510rbQS-1xL.jpg" class="mr-3 lazyload" alt="織田信長(1)　無門三略の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>織田信長(1)　無門三略の巻 (山岡荘八歴史文庫)</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ZluVDH2xL.jpg" class="mr-3" alt="新太平記（1）　笠置山の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ZluVDH2xL.jpg" class="mr-3 lazyload" alt="新太平記（1）　笠置山の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新太平記（1）　笠置山の巻 (山岡荘八歴史文庫)</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51UZWOTRd4L.jpg" class="mr-3" alt="新装版　小説太平洋戦争　全６冊合本版 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51UZWOTRd4L.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　全６冊合本版 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　全６冊合本版 (講談社文庫)</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Kp-5QqWnL.jpg" class="mr-3" alt="徳川家康（2）　獅子の座の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Kp-5QqWnL.jpg" class="mr-3 lazyload" alt="徳川家康（2）　獅子の座の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（2）　獅子の座の巻 (山岡荘八歴史文庫)</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51vRGSppQkL.jpg" class="mr-3" alt="日蓮 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51vRGSppQkL.jpg" class="mr-3 lazyload" alt="日蓮 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>日蓮 (山岡荘八歴史文庫)</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510J3aR9e7L.jpg" class="mr-3" alt="徳川家康（9）　碧雲の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510J3aR9e7L.jpg" class="mr-3 lazyload" alt="徳川家康（9）　碧雲の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（9）　碧雲の巻 (山岡荘八歴史文庫)</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51v-V0MHvRL.jpg" class="mr-3" alt="柳生石舟斎 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51v-V0MHvRL.jpg" class="mr-3 lazyload" alt="柳生石舟斎 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>柳生石舟斎 (山岡荘八歴史文庫)</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51urmidVX1L.jpg" class="mr-3" alt="徳川家康（5）　うず潮の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51urmidVX1L.jpg" class="mr-3 lazyload" alt="徳川家康（5）　うず潮の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（5）　うず潮の巻 (山岡荘八歴史文庫)</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FtRIp50lL.jpg" class="mr-3" alt="織田信長(2)　桶狭間の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FtRIp50lL.jpg" class="mr-3 lazyload" alt="織田信長(2)　桶狭間の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>織田信長(2)　桶狭間の巻 (山岡荘八歴史文庫)</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HL-S0umLL.jpg" class="mr-3" alt="毛利元就(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HL-S0umLL.jpg" class="mr-3 lazyload" alt="毛利元就(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>毛利元就(1) (山岡荘八歴史文庫)</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QpmgNxpAL.jpg" class="mr-3" alt="明治天皇(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QpmgNxpAL.jpg" class="mr-3 lazyload" alt="明治天皇(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明治天皇(1) (山岡荘八歴史文庫)</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51e4YiaEMhL.jpg" class="mr-3" alt="徳川家康（16）　日蝕月蝕の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51e4YiaEMhL.jpg" class="mr-3 lazyload" alt="徳川家康（16）　日蝕月蝕の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（16）　日蝕月蝕の巻 (山岡荘八歴史文庫)</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mYi+FX+tL.jpg" class="mr-3" alt="徳川家康（4）　葦かびの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51mYi+FX+tL.jpg" class="mr-3 lazyload" alt="徳川家康（4）　葦かびの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（4）　葦かびの巻 (山岡荘八歴史文庫)</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ECCF4yCRL.jpg" class="mr-3" alt="徳川家康（12）　華厳の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ECCF4yCRL.jpg" class="mr-3 lazyload" alt="徳川家康（12）　華厳の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（12）　華厳の巻 (山岡荘八歴史文庫)</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zSW0dRCqL.jpg" class="mr-3" alt="徳川家康（3）　朝露の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zSW0dRCqL.jpg" class="mr-3 lazyload" alt="徳川家康（3）　朝露の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（3）　朝露の巻 (山岡荘八歴史文庫)</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51NHxns2zCL.jpg" class="mr-3" alt="柳生宗矩(1)　鷹と蛙の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51NHxns2zCL.jpg" class="mr-3 lazyload" alt="柳生宗矩(1)　鷹と蛙の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>柳生宗矩(1)　鷹と蛙の巻 (山岡荘八歴史文庫)</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PUgVHyISL.jpg" class="mr-3" alt="徳川家康（7）　颶風の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PUgVHyISL.jpg" class="mr-3 lazyload" alt="徳川家康（7）　颶風の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（7）　颶風の巻 (山岡荘八歴史文庫)</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51rmb0zVpdL.jpg" class="mr-3" alt="徳川家康（17）　軍荼利の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51rmb0zVpdL.jpg" class="mr-3 lazyload" alt="徳川家康（17）　軍荼利の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（17）　軍荼利の巻 (山岡荘八歴史文庫)</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zyw1eswuL.jpg" class="mr-3" alt="伊達政宗(2)　人取られの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zyw1eswuL.jpg" class="mr-3 lazyload" alt="伊達政宗(2)　人取られの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(2)　人取られの巻 (山岡荘八歴史文庫)</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51knYWVzG8L.jpg" class="mr-3" alt="徳川家康（14）　明星瞬くの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51knYWVzG8L.jpg" class="mr-3 lazyload" alt="徳川家康（14）　明星瞬くの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（14）　明星瞬くの巻 (山岡荘八歴史文庫)</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51vX-9FB6TL.jpg" class="mr-3" alt="豊臣秀吉(8) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51vX-9FB6TL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(8) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(8) (山岡荘八歴史文庫)</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QmpAdynVL.jpg" class="mr-3" alt="山田長政他 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QmpAdynVL.jpg" class="mr-3 lazyload" alt="山田長政他 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>山田長政他 (山岡荘八歴史文庫)</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51rLIGEzBNL.jpg" class="mr-3" alt="高杉晋作(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51rLIGEzBNL.jpg" class="mr-3 lazyload" alt="高杉晋作(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>高杉晋作(1) (山岡荘八歴史文庫)</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51lQoloOuQL.jpg" class="mr-3" alt="徳川家康（11)　竜虎の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51lQoloOuQL.jpg" class="mr-3 lazyload" alt="徳川家康（11)　竜虎の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（11)　竜虎の巻 (山岡荘八歴史文庫)</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51URLJlbAWL.jpg" class="mr-3" alt="源頼朝(1)　平治の乱の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51URLJlbAWL.jpg" class="mr-3 lazyload" alt="源頼朝(1)　平治の乱の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>源頼朝(1)　平治の乱の巻 (山岡荘八歴史文庫)</h5>
@@ -513,7 +515,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cVDuOzqiL.jpg" class="mr-3" alt="織田信長(5)　本能寺の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cVDuOzqiL.jpg" class="mr-3 lazyload" alt="織田信長(5)　本能寺の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>織田信長(5)　本能寺の巻 (山岡荘八歴史文庫)</h5>
@@ -526,7 +528,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51t8Gt30DeL.jpg" class="mr-3" alt="吉田松陰(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51t8Gt30DeL.jpg" class="mr-3 lazyload" alt="吉田松陰(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>吉田松陰(1) (山岡荘八歴史文庫)</h5>
@@ -539,7 +541,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51kUFXVWhkL.jpg" class="mr-3" alt="徳川家康（8）　心火の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51kUFXVWhkL.jpg" class="mr-3 lazyload" alt="徳川家康（8）　心火の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（8）　心火の巻 (山岡荘八歴史文庫)</h5>
@@ -552,7 +554,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51tnXbpSlCL.jpg" class="mr-3" alt="坂本龍馬(2)　胎動の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51tnXbpSlCL.jpg" class="mr-3 lazyload" alt="坂本龍馬(2)　胎動の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>坂本龍馬(2)　胎動の巻 (山岡荘八歴史文庫)</h5>
@@ -565,7 +567,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51CR40yxYTL.jpg" class="mr-3" alt="徳川家康（10)　無相門の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51CR40yxYTL.jpg" class="mr-3 lazyload" alt="徳川家康（10)　無相門の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（10)　無相門の巻 (山岡荘八歴史文庫)</h5>
@@ -578,7 +580,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51quW-1RKaL.jpg" class="mr-3" alt="水戸光圀 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51quW-1RKaL.jpg" class="mr-3 lazyload" alt="水戸光圀 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>水戸光圀 (山岡荘八歴史文庫)</h5>
@@ -591,7 +593,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51MZdzlwRjL.jpg" class="mr-3" alt="毛利元就(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51MZdzlwRjL.jpg" class="mr-3 lazyload" alt="毛利元就(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>毛利元就(2) (山岡荘八歴史文庫)</h5>
@@ -604,7 +606,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BSMbnhbjL.jpg" class="mr-3" alt="徳川慶喜(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51BSMbnhbjL.jpg" class="mr-3 lazyload" alt="徳川慶喜(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川慶喜(1) (山岡荘八歴史文庫)</h5>
@@ -617,7 +619,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517WXgwfzBL.jpg" class="mr-3" alt="織田信長(4)　天下布武の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517WXgwfzBL.jpg" class="mr-3 lazyload" alt="織田信長(4)　天下布武の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>織田信長(4)　天下布武の巻 (山岡荘八歴史文庫)</h5>
@@ -630,7 +632,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51B9gP4H7mL.jpg" class="mr-3" alt="高杉晋作(3) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51B9gP4H7mL.jpg" class="mr-3 lazyload" alt="高杉晋作(3) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>高杉晋作(3) (山岡荘八歴史文庫)</h5>
@@ -643,7 +645,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qSohW7BDL.jpg" class="mr-3" alt="徳川家康（23）　蕭風城の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51qSohW7BDL.jpg" class="mr-3 lazyload" alt="徳川家康（23）　蕭風城の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（23）　蕭風城の巻 (山岡荘八歴史文庫)</h5>
@@ -656,7 +658,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ebjpO0S7L.jpg" class="mr-3" alt="徳川家康（24）　戦争と平和の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ebjpO0S7L.jpg" class="mr-3 lazyload" alt="徳川家康（24）　戦争と平和の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（24）　戦争と平和の巻 (山岡荘八歴史文庫)</h5>
@@ -669,7 +671,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51pSJVYCkhL.jpg" class="mr-3" alt="豊臣秀吉(4) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51pSJVYCkhL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(4) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(4) (山岡荘八歴史文庫)</h5>
@@ -682,7 +684,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51kGnILl3nL.jpg" class="mr-3" alt="千葉周作（1） (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51kGnILl3nL.jpg" class="mr-3 lazyload" alt="千葉周作（1） (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>千葉周作（1） (山岡荘八歴史文庫)</h5>
@@ -695,7 +697,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ScenO6KLL.jpg" class="mr-3" alt="徳川家康（21）　春雷遠雷の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ScenO6KLL.jpg" class="mr-3 lazyload" alt="徳川家康（21）　春雷遠雷の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（21）　春雷遠雷の巻 (山岡荘八歴史文庫)</h5>
@@ -708,7 +710,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510YMLz9YxL.jpg" class="mr-3" alt="織田信長(3)　侵略怒涛の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510YMLz9YxL.jpg" class="mr-3 lazyload" alt="織田信長(3)　侵略怒涛の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>織田信長(3)　侵略怒涛の巻 (山岡荘八歴史文庫)</h5>
@@ -721,7 +723,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515HqqYisZL.jpg" class="mr-3" alt="小説　太平洋戦争(4) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515HqqYisZL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(4) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(4) (山岡荘八歴史文庫)</h5>
@@ -734,7 +736,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zN8I-BERL.jpg" class="mr-3" alt="小説　太平洋戦争(6) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zN8I-BERL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(6) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(6) (山岡荘八歴史文庫)</h5>
@@ -747,7 +749,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51CYCrwk8JL.jpg" class="mr-3" alt="徳川家光(1)　三代の風の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51CYCrwk8JL.jpg" class="mr-3 lazyload" alt="徳川家光(1)　三代の風の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家光(1)　三代の風の巻 (山岡荘八歴史文庫)</h5>
@@ -760,7 +762,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PJIFSc5YL.jpg" class="mr-3" alt="徳川家康（6）　燃える土の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PJIFSc5YL.jpg" class="mr-3 lazyload" alt="徳川家康（6）　燃える土の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（6）　燃える土の巻 (山岡荘八歴史文庫)</h5>
@@ -773,7 +775,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51tahhsotyL.jpg" class="mr-3" alt="新太平記（3）　建武中興の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51tahhsotyL.jpg" class="mr-3 lazyload" alt="新太平記（3）　建武中興の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新太平記（3）　建武中興の巻 (山岡荘八歴史文庫)</h5>
@@ -786,7 +788,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51oFgts4tcL.jpg" class="mr-3" alt="新太平記（2）　鎌倉攻めの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51oFgts4tcL.jpg" class="mr-3 lazyload" alt="新太平記（2）　鎌倉攻めの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新太平記（2）　鎌倉攻めの巻 (山岡荘八歴史文庫)</h5>
@@ -799,7 +801,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51r2HIcZWOL.jpg" class="mr-3" alt="徳川家康（26）　立命往生の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51r2HIcZWOL.jpg" class="mr-3 lazyload" alt="徳川家康（26）　立命往生の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（26）　立命往生の巻 (山岡荘八歴史文庫)</h5>
@@ -812,7 +814,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51O70ZqgQ7L.jpg" class="mr-3" alt="伊達政宗(5)　蒼穹の鷹の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51O70ZqgQ7L.jpg" class="mr-3 lazyload" alt="伊達政宗(5)　蒼穹の鷹の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(5)　蒼穹の鷹の巻 (山岡荘八歴史文庫)</h5>
@@ -825,7 +827,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51trE+pUbhL.jpg" class="mr-3" alt="徳川家康（22）　百雷落つるの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51trE+pUbhL.jpg" class="mr-3 lazyload" alt="徳川家康（22）　百雷落つるの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（22）　百雷落つるの巻 (山岡荘八歴史文庫)</h5>
@@ -838,7 +840,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512XP+1S9AL.jpg" class="mr-3" alt="小説　太平洋戦争(7) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512XP+1S9AL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(7) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(7) (山岡荘八歴史文庫)</h5>
@@ -851,7 +853,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51NNv2fUecL.jpg" class="mr-3" alt="徳川家康（25）　孤城落月の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51NNv2fUecL.jpg" class="mr-3 lazyload" alt="徳川家康（25）　孤城落月の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（25）　孤城落月の巻 (山岡荘八歴史文庫)</h5>
@@ -864,7 +866,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51O4i16QyKL.jpg" class="mr-3" alt="小説　太平洋戦争(8) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51O4i16QyKL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(8) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(8) (山岡荘八歴史文庫)</h5>
@@ -877,7 +879,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PiLgqb7jL.jpg" class="mr-3" alt="徳川家光(3)　地の声　天の声の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PiLgqb7jL.jpg" class="mr-3 lazyload" alt="徳川家光(3)　地の声　天の声の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家光(3)　地の声　天の声の巻 (山岡荘八歴史文庫)</h5>
@@ -890,7 +892,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51W3xeWx0TL.jpg" class="mr-3" alt="明治天皇(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51W3xeWx0TL.jpg" class="mr-3 lazyload" alt="明治天皇(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明治天皇(2) (山岡荘八歴史文庫)</h5>
@@ -903,7 +905,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QhzvOizeL.jpg" class="mr-3" alt="徳川家康（18）　関ケ原の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QhzvOizeL.jpg" class="mr-3 lazyload" alt="徳川家康（18）　関ケ原の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（18）　関ケ原の巻 (山岡荘八歴史文庫)</h5>
@@ -916,7 +918,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51oUb5LiPDL.jpg" class="mr-3" alt="坂本龍馬(1)　黒船の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51oUb5LiPDL.jpg" class="mr-3 lazyload" alt="坂本龍馬(1)　黒船の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>坂本龍馬(1)　黒船の巻 (山岡荘八歴史文庫)</h5>
@@ -929,7 +931,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Ywk6461wL.jpg" class="mr-3" alt="新太平記（5）　義貞戦死の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Ywk6461wL.jpg" class="mr-3 lazyload" alt="新太平記（5）　義貞戦死の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新太平記（5）　義貞戦死の巻 (山岡荘八歴史文庫)</h5>
@@ -942,7 +944,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51rxS1uflFL.jpg" class="mr-3" alt="豊臣秀吉(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51rxS1uflFL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(2) (山岡荘八歴史文庫)</h5>
@@ -955,7 +957,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510sE2Fc9rL.jpg" class="mr-3" alt="伊達政宗(7)　平和戦略の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510sE2Fc9rL.jpg" class="mr-3 lazyload" alt="伊達政宗(7)　平和戦略の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(7)　平和戦略の巻 (山岡荘八歴史文庫)</h5>
@@ -968,7 +970,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PM9Y4R5iL.jpg" class="mr-3" alt="伊達政宗(3)　夢は醍醐の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PM9Y4R5iL.jpg" class="mr-3 lazyload" alt="伊達政宗(3)　夢は醍醐の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(3)　夢は醍醐の巻 (山岡荘八歴史文庫)</h5>
@@ -981,7 +983,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bSgO+knTL.jpg" class="mr-3" alt="小説　太平洋戦争(9) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51bSgO+knTL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(9) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(9) (山岡荘八歴史文庫)</h5>
@@ -994,7 +996,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51vqfVaMQXL.jpg" class="mr-3" alt="新太平記（4）　湊川の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51vqfVaMQXL.jpg" class="mr-3 lazyload" alt="新太平記（4）　湊川の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新太平記（4）　湊川の巻 (山岡荘八歴史文庫)</h5>
@@ -1007,7 +1009,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51I1tFIXcaL.jpg" class="mr-3" alt="小説　太平洋戦争(3) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51I1tFIXcaL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(3) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(3) (山岡荘八歴史文庫)</h5>
@@ -1020,7 +1022,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fy4IGKxfL.jpg" class="mr-3" alt="小説　太平洋戦争(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51fy4IGKxfL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(2) (山岡荘八歴史文庫)</h5>
@@ -1033,7 +1035,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LZH4Xt9RL.jpg" class="mr-3" alt="吉田松陰(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51LZH4Xt9RL.jpg" class="mr-3 lazyload" alt="吉田松陰(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>吉田松陰(2) (山岡荘八歴史文庫)</h5>
@@ -1046,7 +1048,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51A5lsNIqBL.jpg" class="mr-3" alt="伊達政宗(4)　黄金日本島の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51A5lsNIqBL.jpg" class="mr-3 lazyload" alt="伊達政宗(4)　黄金日本島の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(4)　黄金日本島の巻 (山岡荘八歴史文庫)</h5>
@@ -1059,7 +1061,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qJ63rR3cL.jpg" class="mr-3" alt="小説　太平洋戦争(5) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51qJ63rR3cL.jpg" class="mr-3 lazyload" alt="小説　太平洋戦争(5) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>小説　太平洋戦争(5) (山岡荘八歴史文庫)</h5>
@@ -1072,7 +1074,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51l3oAh5JWL.jpg" class="mr-3" alt="豊臣秀吉(7) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51l3oAh5JWL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(7) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(7) (山岡荘八歴史文庫)</h5>
@@ -1085,7 +1087,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51prL+w0rvL.jpg" class="mr-3" alt="徳川家康（13）　侘茶の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51prL+w0rvL.jpg" class="mr-3 lazyload" alt="徳川家康（13）　侘茶の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（13）　侘茶の巻 (山岡荘八歴史文庫)</h5>
@@ -1098,7 +1100,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51VAxyUcdtL.jpg" class="mr-3" alt="徳川家康（15）　難波の夢の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51VAxyUcdtL.jpg" class="mr-3 lazyload" alt="徳川家康（15）　難波の夢の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（15）　難波の夢の巻 (山岡荘八歴史文庫)</h5>
@@ -1111,7 +1113,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bWYuBWQ6L.jpg" class="mr-3" alt="千葉周作（2） (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51bWYuBWQ6L.jpg" class="mr-3 lazyload" alt="千葉周作（2） (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>千葉周作（2） (山岡荘八歴史文庫)</h5>
@@ -1124,7 +1126,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51oLZmm2hFL.jpg" class="mr-3" alt="徳川慶喜(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51oLZmm2hFL.jpg" class="mr-3 lazyload" alt="徳川慶喜(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川慶喜(2) (山岡荘八歴史文庫)</h5>
@@ -1137,7 +1139,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ONmfyK8QL.jpg" class="mr-3" alt="徳川家光(2)　泰平人脈の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ONmfyK8QL.jpg" class="mr-3 lazyload" alt="徳川家光(2)　泰平人脈の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家光(2)　泰平人脈の巻 (山岡荘八歴史文庫)</h5>
@@ -1150,7 +1152,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cOgUTZYML.jpg" class="mr-3" alt="徳川慶喜(4) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cOgUTZYML.jpg" class="mr-3 lazyload" alt="徳川慶喜(4) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川慶喜(4) (山岡荘八歴史文庫)</h5>
@@ -1163,7 +1165,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/518xWDXPQGL.jpg" class="mr-3" alt="徳川家光(4)　時流と運命の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/518xWDXPQGL.jpg" class="mr-3 lazyload" alt="徳川家光(4)　時流と運命の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家光(4)　時流と運命の巻 (山岡荘八歴史文庫)</h5>
@@ -1176,7 +1178,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51nChAVMk2L.jpg" class="mr-3" alt="高杉晋作(2) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51nChAVMk2L.jpg" class="mr-3 lazyload" alt="高杉晋作(2) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>高杉晋作(2) (山岡荘八歴史文庫)</h5>
@@ -1189,7 +1191,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51uc-fgo2uL.jpg" class="mr-3" alt="豊臣秀吉(1) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51uc-fgo2uL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(1) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(1) (山岡荘八歴史文庫)</h5>
@@ -1202,7 +1204,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51O1lSBULOL.jpg" class="mr-3" alt="徳川家康（20）　江戸・大坂の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51O1lSBULOL.jpg" class="mr-3 lazyload" alt="徳川家康（20）　江戸・大坂の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（20）　江戸・大坂の巻 (山岡荘八歴史文庫)</h5>
@@ -1215,7 +1217,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ZnTyvLsSL.jpg" class="mr-3" alt="伊達政宗(1)　朝明けの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ZnTyvLsSL.jpg" class="mr-3 lazyload" alt="伊達政宗(1)　朝明けの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(1)　朝明けの巻 (山岡荘八歴史文庫)</h5>
@@ -1228,7 +1230,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/516r9hKNV6L.jpg" class="mr-3" alt="明治天皇(6) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/516r9hKNV6L.jpg" class="mr-3 lazyload" alt="明治天皇(6) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明治天皇(6) (山岡荘八歴史文庫)</h5>
@@ -1241,7 +1243,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mLsT63ooL.jpg" class="mr-3" alt="明治天皇(5) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51mLsT63ooL.jpg" class="mr-3 lazyload" alt="明治天皇(5) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明治天皇(5) (山岡荘八歴史文庫)</h5>
@@ -1254,7 +1256,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519VerDkyeL.jpg" class="mr-3" alt="明治天皇(4) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/519VerDkyeL.jpg" class="mr-3 lazyload" alt="明治天皇(4) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明治天皇(4) (山岡荘八歴史文庫)</h5>
@@ -1267,7 +1269,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Kh++H7CdL.jpg" class="mr-3" alt="豊臣秀吉(6) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Kh++H7CdL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(6) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(6) (山岡荘八歴史文庫)</h5>
@@ -1280,7 +1282,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KqFtbmcML.jpg" class="mr-3" alt="豊臣秀吉(3) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51KqFtbmcML.jpg" class="mr-3 lazyload" alt="豊臣秀吉(3) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(3) (山岡荘八歴史文庫)</h5>
@@ -1293,7 +1295,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Q-oGXiNxL.jpg" class="mr-3" alt="源頼朝(2)　伊豆の青春の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Q-oGXiNxL.jpg" class="mr-3 lazyload" alt="源頼朝(2)　伊豆の青春の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>源頼朝(2)　伊豆の青春の巻 (山岡荘八歴史文庫)</h5>
@@ -1306,7 +1308,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512plMnT0qL.jpg" class="mr-3" alt="評伝・山岡荘八"/>
+    <img data-src="https://m.media-amazon.com/images/I/512plMnT0qL.jpg" class="mr-3 lazyload" alt="評伝・山岡荘八"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>評伝・山岡荘八</h5>
@@ -1319,7 +1321,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51187L0MK8L.jpg" class="mr-3" alt="柳生宗矩(2)　柳生の桃の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51187L0MK8L.jpg" class="mr-3 lazyload" alt="柳生宗矩(2)　柳生の桃の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>柳生宗矩(2)　柳生の桃の巻 (山岡荘八歴史文庫)</h5>
@@ -1332,7 +1334,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517oa4PX9rL.jpg" class="mr-3" alt="柳生宗矩(3)　人間曼陀羅の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517oa4PX9rL.jpg" class="mr-3 lazyload" alt="柳生宗矩(3)　人間曼陀羅の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>柳生宗矩(3)　人間曼陀羅の巻 (山岡荘八歴史文庫)</h5>
@@ -1345,7 +1347,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FYtaKDlAL.jpg" class="mr-3" alt="豊臣秀吉(5) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FYtaKDlAL.jpg" class="mr-3 lazyload" alt="豊臣秀吉(5) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>豊臣秀吉(5) (山岡荘八歴史文庫)</h5>
@@ -1358,7 +1360,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51k-yz2UIpL.jpg" class="mr-3" alt="源頼朝(3)　鎌倉開府の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51k-yz2UIpL.jpg" class="mr-3 lazyload" alt="源頼朝(3)　鎌倉開府の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>源頼朝(3)　鎌倉開府の巻 (山岡荘八歴史文庫)</h5>
@@ -1371,7 +1373,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ij5O3mqHL.jpg" class="mr-3" alt="徳川家康（19）　泰平胎動の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ij5O3mqHL.jpg" class="mr-3 lazyload" alt="徳川家康（19）　泰平胎動の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川家康（19）　泰平胎動の巻 (山岡荘八歴史文庫)</h5>
@@ -1384,7 +1386,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jds-LyqxL.jpg" class="mr-3" alt="徳川慶喜(6) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jds-LyqxL.jpg" class="mr-3 lazyload" alt="徳川慶喜(6) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川慶喜(6) (山岡荘八歴史文庫)</h5>
@@ -1397,7 +1399,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cP5tdV5YL.jpg" class="mr-3" alt="坂本龍馬(3)　狂風の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cP5tdV5YL.jpg" class="mr-3 lazyload" alt="坂本龍馬(3)　狂風の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>坂本龍馬(3)　狂風の巻 (山岡荘八歴史文庫)</h5>
@@ -1410,7 +1412,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51F-Co7OSvL.jpg" class="mr-3" alt="頼朝勘定 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51F-Co7OSvL.jpg" class="mr-3 lazyload" alt="頼朝勘定 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>頼朝勘定 (講談社文庫)</h5>
@@ -1423,7 +1425,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51RcBGcY6FL.jpg" class="mr-3" alt="伊達政宗(8)　旅情大悟の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51RcBGcY6FL.jpg" class="mr-3 lazyload" alt="伊達政宗(8)　旅情大悟の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(8)　旅情大悟の巻 (山岡荘八歴史文庫)</h5>
@@ -1436,7 +1438,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512cPAV66dL.jpg" class="mr-3" alt="新装版　小説太平洋戦争　（６） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512cPAV66dL.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　（６） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　（６） (講談社文庫)</h5>
@@ -1449,7 +1451,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51N4qyrYBKL.jpg" class="mr-3" alt="徳川慶喜(3) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51N4qyrYBKL.jpg" class="mr-3 lazyload" alt="徳川慶喜(3) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川慶喜(3) (山岡荘八歴史文庫)</h5>
@@ -1462,7 +1464,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+9jt0BHCL.jpg" class="mr-3" alt="伊達政宗(6)　大坂攻めの巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+9jt0BHCL.jpg" class="mr-3 lazyload" alt="伊達政宗(6)　大坂攻めの巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊達政宗(6)　大坂攻めの巻 (山岡荘八歴史文庫)</h5>
@@ -1475,7 +1477,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jW4HWjl0L.jpg" class="mr-3" alt="柳生宗矩(4)　散る花咲く花の巻 (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jW4HWjl0L.jpg" class="mr-3 lazyload" alt="柳生宗矩(4)　散る花咲く花の巻 (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>柳生宗矩(4)　散る花咲く花の巻 (山岡荘八歴史文庫)</h5>
@@ -1488,7 +1490,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FAwySBWCL.jpg" class="mr-3" alt="明治天皇(3) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FAwySBWCL.jpg" class="mr-3 lazyload" alt="明治天皇(3) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明治天皇(3) (山岡荘八歴史文庫)</h5>
@@ -1501,7 +1503,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51s0zWgUEQL.jpg" class="mr-3" alt="徳川慶喜(5) (山岡荘八歴史文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51s0zWgUEQL.jpg" class="mr-3 lazyload" alt="徳川慶喜(5) (山岡荘八歴史文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>徳川慶喜(5) (山岡荘八歴史文庫)</h5>
@@ -1514,7 +1516,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51yQpQ5n2hL.jpg" class="mr-3" alt="新装版　小説太平洋戦争　（１） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51yQpQ5n2hL.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　（１） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　（１） (講談社文庫)</h5>
@@ -1527,7 +1529,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zQ5BwKN9L.jpg" class="mr-3" alt="新装版　小説太平洋戦争　（４） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zQ5BwKN9L.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　（４） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　（４） (講談社文庫)</h5>
@@ -1540,7 +1542,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51tos2Jw1IL.jpg" class="mr-3" alt="新装版　小説太平洋戦争　（３） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51tos2Jw1IL.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　（３） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　（３） (講談社文庫)</h5>
@@ -1553,7 +1555,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51E88VeY4dL.jpg" class="mr-3" alt="新装版　小説太平洋戦争　（２） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51E88VeY4dL.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　（２） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　（２） (講談社文庫)</h5>
@@ -1566,7 +1568,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ERhXj6SoL.jpg" class="mr-3" alt="新装版　小説太平洋戦争　（５） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ERhXj6SoL.jpg" class="mr-3 lazyload" alt="新装版　小説太平洋戦争　（５） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　小説太平洋戦争　（５） (講談社文庫)</h5>
@@ -1579,5 +1581,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>

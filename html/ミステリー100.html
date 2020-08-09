@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41qcrTOXF9L.jpg" class="mr-3" alt="罪の声 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41qcrTOXF9L.jpg" class="mr-3 lazyload" alt="罪の声 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>罪の声 (講談社文庫)</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-itzTk5dL.jpg" class="mr-3" alt="悪徳の輪舞曲 御子柴礼司 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51-itzTk5dL.jpg" class="mr-3 lazyload" alt="悪徳の輪舞曲 御子柴礼司 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪徳の輪舞曲 御子柴礼司 (講談社文庫)</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51sDRJL-unL.jpg" class="mr-3" alt="ｍｅｄｉｕｍ　霊媒探偵城塚翡翠"/>
+    <img data-src="https://m.media-amazon.com/images/I/51sDRJL-unL.jpg" class="mr-3 lazyload" alt="ｍｅｄｉｕｍ　霊媒探偵城塚翡翠"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ｍｅｄｉｕｍ　霊媒探偵城塚翡翠</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FW77Ye2QL.jpg" class="mr-3" alt="恩讐の鎮魂曲 御子柴礼司 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FW77Ye2QL.jpg" class="mr-3 lazyload" alt="恩讐の鎮魂曲 御子柴礼司 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>恩讐の鎮魂曲 御子柴礼司 (講談社文庫)</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hfZGl5B6L.jpg" class="mr-3" alt="追憶の夜想曲 御子柴礼司 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hfZGl5B6L.jpg" class="mr-3 lazyload" alt="追憶の夜想曲 御子柴礼司 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>追憶の夜想曲 御子柴礼司 (講談社文庫)</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41Rjh01-bnL.jpg" class="mr-3" alt="アルキメデスは手を汚さない (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41Rjh01-bnL.jpg" class="mr-3 lazyload" alt="アルキメデスは手を汚さない (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アルキメデスは手を汚さない (講談社文庫)</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51abYdJ3E3L.jpg" class="mr-3" alt="連城三紀彦　レジェンド２　傑作ミステリー集 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51abYdJ3E3L.jpg" class="mr-3 lazyload" alt="連城三紀彦　レジェンド２　傑作ミステリー集 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>連城三紀彦　レジェンド２　傑作ミステリー集 (講談社文庫)</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512M6zK1V+L.jpg" class="mr-3" alt="道徳の時間 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512M6zK1V+L.jpg" class="mr-3 lazyload" alt="道徳の時間 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>道徳の時間 (講談社文庫)</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PbrgIyINL.jpg" class="mr-3" alt="改訂完全版　異邦の騎士 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PbrgIyINL.jpg" class="mr-3 lazyload" alt="改訂完全版　異邦の騎士 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>改訂完全版　異邦の騎士 (講談社文庫)</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51kFJnoPw0L.jpg" class="mr-3" alt="贖罪の奏鳴曲 御子柴礼司 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51kFJnoPw0L.jpg" class="mr-3 lazyload" alt="贖罪の奏鳴曲 御子柴礼司 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>贖罪の奏鳴曲 御子柴礼司 (講談社文庫)</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ifaFZSMFL.jpg" class="mr-3" alt="刑事のまなざし 刑事・夏目信人 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ifaFZSMFL.jpg" class="mr-3 lazyload" alt="刑事のまなざし 刑事・夏目信人 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>刑事のまなざし 刑事・夏目信人 (講談社文庫)</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515IjKY+gLL.jpg" class="mr-3" alt="よろずのことに気をつけよ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515IjKY+gLL.jpg" class="mr-3 lazyload" alt="よろずのことに気をつけよ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>よろずのことに気をつけよ (講談社文庫)</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ocyhgau9L.jpg" class="mr-3" alt="ガーディアン (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ocyhgau9L.jpg" class="mr-3 lazyload" alt="ガーディアン (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ガーディアン (講談社文庫)</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51TnDtOnk3L.jpg" class="mr-3" alt="叙述トリック短編集"/>
+    <img data-src="https://m.media-amazon.com/images/I/51TnDtOnk3L.jpg" class="mr-3 lazyload" alt="叙述トリック短編集"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>叙述トリック短編集</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jybuOBnPL.jpg" class="mr-3" alt="闇の底 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jybuOBnPL.jpg" class="mr-3 lazyload" alt="闇の底 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>闇の底 (講談社文庫)</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OKdVmZKEL.jpg" class="mr-3" alt="Ｑｒｏｓの女 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51OKdVmZKEL.jpg" class="mr-3 lazyload" alt="Ｑｒｏｓの女 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Ｑｒｏｓの女 (講談社文庫)</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517s55A3I7L.jpg" class="mr-3" alt="刑事の約束 刑事・夏目信人 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517s55A3I7L.jpg" class="mr-3 lazyload" alt="刑事の約束 刑事・夏目信人 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>刑事の約束 刑事・夏目信人 (講談社文庫)</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51A5qVXI8yL.jpg" class="mr-3" alt="紅のアンデッド　法医昆虫学捜査官 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51A5qVXI8yL.jpg" class="mr-3 lazyload" alt="紅のアンデッド　法医昆虫学捜査官 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>紅のアンデッド　法医昆虫学捜査官 (講談社文庫)</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51G51SfW0ML.jpg" class="mr-3" alt="その鏡は嘘をつく 刑事・夏目信人 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51G51SfW0ML.jpg" class="mr-3 lazyload" alt="その鏡は嘘をつく 刑事・夏目信人 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>その鏡は嘘をつく 刑事・夏目信人 (講談社文庫)</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61cZJ8vugwL.jpg" class="mr-3" alt="アンデッドガール・マーダーファルス　１ (講談社タイガ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61cZJ8vugwL.jpg" class="mr-3 lazyload" alt="アンデッドガール・マーダーファルス　１ (講談社タイガ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アンデッドガール・マーダーファルス　１ (講談社タイガ)</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515qarX2hwL.jpg" class="mr-3" alt="水鏡推理 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515qarX2hwL.jpg" class="mr-3 lazyload" alt="水鏡推理 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>水鏡推理 (講談社文庫)</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PjN1MuFPL.jpg" class="mr-3" alt="ハードラック (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PjN1MuFPL.jpg" class="mr-3 lazyload" alt="ハードラック (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ハードラック (講談社文庫)</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61viudQo1eL.jpg" class="mr-3" alt="ネジ式ザゼツキー (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61viudQo1eL.jpg" class="mr-3 lazyload" alt="ネジ式ザゼツキー (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ネジ式ザゼツキー (講談社文庫)</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61qcFI+D-KL.jpg" class="mr-3" alt="御手洗潔のメロディ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61qcFI+D-KL.jpg" class="mr-3 lazyload" alt="御手洗潔のメロディ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>御手洗潔のメロディ (講談社文庫)</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51wOMqYK4cL.jpg" class="mr-3" alt="アトポス (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51wOMqYK4cL.jpg" class="mr-3 lazyload" alt="アトポス (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アトポス (講談社文庫)</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51E-NPf1inL.jpg" class="mr-3" alt="眩暈 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51E-NPf1inL.jpg" class="mr-3 lazyload" alt="眩暈 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>眩暈 (講談社文庫)</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61GdPBYDMYL.jpg" class="mr-3" alt="水晶のピラミッド (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61GdPBYDMYL.jpg" class="mr-3 lazyload" alt="水晶のピラミッド (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>水晶のピラミッド (講談社文庫)</h5>
@@ -513,7 +515,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61d4NdoFREL.jpg" class="mr-3" alt="暗闇坂の人喰いの木 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61d4NdoFREL.jpg" class="mr-3 lazyload" alt="暗闇坂の人喰いの木 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>暗闇坂の人喰いの木 (講談社文庫)</h5>
@@ -526,7 +528,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61IyQzZ9lgL.jpg" class="mr-3" alt="御手洗潔のダンス (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61IyQzZ9lgL.jpg" class="mr-3 lazyload" alt="御手洗潔のダンス (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>御手洗潔のダンス (講談社文庫)</h5>
@@ -539,7 +541,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51EhJT5ML+L.jpg" class="mr-3" alt="御手洗潔の挨拶 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51EhJT5ML+L.jpg" class="mr-3 lazyload" alt="御手洗潔の挨拶 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>御手洗潔の挨拶 (講談社文庫)</h5>
@@ -552,7 +554,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51odQbc8Z5L.jpg" class="mr-3" alt="逃走 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51odQbc8Z5L.jpg" class="mr-3 lazyload" alt="逃走 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>逃走 (講談社文庫)</h5>
@@ -565,7 +567,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51GjjKF6tHL.jpg" class="mr-3" alt="写楽殺人事件 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51GjjKF6tHL.jpg" class="mr-3 lazyload" alt="写楽殺人事件 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>写楽殺人事件 (講談社文庫)</h5>
@@ -578,7 +580,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51aU8CIc+4L.jpg" class="mr-3" alt="占星術殺人事件　改訂完全版 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51aU8CIc+4L.jpg" class="mr-3 lazyload" alt="占星術殺人事件　改訂完全版 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>占星術殺人事件　改訂完全版 (講談社文庫)</h5>
@@ -591,7 +593,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51P9U4amO2L.jpg" class="mr-3" alt="クラインの壷 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51P9U4amO2L.jpg" class="mr-3 lazyload" alt="クラインの壷 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>クラインの壷 (講談社文庫)</h5>
@@ -604,7 +606,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51C20Z92GJL.jpg" class="mr-3" alt="異世界の名探偵　２　帰らずの地下迷宮　【電子特典付き】 (レジェンドノベルス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51C20Z92GJL.jpg" class="mr-3 lazyload" alt="異世界の名探偵　２　帰らずの地下迷宮　【電子特典付き】 (レジェンドノベルス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界の名探偵　２　帰らずの地下迷宮　【電子特典付き】 (レジェンドノベルス)</h5>
@@ -617,7 +619,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jykslTn+L.jpg" class="mr-3" alt="明智小五郎全集 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jykslTn+L.jpg" class="mr-3 lazyload" alt="明智小五郎全集 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>明智小五郎全集 (講談社文庫)</h5>
@@ -630,7 +632,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5144V2GjmKL.jpg" class="mr-3" alt="屋上 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5144V2GjmKL.jpg" class="mr-3 lazyload" alt="屋上 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>屋上 (講談社文庫)</h5>
@@ -643,7 +645,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5106Dv2ApPL.jpg" class="mr-3" alt="千年図書館 (講談社ノベルス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5106Dv2ApPL.jpg" class="mr-3 lazyload" alt="千年図書館 (講談社ノベルス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>千年図書館 (講談社ノベルス)</h5>
@@ -656,7 +658,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51YvjHN5RXL.jpg" class="mr-3" alt="閻魔堂沙羅の推理奇譚 (講談社タイガ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51YvjHN5RXL.jpg" class="mr-3 lazyload" alt="閻魔堂沙羅の推理奇譚 (講談社タイガ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>閻魔堂沙羅の推理奇譚 (講談社タイガ)</h5>
@@ -669,7 +671,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517sQOKEPwL.jpg" class="mr-3" alt="虚夢 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517sQOKEPwL.jpg" class="mr-3 lazyload" alt="虚夢 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>虚夢 (講談社文庫)</h5>
@@ -682,7 +684,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/518kvEWz0HL.jpg" class="mr-3" alt="天使のナイフ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/518kvEWz0HL.jpg" class="mr-3 lazyload" alt="天使のナイフ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>天使のナイフ (講談社文庫)</h5>
@@ -695,7 +697,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41xVsAxHLAL.jpg" class="mr-3" alt="半落ち (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41xVsAxHLAL.jpg" class="mr-3 lazyload" alt="半落ち (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>半落ち (講談社文庫)</h5>
@@ -708,7 +710,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/516d011N1GL.jpg" class="mr-3" alt="新装版　七回死んだ男 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/516d011N1GL.jpg" class="mr-3 lazyload" alt="新装版　七回死んだ男 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　七回死んだ男 (講談社文庫)</h5>
@@ -721,7 +723,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/514GUt2JhxL.jpg" class="mr-3" alt="生還者 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/514GUt2JhxL.jpg" class="mr-3 lazyload" alt="生還者 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>生還者 (講談社文庫)</h5>
@@ -734,7 +736,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51uklYtGNgL.jpg" class="mr-3" alt="○○○○○○○○殺人事件 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51uklYtGNgL.jpg" class="mr-3 lazyload" alt="○○○○○○○○殺人事件 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>○○○○○○○○殺人事件 (講談社文庫)</h5>
@@ -747,7 +749,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cyf27wz4L.jpg" class="mr-3" alt="出口のない海 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cyf27wz4L.jpg" class="mr-3 lazyload" alt="出口のない海 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>出口のない海 (講談社文庫)</h5>
@@ -760,7 +762,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/613vbWEL0yL.jpg" class="mr-3" alt="名探偵傑作短篇集　火村英生篇 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/613vbWEL0yL.jpg" class="mr-3 lazyload" alt="名探偵傑作短篇集　火村英生篇 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>名探偵傑作短篇集　火村英生篇 (講談社文庫)</h5>
@@ -773,7 +775,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51YhZhyaS8L.jpg" class="mr-3" alt="スペードの３ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51YhZhyaS8L.jpg" class="mr-3 lazyload" alt="スペードの３ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>スペードの３ (講談社文庫)</h5>
@@ -786,7 +788,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51H9f9hYzFL.jpg" class="mr-3" alt="銃とチョコレート (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51H9f9hYzFL.jpg" class="mr-3 lazyload" alt="銃とチョコレート (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>銃とチョコレート (講談社文庫)</h5>
@@ -799,7 +801,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HNqlUrE6L.jpg" class="mr-3" alt="コズミック 世紀末探偵神話 (講談社ノベルス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HNqlUrE6L.jpg" class="mr-3 lazyload" alt="コズミック 世紀末探偵神話 (講談社ノベルス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コズミック 世紀末探偵神話 (講談社ノベルス)</h5>
@@ -812,7 +814,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61qCHz1-4vL.jpg" class="mr-3" alt="アンデッドガール・マーダーファルス　２ (講談社タイガ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61qCHz1-4vL.jpg" class="mr-3 lazyload" alt="アンデッドガール・マーダーファルス　２ (講談社タイガ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アンデッドガール・マーダーファルス　２ (講談社タイガ)</h5>
@@ -825,7 +827,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41hf5BFIIvL.jpg" class="mr-3" alt="闇に香る嘘 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41hf5BFIIvL.jpg" class="mr-3 lazyload" alt="闇に香る嘘 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>闇に香る嘘 (講談社文庫)</h5>
@@ -838,7 +840,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61e9KYnU0RL.jpg" class="mr-3" alt="殺人出産 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61e9KYnU0RL.jpg" class="mr-3 lazyload" alt="殺人出産 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>殺人出産 (講談社文庫)</h5>
@@ -851,7 +853,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41AVwlzOZUL.jpg" class="mr-3" alt="チェーン・ポイズン (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41AVwlzOZUL.jpg" class="mr-3 lazyload" alt="チェーン・ポイズン (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>チェーン・ポイズン (講談社文庫)</h5>
@@ -864,7 +866,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513mwsvqe0L.jpg" class="mr-3" alt="新装版　マジックミラー (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/513mwsvqe0L.jpg" class="mr-3 lazyload" alt="新装版　マジックミラー (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　マジックミラー (講談社文庫)</h5>
@@ -877,7 +879,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51l-OCaHdDL.jpg" class="mr-3" alt="新装版　匣の中の失楽 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51l-OCaHdDL.jpg" class="mr-3 lazyload" alt="新装版　匣の中の失楽 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>新装版　匣の中の失楽 (講談社文庫)</h5>
@@ -890,7 +892,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51WL1uTn+9L.jpg" class="mr-3" alt="雪密室 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51WL1uTn+9L.jpg" class="mr-3 lazyload" alt="雪密室 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>雪密室 (講談社文庫)</h5>
@@ -903,7 +905,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51GPejP0Y+L.jpg" class="mr-3" alt="法月綸太郎の冒険 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51GPejP0Y+L.jpg" class="mr-3 lazyload" alt="法月綸太郎の冒険 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>法月綸太郎の冒険 (講談社文庫)</h5>
@@ -916,7 +918,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61yThQleBxL.jpg" class="mr-3" alt="法月綸太郎の功績 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61yThQleBxL.jpg" class="mr-3 lazyload" alt="法月綸太郎の功績 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>法月綸太郎の功績 (講談社文庫)</h5>
@@ -929,7 +931,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OgAGf34AL.jpg" class="mr-3" alt="オリンピックの身代金（下） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51OgAGf34AL.jpg" class="mr-3 lazyload" alt="オリンピックの身代金（下） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>オリンピックの身代金（下） (講談社文庫)</h5>
@@ -942,7 +944,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51C1sjnpS9L.jpg" class="mr-3" alt="オリンピックの身代金（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51C1sjnpS9L.jpg" class="mr-3 lazyload" alt="オリンピックの身代金（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>オリンピックの身代金（上） (講談社文庫)</h5>
@@ -955,7 +957,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jWBZ8-kzL.jpg" class="mr-3" alt="キングを探せ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jWBZ8-kzL.jpg" class="mr-3 lazyload" alt="キングを探せ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>キングを探せ (講談社文庫)</h5>
@@ -968,7 +970,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61QzTwNh5rL.jpg" class="mr-3" alt="河原町ルヴォワール (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61QzTwNh5rL.jpg" class="mr-3 lazyload" alt="河原町ルヴォワール (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>河原町ルヴォワール (講談社文庫)</h5>
@@ -981,7 +983,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51awiOdUhvL.jpg" class="mr-3" alt="道化師の蝶 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51awiOdUhvL.jpg" class="mr-3 lazyload" alt="道化師の蝶 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>道化師の蝶 (講談社文庫)</h5>
@@ -994,7 +996,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51GCvSo2klL.jpg" class="mr-3" alt="スノーホワイト (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51GCvSo2klL.jpg" class="mr-3 lazyload" alt="スノーホワイト (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>スノーホワイト (講談社文庫)</h5>
@@ -1007,7 +1009,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51gEOs4eD5L.jpg" class="mr-3" alt="今出川ルヴォワール (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51gEOs4eD5L.jpg" class="mr-3 lazyload" alt="今出川ルヴォワール (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>今出川ルヴォワール (講談社文庫)</h5>
@@ -1020,7 +1022,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519I4bU1OFL.jpg" class="mr-3" alt="ラバー・ソウル (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/519I4bU1OFL.jpg" class="mr-3 lazyload" alt="ラバー・ソウル (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラバー・ソウル (講談社文庫)</h5>
@@ -1033,7 +1035,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515vTNm547L.jpg" class="mr-3" alt="メルカトルかく語りき (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515vTNm547L.jpg" class="mr-3 lazyload" alt="メルカトルかく語りき (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>メルカトルかく語りき (講談社文庫)</h5>
@@ -1046,7 +1048,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51kvFxj5pJL.jpg" class="mr-3" alt="烏丸ルヴォワール (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51kvFxj5pJL.jpg" class="mr-3 lazyload" alt="烏丸ルヴォワール (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>烏丸ルヴォワール (講談社文庫)</h5>
@@ -1059,7 +1061,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QLpvDOp3L.jpg" class="mr-3" alt="ハサミ男 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QLpvDOp3L.jpg" class="mr-3 lazyload" alt="ハサミ男 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ハサミ男 (講談社文庫)</h5>
@@ -1072,7 +1074,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51i3hxI7UeL.jpg" class="mr-3" alt="川の深さは (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51i3hxI7UeL.jpg" class="mr-3 lazyload" alt="川の深さは (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>川の深さは (講談社文庫)</h5>
@@ -1085,7 +1087,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51DJINz2DdL.jpg" class="mr-3" alt="オルファクトグラム（上） (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51DJINz2DdL.jpg" class="mr-3 lazyload" alt="オルファクトグラム（上） (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>オルファクトグラム（上） (講談社文庫)</h5>
@@ -1098,7 +1100,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41s19Q2qPiL.jpg" class="mr-3" alt="シューマンの指 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41s19Q2qPiL.jpg" class="mr-3 lazyload" alt="シューマンの指 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>シューマンの指 (講談社文庫)</h5>
@@ -1111,7 +1113,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/418YWPwzi5L.jpg" class="mr-3" alt="ダレカガナカニイル… (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/418YWPwzi5L.jpg" class="mr-3 lazyload" alt="ダレカガナカニイル… (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ダレカガナカニイル… (講談社文庫)</h5>
@@ -1124,7 +1126,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hZFOcmUnL.jpg" class="mr-3" alt="眠りの牢獄 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hZFOcmUnL.jpg" class="mr-3 lazyload" alt="眠りの牢獄 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>眠りの牢獄 (講談社文庫)</h5>
@@ -1137,7 +1139,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cuYysogqL.jpg" class="mr-3" alt="９９％の誘拐 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cuYysogqL.jpg" class="mr-3 lazyload" alt="９９％の誘拐 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>９９％の誘拐 (講談社文庫)</h5>
@@ -1150,7 +1152,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zLZW9gxpL.jpg" class="mr-3" alt="＃柚莉愛とかくれんぼ"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zLZW9gxpL.jpg" class="mr-3 lazyload" alt="＃柚莉愛とかくれんぼ"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>＃柚莉愛とかくれんぼ</h5>
@@ -1163,7 +1165,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41lhSn-V3OL.jpg" class="mr-3" alt="ママ"/>
+    <img data-src="https://m.media-amazon.com/images/I/41lhSn-V3OL.jpg" class="mr-3 lazyload" alt="ママ"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ママ</h5>
@@ -1176,7 +1178,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51l54u620FL.jpg" class="mr-3" alt="大天使はミモザの香り"/>
+    <img data-src="https://m.media-amazon.com/images/I/51l54u620FL.jpg" class="mr-3 lazyload" alt="大天使はミモザの香り"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>大天使はミモザの香り</h5>
@@ -1189,7 +1191,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/415hG2kvrKL.jpg" class="mr-3" alt="カエルの小指　ａ　ｍｕｒｄｅｒ　ｏｆ　ｃｒｏｗｓ"/>
+    <img data-src="https://m.media-amazon.com/images/I/415hG2kvrKL.jpg" class="mr-3 lazyload" alt="カエルの小指　ａ　ｍｕｒｄｅｒ　ｏｆ　ｃｒｏｗｓ"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>カエルの小指　ａ　ｍｕｒｄｅｒ　ｏｆ　ｃｒｏｗｓ</h5>
@@ -1202,7 +1204,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41fnIybzOTL.jpg" class="mr-3" alt="犯人選挙"/>
+    <img data-src="https://m.media-amazon.com/images/I/41fnIybzOTL.jpg" class="mr-3 lazyload" alt="犯人選挙"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>犯人選挙</h5>
@@ -1215,7 +1217,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51v-0A4oPWL.jpg" class="mr-3" alt="異世界の名探偵　１　首なし姫殺人事件　電子書籍特典付き (レジェンドノベルス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51v-0A4oPWL.jpg" class="mr-3 lazyload" alt="異世界の名探偵　１　首なし姫殺人事件　電子書籍特典付き (レジェンドノベルス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界の名探偵　１　首なし姫殺人事件　電子書籍特典付き (レジェンドノベルス)</h5>
@@ -1228,7 +1230,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KXT0VkWcL.jpg" class="mr-3" alt="病弱探偵　謎は彼女の特効薬 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51KXT0VkWcL.jpg" class="mr-3 lazyload" alt="病弱探偵　謎は彼女の特効薬 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>病弱探偵　謎は彼女の特効薬 (講談社文庫)</h5>
@@ -1241,7 +1243,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61tnezf+crL.jpg" class="mr-3" alt="Ａｎｋ　：　ａ　ｍｉｒｒｏｒｉｎｇ　ａｐｅ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61tnezf+crL.jpg" class="mr-3 lazyload" alt="Ａｎｋ　：　ａ　ｍｉｒｒｏｒｉｎｇ　ａｐｅ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Ａｎｋ　：　ａ　ｍｉｒｒｏｒｉｎｇ　ａｐｅ (講談社文庫)</h5>
@@ -1254,7 +1256,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51tIyB1dobL.jpg" class="mr-3" alt="法月綸太郎の消息"/>
+    <img data-src="https://m.media-amazon.com/images/I/51tIyB1dobL.jpg" class="mr-3 lazyload" alt="法月綸太郎の消息"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>法月綸太郎の消息</h5>
@@ -1267,7 +1269,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KNIQ2V9lL.jpg" class="mr-3" alt="三匹の子豚"/>
+    <img data-src="https://m.media-amazon.com/images/I/51KNIQ2V9lL.jpg" class="mr-3 lazyload" alt="三匹の子豚"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>三匹の子豚</h5>
@@ -1280,7 +1282,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41X3Hg3IZhL.jpg" class="mr-3" alt="白い衝動 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41X3Hg3IZhL.jpg" class="mr-3 lazyload" alt="白い衝動 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>白い衝動 (講談社文庫)</h5>
@@ -1293,7 +1295,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51h65SVES1L.jpg" class="mr-3" alt="リボルバー・リリー (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51h65SVES1L.jpg" class="mr-3 lazyload" alt="リボルバー・リリー (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>リボルバー・リリー (講談社文庫)</h5>
@@ -1306,7 +1308,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41yvtROAFuL.jpg" class="mr-3" alt="完全無罪 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/41yvtROAFuL.jpg" class="mr-3 lazyload" alt="完全無罪 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>完全無罪 (講談社文庫)</h5>
@@ -1319,7 +1321,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/31PSiBvB7WL.jpg" class="mr-3" alt="スイート・マイホーム"/>
+    <img data-src="https://m.media-amazon.com/images/I/31PSiBvB7WL.jpg" class="mr-3 lazyload" alt="スイート・マイホーム"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>スイート・マイホーム</h5>
@@ -1332,7 +1334,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51W1Df-2SdL.jpg" class="mr-3" alt="ＱＪＫＪＱ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51W1Df-2SdL.jpg" class="mr-3 lazyload" alt="ＱＪＫＪＱ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ＱＪＫＪＱ (講談社文庫)</h5>
@@ -1345,7 +1347,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51m0Zt5tCwL.jpg" class="mr-3" alt="完全無欠の名探偵 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51m0Zt5tCwL.jpg" class="mr-3 lazyload" alt="完全無欠の名探偵 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>完全無欠の名探偵 (講談社文庫)</h5>
@@ -1358,7 +1360,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xMOf0YtoL.jpg" class="mr-3" alt="聖女の毒杯　その可能性はすでに考えた (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xMOf0YtoL.jpg" class="mr-3 lazyload" alt="聖女の毒杯　その可能性はすでに考えた (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>聖女の毒杯　その可能性はすでに考えた (講談社文庫)</h5>
@@ -1371,7 +1373,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/510UpMUsRSL.jpg" class="mr-3" alt="ミステリー・アリーナ (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/510UpMUsRSL.jpg" class="mr-3 lazyload" alt="ミステリー・アリーナ (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ミステリー・アリーナ (講談社文庫)</h5>
@@ -1384,7 +1386,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41sVQGxbIwL.jpg" class="mr-3" alt="悪魔と呼ばれた男"/>
+    <img data-src="https://m.media-amazon.com/images/I/41sVQGxbIwL.jpg" class="mr-3 lazyload" alt="悪魔と呼ばれた男"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪魔と呼ばれた男</h5>
@@ -1397,7 +1399,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ZdkHidcUL.jpg" class="mr-3" alt="その可能性はすでに考えた (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ZdkHidcUL.jpg" class="mr-3 lazyload" alt="その可能性はすでに考えた (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>その可能性はすでに考えた (講談社文庫)</h5>
@@ -1410,7 +1412,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OMbsZm+aL.jpg" class="mr-3" alt="倒錯のロンド (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51OMbsZm+aL.jpg" class="mr-3 lazyload" alt="倒錯のロンド (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>倒錯のロンド (講談社文庫)</h5>
@@ -1423,7 +1425,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51khbw4TNQL.jpg" class="mr-3" alt="炎罪 片岡真子 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51khbw4TNQL.jpg" class="mr-3 lazyload" alt="炎罪 片岡真子 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>炎罪 片岡真子 (講談社文庫)</h5>
@@ -1436,7 +1438,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HfjUMa6uL.jpg" class="mr-3" alt="丸太町ルヴォワール (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HfjUMa6uL.jpg" class="mr-3 lazyload" alt="丸太町ルヴォワール (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>丸太町ルヴォワール (講談社文庫)</h5>
@@ -1449,7 +1451,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51EQPU42lKL.jpg" class="mr-3" alt="煙か土か食い物 (講談社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51EQPU42lKL.jpg" class="mr-3 lazyload" alt="煙か土か食い物 (講談社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>煙か土か食い物 (講談社文庫)</h5>
@@ -1462,5 +1464,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>

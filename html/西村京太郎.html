@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+fL4SGSBL.jpg" class="mr-3" alt="十津川警部 わが愛する犬吠の海 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+fL4SGSBL.jpg" class="mr-3 lazyload" alt="十津川警部 わが愛する犬吠の海 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 わが愛する犬吠の海 (祥伝社文庫)</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51C9TAZj40L.jpg" class="mr-3" alt="阪急電鉄殺人事件 十津川警部 (ノン・ノベル)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51C9TAZj40L.jpg" class="mr-3 lazyload" alt="阪急電鉄殺人事件 十津川警部 (ノン・ノベル)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>阪急電鉄殺人事件 十津川警部 (ノン・ノベル)</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fpobLfR1L.jpg" class="mr-3" alt="十津川警部　十年目の真実 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51fpobLfR1L.jpg" class="mr-3 lazyload" alt="十津川警部　十年目の真実 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部　十年目の真実 (祥伝社文庫)</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ztGNIxQGL.jpg" class="mr-3" alt="十津川警部 長崎 路面電車と坂本龍馬 (ノン・ノベル)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ztGNIxQGL.jpg" class="mr-3 lazyload" alt="十津川警部 長崎 路面電車と坂本龍馬 (ノン・ノベル)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 長崎 路面電車と坂本龍馬 (ノン・ノベル)</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51GH6SRPdkL.jpg" class="mr-3" alt="高原鉄道殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51GH6SRPdkL.jpg" class="mr-3 lazyload" alt="高原鉄道殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>高原鉄道殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51regnvMtsL.jpg" class="mr-3" alt="十津川警部 悲しみの吾妻線 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51regnvMtsL.jpg" class="mr-3 lazyload" alt="十津川警部 悲しみの吾妻線 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 悲しみの吾妻線 (祥伝社文庫)</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51nwvumacqL.jpg" class="mr-3" alt="東京発ひかり147号 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51nwvumacqL.jpg" class="mr-3 lazyload" alt="東京発ひかり147号 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>東京発ひかり147号 十津川警部 (祥伝社文庫)</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61Q5tb+znXL.jpg" class="mr-3" alt="松本美ヶ原　殺意の旅 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61Q5tb+znXL.jpg" class="mr-3 lazyload" alt="松本美ヶ原　殺意の旅 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>松本美ヶ原　殺意の旅 十津川警部 (祥伝社文庫)</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51AG0dK8vDL.jpg" class="mr-3" alt="十津川警部の挑戦(下) (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51AG0dK8vDL.jpg" class="mr-3 lazyload" alt="十津川警部の挑戦(下) (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部の挑戦(下) (祥伝社文庫)</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51p2eGmI74L.jpg" class="mr-3" alt="十津川警部の挑戦(上) (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51p2eGmI74L.jpg" class="mr-3 lazyload" alt="十津川警部の挑戦(上) (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部の挑戦(上) (祥伝社文庫)</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511NY5ztU7L.jpg" class="mr-3" alt="完全殺人 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/511NY5ztU7L.jpg" class="mr-3 lazyload" alt="完全殺人 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>完全殺人 (祥伝社文庫)</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61IABB92x7L.jpg" class="mr-3" alt="特急「有明」殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61IABB92x7L.jpg" class="mr-3 lazyload" alt="特急「有明」殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>特急「有明」殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51TYF6C6yeL.jpg" class="mr-3" alt="十津川警部「故郷」 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51TYF6C6yeL.jpg" class="mr-3 lazyload" alt="十津川警部「故郷」 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部「故郷」 (祥伝社文庫)</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51o5bk+2aLL.jpg" class="mr-3" alt="謀殺の四国ルート 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51o5bk+2aLL.jpg" class="mr-3 lazyload" alt="謀殺の四国ルート 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>謀殺の四国ルート 十津川警部 (祥伝社文庫)</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51t1cIA9zBL.jpg" class="mr-3" alt="飛騨高山に消えた女 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51t1cIA9zBL.jpg" class="mr-3 lazyload" alt="飛騨高山に消えた女 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>飛騨高山に消えた女 十津川警部 (祥伝社文庫)</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mhMzobRdL.jpg" class="mr-3" alt="展望車殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51mhMzobRdL.jpg" class="mr-3 lazyload" alt="展望車殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>展望車殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51m0GEpb6DL.jpg" class="mr-3" alt="十津川警部 姨捨駅の証人 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51m0GEpb6DL.jpg" class="mr-3 lazyload" alt="十津川警部 姨捨駅の証人 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 姨捨駅の証人 (祥伝社文庫)</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512wrHshY6L.jpg" class="mr-3" alt="尾道に消えた女 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512wrHshY6L.jpg" class="mr-3 lazyload" alt="尾道に消えた女 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>尾道に消えた女 十津川警部 (祥伝社文庫)</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51rcselW3zL.jpg" class="mr-3" alt="裏切りの特急サンダーバード 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51rcselW3zL.jpg" class="mr-3 lazyload" alt="裏切りの特急サンダーバード 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>裏切りの特急サンダーバード 十津川警部 (祥伝社文庫)</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/516I59VHgcL.jpg" class="mr-3" alt="特急「富士」に乗っていた女 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/516I59VHgcL.jpg" class="mr-3 lazyload" alt="特急「富士」に乗っていた女 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>特急「富士」に乗っていた女 十津川警部 (祥伝社文庫)</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-FaTJjAWL.jpg" class="mr-3" alt="日本のエーゲ海、日本の死 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51-FaTJjAWL.jpg" class="mr-3 lazyload" alt="日本のエーゲ海、日本の死 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>日本のエーゲ海、日本の死 十津川警部 (祥伝社文庫)</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51VWkLWi+gL.jpg" class="mr-3" alt="寝台特急カシオペアを追え 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51VWkLWi+gL.jpg" class="mr-3 lazyload" alt="寝台特急カシオペアを追え 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>寝台特急カシオペアを追え 十津川警部 (祥伝社文庫)</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cVDevO0YL.jpg" class="mr-3" alt="生死を分ける転車台 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cVDevO0YL.jpg" class="mr-3 lazyload" alt="生死を分ける転車台 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>生死を分ける転車台 十津川警部 (祥伝社文庫)</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51iN6YxDM3L.jpg" class="mr-3" alt="十津川警部 二つの「金印」の謎 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51iN6YxDM3L.jpg" class="mr-3 lazyload" alt="十津川警部 二つの「金印」の謎 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 二つの「金印」の謎 (祥伝社文庫)</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FUcqMBnGL.jpg" class="mr-3" alt="外国人墓地を見て死ね――十津川警部捜査行 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FUcqMBnGL.jpg" class="mr-3 lazyload" alt="外国人墓地を見て死ね――十津川警部捜査行 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>外国人墓地を見て死ね――十津川警部捜査行 (祥伝社文庫)</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/518hUwREgSL.jpg" class="mr-3" alt="狙われた寝台特急「さくら」 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/518hUwREgSL.jpg" class="mr-3 lazyload" alt="狙われた寝台特急「さくら」 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>狙われた寝台特急「さくら」 十津川警部 (祥伝社文庫)</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51vKPajvUvL.jpg" class="mr-3" alt="殺意の青函トンネル 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51vKPajvUvL.jpg" class="mr-3 lazyload" alt="殺意の青函トンネル 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>殺意の青函トンネル 十津川警部 (祥伝社文庫)</h5>
@@ -513,7 +515,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zaLV1OMZL.jpg" class="mr-3" alt="九州新幹線マイナス1 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zaLV1OMZL.jpg" class="mr-3 lazyload" alt="九州新幹線マイナス1 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>九州新幹線マイナス1 十津川警部 (祥伝社文庫)</h5>
@@ -526,7 +528,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51PUG9o9SlL.jpg" class="mr-3" alt="十津川警部捜査行 SL「貴婦人号」の犯罪 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51PUG9o9SlL.jpg" class="mr-3 lazyload" alt="十津川警部捜査行 SL「貴婦人号」の犯罪 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部捜査行 SL「貴婦人号」の犯罪 (祥伝社文庫)</h5>
@@ -539,7 +541,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51YWxfdm9ML.jpg" class="mr-3" alt="十津川警部「家族」 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51YWxfdm9ML.jpg" class="mr-3 lazyload" alt="十津川警部「家族」 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部「家族」 (祥伝社文庫)</h5>
@@ -552,7 +554,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51--vhAY5iL.jpg" class="mr-3" alt="十津川捜査班の「決断」 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51--vhAY5iL.jpg" class="mr-3 lazyload" alt="十津川捜査班の「決断」 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川捜査班の「決断」 十津川警部 (祥伝社文庫)</h5>
@@ -565,7 +567,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/514GtRAmSDL.jpg" class="mr-3" alt="伊豆の海に消えた女 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/514GtRAmSDL.jpg" class="mr-3 lazyload" alt="伊豆の海に消えた女 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊豆の海に消えた女 十津川警部 (祥伝社文庫)</h5>
@@ -578,7 +580,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/616FikodD5L.jpg" class="mr-3" alt="海を渡った愛と殺意 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/616FikodD5L.jpg" class="mr-3 lazyload" alt="海を渡った愛と殺意 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>海を渡った愛と殺意 十津川警部 (祥伝社文庫)</h5>
@@ -591,7 +593,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51cZxUxRJwL.jpg" class="mr-3" alt="スーパー雷鳥殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51cZxUxRJwL.jpg" class="mr-3 lazyload" alt="スーパー雷鳥殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>スーパー雷鳥殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -604,7 +606,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51RXHBExoHL.jpg" class="mr-3" alt="闇を引き継ぐ者 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51RXHBExoHL.jpg" class="mr-3 lazyload" alt="闇を引き継ぐ者 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>闇を引き継ぐ者 十津川警部 (祥伝社文庫)</h5>
@@ -617,7 +619,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61cVc-d5rPL.jpg" class="mr-3" alt="伊豆　下賀茂で死んだ女 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61cVc-d5rPL.jpg" class="mr-3 lazyload" alt="伊豆　下賀茂で死んだ女 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊豆　下賀茂で死んだ女 十津川警部 (祥伝社文庫)</h5>
@@ -630,7 +632,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/516dxAiJXYL.jpg" class="mr-3" alt="臨時特急「京都号」殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/516dxAiJXYL.jpg" class="mr-3 lazyload" alt="臨時特急「京都号」殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>臨時特急「京都号」殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -643,7 +645,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512qVgU5DlL.jpg" class="mr-3" alt="夜行快速(ムーンライト)えちご殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512qVgU5DlL.jpg" class="mr-3 lazyload" alt="夜行快速(ムーンライト)えちご殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>夜行快速(ムーンライト)えちご殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -656,7 +658,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51oOwrsVAKL.jpg" class="mr-3" alt="近鉄特急 伊勢志摩ライナーの罠 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51oOwrsVAKL.jpg" class="mr-3 lazyload" alt="近鉄特急 伊勢志摩ライナーの罠 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>近鉄特急 伊勢志摩ライナーの罠 十津川警部 (祥伝社文庫)</h5>
@@ -669,7 +671,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BOBSDnOdL.jpg" class="mr-3" alt="伊良湖岬 プラスワンの犯罪 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51BOBSDnOdL.jpg" class="mr-3 lazyload" alt="伊良湖岬 プラスワンの犯罪 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>伊良湖岬 プラスワンの犯罪 十津川警部 (祥伝社文庫)</h5>
@@ -682,7 +684,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51e9Ge2KXjL.jpg" class="mr-3" alt="十津川警部「初恋」 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51e9Ge2KXjL.jpg" class="mr-3 lazyload" alt="十津川警部「初恋」 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部「初恋」 (祥伝社文庫)</h5>
@@ -695,7 +697,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51wnp-7R27L.jpg" class="mr-3" alt="桜の下殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51wnp-7R27L.jpg" class="mr-3 lazyload" alt="桜の下殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>桜の下殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -708,7 +710,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LhR9cWQbL.jpg" class="mr-3" alt="能登半島殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51LhR9cWQbL.jpg" class="mr-3 lazyload" alt="能登半島殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>能登半島殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -721,7 +723,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51twTrA1XnL.jpg" class="mr-3" alt="紀伊半島殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51twTrA1XnL.jpg" class="mr-3 lazyload" alt="紀伊半島殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>紀伊半島殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -734,7 +736,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61mhcyp6+zL.jpg" class="mr-3" alt="十津川警部「子守唄殺人事件」 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61mhcyp6+zL.jpg" class="mr-3 lazyload" alt="十津川警部「子守唄殺人事件」 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部「子守唄殺人事件」 (祥伝社文庫)</h5>
@@ -747,7 +749,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51DoVnyctsL.jpg" class="mr-3" alt="殺人者は北へ向かう 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51DoVnyctsL.jpg" class="mr-3 lazyload" alt="殺人者は北へ向かう 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>殺人者は北へ向かう 十津川警部 (祥伝社文庫)</h5>
@@ -760,7 +762,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513KeYH9VJL.jpg" class="mr-3" alt="オリエント急行を追え 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/513KeYH9VJL.jpg" class="mr-3 lazyload" alt="オリエント急行を追え 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>オリエント急行を追え 十津川警部 (祥伝社文庫)</h5>
@@ -773,7 +775,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mtMzg1keL.jpg" class="mr-3" alt="萩・津和野に消えた女 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51mtMzg1keL.jpg" class="mr-3 lazyload" alt="萩・津和野に消えた女 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>萩・津和野に消えた女 十津川警部 (祥伝社文庫)</h5>
@@ -786,7 +788,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HaiZArbJL.jpg" class="mr-3" alt="十七年の空白 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HaiZArbJL.jpg" class="mr-3 lazyload" alt="十七年の空白 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十七年の空白 十津川警部 (祥伝社文庫)</h5>
@@ -799,7 +801,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517IMtNBC5L.jpg" class="mr-3" alt="無明剣、走る (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517IMtNBC5L.jpg" class="mr-3 lazyload" alt="無明剣、走る (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>無明剣、走る (祥伝社文庫)</h5>
@@ -812,7 +814,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xY+cc-BqL.jpg" class="mr-3" alt="夜の脅迫者 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xY+cc-BqL.jpg" class="mr-3 lazyload" alt="夜の脅迫者 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>夜の脅迫者 (祥伝社文庫)</h5>
@@ -825,7 +827,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61ON+9abUAL.jpg" class="mr-3" alt="金沢歴史の殺人 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61ON+9abUAL.jpg" class="mr-3 lazyload" alt="金沢歴史の殺人 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>金沢歴史の殺人 十津川警部 (祥伝社文庫)</h5>
@@ -838,7 +840,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51dZsz0iF0L.jpg" class="mr-3" alt="しまなみ海道追跡ルート 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51dZsz0iF0L.jpg" class="mr-3 lazyload" alt="しまなみ海道追跡ルート 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>しまなみ海道追跡ルート 十津川警部 (祥伝社文庫)</h5>
@@ -851,7 +853,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512c6BKlLmL.jpg" class="mr-3" alt="十津川警部 絹の遺産と上信電鉄 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/512c6BKlLmL.jpg" class="mr-3 lazyload" alt="十津川警部 絹の遺産と上信電鉄 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 絹の遺産と上信電鉄 (祥伝社文庫)</h5>
@@ -864,7 +866,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51iBci+tDsL.jpg" class="mr-3" alt="十津川警部 予土線に殺意が走る (ノン・ノベル)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51iBci+tDsL.jpg" class="mr-3 lazyload" alt="十津川警部 予土線に殺意が走る (ノン・ノベル)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 予土線に殺意が走る (ノン・ノベル)</h5>
@@ -877,7 +879,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Uy0VdpGjL.jpg" class="mr-3" alt="急行奥只見殺人事件 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Uy0VdpGjL.jpg" class="mr-3 lazyload" alt="急行奥只見殺人事件 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>急行奥只見殺人事件 十津川警部 (祥伝社文庫)</h5>
@@ -890,7 +892,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5169S9rqsuL.jpg" class="mr-3" alt="北軽井沢に消えた女 嬬恋とキャベツと死体 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5169S9rqsuL.jpg" class="mr-3 lazyload" alt="北軽井沢に消えた女 嬬恋とキャベツと死体 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>北軽井沢に消えた女 嬬恋とキャベツと死体 十津川警部 (祥伝社文庫)</h5>
@@ -903,7 +905,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517dVFgz6hL.jpg" class="mr-3" alt="出雲 殺意の一畑電車 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517dVFgz6hL.jpg" class="mr-3 lazyload" alt="出雲 殺意の一畑電車 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>出雲 殺意の一畑電車 十津川警部 (祥伝社文庫)</h5>
@@ -916,7 +918,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+bzuTnyhL.jpg" class="mr-3" alt="十津川警部捜査行 愛と殺意の伊豆踊り子ライン (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+bzuTnyhL.jpg" class="mr-3 lazyload" alt="十津川警部捜査行 愛と殺意の伊豆踊り子ライン (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部捜査行 愛と殺意の伊豆踊り子ライン (祥伝社文庫)</h5>
@@ -929,7 +931,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515WfWNjCaL.jpg" class="mr-3" alt="十津川警部 七十年後の殺人 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515WfWNjCaL.jpg" class="mr-3 lazyload" alt="十津川警部 七十年後の殺人 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 七十年後の殺人 (祥伝社文庫)</h5>
@@ -942,7 +944,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51aCTaL99NL.jpg" class="mr-3" alt="火の国から愛と憎しみをこめて 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51aCTaL99NL.jpg" class="mr-3 lazyload" alt="火の国から愛と憎しみをこめて 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>火の国から愛と憎しみをこめて 十津川警部 (祥伝社文庫)</h5>
@@ -955,7 +957,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513gS4RIVuL.jpg" class="mr-3" alt="十津川警部 恋と哀しみの北の大地 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/513gS4RIVuL.jpg" class="mr-3 lazyload" alt="十津川警部 恋と哀しみの北の大地 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>十津川警部 恋と哀しみの北の大地 (祥伝社文庫)</h5>
@@ -968,7 +970,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51F6ZJVOofL.jpg" class="mr-3" alt="萩・津和野・山口殺人ライン 高杉晋作の幻想 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51F6ZJVOofL.jpg" class="mr-3 lazyload" alt="萩・津和野・山口殺人ライン 高杉晋作の幻想 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>萩・津和野・山口殺人ライン 高杉晋作の幻想 十津川警部 (祥伝社文庫)</h5>
@@ -981,7 +983,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51NTvsAsvNL.jpg" class="mr-3" alt="特急街道の殺人 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51NTvsAsvNL.jpg" class="mr-3 lazyload" alt="特急街道の殺人 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>特急街道の殺人 十津川警部 (祥伝社文庫)</h5>
@@ -994,7 +996,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hPoD4bioL.jpg" class="mr-3" alt="私を殺しに来た男 十津川警部 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hPoD4bioL.jpg" class="mr-3 lazyload" alt="私を殺しに来た男 十津川警部 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>私を殺しに来た男 十津川警部 (祥伝社文庫)</h5>
@@ -1007,7 +1009,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5187XD+cBWL.jpg" class="mr-3" alt="狙われた男 秋葉京介探偵事務所 (祥伝社文庫)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5187XD+cBWL.jpg" class="mr-3 lazyload" alt="狙われた男 秋葉京介探偵事務所 (祥伝社文庫)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>狙われた男 秋葉京介探偵事務所 (祥伝社文庫)</h5>
@@ -1020,5 +1022,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>

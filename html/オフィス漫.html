@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51m7SeZVMdL.jpg" class="mr-3" alt="ラグナロック・ガイ（7）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51m7SeZVMdL.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（7）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（7）</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hRFsSgk7L.jpg" class="mr-3" alt="ラグナロック・ガイ（5）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hRFsSgk7L.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（5）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（5）</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hsMqMan9L.jpg" class="mr-3" alt="ラグナロック・ガイ（4）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hsMqMan9L.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（4）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（4）</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51NVpsRxCzL.jpg" class="mr-3" alt="ラグナロック・ガイ（6）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51NVpsRxCzL.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（6）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（6）</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HsyMo4+IL.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（4）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HsyMo4+IL.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（4）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（4）</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xz1S0KMmL.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（6）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xz1S0KMmL.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（6）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（6）</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51XHvYi4pmL.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（8）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51XHvYi4pmL.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（8）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（8）</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51JpJfTjk+L.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（7）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51JpJfTjk+L.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（7）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（7）</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5171vofpphL.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（5）"/>
+    <img data-src="https://m.media-amazon.com/images/I/5171vofpphL.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（5）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（5）</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ilAa7YOiL.jpg" class="mr-3" alt="ラグナロック・ガイ（3）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ilAa7YOiL.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（3）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（3）</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517LuGrZSEL.jpg" class="mr-3" alt="ラグナロック・ガイ（1）"/>
+    <img data-src="https://m.media-amazon.com/images/I/517LuGrZSEL.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（1）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（1）</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LF24OoovL.jpg" class="mr-3" alt="朝太郎伝（4）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51LF24OoovL.jpg" class="mr-3 lazyload" alt="朝太郎伝（4）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（4）</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/616lZcupBnL.jpg" class="mr-3" alt="朝太郎伝（10）"/>
+    <img data-src="https://m.media-amazon.com/images/I/616lZcupBnL.jpg" class="mr-3 lazyload" alt="朝太郎伝（10）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（10）</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513MPLmN7XL.jpg" class="mr-3" alt="朝太郎伝（11）"/>
+    <img data-src="https://m.media-amazon.com/images/I/513MPLmN7XL.jpg" class="mr-3 lazyload" alt="朝太郎伝（11）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（11）</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61Qav6XJ0gL.jpg" class="mr-3" alt="朝太郎伝（9）"/>
+    <img data-src="https://m.media-amazon.com/images/I/61Qav6XJ0gL.jpg" class="mr-3 lazyload" alt="朝太郎伝（9）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（9）</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61IWnkC4I0L.jpg" class="mr-3" alt="朝太郎伝（8）"/>
+    <img data-src="https://m.media-amazon.com/images/I/61IWnkC4I0L.jpg" class="mr-3 lazyload" alt="朝太郎伝（8）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（8）</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/6174HNiqZ3L.jpg" class="mr-3" alt="朝太郎伝（7）"/>
+    <img data-src="https://m.media-amazon.com/images/I/6174HNiqZ3L.jpg" class="mr-3 lazyload" alt="朝太郎伝（7）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（7）</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jz1tv4bXL.jpg" class="mr-3" alt="朝太郎伝（6）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jz1tv4bXL.jpg" class="mr-3 lazyload" alt="朝太郎伝（6）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（6）</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61i9ZcCFIeL.jpg" class="mr-3" alt="朝太郎伝（5）"/>
+    <img data-src="https://m.media-amazon.com/images/I/61i9ZcCFIeL.jpg" class="mr-3 lazyload" alt="朝太郎伝（5）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（5）</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51X8c0iE1DL.jpg" class="mr-3" alt="ラグナロック・ガイ（2）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51X8c0iE1DL.jpg" class="mr-3 lazyload" alt="ラグナロック・ガイ（2）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ラグナロック・ガイ（2）</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BV4GUub6L.jpg" class="mr-3" alt="朝太郎伝（3）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51BV4GUub6L.jpg" class="mr-3 lazyload" alt="朝太郎伝（3）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（3）</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61lt6JECh+L.jpg" class="mr-3" alt="朝太郎伝（2）"/>
+    <img data-src="https://m.media-amazon.com/images/I/61lt6JECh+L.jpg" class="mr-3 lazyload" alt="朝太郎伝（2）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（2）</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51X0Y7jjMlL.jpg" class="mr-3" alt="マーダーライセンス牙（8）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51X0Y7jjMlL.jpg" class="mr-3 lazyload" alt="マーダーライセンス牙（8）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>マーダーライセンス牙（8）</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519-KExaOHL.jpg" class="mr-3" alt="朝太郎伝（1）"/>
+    <img data-src="https://m.media-amazon.com/images/I/519-KExaOHL.jpg" class="mr-3 lazyload" alt="朝太郎伝（1）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>朝太郎伝（1）</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hB3p3+IDL.jpg" class="mr-3" alt="風のフィールド（5）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hB3p3+IDL.jpg" class="mr-3 lazyload" alt="風のフィールド（5）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（5）</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51nlRNLQUtL.jpg" class="mr-3" alt="風のフィールド（4）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51nlRNLQUtL.jpg" class="mr-3 lazyload" alt="風のフィールド（4）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（4）</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51eASM5+OyL.jpg" class="mr-3" alt="風のフィールド（2）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51eASM5+OyL.jpg" class="mr-3 lazyload" alt="風のフィールド（2）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（2）</h5>
@@ -513,7 +515,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ndQTLLoGL.jpg" class="mr-3" alt="風のフィールド（3）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ndQTLLoGL.jpg" class="mr-3 lazyload" alt="風のフィールド（3）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（3）</h5>
@@ -526,7 +528,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51AFbWn6o8L.jpg" class="mr-3" alt="風のフィールド（1）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51AFbWn6o8L.jpg" class="mr-3 lazyload" alt="風のフィールド（1）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（1）</h5>
@@ -539,7 +541,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51JlWMvtk7L.jpg" class="mr-3" alt="風のフィールド（17）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51JlWMvtk7L.jpg" class="mr-3 lazyload" alt="風のフィールド（17）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（17）</h5>
@@ -552,7 +554,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51tv97vqWBL.jpg" class="mr-3" alt="風のフィールド（15）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51tv97vqWBL.jpg" class="mr-3 lazyload" alt="風のフィールド（15）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（15）</h5>
@@ -565,7 +567,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bMmvbsYKL.jpg" class="mr-3" alt="風のフィールド（16）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51bMmvbsYKL.jpg" class="mr-3 lazyload" alt="風のフィールド（16）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（16）</h5>
@@ -578,7 +580,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51wRJSnBO5L.jpg" class="mr-3" alt="風のフィールド（14）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51wRJSnBO5L.jpg" class="mr-3 lazyload" alt="風のフィールド（14）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（14）</h5>
@@ -591,7 +593,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Q7upr44NL.jpg" class="mr-3" alt="風のフィールド（13）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Q7upr44NL.jpg" class="mr-3 lazyload" alt="風のフィールド（13）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（13）</h5>
@@ -604,7 +606,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mH4x8XxDL.jpg" class="mr-3" alt="風のフィールド（12）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51mH4x8XxDL.jpg" class="mr-3 lazyload" alt="風のフィールド（12）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（12）</h5>
@@ -617,7 +619,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LawBoiRWL.jpg" class="mr-3" alt="風のフィールド（11）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51LawBoiRWL.jpg" class="mr-3 lazyload" alt="風のフィールド（11）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（11）</h5>
@@ -630,7 +632,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61rHld7g1dL.jpg" class="mr-3" alt="地上最強の公務員 リストラ代紋（1）"/>
+    <img data-src="https://m.media-amazon.com/images/I/61rHld7g1dL.jpg" class="mr-3 lazyload" alt="地上最強の公務員 リストラ代紋（1）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>地上最強の公務員 リストラ代紋（1）</h5>
@@ -643,7 +645,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qfzgf-74L.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（1）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51qfzgf-74L.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（1）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（1）</h5>
@@ -656,7 +658,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FS4LWXtCL.jpg" class="mr-3" alt="コードネーム３４８【サシバ】（2）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FS4LWXtCL.jpg" class="mr-3 lazyload" alt="コードネーム３４８【サシバ】（2）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>コードネーム３４８【サシバ】（2）</h5>
@@ -669,7 +671,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51q9OCJATTL.jpg" class="mr-3" alt="風のフィールド（8）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51q9OCJATTL.jpg" class="mr-3 lazyload" alt="風のフィールド（8）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（8）</h5>
@@ -682,7 +684,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/512j8xRFkiL.jpg" class="mr-3" alt="風のフィールド（10）"/>
+    <img data-src="https://m.media-amazon.com/images/I/512j8xRFkiL.jpg" class="mr-3 lazyload" alt="風のフィールド（10）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（10）</h5>
@@ -695,7 +697,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51MTfHNFwjL.jpg" class="mr-3" alt="風のフィールド（9）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51MTfHNFwjL.jpg" class="mr-3 lazyload" alt="風のフィールド（9）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（9）</h5>
@@ -708,7 +710,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FRFOp7dmL.jpg" class="mr-3" alt="風のフィールド（7）"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FRFOp7dmL.jpg" class="mr-3 lazyload" alt="風のフィールド（7）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（7）</h5>
@@ -721,7 +723,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519cVEOpkhL.jpg" class="mr-3" alt="風のフィールド（6）"/>
+    <img data-src="https://m.media-amazon.com/images/I/519cVEOpkhL.jpg" class="mr-3 lazyload" alt="風のフィールド（6）"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>風のフィールド（6）</h5>
@@ -734,5 +736,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>

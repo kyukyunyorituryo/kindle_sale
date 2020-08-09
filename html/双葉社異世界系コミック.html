@@ -41,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
  <!-- 追加した部分 -->
        <script defer type="text/javascript" src="../js/share.js"></script>
@@ -157,12 +159,12 @@ img.mr-3 {
     }
  }
 </style>
-
         <h2 id='release' class="alert alert-success">セール本</h2>
+        
         <ul id='frame' class="list-unstyled border alert alert-primary" >
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jLOdsvmZL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jLOdsvmZL.jpg" class="mr-3 lazyload" alt="異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)</h5>
@@ -175,7 +177,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ajmWVuqkL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 5 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ajmWVuqkL.jpg" class="mr-3 lazyload" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 5 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 5 (モンスターコミックス)</h5>
@@ -188,7 +190,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QJQ9nyX8L.jpg" class="mr-3" alt="パーティーから追放されたその治癒師、実は最強につき（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QJQ9nyX8L.jpg" class="mr-3 lazyload" alt="パーティーから追放されたその治癒師、実は最強につき（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>パーティーから追放されたその治癒師、実は最強につき（コミック） ： 1 (モンスターコミックス)</h5>
@@ -201,7 +203,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xGXmg1PoL.jpg" class="mr-3" alt="規格外れの英雄に育てられた、常識外れの魔法剣士（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xGXmg1PoL.jpg" class="mr-3 lazyload" alt="規格外れの英雄に育てられた、常識外れの魔法剣士（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>規格外れの英雄に育てられた、常識外れの魔法剣士（コミック） ： 1 (モンスターコミックス)</h5>
@@ -214,7 +216,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/518WxcUZ34L.jpg" class="mr-3" alt="箱庭の薬術師　神様に愛され女子の異世界生活（コミック） ： 1 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/518WxcUZ34L.jpg" class="mr-3 lazyload" alt="箱庭の薬術師　神様に愛され女子の異世界生活（コミック） ： 1 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>箱庭の薬術師　神様に愛され女子の異世界生活（コミック） ： 1 (モンスターコミックスf)</h5>
@@ -227,7 +229,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51dVBJ4bTJL.jpg" class="mr-3" alt="異世界で 上前はねて 生きていく～再生魔法使いのゆるふわ人材派遣生活～（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51dVBJ4bTJL.jpg" class="mr-3 lazyload" alt="異世界で 上前はねて 生きていく～再生魔法使いのゆるふわ人材派遣生活～（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界で 上前はねて 生きていく～再生魔法使いのゆるふわ人材派遣生活～（コミック） ： 1 (モンスターコミックス)</h5>
@@ -240,7 +242,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51CWv5efrWL.jpg" class="mr-3" alt="異世界チート開拓記（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51CWv5efrWL.jpg" class="mr-3 lazyload" alt="異世界チート開拓記（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界チート開拓記（コミック） ： 1 (モンスターコミックス)</h5>
@@ -253,7 +255,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-5r6tvAOL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 6 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51-5r6tvAOL.jpg" class="mr-3 lazyload" alt="神眼の勇者（コミック） ： 6 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神眼の勇者（コミック） ： 6 (モンスターコミックス)</h5>
@@ -266,7 +268,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xMiPytMCL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 6 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xMiPytMCL.jpg" class="mr-3 lazyload" alt="村人転生 最強のスローライフ（コミック） ： 6 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>村人転生 最強のスローライフ（コミック） ： 6 (モンスターコミックス)</h5>
@@ -279,7 +281,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xY8IYhh5L.jpg" class="mr-3" alt="古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xY8IYhh5L.jpg" class="mr-3 lazyload" alt="古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 2 (モンスターコミックス)</h5>
@@ -292,7 +294,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519M8pEgncL.jpg" class="mr-3" alt="悪役令嬢に選ばれたなら、優雅に演じてみせましょう！（コミック） ： 1 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/519M8pEgncL.jpg" class="mr-3 lazyload" alt="悪役令嬢に選ばれたなら、優雅に演じてみせましょう！（コミック） ： 1 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>悪役令嬢に選ばれたなら、優雅に演じてみせましょう！（コミック） ： 1 (モンスターコミックスf)</h5>
@@ -305,7 +307,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51q7TX6Sg-L.jpg" class="mr-3" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 3 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51q7TX6Sg-L.jpg" class="mr-3 lazyload" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 3 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ハズレポーションが醤油だったので料理することにしました（コミック） ： 3 (モンスターコミックスf)</h5>
@@ -318,7 +320,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jDn-RRJjL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 5 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jDn-RRJjL.jpg" class="mr-3 lazyload" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 5 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 5 (モンスターコミックス)</h5>
@@ -331,7 +333,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51XKwXJBn9L.jpg" class="mr-3" alt="転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51XKwXJBn9L.jpg" class="mr-3 lazyload" alt="転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 2 (モンスターコミックス)</h5>
@@ -344,7 +346,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51sm6dk7OML.jpg" class="mr-3" alt="転職の神殿を開きました（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51sm6dk7OML.jpg" class="mr-3 lazyload" alt="転職の神殿を開きました（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>転職の神殿を開きました（コミック） ： 1 (モンスターコミックス)</h5>
@@ -357,7 +359,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jPVysCY9L.jpg" class="mr-3" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jPVysCY9L.jpg" class="mr-3 lazyload" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 3 (モンスターコミックス)</h5>
@@ -370,7 +372,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51CO+aBzbeL.jpg" class="mr-3" alt="勇者伝説の裏側で俺は英雄伝説を作ります　～王道殺しの英雄譚～（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51CO+aBzbeL.jpg" class="mr-3 lazyload" alt="勇者伝説の裏側で俺は英雄伝説を作ります　～王道殺しの英雄譚～（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>勇者伝説の裏側で俺は英雄伝説を作ります　～王道殺しの英雄譚～（コミック） ： 1 (モンスターコミックス)</h5>
@@ -383,7 +385,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51X7KGSXD8L.jpg" class="mr-3" alt="ヒトを勝手に参謀にするんじゃない、この覇王。～ゲーム世界に放り込まれたオタクの苦労～（コミック） ： 1 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51X7KGSXD8L.jpg" class="mr-3 lazyload" alt="ヒトを勝手に参謀にするんじゃない、この覇王。～ゲーム世界に放り込まれたオタクの苦労～（コミック） ： 1 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ヒトを勝手に参謀にするんじゃない、この覇王。～ゲーム世界に放り込まれたオタクの苦労～（コミック） ： 1 (モンスターコミックスf)</h5>
@@ -396,7 +398,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="なし" class="mr-3" alt="そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="なし" class="mr-3 lazyload" alt="そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 3 (モンスターコミックス)</h5>
@@ -409,7 +411,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51binNG893L.jpg" class="mr-3" alt="Aランク冒険者のスローライフ（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51binNG893L.jpg" class="mr-3 lazyload" alt="Aランク冒険者のスローライフ（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Aランク冒険者のスローライフ（コミック） ： 2 (モンスターコミックス)</h5>
@@ -422,7 +424,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51WxT-JrbNL.jpg" class="mr-3" alt="ダンジョン＋ハーレム＋マスター（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51WxT-JrbNL.jpg" class="mr-3 lazyload" alt="ダンジョン＋ハーレム＋マスター（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ダンジョン＋ハーレム＋マスター（コミック） ： 1 (モンスターコミックス)</h5>
@@ -435,7 +437,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511WTCmJbLL.jpg" class="mr-3" alt="払暁　男装魔術師と金の騎士（コミック） ： 3 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/511WTCmJbLL.jpg" class="mr-3 lazyload" alt="払暁　男装魔術師と金の騎士（コミック） ： 3 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>払暁　男装魔術師と金の騎士（コミック） ： 3 (モンスターコミックスf)</h5>
@@ -448,7 +450,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5166v0v0iML.jpg" class="mr-3" alt="神スキル【呼吸】するだけでレベルアップする僕は、神々のダンジョンへ挑む。（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5166v0v0iML.jpg" class="mr-3 lazyload" alt="神スキル【呼吸】するだけでレベルアップする僕は、神々のダンジョンへ挑む。（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神スキル【呼吸】するだけでレベルアップする僕は、神々のダンジョンへ挑む。（コミック） ： 1 (モンスターコミックス)</h5>
@@ -461,7 +463,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51c9zp3hc6L.jpg" class="mr-3" alt="クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51c9zp3hc6L.jpg" class="mr-3 lazyload" alt="クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 2 (モンスターコミックス)</h5>
@@ -474,7 +476,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51C8R5YONAL.jpg" class="mr-3" alt="魔王軍最強の魔術師は人間だった（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51C8R5YONAL.jpg" class="mr-3 lazyload" alt="魔王軍最強の魔術師は人間だった（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王軍最強の魔術師は人間だった（コミック） ： 2 (モンスターコミックス)</h5>
@@ -487,7 +489,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511ilA0SdoL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/511ilA0SdoL.jpg" class="mr-3 lazyload" alt="アラフォー社畜のゴーレムマスター（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アラフォー社畜のゴーレムマスター（コミック） ： 4 (モンスターコミックス)</h5>
@@ -500,7 +502,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51JWI7mYkgL.jpg" class="mr-3" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51JWI7mYkgL.jpg" class="mr-3 lazyload" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 3 (モンスターコミックス)</h5>
@@ -513,7 +515,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51+i3YEUxlL.jpg" class="mr-3" alt="姉上。スカートをまくって股を開いて見せてくれませんか？（コミック）  ： 2 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51+i3YEUxlL.jpg" class="mr-3 lazyload" alt="姉上。スカートをまくって股を開いて見せてくれませんか？（コミック）  ： 2 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姉上。スカートをまくって股を開いて見せてくれませんか？（コミック）  ： 2 (モンスターコミックスf)</h5>
@@ -526,7 +528,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51rzo0ayELL.jpg" class="mr-3" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51rzo0ayELL.jpg" class="mr-3 lazyload" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 3 (モンスターコミックス)</h5>
@@ -539,7 +541,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zCX-wkpCL.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 5 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51zCX-wkpCL.jpg" class="mr-3 lazyload" alt="モンスターのご主人様（コミック） ： 5 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>モンスターのご主人様（コミック） ： 5 (モンスターコミックス)</h5>
@@ -552,7 +554,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51WLwQYIMUL.jpg" class="mr-3" alt="エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51WLwQYIMUL.jpg" class="mr-3 lazyload" alt="エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 2 (モンスターコミックス)</h5>
@@ -565,7 +567,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/514vBWqICeL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/514vBWqICeL.jpg" class="mr-3 lazyload" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 4 (モンスターコミックス)</h5>
@@ -578,7 +580,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51G2-CQFX0L.jpg" class="mr-3" alt="再臨勇者の復讐譚（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51G2-CQFX0L.jpg" class="mr-3 lazyload" alt="再臨勇者の復讐譚（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>再臨勇者の復讐譚（コミック） ： 1 (モンスターコミックス)</h5>
@@ -591,7 +593,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5186-T-Ah3L.jpg" class="mr-3" alt="魔王様、リトライ！（コミック） ： 5 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5186-T-Ah3L.jpg" class="mr-3 lazyload" alt="魔王様、リトライ！（コミック） ： 5 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王様、リトライ！（コミック） ： 5 (モンスターコミックス)</h5>
@@ -604,7 +606,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ZwIhqjCxL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ZwIhqjCxL.jpg" class="mr-3 lazyload" alt="異世界召喚は二度目です（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界召喚は二度目です（コミック） ： 3 (モンスターコミックス)</h5>
@@ -617,7 +619,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513jpTTXhQL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/513jpTTXhQL.jpg" class="mr-3 lazyload" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 4 (モンスターコミックス)</h5>
@@ -630,7 +632,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51HZlf3qyDL.jpg" class="mr-3" alt="出雲のあやかしホテルに就職します（コミック） ： 1 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51HZlf3qyDL.jpg" class="mr-3 lazyload" alt="出雲のあやかしホテルに就職します（コミック） ： 1 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>出雲のあやかしホテルに就職します（コミック） ： 1 (モンスターコミックスf)</h5>
@@ -643,7 +645,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51wKU-HbSSL.jpg" class="mr-3" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51wKU-HbSSL.jpg" class="mr-3 lazyload" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 3 (モンスターコミックス)</h5>
@@ -656,7 +658,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51V-pPOUDfL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 5 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51V-pPOUDfL.jpg" class="mr-3 lazyload" alt="村人転生 最強のスローライフ（コミック） ： 5 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>村人転生 最強のスローライフ（コミック） ： 5 (モンスターコミックス)</h5>
@@ -669,7 +671,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51t-5OCvq3L.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 5 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51t-5OCvq3L.jpg" class="mr-3 lazyload" alt="神眼の勇者（コミック） ： 5 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神眼の勇者（コミック） ： 5 (モンスターコミックス)</h5>
@@ -682,7 +684,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51COEhgMWKL.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51COEhgMWKL.jpg" class="mr-3 lazyload" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 4 (モンスターコミックス)</h5>
@@ -695,7 +697,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ULHG-p1dL.jpg" class="mr-3" alt="ギルドのチートな受付嬢（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ULHG-p1dL.jpg" class="mr-3 lazyload" alt="ギルドのチートな受付嬢（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ギルドのチートな受付嬢（コミック） ： 3 (モンスターコミックス)</h5>
@@ -708,7 +710,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Ubf+p9YNL.jpg" class="mr-3" alt="古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Ubf+p9YNL.jpg" class="mr-3 lazyload" alt="古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック） ： 1 (モンスターコミックス)</h5>
@@ -721,7 +723,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KLtcrwQtL.jpg" class="mr-3" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 2 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51KLtcrwQtL.jpg" class="mr-3 lazyload" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 2 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ハズレポーションが醤油だったので料理することにしました（コミック） ： 2 (モンスターコミックスf)</h5>
@@ -734,7 +736,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51AnJmbOW7L.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51AnJmbOW7L.jpg" class="mr-3 lazyload" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 4 (モンスターコミックス)</h5>
@@ -747,7 +749,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Bcg-5wmEL.jpg" class="mr-3" alt="転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Bcg-5wmEL.jpg" class="mr-3 lazyload" alt="転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>転生！ 竹中半兵衛 マイナー武将に転生した仲間たちと戦国乱世を生き抜く（コミック） ： 1 (モンスターコミックス)</h5>
@@ -760,7 +762,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/515F9BXwYVL.jpg" class="mr-3" alt="バスカヴィル家の政略結婚（コミック） ： 1 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/515F9BXwYVL.jpg" class="mr-3 lazyload" alt="バスカヴィル家の政略結婚（コミック） ： 1 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>バスカヴィル家の政略結婚（コミック） ： 1 (モンスターコミックスf)</h5>
@@ -773,7 +775,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51J8iEmJMXL.jpg" class="mr-3" alt="払暁　男装魔術師と金の騎士（コミック） ： 2 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51J8iEmJMXL.jpg" class="mr-3 lazyload" alt="払暁　男装魔術師と金の騎士（コミック） ： 2 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>払暁　男装魔術師と金の騎士（コミック） ： 2 (モンスターコミックスf)</h5>
@@ -786,7 +788,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51AWWoU58bL.jpg" class="mr-3" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51AWWoU58bL.jpg" class="mr-3 lazyload" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 2 (モンスターコミックス)</h5>
@@ -799,7 +801,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51scd724q9L.jpg" class="mr-3" alt="そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51scd724q9L.jpg" class="mr-3 lazyload" alt="そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>そのおっさん、異世界で二周目プレイを満喫中（コミック） ： 1 (モンスターコミックス)</h5>
@@ -812,7 +814,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51L0nPuH0eL.jpg" class="mr-3" alt="魔王軍最強の魔術師は人間だった（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51L0nPuH0eL.jpg" class="mr-3 lazyload" alt="魔王軍最強の魔術師は人間だった（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王軍最強の魔術師は人間だった（コミック） ： 1 (モンスターコミックス)</h5>
@@ -825,7 +827,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51G+SJDQOXL.jpg" class="mr-3" alt="クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51G+SJDQOXL.jpg" class="mr-3 lazyload" alt="クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>クラス転移で俺だけハブられたので、同級生ハーレム作ることにした（コミック） ： 1 (モンスターコミックス)</h5>
@@ -838,7 +840,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51szlM5PhDL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51szlM5PhDL.jpg" class="mr-3 lazyload" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 3 (モンスターコミックス)</h5>
@@ -851,7 +853,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51V3iQhMMYL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51V3iQhMMYL.jpg" class="mr-3 lazyload" alt="アラフォー社畜のゴーレムマスター（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アラフォー社畜のゴーレムマスター（コミック） ： 3 (モンスターコミックス)</h5>
@@ -864,7 +866,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fW4OoU7rL.jpg" class="mr-3" alt="Aランク冒険者のスローライフ（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51fW4OoU7rL.jpg" class="mr-3 lazyload" alt="Aランク冒険者のスローライフ（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>Aランク冒険者のスローライフ（コミック） ： 1 (モンスターコミックス)</h5>
@@ -877,7 +879,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517UQS4DKeL.jpg" class="mr-3" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/517UQS4DKeL.jpg" class="mr-3 lazyload" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 2 (モンスターコミックス)</h5>
@@ -890,7 +892,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51iJ7wlC2YL.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51iJ7wlC2YL.jpg" class="mr-3 lazyload" alt="モンスターのご主人様（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>モンスターのご主人様（コミック） ： 4 (モンスターコミックス)</h5>
@@ -903,7 +905,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QjQV6IVdL.jpg" class="mr-3" alt="エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51QjQV6IVdL.jpg" class="mr-3 lazyload" alt="エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>エリィ・ゴールデンと悪戯な転換　ブスでデブでもイケメンエリート（コミック） ： 1 (モンスターコミックス)</h5>
@@ -916,7 +918,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hHJMq85NL.jpg" class="mr-3" alt="姉上。スカートをまくって股を開いて見せてくれませんか？（コミック） ： 1 (モンスターコミックスf)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51hHJMq85NL.jpg" class="mr-3 lazyload" alt="姉上。スカートをまくって股を開いて見せてくれませんか？（コミック） ： 1 (モンスターコミックスf)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>姉上。スカートをまくって股を開いて見せてくれませんか？（コミック） ： 1 (モンスターコミックスf)</h5>
@@ -929,7 +931,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-QfFQ--RL.jpg" class="mr-3" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51-QfFQ--RL.jpg" class="mr-3 lazyload" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 2 (モンスターコミックス)</h5>
@@ -942,7 +944,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51uV5-PPhiL.jpg" class="mr-3" alt="魔王様、リトライ！（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51uV5-PPhiL.jpg" class="mr-3 lazyload" alt="魔王様、リトライ！（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王様、リトライ！（コミック） ： 4 (モンスターコミックス)</h5>
@@ -955,7 +957,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61zG0DuLddL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61zG0DuLddL.jpg" class="mr-3 lazyload" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 3 (モンスターコミックス)</h5>
@@ -968,7 +970,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jXIZ3AV+L.jpg" class="mr-3" alt="必勝ダンジョン運営方法（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jXIZ3AV+L.jpg" class="mr-3 lazyload" alt="必勝ダンジョン運営方法（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>必勝ダンジョン運営方法（コミック） ： 3 (モンスターコミックス)</h5>
@@ -981,7 +983,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Qhxs2ktpL.jpg" class="mr-3" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 1 (モンスターコミックスｆ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Qhxs2ktpL.jpg" class="mr-3 lazyload" alt="ハズレポーションが醤油だったので料理することにしました（コミック） ： 1 (モンスターコミックスｆ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ハズレポーションが醤油だったので料理することにしました（コミック） ： 1 (モンスターコミックスｆ)</h5>
@@ -994,7 +996,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51jLOdsvmZL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51jLOdsvmZL.jpg" class="mr-3 lazyload" alt="異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界召喚は二度目です（コミック） ： 4 (モンスターコミックス)</h5>
@@ -1007,7 +1009,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ZpNIK3VfL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ZpNIK3VfL.jpg" class="mr-3 lazyload" alt="村人転生 最強のスローライフ（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>村人転生 最強のスローライフ（コミック） ： 4 (モンスターコミックス)</h5>
@@ -1020,7 +1022,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51DTo74ljjL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 4 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51DTo74ljjL.jpg" class="mr-3 lazyload" alt="神眼の勇者（コミック） ： 4 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神眼の勇者（コミック） ： 4 (モンスターコミックス)</h5>
@@ -1033,7 +1035,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Zc4kwO+nL.jpg" class="mr-3" alt="払暁　男装魔術師と金の騎士（コミック） ： 1 (モンスターコミックスｆ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Zc4kwO+nL.jpg" class="mr-3 lazyload" alt="払暁　男装魔術師と金の騎士（コミック） ： 1 (モンスターコミックスｆ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>払暁　男装魔術師と金の騎士（コミック） ： 1 (モンスターコミックスｆ)</h5>
@@ -1046,7 +1048,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xNd-nB1GL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xNd-nB1GL.jpg" class="mr-3 lazyload" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 3 (モンスターコミックス)</h5>
@@ -1059,7 +1061,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51SOIV1lgRL.jpg" class="mr-3" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51SOIV1lgRL.jpg" class="mr-3 lazyload" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1072,7 +1074,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KJB3mU-wL.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51KJB3mU-wL.jpg" class="mr-3 lazyload" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 3 (モンスターコミックス)</h5>
@@ -1085,7 +1087,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-GPyNUk1L.jpg" class="mr-3" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51-GPyNUk1L.jpg" class="mr-3 lazyload" alt="クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>クラスごと集団転移しましたが、一番強い俺は最弱の商人に偽装中です。（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1098,7 +1100,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51DplBDrVpL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51DplBDrVpL.jpg" class="mr-3 lazyload" alt="アラフォー社畜のゴーレムマスター（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アラフォー社畜のゴーレムマスター（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1111,7 +1113,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xh3L0DZsL.jpg" class="mr-3" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xh3L0DZsL.jpg" class="mr-3 lazyload" alt="冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>冒険家になろう！～スキルボードでダンジョン攻略～（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1124,7 +1126,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51h6gy2duKL.jpg" class="mr-3" alt="魔王様、リトライ！（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51h6gy2duKL.jpg" class="mr-3 lazyload" alt="魔王様、リトライ！（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王様、リトライ！（コミック） ： 3 (モンスターコミックス)</h5>
@@ -1137,7 +1139,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5193iVe7nNL.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/5193iVe7nNL.jpg" class="mr-3 lazyload" alt="モンスターのご主人様（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>モンスターのご主人様（コミック） ： 3 (モンスターコミックス)</h5>
@@ -1150,7 +1152,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xblykKDSL.jpg" class="mr-3" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51xblykKDSL.jpg" class="mr-3 lazyload" alt="異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界の迷宮都市で治癒魔法使いやってます（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1163,7 +1165,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51p6UZ6C3JL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51p6UZ6C3JL.jpg" class="mr-3 lazyload" alt="村人転生 最強のスローライフ（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>村人転生 最強のスローライフ（コミック） ： 3 (モンスターコミックス)</h5>
@@ -1176,7 +1178,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FDyjsCHNL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51FDyjsCHNL.jpg" class="mr-3 lazyload" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1189,7 +1191,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qdU7UHdrL.jpg" class="mr-3" alt="ギルドのチートな受付嬢（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51qdU7UHdrL.jpg" class="mr-3 lazyload" alt="ギルドのチートな受付嬢（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ギルドのチートな受付嬢（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1202,7 +1204,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OGmoC09JL.jpg" class="mr-3" alt="異世界召喚は二度目です（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51OGmoC09JL.jpg" class="mr-3 lazyload" alt="異世界召喚は二度目です（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界召喚は二度目です（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1215,7 +1217,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519u26t6RGL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 3 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/519u26t6RGL.jpg" class="mr-3 lazyload" alt="神眼の勇者（コミック） ： 3 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神眼の勇者（コミック） ： 3 (モンスターコミックス)</h5>
@@ -1228,7 +1230,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51q5qaFx+VL.jpg" class="mr-3" alt="必勝ダンジョン運営方法（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51q5qaFx+VL.jpg" class="mr-3 lazyload" alt="必勝ダンジョン運営方法（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>必勝ダンジョン運営方法（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1241,7 +1243,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/518xeJ+lUcL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/518xeJ+lUcL.jpg" class="mr-3 lazyload" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1254,7 +1256,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LoSaDRqbL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 2 (モンスターコミックスｆ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51LoSaDRqbL.jpg" class="mr-3 lazyload" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 2 (モンスターコミックスｆ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 2 (モンスターコミックスｆ)</h5>
@@ -1267,7 +1269,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BiXtw8yZL.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51BiXtw8yZL.jpg" class="mr-3 lazyload" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1280,7 +1282,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51E4rzk5PWL.jpg" class="mr-3" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51E4rzk5PWL.jpg" class="mr-3 lazyload" alt="食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>食べるだけでレベルアップ！　～駄女神といっしょに異世界無双～（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1293,7 +1295,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="なし" class="mr-3" alt="魔王様、リトライ！R（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="なし" class="mr-3 lazyload" alt="魔王様、リトライ！R（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王様、リトライ！R（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1306,7 +1308,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51y8u0MnkYL.jpg" class="mr-3" alt="アラフォー社畜のゴーレムマスター（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51y8u0MnkYL.jpg" class="mr-3 lazyload" alt="アラフォー社畜のゴーレムマスター（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>アラフォー社畜のゴーレムマスター（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1319,7 +1321,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51E-hq+JD4L.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51E-hq+JD4L.jpg" class="mr-3 lazyload" alt="モンスターのご主人様（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>モンスターのご主人様（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1332,7 +1334,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51D81AzZHaL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51D81AzZHaL.jpg" class="mr-3 lazyload" alt="神眼の勇者（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神眼の勇者（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1345,7 +1347,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61Sp+K-olKL.jpg" class="mr-3" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61Sp+K-olKL.jpg" class="mr-3 lazyload" alt="農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>農民関連のスキルばっか上げてたら何故か強くなった。（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1358,7 +1360,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51itGjNzYFL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 2 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51itGjNzYFL.jpg" class="mr-3 lazyload" alt="村人転生 最強のスローライフ（コミック） ： 2 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>村人転生 最強のスローライフ（コミック） ： 2 (モンスターコミックス)</h5>
@@ -1371,7 +1373,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51y0dRTwWaL.jpg" class="mr-3" alt="ギルドのチートな受付嬢（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51y0dRTwWaL.jpg" class="mr-3 lazyload" alt="ギルドのチートな受付嬢（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>ギルドのチートな受付嬢（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1384,7 +1386,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51D93lSIxaL.jpg" class="mr-3" alt="必勝ダンジョン運営方法（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51D93lSIxaL.jpg" class="mr-3 lazyload" alt="必勝ダンジョン運営方法（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>必勝ダンジョン運営方法（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1397,7 +1399,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61J1pce9OHL.jpg" class="mr-3" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 1 (モンスターコミックスｆ)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61J1pce9OHL.jpg" class="mr-3 lazyload" alt="異世界でもふもふなでなでするためにがんばってます。（コミック） ： 1 (モンスターコミックスｆ)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>異世界でもふもふなでなでするためにがんばってます。（コミック） ： 1 (モンスターコミックスｆ)</h5>
@@ -1410,7 +1412,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51EkJaLMC4L.jpg" class="mr-3" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51EkJaLMC4L.jpg" class="mr-3 lazyload" alt="サキュバスに転生したのでミルクをしぼります（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>サキュバスに転生したのでミルクをしぼります（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1423,7 +1425,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51L8gsLkYKL.jpg" class="mr-3" alt="魔王様、リトライ！R（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51L8gsLkYKL.jpg" class="mr-3 lazyload" alt="魔王様、リトライ！R（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>魔王様、リトライ！R（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1436,7 +1438,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ywa-p9-7L.jpg" class="mr-3" alt="モンスターのご主人様（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51ywa-p9-7L.jpg" class="mr-3 lazyload" alt="モンスターのご主人様（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>モンスターのご主人様（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1449,7 +1451,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61juDiSDfVL.jpg" class="mr-3" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/61juDiSDfVL.jpg" class="mr-3 lazyload" alt="進化の実～知らないうちに勝ち組人生～（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>進化の実～知らないうちに勝ち組人生～（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1462,7 +1464,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Sp4LQWUgL.jpg" class="mr-3" alt="神眼の勇者（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51Sp4LQWUgL.jpg" class="mr-3 lazyload" alt="神眼の勇者（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>神眼の勇者（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1475,7 +1477,7 @@ img.mr-3 {
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51lhYj-rCcL.jpg" class="mr-3" alt="村人転生 最強のスローライフ（コミック） ： 1 (モンスターコミックス)"/>
+    <img data-src="https://m.media-amazon.com/images/I/51lhYj-rCcL.jpg" class="mr-3 lazyload" alt="村人転生 最強のスローライフ（コミック） ： 1 (モンスターコミックス)"/>
   </div>
                 <div class="media-body ml-3">
                     <h5>村人転生 最強のスローライフ（コミック） ： 1 (モンスターコミックス)</h5>
@@ -1488,5 +1490,7 @@ img.mr-3 {
             </li>
         </ul>
     </div>
+    <script>lazyload();
+    </script>
 </body>
 </html>
