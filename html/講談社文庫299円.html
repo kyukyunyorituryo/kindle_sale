@@ -1,0 +1,989 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="セールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「セールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZdOrY10qL.jpg" class="mr-3 lazyload" alt="新装版　和宮様御留 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新装版　和宮様御留 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>有吉佐和子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K1ZQLJI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-XaBmk9nL.jpg" class="mr-3 lazyload" alt="幸福な食卓 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>幸福な食卓 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>瀬尾まいこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DLYGSNO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41rJYbYXeAL.jpg" class="mr-3 lazyload" alt="五体不満足　完全版 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>五体不満足　完全版 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>乙武洋匡(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXM41U?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41yC4bOVxbL.jpg" class="mr-3 lazyload" alt="ロズウェルなんか知らない (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ロズウェルなんか知らない (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>篠田節子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IJ6V5LU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51W-1OOJcEL.jpg" class="mr-3 lazyload" alt="しずかな日々 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>しずかな日々 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>椰月美智子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B016DHVI36?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517qcaFbANL.jpg" class="mr-3 lazyload" alt="犬婿入り (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>犬婿入り (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>多和田葉子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HSGLH8S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512V8hA1UfL.jpg" class="mr-3 lazyload" alt="恵比寿屋喜兵衛手控え (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>恵比寿屋喜兵衛手控え (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>佐藤雅美(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IEC35G2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41R6wzF2vxL.jpg" class="mr-3 lazyload" alt="言い寄る (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>言い寄る (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>田辺聖子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：26-50回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N6PTN0I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41I-97KITwL.jpg" class="mr-3 lazyload" alt="旅をする裸の眼 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>旅をする裸の眼 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>多和田葉子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HSGLF12?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b1QU31lCL.jpg" class="mr-3 lazyload" alt="日曜日たち (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日曜日たち (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>吉田修一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M98XGSE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xRGyLT6DL.jpg" class="mr-3 lazyload" alt="とげ抜き　新巣鴨地蔵縁起 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>とげ抜き　新巣鴨地蔵縁起 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>伊藤比呂美(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00INTNSUE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hYBFcX+iL.jpg" class="mr-3 lazyload" alt="とりかえばや物語 21世紀版少年少女古典文学館 (21世紀版・少年少女日本文学館)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>とりかえばや物語 21世紀版少年少女古典文学館 (21世紀版・少年少女日本文学館)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>田辺聖子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：26-50回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DW4ZU2Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lG6HW4pxL.jpg" class="mr-3 lazyload" alt="縮んだ愛 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>縮んだ愛 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>佐川光晴(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00INTNRWI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41SHhNs8adL.jpg" class="mr-3 lazyload" alt="尼僧とキューピッドの弓 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>尼僧とキューピッドの弓 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>多和田葉子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B019WU2ETS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51i1Ict1wJL.jpg" class="mr-3 lazyload" alt="ナポレオン狂 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ナポレオン狂 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>阿刀田高(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JIMMVMQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hA5YakLpL.jpg" class="mr-3 lazyload" alt="苺をつぶしながら (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>苺をつぶしながら (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>田辺聖子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：26-50回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MU9LIRK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+6MvZslTL.jpg" class="mr-3 lazyload" alt="ランドマーク (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ランドマーク (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>吉田修一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD6EWD6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41L-I4q0y8L.jpg" class="mr-3 lazyload" alt="十二歳 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>十二歳 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>椰月美智子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,文学・評論,読み物</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GQS6HQ6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NjnwKJT+L.jpg" class="mr-3 lazyload" alt="私の好きな悪い癖 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私の好きな悪い癖 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>吉村昭(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,Featured Categories,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB8980?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dTP0-hzlL.jpg" class="mr-3 lazyload" alt="ロック母 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ロック母 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>角田光代(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FDIF242?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gbock2IeL.jpg" class="mr-3 lazyload" alt="香菜里屋を知っていますか (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>香菜里屋を知っていますか (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>北森鴻(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD6EWZ4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ECieMtj7L.jpg" class="mr-3 lazyload" alt="家族写真 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>家族写真 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>荻原浩(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WSLWE6C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51V+CMFznZL.jpg" class="mr-3 lazyload" alt="火の山　山猿記（上） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>火の山　山猿記（上） (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>津島佑子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IJ6V4GQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QQyV317EL.jpg" class="mr-3 lazyload" alt="転生 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転生 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>篠田節子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IJ6V6UK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41T6ZrSj29L.jpg" class="mr-3 lazyload" alt="螢坂 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>螢坂 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>北森鴻(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD6EWGI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41VSIGC4peL.jpg" class="mr-3 lazyload" alt="私的生活 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私的生活 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>田辺聖子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：26-50回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MS6COOX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mT8b8q4kL.jpg" class="mr-3 lazyload" alt="ガラスの麒麟 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ガラスの麒麟 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>加納朋子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I40Q7TG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KHbzmXY7L.jpg" class="mr-3 lazyload" alt="ひねくれ一茶 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ひねくれ一茶 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>田辺聖子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：26-50回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DLYGQEU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PTKjdDsPL.jpg" class="mr-3 lazyload" alt="深川澪通り木戸番小屋 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>深川澪通り木戸番小屋 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>北原亞以子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I40Q5NY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UIbAXjTAL.jpg" class="mr-3 lazyload" alt="火の山　山猿記（下） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>火の山　山猿記（下） (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>津島佑子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IJ6V4Q6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DW5Pa4lwL.jpg" class="mr-3 lazyload" alt="花の下にて春死なむ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花の下にて春死なむ (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>北森鴻(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00EXJ6DAU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fA1Q1AouL.jpg" class="mr-3 lazyload" alt="畦と銃 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>畦と銃 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>真藤順丈(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KR987A4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+pG7qTBDL.jpg" class="mr-3 lazyload" alt="桃尻娘 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃尻娘 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TPL9DKI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TgDhtNlIL.jpg" class="mr-3 lazyload" alt="仲蔵狂乱 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>仲蔵狂乱 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>松井今朝子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LO154NM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bC2QSW0lL.jpg" class="mr-3 lazyload" alt="千々にくだけて (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>千々にくだけて (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>リービ英雄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K6AGGXY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+NkUNPCxL.jpg" class="mr-3 lazyload" alt="新装版　一絃の琴 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新装版　一絃の琴 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>宮尾登美子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AJCM1R4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Cm0zdsp5L.jpg" class="mr-3 lazyload" alt="月下美人 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月下美人 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>吉村昭(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JEVG0CS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jV7MkTCAL.jpg" class="mr-3 lazyload" alt="桜宵 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桜宵 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>北森鴻(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD6EW1I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513ZzgEw2wL.jpg" class="mr-3 lazyload" alt="小説家 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小説家 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>勝目梓(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B018TRC6CA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AaX95EwAL.jpg" class="mr-3 lazyload" alt="劫火（１）　ビンゴＲ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>劫火（１）　ビンゴＲ (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>西村健(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GMYJMI4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GhNCPhWML.jpg" class="mr-3 lazyload" alt="劫火（４）　激突 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>劫火（４）　激突 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>西村健(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GMYJO1O?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jgcHVqplL.jpg" class="mr-3 lazyload" alt="風渡る (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>風渡る (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>葉室麟(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BN6S7VE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516I8MMRdrL.jpg" class="mr-3 lazyload" alt="夏の約束 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夏の約束 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>藤野千夜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD6ESBM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41JzuJCYKLL.jpg" class="mr-3 lazyload" alt="ニライカナイの空で (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ニライカナイの空で (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>上野哲也(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GY19B7M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uIHQSE8DL.jpg" class="mr-3 lazyload" alt="ああ、禁煙ｖｓ．喫煙 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ああ、禁煙ｖｓ．喫煙 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>姫野カオルコ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,126-150回,Featured Categories,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CRZPWCC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uww61RoXL.jpg" class="mr-3 lazyload" alt="風の軍師　黒田官兵衛 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>風の軍師　黒田官兵衛 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>葉室麟(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BSIRG64?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tzABj5QFL.jpg" class="mr-3 lazyload" alt="蜃気楼の犬 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蜃気楼の犬 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：90</p>
+                    <p>呉勝浩(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CQLVRJ7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-krXgWJuL.jpg" class="mr-3 lazyload" alt="劫火（２）　大脱出 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>劫火（２）　大脱出 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>西村健(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GMYJMP2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t6fzFWN7L.jpg" class="mr-3 lazyload" alt="劫火（３）　突破再び (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>劫火（３）　突破再び (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>西村健(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GMYJMK2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cQFSleG8L.jpg" class="mr-3 lazyload" alt="夜の明けるまで　深川澪通り木戸番小屋 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜の明けるまで　深川澪通り木戸番小屋 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>北原亞以子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PAO1P0K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41UinjYM6+L.jpg" class="mr-3 lazyload" alt="皿と紙ひこうき (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皿と紙ひこうき (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>石井睦美(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LGQ4OOA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Q2cFdcnUL.jpg" class="mr-3 lazyload" alt="雲を斬る (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>雲を斬る (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>池永陽(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HV9UXXW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cXX9ql8iL.jpg" class="mr-3 lazyload" alt="ホカベン　ボクたちの正義 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホカベン　ボクたちの正義 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>中嶋博行(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009LFAO7Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519NBQ7vGvL.jpg" class="mr-3 lazyload" alt="ある殺人者の回想 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ある殺人者の回想 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>勝目梓(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DLYGZO6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31FAaruK+ZL.jpg" class="mr-3 lazyload" alt="死支度 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死支度 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>勝目梓(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E9R29QS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A3rHQ6JbL.jpg" class="mr-3 lazyload" alt="其の一日 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>其の一日 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>諸田玲子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HV9UX2S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51--iIthzQL.jpg" class="mr-3 lazyload" alt="カーテンコール (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カーテンコール (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>黒井千次(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KCL6TOS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F7Tez-zHL.jpg" class="mr-3 lazyload" alt="大砲松 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大砲松 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>東郷隆(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I40Q7H8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VyyqlhFZL.jpg" class="mr-3 lazyload" alt="傷口にはウオッカ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>傷口にはウオッカ (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>大道珠貴(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：126-150回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JA0KEYS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NHrXBa3NL.jpg" class="mr-3 lazyload" alt="パラドックス実践　雄弁学園の教師たち (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パラドックス実践　雄弁学園の教師たち (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>門井慶喜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BJ09KQU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MFnSkfYWL.jpg" class="mr-3 lazyload" alt="おしゃべり怪談 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おしゃべり怪談 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>藤野千夜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00F95PS7Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617AP7RcAJL.jpg" class="mr-3 lazyload" alt="あのひとの行方 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あのひとの行方 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>北原リエ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FMHK8LL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51c9pJdCK-L.jpg" class="mr-3 lazyload" alt="夏至祭 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夏至祭 (講談社文庫)</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>佐藤洋二郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00INTNRMI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
