@@ -1,0 +1,3407 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="セールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「セールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510hQjjaZxL.jpg" class="mr-3 lazyload" alt="夢中さ、きみに。 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢中さ、きみに。 (ビームコミックス)</h5>
+                    <p>価格：382円、ポイント：4</p>
+                    <p>和山 やま(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VTLL44K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519BfNkHeoL.jpg" class="mr-3 lazyload" alt="ちんちんケモケモ　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ちんちんケモケモ　1 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>藤咲 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BF7YDK5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51V-NOQvyOL.jpg" class="mr-3 lazyload" alt="その時の彼女が今の妻です (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>その時の彼女が今の妻です (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>音井 れこ丸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08492CKMP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rJZ55KYlL.jpg" class="mr-3 lazyload" alt="ちんちんケモケモ　3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ちんちんケモケモ　3 (ビームコミックス)</h5>
+                    <p>価格：414円、ポイント：4</p>
+                    <p>藤咲 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PPF7BH2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dJjoeQH8L.jpg" class="mr-3 lazyload" alt="ちんちんケモケモ　2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ちんちんケモケモ　2 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>藤咲 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H8WDTHC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61n7AUW6WpL.jpg" class="mr-3 lazyload" alt="よみきり▽もの 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきり▽もの 1 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SAO212I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jWWAgj4QL.jpg" class="mr-3 lazyload" alt="繭、纏う　2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>繭、纏う　2 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>原百合子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VQD52SD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511AWyxXS5L.jpg" class="mr-3 lazyload" alt="生理ちゃん　２日目"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生理ちゃん　２日目</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小山 健(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TJMQR1L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51H3juX25OL.jpg" class="mr-3 lazyload" alt="繭、纏う　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>繭、纏う　1 (ビームコミックス)</h5>
+                    <p>価格：377円、ポイント：4</p>
+                    <p>原百合子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GXBT7D2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51f32kwMHSL.jpg" class="mr-3 lazyload" alt="おじいちゃん、水素水でミドリガメ洗うのやめて。 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おじいちゃん、水素水でミドリガメ洗うのやめて。 (ビームコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>肉柱 ミゲル(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M2YNCBK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pXKtAVjeL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 7 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 7 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IQN5SDG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KkVpZhosL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 6 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 6 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B019MDTOF2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XXDXeVeTL.jpg" class="mr-3 lazyload" alt="よみきりものの… ヒトライフ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… ヒトライフ (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN4AC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61z1C3nfFSL.jpg" class="mr-3 lazyload" alt="よみきり▽もの 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきり▽もの 2 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SAO21BO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6113wmm3mbL.jpg" class="mr-3 lazyload" alt="あかねこの悪魔 6 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかねこの悪魔 6 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NIG0OTK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511YoTiM2OL.jpg" class="mr-3 lazyload" alt="あかねこの悪魔 5 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかねこの悪魔 5 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NIG0OJA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615A2DdDTpL.jpg" class="mr-3 lazyload" alt="あかねこの悪魔 4 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかねこの悪魔 4 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NIG0OJ0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QISwvTu0L.jpg" class="mr-3 lazyload" alt="あかねこの悪魔 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかねこの悪魔 3 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NIG0OPY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GTQyRVxdL.jpg" class="mr-3 lazyload" alt="あかねこの悪魔 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかねこの悪魔 2 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NIG0OIQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AFkxOuhPL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 2 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JMAIMOU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TuiVq8R0L.jpg" class="mr-3 lazyload" alt="テルマエ・ロマエVI (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>テルマエ・ロマエVI (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>ヤマザキ マリ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKY47DO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41pJlceOtbL.jpg" class="mr-3 lazyload" alt="敷居の住人　新装版　６ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>敷居の住人　新装版　６ (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0097285IQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41CHmKjgWWL.jpg" class="mr-3 lazyload" alt="敷居の住人　新装版　５ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>敷居の住人　新装版　５ (ビームコミックス)</h5>
+                    <p>価格：467円、ポイント：5</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0097285LI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/419Z445vQDL.jpg" class="mr-3 lazyload" alt="敷居の住人　新装版　４ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>敷居の住人　新装版　４ (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0097285OK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41SUQ8zxY4L.jpg" class="mr-3 lazyload" alt="敷居の住人　新装版　３ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>敷居の住人　新装版　３ (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0097285TA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41624tCLo2L.jpg" class="mr-3 lazyload" alt="敷居の住人　新装版　２ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>敷居の住人　新装版　２ (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0097285WM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41xAtnCrieL.jpg" class="mr-3 lazyload" alt="敷居の住人　新装版　１ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>敷居の住人　新装版　１ (ビームコミックス)</h5>
+                    <p>価格：464円、ポイント：5</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0097285ZO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IIHqq6TkL.jpg" class="mr-3 lazyload" alt="テルマエ・ロマエV (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>テルマエ・ロマエV (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>ヤマザキ マリ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009VI0CZA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61eC9b5N1cL.jpg" class="mr-3 lazyload" alt="テルマエ・ロマエIV (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>テルマエ・ロマエIV (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>ヤマザキ マリ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727M9O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GcGwoZbfL.jpg" class="mr-3 lazyload" alt="テルマエ・ロマエIII (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>テルマエ・ロマエIII (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>ヤマザキ マリ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727O42?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610DSy1S17L.jpg" class="mr-3 lazyload" alt="テルマエ・ロマエII (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>テルマエ・ロマエII (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>ヤマザキ マリ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727O92?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nNbo9LPlL.jpg" class="mr-3 lazyload" alt="テルマエ・ロマエI (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>テルマエ・ロマエI (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>ヤマザキ マリ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727M6M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518bOEckA2L.jpg" class="mr-3 lazyload" alt="彼女と彼氏の明るい未来　2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>彼女と彼氏の明るい未来　2 (ビームコミックス)</h5>
+                    <p>価格：420円、ポイント：4</p>
+                    <p>谷口 菜津子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0856WKC2Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DBdSGdSrL.jpg" class="mr-3 lazyload" alt="この物語でネコに危害はいっさい加えておりません。 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>この物語でネコに危害はいっさい加えておりません。 (ビームコミックス)</h5>
+                    <p>価格：464円、ポイント：5</p>
+                    <p>羽生生 純(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0856VBSFW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VfFp2Yg9L.jpg" class="mr-3 lazyload" alt="水野と茶山　下 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>水野と茶山　下 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>西尾 雄太(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082XNH7XD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512MPLv0uPL.jpg" class="mr-3 lazyload" alt="水野と茶山　上 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>水野と茶山　上 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>西尾 雄太(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082XN1WQG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ltuIcmfJL.jpg" class="mr-3 lazyload" alt="ショートショートショートさん ２ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ショートショートショートさん ２ (ビームコミックス)</h5>
+                    <p>価格：742円、ポイント：7</p>
+                    <p>タカノンノ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZ2LVTJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Y6Ld5ja+L.jpg" class="mr-3 lazyload" alt="困った じいさん (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>困った じいさん (ビームコミックス)</h5>
+                    <p>価格：382円、ポイント：4</p>
+                    <p>大江 しんいちろう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B081996DW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RTgtJSIIL.jpg" class="mr-3 lazyload" alt="CONFUSED！ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>CONFUSED！ (ビームコミックス)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>サヌキ ナオヤ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YKGD288?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WG60UHk4L.jpg" class="mr-3 lazyload" alt="老後のススメ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>老後のススメ (ビームコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>倖田 青空(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X7ZRNN3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41XPds6P0GL.jpg" class="mr-3 lazyload" alt="てだれもんら 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>てだれもんら 1 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>中野 シズカ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X37WYS9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M18WIEFqL.jpg" class="mr-3 lazyload" alt="はなちゃんと、世界のかたち (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はなちゃんと、世界のかたち (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>植田 りょうたろう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X2ZR2M9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ubmFpfm3L.jpg" class="mr-3 lazyload" alt="涙煮込み愛辛さマシマシ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>涙煮込み愛辛さマシマシ (ビームコミックス)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>にくまん子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VV27CSL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41fK1Na1DxL.jpg" class="mr-3 lazyload" alt="父のなくしもの (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>父のなくしもの (ビームコミックス)</h5>
+                    <p>価格：451円、ポイント：5</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TLRZ335?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Pnyd7GHKL.jpg" class="mr-3 lazyload" alt="ものするひと 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ものするひと 3 (ビームコミックス)</h5>
+                    <p>価格：451円、ポイント：5</p>
+                    <p>オカヤ イヅミ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S8ZJC4S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41kHUuu+7uL.jpg" class="mr-3 lazyload" alt="あ、夜が明けるよ。 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あ、夜が明けるよ。 (ビームコミックス)</h5>
+                    <p>価格：464円、ポイント：5</p>
+                    <p>浦部 はいむ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QX4HFKF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51m1YO0GUSL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 12 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 12 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QY73JL7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aOMJXnB5L.jpg" class="mr-3 lazyload" alt="彼女と彼氏の明るい未来　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>彼女と彼氏の明るい未来　1 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>谷口 菜津子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QX3GJBC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wX7ibLByL.jpg" class="mr-3 lazyload" alt="猫恋人　キミにまたたび あのコに小判 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>猫恋人　キミにまたたび あのコに小判 (ビームコミックス)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>イシデ電(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QW5VB63?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Tou72BMsL.jpg" class="mr-3 lazyload" alt="恋煮込み愛つゆだく大盛り (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>恋煮込み愛つゆだく大盛り (ビームコミックス)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>にくまん子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q3BYPFC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41XmCIvwuAL.jpg" class="mr-3 lazyload" alt="宇宙戦争　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙戦争　1 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>横島 一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NV114PV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512pExb7CLL.jpg" class="mr-3 lazyload" alt="えろげっつ！～めいのエロゲー会社いろどり妄想日記～ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えろげっつ！～めいのエロゲー会社いろどり妄想日記～ (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>永緒 ウカ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PQDTGVR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511Nw3FNNhL.jpg" class="mr-3 lazyload" alt="ありがとう さち子"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ありがとう さち子</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小山 健(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JYYMJTQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51joaidbo-L.jpg" class="mr-3 lazyload" alt="猫恋人 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>猫恋人 (ビームコミックス)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>イシデ電(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HQBFNL5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u1ztUAZ2L.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 11 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 11 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HQK1D68?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KZoQls0GL.jpg" class="mr-3 lazyload" alt="ものするひと 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ものするひと 2 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>オカヤ イヅミ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HQGZM4W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OhMaI3-4L.jpg" class="mr-3 lazyload" alt="少年怪盗ル・ブレッド　2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>少年怪盗ル・ブレッド　2 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>金村 連(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H8XW8WB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xaBSOrpOL.jpg" class="mr-3 lazyload" alt="イスタンブールには、なんで余裕があるのかな。 わたし今、トルコです。 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>イスタンブールには、なんで余裕があるのかな。 わたし今、トルコです。 (ビームコミックス)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>市川 ラク(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F2V262L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WwEBCNvFL.jpg" class="mr-3 lazyload" alt="生理ちゃん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生理ちゃん</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小山 健(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DBX6PMV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61PLIuDONSL.jpg" class="mr-3 lazyload" alt="月と珈琲、電信柱 シリーズ小さな喫茶店 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月と珈琲、電信柱 シリーズ小さな喫茶店 (ビームコミックス)</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CM2BGMY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UyjLXboKL.jpg" class="mr-3 lazyload" alt="ピカリちゃんはなかなかしなないっ！　１ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ピカリちゃんはなかなかしなないっ！　１ (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>三部 べべ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BF4BH3D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iGpTrG5ZL.jpg" class="mr-3 lazyload" alt="少年怪盗ル・ブレッド　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>少年怪盗ル・ブレッド　1 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>金村 連(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BF2GY6G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510pVVXX3xL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 10 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 10 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3TKGZD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cggnv+lmL.jpg" class="mr-3 lazyload" alt="僕らの蟹工船　小林多喜二『蟹工船』より (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕らの蟹工船　小林多喜二『蟹工船』より (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3PYLWW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YhkpWPvOL.jpg" class="mr-3 lazyload" alt="ものするひと 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ものするひと 1 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>オカヤ イヅミ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3RLHTJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dNz+k79QL.jpg" class="mr-3 lazyload" alt="彼女は宇宙一 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>彼女は宇宙一 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>谷口 菜津子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B078N2L3DB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51m9zMTtjFL.jpg" class="mr-3 lazyload" alt="大人スキップ　2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大人スキップ　2 (ビームコミックス)</h5>
+                    <p>価格：469円、ポイント：5</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B077RT844R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61W-h3gAFaL.jpg" class="mr-3 lazyload" alt="どこか遠くの話をしよう　下 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どこか遠くの話をしよう　下 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B078MZ5W3B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511vJYvVDsL.jpg" class="mr-3 lazyload" alt="わたし今、トルコです。 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>わたし今、トルコです。 (ビームコミックス)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>市川 ラク(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B077S4KRVB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rFpXPEnML.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 9 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 9 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074SC2MCZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qZH-Z7j3L.jpg" class="mr-3 lazyload" alt="熱海の宇宙人 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>熱海の宇宙人 (ビームコミックス)</h5>
+                    <p>価格：379円、ポイント：4</p>
+                    <p>原百合子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07142SN3K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61mrtGh8NxL.jpg" class="mr-3 lazyload" alt="珈琲桟敷の人々 シリーズ小さな喫茶店 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>珈琲桟敷の人々 シリーズ小さな喫茶店 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06Y5Z8WYW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61YO5BrySPL.jpg" class="mr-3 lazyload" alt="あらいぐマンといっしょ　上巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あらいぐマンといっしょ　上巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>横山 旬(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06Y5V5HM2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xMW+LhosL.jpg" class="mr-3 lazyload" alt="どこか遠くの話をしよう　上 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どこか遠くの話をしよう　上 (ビームコミックス)</h5>
+                    <p>価格：377円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XS7J3J9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BjNh1ZhiL.jpg" class="mr-3 lazyload" alt="おれは　たーさん　2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おれは　たーさん　2 (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06X41MJJN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BSwufGoIL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 8 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 8 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06VYC751L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iJ4-yK9uL.jpg" class="mr-3 lazyload" alt="大人スキップ　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大人スキップ　1 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B06X1FY174?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51To0WB0HGL.jpg" class="mr-3 lazyload" alt="わずかいっちょまえ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>わずかいっちょまえ (ビームコミックス)</h5>
+                    <p>価格：414円、ポイント：4</p>
+                    <p>星里 もちる(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N3B07WN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61X4W9beunL.jpg" class="mr-3 lazyload" alt="出前姫　民話ボンボン (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出前姫　民話ボンボン (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>吉田 戦車(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NAKQB1H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61K0XmIETqL.jpg" class="mr-3 lazyload" alt="暗闇ダンス 弐 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>暗闇ダンス 弐 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>竹谷 州史(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MXNUWMD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qz8V7SUHL.jpg" class="mr-3 lazyload" alt="夏に積乱雲まで (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夏に積乱雲まで (ビームコミックス)</h5>
+                    <p>価格：447円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MRN0L8F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6159N-9CqjL.jpg" class="mr-3 lazyload" alt="武侠さるかに合戦　天の巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武侠さるかに合戦　天の巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>吉田 戦車(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MFCZJ1Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Zias1XXPL.jpg" class="mr-3 lazyload" alt="武侠さるかに合戦　地の巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武侠さるかに合戦　地の巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>吉田 戦車(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MPXHYK8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jN2y+qsxL.jpg" class="mr-3 lazyload" alt="スカートさん (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スカートさん (ビームコミックス)</h5>
+                    <p>価格：473円、ポイント：5</p>
+                    <p>吉田 戦車(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MCYR72F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rvTQWDmqL.jpg" class="mr-3 lazyload" alt="山田参助の桃色メモリー (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>山田参助の桃色メモリー (ビームコミックス)</h5>
+                    <p>価格：425円、ポイント：4</p>
+                    <p>山田 参助(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MAY1VQW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WlNJAFU5L.jpg" class="mr-3 lazyload" alt="象の怒り　若い山賊 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>象の怒り　若い山賊 (ビームコミックス)</h5>
+                    <p>価格：414円、ポイント：4</p>
+                    <p>吉田 戦車(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LYQKV3X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/616k9L9W+4L.jpg" class="mr-3 lazyload" alt="吉田戦車の漫かき道 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>吉田戦車の漫かき道 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>吉田 戦車(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M0OT2O8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gerb6iZ8L.jpg" class="mr-3 lazyload" alt="まんが家総進撃 4 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが家総進撃 4 (ビームコミックス)</h5>
+                    <p>価格：380円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M1H7K2B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51l63gikq2L.jpg" class="mr-3 lazyload" alt="ひなごう！　おおひなたごう Extra Works (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ひなごう！　おおひなたごう Extra Works (ビームコミックス)</h5>
+                    <p>価格：506円、ポイント：5</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IQN5RX2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515E8o2fp3L.jpg" class="mr-3 lazyload" alt="おれは　たーさん　1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おれは　たーさん　1 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IQN5RWI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61mSlb0zcYL.jpg" class="mr-3 lazyload" alt="珈琲色に夜は更けて シリーズ小さな喫茶店 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>珈琲色に夜は更けて シリーズ小さな喫茶店 (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HAWP9H4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jwOd5ZPfL.jpg" class="mr-3 lazyload" alt="逆流主婦ワイフ 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逆流主婦ワイフ 2 (ビームコミックス)</h5>
+                    <p>価格：425円、ポイント：4</p>
+                    <p>イシデ電(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01EIY3KVY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KCqNueGTL.jpg" class="mr-3 lazyload" alt="ハルはめぐりて (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハルはめぐりて (ビームコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>森泉 岳土(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01EIY3KPK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zq01L6QdL.jpg" class="mr-3 lazyload" alt="土筆柑の空 庭先塩梅 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>土筆柑の空 庭先塩梅 (ビームコミックス)</h5>
+                    <p>価格：447円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DBAXUGG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41eeBDiUwTL.jpg" class="mr-3 lazyload" alt="どんぐりくん 4 せんせいといっしょにかえろう (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どんぐりくん 4 せんせいといっしょにかえろう (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DBAXUH0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41qTv5eZOnL.jpg" class="mr-3 lazyload" alt="どんぐりくん 3 こわいのいやーたすけてえー (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どんぐりくん 3 こわいのいやーたすけてえー (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DBAXUHA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51obREnAeTL.jpg" class="mr-3 lazyload" alt="どんぐりくん 2 わかんないけどごめんね (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どんぐりくん 2 わかんないけどごめんね (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BXR14EO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vJwo485SL.jpg" class="mr-3 lazyload" alt="私を連れて逃げて、お願い。3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私を連れて逃げて、お願い。3 (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BXR1494?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41+hOi4qNNL.jpg" class="mr-3 lazyload" alt="どんぐりくん 1 こねこのがっこう いちねんせい (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どんぐりくん 1 こねこのがっこう いちねんせい (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BXR14EE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614sxpcjy7L.jpg" class="mr-3 lazyload" alt="暗闇ダンス 壱 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>暗闇ダンス 壱 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>竹谷 州史(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ASK4MLE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61WsCZXj07L.jpg" class="mr-3 lazyload" alt="まんが家総進撃 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが家総進撃 3 (ビームコミックス)</h5>
+                    <p>価格：352円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B016VNDMP4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KHd-+VulL.jpg" class="mr-3 lazyload" alt="パイナップルみたい▽ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パイナップルみたい▽ (ビームコミックス)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016JKRF0W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516MUxcuU+L.jpg" class="mr-3 lazyload" alt="ひまわりえのぐ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ひまわりえのぐ (ビームコミックス)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016JKRUO8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oOSDnogwL.jpg" class="mr-3 lazyload" alt="ちょっとコマーシャル (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ちょっとコマーシャル (ビームコミックス)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016JKRE94?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Szlf--hEL.jpg" class="mr-3 lazyload" alt="一杯の珈琲から シリーズ小さな喫茶店 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>一杯の珈琲から シリーズ小さな喫茶店 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B015QPKOFE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yDCWwB5NL.jpg" class="mr-3 lazyload" alt="ハジメルド物語 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハジメルド物語 (ビームコミックス)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B015DS7RSQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dtg0xAvxL.jpg" class="mr-3 lazyload" alt="夢みる7月猫 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢みる7月猫 (ビームコミックス)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B015DS7SJY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QewkU8jeL.jpg" class="mr-3 lazyload" alt="魔法使いさんおしずかに! 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法使いさんおしずかに! 1 (ビームコミックス)</h5>
+                    <p>価格：523円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B015DS7S3A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51H8dmR1cvL.jpg" class="mr-3 lazyload" alt="魔法使いさんおしずかに! 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法使いさんおしずかに! 2 (ビームコミックス)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B015DS7S80?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TTidED7QL.jpg" class="mr-3 lazyload" alt="白い街の夜たち 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>白い街の夜たち 3 (ビームコミックス)</h5>
+                    <p>価格：451円、ポイント：5</p>
+                    <p>市川 ラク(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ZZCGP3Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qb85h5MuL.jpg" class="mr-3 lazyload" alt="春山町サーバンツ 4巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春山町サーバンツ 4巻 (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ZZCGMYQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Of0YQ6IML.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 5 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 5 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0125T1M5U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ynqkwyMXL.jpg" class="mr-3 lazyload" alt="逆流主婦ワイフ 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逆流主婦ワイフ 1 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>イシデ電(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XVCJC9E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tAIhz+j6L.jpg" class="mr-3 lazyload" alt="木珊瑚の島 庭先塩梅 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>木珊瑚の島 庭先塩梅 (ビームコミックス)</h5>
+                    <p>価格：425円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XVCJ9TC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CWsmFhGsL.jpg" class="mr-3 lazyload" alt="よみきりものの… 魂のにぎわい (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… 魂のにぎわい (ビームコミックス)</h5>
+                    <p>価格：414円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN4CK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NzRk6tocL.jpg" class="mr-3 lazyload" alt="よみきりものの… 北国楽園 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… 北国楽園 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN4A2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5139rISNcbL.jpg" class="mr-3 lazyload" alt="よみきりものの… コオニライフ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… コオニライフ (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN44I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mY52mwJ6L.jpg" class="mr-3 lazyload" alt="よみきりものの… わらいの園々 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… わらいの園々 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN48O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5188ddm67rL.jpg" class="mr-3 lazyload" alt="よみきりものの… やわらかくて グ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… やわらかくて グ (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN3G2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ObwDl-PKL.jpg" class="mr-3 lazyload" alt="よみきりものの… たちこめるバラのかおり (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… たちこめるバラのかおり (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN3FI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QaD0Io-tL.jpg" class="mr-3 lazyload" alt="百億萬円 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>百億萬円 (ビームコミックス)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHXIQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516RQFq7LsL.jpg" class="mr-3 lazyload" alt="必殺山本るりこ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>必殺山本るりこ (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHWSW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Qs7ZH9RRL.jpg" class="mr-3 lazyload" alt="唐沢なをき短編集　YAPOOS (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>唐沢なをき短編集　YAPOOS (ビームコミックス)</h5>
+                    <p>価格：340円、ポイント：3</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHX18?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/4183ZbZc2gL.jpg" class="mr-3 lazyload" alt="唐沢なをき初期傑作集　金春 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>唐沢なをき初期傑作集　金春 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHWPK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61vV2YRqIkL.jpg" class="mr-3 lazyload" alt="八戒の大冒険 2002REMIX (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>八戒の大冒険 2002REMIX (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHWEG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BEAWAL-2L.jpg" class="mr-3 lazyload" alt="カスミ伝Ｓ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カスミ伝Ｓ (ビームコミックス)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHUZW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61s5FCtnu-L.jpg" class="mr-3 lazyload" alt="カスミ伝（全） (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カスミ伝（全） (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHULG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BEAWAL-2L.jpg" class="mr-3 lazyload" alt="カスミ伝Ｓ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カスミ伝Ｓ (ビームコミックス)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VLOHUZW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518sfw6SjtL.jpg" class="mr-3 lazyload" alt="鉄鋼無敵科學大魔號 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>鉄鋼無敵科學大魔號 (ビームコミックス)</h5>
+                    <p>価格：356円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GPAWC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615sPdUKhKL.jpg" class="mr-3 lazyload" alt="夕刊赤富士　下乃巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夕刊赤富士　下乃巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP9KK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614LwyTnpGL.jpg" class="mr-3 lazyload" alt="夕刊赤富士　上乃巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夕刊赤富士　上乃巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP8ME?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516HOuz3DuL.jpg" class="mr-3 lazyload" alt="唐沢なをき珠玉作品集　ハラペーニョ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>唐沢なをき珠玉作品集　ハラペーニョ (ビームコミックス)</h5>
+                    <p>価格：315円、ポイント：3</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP8C4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/417rqpzOUSL.jpg" class="mr-3 lazyload" alt="パソ犬モニ太 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パソ犬モニ太 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP7P2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61PphXiyTaL.jpg" class="mr-3 lazyload" alt="ヌルゲリラ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヌルゲリラ (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP7JI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519KWvvJEIL.jpg" class="mr-3 lazyload" alt="さちことねこさま 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さちことねこさま 3 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP5WW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vmDEpMBZL.jpg" class="mr-3 lazyload" alt="さちことねこさま 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さちことねこさま 2 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP5Q8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IV-Rlv9wL.jpg" class="mr-3 lazyload" alt="さちことねこさま 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さちことねこさま 1 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP5HC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61mC3h8BWgL.jpg" class="mr-3 lazyload" alt="BURAIKEN (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BURAIKEN (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V9GP49Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aZCYRn3iL.jpg" class="mr-3 lazyload" alt="わがままちえちゃん (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>わがままちえちゃん (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00UWRCPPY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yX1skyRVL.jpg" class="mr-3 lazyload" alt="金魚銀魚 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>金魚銀魚 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVSM6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51m6kkBay3L.jpg" class="mr-3 lazyload" alt="観光王国 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>観光王国 (ビームコミックス)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVSKI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NCbWboOLL.jpg" class="mr-3 lazyload" alt="振袖いちま 3巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>振袖いちま 3巻 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVRCW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513Q8ce6owL.jpg" class="mr-3 lazyload" alt="振袖いちま 2巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>振袖いちま 2巻 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVQZK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DqzqQ2AtL.jpg" class="mr-3 lazyload" alt="振袖いちま 1巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>振袖いちま 1巻 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVQIW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VCnwlr7IL.jpg" class="mr-3 lazyload" alt="子午線を歩く人 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子午線を歩く人 (ビームコミックス)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVQMI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YH7NWXaWL.jpg" class="mr-3 lazyload" alt="ゆずのどんぐり童話 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆずのどんぐり童話 (ビームコミックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TWWVQJG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TZdEBtpaL.jpg" class="mr-3 lazyload" alt="かりん歩　3 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>かりん歩　3 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>柳原 望(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B079PNPJQ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eszW8LpAL.jpg" class="mr-3 lazyload" alt="口笛小曲集 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>口笛小曲集 (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SXTPDWK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t5MyJor8L.jpg" class="mr-3 lazyload" alt="私を連れて逃げて、お願い。1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私を連れて逃げて、お願い。1 (ビームコミックス)</h5>
+                    <p>価格：349円、ポイント：3</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SGP0BRS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51svYhkjtqL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 4 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 4 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SGP0BNC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oz6hio7oL.jpg" class="mr-3 lazyload" alt="よみきり▽もの 9 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきり▽もの 9 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SAO22CC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HfDZ-TncL.jpg" class="mr-3 lazyload" alt="よみきり▽もの 8 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきり▽もの 8 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SAO22C2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CWsmFhGsL.jpg" class="mr-3 lazyload" alt="よみきりものの… 魂のにぎわい (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… 魂のにぎわい (ビームコミックス)</h5>
+                    <p>価格：414円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN4CK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ObwDl-PKL.jpg" class="mr-3 lazyload" alt="よみきりものの… たちこめるバラのかおり (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… たちこめるバラのかおり (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN3FI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NzRk6tocL.jpg" class="mr-3 lazyload" alt="よみきりものの… 北国楽園 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきりものの… 北国楽園 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XIZN4A2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Xm5MNEdgL.jpg" class="mr-3 lazyload" alt="よみきり▽もの 10 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よみきり▽もの 10 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SAO21HS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51c7g0fy-YL.jpg" class="mr-3 lazyload" alt="シンリャクモノデ 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シンリャクモノデ 3 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00R5GLJVG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41VagSMjMoL.jpg" class="mr-3 lazyload" alt="いるのにいない日曜日 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いるのにいない日曜日 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>三好 銀(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00Q4K0CDK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FbKXVip4L.jpg" class="mr-3 lazyload" alt="グッデイ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>グッデイ (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PVWPIVI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61q0hcO-EEL.jpg" class="mr-3 lazyload" alt="まんが家総進撃 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが家総進撃 2 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PVWPJMQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hN1UqV3IL.jpg" class="mr-3 lazyload" alt="フラン県こわい城　のり巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フラン県こわい城　のり巻 (ビームコミックス)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PXRG2B6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51T1JEzDKHL.jpg" class="mr-3 lazyload" alt="漫画家超残酷物語 青春増補版 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>漫画家超残酷物語 青春増補版 (ビームコミックス)</h5>
+                    <p>価格：380円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PVWPJNU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cJ11BmVlL.jpg" class="mr-3 lazyload" alt="フラン県こわい城　まめ巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フラン県こわい城　まめ巻 (ビームコミックス)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PXRG2IY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511IDgGhfML.jpg" class="mr-3 lazyload" alt="月は何でも知っているかも (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月は何でも知っているかも (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PXRG2DO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UXlAfyCYL.jpg" class="mr-3 lazyload" alt="フラン県こわい城　はら巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フラン県こわい城　はら巻 (ビームコミックス)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PXRG1GM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51csYVCkCGL.jpg" class="mr-3 lazyload" alt="白い街の夜たち 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>白い街の夜たち 2 (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>市川 ラク(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NPOEMUW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61XTsKmaYGL.jpg" class="mr-3 lazyload" alt="あかねこの悪魔 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかねこの悪魔 1 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NIG0OL8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dahc+a3wL.jpg" class="mr-3 lazyload" alt="白い狸　横山旬作品集 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>白い狸　横山旬作品集 (ビームコミックス)</h5>
+                    <p>価格：352円、ポイント：4</p>
+                    <p>横山 旬(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MXRPGIY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QRhFwI97L.jpg" class="mr-3 lazyload" alt="春山町サーバンツ 3巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春山町サーバンツ 3巻 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M3OEJ5S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oM+FIDuuL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 3 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M3OEJCG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rNACB-LeL.jpg" class="mr-3 lazyload" alt="ドリル園児　完全版 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドリル園児　完全版 (ビームコミックス)</h5>
+                    <p>価格：464円、ポイント：5</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M3OEJ3K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+9GGB3T4L.jpg" class="mr-3 lazyload" alt="はなうた散歩道 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はなうた散歩道 (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M3OEJA8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jODvtW25L.jpg" class="mr-3 lazyload" alt="銀河宅配便マグロ 3巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河宅配便マグロ 3巻 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LWWOVHI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FwkTlSiSL.jpg" class="mr-3 lazyload" alt="銀河宅配便マグロ 2巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河宅配便マグロ 2巻 (ビームコミックス)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LWWOUUQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uNdwJefPL.jpg" class="mr-3 lazyload" alt="銀河宅配便マグロ 1巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河宅配便マグロ 1巻 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LWWOUQ0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511ssuIddQL.jpg" class="mr-3 lazyload" alt="空飛べ！ プッチ　完全版 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>空飛べ！ プッチ　完全版 (ビームコミックス)</h5>
+                    <p>価格：457円、ポイント：5</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LWWORTK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UN81zTQjL.jpg" class="mr-3 lazyload" alt="白い街の夜たち 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>白い街の夜たち 1 (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>市川 ラク(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00L4XS8VU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61KIBhmEL0L.jpg" class="mr-3 lazyload" alt="シンリャクモノデ 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シンリャクモノデ 2 (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00L4XS95A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61pfwstOHDL.jpg" class="mr-3 lazyload" alt="シンリャクモノデ 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シンリャクモノデ 1 (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>竹本 泉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KYFFD58?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512jxFabMGL.jpg" class="mr-3 lazyload" alt="好きだけじゃ続かない (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>好きだけじゃ続かない (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KIG2W6G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IEePOxI2L.jpg" class="mr-3 lazyload" alt="夜の太鼓 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜の太鼓 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JX8DVHY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bTHJG5MtL.jpg" class="mr-3 lazyload" alt="ナルミさん愛してる　その他の短篇 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ナルミさん愛してる　その他の短篇 (ビームコミックス)</h5>
+                    <p>価格：355円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5E2S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516UOzXgvEL.jpg" class="mr-3 lazyload" alt="シアワセ行進曲 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シアワセ行進曲 (ビームコミックス)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5DFQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517RprbzUNL.jpg" class="mr-3 lazyload" alt="コーヒーもう一杯V (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コーヒーもう一杯V (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5DFG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51p0fWTKc6L.jpg" class="mr-3 lazyload" alt="コーヒーもう一杯IV (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コーヒーもう一杯IV (ビームコミックス)</h5>
+                    <p>価格：355円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5DR4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XQx8mKlQL.jpg" class="mr-3 lazyload" alt="コーヒーもう一杯III (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コーヒーもう一杯III (ビームコミックス)</h5>
+                    <p>価格：355円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5DE2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wKcKx4lXL.jpg" class="mr-3 lazyload" alt="コーヒーもう一杯II (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コーヒーもう一杯II (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5D5Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RyzeVsN5L.jpg" class="mr-3 lazyload" alt="コーヒーもう一杯I (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コーヒーもう一杯I (ビームコミックス)</h5>
+                    <p>価格：357円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JRU5D88?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513Y3T5GAdL.jpg" class="mr-3 lazyload" alt="あかい他人（全） (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あかい他人（全） (ビームコミックス)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>山川 直人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JMAILPK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nAsFxD8uL.jpg" class="mr-3 lazyload" alt="まんが家総進撃 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが家総進撃 1 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,メディアミックス</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JMAILCI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51y57EdBrnL.jpg" class="mr-3 lazyload" alt="やさしいからだ 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>やさしいからだ 3 (ビームコミックス)</h5>
+                    <p>価格：349円、ポイント：3</p>
+                    <p>安永 知澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4KDDR4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eqSf2PZjL.jpg" class="mr-3 lazyload" alt="やさしいからだ 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>やさしいからだ 2 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>安永 知澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4KDDSS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511Bgph9sAL.jpg" class="mr-3 lazyload" alt="やさしいからだ 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>やさしいからだ 1 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>安永 知澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4KDDQU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BGiZYHbaL.jpg" class="mr-3 lazyload" alt="デボネア・ドライブ3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デボネア・ドライブ3 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JB3FBCO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I5ylbIJVL.jpg" class="mr-3 lazyload" alt="デボネア・ドライブ2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デボネア・ドライブ2 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JB3FBCE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oEo+RQEPL.jpg" class="mr-3 lazyload" alt="デボネア・ドライブ1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デボネア・ドライブ1 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JB3FB7O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514X8MYjaHL.jpg" class="mr-3 lazyload" alt="まっしろけ 3巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしろけ 3巻 (ビームコミックス)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>竹谷 州史(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZXBC9M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Gg+oT8gyL.jpg" class="mr-3 lazyload" alt="まっしろけ 2巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしろけ 2巻 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>竹谷 州史(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZXBCAG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jW-RlKsCL.jpg" class="mr-3 lazyload" alt="まっしろけ 1巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしろけ 1巻 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>竹谷 州史(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZXBC56?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uZNeI1+0L.jpg" class="mr-3 lazyload" alt="まんが極道 7 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 7 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55XY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Ubv1Gn05L.jpg" class="mr-3 lazyload" alt="まんが極道 6 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 6 (ビームコミックス)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55U2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DR+kNt2TL.jpg" class="mr-3 lazyload" alt="まんが極道 5 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 5 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55PC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gU3CqFy5L.jpg" class="mr-3 lazyload" alt="まんが極道 4 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 4 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55R0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61rZrA-tLEL.jpg" class="mr-3 lazyload" alt="まんが極道 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 3 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55K2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61KSjjwMjaL.jpg" class="mr-3 lazyload" alt="まんが極道 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 2 (ビームコミックス)</h5>
+                    <p>価格：363円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55HK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61tt9BdWJzL.jpg" class="mr-3 lazyload" alt="まんが極道 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが極道 1 (ビームコミックス)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>唐沢 なをき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF55GQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51n4JBij7ML.jpg" class="mr-3 lazyload" alt="金魚草の池 庭先塩梅 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>金魚草の池 庭先塩梅 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF5CHS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qJc7fugEL.jpg" class="mr-3 lazyload" alt="火輪花の丘 庭先塩梅 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>火輪花の丘 庭先塩梅 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF5CIM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rx7vk9+fL.jpg" class="mr-3 lazyload" alt="水蜻蛉の庭 庭先塩梅 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>水蜻蛉の庭 庭先塩梅 (ビームコミックス)</h5>
+                    <p>価格：414円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57QO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WSEtckU9L.jpg" class="mr-3 lazyload" alt="地図苔の森 庭先塩梅 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地図苔の森 庭先塩梅 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF575A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vG7lIAA5L.jpg" class="mr-3 lazyload" alt="庭先案内 6巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庭先案内 6巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57JQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Wqw2bYU5L.jpg" class="mr-3 lazyload" alt="庭先案内 5巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庭先案内 5巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57FA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51P8Zh9ia+L.jpg" class="mr-3 lazyload" alt="庭先案内 4巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庭先案内 4巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57CS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vLz6+2oGL.jpg" class="mr-3 lazyload" alt="庭先案内 3巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庭先案内 3巻 (ビームコミックス)</h5>
+                    <p>価格：425円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57DC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mLA1bhHUL.jpg" class="mr-3 lazyload" alt="庭先案内 2巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庭先案内 2巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF579Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RKYj7-djL.jpg" class="mr-3 lazyload" alt="庭先案内 1巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庭先案内 1巻 (ビームコミックス)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF576O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41L30xWrelL.jpg" class="mr-3 lazyload" alt="長い長いさんぽ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>長い長いさんぽ (ビームコミックス)</h5>
+                    <p>価格：393円、ポイント：4</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF5CJQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cj4d-TGqL.jpg" class="mr-3 lazyload" alt="春山町サーバンツ 2巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春山町サーバンツ 2巻 (ビームコミックス)</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57P0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QpatKqEwL.jpg" class="mr-3 lazyload" alt="春山町サーバンツ 1巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春山町サーバンツ 1巻 (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>朝倉 世界一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF57O6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41u-ZvnQwSL.jpg" class="mr-3 lazyload" alt="わたり鳥の話 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>わたり鳥の話 (ビームコミックス)</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>市川 ラク(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF560Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ao6IxwiwL.jpg" class="mr-3 lazyload" alt="目玉焼きの黄身 いつつぶす? 1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目玉焼きの黄身 いつつぶす? 1 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>おおひなた ごう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF5CJ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xYKmHXskL.jpg" class="mr-3 lazyload" alt="もう体脂肪率なんて知らない (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もう体脂肪率なんて知らない (ビームコミックス)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>三好 銀(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IKF50YS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BMjAB8qlL.jpg" class="mr-3 lazyload" alt="ファイトじじいクラブ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ファイトじじいクラブ (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>山本 健太郎(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IFWA99C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uH2nzFpOL.jpg" class="mr-3 lazyload" alt="放浪息子15 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子15 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00F03TLMA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/415uxASR0JL.jpg" class="mr-3 lazyload" alt="ママゴト　１ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ママゴト　１ (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E5V5K0U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/417IXhovewL.jpg" class="mr-3 lazyload" alt="ママゴト 3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ママゴト 3 (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E5V5JYM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ugMjTn62L.jpg" class="mr-3 lazyload" alt="ママゴト 2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ママゴト 2 (ビームコミックス)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>松田 洋子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E5V5JX8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41uQqKKN0wL.jpg" class="mr-3 lazyload" alt="ぼくは、おんなのこ (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぼくは、おんなのこ (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727ZQO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nhUS--12L.jpg" class="mr-3 lazyload" alt="おさんぽ大王 7巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 7巻 (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727YJM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61PKX4IQXZL.jpg" class="mr-3 lazyload" alt="おさんぽ大王 6巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 6巻 (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727YMY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518JLFMcxOL.jpg" class="mr-3 lazyload" alt="おさんぽ大王 5巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 5巻 (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727YT2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fg6HC-xZL.jpg" class="mr-3 lazyload" alt="おさんぽ大王 4巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 4巻 (ビームコミックス)</h5>
+                    <p>価格：468円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727YX8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61tniBntADL.jpg" class="mr-3 lazyload" alt="おさんぽ大王 3巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 3巻 (ビームコミックス)</h5>
+                    <p>価格：467円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727Z0A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bJ5vk1zGL.jpg" class="mr-3 lazyload" alt="おさんぽ大王 2巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 2巻 (ビームコミックス)</h5>
+                    <p>価格：467円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727Z78?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+NfsyCu-L.jpg" class="mr-3 lazyload" alt="おさんぽ大王 1巻 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おさんぽ大王 1巻 (ビームコミックス)</h5>
+                    <p>価格：466円、ポイント：5</p>
+                    <p>須藤 真澄(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727ZD2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TQFHgNecL.jpg" class="mr-3 lazyload" alt="さよならもいわずに (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さよならもいわずに (ビームコミックス)</h5>
+                    <p>価格：425円、ポイント：4</p>
+                    <p>上野 顕太郎(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727ZJ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IuBSOUOwL.jpg" class="mr-3 lazyload" alt="放浪息子13 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子13 (ビームコミックス)</h5>
+                    <p>価格：340円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00972863K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5138pDKNTFL.jpg" class="mr-3 lazyload" alt="放浪息子12 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子12 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00972867G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51s40DwsA6L.jpg" class="mr-3 lazyload" alt="放浪息子11 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子11 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727MIA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ThyQdQNpL.jpg" class="mr-3 lazyload" alt="放浪息子10 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子10 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727MN0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ySb+B2dWL.jpg" class="mr-3 lazyload" alt="放浪息子9 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子9 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727MSK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51H+v2qh4yL.jpg" class="mr-3 lazyload" alt="放浪息子8 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子8 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727MXK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WvuMlYloL.jpg" class="mr-3 lazyload" alt="放浪息子7 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子7 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727N4I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5148S9AmiVL.jpg" class="mr-3 lazyload" alt="放浪息子6 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子6 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727N9S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ICxE5r6XL.jpg" class="mr-3 lazyload" alt="放浪息子5 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子5 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727NDY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pdSewhKNL.jpg" class="mr-3 lazyload" alt="放浪息子4 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子4 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727NIE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512I5IMS7zL.jpg" class="mr-3 lazyload" alt="放浪息子3 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子3 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727NO8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51byMomXhbL.jpg" class="mr-3 lazyload" alt="放浪息子2 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子2 (ビームコミックス)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727NXE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qgAzDwYZL.jpg" class="mr-3 lazyload" alt="放浪息子1 (ビームコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放浪息子1 (ビームコミックス)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>志村 貴子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009727O2E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
