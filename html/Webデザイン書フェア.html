@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="セールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「セールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「セールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LPsoQiT4L.jpg" class="mr-3 lazyload" alt="沈黙のWebライティング —Webマーケッター ボーンの激闘—"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>沈黙のWebライティング —Webマーケッター ボーンの激闘—</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>松尾 茂起(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M3U3OR4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+mqWgqftL.jpg" class="mr-3 lazyload" alt="Gitが、おもしろいほどわかる基本の使い方33　改訂新版"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Gitが、おもしろいほどわかる基本の使い方33　改訂新版</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>大串 肇(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T5995HK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ngORkvk0L.jpg" class="mr-3 lazyload" alt="Webディレクションの新・標準ルール　改訂第2版　現場の効率をアップする最新ワークフローとマネジメント"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Webディレクションの新・標準ルール　改訂第2版　現場の効率をアップする最新ワークフローとマネジメント</h5>
+                    <p>価格：1265円、ポイント：13</p>
+                    <p>栄前田勝太郎(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B085VH24VW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+YjRivTyL.jpg" class="mr-3 lazyload" alt="初心者からちゃんとしたプロになる　HTML+CSS標準入門"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>初心者からちゃんとしたプロになる　HTML+CSS標準入門</h5>
+                    <p>価格：1375円、ポイント：14</p>
+                    <p>おの れいこ(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：Web構築・管理,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B08548F5NF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513gW7DZVAL.jpg" class="mr-3 lazyload" alt="KPI・目標必達の動画マーケティング　成功の最新メソッド"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KPI・目標必達の動画マーケティング　成功の最新メソッド</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>村岡 雄史(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Z8VXNBQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lzLgK53WL.jpg" class="mr-3 lazyload" alt="プリンセス・マーケティング　「女性」の購買意欲をかき立てる7つの大原則"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プリンセス・マーケティング　「女性」の購買意欲をかき立てる7つの大原則</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>谷本 理恵子(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QW4QXKM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z2U+pTxnL.jpg" class="mr-3 lazyload" alt="UIデザイン　みんなで考え、カイゼンする。"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>UIデザイン　みんなで考え、カイゼンする。</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>栄前田 勝太郎(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PQF8TBW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/414eiye7HrL.jpg" class="mr-3 lazyload" alt="Webデザイン・スタンダード　伝わるビジュアルづくりとクリエイティブの最新技法"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Webデザイン・スタンダード　伝わるビジュアルづくりとクリエイティブの最新技法</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>境 祐司(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LFXSP5K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512on8MoAuL.jpg" class="mr-3 lazyload" alt="初心者からちゃんとしたプロになる　Webデザイン基礎入門"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>初心者からちゃんとしたプロになる　Webデザイン基礎入門</h5>
+                    <p>価格：1375円、ポイント：14</p>
+                    <p>栗谷 幸助(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XLRH8QX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41wE70r1PCL.jpg" class="mr-3 lazyload" alt="Webサイト・リニューアル　「見た目だけ変えた」にしない成功の手引き"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Webサイト・リニューアル　「見た目だけ変えた」にしない成功の手引き</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>滝川洋平(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B0876QH5RP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51R9SdpUGeL.jpg" class="mr-3 lazyload" alt="［買わせる］の心理学　消費者の心を動かすデザインの技法61"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>［買わせる］の心理学　消費者の心を動かすデザインの技法61</h5>
+                    <p>価格：1265円、ポイント：13</p>
+                    <p>中村 和正(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FQF1WYL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518mRB+WJcL.jpg" class="mr-3 lazyload" alt="WordPressユーザーのためのPHP入門　はじめから、ていねいに。［第3版］"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>WordPressユーザーのためのPHP入門　はじめから、ていねいに。［第3版］</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>水野 史土(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：Webプログラミング,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WDPHT4H?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gX-ZghkpL.jpg" class="mr-3 lazyload" alt="オウンドメディアのやさしい教科書。　ブランド力・業績を向上させるための戦略・制作・改善メソッド"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>オウンドメディアのやさしい教科書。　ブランド力・業績を向上させるための戦略・制作・改善メソッド</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>山口 耕平(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BF8PKFH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Tjox3mvVL.jpg" class="mr-3 lazyload" alt="ネットで「女性」に売る　数字を上げる文章とデザインの基本原則"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ネットで「女性」に売る　数字を上げる文章とデザインの基本原則</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>谷本 理恵子(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B075J7Y1FL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bhW-LQ+tL.jpg" class="mr-3 lazyload" alt="できるところからスタートする コンバージョンアップの手法99"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>できるところからスタートする コンバージョンアップの手法99</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>栄前田 勝太郎‎(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D52H53M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qgljFlpPL.jpg" class="mr-3 lazyload" alt="SNSマーケティングのやさしい教科書。改訂新版　Facebook・Twitter・Instagram─つながりでビジネスを加速する最新技術"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>SNSマーケティングのやさしい教科書。改訂新版　Facebook・Twitter・Instagram─つながりでビジネスを加速する最新技術</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>株式会社グローバルリンクジャパン／清水将之(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：SNS入門書,SNS・ブログ,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V1BYHK3?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513ISCvj0rL.jpg" class="mr-3 lazyload" alt="初心者からちゃんとしたプロになる　JavaScript基礎入門"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>初心者からちゃんとしたプロになる　JavaScript基礎入門</h5>
+                    <p>価格：1430円、ポイント：14</p>
+                    <p>西畑 一馬(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,プログラミング,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B0863LYNQQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zHVWrjU9L.jpg" class="mr-3 lazyload" alt="Webディレクションの新・標準ルール システム開発編 ノンエンジニアでも失敗しないワークフローと開発プロセス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Webディレクションの新・標準ルール システム開発編 ノンエンジニアでも失敗しないワークフローと開発プロセス</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>岩瀬 透(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：Web構築・管理,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B077FNQ494?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vhQbFMUsL.jpg" class="mr-3 lazyload" alt="きれいな色の本　デザインと言葉の配色ブック"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きれいな色の本　デザインと言葉の配色ブック</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>ingectar-e(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：グラフィックデザイン,デザイン</p>
+                    <a href="https://www.amazon.co.jp/dp/B0792MKKQT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Adf-7PTmL.jpg" class="mr-3 lazyload" alt="かわいい色の本　デザインと言葉の配色ブック"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>かわいい色の本　デザインと言葉の配色ブック</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>ingectar-e(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：グラフィックデザイン,デザイン</p>
+                    <a href="https://www.amazon.co.jp/dp/B072K1V6XT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rjPsB+7ML.jpg" class="mr-3 lazyload" alt="ランディングページ　成果を上げる100のメソッド"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ランディングページ　成果を上げる100のメソッド</h5>
+                    <p>価格：1265円、ポイント：13</p>
+                    <p>株式会社ポストスケイプ(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07917G5N2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UJlwAbYDL.jpg" class="mr-3 lazyload" alt="未来IT図解　これからのデータサイエンスビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからのデータサイエンスビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>松本 健太郎(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WMS3T8K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51w0GEya18L.jpg" class="mr-3 lazyload" alt="和のきれいな配色　キーカラーで選べる配色見本アイデア帖"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>和のきれいな配色　キーカラーで選べる配色見本アイデア帖</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>ナイスク(編集)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：グラフィックデザイン,デザイン</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M632VZR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511g3dD847L.jpg" class="mr-3 lazyload" alt="未来IT図解　これからの5Gビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからの5Gビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>石川 温(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B083TPG6L5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512gDIXr-LL.jpg" class="mr-3 lazyload" alt="WordPressのやさしい教科書。　手を動かしながら学ぶ実用サイト作りと正しい運用　5.x対応版"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>WordPressのやさしい教科書。　手を動かしながら学ぶ実用サイト作りと正しい運用　5.x対応版</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>竹下 和人(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RX3YQNX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515pTjIlZoL.jpg" class="mr-3 lazyload" alt="ネットで「女性」に売る2　「欲しい」を「即買い！」につなげるホームページの基本原則"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ネットで「女性」に売る2　「欲しい」を「即買い！」につなげるホームページの基本原則</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>こぼりあきこ(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H8W6FFP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gYWUKHogL.jpg" class="mr-3 lazyload" alt="文章で生きる夢をマジメに叶えてみよう。　Webライター実践入門"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>文章で生きる夢をマジメに叶えてみよう。　Webライター実践入門</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>岸 智志(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B08239CX7N?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-U7t23SsL.jpg" class="mr-3 lazyload" alt="1億人のインターネット広告　ヒットを生み出す最強メソッド"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>1億人のインターネット広告　ヒットを生み出す最強メソッド</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>清野 奨(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B0855STL4R?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cahaDn6xL.jpg" class="mr-3 lazyload" alt="できるところからスタートする　コンテンツマーケティングの手法88"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>できるところからスタートする　コンテンツマーケティングの手法88</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>敷田 憲司(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KF76WBR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DVUqLHYxL.jpg" class="mr-3 lazyload" alt="Webデザイン、これからどうなるの？　キーワードから探るデザイン動向の現在と未来"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Webデザイン、これからどうなるの？　キーワードから探るデザイン動向の現在と未来</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>森本 友理(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B078MC3KG8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517apdE2WDL.jpg" class="mr-3 lazyload" alt="1億人のSNSマーケティング　バズを生み出す最強メソッド"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>1億人のSNSマーケティング　バズを生み出す最強メソッド</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>敷田 憲司(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B08561L3CD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Mt9GHBWEL.jpg" class="mr-3 lazyload" alt="未来IT図解　これからのディープラーニングビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからのディープラーニングビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>南野 充則(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T635GLH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512Epi4mR0L.jpg" class="mr-3 lazyload" alt="Webサイト、これからどうなるの？　キーワードから探るWeb制作の未来像"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Webサイト、これからどうなるの？　キーワードから探るWeb制作の未来像</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>こもりまさあき(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：Web構築・管理,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B075N4DW6Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nUbsfMdtL.jpg" class="mr-3 lazyload" alt="未来IT図解　これからのブロックチェーンビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからのブロックチェーンビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>森川 夢佑斗(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JN4ZSL9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61tYumobn+L.jpg" class="mr-3 lazyload" alt="販促・PR・プロモーション　ネット戦略のやさしい教科書。　小さな予算で最大限に知名度と成果を上げる6つの宣伝術"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>販促・PR・プロモーション　ネット戦略のやさしい教科書。　小さな予算で最大限に知名度と成果を上げる6つの宣伝術</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>敷田 憲司(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q448CTJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61rIAMcnvSL.jpg" class="mr-3 lazyload" alt="ネット集客のやさしい教科書。 小さな会社がゼロから最短で成果をあげる実践的Webマーケティング"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ネット集客のやさしい教科書。 小さな会社がゼロから最短で成果をあげる実践的Webマーケティング</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>高田 晃(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B075N2B4J2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41eG3HJF4pL.jpg" class="mr-3 lazyload" alt="HTML5＋CSS3の新しい教科書　改訂新版　基礎から覚える、深く理解できる。"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>HTML5＋CSS3の新しい教科書　改訂新版　基礎から覚える、深く理解できる。</h5>
+                    <p>価格：1375円、ポイント：14</p>
+                    <p>赤間 公太郎(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：Web構築・管理,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GPH7R3Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Nxb2Vi2VL.jpg" class="mr-3 lazyload" alt="KPI・目標必達のコンテンツマーケティング　成功の最新メソッド"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KPI・目標必達のコンテンツマーケティング　成功の最新メソッド</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>敷田 憲司(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YB3J7PT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qX+J+R3mL.jpg" class="mr-3 lazyload" alt="Q＆Aで考えるセキュリティ入門　「木曜日のフルット」と学ぼう！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Q＆Aで考えるセキュリティ入門　「木曜日のフルット」と学ぼう！</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>宮田 健(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NCSV956?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QmlnEIDoL.jpg" class="mr-3 lazyload" alt="最新SEO完全対策・成功の指南書　結果を出し続けるこれからの手法"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最新SEO完全対策・成功の指南書　結果を出し続けるこれからの手法</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>山口 耕平(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KK2ZZ9R?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41936iyBgXL.jpg" class="mr-3 lazyload" alt="HTML+CSSワークショップ 手を動かして学ぶWebデザイン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>HTML+CSSワークショップ 手を動かして学ぶWebデザイン</h5>
+                    <p>価格：1375円、ポイント：14</p>
+                    <p>藤川麻夕子（#fc0）(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B071NF56PF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uEYBf87BL.jpg" class="mr-3 lazyload" alt="未来IT図解　これからのキャッシュレス決済ビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからのキャッシュレス決済ビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>山口耕平(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：ジャンル別,Kindle本</p>
+                    <a href="https://www.amazon.co.jp/dp/B082VYMT5Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gIvQ3KZkL.jpg" class="mr-3 lazyload" alt="未来IT図解　これからのAIビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからのAIビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>谷田部 卓(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：人工知能,コンピュータサイエンス,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JNDRQQ3?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wVwB1Hz8L.jpg" class="mr-3 lazyload" alt="攻めるWeb担当者の教科書1　ホームページ改善の解決メソッド37"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>攻めるWeb担当者の教科書1　ホームページ改善の解決メソッド37</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>プロスタビジネス(監修)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P4F33CZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b+e75GTDL.jpg" class="mr-3 lazyload" alt="未来IT図解　これからのIoTビジネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来IT図解　これからのIoTビジネス</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>IoT産業技術研究会(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JNQT6CM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yINaKTM8L.jpg" class="mr-3 lazyload" alt="SNSでシェアされるコンテンツの作り方"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>SNSでシェアされるコンテンツの作り方</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>株式会社グローバルリンクジャパン／清水将之(著)</p>
+                    <p>出版社：エムディエヌコーポレーション（MdN）</p>
+<p>カテゴリー：SNS・ブログ,コンピュータ・IT,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BF9TWB2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
