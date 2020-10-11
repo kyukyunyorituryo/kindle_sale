@@ -1,0 +1,1834 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hYkVp5YxL.jpg" class="mr-3 lazyload" alt="世界最強の後衛　～迷宮国の新人探索者～　６ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界最強の後衛　～迷宮国の新人探索者～　６ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>とーわ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B083HRXHKZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kkcPLJA0L.jpg" class="mr-3 lazyload" alt="レジェンド　14 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド　14 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>神無月 紅(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0829QD79Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="なし" class="mr-3 lazyload" alt="目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい 2 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい 2 (MFC)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>松井 俊壱(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08KXC3MKT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QsWHgcWoL.jpg" class="mr-3 lazyload" alt="ツンデレ悪役令嬢リーゼロッテと実況の遠藤くんと解説の小林さん　[Disc ２] (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ツンデレ悪役令嬢リーゼロッテと実況の遠藤くんと解説の小林さん　[Disc ２] (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>恵ノ島すず(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W5L4JDZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51utydP9CeL.jpg" class="mr-3 lazyload" alt="ツンデレ悪役令嬢リーゼロッテと実況の遠藤くんと解説の小林さん ２ (B&#39;s-LOG COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ツンデレ悪役令嬢リーゼロッテと実況の遠藤くんと解説の小林さん ２ (B&#39;s-LOG COMICS)</h5>
+                    <p>価格：663円、ポイント：7</p>
+                    <p>逆木 ルミヲ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少女マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CZGZJ19?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SPoREbd-L.jpg" class="mr-3 lazyload" alt="悪役令嬢になんかなりません。私は『普通』の公爵令嬢です！ ２ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>悪役令嬢になんかなりません。私は『普通』の公爵令嬢です！ ２ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>明。(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B083HRN1YM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G1q1OR1TL.jpg" class="mr-3 lazyload" alt="鍛冶屋ではじめる異世界スローライフ ３ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>鍛冶屋ではじめる異世界スローライフ ３ (カドカワBOOKS)</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>たままる(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B08JTYVBM2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VnP2cZMwL.jpg" class="mr-3 lazyload" alt="数字で救う! 弱小国家 5　勝利する者を描け。ただし敵は自軍より精鋭と大軍であるものとする。 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>数字で救う! 弱小国家 5　勝利する者を描け。ただし敵は自軍より精鋭と大軍であるものとする。 (電撃文庫)</h5>
+                    <p>価格：387円、ポイント：4</p>
+                    <p>長田 信織(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B085FPX2JR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A3CoSduLL.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする ７ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする ７ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>流優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B083HRS9BJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PzQ7J9MLL.jpg" class="mr-3 lazyload" alt="役立たずスキルに人生を注ぎ込み25年、今さら最強の冒険譚　３　白硬の章 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>役立たずスキルに人生を注ぎ込み25年、今さら最強の冒険譚　３　白硬の章 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>しゅうきち(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0829PVNHZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QH2Ukf52L.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする ６ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする ６ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>流優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X31JP33?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="なし" class="mr-3 lazyload" alt="目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい 2 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい 2 (MFC)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>松井 俊壱(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08KXC3MKT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514Q08Z80JL.jpg" class="mr-3 lazyload" alt="レジェンド13 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド13 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>神無月 紅(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R77WNX4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ng1TSQTuL.jpg" class="mr-3 lazyload" alt="役立たずスキルに人生を注ぎ込み25年、今さら最強の冒険譚　緑樫の章 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>役立たずスキルに人生を注ぎ込み25年、今さら最強の冒険譚　緑樫の章 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>しゅうきち(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NDQJDWK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Icl6U0d9L.jpg" class="mr-3 lazyload" alt="役立たずスキルに人生を注ぎ込み25年、今さら最強の冒険譚 ２　青銅と赤鉄の章 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>役立たずスキルに人生を注ぎ込み25年、今さら最強の冒険譚 ２　青銅と赤鉄の章 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>しゅうきち(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TSGTHQD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WSVokHmUL.jpg" class="mr-3 lazyload" alt="レジェンド(9) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(9) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08GQJNMH2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61MviFiIpeL.jpg" class="mr-3 lazyload" alt="横浜駅SF　全国版 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>横浜駅SF　全国版 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>柞刈湯葉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B074M2HQLN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GMrGTFB8L.jpg" class="mr-3 lazyload" alt="レジェンド(8) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(8) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086D3TRSY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VnxJzAw7L.jpg" class="mr-3 lazyload" alt="レジェンド(７) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(７) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YD5ZVHC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BWKV7bVwL.jpg" class="mr-3 lazyload" alt="悪役令嬢になんかなりません。私は『普通』の公爵令嬢です！ １ (B&#39;s-LOG COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>悪役令嬢になんかなりません。私は『普通』の公爵令嬢です！ １ (B&#39;s-LOG COMICS)</h5>
+                    <p>価格：663円、ポイント：7</p>
+                    <p>ユハズ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少女マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08G3S3RX1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JkKgQblIL.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする ５ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする ５ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>流優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R8D61SS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QKKDiUg-L.jpg" class="mr-3 lazyload" alt="昔勇者で今は骨4　わたしからあなたへ (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昔勇者で今は骨4　わたしからあなたへ (電撃文庫)</h5>
+                    <p>価格：344円、ポイント：3</p>
+                    <p>佐伯 庸介(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NCNJM1C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511GaCY9UrL.jpg" class="mr-3 lazyload" alt="レジェンド12 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド12 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>神無月 紅(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J26N142?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kuTyObvlL.jpg" class="mr-3 lazyload" alt="昔勇者で今は骨3　勇者と聖邪 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昔勇者で今は骨3　勇者と聖邪 (電撃文庫)</h5>
+                    <p>価格：347円、ポイント：3</p>
+                    <p>佐伯 庸介(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J1H3NTM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614pLWc92WL.jpg" class="mr-3 lazyload" alt="レジェンド11 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド11 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>神無月 紅(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CSJ1R5H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bONdxPU2L.jpg" class="mr-3 lazyload" alt="昔勇者で今は骨2　双竜の転生者 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昔勇者で今は骨2　双竜の転生者 (電撃文庫)</h5>
+                    <p>価格：332円、ポイント：3</p>
+                    <p>佐伯 庸介(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BYKB35M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ngn8f0cyL.jpg" class="mr-3 lazyload" alt="昔勇者で今は骨5　東国月光堕天仙骨無幻抜刀 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昔勇者で今は骨5　東国月光堕天仙骨無幻抜刀 (電撃文庫)</h5>
+                    <p>価格：683円、ポイント：7</p>
+                    <p>佐伯 庸介(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0899DQ688?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kbPVLD3VL.jpg" class="mr-3 lazyload" alt="レジェンド10 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド10 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>神無月 紅(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B078NPHHP2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wkQpkbB6L.jpg" class="mr-3 lazyload" alt="レジェンド(6) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(6) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N39PZ9Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MXAx+B9GL.jpg" class="mr-3 lazyload" alt="レジェンド(5) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(5) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FX6M65T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61HKZLOLVLL.jpg" class="mr-3 lazyload" alt="レジェンド(4) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(4) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B077ZQMHB5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510tHgr7MQL.jpg" class="mr-3 lazyload" alt="レジェンド(3) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(3) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0734LKM61?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ggfoBjTBL.jpg" class="mr-3 lazyload" alt="レジェンド(2) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(2) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M310DXB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WSVokHmUL.jpg" class="mr-3 lazyload" alt="レジェンド(9) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レジェンド(9) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>たかの雅治(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08GQJNMH2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517ExRVSeYL.jpg" class="mr-3 lazyload" alt="勇者のセガレ4 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者のセガレ4 (電撃文庫)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>和ヶ原 聡司(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZS9Q4BR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AaKB2dAGL.jpg" class="mr-3 lazyload" alt="クレイジー・キッチン (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クレイジー・キッチン (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>荻原 数馬(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YP7W9BR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gpU4j-wtL.jpg" class="mr-3 lazyload" alt="大預言者は前世から逃げる ２　～三周目は公爵令嬢に転生したから、バラ色ライフを送りたい～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大預言者は前世から逃げる ２　～三周目は公爵令嬢に転生したから、バラ色ライフを送りたい～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>寿利真(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YP6PG1L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b8Zi2BB-L.jpg" class="mr-3 lazyload" alt="数字で救う! 弱小国家 4　平和でいられる確率を求めよ。ただし大戦争は必須であるものとする。 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>数字で救う! 弱小国家 4　平和でいられる確率を求めよ。ただし大戦争は必須であるものとする。 (電撃文庫)</h5>
+                    <p>価格：355円、ポイント：4</p>
+                    <p>長田 信織(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TYLS27T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G6tUAAOjL.jpg" class="mr-3 lazyload" alt="メニューをどうぞ ２　～迷宮大海老のビスク　フィルダニア風～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メニューをどうぞ ２　～迷宮大海老のビスク　フィルダニア風～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>汐邑 雛(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SPBCY51?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IruKA1G-L.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする ４ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする ４ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>流優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MKQ28LL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sSCoae8zL.jpg" class="mr-3 lazyload" alt="数字で救う! 弱小国家 3　幸せになれる確率を求めよ。ただしあなたの過去は変わらないものとする。 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>数字で救う! 弱小国家 3　幸せになれる確率を求めよ。ただしあなたの過去は変わらないものとする。 (電撃文庫)</h5>
+                    <p>価格：332円、ポイント：3</p>
+                    <p>長田 信織(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J16RHBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WJxv1LXKL.jpg" class="mr-3 lazyload" alt="数字で救う! 弱小国家 2　電卓で友だちを作る方法を求めよ。ただし最強の騎兵隊が迫っているものとする。 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>数字で救う! 弱小国家 2　電卓で友だちを作る方法を求めよ。ただし最強の騎兵隊が迫っているものとする。 (電撃文庫)</h5>
+                    <p>価格：343円、ポイント：3</p>
+                    <p>長田 信織(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BYMKHHY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ggk8FBfcL.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする ９ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする ９ (カドカワBOOKS)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>流優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B08GQLJ3C1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61r+JAqpC2L.jpg" class="mr-3 lazyload" alt="横浜駅SF【電子特典付き】 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>横浜駅SF【電子特典付き】 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>柞刈湯葉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N0SE683?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pBamOFAjL.jpg" class="mr-3 lazyload" alt="ゼロスキルの料理番　２ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゼロスキルの料理番　２ (角川コミックス・エース)</h5>
+                    <p>価格：634円、ポイント：6</p>
+                    <p>十凪 高志(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08D66XCTW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oEyFPe9JL.jpg" class="mr-3 lazyload" alt="伝説の竜装騎士は田舎で普通に暮らしたい ２　～ＳＳＳランク依頼の下請け辞めます！～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>伝説の竜装騎士は田舎で普通に暮らしたい ２　～ＳＳＳランク依頼の下請け辞めます！～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>タック(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0829PVSR8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZUXqXSDFL.jpg" class="mr-3 lazyload" alt="メニューをどうぞ ３　～迷宮大海螺のグリエ　旬野菜のエテュペ添え～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メニューをどうぞ ３　～迷宮大海螺のグリエ　旬野菜のエテュペ添え～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>汐邑 雛(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B0829Q24RL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BvcOMDl-L.jpg" class="mr-3 lazyload" alt="装備枠ゼロの最強剣士 ３　でも、呪いの装備（可愛い）なら９９９９個つけ放題 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>装備枠ゼロの最強剣士 ３　でも、呪いの装備（可愛い）なら９９９９個つけ放題 (カドカワBOOKS)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>坂木 持丸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZZWJRNR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519xnkjPCnL.jpg" class="mr-3 lazyload" alt="世界でただ一人の魔物使い ４　～転職したら魔王に間違われました～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界でただ一人の魔物使い ４　～転職したら魔王に間違われました～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0811DD3Z8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511Xh5s0rcL.jpg" class="mr-3 lazyload" alt="異世界帰りの俺（チートスキル保持）、ジャンル違いな超常バトルに巻き込まれたけれどワンパンで片付けて無事青春をおくりたい。２ (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界帰りの俺（チートスキル保持）、ジャンル違いな超常バトルに巻き込まれたけれどワンパンで片付けて無事青春をおくりたい。２ (電撃文庫)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZS9VG6J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zcqPinYQL.jpg" class="mr-3 lazyload" alt="はぐれ精霊医の診察記録　～聖女騎士団と癒やしの神業～　２ (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はぐれ精霊医の診察記録　～聖女騎士団と癒やしの神業～　２ (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>橘 由宇(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ノンフィクション,コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B086D86T1G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QjuK1-eZL.jpg" class="mr-3 lazyload" alt="世界最強の後衛　～迷宮国の新人探索者～　５ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界最強の後衛　～迷宮国の新人探索者～　５ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>とーわ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TTQTN46?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511Xh5s0rcL.jpg" class="mr-3 lazyload" alt="異世界帰りの俺（チートスキル保持）、ジャンル違いな超常バトルに巻き込まれたけれどワンパンで片付けて無事青春をおくりたい。２ (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界帰りの俺（チートスキル保持）、ジャンル違いな超常バトルに巻き込まれたけれどワンパンで片付けて無事青春をおくりたい。２ (電撃文庫)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZS9VG6J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iu62mB1JL.jpg" class="mr-3 lazyload" alt="最強騎士のほのぼの家族旅行 ３　～娘といるため婚約拒否し、騎士団も辞めた。俺は自由だ。さあ、一生の思い出を作りに行こう～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最強騎士のほのぼの家族旅行 ３　～娘といるため婚約拒否し、騎士団も辞めた。俺は自由だ。さあ、一生の思い出を作りに行こう～ (カドカワBOOKS)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>ハヤケン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QBB8TLB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517TEeNVYuL.jpg" class="mr-3 lazyload" alt="悪役令嬢は100回目のバッドエンディングを望む ２ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>悪役令嬢は100回目のバッドエンディングを望む ２ (カドカワBOOKS)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>本橋異優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QBB8ZV1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FSaCiavKL.jpg" class="mr-3 lazyload" alt="世界最強の後衛　～迷宮国の新人探索者～　４ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界最強の後衛　～迷宮国の新人探索者～　４ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>とーわ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NDQ5VYT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QnTtO9IZL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(3) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(3) (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H793PZ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k+TeKrk+L.jpg" class="mr-3 lazyload" alt="メニューをどうぞ　～イルベリードラゴンのテールステーキ　ディアドラス風～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メニューをどうぞ　～イルベリードラゴンのテールステーキ　ディアドラス風～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>汐邑 雛(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MNY8WVJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G3K0VcDVL.jpg" class="mr-3 lazyload" alt="はぐれ精霊医の診察記録　～聖女騎士団と癒やしの神業～　３ (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はぐれ精霊医の診察記録　～聖女騎士団と癒やしの神業～　３ (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：726円、ポイント：7</p>
+                    <p>橘 由宇(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ノンフィクション,コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08K3PV2YR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yjJ7oqeoL.jpg" class="mr-3 lazyload" alt="最強騎士のほのぼの家族旅行 ２　～娘といるため婚約拒否し、騎士団も辞めた。俺は自由だ。さあ、一生の思い出を作りに行こう～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最強騎士のほのぼの家族旅行 ２　～娘といるため婚約拒否し、騎士団も辞めた。俺は自由だ。さあ、一生の思い出を作りに行こう～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>ハヤケン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07K82KT39?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+Cc4KiN-L.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする　３ (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする　３ (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>遠野 ノオト(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086DJGDYN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iu62mB1JL.jpg" class="mr-3 lazyload" alt="最強騎士のほのぼの家族旅行 ３　～娘といるため婚約拒否し、騎士団も辞めた。俺は自由だ。さあ、一生の思い出を作りに行こう～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最強騎士のほのぼの家族旅行 ３　～娘といるため婚約拒否し、騎士団も辞めた。俺は自由だ。さあ、一生の思い出を作りに行こう～ (カドカワBOOKS)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>ハヤケン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QBB8TLB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HXE1laW+L.jpg" class="mr-3 lazyload" alt="魔王になったので、ダンジョン造って人外娘とほのぼのする　２ (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔王になったので、ダンジョン造って人外娘とほのぼのする　２ (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>遠野 ノオト(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WPRRTY8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617U-SkagHL.jpg" class="mr-3 lazyload" alt="勇者、辞めます　～次の職場は魔王城～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者、辞めます　～次の職場は魔王城～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>クオンタム(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B077XR3ZFV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z9uuN2YwL.jpg" class="mr-3 lazyload" alt="数字で救う! 弱小国家 2　電卓で戦争する方法を求めよ。ただし敵は剣と火薬で武装しているものとする。 (MFコミックス　アライブシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>数字で救う! 弱小国家 2　電卓で戦争する方法を求めよ。ただし敵は剣と火薬で武装しているものとする。 (MFコミックス　アライブシリーズ)</h5>
+                    <p>価格：631円、ポイント：6</p>
+                    <p>えかきびと(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CD7X5NS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617u1NI-FML.jpg" class="mr-3 lazyload" alt="ライブダンジョン！ 3　姫と廃人 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ライブダンジョン！ 3　姫と廃人 (カドカワBOOKS)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>dy冷凍(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B074MNFYVB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Qluv96XqL.jpg" class="mr-3 lazyload" alt="ライブダンジョン！ 2　神竜人のギルド長 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ライブダンジョン！ 2　神竜人のギルド長 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>dy冷凍(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06Y2TTJRV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DccXKsGiL.jpg" class="mr-3 lazyload" alt="ライブダンジョン！　支援回復のススメ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ライブダンジョン！　支援回復のススメ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>dy冷凍(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N9EF65S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FgLHEd1mL.jpg" class="mr-3 lazyload" alt="聖女さま？ いいえ、通りすがりの魔物使いです！ ～絶対無敵の聖女はモフモフと旅をする～（１） (電撃コミックスNEXT)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>聖女さま？ いいえ、通りすがりの魔物使いです！ ～絶対無敵の聖女はモフモフと旅をする～（１） (電撃コミックスNEXT)</h5>
+                    <p>価格：663円、ポイント：7</p>
+                    <p>飯田 とい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08FBQPPFP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rHxfomksL.jpg" class="mr-3 lazyload" alt="豚のレバーは加熱しろ（２回目） (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>豚のレバーは加熱しろ（２回目） (電撃文庫)</h5>
+                    <p>価格：644円、ポイント：6</p>
+                    <p>逆井 卓馬(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DN5X3FD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xnk7GQa0L.jpg" class="mr-3 lazyload" alt="天下無双の嫁軍団とはじめる、ゆるゆる領主ライフ ２　～異世界で竜帝の力拾いました～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天下無双の嫁軍団とはじめる、ゆるゆる領主ライフ ２　～異世界で竜帝の力拾いました～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>千月さかき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B084GJ77MN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51L3bKi2T-L.jpg" class="mr-3 lazyload" alt="無敵の万能要塞で快適スローライフをおくります　～フォートレス・ライフ～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>無敵の万能要塞で快適スローライフをおくります　～フォートレス・ライフ～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>鈴木 竜一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B084GHDG79?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xnk7GQa0L.jpg" class="mr-3 lazyload" alt="天下無双の嫁軍団とはじめる、ゆるゆる領主ライフ ２　～異世界で竜帝の力拾いました～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天下無双の嫁軍団とはじめる、ゆるゆる領主ライフ ２　～異世界で竜帝の力拾いました～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>千月さかき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B084GJ77MN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pBamOFAjL.jpg" class="mr-3 lazyload" alt="ゼロスキルの料理番　２ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゼロスキルの料理番　２ (角川コミックス・エース)</h5>
+                    <p>価格：634円、ポイント：6</p>
+                    <p>十凪 高志(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08D66XCTW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yRz0IzR8L.jpg" class="mr-3 lazyload" alt="大預言者は前世から逃げる ～三周目は公爵令嬢に転生したから、バラ色ライフを送りたい～ 1 (B&#39;s-LOG COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大預言者は前世から逃げる ～三周目は公爵令嬢に転生したから、バラ色ライフを送りたい～ 1 (B&#39;s-LOG COMICS)</h5>
+                    <p>価格：644円、ポイント：6</p>
+                    <p>りんこ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少女マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B088QWNY2M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XGJ04dXuL.jpg" class="mr-3 lazyload" alt="装備枠ゼロの最強剣士 ２　でも、呪いの装備（可愛い）なら９９９９個つけ放題 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>装備枠ゼロの最強剣士 ２　でも、呪いの装備（可愛い）なら９９９９個つけ放題 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>坂木 持丸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SN8JZKZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61iVEMZ92FL.jpg" class="mr-3 lazyload" alt="伝説の竜装騎士は田舎で普通に暮らしたい　～ＳＳＳランク依頼の下請け辞めます！～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>伝説の竜装騎士は田舎で普通に暮らしたい　～ＳＳＳランク依頼の下請け辞めます！～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>タック(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R56QK5N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BvcOMDl-L.jpg" class="mr-3 lazyload" alt="装備枠ゼロの最強剣士 ３　でも、呪いの装備（可愛い）なら９９９９個つけ放題 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>装備枠ゼロの最強剣士 ３　でも、呪いの装備（可愛い）なら９９９９個つけ放題 (カドカワBOOKS)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>坂木 持丸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZZWJRNR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51a7IHUKiIL.jpg" class="mr-3 lazyload" alt="世界でただ一人の魔物使い ３　～転職したら魔王に間違われました～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界でただ一人の魔物使い ３　～転職したら魔王に間違われました～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NDPWJ22?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51C5fSxQ3IL.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す 9 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す 9 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>CK(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L588981?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zlsVkfuFL.jpg" class="mr-3 lazyload" alt="勇者、辞めます ３　～次の職場は魔王城～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者、辞めます ３　～次の職場は魔王城～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>クオンタム(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J24Z1YH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tC-rtwG5L.jpg" class="mr-3 lazyload" alt="世界でただ一人の魔物使い ２　～転職したら魔王に間違われました～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界でただ一人の魔物使い ２　～転職したら魔王に間違われました～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J25HYG8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517TEeNVYuL.jpg" class="mr-3 lazyload" alt="悪役令嬢は100回目のバッドエンディングを望む ２ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>悪役令嬢は100回目のバッドエンディングを望む ２ (カドカワBOOKS)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>本橋異優(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QBB8ZV1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51K6q5PwyCL.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す 8 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す 8 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>CK(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G7XNLB6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511x8YKldfL.jpg" class="mr-3 lazyload" alt="世界最強の後衛　～迷宮国の新人探索者～　3 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界最強の後衛　～迷宮国の新人探索者～　3 (MFC)</h5>
+                    <p>価格：343円、ポイント：3</p>
+                    <p>力蔵(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B085L9D578?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gPoom-XuL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(2) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(2) (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B079PVVFGG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qP7xBZ6HL.jpg" class="mr-3 lazyload" alt="ダンジョン村のパン屋さん　３　～美味しい携帯食を作ろう！編～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョン村のパン屋さん　３　～美味しい携帯食を作ろう！編～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>丁 謡(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FJ6BRLL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DoCLGW3IL.jpg" class="mr-3 lazyload" alt="勇者のセガレ3 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者のセガレ3 (電撃文庫)</h5>
+                    <p>価格：347円、ポイント：3</p>
+                    <p>和ヶ原 聡司(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F7RT9WZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bdqq5GJAL.jpg" class="mr-3 lazyload" alt="勇者、辞めます ２　～次の職場は魔王城～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者、辞めます ２　～次の職場は魔王城～ (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>クオンタム(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CSML5JZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519xnkjPCnL.jpg" class="mr-3 lazyload" alt="世界でただ一人の魔物使い ４　～転職したら魔王に間違われました～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界でただ一人の魔物使い ４　～転職したら魔王に間違われました～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0811DD3Z8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BuXhhoh+L.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(7) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(7) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DFP554X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EPrX2ljGL.jpg" class="mr-3 lazyload" alt="世界最強の後衛　～迷宮国の新人探索者～　2 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界最強の後衛　～迷宮国の新人探索者～　2 (MFC)</h5>
+                    <p>価格：343円、ポイント：3</p>
+                    <p>力蔵(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TZQXMRB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sX+5fzZOL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(6) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(6) (角川コミックス・エース)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NC2RMR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614oTtwNwtL.jpg" class="mr-3 lazyload" alt="ダンジョン村のパン屋さん　２　～パン屋開店編～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョン村のパン屋さん　２　～パン屋開店編～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>丁 謡(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B078NK26CZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iwN1M9ICL.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(6) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(6) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B0845QHBV5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hYkVp5YxL.jpg" class="mr-3 lazyload" alt="世界最強の後衛　～迷宮国の新人探索者～　６ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界最強の後衛　～迷宮国の新人探索者～　６ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>とーわ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B083HRXHKZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/613gwhm6+rL.jpg" class="mr-3 lazyload" alt="エルフ嫁と始める異世界領主生活5　―おきのどくですが　りりがるどは　きえてしまいました― (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エルフ嫁と始める異世界領主生活5　―おきのどくですが　りりがるどは　きえてしまいました― (電撃文庫)</h5>
+                    <p>価格：355円、ポイント：4</p>
+                    <p>鷲宮 だいじん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B075WR61LC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F-WA2plmL.jpg" class="mr-3 lazyload" alt="勇者のセガレ2 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者のセガレ2 (電撃文庫)</h5>
+                    <p>価格：332円、ポイント：3</p>
+                    <p>和ヶ原 聡司(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0756RZYDL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515N71Yxb5L.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(5) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(5) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：360円、ポイント：4</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VMQGYFF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Y-clRDVOL.jpg" class="mr-3 lazyload" alt="転職アサシンさん、闇ギルドへようこそ!3 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転職アサシンさん、闇ギルドへようこそ!3 (電撃文庫)</h5>
+                    <p>価格：344円、ポイント：3</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07488F3PF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6121VyB-0-L.jpg" class="mr-3 lazyload" alt="ダンジョン村のパン屋さん　～ダンジョン村道行き編～ (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョン村のパン屋さん　～ダンジョン村道行き編～ (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>丁 謡(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B073QHFG6X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A4C+0xQtL.jpg" class="mr-3 lazyload" alt="エルフ嫁と始める異世界領主生活4　―そんな観光地で大丈夫か?　問題……しかない!?― (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エルフ嫁と始める異世界領主生活4　―そんな観光地で大丈夫か?　問題……しかない!?― (電撃文庫)</h5>
+                    <p>価格：347円、ポイント：3</p>
+                    <p>鷲宮 だいじん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B072HFWFCC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Uldz06IxL.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(4) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(4) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N39Z1S7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bDam4sCmL.jpg" class="mr-3 lazyload" alt="武姫の後宮物語 3 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武姫の後宮物語 3 (カドカワBOOKS)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06Y2WB3K2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517ExRVSeYL.jpg" class="mr-3 lazyload" alt="勇者のセガレ4 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者のセガレ4 (電撃文庫)</h5>
+                    <p>価格：358円、ポイント：4</p>
+                    <p>和ヶ原 聡司(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZS9Q4BR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61U0-Uol6NL.jpg" class="mr-3 lazyload" alt="職業無職の俺が冒険者を目指すワケ。 4 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>職業無職の俺が冒険者を目指すワケ。 4 (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>スフレ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NCQ7J8Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Y0VZ5SlvL.jpg" class="mr-3 lazyload" alt="転職アサシンさん、闇ギルドへようこそ!2 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転職アサシンさん、闇ギルドへようこそ!2 (電撃文庫)</h5>
+                    <p>価格：344円、ポイント：3</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MZ2C2C3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ElkJgqT6L.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(3) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(3) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FXL8823?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FnehT+j8L.jpg" class="mr-3 lazyload" alt="エルフ嫁と始める異世界領主生活3　―異世界に医者がいると思った？　残念！― (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エルフ嫁と始める異世界領主生活3　―異世界に医者がいると思った？　残念！― (電撃文庫)</h5>
+                    <p>価格：336円、ポイント：3</p>
+                    <p>鷲宮 だいじん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NCEYHA3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61PIpuGdXCL.jpg" class="mr-3 lazyload" alt="武姫の後宮物語 2 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武姫の後宮物語 2 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M36BKWR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61EUQq-AcwL.jpg" class="mr-3 lazyload" alt="職業無職の俺が冒険者を目指すワケ。 3 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>職業無職の俺が冒険者を目指すワケ。 3 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>スフレ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LPI6N38?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-Z7lGBkIL.jpg" class="mr-3 lazyload" alt="グリモワール×リバース～転生鬼神浪漫譚～ 4 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>グリモワール×リバース～転生鬼神浪漫譚～ 4 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>藍藤 遊(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LPI6N0Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61q9Ad8i0jL.jpg" class="mr-3 lazyload" alt="転職アサシンさん、闇ギルドへようこそ! (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>転職アサシンさん、闇ギルドへようこそ! (電撃文庫)</h5>
+                    <p>価格：336円、ポイント：3</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LEBQHOQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Jd+uFE5WL.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(2) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(2) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B079DL4V35?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61PIpuGdXCL.jpg" class="mr-3 lazyload" alt="武姫の後宮物語 2 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武姫の後宮物語 2 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>筧千里(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M36BKWR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615fTZah9AL.jpg" class="mr-3 lazyload" alt="これはきっと、恋じゃない　ある日、異世界の聖女が召喚されて。 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>これはきっと、恋じゃない　ある日、異世界の聖女が召喚されて。 (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>はなぶさ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01JNZ0VUQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uiv8k-2fL.jpg" class="mr-3 lazyload" alt="エルフ嫁と始める異世界領主生活2　―そうだ、この異世界に学校を建てよう― (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エルフ嫁と始める異世界領主生活2　―そうだ、この異世界に学校を建てよう― (電撃文庫)</h5>
+                    <p>価格：325円、ポイント：3</p>
+                    <p>鷲宮 だいじん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HPFWSA2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pXOkpTbVL.jpg" class="mr-3 lazyload" alt="職業無職の俺が冒険者を目指すワケ。 2 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>職業無職の俺が冒険者を目指すワケ。 2 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>スフレ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ESENO7Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Ki6TXZPHL.jpg" class="mr-3 lazyload" alt="レベル1落第英雄の異世界攻略III (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レベル1落第英雄の異世界攻略III (電撃文庫)</h5>
+                    <p>価格：391円、ポイント：4</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DLJXCEC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BuXhhoh+L.jpg" class="mr-3 lazyload" alt="没落予定なので、鍛冶職人を目指す(7) (ドラゴンコミックスエイジ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>没落予定なので、鍛冶職人を目指す(7) (ドラゴンコミックスエイジ)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>石田 彩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DFP554X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51v9n-eMIAL.jpg" class="mr-3 lazyload" alt="グリモワール×リバース～転生鬼神浪漫譚～ 3 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>グリモワール×リバース～転生鬼神浪漫譚～ 3 (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>藍藤 遊(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DTR611W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Li61yAGwL.jpg" class="mr-3 lazyload" alt="エルフ嫁と始める異世界領主生活　―俺の住む島に異世界が来ちゃったんだが― (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エルフ嫁と始める異世界領主生活　―俺の住む島に異世界が来ちゃったんだが― (電撃文庫)</h5>
+                    <p>価格：325円、ポイント：3</p>
+                    <p>鷲宮 だいじん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01B778RW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pXOkpTbVL.jpg" class="mr-3 lazyload" alt="職業無職の俺が冒険者を目指すワケ。 2 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>職業無職の俺が冒険者を目指すワケ。 2 (カドカワBOOKS)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>スフレ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ESENO7Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Mya9kzANL.jpg" class="mr-3 lazyload" alt="レベル1落第英雄の異世界攻略II (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レベル1落第英雄の異世界攻略II (電撃文庫)</h5>
+                    <p>価格：325円、ポイント：3</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01A6CFNY4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZIUwNb8nL.jpg" class="mr-3 lazyload" alt="グリモワール×リバース～転生鬼神浪漫譚～ 2 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>グリモワール×リバース～転生鬼神浪漫譚～ 2 (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>藍藤 遊(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01914HKQW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51v9n-eMIAL.jpg" class="mr-3 lazyload" alt="グリモワール×リバース～転生鬼神浪漫譚～ 3 (カドカワBOOKS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>グリモワール×リバース～転生鬼神浪漫譚～ 3 (カドカワBOOKS)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>藍藤 遊(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DTR611W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Ki6TXZPHL.jpg" class="mr-3 lazyload" alt="レベル1落第英雄の異世界攻略III (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レベル1落第英雄の異世界攻略III (電撃文庫)</h5>
+                    <p>価格：391円、ポイント：4</p>
+                    <p>真代屋 秀晃(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DLJXCEC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fgibu9QUL.jpg" class="mr-3 lazyload" alt="デュラララ!!×7 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デュラララ!!×7 (電撃文庫)</h5>
+                    <p>価格：333円、ポイント：3</p>
+                    <p>成田 良悟(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00O4QK46G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
