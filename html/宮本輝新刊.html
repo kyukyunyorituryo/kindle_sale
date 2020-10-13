@@ -1,0 +1,820 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KReGoOTpL.jpg" class="mr-3 lazyload" alt="灯台からの響き (集英社文芸単行本)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>灯台からの響き (集英社文芸単行本)</h5>
+                    <p>価格：1881円、ポイント：19</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B08JT4WN64?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BgYvR2s2L.jpg" class="mr-3 lazyload" alt="草花たちの静かな誓い (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>草花たちの静かな誓い (集英社文庫)</h5>
+                    <p>価格：528円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B0855HG9G7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51146lkuVRL.jpg" class="mr-3 lazyload" alt="真夏の犬 (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真夏の犬 (文春文庫)</h5>
+                    <p>価格：542円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CB4QK67?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YHUXbfgxL.jpg" class="mr-3 lazyload" alt="田園発　港行き自転車　下 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田園発　港行き自転車　下 (集英社文庫)</h5>
+                    <p>価格：455円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B2T13B4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Ip7cqyklL.jpg" class="mr-3 lazyload" alt="田園発　港行き自転車　上 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田園発　港行き自転車　上 (集英社文庫)</h5>
+                    <p>価格：455円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B2T3G8L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/416XkE1PqsL.jpg" class="mr-3 lazyload" alt="いのちの姿　完全版 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いのちの姿　完全版 (集英社文庫)</h5>
+                    <p>価格：284円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：近現代の作品,76-100回,Featured Categories,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B077S1KPTD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DRt8IWq-L.jpg" class="mr-3 lazyload" alt="オレンジの壺（下） (光文社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>オレンジの壺（下） (光文社文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：光文社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KHBFG0U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41K7ojxUjHL.jpg" class="mr-3 lazyload" alt="オレンジの壺（上） (光文社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>オレンジの壺（上） (光文社文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：光文社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KHBFF74?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510fivV5lRL.jpg" class="mr-3 lazyload" alt="新装版　命の器 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新装版　命の器 (講談社文庫)</h5>
+                    <p>価格：304円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,76-100回,Featured Categories,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01CE4DUME?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61S5oMovioL.jpg" class="mr-3 lazyload" alt="異国の窓から (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異国の窓から (角川文庫)</h5>
+                    <p>価格：340円、ポイント：3</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：日本文学,76-100回,Featured Categories,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B019BQS8M0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mIxcyBZgL.jpg" class="mr-3 lazyload" alt="水のかたち　下 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>水のかたち　下 (集英社文庫)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B018Q2SEWO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/410AVbEZW-L.jpg" class="mr-3 lazyload" alt="水のかたち　上 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>水のかたち　上 (集英社文庫)</h5>
+                    <p>価格：455円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B018Q2SBX6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61EfhSc0VeL.jpg" class="mr-3 lazyload" alt="花の降る午後 (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花の降る午後 (角川文庫)</h5>
+                    <p>価格：580円、ポイント：6</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B0181OJ8Q8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FO9aDQAgL.jpg" class="mr-3 lazyload" alt="焚火の終わり　下 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>焚火の終わり　下 (集英社文庫)</h5>
+                    <p>価格：297円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00UF94T2Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G9baeHF2L.jpg" class="mr-3 lazyload" alt="焚火の終わり　上 (集英社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>焚火の終わり　上 (集英社文庫)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：集英社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00UF94T0S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Y2YSqGgLL.jpg" class="mr-3 lazyload" alt="新装版　朝の歓び（下） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新装版　朝の歓び（下） (講談社文庫)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PAO1QXG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+gpS+NI6L.jpg" class="mr-3 lazyload" alt="新装版　朝の歓び（上） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新装版　朝の歓び（上） (講談社文庫)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PAO1QMM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/4131xecc4cL.jpg" class="mr-3 lazyload" alt="新装版　二十歳の火影 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新装版　二十歳の火影 (講談社文庫)</h5>
+                    <p>価格：264円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,76-100回,Featured Categories,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GMYJM16?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Z3IdJxlOL.jpg" class="mr-3 lazyload" alt="ひとたびはポプラに臥す５＆６"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ひとたびはポプラに臥す５＆６</h5>
+                    <p>価格：628円、ポイント：6</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本文学,76-100回,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D6C81UK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51m4fx2UDqL.jpg" class="mr-3 lazyload" alt="ひとたびはポプラに臥す３＆４"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ひとたびはポプラに臥す３＆４</h5>
+                    <p>価格：628円、ポイント：6</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本文学,76-100回,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D6C81EQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51O5c84iErL.jpg" class="mr-3 lazyload" alt="ひとたびはポプラに臥す１＆２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ひとたびはポプラに臥す１＆２</h5>
+                    <p>価格：628円、ポイント：6</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本文学,76-100回,エッセー・随筆,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D6C81C8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k1yyaZiOL.jpg" class="mr-3 lazyload" alt="青が散る（下） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>青が散る（下） (文春文庫)</h5>
+                    <p>価格：420円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CBFS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RS6vQ4XFL.jpg" class="mr-3 lazyload" alt="青が散る（上） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>青が散る（上） (文春文庫)</h5>
+                    <p>価格：420円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CBGW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51puLP745kL.jpg" class="mr-3 lazyload" alt="ポーの一族 ～春の夢～ (フラワーコミックススペシャル)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ポーの一族 ～春の夢～ (フラワーコミックススペシャル)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>萩尾望都(著)</p>
+                    <p>出版社：小学館</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073RB8QK1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iIaPBEyVL.jpg" class="mr-3 lazyload" alt="彗星物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>彗星物語</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CB4O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519CGDXnKpL.jpg" class="mr-3 lazyload" alt="愉楽の園"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愉楽の園</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CAOU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ox2NfRvvL.jpg" class="mr-3 lazyload" alt="約束の冬（下） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>約束の冬（下） (文春文庫)</h5>
+                    <p>価格：463円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CBEE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512A0aIrR0L.jpg" class="mr-3 lazyload" alt="約束の冬（上） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>約束の冬（上） (文春文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CBCG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aUMRvnzPL.jpg" class="mr-3 lazyload" alt="星々の悲しみ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>星々の悲しみ</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CBHG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611z545c4TL.jpg" class="mr-3 lazyload" alt="海辺の扉（下） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>海辺の扉（下） (文春文庫)</h5>
+                    <p>価格：359円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CB9E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ntok3+jJL.jpg" class="mr-3 lazyload" alt="海辺の扉（上） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>海辺の扉（上） (文春文庫)</h5>
+                    <p>価格：359円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CC7A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xWxJtY2VL.jpg" class="mr-3 lazyload" alt="睡蓮の長いまどろみ（下） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>睡蓮の長いまどろみ（下） (文春文庫)</h5>
+                    <p>価格：410円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CB76?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61eaP2i+gFL.jpg" class="mr-3 lazyload" alt="睡蓮の長いまどろみ（上） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>睡蓮の長いまどろみ（上） (文春文庫)</h5>
+                    <p>価格：410円、ポイント：4</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CB6W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51h4R-Clq1L.jpg" class="mr-3 lazyload" alt="葡萄と郷愁"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葡萄と郷愁</h5>
+                    <p>価格：337円、ポイント：3</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CB4E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GQ0HQxCLL.jpg" class="mr-3 lazyload" alt="海岸列車（下） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>海岸列車（下） (文春文庫)</h5>
+                    <p>価格：484円、ポイント：72</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CAU4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41o6yXA7SKL.jpg" class="mr-3 lazyload" alt="海岸列車（上） (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>海岸列車（上） (文春文庫)</h5>
+                    <p>価格：484円、ポイント：72</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BQ7CAS6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NqDOP8JhL.jpg" class="mr-3 lazyload" alt="三千枚の金貨（下） (光文社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三千枚の金貨（下） (光文社文庫)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：光文社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BPKU158?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51p1gqr39vL.jpg" class="mr-3 lazyload" alt="三千枚の金貨（上） (光文社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三千枚の金貨（上） (光文社文庫)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：光文社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BPKU14O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ZjldWUaCL.jpg" class="mr-3 lazyload" alt="森のなかの海（下） (光文社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>森のなかの海（下） (光文社文庫)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：光文社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BPKU15I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tLfM5EAML.jpg" class="mr-3 lazyload" alt="森のなかの海（上） (光文社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>森のなかの海（上） (光文社文庫)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：光文社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BPKU162?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iF4kzeX-L.jpg" class="mr-3 lazyload" alt="幸福のための人間のレベル論"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>幸福のための人間のレベル論</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>藤本シゲユキ(著)</p>
+                    <p>出版社：さくら舎</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PGLWWRM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514yCKIbobL.jpg" class="mr-3 lazyload" alt="星宿海への道"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>星宿海への道</h5>
+                    <p>価格：430円、ポイント：4</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：76-100回,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00B23ER8K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41pBHVR7LOL.jpg" class="mr-3 lazyload" alt="にぎやかな天地（下） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>にぎやかな天地（下） (講談社文庫)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009SM12WQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41fyshkZlXL.jpg" class="mr-3 lazyload" alt="にぎやかな天地（上） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>にぎやかな天地（上） (講談社文庫)</h5>
+                    <p>価格：415円、ポイント：5</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009SM12SA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hmi5o4lLL.jpg" class="mr-3 lazyload" alt="避暑地の猫 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>避暑地の猫 (講談社文庫)</h5>
+                    <p>価格：297円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXMBAE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GLnlKrJJL.jpg" class="mr-3 lazyload" alt="ここに地終わり　海始まる（上） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ここに地終わり　海始まる（上） (講談社文庫)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXM9ZQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kTZeY3hsL.jpg" class="mr-3 lazyload" alt="ここに地終わり　海始まる（下） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ここに地終わり　海始まる（下） (講談社文庫)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXMACS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G0m6e3DfL.jpg" class="mr-3 lazyload" alt="骸骨ビルの庭（下） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>骸骨ビルの庭（下） (講談社文庫)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXM4F6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EWqUCYm4L.jpg" class="mr-3 lazyload" alt="骸骨ビルの庭（上） (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>骸骨ビルの庭（上） (講談社文庫)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>宮本輝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXM41A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51c1r6EWhOL.jpg" class="mr-3 lazyload" alt="胸の香り (文春文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>胸の香り (文春文庫)</h5>
+                    <p>価格：328円、ポイント：3</p>
+                    <p>宮本 輝(著)</p>
+                    <p>出版社：文藝春秋</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B009DEDSTY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
