@@ -1,0 +1,1535 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u38M2GuuL.jpg" class="mr-3 lazyload" alt="ヴイナス戦記 4 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヴイナス戦記 4 (ノーラコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>安彦 良和(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V8RVCRM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511otNE+UYL.jpg" class="mr-3 lazyload" alt="ヴイナス戦記 3 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヴイナス戦記 3 (ノーラコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>安彦 良和(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6QGH1N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iTb0XbX0L.jpg" class="mr-3 lazyload" alt="ヴイナス戦記 2 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヴイナス戦記 2 (ノーラコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>安彦 良和(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V7QJ2W7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NpiNXfFuL.jpg" class="mr-3 lazyload" alt="ヴイナス戦記 1 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヴイナス戦記 1 (ノーラコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>安彦 良和(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V8SLPS9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GM-pM-h0L.jpg" class="mr-3 lazyload" alt="西川口大学楽園倶楽部　２ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>西川口大学楽園倶楽部　２ (ＧＳコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>武林武士(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV906M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61KDiZFJAWL.jpg" class="mr-3 lazyload" alt="西川口大学楽園倶楽部　１ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>西川口大学楽園倶楽部　１ (ＧＳコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>武林武士(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV904Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+A8In9JEL.jpg" class="mr-3 lazyload" alt="FRONTIER LINE ノーラコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>FRONTIER LINE ノーラコミックス</h5>
+                    <p>価格：235円、ポイント：2</p>
+                    <p>たがみよしひさ(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SWHDGD6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51E7gJoQ+JL.jpg" class="mr-3 lazyload" alt="名探偵 荒馬宗介 ２ (もう一度見たい！あのころの学研)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>名探偵 荒馬宗介 ２ (もう一度見たい！あのころの学研)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>山口 太一(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07K695GK6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51D3pENxd2L.jpg" class="mr-3 lazyload" alt="名探偵 荒馬宗介 1 (もう一度見たい！あのころの学研)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>名探偵 荒馬宗介 1 (もう一度見たい！あのころの学研)</h5>
+                    <p>価格：880円、ポイント：444</p>
+                    <p>山口 太一(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FSDLSXM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eKyt-QNtL.jpg" class="mr-3 lazyload" alt="内山安二コレクション 2 (もう一度見たい！あのころの学研)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>内山安二コレクション 2 (もう一度見たい！あのころの学研)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>内山 安二(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FSBHK5R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ye-cQ4TRL.jpg" class="mr-3 lazyload" alt="内山安二コレクション 1 (もう一度見たい！あのころの学研)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>内山安二コレクション 1 (もう一度見たい！あのころの学研)</h5>
+                    <p>価格：880円、ポイント：444</p>
+                    <p>内山 安二(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D27F9PR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zddQwnnbL.jpg" class="mr-3 lazyload" alt="魔法の女の子ちゃ～み～チャコちゃん 2 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法の女の子ちゃ～み～チャコちゃん 2 (ノーラコミックス)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>ひな。(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BD0U4EW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FDNELnY7L.jpg" class="mr-3 lazyload" alt="魔法の女の子ちゃ～み～チャコちゃん 1 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法の女の子ちゃ～み～チャコちゃん 1 (ノーラコミックス)</h5>
+                    <p>価格：306円、ポイント：3</p>
+                    <p>ひな。(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BD0U4CE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61YW3a9UVzL.jpg" class="mr-3 lazyload" alt="あほう鳥の止り木　３ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あほう鳥の止り木　３ (ＧＳコミックス)</h5>
+                    <p>価格：306円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV90VM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61aiHp1H+lL.jpg" class="mr-3 lazyload" alt="あほう鳥の止り木　２ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あほう鳥の止り木　２ (ＧＳコミックス)</h5>
+                    <p>価格：306円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV907G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61rLRRoYY2L.jpg" class="mr-3 lazyload" alt="あほう鳥の止り木　１ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あほう鳥の止り木　１ (ＧＳコミックス)</h5>
+                    <p>価格：306円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV90YE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QX+p9-YGL.jpg" class="mr-3 lazyload" alt="プロゴルファー貘　6 (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロゴルファー貘　6 (ＧＳコミックス)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WW75QYE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TWZY-s52L.jpg" class="mr-3 lazyload" alt="プロゴルファー貘　５ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロゴルファー貘　５ (ＧＳコミックス)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WW75RBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SdEDg-EZL.jpg" class="mr-3 lazyload" alt="プロゴルファー貘　4 (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロゴルファー貘　4 (ＧＳコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WW75VQM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MxqLp1pSL.jpg" class="mr-3 lazyload" alt="プロゴルファー貘　２ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロゴルファー貘　２ (ＧＳコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WW75S2E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KN0+GCHlL.jpg" class="mr-3 lazyload" alt="プロゴルファー貘　１ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロゴルファー貘　１ (ＧＳコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WW75S5G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZExMoAqOL.jpg" class="mr-3 lazyload" alt="たがみよしひさ作品集　だれかが見ている GSコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>たがみよしひさ作品集　だれかが見ている GSコミックス</h5>
+                    <p>価格：235円、ポイント：2</p>
+                    <p>たがみよしひさ(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SWHDGFO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QhUBRCvrL.jpg" class="mr-3 lazyload" alt="マンガ版 たった１分でできて、一生が変わる！ 魔法の習慣"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マンガ版 たった１分でできて、一生が変わる！ 魔法の習慣</h5>
+                    <p>価格：1045円、ポイント：500</p>
+                    <p>佐藤 伝(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086SLQVWL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZPk7-eC3L.jpg" class="mr-3 lazyload" alt="夜明けのタクシードライバー ４ (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜明けのタクシードライバー ４ (学研スマートライブラリ)</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>並木 道夫(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L55K1TT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51i9ZsxoBjL.jpg" class="mr-3 lazyload" alt="アニメもんエッセイ～お江戸直球通信～ ノーラコミックスＳＰ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アニメもんエッセイ～お江戸直球通信～ ノーラコミックスＳＰ</h5>
+                    <p>価格：576円、ポイント：6</p>
+                    <p>石田敦子(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00S7W7E2K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mZDBgvWBL.jpg" class="mr-3 lazyload" alt="プロゴルファー貘　３ (ＧＳコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロゴルファー貘　３ (ＧＳコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>やまさき十三(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WW75SEW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IcUsAq2IL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 29 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 29 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZKHKRW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b9acm9TBL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 28 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 28 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZLCRLQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516MJs2FxGL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 27 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 27 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZK9F6T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Nx9yHiNzL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 26 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 26 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075RYNNBD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MYTJOkFGL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 25 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 25 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075RYRGJZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tQL6q3G7L.jpg" class="mr-3 lazyload" alt="まっしぐら！ 24 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 24 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075KZ1R3M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cwGZs0oqL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 23 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 23 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075L7RL17?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51q8s4G9m4L.jpg" class="mr-3 lazyload" alt="まっしぐら！ 22 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 22 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075FL6CY1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TS9sCsfgL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 21 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 21 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075FL2VNM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5169dLbUcqL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 20 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 20 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0757G7X44?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vhT5xW7nL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 19 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 19 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0757GG7MT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515YVO-aSxL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 18 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 18 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0752DZSN4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mPYvHqHiL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 17 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 17 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07527G9TL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dUi1cg1uL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 16 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 16 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074W47SYX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HCEIJEfqL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 15 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 15 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074PN4C9X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Wqhz3qPwL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 14 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 14 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074PLV48F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Fx9sBOgQL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 13 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 13 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074J8T2DR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hWjtrQ+ML.jpg" class="mr-3 lazyload" alt="まっしぐら！ 12 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 12 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07474XZ2Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jyaGcb0zL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 11 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 11 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07476YZS3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nCj5gX3GL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 10 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 10 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07433147H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51s0BVs-B5L.jpg" class="mr-3 lazyload" alt="まっしぐら！ 9 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 9 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073W8CLLM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JsC1Lt7qL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 8 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 8 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073W7HXVW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Y0BIE7PvL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 7 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 7 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073R6RXL4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eVr2spPsL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 6 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 6 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073R6NL65?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nxgfUUxjL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 5 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 5 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073GV2WND?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hfEjfEHXL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 4 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 4 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>竜崎 遼児(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B072ZWPKR3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tO0KylYgL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 3 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 3 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>山口 都志馬(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B072ZX7Q5B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XJ36xJXCL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 2 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 2 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>山口 都志馬(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071KBQ3F5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MwRww3KOL.jpg" class="mr-3 lazyload" alt="まっしぐら！ 1 (ビヨンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まっしぐら！ 1 (ビヨンドコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>山口 都志馬(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071JQ6SQJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61eUXfanC8L.jpg" class="mr-3 lazyload" alt="獣人聖域 5 暗闇の狩人たち (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>獣人聖域 5 暗闇の狩人たち (ノーラコミックス)</h5>
+                    <p>価格：229円、ポイント：2</p>
+                    <p>鈴宮 和由(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XZXWDJ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QL15MHTCL.jpg" class="mr-3 lazyload" alt="獣人聖域 4 暗闇の狩人たち (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>獣人聖域 4 暗闇の狩人たち (ノーラコミックス)</h5>
+                    <p>価格：229円、ポイント：2</p>
+                    <p>鈴宮 和由(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XZFQLYZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611wamlUbLL.jpg" class="mr-3 lazyload" alt="獣人聖域 3 暗闇の狩人たち (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>獣人聖域 3 暗闇の狩人たち (ノーラコミックス)</h5>
+                    <p>価格：229円、ポイント：2</p>
+                    <p>鈴宮 和由(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XZFKZQ3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VEHEeaxoL.jpg" class="mr-3 lazyload" alt="獣人聖域 2 暗闇の狩人たち (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>獣人聖域 2 暗闇の狩人たち (ノーラコミックス)</h5>
+                    <p>価格：229円、ポイント：2</p>
+                    <p>鈴宮 和由(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XZWKDZP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61M11MPFv0L.jpg" class="mr-3 lazyload" alt="獣人聖域 1 暗闇の狩人たち (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>獣人聖域 1 暗闇の狩人たち (ノーラコミックス)</h5>
+                    <p>価格：229円、ポイント：2</p>
+                    <p>鈴宮 和由(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XZVKVMZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vfVD2AHGL.jpg" class="mr-3 lazyload" alt="ＤＯＬＬ 5 真弾劾凰聖伝 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＤＯＬＬ 5 真弾劾凰聖伝 (ノーラコミックス)</h5>
+                    <p>価格：356円、ポイント：4</p>
+                    <p>平野 俊弘(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06WD67Q1L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51573LQDHEL.jpg" class="mr-3 lazyload" alt="ＤＯＬＬ 4 真弾劾凰聖伝 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＤＯＬＬ 4 真弾劾凰聖伝 (ノーラコミックス)</h5>
+                    <p>価格：356円、ポイント：4</p>
+                    <p>平野 俊弘(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06WLN4XQS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Q-3TZ0YRL.jpg" class="mr-3 lazyload" alt="ＤＯＬＬ 3 真弾劾凰聖伝 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＤＯＬＬ 3 真弾劾凰聖伝 (ノーラコミックス)</h5>
+                    <p>価格：356円、ポイント：4</p>
+                    <p>平野 俊弘(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06WLNKQB8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Hqf6bt8sL.jpg" class="mr-3 lazyload" alt="ＤＯＬＬ 2 真弾劾凰聖伝 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＤＯＬＬ 2 真弾劾凰聖伝 (ノーラコミックス)</h5>
+                    <p>価格：356円、ポイント：4</p>
+                    <p>平野 俊弘(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06VWMF3T9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iySKLcDiL.jpg" class="mr-3 lazyload" alt="ＤＯＬＬ 1 真弾劾凰聖伝 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＤＯＬＬ 1 真弾劾凰聖伝 (ノーラコミックス)</h5>
+                    <p>価格：356円、ポイント：4</p>
+                    <p>平野 俊弘(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06WP7T2QF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61A-lvQ7y3L.jpg" class="mr-3 lazyload" alt="絶体絶命！ 危険生物ワールドを攻略せよ！ 学研まんが 科学ふしぎクエストシリーズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>絶体絶命！ 危険生物ワールドを攻略せよ！ 学研まんが 科学ふしぎクエストシリーズ</h5>
+                    <p>価格：611円、ポイント：6</p>
+                    <p>ミクニシン(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MUBU5HE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61cLYvm2owL.jpg" class="mr-3 lazyload" alt="宇宙のはてまで飛んで行け！ 学研まんが 科学ふしぎクエストシリーズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙のはてまで飛んで行け！ 学研まんが 科学ふしぎクエストシリーズ</h5>
+                    <p>価格：611円、ポイント：6</p>
+                    <p>高山 カツヒコ(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,ノンフィクション・伝記,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NGYTX3X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6187rHj8zDL.jpg" class="mr-3 lazyload" alt="夜明けのタクシードライバー 3 (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜明けのタクシードライバー 3 (学研スマートライブラリ)</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>並木 道夫(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074C1D1Q1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61HxRtL2a-L.jpg" class="mr-3 lazyload" alt="夜明けのタクシードライバー 2 (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜明けのタクシードライバー 2 (学研スマートライブラリ)</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>並木 道夫(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MCT3VMX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SVRikNVaL.jpg" class="mr-3 lazyload" alt="夜明けのタクシードライバー １ (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜明けのタクシードライバー １ (学研スマートライブラリ)</h5>
+                    <p>価格：440円、ポイント：222</p>
+                    <p>並木道夫(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FXJDY6O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZZRe1F7gL.jpg" class="mr-3 lazyload" alt="うまくなるミニバスケットボール 学研まんが 入門シリーズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うまくなるミニバスケットボール 学研まんが 入門シリーズ</h5>
+                    <p>価格：1528円、ポイント：16</p>
+                    <p>松野千歌(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J31H4T6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611spg4IGWL.jpg" class="mr-3 lazyload" alt="ブキミ生物出現 深海からのＳＯＳ！ 学研まんが 科学ふしぎクエストシリーズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ブキミ生物出現 深海からのＳＯＳ！ 学研まんが 科学ふしぎクエストシリーズ</h5>
+                    <p>価格：611円、ポイント：6</p>
+                    <p>高田 慎一郎(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J199V8M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61OVcChy1ZL.jpg" class="mr-3 lazyload" alt="どみなんと track04 ガールズバンド4コマ漫画 (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どみなんと track04 ガールズバンド4コマ漫画 (学研スマートライブラリ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小鐘 博子(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071VVYFTC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SZp0TVycL.jpg" class="mr-3 lazyload" alt="どみなんと track03 ガールズバンド４コマ漫画 (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どみなんと track03 ガールズバンド４コマ漫画 (学研スマートライブラリ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小鐘博子(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01JA8JO90?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fx0Ewr9CL.jpg" class="mr-3 lazyload" alt="どみなんと track02 ガールズバンド４コマ漫画 (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どみなんと track02 ガールズバンド４コマ漫画 (学研スマートライブラリ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小鐘博子(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B018TTUH24?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tMelp3fLL.jpg" class="mr-3 lazyload" alt="どみなんと track01 ガールズバンド４コマ漫画 (学研スマートライブラリ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>どみなんと track01 ガールズバンド４コマ漫画 (学研スマートライブラリ)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小鐘博子(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B018TTUGZW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nsLzy8X9L.jpg" class="mr-3 lazyload" alt="はじめての釣り (学研まんが入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はじめての釣り (学研まんが入門シリーズ)</h5>
+                    <p>価格：1324円、ポイント：668</p>
+                    <p>上地優歩(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ・アウトドア,スポーツ・アウトドア,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IVN3N3S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Qh6K8xWnL.jpg" class="mr-3 lazyload" alt="うまくなるテニス (学研まんが入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うまくなるテニス (学研まんが入門シリーズ)</h5>
+                    <p>価格：763円、ポイント：8</p>
+                    <p>松野 千歌(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IP2JGJK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZQZ+uWhjL.jpg" class="mr-3 lazyload" alt="これでクラスの人気者！ かんたんマジック (学研まんが入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>これでクラスの人気者！ かんたんマジック (学研まんが入門シリーズ)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>ＡＵＮ 幸池重季(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IP2JGJ0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gMinf0PDL.jpg" class="mr-3 lazyload" alt="未来のお仕事入門 (学研まんが入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来のお仕事入門 (学研まんが入門シリーズ)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>東 園子(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IP2JGIQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zHrEHOTXL.jpg" class="mr-3 lazyload" alt="うまくなる水泳 (学研まんが 入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うまくなる水泳 (学研まんが 入門シリーズ)</h5>
+                    <p>価格：1375円、ポイント：14</p>
+                    <p>岩元 健一(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IP2JGIG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61JaVRCBfFL.jpg" class="mr-3 lazyload" alt="ウイルスから人体を守れ！ 学研まんが 科学ふしぎクエストシリーズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウイルスから人体を守れ！ 学研まんが 科学ふしぎクエストシリーズ</h5>
+                    <p>価格：611円、ポイント：6</p>
+                    <p>松本久志(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01I4OXULO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VBvuQQcfL.jpg" class="mr-3 lazyload" alt="もしものときのサバイバル術 (学研まんが入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もしものときのサバイバル術 (学研まんが入門シリーズ)</h5>
+                    <p>価格：1324円、ポイント：13</p>
+                    <p>峯村真(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01I2Z22JQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61UWR32KkxL.jpg" class="mr-3 lazyload" alt="うまくなる少年野球 (学研まんが入門シリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うまくなる少年野球 (学研まんが入門シリーズ)</h5>
+                    <p>価格：763円、ポイント：8</p>
+                    <p>田中顕(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,スポーツ,スポーツ,マンガ,ノンフィクション・伝記,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HI2ISY2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-5T2Z1lyL.jpg" class="mr-3 lazyload" alt="人体迷宮を調査せよ！ めぐる血液の冒険編 学研まんが 科学ふしぎクエストシリーズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人体迷宮を調査せよ！ めぐる血液の冒険編 学研まんが 科学ふしぎクエストシリーズ</h5>
+                    <p>価格：1222円、ポイント：12</p>
+                    <p>ヤマブキショウマ(編集)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E71H9U6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51U+h3WqfJL.jpg" class="mr-3 lazyload" alt="魔法の呪文を唱えたら 2 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法の呪文を唱えたら 2 (ノーラコミックス)</h5>
+                    <p>価格：367円、ポイント：4</p>
+                    <p>鬼八頭かかし(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BD0U4C4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6163F3hrx5L.jpg" class="mr-3 lazyload" alt="魔法の呪文を唱えたら 1 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法の呪文を唱えたら 1 (ノーラコミックス)</h5>
+                    <p>価格：367円、ポイント：4</p>
+                    <p>鬼八頭かかし(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BD0U4BU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xqHeMK6pL.jpg" class="mr-3 lazyload" alt="ヒヒイロカネ　－十兵衛紅蓮剣－ ノーラコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヒヒイロカネ　－十兵衛紅蓮剣－ ノーラコミックス</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>沢田一(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016XVL92M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gQqs93c-L.jpg" class="mr-3 lazyload" alt="さばけ　クノイチーナ ノーラコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さばけ　クノイチーナ ノーラコミックス</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>こやま基夫(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B015624HVY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GCTkMm13L.jpg" class="mr-3 lazyload" alt="学研まんが新ひみつ39 いる？いない？のひみつ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>学研まんが新ひみつ39 いる？いない？のひみつ</h5>
+                    <p>価格：897円、ポイント：453</p>
+                    <p>おがたたかはる(イラスト)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：社会学概論,学習まんが,コミック,マンガ,社会学,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B013P1NV5Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61sdgrEzEDL.jpg" class="mr-3 lazyload" alt="旅×女＝ＯＢ ＧＳコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>旅×女＝ＯＢ ＧＳコミックス</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>かざま鋭二(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV908A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FsA9tK4ML.jpg" class="mr-3 lazyload" alt="フェアウェイに見る夢 ＧＳコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フェアウェイに見る夢 ＧＳコミックス</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>高橋三千綱(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：76-100回,コミック,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YDV905I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61MhGtAcGWL.jpg" class="mr-3 lazyload" alt="りりかる歳時記 (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>りりかる歳時記 (ノーラコミックス)</h5>
+                    <p>価格：815円、ポイント：412</p>
+                    <p>都築真紀(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V7VM6L2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VLzFn7-xL.jpg" class="mr-3 lazyload" alt="学研まんが新ひみつ40　医学のひみつ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>学研まんが新ひみつ40　医学のひみつ</h5>
+                    <p>価格：920円、ポイント：440</p>
+                    <p>茨木保(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：学習まんが,コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NPPY300?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614EiYaJPcL.jpg" class="mr-3 lazyload" alt="リトル・チャレンジャー　Ｗａｋｅ　Ｕｐ，Ｇｉｒｌｓ！－ｓｉｄｅ　Ｉ－１ｃｌｕｂ－１ ノーラコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>リトル・チャレンジャー　Ｗａｋｅ　Ｕｐ，Ｇｉｒｌｓ！－ｓｉｄｅ　Ｉ－１ｃｌｕｂ－１ ノーラコミックス</h5>
+                    <p>価格：693円、ポイント：349</p>
+                    <p>Ｕ．Ｇ．Ｅ(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TS42XDQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517iLL2A-rL.jpg" class="mr-3 lazyload" alt="劇場版　Ｗａｋｅ　Ｕｐ，Ｇｉｒｌｓ！　七人のアイドル (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>劇場版　Ｗａｋｅ　Ｕｐ，Ｇｉｒｌｓ！　七人のアイドル (ノーラコミックス)</h5>
+                    <p>価格：713円、ポイント：360</p>
+                    <p>緋呂河とも(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,文学・評論,少年マンガ,読み物</p>
+                    <a href="https://www.amazon.co.jp/dp/B00O42ZBN6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zqFj+U7wL.jpg" class="mr-3 lazyload" alt="風来狼　ＳＴＲＡＹ　ＷＯＬＶＥＳ　２ ノーラコミックス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>風来狼　ＳＴＲＡＹ　ＷＯＬＶＥＳ　２ ノーラコミックス</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>蕗野冬(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016XVL94A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61v9JMKu7GL.jpg" class="mr-3 lazyload" alt="風来狼　ＳＴＲＡＹ　ＷＯＬＶＥＳ　１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>風来狼　ＳＴＲＡＹ　ＷＯＬＶＥＳ　１</h5>
+                    <p>価格：509円、ポイント：257</p>
+                    <p>蕗野冬(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：ジャンル別,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00N1S1VY2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F1U136qWL.jpg" class="mr-3 lazyload" alt="斬殺サーカス　２ (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>斬殺サーカス　２ (ノーラコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>御茶漬海苔(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B015624H64?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51soxMGs2WL.jpg" class="mr-3 lazyload" alt="斬殺サーカス　１　無料電子版"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>斬殺サーカス　１　無料電子版</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>御茶漬海苔(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック・ラノベ・BL,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MNFXITK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ic7Eir7CL.jpg" class="mr-3 lazyload" alt="ＣＡＮＤＹ　ＳＡＭＵＲＡＩ　ＷＡＲＳ！　２ ＣＡＮＤＹ ＳＡＭＵＲＡＩ ＷＡＲＳ！ (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＣＡＮＤＹ　ＳＡＭＵＲＡＩ　ＷＡＲＳ！　２ ＣＡＮＤＹ ＳＡＭＵＲＡＩ ＷＡＲＳ！ (ノーラコミックス)</h5>
+                    <p>価格：509円、ポイント：257</p>
+                    <p>ヒロモト森一(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B015624H78?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SCgu5ZS+L.jpg" class="mr-3 lazyload" alt="ＣＡＮＤＹ　ＳＡＭＵＲＡＩ　ＷＡＲＳ！　１ ＣＡＮＤＹ ＳＡＭＵＲＡＩ ＷＡＲＳ！ (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＣＡＮＤＹ　ＳＡＭＵＲＡＩ　ＷＡＲＳ！　１ ＣＡＮＤＹ ＳＡＭＵＲＡＩ ＷＡＲＳ！ (ノーラコミックス)</h5>
+                    <p>価格：254円、ポイント：3</p>
+                    <p>ヒロモト森一(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MNFXJ08?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GlpA9xnnL.jpg" class="mr-3 lazyload" alt="信長の野望～輪廻転将～ ３ (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>信長の野望～輪廻転将～ ３ (ノーラコミックス)</h5>
+                    <p>価格：509円、ポイント：257</p>
+                    <p>小野洋一郎(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016XVL97W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61jNAJ4VXOL.jpg" class="mr-3 lazyload" alt="信長の野望～輪廻転将～ ２ (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>信長の野望～輪廻転将～ ２ (ノーラコミックス)</h5>
+                    <p>価格：509円、ポイント：257</p>
+                    <p>小野洋一郎(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B015624H28?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61rdxBGtvUL.jpg" class="mr-3 lazyload" alt="信長の野望～輪廻転将～ １ (ノーラコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>信長の野望～輪廻転将～ １ (ノーラコミックス)</h5>
+                    <p>価格：509円、ポイント：257</p>
+                    <p>小野洋一郎(著)</p>
+                    <p>出版社：学研プラス</p>
+<p>カテゴリー：コミック,少年マンガ,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MNFXIW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
