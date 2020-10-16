@@ -1,0 +1,2016 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EbFCd-HvL.jpg" class="mr-3 lazyload" alt="官邸ポリス　総理を支配する闇の集団"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>官邸ポリス　総理を支配する闇の集団</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>幕蓮(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L4JY1YN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qOxwPXX7L.jpg" class="mr-3 lazyload" alt="告白　あるＰＫＯ隊員の死・２３年目の真実"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>告白　あるＰＫＯ隊員の死・２３年目の真実</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>旗手啓介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B0791628RS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rcNJ2DhzL.jpg" class="mr-3 lazyload" alt="工作員・西郷隆盛　謀略の幕末維新史 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>工作員・西郷隆盛　謀略の幕末維新史 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>倉山満(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本史一般,Featured Categories,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B077CYXZ5F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uV4u-JwJL.jpg" class="mr-3 lazyload" alt="空あかり　山一證券“しんがり”百人の言葉"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>空あかり　山一證券“しんがり”百人の言葉</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>清武英利(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B076V7WM4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hBWN5A1OL.jpg" class="mr-3 lazyload" alt="佐治敬三と開高健　最強のふたり　上下巻合本版"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>佐治敬三と開高健　最強のふたり　上下巻合本版</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>北康利(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B076Z82K53?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fpY6lPoEL.jpg" class="mr-3 lazyload" alt="スタートアップ・バブル　愚かな投資家と幼稚な起業家"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スタートアップ・バブル　愚かな投資家と幼稚な起業家</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>ダン・ライオンズ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B072MGX964?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51g11tnvBeL.jpg" class="mr-3 lazyload" alt="日本中枢の狂謀"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本中枢の狂謀</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>古賀茂明(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B0725RCPKC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ec3a+IiRL.jpg" class="mr-3 lazyload" alt="「ごじゃ」の一分　竹中武　最後の任侠ヤクザ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「ごじゃ」の一分　竹中武　最後の任侠ヤクザ</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>牧村康正(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B071D591NC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EaYA6FH-L.jpg" class="mr-3 lazyload" alt="文士の遺言　なつかしき作家たちと昭和史"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>文士の遺言　なつかしき作家たちと昭和史</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>半藤一利(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本史一般,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XPCRKHN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t9MciFwxL.jpg" class="mr-3 lazyload" alt="昭和解体　国鉄分割・民営化３０年目の真実"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昭和解体　国鉄分割・民営化３０年目の真実</h5>
+                    <p>価格：1540円、ポイント：15</p>
+                    <p>牧久(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XPB6FM8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WMgml542L.jpg" class="mr-3 lazyload" alt="愛国とノーサイド　松任谷家と頭山家"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛国とノーサイド　松任谷家と頭山家</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>延江浩(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,世界史</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XKSW67F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I6Wd-rEJL.jpg" class="mr-3 lazyload" alt="情熱の階段　日本人闘牛士、たった一人の挑戦"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>情熱の階段　日本人闘牛士、たった一人の挑戦</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>濃野平(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MZIC9Q8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cAQIGzqkL.jpg" class="mr-3 lazyload" alt="日本農業再生論　「自然栽培」革命で日本は世界一になる！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本農業再生論　「自然栽培」革命で日本は世界一になる！</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>高野誠鮮(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N0PY659?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Eug3SflyL.jpg" class="mr-3 lazyload" alt="このまま死んでる場合じゃない！　がん生存率０％から「治ったわけ」「治せるわけ」"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>このまま死んでる場合じゃない！　がん生存率０％から「治ったわけ」「治せるわけ」</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>岡田直美(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,医学・薬学,科学・テクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NCIJ8HA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oBlGzQsXL.jpg" class="mr-3 lazyload" alt="知られざる天皇明仁"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>知られざる天皇明仁</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>橋本明(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MF9PVRQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51p9TmR6-IL.jpg" class="mr-3 lazyload" alt="逆臣　青木幹雄"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逆臣　青木幹雄</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>松田賢弥(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LWPSJBS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519HXHvW++L.jpg" class="mr-3 lazyload" alt="財務省と大新聞が隠す本当は世界一の日本経済 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>財務省と大新聞が隠す本当は世界一の日本経済 (講談社＋α新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>上念司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M18DXGJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fHgoO9LhL.jpg" class="mr-3 lazyload" alt="ルポ　ニッポン絶望工場 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ルポ　ニッポン絶望工場 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>出井康博(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ISJMB1U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51E+pk603QL.jpg" class="mr-3 lazyload" alt="老後親子破産"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>老後親子破産</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>ＮＨＫスペシャル取材班(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FU87REI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513VQ4EeyWL.jpg" class="mr-3 lazyload" alt="マグロ大王　木村清　ダメだと思った時が夜明け前"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マグロ大王　木村清　ダメだと思った時が夜明け前</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>木村清(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FDIESW4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z5LxZJmfL.jpg" class="mr-3 lazyload" alt="失われた甲子園　記憶をなくしたエースと１９８９年の球児たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>失われた甲子園　記憶をなくしたエースと１９８９年の球児たち</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>赤坂英一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E8JZT6I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eIXQQkXgL.jpg" class="mr-3 lazyload" alt="柳家三三、春風亭一之輔、桃月庵白酒、三遊亭兼好、三遊亭白鳥　「落語家」という生き方"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>柳家三三、春風亭一之輔、桃月庵白酒、三遊亭兼好、三遊亭白鳥　「落語家」という生き方</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>広瀬和生(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B01C3P4GMM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41XRs8ZPv0L.jpg" class="mr-3 lazyload" alt="阪神タイガース「黒歴史」 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>阪神タイガース「黒歴史」 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>平井隆司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：スポーツ,Featured Categories,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BWMRHTG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41zbXvvdo6L.jpg" class="mr-3 lazyload" alt="あの日"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あの日</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>小保方晴子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,科学・テクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01B40BMLK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uiFAJpSoL.jpg" class="mr-3 lazyload" alt="愚か者"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愚か者</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>松田公太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+                    <a href="https://www.amazon.co.jp/dp/B01AXDU2JC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Z1FyVKQOL.jpg" class="mr-3 lazyload" alt="火野正平　若くなるには、時間がかかる"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>火野正平　若くなるには、時間がかかる</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>火野正平(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B01AXDU2GU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ALsod+UqL.jpg" class="mr-3 lazyload" alt="昭和の怪物　裏も表も芸能界"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昭和の怪物　裏も表も芸能界</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>なべおさみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B019MS80AW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MhNYLQ3eL.jpg" class="mr-3 lazyload" alt="あなたの子宮を貸してください"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あなたの子宮を貸してください</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>平井美帆(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B019DX6512?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Qd10x9SRL.jpg" class="mr-3 lazyload" alt="ぼくは科学の力で世界を変えることに決めた"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぼくは科学の力で世界を変えることに決めた</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>ジャック・アンドレイカ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B018K6C9SQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IufrreMQL.jpg" class="mr-3 lazyload" alt="典獄と９３４人のメロス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>典獄と９３４人のメロス</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>坂本敏夫(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B018SD2K8U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mXK7RmLtL.jpg" class="mr-3 lazyload" alt="「家栽の人」から君への遺言　佐世保高一同級生殺害事件と少年法"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「家栽の人」から君への遺言　佐世保高一同級生殺害事件と少年法</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>毛利甚八(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B016W5YGQK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5188RrvjJgL.jpg" class="mr-3 lazyload" alt="安倍政権の裏の顔　「攻防　集団的自衛権」ドキュメント"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>安倍政権の裏の顔　「攻防　集団的自衛権」ドキュメント</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>朝日新聞政治部取材班(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B016O8V3YI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61OJXeHS9YL.jpg" class="mr-3 lazyload" alt="三重スパイ　イスラム過激派を監視した男"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三重スパイ　イスラム過激派を監視した男</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>小倉孝保(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B0142O1E3G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cYd86CvNL.jpg" class="mr-3 lazyload" alt="流通王　中内功とは何者だったのか"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>流通王　中内功とは何者だったのか</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>大塚英樹(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B010AY2E7C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51s0p10Xm8L.jpg" class="mr-3 lazyload" alt="ローマ法王に米を食べさせた男　過疎の村を救ったスーパー公務員は何をしたか？ (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ローマ法王に米を食べさせた男　過疎の村を救ったスーパー公務員は何をしたか？ (講談社＋α新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>高野誠鮮(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ZZOGCUI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hmEZYqe1L.jpg" class="mr-3 lazyload" alt="夕張再生市長　課題先進地で見た「人口減少ニッポン」を生き抜くヒント"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夕張再生市長　課題先進地で見た「人口減少ニッポン」を生き抜くヒント</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>鈴木直道(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YA3SS7A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VDAzG1puL.jpg" class="mr-3 lazyload" alt="違う自分になれ！　ウルトラマラソンの方程式"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>違う自分になれ！　ウルトラマラソンの方程式</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>岩本能史(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YA3SRIK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/415FIHICVKL.jpg" class="mr-3 lazyload" alt="介護士からプロ棋士へ　大器じゃないけど、晩成しました"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>介護士からプロ棋士へ　大器じゃないけど、晩成しました</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>今泉健司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・実用</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YA3SW1W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41s-ocoP+eL.jpg" class="mr-3 lazyload" alt="「みにくいあひるの子」だった私"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「みにくいあひるの子」だった私</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>梅宮アンナ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B00UUQ488O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510bfzs2lVL.jpg" class="mr-3 lazyload" alt="放射線を浴びたＸ年後"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放射線を浴びたＸ年後</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>伊東英朗(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00UTD8EXS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41WCDKG1qEL.jpg" class="mr-3 lazyload" alt="牙　江夏豊とその時代"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>牙　江夏豊とその時代</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>後藤正治(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00OKC1ZLC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lOPcg-+KL.jpg" class="mr-3 lazyload" alt="スカウト・デイズ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スカウト・デイズ (講談社文庫)</h5>
+                    <p>価格：858円、ポイント：51</p>
+                    <p>本城雅人(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N280VLL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A6leDhzwL.jpg" class="mr-3 lazyload" alt="甦る鼓動"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甦る鼓動</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>後藤正治(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00OKC1ZGC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JenmYHlaL.jpg" class="mr-3 lazyload" alt="習近平は必ず金正恩を殺す"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>習近平は必ず金正恩を殺す</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>近藤大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NV7KWC0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513DOE8GrsL.jpg" class="mr-3 lazyload" alt="稚拙なる者は去れ　天才心臓外科医・渡邊剛の覚悟"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>稚拙なる者は去れ　天才心臓外科医・渡邊剛の覚悟</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>細井勝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NOTKO5K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HR0jdVk8L.jpg" class="mr-3 lazyload" alt="被災鉄道　復興への道"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>被災鉄道　復興への道</h5>
+                    <p>価格：1425円、ポイント：14</p>
+                    <p>芦原伸(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MOYKJJM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nQGnL2jPL.jpg" class="mr-3 lazyload" alt="儒学殺人事件　堀田正俊と徳川綱吉"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>儒学殺人事件　堀田正俊と徳川綱吉</h5>
+                    <p>価格：1771円、ポイント：18</p>
+                    <p>小川和也(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本史一般,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KKBBRYC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nxRJWfq0L.jpg" class="mr-3 lazyload" alt="球童　伊良部秀輝伝"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>球童　伊良部秀輝伝</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>田崎健太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KGWB632?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41T2sXOimEL.jpg" class="mr-3 lazyload" alt="ラスト・バタリオン　蒋介石と日本軍人たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラスト・バタリオン　蒋介石と日本軍人たち</h5>
+                    <p>価格：1540円、ポイント：15</p>
+                    <p>野嶋剛(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KGWB5XS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ziCtWeJDL.jpg" class="mr-3 lazyload" alt="城山三郎伝　筆に限りなし"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>城山三郎伝　筆に限りなし</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>加藤仁(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JQYYC3M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51v5SmmAMeL.jpg" class="mr-3 lazyload" alt="消えた警官　ドキュメント　菅生事件"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>消えた警官　ドキュメント　菅生事件</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>坂上遼(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4G0QEQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41KMQE2D35L.jpg" class="mr-3 lazyload" alt="実録　アングラマネー　日本経済を喰いちぎる闇勢力たち (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>実録　アングラマネー　日本経済を喰いちぎる闇勢力たち (講談社＋α新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>有森隆(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ISQDX8E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/412vgU7RX9L.jpg" class="mr-3 lazyload" alt="京都・同和「裏」行政　現役市会議員が見た「虚構」と「真実」 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>京都・同和「裏」行政　現役市会議員が見た「虚構」と「真実」 (講談社＋α新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>村山祥栄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ISQDWD0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/413vc4Uz22L.jpg" class="mr-3 lazyload" alt="負けない技術　20年間無敗、伝説の雀鬼の「逆境突破力」 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>負けない技術　20年間無敗、伝説の雀鬼の「逆境突破力」 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>桜井章一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,趣味・実用</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I9526Y6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Vn6l7RmWL.jpg" class="mr-3 lazyload" alt="昭和に火をつけた男　青島幸男とその時代"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昭和に火をつけた男　青島幸男とその時代</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>森炎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HV9URXI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TPH8LFhgL.jpg" class="mr-3 lazyload" alt="大阪破産からの再生"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大阪破産からの再生</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>吉富有治(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HFQDHGG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-eUvOWkvL.jpg" class="mr-3 lazyload" alt="冤罪法廷　特捜検察の落日"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>冤罪法廷　特捜検察の落日</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>魚住昭(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB87PK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kptFWnUcL.jpg" class="mr-3 lazyload" alt="君は隅田川に消えたのか　藤牧義夫と版画の虚実"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>君は隅田川に消えたのか　藤牧義夫と版画の虚実</h5>
+                    <p>価格：1425円、ポイント：14</p>
+                    <p>駒村吉重(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB87X2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fjnPUiVuL.jpg" class="mr-3 lazyload" alt="革命をプロデュースした日本人　評伝　梅屋庄吉"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>革命をプロデュースした日本人　評伝　梅屋庄吉</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>小坂文乃(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：歴史学,歴史学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB87IM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k3zDsmTKL.jpg" class="mr-3 lazyload" alt="ザ・グレート・フライト　ＪＡＬを飛んだ４２年　太陽は西からも昇る"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ザ・グレート・フライト　ＪＡＬを飛んだ４２年　太陽は西からも昇る</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>小林宏之(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB87LY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Cz-HynDHL.jpg" class="mr-3 lazyload" alt="巨象の漂流　ＪＡＬという罠"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>巨象の漂流　ＪＡＬという罠</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>小野展克(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB89MG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512jGeY8FRL.jpg" class="mr-3 lazyload" alt="２０２０年新聞は生き残れるか"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>２０２０年新聞は生き残れるか</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>長谷川幸洋(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：本・雑誌研究,ノンフィクション,本・図書館</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB853E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41wlZC+m2eL.jpg" class="mr-3 lazyload" alt="職業、ブックライター。　毎月１冊１０万字書く私の方法"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>職業、ブックライター。　毎月１冊１０万字書く私の方法</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>上阪徹(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB84X0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QKVPnY26L.jpg" class="mr-3 lazyload" alt="最後の職人　池波正太郎が愛した近藤文夫"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最後の職人　池波正太郎が愛した近藤文夫</h5>
+                    <p>価格：1194円、ポイント：12</p>
+                    <p>中原一歩(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HCB843U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511Eu6+3siL.jpg" class="mr-3 lazyload" alt="行人坂の魔物　みずほ銀行とハゲタカ・ファンドに取り憑いた「呪縛」"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>行人坂の魔物　みずほ銀行とハゲタカ・ファンドに取り憑いた「呪縛」</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>町田徹(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00H1RHJC2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ds4erQNEL.jpg" class="mr-3 lazyload" alt="箱根駅伝に賭けた夢　「消えたオリンピック走者」金栗四三がおこした奇跡"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>箱根駅伝に賭けた夢　「消えたオリンピック走者」金栗四三がおこした奇跡</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>佐山和夫(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GXRUPUE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51frJ2urA8L.jpg" class="mr-3 lazyload" alt="ロッキード秘録　吉永祐介と四十七人の特捜検事たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ロッキード秘録　吉永祐介と四十七人の特捜検事たち</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>坂上遼(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00F2H34OK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JQt-o+0nL.jpg" class="mr-3 lazyload" alt="平成デモクラシー　政治改革２５年の歴史"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>平成デモクラシー　政治改革２５年の歴史</h5>
+                    <p>価格：2156円、ポイント：22</p>
+                    <p>佐々木毅(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ENC7MBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yv8TlrB2L.jpg" class="mr-3 lazyload" alt="パンとペン　社会主義者・堺利彦と「売文社」の闘い"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パンとペン　社会主義者・堺利彦と「売文社」の闘い</h5>
+                    <p>価格：1540円、ポイント：15</p>
+                    <p>黒岩比佐子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00EDH560K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/410uiBjDYKL.jpg" class="mr-3 lazyload" alt="年金詐欺　ＡＩＪ事件から始まった資産消失の「真犯人」"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>年金詐欺　ＡＩＪ事件から始まった資産消失の「真犯人」</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>永森秀和(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E3N024O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ghZ9pkPGL.jpg" class="mr-3 lazyload" alt="奇跡のりんごスープ物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>奇跡のりんごスープ物語</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>山崎隆(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E3N01TK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oQ9c78ATL.jpg" class="mr-3 lazyload" alt="２０３０年　世界はこう変わる　アメリカ情報機関が分析した「１７年後の未来」"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>２０３０年　世界はこう変わる　アメリカ情報機関が分析した「１７年後の未来」</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>米国国家情報会議(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKX4BFO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41OSqv2fWGL.jpg" class="mr-3 lazyload" alt="将棋の天才たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将棋の天才たち</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>米長邦雄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,ノンフィクション,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DCIQZQK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/419HzoIeV5L.jpg" class="mr-3 lazyload" alt="秘録　核スクープの裏側"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>秘録　核スクープの裏側</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>太田昌克(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CXBDG3C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ouk1+WI0L.jpg" class="mr-3 lazyload" alt="評伝　今西錦司　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>評伝　今西錦司　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSBJK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41UFyCg9y6L.jpg" class="mr-3 lazyload" alt="現代家系論　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>現代家系論　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELS9OC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41rpxTP+EAL.jpg" class="mr-3 lazyload" alt="私戦　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私戦　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSALY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41KrpIexghL.jpg" class="mr-3 lazyload" alt="警察回り　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>警察回り　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSB5Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510yN9D-DKL.jpg" class="mr-3 lazyload" alt="私たちのオモニ　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私たちのオモニ　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSBFO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XuOPXUj3L.jpg" class="mr-3 lazyload" alt="栄光の叛逆者　小西政継の軌跡　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>栄光の叛逆者　小西政継の軌跡　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSATG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ksL4tjLZL.jpg" class="mr-3 lazyload" alt="ロサンゼルスの日本人　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ロサンゼルスの日本人　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSBB8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bxHSC2e9L.jpg" class="mr-3 lazyload" alt="ドキュメント脱出　４６００キロ・イランからの決死行　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドキュメント脱出　４６００キロ・イランからの決死行　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSAT6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Z3x1Qs31L.jpg" class="mr-3 lazyload" alt="時代を視る眼　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>時代を視る眼　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSBJA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51O0+LWIPLL.jpg" class="mr-3 lazyload" alt="日本ネオ官僚論　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本ネオ官僚論　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELS9KQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51e2I-9M3QL.jpg" class="mr-3 lazyload" alt="新・ニューヨークの日本人　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新・ニューヨークの日本人　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSAVY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Oly3FjvEL.jpg" class="mr-3 lazyload" alt="新聞記者の詩　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新聞記者の詩　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSAYQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/419s+hEv4EL.jpg" class="mr-3 lazyload" alt="村が消えた　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>村が消えた　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSAS2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MyfkAGAWL.jpg" class="mr-3 lazyload" alt="我、拗ね者として生涯を閉ず　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>我、拗ね者として生涯を閉ず　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSBM2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41WA7XHMeuL.jpg" class="mr-3 lazyload" alt="不当逮捕　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>不当逮捕　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSAWS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51exVQwBp0L.jpg" class="mr-3 lazyload" alt="日本ネオ官僚論〈続〉　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本ネオ官僚論〈続〉　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELS9PQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EiDiiba9L.jpg" class="mr-3 lazyload" alt="オリエント急行の旅　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>オリエント急行の旅　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSA46?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41I07rigtYL.jpg" class="mr-3 lazyload" alt="誘拐　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>誘拐　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSA9Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/4171s3PiKQL.jpg" class="mr-3 lazyload" alt="疵　花形敬とその時代　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>疵　花形敬とその時代　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSB54?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511yQQ1VpmL.jpg" class="mr-3 lazyload" alt="体験的新聞紙学　本田靖春全作品集"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>体験的新聞紙学　本田靖春全作品集</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>本田靖春(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CELSA00?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-yurlN7GL.jpg" class="mr-3 lazyload" alt="秘録・日韓１兆円資金"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>秘録・日韓１兆円資金</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>小倉和夫(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：国際政治情勢,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B00C6PJ544?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HFgEE6gBL.jpg" class="mr-3 lazyload" alt="官報複合体　権力と一体化する新聞の大罪"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>官報複合体　権力と一体化する新聞の大罪</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>牧野洋(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：本・雑誌研究,本・図書館</p>
+                    <a href="https://www.amazon.co.jp/dp/B00C1E2YMA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zi3zZ+DXL.jpg" class="mr-3 lazyload" alt="減電社会　コミュニティから始めるエネルギー革命"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>減電社会　コミュニティから始めるエネルギー革命</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>小澤祥司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BN6S7V4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51C5E3tg7JL.jpg" class="mr-3 lazyload" alt="伏見稲荷の暗号　秦氏の謎"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>伏見稲荷の暗号　秦氏の謎</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>関裕二(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本史一般,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BTAZGW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wuk8Ql9SL.jpg" class="mr-3 lazyload" alt="塀の上を走れ　田原総一朗自伝"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>塀の上を走れ　田原総一朗自伝</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>田原総一朗(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AXU54EY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517-e+sM-bL.jpg" class="mr-3 lazyload" alt="実録　朝日新聞水滸伝"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>実録　朝日新聞水滸伝</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>宮下賢一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ARCP2G8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41EahpeFaxL.jpg" class="mr-3 lazyload" alt="証言　民主党政権"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>証言　民主党政権</h5>
+                    <p>価格：1386円、ポイント：14</p>
+                    <p>薬師寺克行(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ARCP15K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51au932bV3L.jpg" class="mr-3 lazyload" alt="最後の社主　朝日新聞が秘封した「御影の令嬢」へのレクイエム"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最後の社主　朝日新聞が秘封した「御影の令嬢」へのレクイエム</h5>
+                    <p>価格：1271円、ポイント：13</p>
+                    <p>樋田毅(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B085Y1YL7P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515UjWqISTL.jpg" class="mr-3 lazyload" alt="強欲「奴隷国家」からの脱却　非正規労働時代をマルクスが読み解いたら (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>強欲「奴隷国家」からの脱却　非正規労働時代をマルクスが読み解いたら (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>浜矩子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NQMXX9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UQWuNcuvL.jpg" class="mr-3 lazyload" alt="ソフトバンク崩壊の恐怖と農中・ゆうちょに迫る金融危機 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ソフトバンク崩壊の恐怖と農中・ゆうちょに迫る金融危機 (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>黒川敦彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NQFSP9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZiDm4012L.jpg" class="mr-3 lazyload" alt="裁判官も人である　良心と組織の狭間で"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>裁判官も人である　良心と組織の狭間で</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>岩瀬達哉(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B08421WT8P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PDuqbDecL.jpg" class="mr-3 lazyload" alt="世界のスパイから喰いモノにされる日本　ＭＩ６、ＣＩＡの厳秘インテリジェンス (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界のスパイから喰いモノにされる日本　ＭＩ６、ＣＩＡの厳秘インテリジェンス (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>山田敏弘(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：国際政治情勢,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B083TZL3R5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YbyAu+NuL.jpg" class="mr-3 lazyload" alt="全身美容外科医　道なき先にカネはある (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>全身美容外科医　道なき先にカネはある (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>高須克弥(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B0827VFCTM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d7WBTnhZL.jpg" class="mr-3 lazyload" alt="ファーウェイと米中５Ｇ戦争 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ファーウェイと米中５Ｇ戦争 (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>近藤大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：国際政治情勢,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TXB21FP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qkRWADHQL.jpg" class="mr-3 lazyload" alt="昭和政争１　闇将軍・角栄最後の１０００日"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昭和政争１　闇将軍・角栄最後の１０００日</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>中村慶一郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TT5LLW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BJtHMQW0L.jpg" class="mr-3 lazyload" alt="日本を売る本当に悪いやつら (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本を売る本当に悪いやつら (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>佐高信(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SST5HY9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5144ugqxZCL.jpg" class="mr-3 lazyload" alt="秘録・自民党政務調査会　１６人の総理に仕えた男の真実の告白"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>秘録・自民党政務調査会　１６人の総理に仕えた男の真実の告白</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>田村重信(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SGQZZ1B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41BEJmgQVYL.jpg" class="mr-3 lazyload" alt="ショーケン　最終章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ショーケン　最終章</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>萩原健一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,ノンフィクション,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RVL4LXP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517Oox36ZeL.jpg" class="mr-3 lazyload" alt="トッカイ　バブルの怪人を追いつめた男たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>トッカイ　バブルの怪人を追いつめた男たち</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>清武英利(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QKWXZ1N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HyW7m1taL.jpg" class="mr-3 lazyload" alt="ホシノカケラ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホシノカケラ</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>稲葉なおと(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QFCRG1D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5152UY1cIsL.jpg" class="mr-3 lazyload" alt="いらない保険　生命保険会社が知られたくない「本当の話」 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いらない保険　生命保険会社が知られたくない「本当の話」 (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>後田亨(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済,投資・金融・会社経営</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PKPFNWF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/413A1WclFCL.jpg" class="mr-3 lazyload" alt="人が集まる会社　人が逃げ出す会社 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人が集まる会社　人が逃げ出す会社 (講談社＋α新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>下田直人(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L2V762S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bO63V-nsL.jpg" class="mr-3 lazyload" alt="地面師　他人の土地を売り飛ばす闇の詐欺集団"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地面師　他人の土地を売り飛ばす闇の詐欺集団</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>森功(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KVLMCSW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41hXJcX1eUL.jpg" class="mr-3 lazyload" alt="アベノリスク　日本を融解させる７つの大罪"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アベノリスク　日本を融解させる７つの大罪</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>植草一秀(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KM33LVV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41gMEx7qPPL.jpg" class="mr-3 lazyload" alt="キャッチャーという人生"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャッチャーという人生</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>赤坂英一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HN3QZJL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41pehttJLfL.jpg" class="mr-3 lazyload" alt="プロ野球　二軍監督－－男たちの誇り"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プロ野球　二軍監督－－男たちの誇り</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>赤坂英一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HN36HZX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51n7BhvCPVL.jpg" class="mr-3 lazyload" alt="最後のクジラ――大洋ホエールズ・田代富雄の野球人生"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最後のクジラ――大洋ホエールズ・田代富雄の野球人生</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>赤坂英一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HMZJSTC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IBb7YXDqL.jpg" class="mr-3 lazyload" alt="山口組三国志　織田絆誠という男"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>山口組三国志　織田絆誠という男</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>溝口敦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H8XG94Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jWGrJTtDL.jpg" class="mr-3 lazyload" alt="沖縄アンダーグラウンド　売春街を生きた者たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>沖縄アンダーグラウンド　売春街を生きた者たち</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>藤井誠二(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GVFF11P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KnnMut-ML.jpg" class="mr-3 lazyload" alt="名古屋円頓寺商店街の奇跡 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>名古屋円頓寺商店街の奇跡 (講談社＋α新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>山口あゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GDGQXBX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gmz43He2L.jpg" class="mr-3 lazyload" alt="自民党本流と保守本流　保守二党ふたたび"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>自民党本流と保守本流　保守二党ふたたび</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>田中秀征(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F68YQMB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VLoz3npvL.jpg" class="mr-3 lazyload" alt="特権キャリア警察官　日本を支配する６００人の野望"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>特権キャリア警察官　日本を支配する６００人の野望</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>時任兼作(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D745Z5F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51p8I3xmdOL.jpg" class="mr-3 lazyload" alt="日本再興のカギを握る「ソニーのＤＮＡ」 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本再興のカギを握る「ソニーのＤＮＡ」 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>佐高信(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CF73MD6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41p1K1GgRZL.jpg" class="mr-3 lazyload" alt="宿命　警察庁長官狙撃事件　捜査第一課元刑事の２３年"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宿命　警察庁長官狙撃事件　捜査第一課元刑事の２３年</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>原雄一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BPQRFV1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UwN1SP+pL.jpg" class="mr-3 lazyload" alt="経団連と増税政治家が壊す本当は世界一の日本経済 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経団連と増税政治家が壊す本当は世界一の日本経済 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>上念司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B079RZYQR4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ySR7dq-rL.jpg" class="mr-3 lazyload" alt="創価学会秘史"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>創価学会秘史</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>高橋篤史(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B079SDMWGW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51laGRiIusL.jpg" class="mr-3 lazyload" alt="大学病院の奈落"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大学病院の奈落</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>高梨ゆき子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B079DHWP5H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LVeJ2bkNL.jpg" class="mr-3 lazyload" alt="「米軍が恐れた不屈の男」瀬長亀次郎の生涯"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「米軍が恐れた不屈の男」瀬長亀次郎の生涯</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>佐古忠彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B0796P8KLN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41tRoRe5mqL.jpg" class="mr-3 lazyload" alt="和牛詐欺　人を騙す犯罪はなぜなくならないのか"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>和牛詐欺　人を騙す犯罪はなぜなくならないのか</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>斉藤友彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BJ09J0M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51puaWWpwnL.jpg" class="mr-3 lazyload" alt="生麦事件の暗号"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生麦事件の暗号</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>松沢成文(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本史一般,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00C6PJ45Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gquNkdFKL.jpg" class="mr-3 lazyload" alt="漂流するソニーのＤＮＡ　プレイステーションで世界と戦った男たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>漂流するソニーのＤＮＡ　プレイステーションで世界と戦った男たち</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>西田宗千佳(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,工学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AJCLWG0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MDdRLNyQL.jpg" class="mr-3 lazyload" alt="司法殺人　元裁判官が問う歪んだ死刑判決"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>司法殺人　元裁判官が問う歪んだ死刑判決</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>森炎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,法律</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AJCLV70?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41sO1T9UrrL.jpg" class="mr-3 lazyload" alt="「東京電力」研究　排除の系譜"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「東京電力」研究　排除の系譜</h5>
+                    <p>価格：1194円、ポイント：159</p>
+                    <p>斎藤貴男(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BFAS1JQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41XXi9odJgL.jpg" class="mr-3 lazyload" alt="昭　田中角栄と生きた女"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昭　田中角栄と生きた女</h5>
+                    <p>価格：1001円、ポイント：204</p>
+                    <p>佐藤あつ子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B009I7KNW6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+UzqZYWHL.jpg" class="mr-3 lazyload" alt="モンスターワイフ　幸せなふりはもうしない (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>モンスターワイフ　幸せなふりはもうしない (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>二松まゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B009I7KNJ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61h4TByRszL.jpg" class="mr-3 lazyload" alt="釜ケ崎有情　すべてのものが流れ着く海のような街で"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>釜ケ崎有情　すべてのものが流れ着く海のような街で</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>神田誠司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B009I7KMU4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rwbs2eGkL.jpg" class="mr-3 lazyload" alt="日本中枢の崩壊"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本中枢の崩壊</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>古賀茂明(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：行政・官公庁,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXM3UW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sJQuZBA-L.jpg" class="mr-3 lazyload" alt="ザ・ラストバンカー　西川善文回顧録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ザ・ラストバンカー　西川善文回顧録</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>西川善文(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ビジネス・経済,投資・金融・会社経営,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B009GXM2P8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
