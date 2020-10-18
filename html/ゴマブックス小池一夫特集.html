@@ -1,0 +1,2328 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FYshxy5GL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本5（13−15）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本5（13−15）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S68F69K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lo6adbYjL.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　6　畢竟自衛の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　6　畢竟自衛の章</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRY3XRF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517QcIvGl4L.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　5　天下布武の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　5　天下布武の章</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRY29H2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IWcP3QnRL.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　4　会者定離の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　4　会者定離の章</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRYXFTZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KGd1hqvKL.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　3　道諦の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　3　道諦の章</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRYS5M4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yTY4YCsjL.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　2　集諦の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　2　集諦の章</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRY6QBW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61aNUTbCb6L.jpg" class="mr-3 lazyload" alt="マッド・ブル2000　大合本3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド・ブル2000　大合本3</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TCKJ2K1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+-Ecia7ML.jpg" class="mr-3 lazyload" alt="マッド・ブル2000　大合本2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド・ブル2000　大合本2</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T8CNQ3G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aFlRSwxaL.jpg" class="mr-3 lazyload" alt="マッド・ブル2000　大合本1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド・ブル2000　大合本1</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TGSSZ7Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518lGY2F+hL.jpg" class="mr-3 lazyload" alt="星の艦　大合本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>星の艦　大合本</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TFTKXC7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xQa+adOsL.jpg" class="mr-3 lazyload" alt="連環日本書紀 大合本1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>連環日本書紀 大合本1</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,歴史,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T9KZ8D5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iURhS-AgL.jpg" class="mr-3 lazyload" alt="連環日本書紀 大合本2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>連環日本書紀 大合本2</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,歴史,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TBHPCLD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513ApcjaM1L.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版11"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版11</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B088831VY5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Lpq8OV4pL.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版10"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版10</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08886G1ZL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CvyrlWL4L.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版9"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版9</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0888DTXZ9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SjKvLT5dL.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版8"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版8</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08887J9M4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5102RDAX8RL.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版7"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版7</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0887WLD4J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k1eP2hN-L.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版6"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版6</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0887RVLKV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DAEXkxCvL.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版4</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08883RBCF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fyxj8vP6L.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版3</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0887RQGXR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Txp--bfRL.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版2</h5>
+                    <p>価格：418円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08884D9B3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VOLJ4kTzL.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版1</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08888LQVS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+1z5eaYvL.jpg" class="mr-3 lazyload" alt="叶精作マガジン Vol.2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>叶精作マガジン Vol.2</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B083PYTTWM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51je3bdrS3L.jpg" class="mr-3 lazyload" alt="葬流者 ソールジャー 新装版5"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬流者 ソールジャー 新装版5</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08881PYHT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oy-aJiMdL.jpg" class="mr-3 lazyload" alt="花警察（大合本）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花警察（大合本）</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082SLKLKP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iFBueT4rL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　8"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　8</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y4RWF81?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MVvieSUVL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　7"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　7</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y4V3K7V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xBxm1QRSL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　6"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　6</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y4PQ9J7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Dgcn9YWvL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　5"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　5</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y54Y8FH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EZ9dAE0DL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　4</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y4WG83H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iMfCFXldL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　3</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y51M8VP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51P7FXcrn9L.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　2</h5>
+                    <p>価格：165円、ポイント：2</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y4ZF1YM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513mJTUW7YL.jpg" class="mr-3 lazyload" alt="魚ＣＲＹ　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚ＣＲＹ　1</h5>
+                    <p>価格：165円、ポイント：2</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y4PFFNF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ci-vQ3KzL.jpg" class="mr-3 lazyload" alt="新・弐十手物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新・弐十手物語</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W83HGTH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+fhAD9c+L.jpg" class="mr-3 lazyload" alt="虎視眈々 大合本 2（3、4、5巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>虎視眈々 大合本 2（3、4、5巻収録）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V7XWKXY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XdF5wDSvL.jpg" class="mr-3 lazyload" alt="虎視眈々 大合本 1（1、2巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>虎視眈々 大合本 1（1、2巻収録）</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6X57CR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61AEk5g4pgL.jpg" class="mr-3 lazyload" alt="下苅り半次郎 大合本 3（5、6、7巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>下苅り半次郎 大合本 3（5、6、7巻収録）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V4QMW7R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DhVFsSWrL.jpg" class="mr-3 lazyload" alt="下苅り半次郎 大合本 2（3、4巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>下苅り半次郎 大合本 2（3、4巻収録）</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V3QLFNJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51czRiPIDCL.jpg" class="mr-3 lazyload" alt="下苅り半次郎 大合本 1（1、2巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>下苅り半次郎 大合本 1（1、2巻収録）</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6WTKZ3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xz0dGE20L.jpg" class="mr-3 lazyload" alt="青春チンポジュウム 大合本 3（E、F、G巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>青春チンポジュウム 大合本 3（E、F、G巻収録）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6TWBRC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511PJVmBOtL.jpg" class="mr-3 lazyload" alt="青春チンポジュウム 大合本 2（C、D巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>青春チンポジュウム 大合本 2（C、D巻収録）</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6X78RY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51j1iqNYatL.jpg" class="mr-3 lazyload" alt="青春チンポジュウム 大合本 1（A、B巻収録）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>青春チンポジュウム 大合本 1（A、B巻収録）</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V3QL7GN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XRaHR8doL.jpg" class="mr-3 lazyload" alt="気怠く彦次郎 　大合本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>気怠く彦次郎 　大合本</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TZ3CBQ7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UNNzJwtwL.jpg" class="mr-3 lazyload" alt="凶刃者 ブレイダー 2（特典美麗イラスト付）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>凶刃者 ブレイダー 2（特典美麗イラスト付）</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TVRP2FJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wpF7OBUmL.jpg" class="mr-3 lazyload" alt="凶刃者 ブレイダー 1（特典美麗イラスト付）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>凶刃者 ブレイダー 1（特典美麗イラスト付）</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TZPQN86?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41oyVzM9jcL.jpg" class="mr-3 lazyload" alt="異聞・花と蛇 （特典美麗イラスト付）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異聞・花と蛇 （特典美麗イラスト付）</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TZND1JG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DgVe-SBiL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本9（25−27）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本9（25−27）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S89FWZL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WEMwQegqL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本8（22−24）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本8（22−24）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S9BD1RT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d1VZ73xbL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本7（19−21）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本7（19−21）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S89QYQ5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-VYvXY57L.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本6（16−28）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本6（16−28）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S9CYSKZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51y0KHuEwzL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本4（10−12）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本4（10−12）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S99PX53?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516XYrgHEUL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本3（7−9）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本3（7−9）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SDM1CJW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51K-ZEfCHML.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本2（4−6）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本2（4−6）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S67HS6G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RpvOAHRFL.jpg" class="mr-3 lazyload" alt="マッド★ブル34 大合本1（1−3）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マッド★ブル34 大合本1（1−3）</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S68HY4D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qWo-RPIOL.jpg" class="mr-3 lazyload" alt="気怠く彦次郎 3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>気怠く彦次郎 3</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RX51H94?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MyWKUjXtL.jpg" class="mr-3 lazyload" alt="気怠く彦次郎 2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>気怠く彦次郎 2</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RX4TBSJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HcejqXRlL.jpg" class="mr-3 lazyload" alt="気怠く彦次郎 1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>気怠く彦次郎 1</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S16VQXS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z65H8zxlL.jpg" class="mr-3 lazyload" alt="デュエット 大合本3（7−9）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デュエット 大合本3（7−9）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,ロマンス</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S3DZW5F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EwUokAOIL.jpg" class="mr-3 lazyload" alt="デュエット 大合本2（4−6）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デュエット 大合本2（4−6）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,ロマンス</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S4GLSCW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519tZNbFFtL.jpg" class="mr-3 lazyload" alt="デュエット 大合本1（1−3）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デュエット 大合本1（1−3）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；井上紀良(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,ロマンス</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RX52DMR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GrgGL7KtL.jpg" class="mr-3 lazyload" alt="花警察　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花警察　3</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RN44XF2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51O1ZtcKvoL.jpg" class="mr-3 lazyload" alt="花警察　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花警察　2</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RN3FFR1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TaE3D16XL.jpg" class="mr-3 lazyload" alt="花警察　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花警察　1</h5>
+                    <p>価格：407円、ポイント：4</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RP65KV5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PCd+A-fML.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本37（109.110巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本37（109.110巻）</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R646MTC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Z3AZkiEKL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本36（106.107.108巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本36（106.107.108巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R8C398G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kXehJhcPL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本35（103.104.105巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本35（103.104.105巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RBL87GF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ClWL0GVNL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本34（100.101.102巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本34（100.101.102巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R63MC9D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61lUSRc-vUL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本33（97.98.99巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本33（97.98.99巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R9JVHFF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DhQWILGaL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本32（94.95.96巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本32（94.95.96巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R9JYJSZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mNzcK3V5L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本31（91.92.93巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本31（91.92.93巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R7798PW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JEsWhAmgL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本30（88.89.90巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本30（88.89.90巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R647FNJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KcqiyLTDL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本29（85.86.87巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本29（85.86.87巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R56LTP3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ITFseukOL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本28（82.83.84巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本28（82.83.84巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R8D76BJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MC8Mk6JbL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本27（79.80.81巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本27（79.80.81巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RBKZPQ8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615QIBLP+9L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本26（76.77.78巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本26（76.77.78巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R56FXM3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51J1-b4XTbL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本25（73.74.75巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本25（73.74.75巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R8C8N4M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YjBaMTt2L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本24（70.71.72巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本24（70.71.72巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R9HPRHW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Y3UM5DT7L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本23（67.68.69巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本23（67.68.69巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R642RVD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qGND9GPkL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本22（64.65.66巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本22（64.65.66巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R9JG8L6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HzjIGuLdL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本21（61.62.63巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本21（61.62.63巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R8C6KVV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61mAO42ZR1L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本20（58.59.60巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本20（58.59.60巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RBL5451?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Zhz--XG4L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本19（55.56.57巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本19（55.56.57巻）</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R45MHL6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RjUINuoXL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本18（52.53.54巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本18（52.53.54巻）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R566WXH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5132WhZznaL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本17（49.50.51巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本17（49.50.51巻）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R65D88X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PhGvgkqtL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本16（46.47.48巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本16（46.47.48巻）</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RBJS545?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cS9DpO0YL.jpg" class="mr-3 lazyload" alt="牌鬼無頼　ボクは殺曲家　大合本（1巻2巻）（特典美麗イラスト付）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>牌鬼無頼　ボクは殺曲家　大合本（1巻2巻）（特典美麗イラスト付）</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QN2MJ83?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QIihTjL+L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本15（43.44.45巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本15（43.44.45巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q3B6XXJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510lhBnbfuL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本14（40.41.42巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本14（40.41.42巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q3BGBZL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511kHiD2rBL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本13（37.38.39.巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本13（37.38.39.巻）</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q3BX55L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CRvTM53AL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本12（34.35.36巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本12（34.35.36巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q8QGGV3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rbfogK6fL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本11（31.32.33巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本11（31.32.33巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q49HJM4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xAWRIooXL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本10（28.29.30巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本10（28.29.30巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q8RD23C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517qqAoCHOL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本9（25.26.27巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本9（25.26.27巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q48NPCY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WyWN8NP1L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本8（22.23.24巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本8（22.23.24巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q3F2YZD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517b762K3eL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本7（19.20.21巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本7（19.20.21巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q5DBZCK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hFy14wRXL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本6（16.17.18巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本6（16.17.18巻）</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q22HPLL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PW8zYfJ9L.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本5（13.14.15巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本5（13.14.15巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PYR658R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gQxOYHXoL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本4（10.11.12巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本4（10.11.12巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PYRVHTN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518MdqARdsL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本3（7.8.9巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本3（7.8.9巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PYSQXXN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iJM4dcMKL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本2（4.5.6巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本2（4.5.6巻）</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PYS1P6L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WmCq4kuJL.jpg" class="mr-3 lazyload" alt="弐十手物語 大合本1（1.2.3巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>弐十手物語 大合本1（1.2.3巻）</h5>
+                    <p>価格：109円、ポイント：1</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PWKLKQK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZyEnKDe6L.jpg" class="mr-3 lazyload" alt="忘れ苦兵衛 大合本3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>忘れ苦兵衛 大合本3</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P635BSP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zoqfT6LaL.jpg" class="mr-3 lazyload" alt="忘れ苦兵衛 大合本2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>忘れ苦兵衛 大合本2</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PBF7CMF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EfYDkxyXL.jpg" class="mr-3 lazyload" alt="忘れ苦兵衛 大合本1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>忘れ苦兵衛 大合本1</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P853R9M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515PVw7p2hL.jpg" class="mr-3 lazyload" alt="横浜ホメロス　大合本2　（特典美麗イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>横浜ホメロス　大合本2　（特典美麗イラスト付き）</h5>
+                    <p>価格：836円、ポイント：8</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P62MFMT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61O7XcZn5eL.jpg" class="mr-3 lazyload" alt="横浜ホメロス　大合本1　（特典美麗イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>横浜ホメロス　大合本1　（特典美麗イラスト付き）</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P6288S2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VtDKNSLWL.jpg" class="mr-3 lazyload" alt="BROTHERS-ブラザーズ　大合本4　（美麗イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BROTHERS-ブラザーズ　大合本4　（美麗イラスト付き）</h5>
+                    <p>価格：1254円、ポイント：13</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P3JBK4G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GM6GvOHsL.jpg" class="mr-3 lazyload" alt="BROTHERS-ブラザーズ　大合本3　（美麗イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BROTHERS-ブラザーズ　大合本3　（美麗イラスト付き）</h5>
+                    <p>価格：836円、ポイント：8</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P4M8RD9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ARvIgC3kL.jpg" class="mr-3 lazyload" alt="BROTHERS-ブラザーズ　大合本2　（美麗イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BROTHERS-ブラザーズ　大合本2　（美麗イラスト付き）</h5>
+                    <p>価格：836円、ポイント：8</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NY5KNZL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tEEnJrVEL.jpg" class="mr-3 lazyload" alt="BROTHERS-ブラザーズ　大合本1　（美麗イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BROTHERS-ブラザーズ　大合本1　（美麗イラスト付き）</h5>
+                    <p>価格：832円、ポイント：8</p>
+                    <p>小池一夫；叶精作(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P1B5TWZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OO7+cQKIL.jpg" class="mr-3 lazyload" alt="黒い雀たちの神話（秘蔵イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>黒い雀たちの神話（秘蔵イラスト付き）</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>小池一夫；芳谷圭児(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NHLFWNG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51S1WR1CJSL.jpg" class="mr-3 lazyload" alt="学校の探偵 大合本2（秘蔵イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>学校の探偵 大合本2（秘蔵イラスト付き）</h5>
+                    <p>価格：913円、ポイント：9</p>
+                    <p>小池一夫；芳谷圭児(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NHZYLL1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XjSnTF5DL.jpg" class="mr-3 lazyload" alt="学校の探偵 大合本1（秘蔵イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>学校の探偵 大合本1（秘蔵イラスト付き）</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；芳谷圭児(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NHTFQDP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514MW3lFZ7L.jpg" class="mr-3 lazyload" alt="カニバケツ 大合本3（秘蔵イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カニバケツ 大合本3（秘蔵イラスト付き）</h5>
+                    <p>価格：913円、ポイント：9</p>
+                    <p>小池一夫；芳谷圭児(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NJ3M8XB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510G68lMFML.jpg" class="mr-3 lazyload" alt="カニバケツ 大合本2（秘蔵イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カニバケツ 大合本2（秘蔵イラスト付き）</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫；芳谷圭児(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NHYZ3DH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UZ8SpPWwL.jpg" class="mr-3 lazyload" alt="カニバケツ 大合本1（秘蔵イラスト付き）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カニバケツ 大合本1（秘蔵イラスト付き）</h5>
+                    <p>価格：904円、ポイント：9</p>
+                    <p>小池一夫；芳谷圭児(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NHKXFRJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IpPFcbAXL.jpg" class="mr-3 lazyload" alt="ぶれいボーイ　大合本2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぶれいボーイ　大合本2</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NB4D72S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517yZAxZfgL.jpg" class="mr-3 lazyload" alt="ぶれいボーイ　大合本1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぶれいボーイ　大合本1</h5>
+                    <p>価格：909円、ポイント：9</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NB9VB6H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SG+wBpE5L.jpg" class="mr-3 lazyload" alt="高校生無頼控　大合本4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>高校生無頼控　大合本4</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N9Y696Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tnI-N2lRL.jpg" class="mr-3 lazyload" alt="高校生無頼控　大合本3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>高校生無頼控　大合本3</h5>
+                    <p>価格：913円、ポイント：9</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NB9HV44?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bSDDRKWaL.jpg" class="mr-3 lazyload" alt="高校生無頼控　大合本2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>高校生無頼控　大合本2</h5>
+                    <p>価格：913円、ポイント：9</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NBDB77R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hHMZpndJL.jpg" class="mr-3 lazyload" alt="高校生無頼控　大合本1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>高校生無頼控　大合本1</h5>
+                    <p>価格：913円、ポイント：9</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NBC8M9C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qcy6vaapL.jpg" class="mr-3 lazyload" alt="忘八武士道　分冊版　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>忘八武士道　分冊版　2</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MQJRQ82?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mOF9NOqmL.jpg" class="mr-3 lazyload" alt="忘八武士道　分冊版　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>忘八武士道　分冊版　1</h5>
+                    <p>価格：219円、ポイント：2</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MQJ94SK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cFL1o960L.jpg" class="mr-3 lazyload" alt="激突　大合本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>激突　大合本</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MJPS738?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OM9uGJDcL.jpg" class="mr-3 lazyload" alt="畳捕り傘次郎　大合本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>畳捕り傘次郎　大合本</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MJP43SC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wvP16OnbL.jpg" class="mr-3 lazyload" alt="道中師　大合本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>道中師　大合本</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M7TH78W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hVwR5aqcL.jpg" class="mr-3 lazyload" alt="春が来た　大合本　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春が来た　大合本　3</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MCHJHKG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aXetNoRfL.jpg" class="mr-3 lazyload" alt="春が来た　大合本　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春が来た　大合本　2</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MM9K1BF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bkEwtUUhL.jpg" class="mr-3 lazyload" alt="春が来た　大合本　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春が来た　大合本　1</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MJM9R2H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fnv58FGeL.jpg" class="mr-3 lazyload" alt="孔雀王伝奇　大合本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孔雀王伝奇　大合本</h5>
+                    <p>価格：1314円、ポイント：13</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MCJDBT1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511MNb9YR6L.jpg" class="mr-3 lazyload" alt="孫悟空　大合本　3　大閙天宮"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孫悟空　大合本　3　大閙天宮</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L675MBV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5168+U4KT1L.jpg" class="mr-3 lazyload" alt="孫悟空　大合本　2　法名は孫悟空"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孫悟空　大合本　2　法名は孫悟空</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L66J2TQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hwGMMPp9L.jpg" class="mr-3 lazyload" alt="孫悟空　大合本　1 　火州・牛魔戦"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孫悟空　大合本　1 　火州・牛魔戦</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L68316R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515na3BzVLL.jpg" class="mr-3 lazyload" alt="唇役主丞　乾いて候　大合本　3　完結編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>唇役主丞　乾いて候　大合本　3　完結編</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L66VD8R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IZXhdXWhL.jpg" class="mr-3 lazyload" alt="唇役主丞　乾いて候　大合本　2　四季献立編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>唇役主丞　乾いて候　大合本　2　四季献立編</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L6631Q7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51--BGXyKQL.jpg" class="mr-3 lazyload" alt="唇役主丞　乾いて候　大合本　1　魚・菜編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>唇役主丞　乾いて候　大合本　1　魚・菜編</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L66KM3V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gHp3JdYpL.jpg" class="mr-3 lazyload" alt="ケイの凄春　大合本　5　根差　編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ケイの凄春　大合本　5　根差　編</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L669SZF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xgmFalISL.jpg" class="mr-3 lazyload" alt="ケイの凄春　大合本　4　歩積その2　編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ケイの凄春　大合本　4　歩積その2　編</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67Q1WD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zx7jjp9+L.jpg" class="mr-3 lazyload" alt="ケイの凄春　大合本　3　歩積　編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ケイの凄春　大合本　3　歩積　編</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L6839FW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5162wrWdDKL.jpg" class="mr-3 lazyload" alt="ケイの凄春　大合本　2　背泣　編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ケイの凄春　大合本　2　背泣　編</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L66T8DJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+17TK1rML.jpg" class="mr-3 lazyload" alt="ケイの凄春　大合本　1　彷徨・可憐　編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ケイの凄春　大合本　1　彷徨・可憐　編</h5>
+                    <p>価格：1307円、ポイント：13</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L69FMCK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PDVi+uJSL.jpg" class="mr-3 lazyload" alt="首斬り朝 大合本　4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>首斬り朝 大合本　4</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZN8X1K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514DtqOAMhL.jpg" class="mr-3 lazyload" alt="首斬り朝 大合本　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>首斬り朝 大合本　3</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZM3P8N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oxu0XvsJL.jpg" class="mr-3 lazyload" alt="首斬り朝 大合本　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>首斬り朝 大合本　2</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZM4WJT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WBuPvqBsL.jpg" class="mr-3 lazyload" alt="首斬り朝 大合本　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>首斬り朝 大合本　1</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZS67K4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51f4ahx6maL.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　7　半歩前進の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　7　半歩前進の章</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRZ43P1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51T1HDLa1-L.jpg" class="mr-3 lazyload" alt="半蔵の門　大合本　1　苦諦の章"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>半蔵の門　大合本　1　苦諦の章</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KRXYW3F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A5fpo9m-L.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　10　守りて候"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　10　守りて候</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KM9QDY2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LYqYhersL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　9　あるいは死参"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　9　あるいは死参</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KM1HPFD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vb-6ZqEqL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　8　九仭の功"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　8　九仭の功</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KM3QVH5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G89F8VVvL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　7　死季"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　7　死季</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KMC7PNL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512r6RVszwL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　6　お乳母日傘"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　6　お乳母日傘</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KLJQ7RR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iFmRyt3qL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　5　月は東に日は西に"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　5　月は東に日は西に</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KLZHFRP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TpxNjmN9L.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　4　柳生封廻状"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　4　柳生封廻状</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KLYWJ14?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nUrIplIhL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　3　どさ御用"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　3　どさ御用</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KLXD3HG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b0sT7sPDL.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　2　鐘役辻源七"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　2　鐘役辻源七</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KLKBM9S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fU-5Lqn4L.jpg" class="mr-3 lazyload" alt="子連れ狼　大合本　1　子を貸し腕貸しつかまつる"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子連れ狼　大合本　1　子を貸し腕貸しつかまつる</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KM1741T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-yJazT9-L.jpg" class="mr-3 lazyload" alt="【無料お試し版】漫知感 Vol.2 ～小池一夫プロデュース！伝説の漫画雑誌～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【無料お試し版】漫知感 Vol.2 ～小池一夫プロデュース！伝説の漫画雑誌～</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06WLLVSCW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VqPmBiaqL.jpg" class="mr-3 lazyload" alt="【無料お試し版】漫知感 Vol.1 ～小池一夫プロデュース！伝説の漫画雑誌～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【無料お試し版】漫知感 Vol.1 ～小池一夫プロデュース！伝説の漫画雑誌～</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小池一夫；叶精作：神江里見(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MR5T8ZG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eA65AfWkL.jpg" class="mr-3 lazyload" alt="小池一夫のキャラクター創造論"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小池一夫のキャラクター創造論</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：ジャンル別,文学・評論</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KUW2A4G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/616GPYB0yZL.jpg" class="mr-3 lazyload" alt="狼の夜話　俺、劇画、40年"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>狼の夜話　俺、劇画、40年</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：ジャンル別,趣味・実用</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NXUZ310?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SldNmrToL.jpg" class="mr-3 lazyload" alt="小池一夫対談集　キャラクター60年　第三巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小池一夫対談集　キャラクター60年　第三巻</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：ジャンル別,文学・評論</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MWP5VFA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XwgNlp1jL.jpg" class="mr-3 lazyload" alt="小池一夫のキャラクター新論　ソーシャルメディアが動かすキャラクターの力"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小池一夫のキャラクター新論　ソーシャルメディアが動かすキャラクターの力</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：グラフィックデザイン,デザイン</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MB4XUPA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DMm7OhzBL.jpg" class="mr-3 lazyload" alt="小池一夫対談集　キャラクター60年　第二巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小池一夫対談集　キャラクター60年　第二巻</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：ジャンル別,文学・評論</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LMUHR7G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VKHIZ925L.jpg" class="mr-3 lazyload" alt="小池一夫対談集　キャラクター60年　第一巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小池一夫対談集　キャラクター60年　第一巻</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>小池一夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：ジャンル別,文学・評論</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LC2A81G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>

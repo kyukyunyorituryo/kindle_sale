@@ -1,0 +1,2614 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41NlzRviUrL.jpg" class="mr-3 lazyload" alt="宇宙生命ゴースト"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙生命ゴースト</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VNPF4KB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41JRBDmx-WL.jpg" class="mr-3 lazyload" alt="牙のない牙"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>牙のない牙</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6WXF39?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aNzFCXWgL.jpg" class="mr-3 lazyload" alt="アウトランダーズ　大合本　３"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ　大合本　３</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MX6D1DN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HSxDvhszL.jpg" class="mr-3 lazyload" alt="アウトランダーズ　大合本　２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ　大合本　２</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MXBFXZB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51md7tN2tnL.jpg" class="mr-3 lazyload" alt="キャラバン・キッド　５"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャラバン・キッド　５</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X46Z5F9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b5anrIEyL.jpg" class="mr-3 lazyload" alt="キャラバン・キッド　４"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャラバン・キッド　４</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X11HH4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jkA30LcTL.jpg" class="mr-3 lazyload" alt="キャラバン・キッド　３"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャラバン・キッド　３</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X475GP1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GsXBLOWNL.jpg" class="mr-3 lazyload" alt="キャラバン・キッド　２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャラバン・キッド　２</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X4672Q4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ee+CTUUxL.jpg" class="mr-3 lazyload" alt="キャラバン・キッド　１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャラバン・キッド　１</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X57J2C3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z6HcyZbwL.jpg" class="mr-3 lazyload" alt="猫になった少女"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>猫になった少女</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VLKWR24?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51K3a1VAsfL.jpg" class="mr-3 lazyload" alt="アンドロイド・ピニ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アンドロイド・ピニ</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PT4LYBD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513u0Jjrj6L.jpg" class="mr-3 lazyload" alt="新竹取物語 1000年女王　大合本　全5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新竹取物語 1000年女王　大合本　全5巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F6RL3XV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yvW3aQwLL.jpg" class="mr-3 lazyload" alt="怒涛！ジャムカの大冒険　5"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>怒涛！ジャムカの大冒険　5</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084S786SX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IkvCsjxLL.jpg" class="mr-3 lazyload" alt="アウトランダーズ　大合本　１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ　大合本　１</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MX83XKN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kIS+NYADL.jpg" class="mr-3 lazyload" alt="怒涛！ジャムカの大冒険　4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>怒涛！ジャムカの大冒険　4</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084SNBQ4C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XdKEyylYL.jpg" class="mr-3 lazyload" alt="怒涛！ジャムカの大冒険　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>怒涛！ジャムカの大冒険　3</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084STB857?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517ttxKe0SL.jpg" class="mr-3 lazyload" alt="怒涛！ジャムカの大冒険　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>怒涛！ジャムカの大冒険　2</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084SW5526?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-gaXvXZIL.jpg" class="mr-3 lazyload" alt="怒涛！ジャムカの大冒険　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>怒涛！ジャムカの大冒険　1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084S7XD54?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61NUyKUW2lL.jpg" class="mr-3 lazyload" alt="魔獣戦奇ジュドー"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔獣戦奇ジュドー</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082F85WMZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fvG2D+BPL.jpg" class="mr-3 lazyload" alt="アクト・オン！ ２ アクトオン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アクト・オン！ ２ アクトオン</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824TCBG3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Gaub5XdhL.jpg" class="mr-3 lazyload" alt="アクト・オン！ １ アクトオン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アクト・オン！ １ アクトオン</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824STNW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nWeiwPgNL.jpg" class="mr-3 lazyload" alt="ジン-ジン　デラックス版　2（3・4巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジン-ジン　デラックス版　2（3・4巻）</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824T5LM9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510rBfirWBL.jpg" class="mr-3 lazyload" alt="ジン-ジン　デラックス版　１（1・2巻）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジン-ジン　デラックス版　１（1・2巻）</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824SW717?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516gHYQv-NL.jpg" class="mr-3 lazyload" alt="FM戦士 SUMŌキッズ ２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>FM戦士 SUMŌキッズ ２</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824S81B1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tYpRtSaXL.jpg" class="mr-3 lazyload" alt="FM戦士 SUMŌキッズ １"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>FM戦士 SUMŌキッズ １</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824STS9F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SBcjwAd5L.jpg" class="mr-3 lazyload" alt="ボンバー弾 2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ボンバー弾 2</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824TFK7H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513LumPoG1L.jpg" class="mr-3 lazyload" alt="ボンバー弾 1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ボンバー弾 1</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824T67TT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PXEgO9fqL.jpg" class="mr-3 lazyload" alt="フルメタル刑事"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フルメタル刑事</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824TJHFM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oWAskudQL.jpg" class="mr-3 lazyload" alt="ラストチェイス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラストチェイス</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>神矢みのる(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0824SV7NV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G3KDpEeDL.jpg" class="mr-3 lazyload" alt="ドーラ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドーラ</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X34FTG4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+0Usutv8L.jpg" class="mr-3 lazyload" alt="暗殺人形"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>暗殺人形</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VNQCH2C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41uf4PwHccL.jpg" class="mr-3 lazyload" alt="手の中の顔"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手の中の顔</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VNQBZMF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YZVQF-4+L.jpg" class="mr-3 lazyload" alt="マラコット深海"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マラコット深海</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎；アーサー・コナン・ドイル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VQXZPGJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Kz5t2HXEL.jpg" class="mr-3 lazyload" alt="余分な指"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>余分な指</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VLKWHLS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51H5oOFNorL.jpg" class="mr-3 lazyload" alt="名探偵シンキングマシン　完全脱獄"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>名探偵シンキングマシン　完全脱獄</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎；ジャック・フットレル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VMQJNMP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51czIigyihL.jpg" class="mr-3 lazyload" alt="トゲ人間"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>トゲ人間</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6X66Y7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+ceKApTIL.jpg" class="mr-3 lazyload" alt="奴ら！人間じゃない"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>奴ら！人間じゃない</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V7VYM9Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41pXCoVwAgL.jpg" class="mr-3 lazyload" alt="黒い風"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>黒い風</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6X6L1D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41gG+y1MItL.jpg" class="mr-3 lazyload" alt="電人Ｘマン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>電人Ｘマン</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V3QLPXR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5159+S6OGpL.jpg" class="mr-3 lazyload" alt="ぼくは超能力者だあ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぼくは超能力者だあ</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PNLMJTS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QAlJHD1wL.jpg" class="mr-3 lazyload" alt="月は生きていた"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月は生きていた</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PT3BDVC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51juXADmbBL.jpg" class="mr-3 lazyload" alt="月は地獄"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月は地獄</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PT4JSSZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-7vHciLQL.jpg" class="mr-3 lazyload" alt="リルから来た悪夢"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>リルから来た悪夢</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PNL4MR8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YGYfN++HL.jpg" class="mr-3 lazyload" alt="ビッグ・トーリィ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ビッグ・トーリィ</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>桑田次郎(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PMMR6WH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AyFltFKyL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本9　25～27巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本9　25～27巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L5XMCW4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519gZUnagnL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本8　22～24巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本8　22～24巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67X5SR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MqQTnuPZL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本7　19～21巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本7　19～21巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67CNS7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aRQ+Jm96L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本6　16～18巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本6　16～18巻収録</h5>
+                    <p>価格：1314円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L679R4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51H2q9E2jiL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本5　13～15巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本5　13～15巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L5Y1V6H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eGjEu0loL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本4　10～12巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本4　10～12巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67P2CD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TQ3zPX+VL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本3　7～9巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本3　7～9巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L6848HP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51n38x-N8IL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本2　4～6巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本2　4～6巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L66HJ32?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xgKxPGSbL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本1　1～3巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本1　1～3巻収録</h5>
+                    <p>価格：198円、ポイント：2</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67FHGR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517oItRiK9L.jpg" class="mr-3 lazyload" alt="アウトランダーズ８"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ８</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KBWFHS6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wC8JYBi1L.jpg" class="mr-3 lazyload" alt="アウトランダーズ７"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ７</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KC7Z684?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511ZQTbs1WL.jpg" class="mr-3 lazyload" alt="アウトランダーズ６"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ６</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KBX1WW3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xLKC7VCyL.jpg" class="mr-3 lazyload" alt="アウトランダーズ５"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ５</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KBV65Q1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WSGmwNPjL.jpg" class="mr-3 lazyload" alt="アウトランダーズ４"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ４</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KC12XWF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aNzFCXWgL.jpg" class="mr-3 lazyload" alt="アウトランダーズ　大合本　３"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ　大合本　３</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MX6D1DN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HSxDvhszL.jpg" class="mr-3 lazyload" alt="アウトランダーズ　大合本　２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ　大合本　２</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MXBFXZB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IkvCsjxLL.jpg" class="mr-3 lazyload" alt="アウトランダーズ　大合本　１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アウトランダーズ　大合本　１</h5>
+                    <p>価格：1320円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MX83XKN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YEdkCumEL.jpg" class="mr-3 lazyload" alt="魔法少年マジョーリアン 大合本　全3巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法少年マジョーリアン 大合本　全3巻収録</h5>
+                    <p>価格：1518円、ポイント：15</p>
+                    <p>石田敦子(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HQ5MJPY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51s9SgygnPL.jpg" class="mr-3 lazyload" alt="うつろ舟 大合本　全4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うつろ舟 大合本　全4巻収録</h5>
+                    <p>価格：2024円、ポイント：20</p>
+                    <p>加倉井ミサイル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H9ZM98C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-6ahtPNwL.jpg" class="mr-3 lazyload" alt="如月丸奇譚　 大合本　全5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>如月丸奇譚　 大合本　全5巻収録</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>加賀未春樹(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HB1XPTV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zxqt-nlPL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ 大合本2　6～10巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ 大合本2　6～10巻収録</h5>
+                    <p>価格：2860円、ポイント：29</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H9ZSBG8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LvS4FxsdL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ 大合本1　1～5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ 大合本1　1～5巻収録</h5>
+                    <p>価格：2860円、ポイント：29</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H9ZDCT5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513jjL4DxGL.jpg" class="mr-3 lazyload" alt="ワイルド★キングダム５"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワイルド★キングダム５</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H5HQ4SN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61I3uzgdw5L.jpg" class="mr-3 lazyload" alt="ワイルド★キングダム４"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワイルド★キングダム４</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H5FQK43?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RhiwMmdOL.jpg" class="mr-3 lazyload" alt="ワイルド★キングダム３"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワイルド★キングダム３</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H5FD9FB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610x5q6FJ3L.jpg" class="mr-3 lazyload" alt="ワイルド★キングダム２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワイルド★キングダム２</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H5GJRS6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-2V7-cl5L.jpg" class="mr-3 lazyload" alt="ワイルド★キングダム１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワイルド★キングダム１</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H5FJXBJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614QSI4uePL.jpg" class="mr-3 lazyload" alt="肥前屋十兵衛　大合本　全3巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>肥前屋十兵衛　大合本　全3巻収録</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>富沢ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H4D4NPD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61eafOvMOiL.jpg" class="mr-3 lazyload" alt="特務咆哮艦ユミハリ　大合本　全4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>特務咆哮艦ユミハリ　大合本　全4巻収録</h5>
+                    <p>価格：2200円、ポイント：22</p>
+                    <p>富沢ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H4F82D8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HIMAii5JL.jpg" class="mr-3 lazyload" alt="アブラ・マンダラ　大合本　全4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アブラ・マンダラ　大合本　全4巻収録</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>こやま基夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H4GHPNT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hRvXLS3KL.jpg" class="mr-3 lazyload" alt="バロン 大合本2　5～8巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本2　5～8巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G1T5FH7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518hRFdnGHL.jpg" class="mr-3 lazyload" alt="バロン 大合本1　1～4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本1　1～4巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G2QG9TL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oTa7kSWOL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本2　6～10巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本2　6～10巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G21HPM3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-Eck7rglL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本1　1～5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本1　1～5巻収録</h5>
+                    <p>価格：1259円、ポイント：13</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G26JFTX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k10jsM6nL.jpg" class="mr-3 lazyload" alt="セクサロイド　大合本　全4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>セクサロイド　大合本　全4巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F71VVV2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IMZJO81KL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 異聞"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 異聞</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDH5X9Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AyFltFKyL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本9　25～27巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本9　25～27巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L5XMCW4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6192XzLEi9L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 26"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 26</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDGWXWR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AyFltFKyL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本9　25～27巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本9　25～27巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L5XMCW4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519gZUnagnL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本8　22～24巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本8　22～24巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67X5SR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-HRGnjFLL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 23"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 23</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDGSHQ8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61u64-SRI-L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 22"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 22</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDGMZGR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61C8-+hrAjL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 21"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 21</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDGSKZ2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61m3mDM7LcL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 20"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 20</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDHM264?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MqQTnuPZL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本7　19～21巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本7　19～21巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L67CNS7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aRQ+Jm96L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本6　16～18巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本6　16～18巻収録</h5>
+                    <p>価格：1314円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L679R4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QwVl5KUEL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 17"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 17</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDGGXQS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aRQ+Jm96L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本6　16～18巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本6　16～18巻収録</h5>
+                    <p>価格：1314円、ポイント：13</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L679R4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51H2q9E2jiL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 大合本5　13～15巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 大合本5　13～15巻収録</h5>
+                    <p>価格：2640円、ポイント：26</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L5Y1V6H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61AiyDIJACL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 14"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 14</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDHBRGW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JdUMCvzUL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 13"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 13</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WPC4231?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61iBSz3JHgL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 11"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 11</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDJ465D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z4wkTrldL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 12"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 12</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDHBRGV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GX5dBeHOL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライ 10"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライ 10</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDGR2VG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51a155CjqHL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 9"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 9</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WPC55M6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ps+2skkkL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 8"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 8</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WS6TZ6J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Zohph8w6L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 7"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 7</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WT9DQ75?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Mf45yMDcL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 6"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 6</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WYCP5YM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JWQWKKExL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 5"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 5</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WS6YRSS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gnPUB-aKL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 4</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WT9HBND?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pVYVpW5EL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 3</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WT91SZV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rckXO2ZvL.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 2</h5>
+                    <p>価格：1760円、ポイント：18</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WT9P1TW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ewmlviW0L.jpg" class="mr-3 lazyload" alt="銀河戦国群雄伝ライＤＸ版 1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀河戦国群雄伝ライＤＸ版 1</h5>
+                    <p>価格：1743円、ポイント：17</p>
+                    <p>真鍋譲治(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WS6SSVH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51D-q+LX40L.jpg" class="mr-3 lazyload" alt="肥前屋十兵衛　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>肥前屋十兵衛　3</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D58KKYX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61KRNOtaZOL.jpg" class="mr-3 lazyload" alt="肥前屋十兵衛　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>肥前屋十兵衛　2</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D55ZGNS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nM-7Q5-eL.jpg" class="mr-3 lazyload" alt="肥前屋十兵衛　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>肥前屋十兵衛　1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D52SL48?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xuTRz81gL.jpg" class="mr-3 lazyload" alt="特務咆哮艦ユミハリ　4"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>特務咆哮艦ユミハリ　4</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D5CHK7C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fX4fCLswL.jpg" class="mr-3 lazyload" alt="特務咆哮艦ユミハリ　3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>特務咆哮艦ユミハリ　3</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D571NK4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Q9JwTNqTL.jpg" class="mr-3 lazyload" alt="特務咆哮艦ユミハリ　2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>特務咆哮艦ユミハリ　2</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D56RX19?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VaGb+lK3L.jpg" class="mr-3 lazyload" alt="特務咆哮艦ユミハリ　1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>特務咆哮艦ユミハリ　1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>富沢 ひとし(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D5949K6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rR-aITr9L.jpg" class="mr-3 lazyload" alt="アブラ・マンダラ　４"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アブラ・マンダラ　４</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>こやま 基夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D58288V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wlP4JD90L.jpg" class="mr-3 lazyload" alt="アブラ・マンダラ　３"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アブラ・マンダラ　３</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>こやま 基夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D57WN6K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512erI+1ZsL.jpg" class="mr-3 lazyload" alt="アブラ・マンダラ　２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アブラ・マンダラ　２</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>こやま 基夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D59LW9C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61BTOyLQLcL.jpg" class="mr-3 lazyload" alt="俺はゾンビだ!!　愛蔵版　下"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>俺はゾンビだ!!　愛蔵版　下</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>左近士諒(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07281LYD6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TyNGMjEzL.jpg" class="mr-3 lazyload" alt="アブラ・マンダラ　１"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アブラ・マンダラ　１</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>こやま 基夫(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D58GD17?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61NF9oCQZAL.jpg" class="mr-3 lazyload" alt="俺はゾンビだ!!　愛蔵版　上"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>俺はゾンビだ!!　愛蔵版　上</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>左近士諒(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071L5VWS4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vMQsvSwOL.jpg" class="mr-3 lazyload" alt="如月丸奇譚 伍"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>如月丸奇譚 伍</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>加賀未春樹(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N6EL3VX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dYwRO8u4L.jpg" class="mr-3 lazyload" alt="如月丸奇譚 四"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>如月丸奇譚 四</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>加賀未春樹(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MXVYETQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Vf86PQzHL.jpg" class="mr-3 lazyload" alt="如月丸奇譚 参"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>如月丸奇譚 参</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>加賀未春樹(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NGTNMU2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5151qJTFK9L.jpg" class="mr-3 lazyload" alt="如月丸奇譚 弐"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>如月丸奇譚 弐</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>加賀未春樹(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MRV6RYK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5189QFb+CGL.jpg" class="mr-3 lazyload" alt="如月丸奇譚 壱"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>如月丸奇譚 壱</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>加賀未春樹(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N2RO286?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51s9SgygnPL.jpg" class="mr-3 lazyload" alt="うつろ舟 大合本　全4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うつろ舟 大合本　全4巻収録</h5>
+                    <p>価格：2024円、ポイント：20</p>
+                    <p>加倉井ミサイル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H9ZM98C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61iEHmx6QUL.jpg" class="mr-3 lazyload" alt="うつろ舟(3)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うつろ舟(3)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>加倉井ミサイル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M2WDB8E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61meOGqTOgL.jpg" class="mr-3 lazyload" alt="うつろ舟(2)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うつろ舟(2)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>加倉井ミサイル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MA30RDU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61WhBmW0V-L.jpg" class="mr-3 lazyload" alt="うつろ舟(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>うつろ舟(1)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>加倉井ミサイル(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MA30JGZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YEdkCumEL.jpg" class="mr-3 lazyload" alt="魔法少年マジョーリアン 大合本　全3巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法少年マジョーリアン 大合本　全3巻収録</h5>
+                    <p>価格：1518円、ポイント：15</p>
+                    <p>石田敦子(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HQ5MJPY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lUBaAt8DL.jpg" class="mr-3 lazyload" alt="魔法少年マジョーリアン(2)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法少年マジョーリアン(2)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>石田敦子(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LX71OVR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Lla0VPUrL.jpg" class="mr-3 lazyload" alt="魔法少年マジョーリアン(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔法少年マジョーリアン(1)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>石田敦子(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LX729O2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Dqbg6TciL.jpg" class="mr-3 lazyload" alt="スカイ・ロード"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スカイ・ロード</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>松久由宇(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LW7SKZ9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61g+lfeNBdL.jpg" class="mr-3 lazyload" alt="風の戦士"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>風の戦士</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>松久由宇(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LVV5XKR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nFVHh5xqL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(10)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(10)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYN1K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QOYPeyHFL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(9)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(9)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYM7K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jdIPmM5yL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(8)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(8)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYM0C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517dnJyCWWL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(7)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(7)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYNBA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XrxMbp6YL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(6)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(6)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYKGI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XZNSvYIlL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(5)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(5)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYMGQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Q+iJmNI+L.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(4)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(4)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYN1U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Rrb1dpgwL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(3)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(3)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYMP2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Wgun9JcxL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(2)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(2)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYNMO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51z1g4uWbKL.jpg" class="mr-3 lazyload" alt="蒼き宇宙より君へ(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蒼き宇宙より君へ(1)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>志水圭(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01J7KYMV6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ezaAv63BL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（8）ベレヌスのロビン 炎の戦士II"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（8）ベレヌスのロビン 炎の戦士II</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIRCE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610XcwGgUUL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（7）ベレヌスのロビン 炎の戦士I"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（7）ベレヌスのロビン 炎の戦士I</h5>
+                    <p>価格：506円、ポイント：5</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIR3I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RsztVXcnL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（6）べレヌスのロビン・炎の伝説"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（6）べレヌスのロビン・炎の伝説</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIR38?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DPu-oI0QL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（4）銀河を継ぐ者"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（4）銀河を継ぐ者</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIR6U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514VscQySwL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（3）ダリウスの風"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（3）ダリウスの風</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIR2E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+pSzwUwSL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（2）失われた伝説"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（2）失われた伝説</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIR2Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61HWyHV1DJL.jpg" class="mr-3 lazyload" alt="合作大全集（SG企画）（1）アキラ・ミオ大漂流"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>合作大全集（SG企画）（1）アキラ・ミオ大漂流</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>作画グループ(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ANKIR2O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cNF9nh5OL.jpg" class="mr-3 lazyload" alt="静ーせいー"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>静ーせいー</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>寿限無(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SKJSIDY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mVZ2htIqL.jpg" class="mr-3 lazyload" alt="金銀砂子"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>金銀砂子</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>速水翼(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00R484886?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oTa7kSWOL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本2　6～10巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本2　6～10巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G21HPM3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61sigKeeRIL.jpg" class="mr-3 lazyload" alt="ICHIGO(9)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO(9)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KLWWFTQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NYnO6I0GL.jpg" class="mr-3 lazyload" alt="ICHIGO(8)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO(8)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KHNIEPI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CXiAg0yZL.jpg" class="mr-3 lazyload" alt="コミュニケーション"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コミュニケーション</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>速水翼(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00R48489K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619wvq3yKbL.jpg" class="mr-3 lazyload" alt="ICHIGO(7)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO(7)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KHNIEQM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oTa7kSWOL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本2　6～10巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本2　6～10巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G21HPM3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-Eck7rglL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本1　1～5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本1　1～5巻収録</h5>
+                    <p>価格：1259円、ポイント：13</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G26JFTX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61J6CXazdLL.jpg" class="mr-3 lazyload" alt="ICHIGO(4)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO(4)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KCCK5O2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611WaTeX9PL.jpg" class="mr-3 lazyload" alt="ICHIGO(3)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO(3)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KCCK5NS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51C3qJ5Pu+L.jpg" class="mr-3 lazyload" alt="宇宙少年ソラン(4)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙少年ソラン(4)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>宮腰義勝(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K7ZZZRQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pj6E1jaiL.jpg" class="mr-3 lazyload" alt="宇宙少年ソラン(3)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙少年ソラン(3)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>宮腰義勝(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K7ZZA6W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RNZVvVCXL.jpg" class="mr-3 lazyload" alt="宇宙少年ソラン(2)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙少年ソラン(2)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮腰義勝(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K7ZYXCO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oTa7kSWOL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本2　6～10巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本2　6～10巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G21HPM3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-Eck7rglL.jpg" class="mr-3 lazyload" alt="ICHIGO　大合本1　1～5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ICHIGO　大合本1　1～5巻収録</h5>
+                    <p>価格：1259円、ポイント：13</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G26JFTX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MWX1mQ3NL.jpg" class="mr-3 lazyload" alt="宇宙少年ソラン(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宇宙少年ソラン(1)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮腰義勝(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K7ZYC1G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k10jsM6nL.jpg" class="mr-3 lazyload" alt="セクサロイド　大合本　全4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>セクサロイド　大合本　全4巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F71VVV2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5167lxjXEOL.jpg" class="mr-3 lazyload" alt="セクサロイド(3)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>セクサロイド(3)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JIFLWQY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d9HVoywpL.jpg" class="mr-3 lazyload" alt="セクサロイド(2)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>セクサロイド(2)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JB0FU00?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gnNTcEjOL.jpg" class="mr-3 lazyload" alt="セクサロイド(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>セクサロイド(1)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JB0FTYC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513u0Jjrj6L.jpg" class="mr-3 lazyload" alt="新竹取物語 1000年女王　大合本　全5巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新竹取物語 1000年女王　大合本　全5巻収録</h5>
+                    <p>価格：548円、ポイント：5</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F6RL3XV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XIkWhFyqL.jpg" class="mr-3 lazyload" alt="新竹取物語 1000年女王(4)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新竹取物語 1000年女王(4)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J25KMIY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5142RFd11JL.jpg" class="mr-3 lazyload" alt="新竹取物語 1000年女王(3)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新竹取物語 1000年女王(3)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J25KMHU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51a4DmZ9QKL.jpg" class="mr-3 lazyload" alt="新竹取物語 1000年女王(2)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新竹取物語 1000年女王(2)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J0AT7L4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GYZR2VGIL.jpg" class="mr-3 lazyload" alt="新竹取物語 1000年女王(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新竹取物語 1000年女王(1)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>松本零士(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J0AT7LE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tEC1mlr3L.jpg" class="mr-3 lazyload" alt="CURA(キュラ) 3"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>CURA(キュラ) 3</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HVV65YG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eJasz7KoL.jpg" class="mr-3 lazyload" alt="CURA(キュラ)2"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>CURA(キュラ)2</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HVV65CS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JXO6dykKL.jpg" class="mr-3 lazyload" alt="CURA(キュラ) 1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>CURA(キュラ) 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HVV65A0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hRvXLS3KL.jpg" class="mr-3 lazyload" alt="バロン 大合本2　5～8巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本2　5～8巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G1T5FH7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oy+FCvI0L.jpg" class="mr-3 lazyload" alt="バロン ７巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン ７巻</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GDDYN0G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Qiu+m40fL.jpg" class="mr-3 lazyload" alt="バロン ６巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン ６巻</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G83LIWM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hRvXLS3KL.jpg" class="mr-3 lazyload" alt="バロン 大合本2　5～8巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本2　5～8巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G1T5FH7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518hRFdnGHL.jpg" class="mr-3 lazyload" alt="バロン 大合本1　1～4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本1　1～4巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G2QG9TL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bG0TM+O4L.jpg" class="mr-3 lazyload" alt="バロン ３巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン ３巻</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FYTEIGO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hRvXLS3KL.jpg" class="mr-3 lazyload" alt="バロン 大合本2　5～8巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本2　5～8巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G1T5FH7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518hRFdnGHL.jpg" class="mr-3 lazyload" alt="バロン 大合本1　1～4巻収録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バロン 大合本1　1～4巻収録</h5>
+                    <p>価格：1804円、ポイント：18</p>
+                    <p>六田登(著)</p>
+                    <p>出版社：ゴマブックス株式会社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G2QG9TL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
