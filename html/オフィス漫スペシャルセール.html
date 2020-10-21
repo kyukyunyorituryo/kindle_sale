@@ -1,0 +1,2263 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51O0KDRGyNL.jpg" class="mr-3 lazyload" alt="夏は人魚とパラダイス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夏は人魚とパラダイス</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NODT8RQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b9jEvuyjL.jpg" class="mr-3 lazyload" alt="瞬間・交換・大コンラン！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>瞬間・交換・大コンラン！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>立原ほたる(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TT7KDK2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511dRKoyLxL.jpg" class="mr-3 lazyload" alt="TOKYO人魚《マーメイド》"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>TOKYO人魚《マーメイド》</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桜香織(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TT7LTZ1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pJKJnftNL.jpg" class="mr-3 lazyload" alt="アイスクリームすくらんぶる－《ときめく乙女の胸キュンセレクション》"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アイスクリームすくらんぶる－《ときめく乙女の胸キュンセレクション》</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>岡本ゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PLRSWD4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61vgNkoVW-L.jpg" class="mr-3 lazyload" alt="アラジンと魔法の急須"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アラジンと魔法の急須</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>宗美智子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B011QX8UP6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rLz-boZ4L.jpg" class="mr-3 lazyload" alt="MAJI！！ -本気(マジ)-"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>MAJI！！ -本気(マジ)-</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>宗美智子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B011QX8UQA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41jXFeXlaNL.jpg" class="mr-3 lazyload" alt="ウイルス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウイルス</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>杉原那月(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JBHY4Q5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513uba6s0KL.jpg" class="mr-3 lazyload" alt="ファントムジャッジ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ファントムジャッジ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>東里桐子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JVLT6LG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619VxGsgD7L.jpg" class="mr-3 lazyload" alt="はるか彼方の花喃－かなん－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はるか彼方の花喃－かなん－</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>東里桐子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J9V5F4Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PWgMiiCnL.jpg" class="mr-3 lazyload" alt="ハーイ！さくらです。"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハーイ！さくらです。</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>篠原とおる(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FJVYNQH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51W+HcClJjL.jpg" class="mr-3 lazyload" alt="ラブソング"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラブソング</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桜香織(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FJ7156C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TR53L0iFL.jpg" class="mr-3 lazyload" alt="FAKEな関係"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>FAKEな関係</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桜香織(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F8LVK2X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51de5wDXHJL.jpg" class="mr-3 lazyload" alt="ビューティフルネーム"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ビューティフルネーム</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DFB4XH9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516uEfX3yPL.jpg" class="mr-3 lazyload" alt="谷間の子供－《絶対泣ける感動セレクション（1）》"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>谷間の子供－《絶対泣ける感動セレクション（1）》</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>岡本ゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DFG13J8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oe13Ig0oL.jpg" class="mr-3 lazyload" alt="指輪と剣～ルビーとサーベル～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>指輪と剣～ルビーとサーベル～</h5>
+                    <p>価格：154円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CHBV57X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pVbwM6odL.jpg" class="mr-3 lazyload" alt="無敵のゲートキーパー"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>無敵のゲートキーパー</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B077YM6TV7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-c7x4lsyL.jpg" class="mr-3 lazyload" alt="小悪魔ダーリン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小悪魔ダーリン</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B077YK8XS6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ie3IT0swL.jpg" class="mr-3 lazyload" alt="ちゃんとヒトツになるからね"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ちゃんとヒトツになるからね</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B077YHF61C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cun91qpIL.jpg" class="mr-3 lazyload" alt="みんなでワイワイ☆しあわせごはん～おうちで夫がおもてなし～"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>みんなでワイワイ☆しあわせごはん～おうちで夫がおもてなし～</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>村田順子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B072N7K55Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vUSIwmAzL.jpg" class="mr-3 lazyload" alt="狩人蜂（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>狩人蜂（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>篠原とおる(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MSWGZAA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JQHhj9mIL.jpg" class="mr-3 lazyload" alt="ラッキー半分コ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラッキー半分コ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LWPPHL8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CL6W4I7qL.jpg" class="mr-3 lazyload" alt="恋情発熱体"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>恋情発熱体</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01JO6VDBK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510FDSuOLWL.jpg" class="mr-3 lazyload" alt="僕という名の罪と罰"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕という名の罪と罰</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HRBS5AG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510BVanZxcL.jpg" class="mr-3 lazyload" alt="信じる者は救われる！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>信じる者は救われる！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HRBS4RU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517EsY4+4mL.jpg" class="mr-3 lazyload" alt="君だけを惑わせる"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>君だけを惑わせる</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01I2V53Z0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BAwyNkA1L.jpg" class="mr-3 lazyload" alt="夫婦コップ（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夫婦コップ（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>篠原とおる(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01I2V50L2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-j67Wl7rL.jpg" class="mr-3 lazyload" alt="ハートをクリック！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハートをクリック！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>望月玲子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01EUMGBKQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BluvPkZEL.jpg" class="mr-3 lazyload" alt="七月はKierkegaard(キルケゴール)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>七月はKierkegaard(キルケゴール)</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>望月玲子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01EUMGBI8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QLMRjAMoL.jpg" class="mr-3 lazyload" alt="愛だよ 愛！！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛だよ 愛！！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>宗美智子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E8DW7MI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DVKAr3ZQL.jpg" class="mr-3 lazyload" alt="ときめき10カウント"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ときめき10カウント</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>宗美智子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E8DW7GO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eoTct3quL.jpg" class="mr-3 lazyload" alt="光と闇のディストピア"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>光と闇のディストピア</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>東里桐子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ジャンル別,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01CRZ2JZO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mpYhDJdEL.jpg" class="mr-3 lazyload" alt="真珠色マーメイド（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真珠色マーメイド（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>中川佳子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAMFE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F8-UnDKsL.jpg" class="mr-3 lazyload" alt="イヴの誘惑"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>イヴの誘惑</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桃園樹林(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NAPEK80?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41jfgQI+MRL.jpg" class="mr-3 lazyload" alt="天使の吐息"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天使の吐息</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桃園樹林(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MVWZCVC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Vf8-wZ32L.jpg" class="mr-3 lazyload" alt="ピンクのルージュ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ピンクのルージュ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JFUO1HO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Tft2SkzhL.jpg" class="mr-3 lazyload" alt="おれたちのライブ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おれたちのライブ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JNZHKTW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515XVneEc4L.jpg" class="mr-3 lazyload" alt="愛・クロスロード"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛・クロスロード</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GYRIPB4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gfW7TADHL.jpg" class="mr-3 lazyload" alt="レディ・コンパニオン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レディ・コンパニオン</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JXC3C7E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OhJ9Lp+TL.jpg" class="mr-3 lazyload" alt="火遊び"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>火遊び</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GYRIQMW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514N78IyFLL.jpg" class="mr-3 lazyload" alt="ちょっと女友達（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ちょっと女友達（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K769RG0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rx5tP9lNL.jpg" class="mr-3 lazyload" alt="ワルプルギス・ナイト"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワルプルギス・ナイト</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>星川とみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KHK6EEO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61tC9oZFzoL.jpg" class="mr-3 lazyload" alt="やさしいライバル"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>やさしいライバル</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HFMIS5A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512bgfJBKKL.jpg" class="mr-3 lazyload" alt="私がすてた男"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私がすてた男</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDALOG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yg4cqk+wL.jpg" class="mr-3 lazyload" alt="男はいつもロマンチック女はいつもドラマチック"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男はいつもロマンチック女はいつもドラマチック</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAKP6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+iML-52QL.jpg" class="mr-3 lazyload" alt="あ・らいばる！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あ・らいばる！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>辻村弘子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JNZHKN8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516LKsIbdNL.jpg" class="mr-3 lazyload" alt="おんな三代物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おんな三代物語</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDALIW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hdWQUQEuL.jpg" class="mr-3 lazyload" alt="女と男の交差点"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女と男の交差点</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HWMWPGQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51U7ZjXUEzL.jpg" class="mr-3 lazyload" alt="お見合いラプソディー"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お見合いラプソディー</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HA350YQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51l18Jegj9L.jpg" class="mr-3 lazyload" alt="恋人失格"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>恋人失格</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HSCMB00?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51e+zbXPlOL.jpg" class="mr-3 lazyload" alt="結婚反対"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>結婚反対</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAL14?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iWms43NIL.jpg" class="mr-3 lazyload" alt="２度目の結婚"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>２度目の結婚</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>神奈幸子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDALF0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xKuHTjXBL.jpg" class="mr-3 lazyload" alt="優しく雨ぞ降りしきる"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>優しく雨ぞ降りしきる</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>北原文野(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IG16AU4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5164wwh+6jL.jpg" class="mr-3 lazyload" alt="夢の向こう側"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢の向こう側</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>北原文野(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IG16AUE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61hnibJbCqL.jpg" class="mr-3 lazyload" alt="失われたものの伝説"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>失われたものの伝説</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>葉月秋子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IK5Z39U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51s0C-T7wuL.jpg" class="mr-3 lazyload" alt="精霊《ジン》の森"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>精霊《ジン》の森</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>葉月秋子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IK5Z2UU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zbqbtbjuL.jpg" class="mr-3 lazyload" alt="宝物は君のこと"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宝物は君のこと</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GOMVREG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aK52ISM6L.jpg" class="mr-3 lazyload" alt="MIDNIGHT MARIA－ミッドナイト マリア－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>MIDNIGHT MARIA－ミッドナイト マリア－</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>片山こずえ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FZGZ09U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UZJXElbZL.jpg" class="mr-3 lazyload" alt="こわくないから"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こわくないから</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>田村飛鳥(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAMUE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510-augN2iL.jpg" class="mr-3 lazyload" alt="美羽の不思議体験"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>美羽の不思議体験</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>美羽(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G6DCJW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OGYy-X+6L.jpg" class="mr-3 lazyload" alt="美羽のちょっと怖い話"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>美羽のちょっと怖い話</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>美羽(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G6DCJUE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51v20yf9rVL.jpg" class="mr-3 lazyload" alt="極楽商事"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極楽商事</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>二宮博彦(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GOMVSUO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gnGVpwgsL.jpg" class="mr-3 lazyload" alt="人喰い"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人喰い</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>二階堂正宏(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K769S3C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615d83+pBxL.jpg" class="mr-3 lazyload" alt="極楽町一丁目（3）― 嫁しゅうと残酷篇 ―"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極楽町一丁目（3）― 嫁しゅうと残酷篇 ―</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>二階堂正宏(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K769S00?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51w+yoZTv4L.jpg" class="mr-3 lazyload" alt="美人になりたい物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>美人になりたい物語</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>刀根夕子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4JYTS2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Y8CfqncJL.jpg" class="mr-3 lazyload" alt="雨色の瞬間"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>雨色の瞬間</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生島ゆう(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MHDXJX8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OmI-za7gL.jpg" class="mr-3 lazyload" alt="きかせて…"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きかせて…</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生島ゆう(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FFU0DD4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61UQlAv-PnL.jpg" class="mr-3 lazyload" alt="キッチン りこピー"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キッチン りこピー</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>上重☆さゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I59QTNK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QSIAKc21L.jpg" class="mr-3 lazyload" alt="おとぎのリトルプリンセス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おとぎのリトルプリンセス</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>上重☆さゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I59QTN0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TWjsJWYJL.jpg" class="mr-3 lazyload" alt="あらま！ 記念日"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あらま！ 記念日</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>上重☆さゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HFMITA4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QDNkW383L.jpg" class="mr-3 lazyload" alt="平成おまじない少女　ウラナなのだわ！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>平成おまじない少女　ウラナなのだわ！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>上重☆さゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GOMVSXG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vGWSdONmL.jpg" class="mr-3 lazyload" alt="誕生－たんじょう－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>誕生－たんじょう－</h5>
+                    <p>価格：77円、ポイント：1</p>
+                    <p>桜香織(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ジャンル別,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B014630PEM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sYYEFzNeL.jpg" class="mr-3 lazyload" alt="アルテミスの鏡 Vol．1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アルテミスの鏡 Vol．1</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>森園みるく(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G6DCJLI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TI3hVTEBL.jpg" class="mr-3 lazyload" alt="この国で幸せになるの（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>この国で幸せになるの（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NODT9JI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51syJMFQNWL.jpg" class="mr-3 lazyload" alt="パーフェクト・ラバー"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パーフェクト・ラバー</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桜野なゆな(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ジャンル別,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G6DCJVS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TYgGy1UBL.jpg" class="mr-3 lazyload" alt="僕は天使に嘘をつかない"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕は天使に嘘をつかない</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MO4ETZM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ouSNRuGrL.jpg" class="mr-3 lazyload" alt="ラブ・エトセトラ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラブ・エトセトラ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桜野なゆな(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ジャンル別,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IG16AX6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SXwEQbYmL.jpg" class="mr-3 lazyload" alt="プレイガール"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プレイガール</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>秋本尚美(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NODT9MU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51r16EQegmL.jpg" class="mr-3 lazyload" alt="たとえば君のいない朝"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>たとえば君のいない朝</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>秋本尚美(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00N3HRULY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513zJ3j5wXL.jpg" class="mr-3 lazyload" alt="雨の日も 晴れの日も"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>雨の日も 晴れの日も</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>秋本尚美(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00N3HRUFA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NUajPZOVL.jpg" class="mr-3 lazyload" alt="いいかげんにランナウェイ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いいかげんにランナウェイ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>佐々木慶子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JFUO6HO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vNblYYFsL.jpg" class="mr-3 lazyload" alt="地獄の門"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地獄の門</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>佐々木慶子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FZGZ1DU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gXSMTUusL.jpg" class="mr-3 lazyload" alt="白い十字路"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>白い十字路</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>佐々木慶子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FZGZ1CQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MDkLZ4EGL.jpg" class="mr-3 lazyload" alt="L．A．HEAT【エル・エー・ヒート】"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>L．A．HEAT【エル・エー・ヒート】</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>黒田かすみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00P0GFZ5O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lepVxChdL.jpg" class="mr-3 lazyload" alt="クレオパトラ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クレオパトラ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>黒田かすみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ノンフィクション,コミック・ラノベ・BL,歴史,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00OT41L9W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hthdUIn6L.jpg" class="mr-3 lazyload" alt="おとぎの玉手箱"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おとぎの玉手箱</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>古賀アンナ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZWJL32?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617U8SLOPgL.jpg" class="mr-3 lazyload" alt="アンナの珍迷作絵本"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アンナの珍迷作絵本</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>古賀アンナ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M2TXB5I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sD-xZU6oL.jpg" class="mr-3 lazyload" alt="甘い三角"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘い三角</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>黒川あづさ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00H43ZQ2S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jWzDHXRAL.jpg" class="mr-3 lazyload" alt="BLACK SHEEP 黒い羊 VOL．1"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BLACK SHEEP 黒い羊 VOL．1</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>黒川あづさ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FRETFBO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518eqk9k+NL.jpg" class="mr-3 lazyload" alt="永遠にあなたと"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>永遠にあなたと</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>光崎圭(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HSCMB5A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oTzYlLGVL.jpg" class="mr-3 lazyload" alt="闇のアクトレス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>闇のアクトレス</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>光崎圭(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HSCMB14?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RRB5WAVBL.jpg" class="mr-3 lazyload" alt="箱入り奥様"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>箱入り奥様</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>光崎圭(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZTG2FK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OHtpZ30UL.jpg" class="mr-3 lazyload" alt="アペリティフにＤｅｅｐ Ｋｉｓｓ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アペリティフにＤｅｅｐ Ｋｉｓｓ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>光崎圭(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDALS2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zHtUTyT1L.jpg" class="mr-3 lazyload" alt="２月は雨に濡れて"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>２月は雨に濡れて</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>光崎圭(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GCT4QYE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512inGE0SZL.jpg" class="mr-3 lazyload" alt="あなたは夜の帳(とばり)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あなたは夜の帳(とばり)</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>光崎圭(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GCT4RES?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gQmZg4H6L.jpg" class="mr-3 lazyload" alt="警視RYO刑事SHO（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>警視RYO刑事SHO（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>川崎三枝子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FMRTHFU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lPzKoG5mL.jpg" class="mr-3 lazyload" alt="私立男塾（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私立男塾（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松田一輝(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JXC3CNI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51C0pBmCIYL.jpg" class="mr-3 lazyload" alt="ゾンビが銀座にやって来る（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゾンビが銀座にやって来る（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>佐々木慶子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GOMVS5O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wgdnopf5L.jpg" class="mr-3 lazyload" alt="形而上のマリア"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>形而上のマリア</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>遠野一実(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KXWCSLO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dsT-LrvCL.jpg" class="mr-3 lazyload" alt="ラプンツェル"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラプンツェル</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>遠野一実(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KMS5QAE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gXwMK65cL.jpg" class="mr-3 lazyload" alt="I WISH"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>I WISH</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>ｓａｃｏ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GOMVSV8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PlMGc9jiL.jpg" class="mr-3 lazyload" alt="死神寓話 冥界への誘い"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死神寓話 冥界への誘い</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>ＭＩＤＵＴＩ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAHDQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zuEyQu2oL.jpg" class="mr-3 lazyload" alt="教授の受難"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>教授の受難</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>ＭＩＤＵＴＩ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00H43ZPLU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GYnmRGYtL.jpg" class="mr-3 lazyload" alt="紅蓮の輪廻【幻想ホラー短編集（1）】"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>紅蓮の輪廻【幻想ホラー短編集（1）】</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>ＭＩＤＵＴＩ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FRETFB4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5189-OehIXL.jpg" class="mr-3 lazyload" alt="魔性の螺旋《望月玲子自薦ミステリー傑作集》"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔性の螺旋《望月玲子自薦ミステリー傑作集》</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>望月玲子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKJRV46?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51h8mqAVG2L.jpg" class="mr-3 lazyload" alt="竜の子どもたち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>竜の子どもたち</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>穂実あゆこ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZPYMCH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oVXfjB9oL.jpg" class="mr-3 lazyload" alt="絶対安全少女"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>絶対安全少女</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>有希うさぎ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HA351RC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oVGKct1bL.jpg" class="mr-3 lazyload" alt="保健室の春ちゃん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>保健室の春ちゃん</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>穂実あゆこ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I59QTOY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jmEfokYnL.jpg" class="mr-3 lazyload" alt="闘族たちの夜"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>闘族たちの夜</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>穂実あゆこ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZTBNK2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yfEIw8iUL.jpg" class="mr-3 lazyload" alt="和宮内親王"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>和宮内親王</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ノンフィクション,コミック・ラノベ・BL,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZWJNHQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51riiHBUHwL.jpg" class="mr-3 lazyload" alt="桃色武家屋敷2（二乗）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃色武家屋敷2（二乗）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZWJN7G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PdaO7KzGL.jpg" class="mr-3 lazyload" alt="日野富子"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日野富子</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ノンフィクション,コミック・ラノベ・BL,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IP2YIQW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51j18ZnMaxL.jpg" class="mr-3 lazyload" alt="葬儀屋百合の事件簿"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>葬儀屋百合の事件簿</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生田悠理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4JYU4U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Yya+d8byL.jpg" class="mr-3 lazyload" alt="南風家族　シリーズ・家族の風向き"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>南風家族　シリーズ・家族の風向き</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>星崎真紀(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IP2YIFS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61LRD7suvAL.jpg" class="mr-3 lazyload" alt="純情クレイジーフルーツ番外編　大奥純情絵巻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>純情クレイジーフルーツ番外編　大奥純情絵巻</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D87311W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Blb7E+v4L.jpg" class="mr-3 lazyload" alt="緋野家の兄弟　花賀家の姉妹"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>緋野家の兄弟　花賀家の姉妹</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00H43ZKMO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jMMs1c+hL.jpg" class="mr-3 lazyload" alt="新名季実子の夏休み"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新名季実子の夏休み</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>秋本尚美(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FAK68PG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614lDn1mOmL.jpg" class="mr-3 lazyload" alt="先生、泊めてください！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>先生、泊めてください！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E5CC9H6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515mFvv8yQL.jpg" class="mr-3 lazyload" alt="天使の羽あと"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天使の羽あと</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>遠野一実(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I59QU6G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Gj2VTyjwL.jpg" class="mr-3 lazyload" alt="双晶宮(1)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双晶宮(1)</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>遠野一実(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZV7I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+HSYxCW5L.jpg" class="mr-3 lazyload" alt="千夜一夜物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>千夜一夜物語</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>伊藤結花理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ロマンス</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZWJFQ0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Nzd-GfqIL.jpg" class="mr-3 lazyload" alt="天《そら》のかけら"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天《そら》のかけら</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>伊藤ゆみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JARVY18?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51loZQFwHFL.jpg" class="mr-3 lazyload" alt="舞姫"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>舞姫</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>イケスミチエコ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IK5Z1ME?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5182jUp8gcL.jpg" class="mr-3 lazyload" alt="死の迷路"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死の迷路</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZRH297?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51f-pdRk73L.jpg" class="mr-3 lazyload" alt="額田王"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>額田王</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ノンフィクション,コミック・ラノベ・BL,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IP2YJ6G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JtbXmIvsL.jpg" class="mr-3 lazyload" alt="血液少女"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>血液少女</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>西川淳(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FFU0DDE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fuoN31siL.jpg" class="mr-3 lazyload" alt="君に捧げる屍[し]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>君に捧げる屍[し]</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>瀬川乃里子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00F5L6HH4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FKm5q3ctL.jpg" class="mr-3 lazyload" alt="刑事５００足"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>刑事５００足</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>篠原とおる(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00J4JYUL8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YtTFKDdxL.jpg" class="mr-3 lazyload" alt="死神に愛された女"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死神に愛された女</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桜香織(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZRNQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NUKJixACL.jpg" class="mr-3 lazyload" alt="自由への闘争"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>自由への闘争</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>高木裕里(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：ジャンル別,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZQ7S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FoAWYgpQL.jpg" class="mr-3 lazyload" alt="三つの赤いハイヒール"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三つの赤いハイヒール</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>岡本ゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IP2YE0C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RaE0oSwzL.jpg" class="mr-3 lazyload" alt="春待ち草"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春待ち草</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>岡本ゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IP2YDSU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qL2Un96uL.jpg" class="mr-3 lazyload" alt="以蔵－ＩＺＯＵ－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>以蔵－ＩＺＯＵ－</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>岡崎つぐお(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00EQ1DTXE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Kqs3FYbwL.jpg" class="mr-3 lazyload" alt="月蝕鬼 -Vampire Legend-"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月蝕鬼 -Vampire Legend-</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>伊藤結花理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IP2YCC2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61y7bOSINsL.jpg" class="mr-3 lazyload" alt="黒の荒夜"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>黒の荒夜</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>伊藤ゆみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDALX2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gdHvhsB6L.jpg" class="mr-3 lazyload" alt="影たちの刻印～ダークサイドシティー～（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>影たちの刻印～ダークサイドシティー～（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>伊藤ゆみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDALKK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sRp8w0A+L.jpg" class="mr-3 lazyload" alt="夏の球児たち（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夏の球児たち（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>みやたけし(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,スポーツ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZWJDQM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pp-htqDnL.jpg" class="mr-3 lazyload" alt="血ぬられた黒ミサ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>血ぬられた黒ミサ</h5>
+                    <p>価格：308円、ポイント：3</p>
+                    <p>たむろ未知(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZPII?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iLDhGwVxL.jpg" class="mr-3 lazyload" alt="愛鍵"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛鍵</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>イケスミチエコ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D8730JA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b8lMvebDL.jpg" class="mr-3 lazyload" alt="愛の誘惑"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛の誘惑</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>イケスミチエコ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D8730QI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512MXCeIcFL.jpg" class="mr-3 lazyload" alt="愛してますか？（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛してますか？（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>イケスミチエコ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IG1680G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zlsMijtQL.jpg" class="mr-3 lazyload" alt="ラム亭のちいママ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラム亭のちいママ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>木村晃子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZOXE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513go8NnQpL.jpg" class="mr-3 lazyload" alt="ゆうひが丘の総理大臣（1）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆうひが丘の総理大臣（1）</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>望月あきら(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IK5Z2DC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517kPdYq0YL.jpg" class="mr-3 lazyload" alt="メバル釣り師の妻"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メバル釣り師の妻</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>岡本ゆり(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZPCO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KMZQbEyCL.jpg" class="mr-3 lazyload" alt="ミステリーホテル -Hotel Fantasia-"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミステリーホテル -Hotel Fantasia-</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生田悠理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JFUO1I8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+0LtLO+YL.jpg" class="mr-3 lazyload" alt="ハートにタンブリング"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハートにタンブリング</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>望月玲子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKJRV64?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51N63CZbrwL.jpg" class="mr-3 lazyload" alt="こまっしゃくれFAN HOUSE"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こまっしゃくれFAN HOUSE</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>有希うさぎ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HA351W2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513yVfEqcBL.jpg" class="mr-3 lazyload" alt="だから、今夜だけは"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>だから、今夜だけは</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桃園樹林(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FRETECY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51w7KR1-IlL.jpg" class="mr-3 lazyload" alt="ゆめのはんかけ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆめのはんかけ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>秋本尚美(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FAK69S2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TI6a2K5uL.jpg" class="mr-3 lazyload" alt="セイレネス"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>セイレネス</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>桃園樹林(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00H43ZS12?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51raPZ0hVjL.jpg" class="mr-3 lazyload" alt="サクラサク！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サクラサク！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生田悠理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G6DCJWM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Bztm-jToL.jpg" class="mr-3 lazyload" alt="コールボーイズ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コールボーイズ</h5>
+                    <p>価格：308円、ポイント：3</p>
+                    <p>たむろ未知(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DDPWM82?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-A7oOm7JL.jpg" class="mr-3 lazyload" alt="ときめき戦士ミルキィピンク"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ときめき戦士ミルキィピンク</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>うえだ未知(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IAACY2Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61WAWFxoKNL.jpg" class="mr-3 lazyload" alt="カイジ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カイジ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>姫川明(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IZWJWX6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xg+5pBhTL.jpg" class="mr-3 lazyload" alt="お江戸残酷物語"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お江戸残酷物語</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>藤田素子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KZRRL75?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Rl8JTeE8L.jpg" class="mr-3 lazyload" alt="ＣＡＳＣＡＤＩＡ－カスケイディア－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＣＡＳＣＡＤＩＡ－カスケイディア－</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>中川勝海(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IAACWYY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513kfM6JqpL.jpg" class="mr-3 lazyload" alt="Kiss Me，Touch Me ― キス・ミー・タッチ・ミー ―"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Kiss Me，Touch Me ― キス・ミー・タッチ・ミー ―</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生田悠理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAJDY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UDN4YNioL.jpg" class="mr-3 lazyload" alt="ＥＹＥＳ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＥＹＥＳ</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>生田悠理(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GUDAJ7A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jTu15R3dL.jpg" class="mr-3 lazyload" alt="２５時のＸＥＮＥ－セネ－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>２５時のＸＥＮＥ－セネ－</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>瀬川乃里子(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ホラー,ミステリー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FAK6A1I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61V0k+DNKQL.jpg" class="mr-3 lazyload" alt="カトレアな女達"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カトレアな女達</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>松苗あけみ(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00E0GTSLM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GqSPwpM5L.jpg" class="mr-3 lazyload" alt="ｃｍ０－センチメートル・ゼロ－"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ｃｍ０－センチメートル・ゼロ－</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>遠野一実(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CI4ZPRY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qsTAJ+QJL.jpg" class="mr-3 lazyload" alt="えみ印だもん！"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えみ印だもん！</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>うえだ未知(著)</p>
+                    <p>出版社：オフィス漫</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I59QUG6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
