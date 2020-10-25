@@ -1,0 +1,729 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NX7lEo-VL.jpg" class="mr-3 lazyload" alt="黄禍論　百年の系譜 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>黄禍論　百年の系譜 (講談社選書メチエ)</h5>
+                    <p>価格：1650円、ポイント：17</p>
+                    <p>廣部泉(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：歴史学,Featured Categories,歴史学</p>
+                    <a href="https://www.amazon.co.jp/dp/B08H222DJG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41C4Ja1Wb4L.jpg" class="mr-3 lazyload" alt="花嫁のアメリカ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>花嫁のアメリカ (講談社文庫)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>江成常夫(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B0894NM43Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/415O3uS3ppL.jpg" class="mr-3 lazyload" alt="出ようかニッポン、女３１歳　アメリカ・中国をゆく (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出ようかニッポン、女３１歳　アメリカ・中国をゆく (講談社文庫)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>山本美知子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,Featured Categories,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B088FRTQR6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JM8b4Z6TL.jpg" class="mr-3 lazyload" alt="「頭脳なき国家」の悲劇"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「頭脳なき国家」の悲劇</h5>
+                    <p>価格：1345円、ポイント：13</p>
+                    <p>小川和久(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B082HN6TLD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d3kH3eThL.jpg" class="mr-3 lazyload" alt="国際社会を支配する地政学の思考法　歴史・情報・大衆を操作すれば他国を思い通りにできる"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>国際社会を支配する地政学の思考法　歴史・情報・大衆を操作すれば他国を思い通りにできる</h5>
+                    <p>価格：1502円、ポイント：15</p>
+                    <p>ペドロ・バーニョス(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：国際政治情勢,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B0827TL6M3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qE8qBG03L.jpg" class="mr-3 lazyload" alt="戦争の記憶　コロンビア大学特別講義　学生との対話 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>戦争の記憶　コロンビア大学特別講義　学生との対話 (講談社現代新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>キャロル・グラック(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：歴史学,Featured Categories,歴史学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V1DWFVF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41J6QXtAE7L.jpg" class="mr-3 lazyload" alt="トクヴィル　平等と不平等の理論家 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>トクヴィル　平等と不平等の理論家 (講談社学術文庫)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>宇野重規(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：思想,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QTYWVW5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41f5rKLA3hL.jpg" class="mr-3 lazyload" alt="仮想敵国ニッポン　アメリカの対日戦略シフト (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>仮想敵国ニッポン　アメリカの対日戦略シフト (講談社文庫)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>小川和久(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PCRHQN9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31T0u-jqLPL.jpg" class="mr-3 lazyload" alt="アメリカと私 (講談社文芸文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカと私 (講談社文芸文庫)</h5>
+                    <p>価格：1040円、ポイント：10</p>
+                    <p>江藤淳(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L2WX1XV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iwgoFCpGL.jpg" class="mr-3 lazyload" alt="興亡の世界史　空の帝国　アメリカの２０世紀 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>興亡の世界史　空の帝国　アメリカの２０世紀 (講談社学術文庫)</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>生井英考(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：歴史学,歴史学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L2VQ9G7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ITHS+VVJL.jpg" class="mr-3 lazyload" alt="私自身のアメリカ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私自身のアメリカ (講談社文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>池田満寿夫(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：76-100回,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GVGYHCZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519qnO9ThHL.jpg" class="mr-3 lazyload" alt="人に言いたくなるアメリカと野球の「ちょっとイイ話」"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人に言いたくなるアメリカと野球の「ちょっとイイ話」</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>向井万起男(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DD85PY6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SHnjsoDeL.jpg" class="mr-3 lazyload" alt="９．１１後の現代史 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>９．１１後の現代史 (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>酒井啓子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B078TN4G25?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hGHgXl2gL.jpg" class="mr-3 lazyload" alt="アメリカ太平洋軍　日米が融合する世界最強の集団"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ太平洋軍　日米が融合する世界最強の集団</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>梶原みずほ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：軍事入門,軍事</p>
+                    <a href="https://www.amazon.co.jp/dp/B077M9J1Z7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VrJlZksbL.jpg" class="mr-3 lazyload" alt="忘れられた黒船　アメリカ北太平洋戦略と日本開国 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>忘れられた黒船　アメリカ北太平洋戦略と日本開国 (講談社選書メチエ)</h5>
+                    <p>価格：1309円、ポイント：13</p>
+                    <p>後藤敦史(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：日本史一般,Featured Categories,日本史</p>
+                    <a href="https://www.amazon.co.jp/dp/B0721MJ7NH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zjBS4FLiL.jpg" class="mr-3 lazyload" alt="世界を変えたアメリカ大統領の演説【CDなし】 (講談社パワー・イングリッシュ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界を変えたアメリカ大統領の演説【CDなし】 (講談社パワー・イングリッシュ)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>井上泰浩(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：英語よみもの,言語学,英語</p>
+                    <a href="https://www.amazon.co.jp/dp/B071WL757K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BrjOlr-vL.jpg" class="mr-3 lazyload" alt="ジャズ・アンバサダーズ　「アメリカ」の音楽外交史 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジャズ・アンバサダーズ　「アメリカ」の音楽外交史 (講談社選書メチエ)</h5>
+                    <p>価格：1386円、ポイント：14</p>
+                    <p>齋藤嘉臣(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：国際政治情勢,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B072FNQ99K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gUU+YAbdL.jpg" class="mr-3 lazyload" alt="アメリカ帝国の終焉　勃興するアジアと多極化世界 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ帝国の終焉　勃興するアジアと多極化世界 (講談社現代新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>進藤榮一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B06X6H7PL1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Q8zkipCRL.jpg" class="mr-3 lazyload" alt="野生哲学──アメリカ・インディアンに学ぶ (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>野生哲学──アメリカ・インディアンに学ぶ (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>管啓次郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,世界史</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N4QWVB1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512CcBEhtqL.jpg" class="mr-3 lazyload" alt="世界大恐慌　１９２９年に何がおこったか (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界大恐慌　１９２９年に何がおこったか (講談社学術文庫)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>秋元英一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：歴史学,歴史学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NBOPALL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518SUihZ3rL.jpg" class="mr-3 lazyload" alt="ＮＯ　ＨＥＲＯ　アメリカ海軍特殊部隊の掟"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＯ　ＨＥＲＯ　アメリカ海軍特殊部隊の掟</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>マーク・オーウェン(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MSNG80X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519irzTjOiL.jpg" class="mr-3 lazyload" alt="さらば白人国家アメリカ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さらば白人国家アメリカ</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>町山智浩(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M262488?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mSk6Tdo8L.jpg" class="mr-3 lazyload" alt="アメリカ　異形の制度空間 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ　異形の制度空間 (講談社選書メチエ)</h5>
+                    <p>価格：1194円、ポイント：12</p>
+                    <p>西谷修(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：歴史学,Featured Categories,歴史学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M2YOIDC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/4165FV+nPTL.jpg" class="mr-3 lazyload" alt="ドナルド・トランプ、大いに語る (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドナルド・トランプ、大いに語る (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>セス・ミルスタイン(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ISJMB4M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41PZhkcIk+L.jpg" class="mr-3 lazyload" alt="アメリカの真の支配者　コーク一族"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカの真の支配者　コーク一族</h5>
+                    <p>価格：2002円、ポイント：20</p>
+                    <p>ダニエル・シュルマン(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B01AJGODQQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41uaww1SCTL.jpg" class="mr-3 lazyload" alt="なぜヒラリー・クリントンを大統領にしないのか？ (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なぜヒラリー・クリントンを大統領にしないのか？ (講談社＋α新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>佐藤則男(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B018K6C9S6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HsIecQlSL.jpg" class="mr-3 lazyload" alt="アメリカ人禅僧、日本社会の構造に分け入る　１３人との対話"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ人禅僧、日本社会の構造に分け入る　１３人との対話</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>ミラー和空(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B015FM7KN2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BbgmDHl9L.jpg" class="mr-3 lazyload" alt="アメリカ音楽史　ミンストレル・ショウ、ブルースからヒップホップまで (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ音楽史　ミンストレル・ショウ、ブルースからヒップホップまで (講談社選書メチエ)</h5>
+                    <p>価格：1271円、ポイント：13</p>
+                    <p>大和田俊之(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,音楽</p>
+                    <a href="https://www.amazon.co.jp/dp/B0142O1IQ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hgk4TG0bL.jpg" class="mr-3 lazyload" alt="ウェブ×ソーシャル×アメリカ　〈全球時代〉の構想力 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウェブ×ソーシャル×アメリカ　〈全球時代〉の構想力 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>池田純一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：本・雑誌研究,Featured Categories,本・図書館</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XMCH1DW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/411YzC2-I8L.jpg" class="mr-3 lazyload" alt="喧嘩の作法　アメリカが怖れた男の交渉術"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>喧嘩の作法　アメリカが怖れた男の交渉術</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>高橋宏(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B00W6NB75Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51D4gy+qbuL.jpg" class="mr-3 lazyload" alt="アメリカ最強の特殊戦闘部隊が「国家の敵」を倒すまで　ＮＯ　ＥＡＳＹ　ＤＡＹ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ最強の特殊戦闘部隊が「国家の敵」を倒すまで　ＮＯ　ＥＡＳＹ　ＤＡＹ</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>マーク・オーウェン(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TPL9A06?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OKwMbkusL.jpg" class="mr-3 lazyload" alt="米軍と人民解放軍　米国防総省の対中戦略 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>米軍と人民解放軍　米国防総省の対中戦略 (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>布施哲(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：軍事入門,Featured Categories,軍事</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NOTKQBM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t6SwimVeL.jpg" class="mr-3 lazyload" alt="謎の１セント硬貨　真実は細部に宿る　ｉｎ　ＵＳＡ (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>謎の１セント硬貨　真実は細部に宿る　ｉｎ　ＵＳＡ (講談社文庫)</h5>
+                    <p>価格：424円、ポイント：4</p>
+                    <p>向井万起男(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：近現代の作品,Featured Categories,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IJ6V880?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31GLM2Ucb8L.jpg" class="mr-3 lazyload" alt="アメリカの影 (講談社文芸文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカの影 (講談社文芸文庫)</h5>
+                    <p>価格：1078円、ポイント：11</p>
+                    <p>加藤典洋(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：思想,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GY19CQW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41czR2IPP2L.jpg" class="mr-3 lazyload" alt="アメリカ人は理解できない　「ご縁」という日本の最強ビジネス法則 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ人は理解できない　「ご縁」という日本の最強ビジネス法則 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>釣島平三郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：人生論・教訓,自己啓発,Featured Categories,倫理学・道徳,自己啓発</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G9Q4UYQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YomuLMvRL.jpg" class="mr-3 lazyload" alt="アメリカ・メディア・ウォーズ　ジャーナリズムの現在地 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ・メディア・ウォーズ　ジャーナリズムの現在地 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>大治朋子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B00G1ZUOFY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/314K9ACNJ5L.jpg" class="mr-3 lazyload" alt="アメリカ外交　苦悩と希望 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ外交　苦悩と希望 (講談社現代新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>村田晃嗣(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKX4HSU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31JcePqyHxL.jpg" class="mr-3 lazyload" alt="ヨーロッパ型資本主義　アメリカ市場原理主義との決別 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヨーロッパ型資本主義　アメリカ市場原理主義との決別 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>福島清彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKX4FVE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41jw+PDPMPL.jpg" class="mr-3 lazyload" alt="宗教からよむ「アメリカ」 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>宗教からよむ「アメリカ」 (講談社選書メチエ)</h5>
+                    <p>価格：1271円、ポイント：13</p>
+                    <p>森孝一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：宗教入門,Featured Categories,宗教入門</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CHIO9C8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41VSAAPK3mL.jpg" class="mr-3 lazyload" alt="〈代表〉と〈統治〉のアメリカ政治 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>〈代表〉と〈統治〉のアメリカ政治 (講談社選書メチエ)</h5>
+                    <p>価格：1040円、ポイント：10</p>
+                    <p>待鳥聡史(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：政治入門,Featured Categories,政治</p>
+                    <a href="https://www.amazon.co.jp/dp/B00C1E2Y8Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mAYgSAsUL.jpg" class="mr-3 lazyload" alt="アメリカを動かす思想　プラグマティズム入門 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカを動かす思想　プラグマティズム入門 (講談社現代新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>小川仁志(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：思想,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BLDN8C2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51P9fDJYmDL.jpg" class="mr-3 lazyload" alt="まんが 現代史　アメリカが戦争をやめない理由 まんが パレスチナ問題 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんが 現代史　アメリカが戦争をやめない理由 まんが パレスチナ問題 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>山井教雄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：社会学概論,コミック,Featured Categories,マンガ,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DKX47Y4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TIbv8ESAL.jpg" class="mr-3 lazyload" alt="アメリカ　最強のエリート教育 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アメリカ　最強のエリート教育 (講談社＋α新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>釣島平三郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,Kindle本</p>
+                    <a href="https://www.amazon.co.jp/dp/B00B1N56NQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>

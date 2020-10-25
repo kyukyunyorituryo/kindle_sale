@@ -1,0 +1,2510 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oETVtit5L.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 12 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 12 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0861LNSG7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cI9WS5H6L.jpg" class="mr-3 lazyload" alt="春菜ちゃん、がんばる？ フェアリーテイル・クロニクル　１ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春菜ちゃん、がんばる？ フェアリーテイル・クロニクル　１ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>埴輪星人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0841STMPF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fKWplqt4L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 22 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 22 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TBCHK1G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6102T3VDf+L.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ　プラクティカルウォーゲーム (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ　プラクティカルウォーゲーム (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N5HZ9VH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61hjGXiT64L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 1【電子版書き下ろし付】 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 1【電子版書き下ろし付】 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD14MOA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61kPN+AV2LL.jpg" class="mr-3 lazyload" alt="完全回避ヒーラーの軌跡　6 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>完全回避ヒーラーの軌跡　6 (MFブックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>ぷにちゃん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B084Z4WYX9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GfJqGqjxL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 10　ゲーマー兄妹は過去（ツケ）を払わされるようです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 10　ゲーマー兄妹は過去（ツケ）を払わされるようです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B079Y2M3Y2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Do-SjL8eL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 9　ゲーマー兄妹は一ターン休むそうです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 9　ゲーマー兄妹は一ターン休むそうです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KSTEV7K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nAa5gGLTL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 8　ゲーマーたちは布石を継いでいくそうです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 8　ゲーマーたちは布石を継いでいくそうです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B019MDTONO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-6sH1IGNL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 7　ゲーマー兄妹たちは定石を覆すそうです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 7　ゲーマー兄妹たちは定石を覆すそうです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B012BYC23A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61HXTF70s6L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　3 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　3 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：546円、ポイント：5</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V2TERGQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61vkxsb3mmL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 2【電子版書き下ろし付】 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 2【電子版書き下ろし付】 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GJFD55M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qZQlVO7hL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 1　ゲーマー兄妹がファンタジー世界を征服するそうです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 1　ゲーマー兄妹がファンタジー世界を征服するそうです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0096GYAYG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NOOBJrsQL.jpg" class="mr-3 lazyload" alt="錬金術師です。自重はゴミ箱に捨ててきました。　4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>錬金術師です。自重はゴミ箱に捨ててきました。　4 (MFブックス)</h5>
+                    <p>価格：1231円、ポイント：12</p>
+                    <p>夏月 涼(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B084YP3FFB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PBuSNpF3L.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 11 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 11 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Z8SFFK3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fX-JO6PHL.jpg" class="mr-3 lazyload" alt="召喚された賢者は異世界を往く　～最強なのは不要在庫のアイテムでした～　２ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>召喚された賢者は異世界を往く　～最強なのは不要在庫のアイテムでした～　２ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>小林 こー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B082H8G5MX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xZoz0TUIL.jpg" class="mr-3 lazyload" alt="召喚された賢者は異世界を往く　～最強なのは不要在庫のアイテムでした～　１ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>召喚された賢者は異世界を往く　～最強なのは不要在庫のアイテムでした～　１ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>小林 こー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XG6N73G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61f0qhZSk2L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 17 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 17 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XW1Q859?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-d966l30L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　16 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　16 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：634円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CD75KSY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61J8pX89EaL.jpg" class="mr-3 lazyload" alt="駆除人 2　～土の勇者篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 2　～土の勇者篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KSTEW3I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51anafVYN3L.jpg" class="mr-3 lazyload" alt="駆除人 1　～ツナギを着た転生者～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 1　～ツナギを着た転生者～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HCEQPJG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tW+3LEq0L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　9 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　9 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B075GFXF8D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512UA76bp-L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　4 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　4 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：546円、ポイント：5</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B015DS7NW6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EBCZc-HCL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 6　ゲーマー夫嫁は世界に挑んだそうです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 6　ゲーマー夫嫁は世界に挑んだそうです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JXEFLZ8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nKr88RS7L.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 5　ゲーマー兄妹は強くてニューゲームがお嫌いなようです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 5　ゲーマー兄妹は強くてニューゲームがお嫌いなようです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GZK5PWM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610y2rDeB+L.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 4　ゲーマー兄妹はリアル恋愛ゲームから逃げ出しました (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 4　ゲーマー兄妹はリアル恋愛ゲームから逃げ出しました (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00F5W6B6A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61F-IbV7pkL.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 2　ゲーマー兄妹が獣耳っ子の国に目をつけたようです (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 2　ゲーマー兄妹が獣耳っ子の国に目をつけたようです (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B009U9SHBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NNmGIIPxL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 21 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 21 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NW4193M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dWgbFB1FL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 20 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 20 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M88FTC7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wgLCAsimL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 19 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 19 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0797TK99P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gZ2oWZ36L.jpg" class="mr-3 lazyload" alt="ノーゲーム・ノーライフ 3　ゲーマー兄妹の片割れが消えたようですが……？ (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーゲーム・ノーライフ 3　ゲーマー兄妹の片割れが消えたようですが……？ (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>榎宮 祐(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00B8OA1CY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51efR4qAv5L.jpg" class="mr-3 lazyload" alt="駆除人 3　～東方見聞篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 3　～東方見聞篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N5RB9MP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61kdP20F6IL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり 18 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり 18 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0743439NC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Y2fYK-F-L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　15 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　15 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B084L1L3BN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515cxJnOWrL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　14 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　14 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XJ14B3V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rh0IHbVvL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　13 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　13 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QCRF7NG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61C7jJxj1yL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　8 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　8 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B06Y5DNZW9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wncom4A1L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　5 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　5 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B019SSAAOK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pQisRPP0L.jpg" class="mr-3 lazyload" alt="最強ハウジングアプリで快適異世界生活　１ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最強ハウジングアプリで快適異世界生活　１ (MFブックス)</h5>
+                    <p>価格：1242円、ポイント：12</p>
+                    <p>うみ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Z8RVQWK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NJtDNX1yL.jpg" class="mr-3 lazyload" alt="召喚された賢者は異世界を往く　～最強なのは不要在庫のアイテムでした～　３ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>召喚された賢者は異世界を往く　～最強なのは不要在庫のアイテムでした～　３ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>小林 こー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B086WS5HGC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ji3CvB2jL.jpg" class="mr-3 lazyload" alt="錬金術師です。自重はゴミ箱に捨ててきました。　3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>錬金術師です。自重はゴミ箱に捨ててきました。　3 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>夏月 涼(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T877YQV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61EnHZfwReL.jpg" class="mr-3 lazyload" alt="錬金術師です。自重はゴミ箱に捨ててきました。　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>錬金術師です。自重はゴミ箱に捨ててきました。　2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>夏月 涼(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MZMZPMR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513oXv9SgtL.jpg" class="mr-3 lazyload" alt="槍の勇者のやり直し　3 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>槍の勇者のやり直し　3 (MFC)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>にぃと(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L57NSPP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fNiRdfsVL.jpg" class="mr-3 lazyload" alt="槍の勇者のやり直し　2 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>槍の勇者のやり直し　2 (MFC)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>にぃと(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B91R2T8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61v9TpqVhuL.jpg" class="mr-3 lazyload" alt="槍の勇者のやり直し　1 (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>槍の勇者のやり直し　1 (MFC)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>にぃと(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B0785QQJNM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518xfO1kyTL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　12 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　12 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L54PRXK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t+YM-PW6L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　11 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　11 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FC9P6SJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DU8C54wsL.jpg" class="mr-3 lazyload" alt="三田一族の意地を見よ ～転生戦国武将の奔走記～ 1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三田一族の意地を見よ ～転生戦国武将の奔走記～ 1 (MFブックス)</h5>
+                    <p>価格：1242円、ポイント：12</p>
+                    <p>三田 弾正(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00Y7JE664?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FfuvgNMKL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　10 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　10 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B079PQF4MJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61H3VjfSEzL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　7 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　7 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MFFR2KY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61P3I2Vk3KL.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がり　6 (MFコミックス　フラッパーシリーズ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がり　6 (MFコミックス　フラッパーシリーズ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>藍屋球(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01GPMSDIW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KHDN2KyaL.jpg" class="mr-3 lazyload" alt="人間不信の冒険者たちが世界を救うようです　２　～麗しのパラディン編～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人間不信の冒険者たちが世界を救うようです　２　～麗しのパラディン編～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>富士 伸太(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0861LDH17?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PJScYWwDL.jpg" class="mr-3 lazyload" alt="初めての旅は異世界で　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>初めての旅は異世界で　2 (MFブックス)</h5>
+                    <p>価格：1287円、ポイント：13</p>
+                    <p>叶 ルル(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B084WR567Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NCwPwSJqL.jpg" class="mr-3 lazyload" alt="完全回避ヒーラーの軌跡　5 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>完全回避ヒーラーの軌跡　5 (MFブックス)</h5>
+                    <p>価格：1231円、ポイント：12</p>
+                    <p>ぷにちゃん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Z8RBS81?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61lxk5yuZYL.jpg" class="mr-3 lazyload" alt="人間不信の冒険者たちが世界を救うようです　１　～最強パーティー結成編～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人間不信の冒険者たちが世界を救うようです　１　～最強パーティー結成編～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>富士 伸太(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XKXSSY3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uiK8mOvAL.jpg" class="mr-3 lazyload" alt="限界レベル１からの成り上がり　～最弱レベルの俺が異世界最強になるまで～　１ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>限界レベル１からの成り上がり　～最弱レベルの俺が異世界最強になるまで～　１ (MFC)</h5>
+                    <p>価格：644円、ポイント：6</p>
+                    <p>上向 だい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08HLC8DV3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iJf8G3WKL.jpg" class="mr-3 lazyload" alt="初めての旅は異世界で　1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>初めての旅は異世界で　1 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>叶 ルル(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WTLKT38?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510kV3qnwyL.jpg" class="mr-3 lazyload" alt="剣と弓とちょこっと魔法の転生戦記 ２　～凡人貴族、好敵手との邂逅～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>剣と弓とちょこっと魔法の転生戦記 ２　～凡人貴族、好敵手との邂逅～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>U字(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TCDX14X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EBNz47F+L.jpg" class="mr-3 lazyload" alt="盾の勇者の成り上がりクラスアップ　公式設定資料集 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>盾の勇者の成り上がりクラスアップ　公式設定資料集 (MFブックス)</h5>
+                    <p>価格：1287円、ポイント：13</p>
+                    <p>アネコ ユサギ(その他)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TDGG2WB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Yre4b1dNL.jpg" class="mr-3 lazyload" alt="駆除人 10　～変わりゆく異世界篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 10　～変わりゆく異世界篇～ (MFブックス)</h5>
+                    <p>価格：1287円、ポイント：13</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RYQGL2C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512XsDvubpL.jpg" class="mr-3 lazyload" alt="駆除人 9　～つなぎ合う世界篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 9　～つなぎ合う世界篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MZNQCNK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/613uhEvJGEL.jpg" class="mr-3 lazyload" alt="剣と弓とちょこっと魔法の転生戦記 １　～凡人貴族、成り上がりへの道～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>剣と弓とちょこっと魔法の転生戦記 １　～凡人貴族、成り上がりへの道～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>U字(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MZN4RHK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516oAAEX71L.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 7 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 7 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：クッキング・レシピ,クッキング・レシピ,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KPWLWG1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511vhbVBLdL.jpg" class="mr-3 lazyload" alt="魅了スキルでいきなり世界最強３　悦楽の女王【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魅了スキルでいきなり世界最強３　悦楽の女王【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：327円、ポイント：3</p>
+                    <p>北山 結莉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JLDRKZQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jKCpgVkEL.jpg" class="mr-3 lazyload" alt="錬金術師です。自重はゴミ箱に捨ててきました。　1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>錬金術師です。自重はゴミ箱に捨ててきました。　1 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>夏月 涼(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HHNG7FW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61i4KR0vusL.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 6 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 6 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：クッキング・レシピ,クッキング・レシピ,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FQD8J2S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51f-JMbyzCL.jpg" class="mr-3 lazyload" alt="お兄ちゃん……ここでなら、好きって言ってもいいんだよね？　２　ケモミミ・クロニクル【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お兄ちゃん……ここでなら、好きって言ってもいいんだよね？　２　ケモミミ・クロニクル【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>ツカサ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FQBV552?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61S7angXE-L.jpg" class="mr-3 lazyload" alt="魅了スキルでいきなり世界最強２　誘惑の乙女 【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魅了スキルでいきなり世界最強２　誘惑の乙女 【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：327円、ポイント：3</p>
+                    <p>北山 結莉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DW4YD1B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61MFkBB0wyL.jpg" class="mr-3 lazyload" alt="勇者を辞めた勇者の物語　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者を辞めた勇者の物語　2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>ウメ種(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DW298LJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615O2pTrm-L.jpg" class="mr-3 lazyload" alt="天候魔法の正しい使い方　～雨男は野菜を作りたい～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天候魔法の正しい使い方　～雨男は野菜を作りたい～ (MFブックス)</h5>
+                    <p>価格：657円、ポイント：7</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CH5PMB6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VPxddWDaL.jpg" class="mr-3 lazyload" alt="魅了スキルでいきなり世界最強　神騎士を継ぐ者【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魅了スキルでいきなり世界最強　神騎士を継ぐ者【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>北山 結莉(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BKVSMTR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RbmN--BvL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 14 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 14 (MFブックス)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B079XVW9BH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VKI374+CL.jpg" class="mr-3 lazyload" alt="ウィザードプリンセス　～落ちこぼれ少女を最強魔導士に～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウィザードプリンセス　～落ちこぼれ少女を最強魔導士に～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>埴輪星人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B079Y19PTH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61F9b2ESmlL.jpg" class="mr-3 lazyload" alt="勇者を辞めた勇者の物語 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇者を辞めた勇者の物語 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>ウメ種(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0797L57DD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QVcvskgsL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 13 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 13 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B077M9W1C6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516cu65ztHL.jpg" class="mr-3 lazyload" alt="駆除人 5　～南半球篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 5　～南半球篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B075RS3ZWL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610LdR58ZkL.jpg" class="mr-3 lazyload" alt="ジェネシスオンライン　～異世界で廃レベリング～ 3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジェネシスオンライン　～異世界で廃レベリング～ 3 (MFブックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>ガチャ空(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0751T2SW9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gPcBkGMBL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 12 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 12 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0744C9TZ1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61a3o228FAL.jpg" class="mr-3 lazyload" alt="駆除人 4　～水の精霊篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 4　～水の精霊篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B071FG2PBN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SQpu8aOpL.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 4 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B072FNQ5JP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615UwpE68bL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 11 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 11 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XRSFJ1V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51S97jX1vCL.jpg" class="mr-3 lazyload" alt="ジェネシスオンライン　～異世界で廃レベリング～ 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジェネシスオンライン　～異世界で廃レベリング～ 2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>ガチャ空(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XRTSZML?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SPFrU7UPL.jpg" class="mr-3 lazyload" alt="異世界温泉に転生した俺の効能がとんでもすぎる　～アンタの中が気持ちいいわけじゃないんですけどっ!?～【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界温泉に転生した俺の効能がとんでもすぎる　～アンタの中が気持ちいいわけじゃないんですけどっ!?～【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>七烏未奏(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06VYC76BL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61uU7imOfkL.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 3 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N9K6ID7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617FrnxpG0L.jpg" class="mr-3 lazyload" alt="三田一族の意地を見よ ～転生戦国武将の奔走記～ 4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三田一族の意地を見よ ～転生戦国武将の奔走記～ 4 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>三田 弾正(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MRN0MG3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61G4QFSZHGL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 10 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 10 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N2I2CBQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Jv92O+FhL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 9 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 9 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IURT6B8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619Qum7beDL.jpg" class="mr-3 lazyload" alt="三田一族の意地を見よ ～転生戦国武将の奔走記～ 3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三田一族の意地を見よ ～転生戦国武将の奔走記～ 3 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>三田 弾正(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01EH12FDW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GCwKofICL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(1) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(1) (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B075KBF2Z5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/612K7hSvyvL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 8 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 8 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BXR127I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61aZgvco2iL.jpg" class="mr-3 lazyload" alt="三田一族の意地を見よ ～転生戦国武将の奔走記～ 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三田一族の意地を見よ ～転生戦国武将の奔走記～ 2 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>三田 弾正(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B019MDTOMK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DNo-b-VEL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター 7 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター 7 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>秋ぎつね(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B016XJT7KK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sYKE2ILbL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター　６ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター　６ (MFC)</h5>
+                    <p>価格：644円、ポイント：6</p>
+                    <p>吉舎 和幸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CMV513Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oKDQLXQaL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター　５ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター　５ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>吉舎 和幸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B083L852ZD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XhQ8UF4YL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター　４ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター　４ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>吉舎 和幸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TXY7886?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JMr9uv7GL.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター　３ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター　３ (MFC)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>吉舎 和幸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MR1PKXH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Cynzpt50L.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター　２ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター　２ (MFC)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>吉舎 和幸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FC8VRB2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516-52sWk7L.jpg" class="mr-3 lazyload" alt="マギクラフト・マイスター　１ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マギクラフト・マイスター　１ (MFC)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>吉舎 和幸(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B078TMHW1R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Refm-e1qL.jpg" class="mr-3 lazyload" alt="最強ハウジングアプリで快適異世界生活　２ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最強ハウジングアプリで快適異世界生活　２ (MFブックス)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>うみ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0841SNDJ7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51914fLtIDL.jpg" class="mr-3 lazyload" alt="田舎のホームセンター男の自由な異世界生活 6 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田舎のホームセンター男の自由な異世界生活 6 (MFブックス)</h5>
+                    <p>価格：1287円、ポイント：13</p>
+                    <p>うさぴょん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Z8RQ555?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hGqsBwJvL.jpg" class="mr-3 lazyload" alt="ウィザードプリンセス　～落ちこぼれ少女を最強魔導士に～　3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウィザードプリンセス　～落ちこぼれ少女を最強魔導士に～　3 (MFブックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>埴輪星人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XPTPYMF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AdOBjBMCL.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？ 7　真の皇帝となり美少女嫁と全世界を救います。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？ 7　真の皇帝となり美少女嫁と全世界を救います。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：349円、ポイント：3</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TB4LG43?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61f2D31B8wL.jpg" class="mr-3 lazyload" alt="完全回避ヒーラーの軌跡　4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>完全回避ヒーラーの軌跡　4 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>ぷにちゃん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S1ZNHXR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iqpZ3aNEL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 10 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 10 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QV624WD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MMRiim-eL.jpg" class="mr-3 lazyload" alt="スローライフがしたい大賢者、娘を拾う。　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スローライフがしたい大賢者、娘を拾う。　2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>空野 進(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QZBXQ1B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Z-8BDLczL.jpg" class="mr-3 lazyload" alt="田舎のホームセンター男の自由な異世界生活 5 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田舎のホームセンター男の自由な異世界生活 5 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>うさぴょん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PN2DCYN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CyZbyS9rL.jpg" class="mr-3 lazyload" alt="ウィザードプリンセス　～落ちこぼれ少女を最強魔導士に～　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウィザードプリンセス　～落ちこぼれ少女を最強魔導士に～　2 (MFブックス)</h5>
+                    <p>価格：1231円、ポイント：12</p>
+                    <p>埴輪星人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NW4PC78?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Nf4kJCHUL.jpg" class="mr-3 lazyload" alt="完全回避ヒーラーの軌跡　３ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>完全回避ヒーラーの軌跡　３ (MFC)</h5>
+                    <p>価格：644円、ポイント：6</p>
+                    <p>倭 ヒナ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08HHV6D82?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PGiq36JqL.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？ 6　全世界の嫁に応援されて史上初の皇帝に返り咲きます。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？ 6　全世界の嫁に応援されて史上初の皇帝に返り咲きます。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：327円、ポイント：3</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M87MBB2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zAPALz0XL.jpg" class="mr-3 lazyload" alt="スローライフがしたい大賢者、娘を拾う。　1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スローライフがしたい大賢者、娘を拾う。　1 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>空野 進(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KPTL99G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Fvny4MheL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 9 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 9 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KPTB8SR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514Sy4ELPlL.jpg" class="mr-3 lazyload" alt="英雄の隠し子の英雄譚　～村人の俺に最強スキルが継承された～　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>英雄の隠し子の英雄譚　～村人の俺に最強スキルが継承された～　2 (MFブックス)</h5>
+                    <p>価格：1242円、ポイント：12</p>
+                    <p>ハヤケン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KPWMBXN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GgvUn5G0L.jpg" class="mr-3 lazyload" alt="完全回避ヒーラーの軌跡　２ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>完全回避ヒーラーの軌跡　２ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>倭 ヒナ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B085L4ZGKK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61OpNUyHKJL.jpg" class="mr-3 lazyload" alt="田舎のホームセンター男の自由な異世界生活　（４） (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田舎のホームセンター男の自由な異世界生活　（４） (角川コミックス・エース)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>古来 歩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B088GV8XJZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZrhN+IxWL.jpg" class="mr-3 lazyload" alt="心理学で異世界ハーレム建国記２【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>心理学で異世界ハーレム建国記２【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：620円、ポイント：6</p>
+                    <p>ゆうきゆう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JMMLR75?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FF5MyB4ZL.jpg" class="mr-3 lazyload" alt="天候魔法の正しい使い方　～雨男は野菜を作りたい～　2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>天候魔法の正しい使い方　～雨男は野菜を作りたい～　2 (MFブックス)</h5>
+                    <p>価格：1242円、ポイント：12</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JLDRSMX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pWgQ0VxgL.jpg" class="mr-3 lazyload" alt="駆除人 8　～旅する魂篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 8　～旅する魂篇～ (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HHP8Q9M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lvCEP5KcL.jpg" class="mr-3 lazyload" alt="脱サラ転生魔術師は職人芸で成り上がる 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>脱サラ転生魔術師は職人芸で成り上がる 2 (MFブックス)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>どらねこ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HHPCK7Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61cW8meI8DL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 8 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～ 8 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>くろかた(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FP6X9QH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61kwrxo0i7L.jpg" class="mr-3 lazyload" alt="毒使いの逃亡者　2　～追跡者から逃げて三千里～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>毒使いの逃亡者　2　～追跡者から逃げて三千里～ (MFブックス)</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DW9PSFZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IB8sO8aiL.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？ 5　現地嫁と楽しみながら世界の黒幕を追い詰めます。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？ 5　現地嫁と楽しみながら世界の黒幕を追い詰めます。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DW3Q3MP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kMOF4lWHL.jpg" class="mr-3 lazyload" alt="完全回避ヒーラーの軌跡　１ (MFC)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>完全回避ヒーラーの軌跡　１ (MFC)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>倭 ヒナ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YP7Y7Y7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bUXwNrzjL.jpg" class="mr-3 lazyload" alt="駆除人 7　～風の結び目篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 7　～風の結び目篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D6K2MZQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61vqn1za2KL.jpg" class="mr-3 lazyload" alt="田舎のホームセンター男の自由な異世界生活　（３） (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田舎のホームセンター男の自由な異世界生活　（３） (角川コミックス・エース)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>古来 歩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B082KG2433?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZrhN+IxWL.jpg" class="mr-3 lazyload" alt="心理学で異世界ハーレム建国記２【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>心理学で異世界ハーレム建国記２【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：620円、ポイント：6</p>
+                    <p>ゆうきゆう(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JMMLR75?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-lTwgpglL.jpg" class="mr-3 lazyload" alt="英雄の隠し子の英雄譚　～村人の俺に最強スキルが継承された～　1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>英雄の隠し子の英雄譚　～村人の俺に最強スキルが継承された～　1 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>ハヤケン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D55SB25?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61I9JQKtQkL.jpg" class="mr-3 lazyload" alt="脱サラ転生魔術師は職人芸で成り上がる 1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>脱サラ転生魔術師は職人芸で成り上がる 1 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>どらねこ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BKVKXTH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61evRVAtZLL.jpg" class="mr-3 lazyload" alt="毒使いの逃亡者　～瘴気のあふれた異世界で、なぜか俺は回復している～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>毒使いの逃亡者　～瘴気のあふれた異世界で、なぜか俺は回復している～ (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>アネコ ユサギ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BKQKVFG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61u+mnfbXRL.jpg" class="mr-3 lazyload" alt="ドラグーン ～竜騎士への道～ 4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドラグーン ～竜騎士への道～ 4 (MFブックス)</h5>
+                    <p>価格：1345円、ポイント：13</p>
+                    <p>わい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BKTY8GN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GUjJwGqUL.jpg" class="mr-3 lazyload" alt="お兄ちゃん……ここでなら、好きって言ってもいいんだよね？　第三世界の兄妹神話【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お兄ちゃん……ここでなら、好きって言ってもいいんだよね？　第三世界の兄妹神話【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>ツカサ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BKP5GZV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bLxdv7M8L.jpg" class="mr-3 lazyload" alt="田舎のホームセンター男の自由な異世界生活　（２） (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田舎のホームセンター男の自由な異世界生活　（２） (角川コミックス・エース)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>古来 歩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V8SK8D9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rf0Ck0btL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(7) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(7) (角川コミックス・エース)</h5>
+                    <p>価格：704円、ポイント：7</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08L2WRCBM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61P1I3mqBEL.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？ 4　現地嫁を訪ねるために諸国外遊に出かけます。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？ 4　現地嫁を訪ねるために諸国外遊に出かけます。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B079XVHX6T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fqBBDOatL.jpg" class="mr-3 lazyload" alt="駆除人 6　～火の国の商人篇～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>駆除人 6　～火の国の商人篇～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>花黒子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B078H65BJ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61VJ6aXQd2L.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 5 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 5 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：クッキング・レシピ,クッキング・レシピ,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B077N913CH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xvvdslP4L.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？ 3　豊富な嫁の力があれば神の試練も余裕です。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？ 3　豊富な嫁の力があれば神の試練も余裕です。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B076P52NT5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61UzhDH4qoL.jpg" class="mr-3 lazyload" alt="田舎のホームセンター男の自由な異世界生活　（１） (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田舎のホームセンター男の自由な異世界生活　（１） (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>古来 歩(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NMV3M8C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sX+5fzZOL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(6) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(6) (角川コミックス・エース)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B085NC2RMR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61T36+m4p3L.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 8 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 8 (MFブックス)</h5>
+                    <p>価格：1287円、ポイント：13</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07535SLJR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/618d0s4ww6L.jpg" class="mr-3 lazyload" alt="魔導少女に転生した俺の双剣が有能すぎる 3 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔導少女に転生した俺の双剣が有能すぎる 3 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>岩波零(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0742YX7R6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61sDnkY1QzL.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？ 2　英雄嫁を増やすのも皇帝の大事な仕事です。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？ 2　英雄嫁を増やすのも皇帝の大事な仕事です。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B072Z8ZKC1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qagPFrcKL.jpg" class="mr-3 lazyload" alt="三田一族の意地を見よ ～転生戦国武将の奔走記～ 5 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三田一族の意地を見よ ～転生戦国武将の奔走記～ 5 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>三田 弾正(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B072ZC76KV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zaskekemL.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 7 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 7 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B072C2YS11?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51meO0wt6fL.jpg" class="mr-3 lazyload" alt="ダンジョンを造ろう 4　～争いより幸せにしてよ、魔王様！～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョンを造ろう 4　～争いより幸せにしてよ、魔王様！～ (MFブックス)</h5>
+                    <p>価格：1287円、ポイント：13</p>
+                    <p>渡良瀬 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0714JNZVN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515eH1HrReL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(5) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(5) (角川コミックス・エース)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W6YTZZT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61LX6UrkzNL.jpg" class="mr-3 lazyload" alt="魔導少女に転生した俺の双剣が有能すぎる 2【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔導少女に転生した俺の双剣が有能すぎる 2【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>岩波零(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XS8J3V1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QXZcxXbwL.jpg" class="mr-3 lazyload" alt="大国チートなら異世界征服も楽勝ですよ？　替え玉皇帝になったので美少女嫁も豊富です。【電子特典付き】 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大国チートなら異世界征服も楽勝ですよ？　替え玉皇帝になったので美少女嫁も豊富です。【電子特典付き】 (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>櫂末 高彰(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06VXT6PY9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BR634dd9L.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(4) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(4) (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NMDYRCP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614bVfVyGIL.jpg" class="mr-3 lazyload" alt="ダンジョンを造ろう 3　～守りを固めて、魔王様！～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョンを造ろう 3　～守りを固めて、魔王様！～ (MFブックス)</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>渡良瀬 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NBN6V74?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aBtiAiXwL.jpg" class="mr-3 lazyload" alt="ジェネシスオンライン　～異世界で廃レベリング～ 1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジェネシスオンライン　～異世界で廃レベリング～ 1 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>ガチャ空(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MRZYCX4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/618d0s4ww6L.jpg" class="mr-3 lazyload" alt="魔導少女に転生した俺の双剣が有能すぎる 3 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔導少女に転生した俺の双剣が有能すぎる 3 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>岩波零(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0742YX7R6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Gnlh5AcCL.jpg" class="mr-3 lazyload" alt="ディンの紋章 ～魔法師レジスの転生譚～ 6 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ディンの紋章 ～魔法師レジスの転生譚～ 6 (MFブックス)</h5>
+                    <p>価格：1386円、ポイント：14</p>
+                    <p>赤巻 たると(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N0F3FMD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RjPdBkTtL.jpg" class="mr-3 lazyload" alt="異世界とわたし、どっちが好きなの？ 2 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界とわたし、どっちが好きなの？ 2 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>暁雪(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M6Z8JOA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510ElMt8D6L.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 6 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 6 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M2ZNVF6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61iWvfV7JIL.jpg" class="mr-3 lazyload" alt="異世界の姫は竜＜オレ＞のもの！　エルフ娘とやらかすチート強奪生活 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界の姫は竜＜オレ＞のもの！　エルフ娘とやらかすチート強奪生活 (MF文庫J)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>為三(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LWJZD0Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61UcixlanyL.jpg" class="mr-3 lazyload" alt="エルフでビキニでマシンガン！ (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エルフでビキニでマシンガン！ (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>神野 オキナ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M0GKYVB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QnTtO9IZL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(3) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(3) (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H793PZ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611veFOC+YL.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KSTEW4M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-j1WGd-8L.jpg" class="mr-3 lazyload" alt="異世界とわたし、どっちが好きなの？ (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異世界とわたし、どっちが好きなの？ (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>暁雪(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HCEQPEQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+rr10UlZL.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 5 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 5 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01HCEQOX8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gPoom-XuL.jpg" class="mr-3 lazyload" alt="治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(2) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>治癒魔法の間違った使い方 ～戦場を駆ける回復要員～(2) (角川コミックス・エース)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>九我山 レキ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B079PVVFGG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61oZDZvSv0L.jpg" class="mr-3 lazyload" alt="銭（インチキ）の力で、戦国の世を駆け抜ける。 1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銭（インチキ）の力で、戦国の世を駆け抜ける。 1 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>Ｙ．Ａ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01EH12GAE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DaFXAATJL.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 4 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BXR12G4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZDWBOPyVL.jpg" class="mr-3 lazyload" alt="ディンの紋章 ～魔法師レジスの転生譚～ 5 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ディンの紋章 ～魔法師レジスの転生譚～ 5 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>赤巻 たると(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BXR1278?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Sujra-r9L.jpg" class="mr-3 lazyload" alt="ダンジョンを造ろう 2　～ひきこもらないで、魔王様！～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョンを造ろう 2　～ひきこもらないで、魔王様！～ (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>渡良瀬 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B016XJT7CI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hNhKMBXeL.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 3 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B015QPKQ84?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yutjFxQBL.jpg" class="mr-3 lazyload" alt="女騎士さん、ジャスコ行こうよ4 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女騎士さん、ジャスコ行こうよ4 (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>伊藤 ヒロ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B015QPKPYE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518fUZkPyLL.jpg" class="mr-3 lazyload" alt="ディンの紋章 ～魔法師レジスの転生譚～ 4 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ディンの紋章 ～魔法師レジスの転生譚～ 4 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>赤巻 たると(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01486BNUW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ReeFMHYYL.jpg" class="mr-3 lazyload" alt="ドラグーン ～竜騎士への道～ 3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドラグーン ～竜騎士への道～ 3 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>わい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B012BYC208?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61mJBZzPueL.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00Y7JE7MW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TlCB-XNiL.jpg" class="mr-3 lazyload" alt="女騎士さん、ジャスコ行こうよ3 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女騎士さん、ジャスコ行こうよ3 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>伊藤 ヒロ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00Y7JE6AA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615buzHgyzL.jpg" class="mr-3 lazyload" alt="ダンジョンを造ろう 1　～ご飯より働いてよ、魔王様！～ (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダンジョンを造ろう 1　～ご飯より働いてよ、魔王様！～ (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>渡良瀬 ユウ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WLII8BM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/612zStn2yML.jpg" class="mr-3 lazyload" alt="用務員さんは勇者じゃありませんので 1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>用務員さんは勇者じゃありませんので 1 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>棚花 尋平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TZH6BE8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Ok4vQXDgL.jpg" class="mr-3 lazyload" alt="ディンの紋章 ～魔法師レジスの転生譚～ 3 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ディンの紋章 ～魔法師レジスの転生譚～ 3 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>赤巻 たると(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TZH6ASU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ql22bYm+L.jpg" class="mr-3 lazyload" alt="女騎士さん、ジャスコ行こうよ2 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女騎士さん、ジャスコ行こうよ2 (MF文庫J)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>伊藤 ヒロ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SM8OQT8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61n-Y4venpL.jpg" class="mr-3 lazyload" alt="ディンの紋章 ～魔法師レジスの転生譚～ 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ディンの紋章 ～魔法師レジスの転生譚～ 2 (MFブックス)</h5>
+                    <p>価格：1188円、ポイント：12</p>
+                    <p>赤巻 たると(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00OYT4SMO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yutjFxQBL.jpg" class="mr-3 lazyload" alt="女騎士さん、ジャスコ行こうよ4 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女騎士さん、ジャスコ行こうよ4 (MF文庫J)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>伊藤 ヒロ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B015QPKPYE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/616TOwNFptL.jpg" class="mr-3 lazyload" alt="ディンの紋章 ～魔法師レジスの転生譚～ 1 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ディンの紋章 ～魔法師レジスの転生譚～ 1 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>赤巻 たると(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MB2SWB4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b-PLhUJLL.jpg" class="mr-3 lazyload" alt="ドラグーン ～竜騎士への道～ 2 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドラグーン ～竜騎士への道～ 2 (MFブックス)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>わい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JXEFLOY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MJ7EKsKIL.jpg" class="mr-3 lazyload" alt="ドラグーン ～竜騎士への道～ 1【電子版書き下ろし付】 (MFブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドラグーン ～竜騎士への道～ 1【電子版書き下ろし付】 (MFブックス)</h5>
+                    <p>価格：1307円、ポイント：13</p>
+                    <p>わい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GD14OMA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
