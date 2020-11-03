@@ -1,0 +1,1743 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51K6OF0E-pL.jpg" class="mr-3 lazyload" alt="ウソ婚　分冊版（３０） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウソ婚　分冊版（３０） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M5G9HNF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516B+icFk9L.jpg" class="mr-3 lazyload" alt="姉フレンド　49号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　49号 [雑誌]</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>吉野マリ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M5R7M4X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-EWvxVbTL.jpg" class="mr-3 lazyload" alt="甘やかさないで副社長　～ダンナ様はＳＳＲ～　分冊版（１０） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘やかさないで副社長　～ダンナ様はＳＳＲ～　分冊版（１０） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M5VW6WN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51phC8F-CsL.jpg" class="mr-3 lazyload" alt="三度のメシと、アレが好き。　分冊版（４） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三度のメシと、アレが好き。　分冊版（４） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>吉野マリ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M5QYFQL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tupWKmdIL.jpg" class="mr-3 lazyload" alt="らぶモミ！！～ナイショのエステ～　分冊版（６） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>らぶモミ！！～ナイショのエステ～　分冊版（６） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M5VQJ4J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M7BTtct0L.jpg" class="mr-3 lazyload" alt="そのキスに、二言なし　分冊版（６） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>そのキスに、二言なし　分冊版（６） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>丹沢ユウ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M65G2G9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51StFUwTGoL.jpg" class="mr-3 lazyload" alt="今夜も君にノックアウト　年下ボクサーに溺愛されてます　分冊版（４） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>今夜も君にノックアウト　年下ボクサーに溺愛されてます　分冊版（４） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>藤代香澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M656DWQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aIbRD3TtL.jpg" class="mr-3 lazyload" alt="占い師サマの言うとおり　分冊版（４） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>占い師サマの言うとおり　分冊版（４） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>マオｓｔ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M66D1MS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HxsyUxvXL.jpg" class="mr-3 lazyload" alt="シークレットラブ　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シークレットラブ　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：110円、ポイント：1</p>
+                    <p>向日ひろ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08LGS7XBS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bMMwJQ1GL.jpg" class="mr-3 lazyload" alt="姉フレンド　48号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　48号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08KDNK26X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u-cQ6ntWL.jpg" class="mr-3 lazyload" alt="姉フレンド　47号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　47号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>鈴菜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08GSBKCJZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u6cnkf0bL.jpg" class="mr-3 lazyload" alt="姉フレンド　46号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　46号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>吉野マリ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DYCPV4H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hhUc0Bk8L.jpg" class="mr-3 lazyload" alt="占い師サマの言うとおり　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>占い師サマの言うとおり　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>マオｓｔ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DYCV9P2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vPW2kR54L.jpg" class="mr-3 lazyload" alt="三度のメシと、アレが好き。　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三度のメシと、アレが好き。　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>吉野マリ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DYCNQYH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BZ5iQWJgL.jpg" class="mr-3 lazyload" alt="桜のひめごと　～裏吉原恋事変～　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桜のひめごと　～裏吉原恋事変～　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>鈴菜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZFXR1B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QIKG0MyAL.jpg" class="mr-3 lazyload" alt="今夜も君にノックアウト　年下ボクサーに溺愛されてます　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>今夜も君にノックアウト　年下ボクサーに溺愛されてます　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>藤代香澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZG1DCM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AZibRuNRL.jpg" class="mr-3 lazyload" alt="クールな年上御曹司の危険な誘惑―甘え方を教えてください―　分冊版（１） クールな年上御曹司の危険な誘惑ー甘え方を教えてくださいー　分冊版 (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クールな年上御曹司の危険な誘惑―甘え方を教えてください―　分冊版（１） クールな年上御曹司の危険な誘惑ー甘え方を教えてくださいー　分冊版 (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>佳菜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZDY238?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DuD1uSDUL.jpg" class="mr-3 lazyload" alt="姉フレンド　45号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　45号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZ7HRQM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xbXWIRLVL.jpg" class="mr-3 lazyload" alt="姉フレンド　44号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　44号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>城月りりあ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BZ677VB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AbQKsGZtL.jpg" class="mr-3 lazyload" alt="らぶモミ！！～ナイショのエステ～　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>らぶモミ！！～ナイショのエステ～　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0899J5VCL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eO4CHlcSL.jpg" class="mr-3 lazyload" alt="そのキスに、二言なし　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>そのキスに、二言なし　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>丹沢ユウ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0899P7JMQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BiSTa73uL.jpg" class="mr-3 lazyload" alt="姉フレンド　43号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　43号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B0899NNZZK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VzHxdBc6L.jpg" class="mr-3 lazyload" alt="先輩、朝まで愛します。　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>先輩、朝まで愛します。　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>蒼井みづ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086JRB9DF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I+g73rwqL.jpg" class="mr-3 lazyload" alt="姉フレンド　42号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　42号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>蒼井みづ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B086J96JC1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51y1G9AQ5DL.jpg" class="mr-3 lazyload" alt="姉フレンド　41号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　41号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B08573G6N9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OwE9YNuFL.jpg" class="mr-3 lazyload" alt="極婚～超溺愛ヤクザとケイヤク結婚！？～　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極婚～超溺愛ヤクザとケイヤク結婚！？～　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084C4ZDVK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ggNFXfeOL.jpg" class="mr-3 lazyload" alt="姉フレンド　40号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　40号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B084C19QLX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u23fne-gL.jpg" class="mr-3 lazyload" alt="極婚～超溺愛ヤクザとケイヤク結婚！？～　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極婚～超溺愛ヤクザとケイヤク結婚！？～　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0834QFKWK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cxmzSoDfL.jpg" class="mr-3 lazyload" alt="甘やかさないで副社長　～ダンナ様はＳＳＲ～　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘やかさないで副社長　～ダンナ様はＳＳＲ～　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0834QLVHJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Wzm98M7kL.jpg" class="mr-3 lazyload" alt="姉フレンド　39号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　39号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B0834PZ1PX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TpR0cJBDL.jpg" class="mr-3 lazyload" alt="甘やかさないで副社長　～ダンナ様はＳＳＲ～　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘やかさないで副社長　～ダンナ様はＳＳＲ～　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0823NRQKM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51c2nqy1QzL.jpg" class="mr-3 lazyload" alt="添い寝だけでもいいですか？　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>添い寝だけでもいいですか？　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桐島りら(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0823NXP4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517Kg-4w83L.jpg" class="mr-3 lazyload" alt="姉フレンド　38号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　38号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B0823NJTR8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZGyASrlWL.jpg" class="mr-3 lazyload" alt="添い寝だけでもいいですか？　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>添い寝だけでもいいですか？　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桐島りら(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZRMWTZP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wG+civ0ZL.jpg" class="mr-3 lazyload" alt="姉フレンド　37号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　37号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桐島りら(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZRN5CVY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515WJLo041L.jpg" class="mr-3 lazyload" alt="添い寝だけでもいいですか？　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>添い寝だけでもいいですか？　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桐島りら(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YG3DMQR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d1R5I5ZyL.jpg" class="mr-3 lazyload" alt="姉フレンド　36号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　36号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YG1PVDC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51T2mho33uL.jpg" class="mr-3 lazyload" alt="姉フレンド　35号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　35号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07X22YTKH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RLVQYo2QL.jpg" class="mr-3 lazyload" alt="姉フレンド　34号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　34号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VSP48B4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NKRZXAUhL.jpg" class="mr-3 lazyload" alt="姉フレンド　33号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　33号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TLHTTM4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51etY77I0+L.jpg" class="mr-3 lazyload" alt="姉フレンド　32号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　32号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>花宮初(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SK7SMGG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5151mWyO8IL.jpg" class="mr-3 lazyload" alt="姉フレンド　31号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　31号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QZ37ZYM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JDgvahdbL.jpg" class="mr-3 lazyload" alt="姉フレンド　30号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　30号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q43CCDL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rLaTI5MRL.jpg" class="mr-3 lazyload" alt="姉フレンド　29号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　29号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P5RMT4X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VE+O-2jkL.jpg" class="mr-3 lazyload" alt="プリンス様すごすぎです！　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プリンス様すごすぎです！　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N876QN2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vh7ZPo71L.jpg" class="mr-3 lazyload" alt="姉フレンド　28号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　28号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N87JRW5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zwV6Cq0eL.jpg" class="mr-3 lazyload" alt="プリンス様すごすぎです！　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プリンス様すごすぎです！　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MH1888J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wzK3yWANL.jpg" class="mr-3 lazyload" alt="姉フレンド　27号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　27号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M63D7GC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hQKs5nZcL.jpg" class="mr-3 lazyload" alt="姉フレンド　26号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　26号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KS5GWD6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cCnOd59qL.jpg" class="mr-3 lazyload" alt="部長のにゃんこ（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>部長のにゃんこ（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KY2R7DL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dQdrYAxGL.jpg" class="mr-3 lazyload" alt="姉フレンド　25号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　25号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>花宮初(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JZ19PCY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Qplh8b+PL.jpg" class="mr-3 lazyload" alt="姉フレンド　24号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　24号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HQ7YP7X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gv1mub0iL.jpg" class="mr-3 lazyload" alt="姉フレンド　23号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　23号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GYVPLNB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519kTV8L2jL.jpg" class="mr-3 lazyload" alt="姉フレンド　22号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　22号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G11YWDK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kYcBYrnkL.jpg" class="mr-3 lazyload" alt="姉フレンド　21号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　21号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F2V9NM2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61LsehLGSxL.jpg" class="mr-3 lazyload" alt="姉フレンド　20号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　20号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>ふかさわ映(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DDFHRMG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A6MijkVmL.jpg" class="mr-3 lazyload" alt="姉フレンド　19号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　19号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CNT3M5Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yTl4Bhg5L.jpg" class="mr-3 lazyload" alt="姉フレンド　18号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　18号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>花宮初(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BS8HV2V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+kQL6rHyL.jpg" class="mr-3 lazyload" alt="年下さまが夜な夜なに　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>年下さまが夜な夜なに　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>月島ミホ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BSB864S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51plQmInVXL.jpg" class="mr-3 lazyload" alt="お湯コイ！　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お湯コイ！　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>藤野こと葉(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3WZ3H2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zTCn-gstL.jpg" class="mr-3 lazyload" alt="姉フレンド　17号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　17号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3NJQCY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZbQuJ6bjL.jpg" class="mr-3 lazyload" alt="年下さまが夜な夜なに　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>年下さまが夜な夜なに　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>月島ミホ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3MZY4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M2a8LXT2L.jpg" class="mr-3 lazyload" alt="お湯コイ！　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お湯コイ！　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>藤野こと葉(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B079FQJ7LC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nP2uLXn-L.jpg" class="mr-3 lazyload" alt="姉フレンド　16号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　16号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>藤野こと葉(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B079FRGTB8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bTgT8FJPL.jpg" class="mr-3 lazyload" alt="小説家さまは、もんもんしたがる　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小説家さまは、もんもんしたがる　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B079FKR948?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qaUSiJFJL.jpg" class="mr-3 lazyload" alt="姉フレンド　15号　白ｓｈｉｒｏ [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　15号　白ｓｈｉｒｏ [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B078M4LMWV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-Ff91A-+L.jpg" class="mr-3 lazyload" alt="姉フレンド　14号　紅ｂｅｎｉ [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　14号　紅ｂｅｎｉ [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B078LWMVJ1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PoIyg-FfL.jpg" class="mr-3 lazyload" alt="小説家さまは、もんもんしたがる　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小説家さまは、もんもんしたがる　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B078M42NKQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cfjNT4VkL.jpg" class="mr-3 lazyload" alt="ご結婚はまだですか？　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご結婚はまだですか？　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>黒野カンナ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0784S19FM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xG1x0fIpL.jpg" class="mr-3 lazyload" alt="姉フレンド　13号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　13号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B077S9QHG3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YF9GcWzmL.jpg" class="mr-3 lazyload" alt="小説家さまは、もんもんしたがる　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小説家さまは、もんもんしたがる　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>仲月かな(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B077T4Y191?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tMRE-Wn3L.jpg" class="mr-3 lazyload" alt="おしえてポルノ　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おしえてポルノ　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B078C7Q64M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zUWjMU8cL.jpg" class="mr-3 lazyload" alt="ご結婚はまだですか？　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご結婚はまだですか？　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>黒野カンナ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0784WL9PT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FnicMjm-L.jpg" class="mr-3 lazyload" alt="今日から、君をシェアします。　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>今日から、君をシェアします。　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ふかさわ映(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0784WLGT9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yQE0zrEPL.jpg" class="mr-3 lazyload" alt="ウソ婚　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウソ婚　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B076ZG1716?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BjjSlPQOL.jpg" class="mr-3 lazyload" alt="姉フレンド　12号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　12号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B076ZJYSXZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IUJ7qwUlL.jpg" class="mr-3 lazyload" alt="今日から、君をシェアします。　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>今日から、君をシェアします。　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ふかさわ映(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B076ZGK2TK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sCjJ0q5nL.jpg" class="mr-3 lazyload" alt="おしえてポルノ　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おしえてポルノ　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B076ZF211F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jiR9o3H3L.jpg" class="mr-3 lazyload" alt="あっちの練習はじめました。　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっちの練習はじめました。　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>花宮初(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B076Z9CVDK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51v1jIQuN5L.jpg" class="mr-3 lazyload" alt="ウソ婚　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウソ婚　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZQP3L6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513OR9FgMxL.jpg" class="mr-3 lazyload" alt="あっちの練習はじめました。　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっちの練習はじめました。　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>花宮初(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZRGX7N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Vt36-5J2L.jpg" class="mr-3 lazyload" alt="姉フレンド　11号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　11号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZQ9GTY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dA-a0mBNL.jpg" class="mr-3 lazyload" alt="今日から、君をシェアします。　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>今日から、君をシェアします。　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ふかさわ映(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZRG125?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51e0aZR3PDL.jpg" class="mr-3 lazyload" alt="おしえてポルノ　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おしえてポルノ　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桜井真優(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075ZQYHM5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JsKZ9z3DL.jpg" class="mr-3 lazyload" alt="ウソ婚　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウソ婚　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>時名きうい(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0757LFCGS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GI65sPX1L.jpg" class="mr-3 lazyload" alt="姉フレンド　10号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　10号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B0757GD3QJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PCTQv-fiL.jpg" class="mr-3 lazyload" alt="あっちの練習はじめました。　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっちの練習はじめました。　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>花宮初(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0757KKZDX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jA8x8HPNL.jpg" class="mr-3 lazyload" alt="寄りかからせてね、車掌くん　分冊版（１) (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>寄りかからせてね、車掌くん　分冊版（１) (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>大川なぎ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B074C4T451?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yfqwVfqEL.jpg" class="mr-3 lazyload" alt="姉フレンド　9号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　9号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B074C833LR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HTevyKWqL.jpg" class="mr-3 lazyload" alt="姉フレンド　8号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　8号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B073GR1YB4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iLnjtd8cL.jpg" class="mr-3 lazyload" alt="部長のにゃんこ　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>部長のにゃんこ　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B072FV8GMF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61kYnbFQ0oL.jpg" class="mr-3 lazyload" alt="姉フレンド　7号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　7号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B0723GZXT6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mzji0UfQL.jpg" class="mr-3 lazyload" alt="あたしのピンクがあふれちゃう　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あたしのピンクがあふれちゃう　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071H9CJCL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Oh44WnJ5L.jpg" class="mr-3 lazyload" alt="姉フレンド　6号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　6号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B072P13HHG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51i3ya4LTOL.jpg" class="mr-3 lazyload" alt="部長のにゃんこ　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>部長のにゃんこ　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071V7MDJF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51v2cdF9D6L.jpg" class="mr-3 lazyload" alt="部長のにゃんこ　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>部長のにゃんこ　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ひさわゆみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XXVKMM2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519y-XleFJL.jpg" class="mr-3 lazyload" alt="姉フレンド　5号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　5号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XXW395K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GUZc1QUML.jpg" class="mr-3 lazyload" alt="あたしのピンクがあふれちゃう　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あたしのピンクがあふれちゃう　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XXH2DT2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RzOJwyLBL.jpg" class="mr-3 lazyload" alt="ハコイリ娘がはぁはぁはぁ　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハコイリ娘がはぁはぁはぁ　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>間下めぐみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XBFB3MS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517nsPD5DlL.jpg" class="mr-3 lazyload" alt="あたしのピンクがあふれちゃう　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あたしのピンクがあふれちゃう　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XBW1KFS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EEEiZS9bL.jpg" class="mr-3 lazyload" alt="姉フレンド　4号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　4号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>桃生有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B06X9NFHTK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+n9W4Cp-L.jpg" class="mr-3 lazyload" alt="美少年、いただきました　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>美少年、いただきました　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MZF1MUQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tUrHr1VLL.jpg" class="mr-3 lazyload" alt="ダーリンは社長くん　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダーリンは社長くん　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N166QBE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EgMsZoA9L.jpg" class="mr-3 lazyload" alt="みだらなご主人様スウィート　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>みだらなご主人様スウィート　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N7XFVH0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514-chSN8AL.jpg" class="mr-3 lazyload" alt="ハコイリ娘がはぁはぁはぁ　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハコイリ娘がはぁはぁはぁ　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>間下めぐみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N6W6ZQQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NAl-reOfL.jpg" class="mr-3 lazyload" alt="姉フレンド　3号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　3号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MUFYY4M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AkGxxbB3L.jpg" class="mr-3 lazyload" alt="らぶモミ！～とろけるエステ～　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>らぶモミ！～とろけるエステ～　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N5UJI5O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yntiMiRRL.jpg" class="mr-3 lazyload" alt="手とり足とり愛しましょう！　分冊版（３） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手とり足とり愛しましょう！　分冊版（３） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>藤代香澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MZF1O72?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51x0XrH3leL.jpg" class="mr-3 lazyload" alt="みだらなご主人様スウィート　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>みだらなご主人様スウィート　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NGYUCOE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51W8nGs9FfL.jpg" class="mr-3 lazyload" alt="美少年、いただきました　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>美少年、いただきました　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N9K2YT9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pUmq5OdyL.jpg" class="mr-3 lazyload" alt="ハコイリ娘がはぁはぁはぁ　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハコイリ娘がはぁはぁはぁ　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>間下めぐみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NALNPWY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wfOiXE1RL.jpg" class="mr-3 lazyload" alt="ダーリンは社長くん　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダーリンは社長くん　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N0TBTQX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KHgtiT0-L.jpg" class="mr-3 lazyload" alt="姉フレンド　2号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　2号 [雑誌]</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>藤代香澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NALQRKR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZZDN62z4L.jpg" class="mr-3 lazyload" alt="らぶモミ！～とろけるエステ～　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>らぶモミ！～とろけるエステ～　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NBN3S09?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ST2HYBXiL.jpg" class="mr-3 lazyload" alt="手とり足とり愛しましょう！　分冊版（２） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手とり足とり愛しましょう！　分冊版（２） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>藤代香澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MU34CRC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KSCEJHD0L.jpg" class="mr-3 lazyload" alt="美少年、いただきました　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>美少年、いただきました　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MQPOO4T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518P96fSttL.jpg" class="mr-3 lazyload" alt="ダーリンは社長くん　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダーリンは社長くん　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>成海柚希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N9B86ZK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ugg7reAKL.jpg" class="mr-3 lazyload" alt="姉フレンド　1号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉フレンド　1号 [雑誌]</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>清野静流(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N2NHWZZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uTXeDtOHL.jpg" class="mr-3 lazyload" alt="らぶモミ！～とろけるエステ～　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>らぶモミ！～とろけるエステ～　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>砂塚旬(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N6AGRH9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51njGb3YkaL.jpg" class="mr-3 lazyload" alt="手とり足とり愛しましょう！　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手とり足とり愛しましょう！　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>藤代香澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N9B88J1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qEYu2IcxL.jpg" class="mr-3 lazyload" alt="みだらなご主人様スウィート　分冊版（１） (姉フレンドコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>みだらなご主人様スウィート　分冊版（１） (姉フレンドコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>叶のりこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N7BUKPF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
