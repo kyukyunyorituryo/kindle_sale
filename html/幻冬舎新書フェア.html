@@ -1,0 +1,625 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/314BDg0R5OL.jpg" class="mr-3 lazyload" alt="日本の難点"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本の難点</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>宮台真司(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：社会学概論,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ISQNGRW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/413TMRZI40L.jpg" class="mr-3 lazyload" alt="阿頼耶識の発見 よくわかる唯識入門 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>阿頼耶識の発見 よくわかる唯識入門 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>横山 紘一(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：仏教学,Featured Categories,仏教</p>
+                    <a href="https://www.amazon.co.jp/dp/B009CTV7UW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41wCDjYLr9L.jpg" class="mr-3 lazyload" alt="なぜ仏像はハスの花の上に座っているのか　仏教と植物の切っても切れない66の関係 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なぜ仏像はハスの花の上に座っているのか　仏教と植物の切っても切れない66の関係 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>稲垣栄洋(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：思想,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B00W4Y7FEE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41zzDuqwWUL.jpg" class="mr-3 lazyload" alt="読書会入門　人が本で交わる場所 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>読書会入門　人が本で交わる場所 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>山本多津也(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：読書法,Featured Categories,本・図書館</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y213R21?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41s0VSt83yL.jpg" class="mr-3 lazyload" alt="精読 学問のすゝめ (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>精読 学問のすゝめ (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：文学史,Featured Categories,評論・文学研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QWWSN47?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518rc0pCShL.jpg" class="mr-3 lazyload" alt="ホテル御三家　帝国ホテル、オークラ、ニューオータニ (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホテル御三家　帝国ホテル、オークラ、ニューオータニ (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>山川清弘(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B088YLRQQQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41jkBUf+6JL.jpg" class="mr-3 lazyload" alt="必ず書ける「３つが基本」の文章術 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>必ず書ける「３つが基本」の文章術 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>近藤勝重(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,Featured Categories,文学・評論</p>
+                    <a href="https://www.amazon.co.jp/dp/B0194W6EJU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41xBMiabK+L.jpg" class="mr-3 lazyload" alt="営業と詐欺のあいだ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>営業と詐欺のあいだ</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>坂口孝則(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：近現代の作品,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CZCWA9A?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41fIt3Q5XEL.jpg" class="mr-3 lazyload" alt="東大教授が考えるあたらしい教養 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>東大教授が考えるあたらしい教養 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>藤垣裕子(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：人生論,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S61CQKJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517JXEqc2BL.jpg" class="mr-3 lazyload" alt="日本の「老後」の正体 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本の「老後」の正体 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>髙橋洋一(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PZL2GDT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41-4gcW99AL.jpg" class="mr-3 lazyload" alt="裁判官の爆笑お言葉集 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>裁判官の爆笑お言葉集 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>長嶺 超輝(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,Featured Categories,法律</p>
+                    <a href="https://www.amazon.co.jp/dp/B009CTUEDI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41vsSeyvEdL.jpg" class="mr-3 lazyload" alt="日本人の死に時　そんなに長生きしたいですか"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本人の死に時　そんなに長生きしたいですか</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>久坂部羊(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：思想,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CZCW982?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OhymB4sJL.jpg" class="mr-3 lazyload" alt="ラストエンペラーの私生活 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラストエンペラーの私生活 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>加藤康男(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,Featured Categories,世界史</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MV28CTW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41cXlmybPNL.jpg" class="mr-3 lazyload" alt="発達障害と呼ばないで (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>発達障害と呼ばないで (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>岡田尊司(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：こどもの医学,Featured Categories,医学・薬学,家庭医学・健康,科学・テクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B009IH4KGG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/3158sOVUlYL.jpg" class="mr-3 lazyload" alt="しない生活　煩悩を静める108のお稽古"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>しない生活　煩悩を静める108のお稽古</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>小池龍之介(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：仏教入門,仏教学,法話,仏事,寺院,仏教</p>
+                    <a href="https://www.amazon.co.jp/dp/B00K665VWK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41DRtYhCPqL.jpg" class="mr-3 lazyload" alt="家族という呪い　加害者と暮らし続けるということ (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>家族という呪い　加害者と暮らし続けるということ (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>阿部恭子(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：家族問題,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MV26F4S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41TqXeoh4vL.jpg" class="mr-3 lazyload" alt="女流官能小説の書き方"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女流官能小説の書き方</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>藍川京(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：文学理論,評論・文学研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IYGS9PK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41spegaLjEL.jpg" class="mr-3 lazyload" alt="アップデートする仏教"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アップデートする仏教</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>藤田一照(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：宗教入門,宗教学,宗教入門,宗教学</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GBKZM0G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41NALtQ6rEL.jpg" class="mr-3 lazyload" alt="マンガの教養 読んでおきたい常識・必修の名作100 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マンガの教養 読んでおきたい常識・必修の名作100 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>中条省平(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：コミック,Featured Categories,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009CTY1VO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41EtRpJvQqL.jpg" class="mr-3 lazyload" alt="人殺しの論理　凶悪殺人犯へのインタビュー (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人殺しの論理　凶悪殺人犯へのインタビュー (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>小野一光(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KLWL7LM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/417PnZ1IBHL.jpg" class="mr-3 lazyload" alt="【電子版特典付き】まだ東京で消耗してるの？　環境を変えるだけで人生はうまくいく (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【電子版特典付き】まだ東京で消耗してるの？　環境を変えるだけで人生はうまくいく (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>イケダハヤト(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BUUQG9W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41g5pVPK3-L.jpg" class="mr-3 lazyload" alt="おしゃれ嫌い 私たちがユニクロを選ぶ本当の理由 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おしゃれ嫌い 私たちがユニクロを選ぶ本当の理由 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>米澤泉(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V8RPLHQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41S4fI-lDPL.jpg" class="mr-3 lazyload" alt="凡人として生きるということ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>凡人として生きるということ</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>押井守(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：近現代の作品,エッセー・随筆</p>
+                    <a href="https://www.amazon.co.jp/dp/B00CZCWA2W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wn9dVixvL.jpg" class="mr-3 lazyload" alt="おいしいとはどういうことか (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おいしいとはどういうことか (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>中東久雄(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,Featured Categories,クッキング・レシピ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V4JFJRT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41LZMFoVWJL.jpg" class="mr-3 lazyload" alt="人生の正解 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人生の正解 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>勢古浩爾(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：人生論,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S72VQN2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41sd5qAcy6L.jpg" class="mr-3 lazyload" alt="きょうだいコンプレックス (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きょうだいコンプレックス (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>岡田尊司(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：心理学入門,読みもの,Featured Categories,心理学</p>
+                    <a href="https://www.amazon.co.jp/dp/B016M3G09I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41PlREg5D7L.jpg" class="mr-3 lazyload" alt="病気になるサプリ　危険な健康食品"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>病気になるサプリ　危険な健康食品</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>左巻健男(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,美容・ダイエット</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NGEBTBG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513yf6pQRYL.jpg" class="mr-3 lazyload" alt="生命保険はヒドい。騙しだ (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生命保険はヒドい。騙しだ (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>副島隆彦(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,Featured Categories,暮らし・健康・子育て</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PX95CSX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41x8EfvP8RL.jpg" class="mr-3 lazyload" alt="幸せな死のために一刻も早くあなたにお伝えしたいこと　若き外科医が見つめた「いのち」の現場三百六十五日 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>幸せな死のために一刻も早くあなたにお伝えしたいこと　若き外科医が見つめた「いのち」の現場三百六十五日 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>中山祐次郎(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：人生論,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B00W4Y7FGC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41q4tXxZ+BL.jpg" class="mr-3 lazyload" alt="サザエさんと長谷川町子 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サザエさんと長谷川町子 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>工藤美代子(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B086187CQH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41UD-FAf60L.jpg" class="mr-3 lazyload" alt="あぶない英語 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あぶない英語 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>岩田雅彦(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：英語よみもの,Featured Categories,言語学,英語</p>
+                    <a href="https://www.amazon.co.jp/dp/B085ZZQVXV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41cxJgyEAiL.jpg" class="mr-3 lazyload" alt="人間の本性 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人間の本性 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>丹羽宇一郎(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：人生論,Featured Categories,哲学・思想</p>
+                    <a href="https://www.amazon.co.jp/dp/B07S61GKFD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41axwPs2skL.jpg" class="mr-3 lazyload" alt="異端の人間学 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異端の人間学 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>五木寛之(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：51-75回,Featured Categories,日本の小説・文芸,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B019F74HU2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41WIdw1eRJL.jpg" class="mr-3 lazyload" alt="二十二社　朝廷が定めた格式ある神社22 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>二十二社　朝廷が定めた格式ある神社22 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>島田裕巳(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：宗教入門,Featured Categories,宗教入門</p>
+                    <a href="https://www.amazon.co.jp/dp/B081Q38G8T?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41+PAobLVBL.jpg" class="mr-3 lazyload" alt="小さな会社を強くする会計力 (幻冬舎新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小さな会社を強くする会計力 (幻冬舎新書)</h5>
+                    <p>価格：251円、ポイント：3</p>
+                    <p>山下明宏(著)</p>
+                    <p>出版社：幻冬舎</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BFSR1V6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>

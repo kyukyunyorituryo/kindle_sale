@@ -1,0 +1,729 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gfq4eeNAL.jpg" class="mr-3 lazyload" alt="犬と猫どっちも飼ってると毎日たのしい事典"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>犬と猫どっちも飼ってると毎日たのしい事典</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>松本ひで吉(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,文学・評論,ノンフィクション・伝記</p>
+                    <a href="https://www.amazon.co.jp/dp/B0827TGP6S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61I3f799zqL.jpg" class="mr-3 lazyload" alt="ペンギンを愛した容疑者　警視庁いきもの係 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ペンギンを愛した容疑者　警視庁いきもの係 (講談社文庫)</h5>
+                    <p>価格：601円、ポイント：6</p>
+                    <p>大倉崇裕(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B072QCC22D?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61pGwMpgbqL.jpg" class="mr-3 lazyload" alt="蜂に魅かれた容疑者　警視庁いきもの係 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蜂に魅かれた容疑者　警視庁いきもの係 (講談社文庫)</h5>
+                    <p>価格：585円、ポイント：6</p>
+                    <p>大倉崇裕(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N28490E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517LisF8OtL.jpg" class="mr-3 lazyload" alt="ニャングリッシュ　猫のつぶやき英会話"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ニャングリッシュ　猫のつぶやき英会話</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>講談社(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,産業研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B01BM7SCMW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KFupAxhDL.jpg" class="mr-3 lazyload" alt="クジャクを愛した容疑者　警視庁いきもの係 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クジャクを愛した容疑者　警視庁いきもの係 (講談社文庫)</h5>
+                    <p>価格：570円、ポイント：6</p>
+                    <p>大倉崇裕(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SLZ41R1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41rl8eKn96L.jpg" class="mr-3 lazyload" alt="もっとシマエナガちゃん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もっとシマエナガちゃん</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>小原玲(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,写真</p>
+                    <a href="https://www.amazon.co.jp/dp/B076Z88GKD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hCqW-CA5L.jpg" class="mr-3 lazyload" alt="シマエナガちゃん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シマエナガちゃん</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>小原玲(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,写真</p>
+                    <a href="https://www.amazon.co.jp/dp/B076Z7MPTS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614VTmkgSEL.jpg" class="mr-3 lazyload" alt="おしごとのおはなし　獣医さん　めざせ！　動物のお医者さん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おしごとのおはなし　獣医さん　めざせ！　動物のお医者さん</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>きむらゆういち(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,文学・評論,読み物</p>
+                    <a href="https://www.amazon.co.jp/dp/B0759HJRFG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zn2OSk9uL.jpg" class="mr-3 lazyload" alt="小鳥を愛した容疑者 (講談社文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小鳥を愛した容疑者 (講談社文庫)</h5>
+                    <p>価格：572円、ポイント：6</p>
+                    <p>大倉崇裕(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B00APR9HBG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61CsRmTupYL.jpg" class="mr-3 lazyload" alt="発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　衝撃！　おどろき！　ふしぎ動物編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　衝撃！　おどろき！　ふしぎ動物編</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>ＮＨＫ「ダーウィンが来た！」(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：学習まんが,コミック,マンガ,科学・テクノロジー,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B074MY49XX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/612z8zxpEoL.jpg" class="mr-3 lazyload" alt="警視庁　生きものがかり"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>警視庁　生きものがかり</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>福原秀一郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B074DVJZ5C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617twTqEvFL.jpg" class="mr-3 lazyload" alt="発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　動物天国アフリカ編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　動物天国アフリカ編</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>ＮＨＫ「ダーウィンが来た！」(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：学習まんが,コミック,マンガ,科学・テクノロジー,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B072KGZ7XC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5164VmUrpLL.jpg" class="mr-3 lazyload" alt="ヒトは地上最速の動物だった　高岡英夫の「神速」走行理論"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヒトは地上最速の動物だった　高岡英夫の「神速」走行理論</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>高岡英夫(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,科学・テクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B071G25DS1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gaYa7wFvL.jpg" class="mr-3 lazyload" alt="発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　びっくり！　日本の動物編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　びっくり！　日本の動物編</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>ＮＨＫ「ダーウィンが来た！」(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：学習まんが,コミック,マンガ,科学・テクノロジー,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B0714BWNX9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ag2c3K55L.jpg" class="mr-3 lazyload" alt="愛犬と一緒に幸せになる風水入門"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛犬と一緒に幸せになる風水入門</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>影山直美(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・実用</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XC9BFDK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AojXDqDwL.jpg" class="mr-3 lazyload" alt="わくわく昆虫記　憧れの虫たち"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>わくわく昆虫記　憧れの虫たち</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>丸山宗利(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M5FO5T3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MIjyuFMSL.jpg" class="mr-3 lazyload" alt="恐竜の骨をよむ　古脊椎動物学の世界 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>恐竜の骨をよむ　古脊椎動物学の世界 (講談社学術文庫)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>犬塚則久(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LMY09XA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31Rikdl0LYL.jpg" class="mr-3 lazyload" alt="公式写真集『ねこ鍋』"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>公式写真集『ねこ鍋』</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>講談社ＭｏｕＲａ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,写真</p>
+                    <a href="https://www.amazon.co.jp/dp/B01G33V1TQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NUN3RdFpL.jpg" class="mr-3 lazyload" alt="フィールドガイド　ボルネオ野生動物　オランウータンの森の紳士録 (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フィールドガイド　ボルネオ野生動物　オランウータンの森の紳士録 (ブルーバックス)</h5>
+                    <p>価格：1386円、ポイント：14</p>
+                    <p>浅間茂(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E56BVKM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qv7CyJLbL.jpg" class="mr-3 lazyload" alt="猫のなるほど不思議学　知られざる生態の謎に迫る (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>猫のなるほど不思議学　知られざる生態の謎に迫る (ブルーバックス)</h5>
+                    <p>価格：801円、ポイント：8</p>
+                    <p>岩崎るりは(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01851E14Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bXz3GDdqL.jpg" class="mr-3 lazyload" alt="生物が子孫を残す技術　生物界の大胆な愛と性 (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生物が子孫を残す技術　生物界の大胆な愛と性 (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>吉野孝一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01851E1Y6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NkpfeIQ+L.jpg" class="mr-3 lazyload" alt="イラスト図説　「あっ！」と驚く動物の子育て　厳しい自然で生き抜く知恵 (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>イラスト図説　「あっ！」と驚く動物の子育て　厳しい自然で生き抜く知恵 (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>長澤信城(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B01851E15A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fK5mBfH2L.jpg" class="mr-3 lazyload" alt="【電子オリジナル写真増量版】パグゾウくんとシノブくん。"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【電子オリジナル写真増量版】パグゾウくんとシノブくん。</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>坂上忍(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：演劇,演劇・舞台</p>
+                    <a href="https://www.amazon.co.jp/dp/B00Y7YGLWG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510IVqna5KL.jpg" class="mr-3 lazyload" alt="ナックの声が聞きたくて！　“スーパー・ベルーガ”にことばを教えるイルカ博士 (世の中への扉)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ナックの声が聞きたくて！　“スーパー・ベルーガ”にことばを教えるイルカ博士 (世の中への扉)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>村山司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MOYKKCI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/412idhqZH9L.jpg" class="mr-3 lazyload" alt="ヒトはおかしな肉食動物　生き物としての人類を考える (講談社＋α文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヒトはおかしな肉食動物　生き物としての人類を考える (講談社＋α文庫)</h5>
+                    <p>価格：498円、ポイント：5</p>
+                    <p>高橋迪雄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,世界史</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HPSTITO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UpUqu8n7L.jpg" class="mr-3 lazyload" alt="アンタッチャブル柴田英嗣の日本一やかましい動物図鑑２"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アンタッチャブル柴田英嗣の日本一やかましい動物図鑑２</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>柴田英嗣(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,本・図書館</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DV29YLN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xFvOCODaL.jpg" class="mr-3 lazyload" alt="アンタッチャブル柴田英嗣の日本一やかましい動物図鑑"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アンタッチャブル柴田英嗣の日本一やかましい動物図鑑</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>柴田英嗣(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,本・図書館</p>
+                    <a href="https://www.amazon.co.jp/dp/B08DV1Y541?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51w9Zd+l2LL.jpg" class="mr-3 lazyload" alt="アザラシの赤ちゃん　かわいいのヒミツ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アザラシの赤ちゃん　かわいいのヒミツ</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>小原玲(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,写真</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SQQXGW4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kIaliQJlL.jpg" class="mr-3 lazyload" alt="アロワナを愛した容疑者　警視庁いきもの係"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アロワナを愛した容疑者　警視庁いきもの係</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>大倉崇裕(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SKW61K7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516TtrAplsL.jpg" class="mr-3 lazyload" alt="よちよち　もふもふ　オシドリの赤ちゃん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>よちよち　もふもふ　オシドリの赤ちゃん</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>大橋弘一(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：写真技術,カメラ・ビデオ,写真,カメラ・ビデオ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Q3R41CX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41aaF9FA-bL.jpg" class="mr-3 lazyload" alt="愛犬のための　繁殖・育児百科事典"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛犬のための　繁殖・育児百科事典</h5>
+                    <p>価格：1425円、ポイント：14</p>
+                    <p>筒井敏彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・実用</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MYY5MTG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518kVvFC7FL.jpg" class="mr-3 lazyload" alt="もふもふもふもふ～　ふくろうの赤ちゃん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もふもふもふもふ～　ふくろうの赤ちゃん</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>講談社ビーシー書籍出版部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：写真技術,カメラ・ビデオ,写真,カメラ・ビデオ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L2TZDZR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qNnbujA5L.jpg" class="mr-3 lazyload" alt="秋田犬　ゴンとトラ　あきたけんじゃないよ　あきたいぬだよ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>秋田犬　ゴンとトラ　あきたけんじゃないよ　あきたいぬだよ</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>講談社(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・実用</p>
+                    <a href="https://www.amazon.co.jp/dp/B07K6KDZ62?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d5Z+JE0uL.jpg" class="mr-3 lazyload" alt="気がつけば動物学者三代"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>気がつけば動物学者三代</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>今泉忠明(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,歴史・地理</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FML6F89?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/416ZjLL4PeL.jpg" class="mr-3 lazyload" alt="ほぼ命がけサメ図鑑"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ほぼ命がけサメ図鑑</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>沼口麻子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,科学・テクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CJGDYV1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+LS0s3skL.jpg" class="mr-3 lazyload" alt="発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　必殺スゴ技！　日本の動物編"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>発見！　マンガ図鑑　ＮＨＫダーウィンが来た！　新装版　必殺スゴ技！　日本の動物編</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>ＮＨＫ「ダーウィンが来た！」(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：学習まんが,コミック,マンガ,生物・バイオテクノロジー,学習まんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C1QRVKL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WoMtx8bGL.jpg" class="mr-3 lazyload" alt="世の中への扉　野生動物のお医者さん"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世の中への扉　野生動物のお医者さん</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>齊藤慶輔(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BK49Y89?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41JQBzR03bL.jpg" class="mr-3 lazyload" alt="鳥！　驚異の知能　道具をつくり、心を読み、確率を理解する (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>鳥！　驚異の知能　道具をつくり、心を読み、確率を理解する (ブルーバックス)</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>ジェニファー・アッカーマン(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B7HVR5K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hzw39rJ9L.jpg" class="mr-3 lazyload" alt="愛犬のための　食べもの栄養事典"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛犬のための　食べもの栄養事典</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>須崎恭彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,産業研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FOKKTXY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51T4OjkbXmL.jpg" class="mr-3 lazyload" alt="愛犬のための症状・目的別　食事百科"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛犬のための症状・目的別　食事百科</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>須崎恭彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,産業研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FJ0BQZY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JdynC1awL.jpg" class="mr-3 lazyload" alt="愛犬のための症状・目的別　栄養事典"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛犬のための症状・目的別　栄養事典</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>須崎恭彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,産業研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FJ0BQZO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/410enXpPzbL.jpg" class="mr-3 lazyload" alt="愛犬のためのがんが逃げていく食事と生活"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>愛犬のためのがんが逃げていく食事と生活</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>須崎恭彦(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,産業研究</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FJ0BRNA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518T+0k+DHL.jpg" class="mr-3 lazyload" alt="植物はなぜ5000年も生きるのか　寿命からみた動物と植物のちがい (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>植物はなぜ5000年も生きるのか　寿命からみた動物と植物のちがい (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GHHY9XY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
