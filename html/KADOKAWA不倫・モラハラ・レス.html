@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41kC+xdkoWL.jpg" class="mr-3 lazyload" alt="夫の扶養からぬけだしたい"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夫の扶養からぬけだしたい</h5>
+                    <p>価格：572円、ポイント：6</p>
+                    <p>ゆむい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N2H814G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41bbZ8CWCvL.jpg" class="mr-3 lazyload" alt="私の穴がうまらない (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>私の穴がうまらない (コミックエッセイ)</h5>
+                    <p>価格：572円、ポイント：6</p>
+                    <p>おぐら なおみ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084RQ49L5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41fqGXH+IGL.jpg" class="mr-3 lazyload" alt="「君とはもうできない」と言われまして (中経☆コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「君とはもうできない」と言われまして (中経☆コミックス)</h5>
+                    <p>価格：599円、ポイント：6</p>
+                    <p>モチ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BFWNHFF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41sIqMyvyhL.jpg" class="mr-3 lazyload" alt="ある日突然オタクの夫が亡くなったら？ 身近な人が亡くなった時にやるべきこと、起こること (中経☆コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ある日突然オタクの夫が亡くなったら？ 身近な人が亡くなった時にやるべきこと、起こること (中経☆コミックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>こさささこ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L63LLTR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QwGziTLPL.jpg" class="mr-3 lazyload" alt="毒親サバイバル (中経☆コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>毒親サバイバル (中経☆コミックス)</h5>
+                    <p>価格：599円、ポイント：6</p>
+                    <p>菊池 真理子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GKG22PD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZF-SufKgL.jpg" class="mr-3 lazyload" alt="実家からニートの弟を引きとりました。 (ダ・ヴィンチブックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>実家からニートの弟を引きとりました。 (ダ・ヴィンチブックス)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>沼津 マリー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B019BQS6AO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RwCWoOrML.jpg" class="mr-3 lazyload" alt="こころを病んで精神科病院に入院していました。 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こころを病んで精神科病院に入院していました。 (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>安藤 たかゆき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0131WBK84?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Jf9IfoGUL.jpg" class="mr-3 lazyload" alt="妻しか女性を知りません (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>妻しか女性を知りません (コミックエッセイ)</h5>
+                    <p>価格：447円、ポイント：4</p>
+                    <p>石原 まこちん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TPCZFR2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41qx7llRaLL.jpg" class="mr-3 lazyload" alt="娘が学校に行きません (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>娘が学校に行きません (コミックエッセイ)</h5>
+                    <p>価格：517円、ポイント：5</p>
+                    <p>野原 広子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BUKPDL0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gAgO+OKaL.jpg" class="mr-3 lazyload" alt="僕は髪の毛が少ない (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕は髪の毛が少ない (コミックエッセイ)</h5>
+                    <p>価格：517円、ポイント：5</p>
+                    <p>新井 キヒロ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BUKPCD4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GBlvyCFGL.jpg" class="mr-3 lazyload" alt="マンガでわかるうつ病のリアル"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マンガでわかるうつ病のリアル</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>錦山 まる(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,趣味・実用,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08BFPHM7B?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MLzcBZJhL.jpg" class="mr-3 lazyload" alt="顔で選んだダンナはモラハラの塊でした (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>顔で選んだダンナはモラハラの塊でした (コミックエッセイ)</h5>
+                    <p>価格：599円、ポイント：6</p>
+                    <p>鳥頭ゆば(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B088YMY4YK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sZV4TS5fL.jpg" class="mr-3 lazyload" alt="健康以下、介護未満 親のトリセツ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>健康以下、介護未満 親のトリセツ</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>カータン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,4コマまんが</p>
+                    <a href="https://www.amazon.co.jp/dp/B0871QTNQR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yrmAXTqnL.jpg" class="mr-3 lazyload" alt="女社会の歩き方"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女社会の歩き方</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>ぼのこ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086WRZFFS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51a1UJEKCwL.jpg" class="mr-3 lazyload" alt="親になったの私だけ!?"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>親になったの私だけ!?</h5>
+                    <p>価格：572円、ポイント：6</p>
+                    <p>ゆむい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086WSQ7PW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UHcfdn41L.jpg" class="mr-3 lazyload" alt="いじられキャラから抜けだしたい (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いじられキャラから抜けだしたい (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>梅涼(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：スキンケア,コミック,美容・ダイエット,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086PCNJRG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511-8iN-nqL.jpg" class="mr-3 lazyload" alt="子どもを叱りつける親は失格ですか？ (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子どもを叱りつける親は失格ですか？ (コミックエッセイ)</h5>
+                    <p>価格：654円、ポイント：7</p>
+                    <p>アベナオミ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086PB367B?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41BGPDck2xL.jpg" class="mr-3 lazyload" alt="母親に捨てられて残された子どもの話 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>母親に捨てられて残された子どもの話 (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>菊屋 きく子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08593GGQ7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hhDE2v6kL.jpg" class="mr-3 lazyload" alt="なんだこの人生　日曜しか生きた心地がしない社畜OLの日常 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なんだこの人生　日曜しか生きた心地がしない社畜OLの日常 (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>橋本 ゆの(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084RB4BZH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xncS18U6L.jpg" class="mr-3 lazyload" alt="旦那がマッチングアプリでやりとりしてる相手は嫁です"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>旦那がマッチングアプリでやりとりしてる相手は嫁です</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>蒼衣 ユノ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084M9R4BQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41m3MZj1+OL.jpg" class="mr-3 lazyload" alt="几帳面だと思っていたら心の病気になっていました (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>几帳面だと思っていたら心の病気になっていました (コミックエッセイ)</h5>
+                    <p>価格：599円、ポイント：6</p>
+                    <p>菊晴(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082ZX3D2M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I30MqEtlL.jpg" class="mr-3 lazyload" alt="母がしんどい【電子特典付】 (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>母がしんどい【電子特典付】 (角川文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>田房永子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック・ラノベ・BL,Featured Categories,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084KJ31ZH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5140V5C1ByL.jpg" class="mr-3 lazyload" alt="夫婦のミゾが埋まらない　産後にすれ違う男女を変えるパートナーシップ学 (中経☆コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夫婦のミゾが埋まらない　産後にすれ違う男女を変えるパートナーシップ学 (中経☆コミックス)</h5>
+                    <p>価格：626円、ポイント：6</p>
+                    <p>渡辺 大地(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XKRXGS7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/4141JdVawGL.jpg" class="mr-3 lazyload" alt="生きづらいと思ったら 親子で発達障害でした 入学準備編 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生きづらいと思ったら 親子で発達障害でした 入学準備編 (コミックエッセイ)</h5>
+                    <p>価格：599円、ポイント：6</p>
+                    <p>モンズースー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07N8LZVWV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517K-KUjLWL.jpg" class="mr-3 lazyload" alt="生きづらいと思ったら 親子で発達障害でした 入園編 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生きづらいと思ったら 親子で発達障害でした 入園編 (コミックエッセイ)</h5>
+                    <p>価格：599円、ポイント：6</p>
+                    <p>モンズースー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B075GJHS72?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41fZ--Dcr8L.jpg" class="mr-3 lazyload" alt="生きづらいと思ったら 親子で発達障害でした (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>生きづらいと思ったら 親子で発達障害でした (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>モンズースー(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FVG06OW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516f6-39FJL.jpg" class="mr-3 lazyload" alt="母になるのがおそろしい (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>母になるのがおそろしい (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>ヤマダカナン(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01DZBH8Z0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rGUCXhZGL.jpg" class="mr-3 lazyload" alt="いつもうっすら黒歴史 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いつもうっすら黒歴史 (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>お肉おいしい(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B01CC9U7HC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cbU7y67FL.jpg" class="mr-3 lazyload" alt="気にしすぎガール　この世のあらゆる物事に気を遣いすぎる女の日常 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>気にしすぎガール　この世のあらゆる物事に気を遣いすぎる女の日常 (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>武井 怜(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B017X0RD3Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41hNHiNygBL.jpg" class="mr-3 lazyload" alt="ママ友がこわい　子どもが同学年という小さな絶望 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ママ友がこわい　子どもが同学年という小さな絶望 (コミックエッセイ)</h5>
+                    <p>価格：545円、ポイント：5</p>
+                    <p>野原 広子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0145ZA1RM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pigbwBp8L.jpg" class="mr-3 lazyload" alt="黒い夫婦 (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>黒い夫婦 (コミックエッセイ)</h5>
+                    <p>価格：517円、ポイント：5</p>
+                    <p>平松 昭子(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00BUKPHR0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/414i5UGjTKL.jpg" class="mr-3 lazyload" alt="僕にはまだ 友だちがいない (コミックエッセイ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕にはまだ 友だちがいない (コミックエッセイ)</h5>
+                    <p>価格：480円、ポイント：5</p>
+                    <p>中川 学(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ARATYG4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
