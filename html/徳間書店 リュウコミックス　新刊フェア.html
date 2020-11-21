@@ -1,0 +1,976 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61poDJ-FN8L.jpg" class="mr-3 lazyload" alt="あんアンドロどろ(3)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あんアンドロどろ(3)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>R-one(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B08M5LS1SR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61OMR+Hn2PL.jpg" class="mr-3 lazyload" alt="昔勇者で今は骨(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昔勇者で今は骨(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：752円、ポイント：13</p>
+                    <p>内々けやき(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B08KH4Y3B1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nl7v0Q-pL.jpg" class="mr-3 lazyload" alt="トラベルはとにっき【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>トラベルはとにっき【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>藤田里奈(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08H1LNPS8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KxDx86MzL.jpg" class="mr-3 lazyload" alt="壁サー同人作家の猫屋敷くんは承認欲求をこじらせている(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>壁サー同人作家の猫屋敷くんは承認欲求をこじらせている(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>ミナモトカズキ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08H1MCHC9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51g-IyVzYLL.jpg" class="mr-3 lazyload" alt="独身サラリーマン鈴木の生態(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>独身サラリーマン鈴木の生態(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>鈴木マ球(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08F77WT9Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61BaA-Bh36L.jpg" class="mr-3 lazyload" alt="ZINGNIZE(4)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ZINGNIZE(4)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：752円、ポイント：13</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B08C78SZMT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51f-IKBnYQL.jpg" class="mr-3 lazyload" alt="ゆりでなるvえすぽわーる(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆりでなるvえすぽわーる(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：941円、ポイント：10</p>
+                    <p>なおいまい(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B089D7WYSG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519TwWPA-gL.jpg" class="mr-3 lazyload" alt="きのこいぬ(12)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(12)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：658円、ポイント：7</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B087PTXQZ4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41GLhuWQYhL.jpg" class="mr-3 lazyload" alt="エメラルドに食べられたい(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エメラルドに食べられたい(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>aimi(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B086JHBMJQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41hd6AAtfsL.jpg" class="mr-3 lazyload" alt="サナダくんは私のお尻に住んでいます(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サナダくんは私のお尻に住んでいます(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>えぴこ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B086JHCTBQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61z4lVoH46L.jpg" class="mr-3 lazyload" alt="昔勇者で今は骨(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>昔勇者で今は骨(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>内々けやき(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B085L51PK4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mXdpxLGgL.jpg" class="mr-3 lazyload" alt="プリンセス・プリンシパル(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プリンセス・プリンシパル(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>あきづきりょう(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B085L817Z4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51axcetUiHL.jpg" class="mr-3 lazyload" alt="ZINGNIZE(3)【特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ZINGNIZE(3)【特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：752円、ポイント：13</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B081C731VV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tv94t2qmL.jpg" class="mr-3 lazyload" alt="推しが武道館いってくれたら死ぬ(6)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推しが武道館いってくれたら死ぬ(6)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YXKZBH4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51kjmj0P2CL.jpg" class="mr-3 lazyload" alt="あんアンドロどろ(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あんアンドロどろ(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：752円、ポイント：8</p>
+                    <p>R-one(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,SF</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XSKLF69?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41lkRtfNRIL.jpg" class="mr-3 lazyload" alt="きのこいぬ(11)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(11)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：658円、ポイント：11</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XLGNSC6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qwu1x4+HL.jpg" class="mr-3 lazyload" alt="メルヘン課長とノンケ後輩くん(4)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メルヘン課長とノンケ後輩くん(4)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>ミナモトカズキ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W553CWD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515L1sS9svL.jpg" class="mr-3 lazyload" alt="ゆりでなるvえすぽわーる(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆりでなるvえすぽわーる(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>なおいまい(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V5LZWZJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511GRqp5V9L.jpg" class="mr-3 lazyload" alt="アーバンレジェンド(3)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アーバンレジェンド(3)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>221(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ホラー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V2DFKLF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51d0M3PXhCL.jpg" class="mr-3 lazyload" alt="羊竜飼いのケモノ事情(4)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>羊竜飼いのケモノ事情(4)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>うかんむり(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07V6Q5YCB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61A2CUma4LL.jpg" class="mr-3 lazyload" alt="ZINGNIZE(2)【特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ZINGNIZE(2)【特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QKSTVBQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Xky6Fl+8L.jpg" class="mr-3 lazyload" alt="きのこいぬ(10)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(10)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NMLZJWZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5161AOWVYtL.jpg" class="mr-3 lazyload" alt="アーバンレジェンド(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アーバンレジェンド(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：133</p>
+                    <p>221(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,ホラー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M7TCRVY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TZMPGDUtL.jpg" class="mr-3 lazyload" alt="推しが武道館いってくれたら死ぬ(5)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推しが武道館いってくれたら死ぬ(5)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L8SLTCD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510eVkAJRkL.jpg" class="mr-3 lazyload" alt="メルヘン課長とノンケ後輩くん(3)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メルヘン課長とノンケ後輩くん(3)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>ミナモトカズキ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KF3Z28P?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ol+b9c5yL.jpg" class="mr-3 lazyload" alt="羊竜飼いのケモノ事情(3)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>羊竜飼いのケモノ事情(3)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>うかんむり(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KF31HQH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61pIc9csSAL.jpg" class="mr-3 lazyload" alt="ZINGNIZE(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ZINGNIZE(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J9LNXSM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Eyz+6FfiL.jpg" class="mr-3 lazyload" alt="きのこいぬ(9)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(9)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FFJ6RTB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LC5UUQPBL.jpg" class="mr-3 lazyload" alt="メルヘン課長とノンケ後輩くん(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>メルヘン課長とノンケ後輩くん(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：133</p>
+                    <p>ミナモトカズキ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ,ボーイズラブマンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CZ865Y1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61CSt08ZJiL.jpg" class="mr-3 lazyload" alt="推しが武道館いってくれたら死ぬ(4)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推しが武道館いってくれたら死ぬ(4)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CZ7FX4S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bYqSvrfAL.jpg" class="mr-3 lazyload" alt="あんアンドロどろ(1)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あんアンドロどろ(1)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>R-one(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C2P47PL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51onwg4j8lL.jpg" class="mr-3 lazyload" alt="羊竜飼いのケモノ事情(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>羊竜飼いのケモノ事情(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：133</p>
+                    <p>うかんむり(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C2QCXVQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51K5MuxMBEL.jpg" class="mr-3 lazyload" alt="きのこいぬ(8)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(8)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07792JQ2P?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61236XeUkJL.jpg" class="mr-3 lazyload" alt="フランスはとにっき 一年エンジョイ！帰国の時期になりました【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フランスはとにっき 一年エンジョイ！帰国の時期になりました【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>藤田里奈(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B073W36D2L?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GQSS4fuML.jpg" class="mr-3 lazyload" alt="推しが武道館いってくれたら死ぬ(3)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推しが武道館いってくれたら死ぬ(3)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B072195R5N?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61JT-Wz7fXL.jpg" class="mr-3 lazyload" alt="KEYMAN(13)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(13)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XH889JJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aPkpx1VZL.jpg" class="mr-3 lazyload" alt="きのこいぬ(7)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(7)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XH65NDQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61N9BnOWuhL.jpg" class="mr-3 lazyload" alt="フランスはとにっき 街には慣れたけどカタコトのまま半年目 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フランスはとにっき 街には慣れたけどカタコトのまま半年目 (RYU COMICS)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>藤田里奈(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01NGTKX9D?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61lo-Jb4PRL.jpg" class="mr-3 lazyload" alt="KEYMAN(12)【特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(12)【特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M8GH294?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ftl7GIoTL.jpg" class="mr-3 lazyload" alt="推しが武道館いってくれたら死ぬ(2)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推しが武道館いってくれたら死ぬ(2)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LY4ONOT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41qEHo5HR4L.jpg" class="mr-3 lazyload" alt="きのこいぬ(6)【電子限定特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(6)【電子限定特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01K4C6PWU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SS4Xv8mPL.jpg" class="mr-3 lazyload" alt="フランスはとにっき 海外に住むって決めたら漫画家デビュー (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フランスはとにっき 海外に住むって決めたら漫画家デビュー (RYU COMICS)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>藤田里奈(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01IAYXP4A?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IL3jSogPL.jpg" class="mr-3 lazyload" alt="KEYMAN(11)【特典ペーパー付き】 (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(11)【特典ペーパー付き】 (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FJA44D4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61hMrjVjEML.jpg" class="mr-3 lazyload" alt="KEYMAN(10) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(10) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01CRXUTOE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+QDpaUj-L.jpg" class="mr-3 lazyload" alt="KEYMAN(9) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(9) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01917C99C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/612g5JutzKL.jpg" class="mr-3 lazyload" alt="推しが武道館いってくれたら死ぬ(1) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推しが武道館いってくれたら死ぬ(1) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01C5J9WNY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GbuKMtCnL.jpg" class="mr-3 lazyload" alt="KEYMAN(8) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(8) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B017SC62R2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615qFy2-gTL.jpg" class="mr-3 lazyload" alt="KEYMAN(7) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(7) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016PON62I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61qOlxEsBpL.jpg" class="mr-3 lazyload" alt="KEYMAN(6) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(6) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B014OZ48RW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FG-K0S6DL.jpg" class="mr-3 lazyload" alt="KEYMAN(4) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(4) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B013HN45MK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61hJt+Iq0HL.jpg" class="mr-3 lazyload" alt="KEYMAN(5) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>KEYMAN(5) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>わらいなく(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B014OZ48M2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F4xWqXz-L.jpg" class="mr-3 lazyload" alt="きのこいぬ(5) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(5) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00KMOMKCU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ddp6bWI2L.jpg" class="mr-3 lazyload" alt="きのこいぬ(4) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(4) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：133</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I5G712Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41qdkEWhnSL.jpg" class="mr-3 lazyload" alt="きのこいぬ(3) (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこいぬ(3) (RYU COMICS)</h5>
+                    <p>価格：330円、ポイント：133</p>
+                    <p>蒼星きまま(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GXYDIJW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zYbN0EXdL.jpg" class="mr-3 lazyload" alt="まんがの作り方（１） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（１） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HFNMHLA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513Z5YG7zpL.jpg" class="mr-3 lazyload" alt="まんがの作り方（２） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（２） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HFNMHRY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Jn47PbQML.jpg" class="mr-3 lazyload" alt="まんがの作り方（３） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（３） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：111</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I5G71GM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Lk4TDMN+L.jpg" class="mr-3 lazyload" alt="まんがの作り方（４） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（４） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：111</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00I5G71HG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51tgHfJS0CL.jpg" class="mr-3 lazyload" alt="まんがの作り方（５） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（５） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IF0JF44?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BV4ULX2HL.jpg" class="mr-3 lazyload" alt="まんがの作り方（６） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（６） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JLA2K26?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gSvwu99gL.jpg" class="mr-3 lazyload" alt="まんがの作り方（７） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（７） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00M3U68FQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rfnk65Q6L.jpg" class="mr-3 lazyload" alt="まんがの作り方（８） (RYU COMICS)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがの作り方（８） (RYU COMICS)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>平尾アウリ(著)</p>
+                    <p>出版社：徳間書店（リュウ・コミックス）</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00OYN69PO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
