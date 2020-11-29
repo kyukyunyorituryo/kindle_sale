@@ -1,0 +1,1301 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61G-JK7JoAL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年１１月１４日・２１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年１１月１４日・２１日号 [雑誌]</h5>
+                    <p>価格：520円、ポイント：421</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08KXTWXSK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513BQs9RqEL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年９月４日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年９月４日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CR6N7VV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EHoVpdE1L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年１１月２日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年１１月２日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JJDTW8S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DdkgbvwML.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年７月３日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年７月３日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08889SR64?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GPavsI0hL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年１０月２日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年１０月２日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08FC9VM1X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YULwsoTfL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年７月３１日・８月７日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年７月３１日・８月７日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08B1CBDQ8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51URA9-ymbL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年５月８・１５日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年５月８・１５日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B085VXGLK2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519T5w-z0rL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年５月１日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年５月１日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B085VSTH9X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FHjJXIR2L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年３月２７日・４月３日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年３月２７日・４月３日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B084SBMW2T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+U48cmeOL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年３月９日・１６日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年３月９日・１６日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B079Z64WYS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ls7KLg0uL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年１０月２４日・３１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年１０月２４日・３１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08HN1S9ZQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xTpZV2sPL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年８月２１日・２８日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年８月２１日・２８日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CRMWFQN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Rrq0eAICL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年７月４日・１１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年７月４日・１１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08887PWL3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t9S7YrwzL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０２０年１月１０日・１月１７日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０２０年１月１０日・１月１７日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B0834VP9HH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AFg5ve8DL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年８月２３・３０日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年８月２３・３０日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W7Y6RHR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51G7kIZgZSL.jpg" class="mr-3 lazyload" alt="フライデー別冊　ダイナマイト２０１９年１月１５日増刊号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フライデー別冊　ダイナマイト２０１９年１月１５日増刊号 [雑誌] FRIDAY</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M8G3HRZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FPufvwrPL.jpg" class="mr-3 lazyload" alt="フライデー別冊　ダイナマイト２０１８年８月２５日増刊号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フライデー別冊　ダイナマイト２０１８年８月２５日増刊号 [雑誌] FRIDAY</h5>
+                    <p>価格：612円、ポイント：6</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G98CCXM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xfU8nzF5L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年６月１日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年６月１日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D4F6K1K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZKjkIuTtL.jpg" class="mr-3 lazyload" alt="フライデー別冊　ダイナマイト２０１８年５月１５日増刊号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フライデー別冊　ダイナマイト２０１８年５月１５日増刊号 [雑誌] FRIDAY</h5>
+                    <p>価格：612円、ポイント：6</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CPWLKX5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZUpHYHwCL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年５月１１日・１８日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年５月１１日・１８日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CP466GB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/618FvI8X0zL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年１月２６日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年１月２６日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>FRIDAY編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B078Y2X23F?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61JnvuqqDPL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年１月１９日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年１月１９日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>FRIDAY編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B078NRR8GP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61KWkuI5KvL.jpg" class="mr-3 lazyload" alt="フライデー別冊　ダイナマイト２０１８年１月１２日増刊号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フライデー別冊　ダイナマイト２０１８年１月１２日増刊号 [雑誌] FRIDAY</h5>
+                    <p>価格：612円、ポイント：6</p>
+                    <p>FRIDAY編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B078MJB6GC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619Z97pY73L.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年８月２２日・２９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年８月２２日・２９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CRJMKW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619nivlJbBL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年８月８日・１５日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年８月８日・１５日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08CRPWYQG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61nhuEpT+WL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年８月１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年８月１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B089ZVFK7R?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/617CZlKCZtL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年６月１３日・２０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年６月１３日・２０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B088898HWP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gajQelugL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年２月２２日・２９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年２月２２日・２９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B083QFV5DB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519+HQnTBTL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年１２月６日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年１２月６日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B081SWF2XY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NWYgMLouL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年１月４日・１月１１日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年１月４日・１月１１日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M8SNBXY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Uviq+IAyL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年１０月４日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年１０月４日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07Y38WH9Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UPLju+maL.jpg" class="mr-3 lazyload" alt="フライデー別冊　ダイナマイト２０１９年８月３１日増刊号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フライデー別冊　ダイナマイト２０１９年８月３１日増刊号 [雑誌] FRIDAY</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W97KRK3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QY10LIdrL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年８月２日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年８月２日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VHRXBDY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61vMPQCmdtL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年５月１０日・１７日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年５月１０日・１７日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R3JRM8X?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qFD2BJk2L.jpg" class="mr-3 lazyload" alt="フライデー別冊　ダイナマイト２０１９年３月２３日増刊号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フライデー別冊　ダイナマイト２０１９年３月２３日増刊号 [雑誌] FRIDAY</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PGTGNW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51i8CWjR9dL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年３月１５・２２日合併号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年３月１５・２２日合併号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P81C68S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bioozLI8L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年３月１日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年３月１日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NQF61B2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qIJbjPR-L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年２月１日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年２月１日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MW293HX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NWYgMLouL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１９年１月４日・１月１１日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１９年１月４日・１月１１日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M8SNBXY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EHoVpdE1L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年１１月２日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年１１月２日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JJDTW8S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VlS2LeVZL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年１０月５日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年１０月５日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HJ1BTBJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wxLXfkS2L.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年８月１７・２４日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年８月１７・２４日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G3Y6YTP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61aI7Wpy6bL.jpg" class="mr-3 lazyload" alt="ＦＲＩＤＡＹ (フライデー)　２０１８年８月３日号 [雑誌] FRIDAY"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＦＲＩＤＡＹ (フライデー)　２０１８年８月３日号 [雑誌] FRIDAY</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>ＦＲＩＤＡＹ編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FP4WWLX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61pk2-dsSsL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年１０月３日・１０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年１０月３日・１０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08FCD1311?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ITx0PhUSL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年９月１２日・１９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年９月１２日・１９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08FCBLDPJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61X4o9FxueL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年６月６日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年６月６日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08727VGMC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61tw2e5O6YL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年５月２３日・３０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年５月２３日・３０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08727ZT6N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61vQo9hVvpL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年５月２日・９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年５月２日・９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B085W13L93?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611V0jJdSJL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年４月１１日・１８日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年４月１１日・１８日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B085VXM4ZD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Rrq0eAICL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年７月４日・１１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年７月４日・１１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B08887PWL3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61-4oZ0AoXL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年３月２１日・２８日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年３月２１日・２８日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B084SSHBXD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61XsTp8MKdL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年２月１日・８日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年２月１日・８日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B083QGMRTG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Rkx64B-KL.jpg" class="mr-3 lazyload" alt="週刊現代　２０２０年１月１１日・１８日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０２０年１月１１日・１８日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B0834VCC68?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61jnKwDWPhL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年１２月７日・１４日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年１２月７日・１４日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B0827LK2RP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SmGoFXjGL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年１１月２３日・３０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年１１月２３日・３０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B081N5TS78?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wK3KICa3L.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年１１月２日・９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年１１月２日・９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZNT27J5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61yu2RnuXzL.jpg" class="mr-3 lazyload" alt="週刊現代２０１９年１０月１２日・１９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代２０１９年１０月１２日・１９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YSG5D4B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61eGYbdSzrL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年１０月５日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年１０月５日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YFVTQ1K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61s4rraQnmL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年９月１４日・２１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年９月１４日・２１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XKTHQ27?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619nolP7Q6L.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年８月２４日・３１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年８月２４日・３１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WRBZZS4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IdOb3uLWL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年８月１０日・１７日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年８月１０日・１７日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07W1KWWZM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DwAdy2KZL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年８月３日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年８月３日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07VRBZWP1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61j-vIK2GOL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年７月１３日・２０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年７月１３日・２０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TZG5NQG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ksSCmOe+L.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年６月２２日・２９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年６月２２日・２９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T2YHVR1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RChGXzdxL.jpg" class="mr-3 lazyload" alt="週刊現代２０１９年６月１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代２０１９年６月１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RZK7JKP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61iJU9dR7AL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年５月１１日・１８日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年５月１１日・１８日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07R45BNSD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61JDWLLrE5L.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年４月２７日・５月４日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年４月２７日・５月４日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07QMLC2Z2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61CLkHtwpmL.jpg" class="mr-3 lazyload" alt="週刊現代２０１９年２月１６日・２３日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代２０１９年２月１６日・２３日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NCXDZBH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wK3KICa3L.jpg" class="mr-3 lazyload" alt="週刊現代　２０１９年１１月２日・９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１９年１１月２日・９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07ZNT27J5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61K6QKsLsRL.jpg" class="mr-3 lazyload" alt="週刊現代２０１９年１月１９日・２６日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代２０１９年１月１９日・２６日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MBY9FJV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61c46TmbZQL.jpg" class="mr-3 lazyload" alt="週刊現代２０１９年１月５日・１２日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代２０１９年１月５日・１２日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MGTQH19?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fNipB70ZL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年１２月１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年１２月１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KP8YVQV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615mhGTh5wL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年１１月３日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年１１月３日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JLQL9P9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61cjdnsdprL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年１０月１３日・２０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年１０月１３日・２０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HWSSNNM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/618tUhIBwuL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年９月２２日・２９日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年９月２２日・２９日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07H7DR1RR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+jdtUtXwL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年９月１日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年９月１日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GKJNN4S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61bdtnEbRdL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年８月１８日・２５日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年８月１８日・２５日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G73J8L3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61iGCmsynqL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年８月４日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年８月４日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FQHSSSF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61dNl2UkoxL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年７月２１日・２８日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年７月２１日・２８日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FCH8NKY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fe2DhP-ML.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年７月７日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年７月７日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DZWVDVJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61swT3KVCUL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年６月２日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年６月２日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D6MQWBL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fLxoVKCyL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年５月５日・１２日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年５月５日・１２日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CLMB4ZC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615mhGTh5wL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年１１月３日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年１１月３日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JLQL9P9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SeRr9NvTL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年２月１７日・２４日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年２月１７日・２４日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B079L4QPQ1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61u-ZSQTQkL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年２月３日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年２月３日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B0796QWX8Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61DzG5PVqYL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年１月２７日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年１月２７日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B0791BPFGB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Df9ZDLgZL.jpg" class="mr-3 lazyload" alt="週刊現代　２０１８年１月２０日号 [雑誌]"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>週刊現代　２０１８年１月２０日号 [雑誌]</h5>
+                    <p>価格：99円、ポイント：1</p>
+                    <p>週刊現代編集部(編集)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：ジャンル別,趣味・その他</p>
+                    <a href="https://www.amazon.co.jp/dp/B078NT545J?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
