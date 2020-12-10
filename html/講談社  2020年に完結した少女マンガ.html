@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GtgokvQ6L.jpg" class="mr-3 lazyload" alt="僕と君の大切な話（２） (デザートコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕と君の大切な話（２） (デザートコミックス)</h5>
+                    <p>価格：231円、ポイント：2</p>
+                    <p>ろびこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XG4986J?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XliKCNv8L.jpg" class="mr-3 lazyload" alt="放課後、恋した。（２） (デザートコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放課後、恋した。（２） (デザートコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>満井春香(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0776R56WX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513wOH4gwEL.jpg" class="mr-3 lazyload" alt="放課後、恋した。（１） (デザートコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>放課後、恋した。（１） (デザートコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>満井春香(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B071JTDPJX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vuJhrDAxL.jpg" class="mr-3 lazyload" alt="僕と君の大切な話（１） (デザートコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕と君の大切な話（１） (デザートコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ろびこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01CJEISCQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FGnQaOKtL.jpg" class="mr-3 lazyload" alt="コミンカビヨリ（３） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コミンカビヨリ（３） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>高須賀由枝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LY57I4Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mjhc7nxDL.jpg" class="mr-3 lazyload" alt="コミンカビヨリ（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コミンカビヨリ（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>高須賀由枝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00FEBD33Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YAQGS0fFL.jpg" class="mr-3 lazyload" alt="コミンカビヨリ（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コミンカビヨリ（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>高須賀由枝(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DORXD7S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mYMHSjwQL.jpg" class="mr-3 lazyload" alt="ＯＮ　ＴＨＥ　ＲＯＡＤ　ＧＩＲＬＳ（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＯＮ　ＴＨＥ　ＲＯＡＤ　ＧＩＲＬＳ（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ＩＳＡＫＡ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B086PVJ9D3?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UURYZk3NL.jpg" class="mr-3 lazyload" alt="青山くん、ここでシたらバレちゃうよ？（１）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>青山くん、ここでシたらバレちゃうよ？（１）</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>こだち(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085C8B2YS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UbME8t-tL.jpg" class="mr-3 lazyload" alt="漫画版　選ばれる女におなりなさい　デヴィ夫人の華麗で激動なる人生　【電子版限定特典「デヴィ夫人の婚活論」Special Edition 4話つき】 (パルシィコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>漫画版　選ばれる女におなりなさい　デヴィ夫人の華麗で激動なる人生　【電子版限定特典「デヴィ夫人の婚活論」Special Edition 4話つき】 (パルシィコミックス)</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>ラトナ・サリ・デヴィ・スカルノ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0848PYL8C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rZmEFZ5cL.jpg" class="mr-3 lazyload" alt="文鳥とメガネくん (パルシィコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>文鳥とメガネくん (パルシィコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>オオノジュンコ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0827V5QY1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/4183g7k4SlL.jpg" class="mr-3 lazyload" alt="ろくぶんのいち　～ぼくたちの格差～プチキス（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ろくぶんのいち　～ぼくたちの格差～プチキス（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>神波アユミ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JGYPL86?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41-QYtDs3DL.jpg" class="mr-3 lazyload" alt="さよならしきゅう　そのあと　プチキス（３） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さよならしきゅう　そのあと　プチキス（３） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>岡田有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084388HJ6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41c-jjH9DSL.jpg" class="mr-3 lazyload" alt="さよならしきゅう　そのあと　プチキス（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さよならしきゅう　そのあと　プチキス（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>岡田有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B082W58J2Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51haGQG52GL.jpg" class="mr-3 lazyload" alt="シークレット・シンデレラ～甘い秘密～（１）【電子版限定カラー扉つき】 (なかよしコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シークレット・シンデレラ～甘い秘密～（１）【電子版限定カラー扉つき】 (なかよしコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ぷりぷりろーず(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YPQK3H8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ZMH2TtcFL.jpg" class="mr-3 lazyload" alt="文鳥とメガネくん　プチキス（１） (パルシィコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>文鳥とメガネくん　プチキス（１） (パルシィコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>オオノジュンコ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07XRJTQ7W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51P0vJF8umL.jpg" class="mr-3 lazyload" alt="すてきなパーティーフリーク　プチキス（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>すてきなパーティーフリーク　プチキス（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ふみさき(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WW14T2S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+3aOSXOQL.jpg" class="mr-3 lazyload" alt="かけおちガール　プチキス（３） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>かけおちガール　プチキス（３） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ばったん(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KR3YG5T?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KbehhRVhL.jpg" class="mr-3 lazyload" alt="かけおちガール　プチキス（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>かけおちガール　プチキス（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ばったん(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JHJPZM5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LWVG8yXnL.jpg" class="mr-3 lazyload" alt="かけおちガール　プチキス（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>かけおちガール　プチキス（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ばったん(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07JHHGZ7R?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41wZQLs6IZL.jpg" class="mr-3 lazyload" alt="ろくぶんのいち　～ぼくたちの格差～プチキス（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ろくぶんのいち　～ぼくたちの格差～プチキス（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>神波アユミ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LF8WKZ8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uqZvq9PnL.jpg" class="mr-3 lazyload" alt="はたらく細菌（１） (なかよしコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はたらく細菌（１） (なかよしコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>吉田はるゆき(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B079DLXY4S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uUaZmCGfL.jpg" class="mr-3 lazyload" alt="超能力者と恋におちる（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>超能力者と恋におちる（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>上機しほ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0763MQKQZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jzQ5QnitL.jpg" class="mr-3 lazyload" alt="ゆずのどうぶつカルテ～こちら　わんニャンどうぶつ病院～（１） (なかよしコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆずのどうぶつカルテ～こちら　わんニャンどうぶつ病院～（１） (なかよしコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>伊藤みんご(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N0OS94Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iwhSVki9L.jpg" class="mr-3 lazyload" alt="逃げるは恥だが役に立つ（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>逃げるは恥だが役に立つ（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>海野つなみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00GWVP77W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51n3UNgyFhL.jpg" class="mr-3 lazyload" alt="ハナさんは実らせたい！（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハナさんは実らせたい！（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>上野はる菜(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084C2BQJK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41aQ05NoerL.jpg" class="mr-3 lazyload" alt="さよならしきゅう　そのあと　プチキス（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さよならしきゅう　そのあと　プチキス（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>岡田有希(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B081ST43Z8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oHJT8seDL.jpg" class="mr-3 lazyload" alt="すてきなパーティーフリーク　プチキス（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>すてきなパーティーフリーク　プチキス（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ふみさき(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TCKM2RY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LxTTZ1hEL.jpg" class="mr-3 lazyload" alt="あのこはマジョロシィ（１） (パルシィコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あのこはマジョロシィ（１） (パルシィコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>瀬葉さゆ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07T7TYYJB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VOIM2YS7L.jpg" class="mr-3 lazyload" alt="ボクとわたしの１０年恋（１） (パルシィコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ボクとわたしの１０年恋（１） (パルシィコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>うさ沢妹子(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07HY7YL76?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51J6qyjiNdL.jpg" class="mr-3 lazyload" alt="アリスとアマリリス（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アリスとアマリリス（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小沢真理(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F6WZ7FY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
