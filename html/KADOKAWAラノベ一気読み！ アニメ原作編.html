@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IwGC8uGSL.jpg" class="mr-3 lazyload" alt="【合本版】機巧少女は傷つかない　全17巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】機巧少女は傷つかない　全17巻 (MF文庫J)</h5>
+                    <p>価格：5369円、ポイント：54</p>
+                    <p>海冬 レイジ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07GQL99K2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VyOLXgDIL.jpg" class="mr-3 lazyload" alt="【合本版】対魔導学園35試験小隊　全15巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】対魔導学園35試験小隊　全15巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：4895円、ポイント：49</p>
+                    <p>柳実 冬貴(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B081GGYJ9B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5125096wBIL.jpg" class="mr-3 lazyload" alt="【合本版】ゼロから始める魔法の書　全11巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ゼロから始める魔法の書　全11巻 (電撃文庫)</h5>
+                    <p>価格：3480円、ポイント：35</p>
+                    <p>虎走 かける(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B082CCTVDD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LQJyJqUZL.jpg" class="mr-3 lazyload" alt="【合本版】これはゾンビですか？　全19巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】これはゾンビですか？　全19巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：6075円、ポイント：61</p>
+                    <p>木村 心一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B081G7ZPDM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51snkcIx9dL.jpg" class="mr-3 lazyload" alt="【合本版】撲殺天使ドクロちゃん　全10巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】撲殺天使ドクロちゃん　全10巻 (電撃文庫)</h5>
+                    <p>価格：2908円、ポイント：29</p>
+                    <p>おかゆまさき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MGZRJY5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GWW2yVXvL.jpg" class="mr-3 lazyload" alt="【合本版】さくら荘のペットな彼女　全13巻（電子特典付き） (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】さくら荘のペットな彼女　全13巻（電子特典付き） (電撃文庫)</h5>
+                    <p>価格：4199円、ポイント：42</p>
+                    <p>鴨志田 一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G7VZZBX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MBfdJ3m0L.jpg" class="mr-3 lazyload" alt="【合本版】狼と香辛料 1～17巻収録 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】狼と香辛料 1～17巻収録 (電撃文庫)</h5>
+                    <p>価格：5276円、ポイント：53</p>
+                    <p>支倉 凍砂(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01GDJ9SVI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BBWF-LiSL.jpg" class="mr-3 lazyload" alt="【合本版】SMガールズ　セイバーマリオネットJ　全12巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】SMガールズ　セイバーマリオネットJ　全12巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：2523円、ポイント：25</p>
+                    <p>あかほり さとる(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00LBPG5PW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518ueVT77+L.jpg" class="mr-3 lazyload" alt="【合本版】BLACK BLOOD BROTHERS＋(S)　全17巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】BLACK BLOOD BROTHERS＋(S)　全17巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：3573円、ポイント：36</p>
+                    <p>あざの 耕平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00JPB80UM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51A3cChQ01L.jpg" class="mr-3 lazyload" alt="【合本版】ニンジャスレイヤー　全２１巻 (ホビー書籍部)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ニンジャスレイヤー　全２１巻 (ホビー書籍部)</h5>
+                    <p>価格：13722円、ポイント：137</p>
+                    <p>ブラッドレー・ボンド(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B081TTLJ61?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5100GaAlwZL.jpg" class="mr-3 lazyload" alt="【合本版】天使の3P！　全11巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】天使の3P！　全11巻 (電撃文庫)</h5>
+                    <p>価格：3273円、ポイント：33</p>
+                    <p>蒼山 サグ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B083JSMNJ9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WIkgXfpaL.jpg" class="mr-3 lazyload" alt="【合本版】お兄ちゃんだけど愛さえあれば関係ないよねっ　全12巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】お兄ちゃんだけど愛さえあれば関係ないよねっ　全12巻 (MF文庫J)</h5>
+                    <p>価格：3801円、ポイント：38</p>
+                    <p>鈴木 大輔(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B081DGBFVM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51smyvGZSZL.jpg" class="mr-3 lazyload" alt="【合本版】変態王子と笑わない猫。　全13巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】変態王子と笑わない猫。　全13巻 (MF文庫J)</h5>
+                    <p>価格：4128円、ポイント：41</p>
+                    <p>さがら総(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B081DFXWZW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51t310TP1iL.jpg" class="mr-3 lazyload" alt="【合本版】空戦魔導士候補生の教官＋EX　全15巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】空戦魔導士候補生の教官＋EX　全15巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：4895円、ポイント：49</p>
+                    <p>諸星 悠(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07WMFJXNL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PGICLZl7L.jpg" class="mr-3 lazyload" alt="【合本版】『オオカミさんと』シリーズ　全13巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】『オオカミさんと』シリーズ　全13巻 (電撃文庫)</h5>
+                    <p>価格：4032円、ポイント：40</p>
+                    <p>沖田 雅(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M65ZGRJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51E08f5cFYL.jpg" class="mr-3 lazyload" alt="【合本版】しにがみのバラッド。　全13巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】しにがみのバラッド。　全13巻 (電撃文庫)</h5>
+                    <p>価格：3970円、ポイント：40</p>
+                    <p>ハセガワ ケイスケ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MKPZPX4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nykepweYL.jpg" class="mr-3 lazyload" alt="【合本版】探偵・日暮旅人の探し物　全10巻 (メディアワークス文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】探偵・日暮旅人の探し物　全10巻 (メディアワークス文庫)</h5>
+                    <p>価格：3322円、ポイント：33</p>
+                    <p>山口 幸三郎(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+                    <a href="https://www.amazon.co.jp/dp/B07LC5DCB5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51X0odbjMYL.jpg" class="mr-3 lazyload" alt="【合本版】れでぃ×ばと！　全13巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】れでぃ×ばと！　全13巻 (電撃文庫)</h5>
+                    <p>価格：3757円、ポイント：38</p>
+                    <p>上月 司(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L4BDMKQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rvMt9Zh4L.jpg" class="mr-3 lazyload" alt="【合本版】乃木坂春香の秘密　全16巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】乃木坂春香の秘密　全16巻 (電撃文庫)</h5>
+                    <p>価格：5071円、ポイント：51</p>
+                    <p>五十嵐 雄策(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07L4BNRGJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Iw3OMQd9L.jpg" class="mr-3 lazyload" alt="【合本版】アスラクライン　全14巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】アスラクライン　全14巻 (電撃文庫)</h5>
+                    <p>価格：4280円、ポイント：43</p>
+                    <p>三雲 岳斗(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07K8145WB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510ivXic-RL.jpg" class="mr-3 lazyload" alt="【合本版】電波女と青春男　全9巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】電波女と青春男　全9巻 (電撃文庫)</h5>
+                    <p>価格：2685円、ポイント：27</p>
+                    <p>入間 人間(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07K8254NR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HbiciIJKL.jpg" class="mr-3 lazyload" alt="【合本版】神様のメモ帳　全9巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】神様のメモ帳　全9巻 (電撃文庫)</h5>
+                    <p>価格：2946円、ポイント：29</p>
+                    <p>杉井 光(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J26FFG9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EerOpIESL.jpg" class="mr-3 lazyload" alt="【合本版】灼眼のシャナ　全26巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】灼眼のシャナ　全26巻 (電撃文庫)</h5>
+                    <p>価格：7799円、ポイント：78</p>
+                    <p>高橋 弥七郎(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J26ZXDD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TH1pvF-qL.jpg" class="mr-3 lazyload" alt="【合本版】ロウきゅーぶ！　全15巻 (電撃文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ロウきゅーぶ！　全15巻 (電撃文庫)</h5>
+                    <p>価格：4623円、ポイント：46</p>
+                    <p>蒼山 サグ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J25G28V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61TfX8+aTPL.jpg" class="mr-3 lazyload" alt="【合本版】俺の脳内選択肢が、学園ラブコメを全力で邪魔している　全13巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】俺の脳内選択肢が、学園ラブコメを全力で邪魔している　全13巻 (角川スニーカー文庫)</h5>
+                    <p>価格：4301円、ポイント：43</p>
+                    <p>春日部 タケル(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07FVKM737?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/616F4iGmAeL.jpg" class="mr-3 lazyload" alt="【合本版】トリニティ・ブラッド　全13巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】トリニティ・ブラッド　全13巻 (角川スニーカー文庫)</h5>
+                    <p>価格：3431円、ポイント：34</p>
+                    <p>吉田 直(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B078HZ88K4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51alHxco2cL.jpg" class="mr-3 lazyload" alt="【合本版】僕は友達が少ない　全12巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】僕は友達が少ない　全12巻 (MF文庫J)</h5>
+                    <p>価格：3790円、ポイント：38</p>
+                    <p>平坂読(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B075K4MX9N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M7FNm2QUL.jpg" class="mr-3 lazyload" alt="【合本版】神様家族　全9巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】神様家族　全9巻 (MF文庫J)</h5>
+                    <p>価格：2843円、ポイント：28</p>
+                    <p>桑島 由一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B072LJ943C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KTibwdzxL.jpg" class="mr-3 lazyload" alt="【合本版】陰からマモル！　全14巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】陰からマモル！　全14巻 (MF文庫J)</h5>
+                    <p>価格：4422円、ポイント：44</p>
+                    <p>阿智 太郎(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B071CPLJLG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51APa0G3DJL.jpg" class="mr-3 lazyload" alt="【合本版】サクラダリセット　全7巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】サクラダリセット　全7巻 (角川スニーカー文庫)</h5>
+                    <p>価格：2376円、ポイント：24</p>
+                    <p>河野 裕(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XSLL92G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zkV36yo4L.jpg" class="mr-3 lazyload" alt="【合本版】けんぷファー　全15巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】けんぷファー　全15巻 (MF文庫J)</h5>
+                    <p>価格：4785円、ポイント：48</p>
+                    <p>築地 俊彦(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B06XK889JL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61K575nTlVL.jpg" class="mr-3 lazyload" alt="【合本版】魔法戦争　全12巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】魔法戦争　全12巻 (MF文庫J)</h5>
+                    <p>価格：3828円、ポイント：38</p>
+                    <p>スズキ ヒサシ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MY9RTM5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61dPVdBWXxL.jpg" class="mr-3 lazyload" alt="【合本版】星刻の竜騎士　全20巻 (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】星刻の竜騎士　全20巻 (MF文庫J)</h5>
+                    <p>価格：6380円、ポイント：64</p>
+                    <p>瑞智士記(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MR7H8ZV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dyX7J16YL.jpg" class="mr-3 lazyload" alt="【合本版】犬とハサミは使いよう　全15巻 (ファミ通文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】犬とハサミは使いよう　全15巻 (ファミ通文庫)</h5>
+                    <p>価格：4060円、ポイント：41</p>
+                    <p>更伊 俊介(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01MZ0DRAY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61MWj8HXaIL.jpg" class="mr-3 lazyload" alt="【合本版】ストライクウィッチーズ　乙女ノ巻　全4巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ストライクウィッチーズ　乙女ノ巻　全4巻 (角川スニーカー文庫)</h5>
+                    <p>価格：1100円、ポイント：11</p>
+                    <p>南房 秀久(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01M1ULRNB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xw8LD6CgL.jpg" class="mr-3 lazyload" alt="【合本版】ストライクウィッチーズ　アフリカの魔女　全3巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ストライクウィッチーズ　アフリカの魔女　全3巻 (角川スニーカー文庫)</h5>
+                    <p>価格：872円、ポイント：9</p>
+                    <p>鈴木 貴昭(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LXAHS8S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61WfVgTYa1L.jpg" class="mr-3 lazyload" alt="【合本版】レンタルマギカ　全23巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】レンタルマギカ　全23巻 (角川スニーカー文庫)</h5>
+                    <p>価格：6153円、ポイント：62</p>
+                    <p>三田 誠(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01KSTEU1C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61n4uhM-dpL.jpg" class="mr-3 lazyload" alt="【合本版】R-15　全11巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】R-15　全11巻 (角川スニーカー文庫)</h5>
+                    <p>価格：3025円、ポイント：30</p>
+                    <p>伏見 ひろゆき(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01ISHGXF2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DVdNJlojL.jpg" class="mr-3 lazyload" alt="【合本版】問題児たちが異世界から来るそうですよ？　全12巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】問題児たちが異世界から来るそうですよ？　全12巻 (角川スニーカー文庫)</h5>
+                    <p>価格：3465円、ポイント：35</p>
+                    <p>竜ノ湖 太郎(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01G12HBDY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61jnhPdtgpL.jpg" class="mr-3 lazyload" alt="【合本版】ムシウタ　全24巻 (角川スニーカー文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ムシウタ　全24巻 (角川スニーカー文庫)</h5>
+                    <p>価格：6589円、ポイント：66</p>
+                    <p>岩井 恭平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01G12HBA2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512XqS3HKbL.jpg" class="mr-3 lazyload" alt="【合本版】魔法少女プリティサミー　全8巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】魔法少女プリティサミー　全8巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：1698円、ポイント：17</p>
+                    <p>黒田 洋介(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01AB8RORM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61QKZHlpZJL.jpg" class="mr-3 lazyload" alt="【合本版】リアルバウトハイスクール　全27巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】リアルバウトハイスクール　全27巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：5732円、ポイント：57</p>
+                    <p>雑賀 礼史(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B01AB8ROEK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61OKgzluxjL.jpg" class="mr-3 lazyload" alt="【合本版】勇者になれなかった俺はしぶしぶ就職を決意しました。＋SP　全11巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】勇者になれなかった俺はしぶしぶ就職を決意しました。＋SP　全11巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：2249円、ポイント：22</p>
+                    <p>左京 潤(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B013U749BU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61eAbKF9n2L.jpg" class="mr-3 lazyload" alt="【合本版】神さまのいない日曜日　全9巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】神さまのいない日曜日　全9巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：1911円、ポイント：19</p>
+                    <p>入江 君人(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ZEIMSY4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JM1pHiHzL.jpg" class="mr-3 lazyload" alt="【合本版】まぶらほ　コンプリートBOX　全33巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】まぶらほ　コンプリートBOX　全33巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：7006円、ポイント：70</p>
+                    <p>築地 俊彦(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00UUSX464?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51na4cyq+1L.jpg" class="mr-3 lazyload" alt="【合本版】無責任シリーズ　全35巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】無責任シリーズ　全35巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：7357円、ポイント：74</p>
+                    <p>吉岡 平(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00U5PNXTA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51w2vE4s8LL.jpg" class="mr-3 lazyload" alt="【合本版】この中に1人、妹がいる！　全11巻 &lt;特典付&gt; (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】この中に1人、妹がいる！　全11巻 &lt;特典付&gt; (MF文庫J)</h5>
+                    <p>価格：3509円、ポイント：35</p>
+                    <p>田口一(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00TQJV58M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61mnpRrd19L.jpg" class="mr-3 lazyload" alt="【合本版】だから僕は、Ｈができない。　全11巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】だから僕は、Ｈができない。　全11巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：2335円、ポイント：23</p>
+                    <p>橘 ぱん(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SXTPCIK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/611k4VU2W0L.jpg" class="mr-3 lazyload" alt="【合本版】かりん　増血記＋恥じらいダイアリー　全11巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】かりん　増血記＋恥じらいダイアリー　全11巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：2335円、ポイント：23</p>
+                    <p>甲斐 透(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00SXTPC9O?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wtSbvcz9L.jpg" class="mr-3 lazyload" alt="【合本版】ご愁傷さま＋おあいにくさま二ノ宮くん　全17巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】ご愁傷さま＋おあいにくさま二ノ宮くん　全17巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：3573円、ポイント：36</p>
+                    <p>鈴木 大輔(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00RKU2V6Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GKG0jDi+L.jpg" class="mr-3 lazyload" alt="【合本版】まよチキ！　全12巻　&lt;特典付&gt; (MF文庫J)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】まよチキ！　全12巻　&lt;特典付&gt; (MF文庫J)</h5>
+                    <p>価格：3828円、ポイント：38</p>
+                    <p>あさのハジメ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00RKU2T52?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FGDhaN4oL.jpg" class="mr-3 lazyload" alt="【合本版】風の聖痕＋Ignition　全12巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】風の聖痕＋Ignition　全12巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：2548円、ポイント：25</p>
+                    <p>山門 敬弘(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00NXMTCOW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61aUMwYdDLL.jpg" class="mr-3 lazyload" alt="【合本版】鋼殻のレギオス　コンプリートBOX　全31巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】鋼殻のレギオス　コンプリートBOX　全31巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：6516円、ポイント：65</p>
+                    <p>雨木 シュウスケ(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00PBOSFCU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61aWNzn6yxL.jpg" class="mr-3 lazyload" alt="【合本版】いつか天魔の黒ウサギ＋紅月光の生徒会室　全18巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】いつか天魔の黒ウサギ＋紅月光の生徒会室　全18巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：3821円、ポイント：38</p>
+                    <p>鏡 貴也(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00N4M5VZ0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/6177EIO6nsL.jpg" class="mr-3 lazyload" alt="【合本版】生徒会の日常　全8巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】生徒会の日常　全8巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：1682円、ポイント：17</p>
+                    <p>葵 せきな(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MB2SV8S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FbAkE+vcL.jpg" class="mr-3 lazyload" alt="【合本版】生徒会の一存＋新生徒会の一存　全12巻 (富士見ファンタジア文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>【合本版】生徒会の一存＋新生徒会の一存　全12巻 (富士見ファンタジア文庫)</h5>
+                    <p>価格：2522円、ポイント：25</p>
+                    <p>葵 せきな(著)</p>
+                    <p>出版社：KADOKAWA</p>
+<p>カテゴリー：ライトノベル,Featured Categories,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00MB2SV74?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>

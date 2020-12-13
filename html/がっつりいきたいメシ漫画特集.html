@@ -1,0 +1,1119 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51em5wdKNlL.jpg" class="mr-3 lazyload" alt="ホクサイと飯さえあれば（２） (ヤングマガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホクサイと飯さえあれば（２） (ヤングマガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>鈴木小波(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0175ZYGLG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615sEOpzgBL.jpg" class="mr-3 lazyload" alt="将太の寿司　全国大会編（３） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将太の寿司　全国大会編（３） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IRT7BP8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51j3ex0RNKL.jpg" class="mr-3 lazyload" alt="将太の寿司　全国大会編（２） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将太の寿司　全国大会編（２） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IRT7BQM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cFr5Uf+ML.jpg" class="mr-3 lazyload" alt="ながたんと青と－いちかの料理帖－（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ながたんと青と－いちかの料理帖－（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>磯谷友紀(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07F7784RJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61L9sTcvQOL.jpg" class="mr-3 lazyload" alt="ミスター味っ子ＩＩ（２） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミスター味っ子ＩＩ（２） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KYC0NM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gwlz3ShGL.jpg" class="mr-3 lazyload" alt="てんまんアラカルト（１） (月刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>てんまんアラカルト（１） (月刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小林有吾(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0764T15FQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oJyaPGIFL.jpg" class="mr-3 lazyload" alt="あたりのキッチン！（１） (アフタヌーンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あたりのキッチン！（１） (アフタヌーンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>白乃雪(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06Y61HLF3?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RfXaADUqL.jpg" class="mr-3 lazyload" alt="めしにしましょう（２）　【電子限定カラーレシピ付き】 (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>めしにしましょう（２）　【電子限定カラーレシピ付き】 (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小林銅蟲(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B06W2GPV8C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ynUEX4n8L.jpg" class="mr-3 lazyload" alt="めしにしましょう（１） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>めしにしましょう（１） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小林銅蟲(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01N8Q8DA7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61cWSAlZAKL.jpg" class="mr-3 lazyload" alt="瑠璃と料理の王様と（３） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>瑠璃と料理の王様と（３） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01LW7Q5UQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511Up01dxWL.jpg" class="mr-3 lazyload" alt="Ｂの食卓（１） (少年マガジンエッジコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ｂの食卓（１） (少年マガジンエッジコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>天道グミ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01FF5JQYK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bR1oKl43L.jpg" class="mr-3 lazyload" alt="マリアージュ～神の雫　最終章～（３） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マリアージュ～神の雫　最終章～（３） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>亜樹直(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E6QHLGE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I0KuF8JmL.jpg" class="mr-3 lazyload" alt="紺田照の合法レシピ（１） (月刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>紺田照の合法レシピ（１） (月刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>馬田イスケ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01CJEISJO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51x-qjclNKL.jpg" class="mr-3 lazyload" alt="マリアージュ～神の雫　最終章～（２） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マリアージュ～神の雫　最終章～（２） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>亜樹直(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01AJHAJ2M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mo412iX2L.jpg" class="mr-3 lazyload" alt="マリアージュ～神の雫　最終章～（１） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マリアージュ～神の雫　最終章～（１） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>亜樹直(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016Q01UBK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61hN7kOcTsL.jpg" class="mr-3 lazyload" alt="ＷＨＯ！？（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＷＨＯ！？（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>板本こうこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01449L0S8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xfY--1dDL.jpg" class="mr-3 lazyload" alt="ＷＨＯ！？（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＷＨＯ！？（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>板本こうこ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01449L0QK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ikXX3CQsL.jpg" class="mr-3 lazyload" alt="きのう何食べた？（１） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのう何食べた？（１） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>よしながふみ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B011HYCVFY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pl2THkrXL.jpg" class="mr-3 lazyload" alt="ホクサイと飯さえあれば（１） (ヤングマガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホクサイと飯さえあれば（１） (ヤングマガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>鈴木小波(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00URE8VT6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jkD6zaHIL.jpg" class="mr-3 lazyload" alt="あさめしまえ（１） (BE・LOVEコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あさめしまえ（１） (BE・LOVEコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>北駒生(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00QAEZHBW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517wICC9Q0L.jpg" class="mr-3 lazyload" alt="甘々と稲妻（３） (アフタヌーンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘々と稲妻（３） (アフタヌーンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>雨隠ギド(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00N1W4BC2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61dN7s0pX3L.jpg" class="mr-3 lazyload" alt="将太の寿司　全国大会編（１） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将太の寿司　全国大会編（１） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IRT7BX0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aPthi2W4L.jpg" class="mr-3 lazyload" alt="甘々と稲妻（２） (アフタヌーンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘々と稲妻（２） (アフタヌーンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>雨隠ギド(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00IMSVLVE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qSqkQcYbL.jpg" class="mr-3 lazyload" alt="銀のスプーン（３） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀のスプーン（３） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小沢真理(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HYP1968?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517lGNWDhpL.jpg" class="mr-3 lazyload" alt="銀のスプーン（２） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀のスプーン（２） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小沢真理(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HYP195Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LBhbXM66L.jpg" class="mr-3 lazyload" alt="甘々と稲妻（１） (アフタヌーンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘々と稲妻（１） (アフタヌーンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>雨隠ギド(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00ESD51K4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610nQQnzn9L.jpg" class="mr-3 lazyload" alt="おせん（３） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おせん（３） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD5YY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515QpHkFe9L.jpg" class="mr-3 lazyload" alt="山賊ダイアリー（２） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>山賊ダイアリー（２） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>岡本健太郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00APR9I1K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yhf4MP0mL.jpg" class="mr-3 lazyload" alt="山賊ダイアリー（１） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>山賊ダイアリー（１） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>岡本健太郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00APR9HZC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dt43g1DuL.jpg" class="mr-3 lazyload" alt="すてきなパーティーフリーク　【電子限定描きおろし特典つき】 (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>すてきなパーティーフリーク　【電子限定描きおろし特典つき】 (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>ふみさき(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08F1Y48KH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51E2c-QTdjL.jpg" class="mr-3 lazyload" alt="新大久保で会いましょう　分冊版（３）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新大久保で会いましょう　分冊版（３）</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>香穂(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NHY9NGK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u-KXEYuTL.jpg" class="mr-3 lazyload" alt="新大久保で会いましょう　分冊版（２）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新大久保で会いましょう　分冊版（２）</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>香穂(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NJ344GF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51afz1Ua9CL.jpg" class="mr-3 lazyload" alt="新大久保で会いましょう（１）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新大久保で会いましょう（１）</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>香穂(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NCWNJFX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wzXza+vdL.jpg" class="mr-3 lazyload" alt="とりあえず並んでみた。（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>とりあえず並んでみた。（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>鶴ゆみか(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DK9NHNS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51r0bqKn7NL.jpg" class="mr-3 lazyload" alt="マズ飯エルフと遊牧暮らし（２） (少年マガジンエッジコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マズ飯エルフと遊牧暮らし（２） (少年マガジンエッジコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>大間九郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07G27717G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/615SF2YkL6L.jpg" class="mr-3 lazyload" alt="マズ飯エルフと遊牧暮らし（１） (少年マガジンエッジコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マズ飯エルフと遊牧暮らし（１） (少年マガジンエッジコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>大間九郎(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C2TSBP9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CoMhM3JLL.jpg" class="mr-3 lazyload" alt="ヘルズキッチン（３） (月刊少年ライバルコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヘルズキッチン（３） (月刊少年ライバルコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>西村ミツル(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD1BQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TqolwwHeL.jpg" class="mr-3 lazyload" alt="ヘルズキッチン（２） (月刊少年ライバルコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヘルズキッチン（２） (月刊少年ライバルコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>西村ミツル(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD1A2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510kFFGoQnL.jpg" class="mr-3 lazyload" alt="ヘルズキッチン（１） (月刊少年ライバルコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヘルズキッチン（１） (月刊少年ライバルコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>西村ミツル(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD18Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Xe81XsMIL.jpg" class="mr-3 lazyload" alt="ミスター味っ子ＩＩ（３） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミスター味っ子ＩＩ（３） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KYC0NW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61L9sTcvQOL.jpg" class="mr-3 lazyload" alt="ミスター味っ子ＩＩ（２） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミスター味っ子ＩＩ（２） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KYC0NM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61zn0BNgstL.jpg" class="mr-3 lazyload" alt="ミスター味っ子ＩＩ（１） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミスター味っ子ＩＩ（１） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KYC0JG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51clTYpPkKL.jpg" class="mr-3 lazyload" alt="おせん　真っ当を受け継ぎ繋ぐ。（３） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おせん　真っ当を受け継ぎ繋ぐ。（３） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D8SV5XC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NR-spEtPL.jpg" class="mr-3 lazyload" alt="キッチンのお姫さま（２） (なかよしコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キッチンのお姫さま（２） (なかよしコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小林深雪(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DDNKR04?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61g4+X-LLgL.jpg" class="mr-3 lazyload" alt="キッチンのお姫さま（１） (なかよしコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キッチンのお姫さま（１） (なかよしコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小林深雪(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00DDNKQYQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61NBmaNSJsL.jpg" class="mr-3 lazyload" alt="ミスター味っ子（３） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミスター味っ子（３） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AIFYX7I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/618RRofcs3L.jpg" class="mr-3 lazyload" alt="ミスター味っ子（１） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ミスター味っ子（１） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AIFYX4G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VNVvPyjrL.jpg" class="mr-3 lazyload" alt="神の雫（１） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神の雫（１） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>亜樹直(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KWUNTC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rTqlCKyiL.jpg" class="mr-3 lazyload" alt="神の雫（２） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神の雫（２） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>亜樹直(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KWUNW4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51knVPD+-vL.jpg" class="mr-3 lazyload" alt="神の雫（３） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神の雫（３） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>亜樹直(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B009KWUNZQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gP3Oec7BL.jpg" class="mr-3 lazyload" alt="将太の寿司（１） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将太の寿司（１） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AIFYZ62?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VhoZw1eZL.jpg" class="mr-3 lazyload" alt="将太の寿司（２） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将太の寿司（２） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AIFYZ5S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61d8G1ekmYL.jpg" class="mr-3 lazyload" alt="将太の寿司（３） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>将太の寿司（３） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>寺沢大介(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AIFYZ5I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M7nWX+ebL.jpg" class="mr-3 lazyload" alt="コンビニお嬢さま（１） (月刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コンビニお嬢さま（１） (月刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>松本明澄(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01I0ZY4EE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51r9t8agssL.jpg" class="mr-3 lazyload" alt="瑠璃と料理の王様と（２） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>瑠璃と料理の王様と（２） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B01E6QHLCS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513rbJGZt5L.jpg" class="mr-3 lazyload" alt="デリシャス！（１） (なかよしコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デリシャス！（１） (なかよしコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小林深雪(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0191A3CHM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ryVs5IBIL.jpg" class="mr-3 lazyload" alt="真・中華一番！（１） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真・中華一番！（１） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小川悦司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00L5SYSSG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61IJsJ7EV4L.jpg" class="mr-3 lazyload" alt="真・中華一番！（２） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真・中華一番！（２） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小川悦司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00L5SYSWC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/616v5VNdIKL.jpg" class="mr-3 lazyload" alt="真・中華一番！（３） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真・中華一番！（３） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小川悦司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00L5SYSYK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zaV9Px4bL.jpg" class="mr-3 lazyload" alt="銀のスプーン（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>銀のスプーン（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小沢真理(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00HYP1954?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61NFYebNIbL.jpg" class="mr-3 lazyload" alt="おせん（１） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おせん（１） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD60M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516kdFCSsjL.jpg" class="mr-3 lazyload" alt="おせん（２） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おせん（２） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD5X0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Mnqg3NpBL.jpg" class="mr-3 lazyload" alt="新大久保で会いましょう　分冊版（１）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新大久保で会いましょう　分冊版（１）</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>香穂(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NJ8NS2W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-VOwR56xL.jpg" class="mr-3 lazyload" alt="中華一番！極（１） (マガジンポケットコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>中華一番！極（１） (マガジンポケットコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小川悦司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BS82X8S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61+qUvUXDLL.jpg" class="mr-3 lazyload" alt="う（１） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>う（１） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ラズウェル細木(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00A2MD06M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516j0nBJopL.jpg" class="mr-3 lazyload" alt="おせん　真っ当を受け継ぎ繋ぐ。（２） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おせん　真っ当を受け継ぎ繋ぐ。（２） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D8SV5TG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hyGwlY9zL.jpg" class="mr-3 lazyload" alt="おせん　真っ当を受け継ぎ繋ぐ。（１） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おせん　真っ当を受け継ぎ繋ぐ。（１） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00D8SV5RI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61sjhPsZUkL.jpg" class="mr-3 lazyload" alt="クッキングパパ（３） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クッキングパパ（３） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>うえやまとち(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AA9W4DW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gTH9CIswL.jpg" class="mr-3 lazyload" alt="クッキングパパ（２） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クッキングパパ（２） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>うえやまとち(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AA9W4E6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M3xIteGkL.jpg" class="mr-3 lazyload" alt="中華一番！（１） (週刊少年マガジンコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>中華一番！（１） (週刊少年マガジンコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>小川悦司(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00APEIETK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61JzXW6gVBL.jpg" class="mr-3 lazyload" alt="瑠璃と料理の王様と（１） (イブニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>瑠璃と料理の王様と（１） (イブニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>きくち正太(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B016MA0OA2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61fbj4lQHNL.jpg" class="mr-3 lazyload" alt="ビングルビングルバッサン　プチキス（１） (Ｋｉｓｓコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ビングルビングルバッサン　プチキス（１） (Ｋｉｓｓコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>ジョングジ(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,女性マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07C75RQQW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/612Nm5sdAeL.jpg" class="mr-3 lazyload" alt="クッキングパパ（１） (モーニングコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クッキングパパ（１） (モーニングコミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>うえやまとち(著)</p>
+                    <p>出版社：講談社</p>
+<p>カテゴリー：コミック,青年マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B00AA9W4CI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
