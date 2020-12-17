@@ -1,0 +1,846 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray;
+ img.mr-3 {
+ vertical-align: middle;
+    }
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F+8vwNV8L.jpg" class="mr-3 lazyload" alt="淡海乃海 水面が揺れる時　第5巻 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海 水面が揺れる時　第5巻 (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>もとむらえり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08L3CZF1C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515u0M6ILUL.jpg" class="mr-3 lazyload" alt="元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりません＠COMIC 第2巻【イラスト特典付き】 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりません＠COMIC 第2巻【イラスト特典付き】 (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>緋賀ゆかり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08L3DPZ9S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wENaYSrkL.jpg" class="mr-3 lazyload" alt="魔術士オーフェン　無謀編　第5巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェン　無謀編　第5巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>矢上裕(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08L3C1QYL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xcyag9rNL.jpg" class="mr-3 lazyload" alt="餓死転生 ～奴隷少年は魔物を喰らって覚醒す！～2 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>餓死転生 ～奴隷少年は魔物を喰らって覚醒す！～2 (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>麻日隆(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B08K3NTMVN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KQluqPL8L.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～九【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～九【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1079円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B08HMY9TYX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I4JjxzAJL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～八【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～八【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1079円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B089ZY128H?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hdAcIxiML.jpg" class="mr-3 lazyload" alt="異伝　淡海乃海～羽林、乱世を翔る～一【電子書籍限定書き下ろしSS付き】"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>異伝　淡海乃海～羽林、乱世を翔る～一【電子書籍限定書き下ろしSS付き】</h5>
+                    <p>価格：1079円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B088M37GWJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WInUFpFeL.jpg" class="mr-3 lazyload" alt="淡海乃海 水面が揺れる時　第4巻 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海 水面が揺れる時　第4巻 (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>もとむらえり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B087R5NP44?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UR5NjMqSL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～七【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～七【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1079円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B085S2CMKL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lD55KV8pL.jpg" class="mr-3 lazyload" alt="元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりません＠COMIC 第1巻 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりません＠COMIC 第1巻 (コロナ・コミックス)</h5>
+                    <p>価格：303円、ポイント：3</p>
+                    <p>緋賀ゆかり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B085HFQKB8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KGPgoumML.jpg" class="mr-3 lazyload" alt="魔術士オーフェン　無謀編　第4巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェン　無謀編　第4巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：605円、ポイント：6</p>
+                    <p>矢上裕(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B084Q88Y7X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FGuglrGnL.jpg" class="mr-3 lazyload" alt="淡海乃海 水面が揺れる時　第3巻 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海 水面が揺れる時　第3巻 (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>もとむらえり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B0829RZ212?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sP9HHl2tL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅 コミクロンズ・プラン"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅 コミクロンズ・プラン</h5>
+                    <p>価格：1267円、ポイント：13</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B08139PM5W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ojGuSpmaL.jpg" class="mr-3 lazyload" alt="魔術士オーフェン　無謀編　第３巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェン　無謀編　第３巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>矢上裕(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B0814R7L36?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CNUfsmdhL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　プレ編　第2巻 魔術士オーフェンはぐれ旅　プレ編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　プレ編　第2巻 魔術士オーフェンはぐれ旅　プレ編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>雀葵蘭(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B0814RKRB3?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51MQu+gt6RL.jpg" class="mr-3 lazyload" alt="魔術士オーフェン　アンソロジー 魔術士オーフェンはぐれ旅"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェン　アンソロジー 魔術士オーフェンはぐれ旅</h5>
+                    <p>価格：1408円、ポイント：14</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YPW625J?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511JePDlZXL.jpg" class="mr-3 lazyload" alt="餓死転生 ～奴隷少年は魔物を喰らって覚醒す！～1 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>餓死転生 ～奴隷少年は魔物を喰らって覚醒す！～1 (コロナ・コミックス)</h5>
+                    <p>価格：303円、ポイント：3</p>
+                    <p>麻日隆(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07YPT95LL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ya04IumhL.jpg" class="mr-3 lazyload" alt="元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりませんIII【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりませんIII【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>大小判(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TYBBKW6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51y8fWwKvUL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～六【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～六【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07SSX22NP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Vq2eECiZL.jpg" class="mr-3 lazyload" alt="淡海乃海 水面が揺れる時　第2巻 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海 水面が揺れる時　第2巻 (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>もとむらえり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RMVBTCK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PCe9Ky4uL.jpg" class="mr-3 lazyload" alt="魔術士オーフェン　無謀編　第２巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェン　無謀編　第２巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>矢上裕(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07RMDR4BS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51X9CM98ykL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～五【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～五【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07NVHLXBC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51I1BObUC+L.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　プレ編２ 魔術士オーフェンはぐれ旅　プレ編（文庫） (TO文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　プレ編２ 魔術士オーフェンはぐれ旅　プレ編（文庫） (TO文庫)</h5>
+                    <p>価格：802円、ポイント：8</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07PW7DJRY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51o54H-E6rL.jpg" class="mr-3 lazyload" alt="淡海乃海 水面が揺れる時　第1巻 (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海 水面が揺れる時　第1巻 (コロナ・コミックス)</h5>
+                    <p>価格：303円、ポイント：3</p>
+                    <p>もとむらえり(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,歴史</p>
+                    <a href="https://www.amazon.co.jp/dp/B07P4D76ZV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IPRMmbtmL.jpg" class="mr-3 lazyload" alt="元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりませんII【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりませんII【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>大小判(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07MYWZS4Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZVvbgpzBL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　プレ編１ 魔術士オーフェンはぐれ旅　プレ編（文庫） (TO文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　プレ編１ 魔術士オーフェンはぐれ旅　プレ編（文庫） (TO文庫)</h5>
+                    <p>価格：802円、ポイント：8</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M89XMVN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HdvvZWl5L.jpg" class="mr-3 lazyload" alt="世知辛異世界転生記２【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世知辛異世界転生記２【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>池崎数也(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KF7KRB9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+KbCwp8TL.jpg" class="mr-3 lazyload" alt="魔術士オーフェン　無謀編　第１巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェン　無謀編　第１巻 魔術士オーフェン　無謀編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>矢上裕(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,ファンタジー</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M8RVXBY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51udajNm7UL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　プレ編　第1巻 魔術士オーフェンはぐれ旅　プレ編（コミック） (コロナ・コミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　プレ編　第1巻 魔術士オーフェンはぐれ旅　プレ編（コミック） (コロナ・コミックス)</h5>
+                    <p>価格：544円、ポイント：5</p>
+                    <p>雀葵蘭(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：コミック,マンガ</p>
+                    <a href="https://www.amazon.co.jp/dp/B07M5DGRDY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513bP2Ta-BL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～四【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～四【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07J2H848J?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ya04IumhL.jpg" class="mr-3 lazyload" alt="元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりませんIII【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>元貴族令嬢で未婚の母ですが、娘たちが可愛すぎて冒険者業も苦になりませんIII【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>大小判(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07TYBBKW6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HdvvZWl5L.jpg" class="mr-3 lazyload" alt="世知辛異世界転生記２【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世知辛異世界転生記２【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>池崎数也(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07KF7KRB9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61xnuFlp0eL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～参【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～参【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07D3KTZTT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51FHvaQCMtL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　手下編 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　手下編 (TOブックスラノベ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07DC72PJQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SV+6O5gJL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　魔王編 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　魔王編 (TOブックスラノベ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07CNRTH8W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61CwipzZKhL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　女神未来（下） (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　女神未来（下） (TOブックスラノベ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07BF6F7GG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619K7a4OrWL.jpg" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～弐 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～弐 (TOブックスラノベ)</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B62SXQ1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51AZbmo44QL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　女神未来（上） (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　女神未来（上） (TOブックスラノベ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B07B3PLFS5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cSMM90TtL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　鋏の託宣 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　鋏の託宣 (TOブックスラノベ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B079FBYKB6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sjYsbsX8L.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　魔術学校攻防 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　魔術学校攻防 (TOブックスラノベ)</h5>
+                    <p>価格：624円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B078MZPTYS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61kLg0sFTCL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　解放者の戦場 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　解放者の戦場 (TOブックスラノベ)</h5>
+                    <p>価格：594円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B077QBRHRT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61EAUNzKMGL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　原大陸開戦 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　原大陸開戦 (TOブックスラノベ)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B076VJN1FP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Hgt+wbW3L.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　約束の地で (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　約束の地で (TOブックスラノベ)</h5>
+                    <p>価格：554円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B075R25QCF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="なし" class="mr-3 lazyload" alt="淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～十【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>淡海乃海　水面が揺れる時～三英傑に嫌われた不運な男、朽木基綱の逆襲～十【電子書籍限定書き下ろしSS付き】 (TOブックスラノベ)</h5>
+                    <p>価格：1079円、ポイント：11</p>
+                    <p>イスラーフィール(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B08PV6SCKH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61SNBCNjHCL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　キエサルヒマの終端 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　キエサルヒマの終端 (TOブックスラノベ)</h5>
+                    <p>価格：554円、ポイント：6</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B0757GW24Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nrIETa8KL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンしゃべる無謀編7 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンしゃべる無謀編7 (TOブックスラノベ)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00YV3VGIW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dY6BHJt1L.jpg" class="mr-3 lazyload" alt="魔術士オーフェンしゃべる無謀編6 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンしゃべる無謀編6 (TOブックスラノベ)</h5>
+                    <p>価格：940円、ポイント：9</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00XU6S6LG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QoCu8F-mL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンしゃべる無謀編5 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンしゃべる無謀編5 (TOブックスラノベ)</h5>
+                    <p>価格：940円、ポイント：9</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00WMHXX5I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61WEPLFV4nL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンしゃべる無謀編4 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンしゃべる無謀編4 (TOブックスラノベ)</h5>
+                    <p>価格：940円、ポイント：9</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00W11603W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XXnCzYHOL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンしゃべる無謀編3 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンしゃべる無謀編3 (TOブックスラノベ)</h5>
+                    <p>価格：940円、ポイント：9</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00VFCZB4W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WIfhqyZrL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンしゃべる無謀編2 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンしゃべる無謀編2 (TOブックスラノベ)</h5>
+                    <p>価格：940円、ポイント：9</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B00V4YHQSK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61jff7+zgcL.jpg" class="mr-3 lazyload" alt="魔術士オーフェンはぐれ旅　新装版1 (TOブックスラノベ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魔術士オーフェンはぐれ旅　新装版1 (TOブックスラノベ)</h5>
+                    <p>価格：891円、ポイント：9</p>
+                    <p>秋田禎信(著)</p>
+                    <p>出版社：TOブックス</p>
+<p>カテゴリー：ジャンル別,ライトノベル</p>
+                    <a href="https://www.amazon.co.jp/dp/B009SXDT1W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank"><button type="button" class="btn btn-warning">Amazonで詳細を見る</button> </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
