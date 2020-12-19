@@ -1,0 +1,2130 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gGrXRv76L.jpg" class="mr-3 lazyload" alt="皇国の守護者（全）　１～９＋外伝集 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者（全）　１～９＋外伝集 (中公文庫)</h5>
+                    <p>価格：3850円、ポイント：39</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07RXV9QB7</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RXV9QB7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ryBIsmFmL.jpg" class="mr-3 lazyload" alt="夢の上　夜を統べる王と六つの輝晶３ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢の上　夜を統べる王と六つの輝晶３ (中公文庫)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>多崎礼(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B0874NZLC1</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0874NZLC1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YgGdQhcnL.jpg" class="mr-3 lazyload" alt="夢の上　夜を統べる王と六つの輝晶２ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢の上　夜を統べる王と六つの輝晶２ (中公文庫)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>多崎礼(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B085Y7M6VK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085Y7M6VK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Mj6PSaNyL.jpg" class="mr-3 lazyload" alt="夢の上　夜を統べる王と六つの輝晶１ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢の上　夜を統べる王と六つの輝晶１ (中公文庫)</h5>
+                    <p>価格：429円、ポイント：4</p>
+                    <p>多崎礼(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B084SB5TWB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084SB5TWB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iHOEyhGpL.jpg" class="mr-3 lazyload" alt="キルワーカー　警視庁組対特捜Ｋ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キルワーカー　警視庁組対特捜Ｋ (中公文庫)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>鈴峯紅也(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B0713T5NDJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0713T5NDJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Wq1L2z+7L.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー８ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー８ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07VMSWPL6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07VMSWPL6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lki5ep2CL.jpg" class="mr-3 lazyload" alt="蝕罪　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蝕罪　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：471円、ポイント：5</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC14XS</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC14XS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UDz0wZ5yL.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー７ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー７ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07BFSGWPD</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BFSGWPD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512sV-UqznL.jpg" class="mr-3 lazyload" alt="もぐら新章　波濤 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら新章　波濤 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B085Y7J5P9</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085Y7J5P9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512awKjCCSL.jpg" class="mr-3 lazyload" alt="手習重兵衛　天狗変　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手習重兵衛　天狗変　新装版 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B078X6QPFH</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078X6QPFH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XByEZ9AgL.jpg" class="mr-3 lazyload" alt="手習重兵衛　道中霧　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手習重兵衛　道中霧　新装版 (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B078X62BYB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078X62BYB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sNnlQwaPL.jpg" class="mr-3 lazyload" alt="ゴーストライダー　警視庁組対特捜Ｋ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゴーストライダー　警視庁組対特捜Ｋ (中公文庫)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>鈴峯紅也(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07R3BSHHF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07R3BSHHF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51h7aBnGxTL.jpg" class="mr-3 lazyload" alt="バグズハート　警視庁組対特捜Ｋ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バグズハート　警視庁組対特捜Ｋ (中公文庫)</h5>
+                    <p>価格：524円、ポイント：184</p>
+                    <p>鈴峯紅也(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07HP1VXPX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HP1VXPX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b5Tcr-yvL.jpg" class="mr-3 lazyload" alt="サンパギータ　警視庁組対特捜Ｋ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サンパギータ　警視庁組対特捜Ｋ (中公文庫)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>鈴峯紅也(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01N2831QS</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N2831QS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PdA96M1zL.jpg" class="mr-3 lazyload" alt="警視庁組対特捜Ｋ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>警視庁組対特捜Ｋ (中公文庫)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>鈴峯紅也(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01MFA0ZOJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MFA0ZOJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51k8qJIrvyL.jpg" class="mr-3 lazyload" alt="リンクス (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>リンクス (中公文庫)</h5>
+                    <p>価格：297円、ポイント：3</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00NSNTLA6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00NSNTLA6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rkmohltWL.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー６ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー６ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B073DYVH11</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B073DYVH11?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QVB38DcqL.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー５ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー５ (中公文庫)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01MSZDN8M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MSZDN8M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510liaSjdxL.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー４ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー４ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01ERG53KY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01ERG53KY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516IlHnJAdL.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー３ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー３ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B012MDU55M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B012MDU55M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51izEieyh4L.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー２ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー２ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00N0XOSCK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00N0XOSCK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vV6E2om-L.jpg" class="mr-3 lazyload" alt="化学探偵Mr.キュリー (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化学探偵Mr.キュリー (中公文庫)</h5>
+                    <p>価格：345円、ポイント：3</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ESZXLWW</p>
+<p>カテゴリー：有機化学,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸,化学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ESZXLWW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/416Co1VgOpL.jpg" class="mr-3 lazyload" alt="フェイスレス - 警視庁墨田署刑事課特命担当・一柳美結 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>フェイスレス - 警視庁墨田署刑事課特命担当・一柳美結 (中公文庫)</h5>
+                    <p>価格：398円、ポイント：4</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00E7OQ090</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00E7OQ090?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ObAW4m4CL.jpg" class="mr-3 lazyload" alt="遮断　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>遮断　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9AUQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9AUQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Tz5mPPjkL.jpg" class="mr-3 lazyload" alt="裂壊　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>裂壊　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC1DR0</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC1DR0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515m2iZoP-L.jpg" class="mr-3 lazyload" alt="漂泊　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>漂泊　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC1AGY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC1AGY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SBuZwVH3L.jpg" class="mr-3 lazyload" alt="皇国の守護者２ - 勝利なき名誉 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者２ - 勝利なき名誉 (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G949TF8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G949TF8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zf3-r0u0L.jpg" class="mr-3 lazyload" alt="皇国の守護者１ - 反逆の戦場 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者１ - 反逆の戦場 (中公文庫)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G949T80</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G949T80?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IlrFmourL.jpg" class="mr-3 lazyload" alt="スカイハイ - 警視庁墨田署刑事課特命担当・一柳美結２ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スカイハイ - 警視庁墨田署刑事課特命担当・一柳美結２ (中公文庫)</h5>
+                    <p>価格：557円、ポイント：6</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G949T4Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G949T4Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51K8zmSMmJL.jpg" class="mr-3 lazyload" alt="出張料亭おりおり堂　ほこほこ芋煮と秋空のすれ違い (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出張料亭おりおり堂　ほこほこ芋煮と秋空のすれ違い (中公文庫)</h5>
+                    <p>価格：554円、ポイント：6</p>
+                    <p>安田依央(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B0874PG1K8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0874PG1K8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nBq5jZJXL.jpg" class="mr-3 lazyload" alt="出張料亭おりおり堂　月下美人とホイコーロー (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出張料亭おりおり堂　月下美人とホイコーロー (中公文庫)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>安田依央(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B081GRGLC9</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081GRGLC9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51cxDNKNfAL.jpg" class="mr-3 lazyload" alt="レギオニス　勝家の決断 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レギオニス　勝家の決断 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>仁木英之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07X11FY6D</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07X11FY6D?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51noLzvGvML.jpg" class="mr-3 lazyload" alt="ＳＲＯ８　名前のない馬たち SRO (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ８　名前のない馬たち SRO (中公文庫)</h5>
+                    <p>価格：631円、ポイント：6</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07X483ZZP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07X483ZZP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61ZbWP89u9L.jpg" class="mr-3 lazyload" alt="レギオニス　秀吉の躍進 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レギオニス　秀吉の躍進 (中公文庫)</h5>
+                    <p>価格：508円、ポイント：5</p>
+                    <p>仁木英之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07SC8P58T</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07SC8P58T?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CejDkm7LL.jpg" class="mr-3 lazyload" alt="もぐら新章　血脈 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら新章　血脈 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07R2BPSF4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07R2BPSF4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fKyh-0yxL.jpg" class="mr-3 lazyload" alt="出張料亭おりおり堂　夏の終わりのいなりずし (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出張料亭おりおり堂　夏の終わりのいなりずし (中公文庫)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>安田依央(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07R2BVVR2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07R2BVVR2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61WygR4h0TL.jpg" class="mr-3 lazyload" alt="レギオニス　信長の天運 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レギオニス　信長の天運 (中公文庫)</h5>
+                    <p>価格：508円、ポイント：5</p>
+                    <p>仁木英之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07P8NZV9M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07P8NZV9M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Yevsy-CYL.jpg" class="mr-3 lazyload" alt="レギオニス　興隆編 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レギオニス　興隆編 (中公文庫)</h5>
+                    <p>価格：330円、ポイント：3</p>
+                    <p>仁木英之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07KS3C6DM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KS3C6DM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61uZjh8iuPL.jpg" class="mr-3 lazyload" alt="出張料亭おりおり堂　コトコトおでんといばら姫 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出張料亭おりおり堂　コトコトおでんといばら姫 (中公文庫)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>安田依央(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07BFSBB98</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BFSBB98?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61BebQvHnML.jpg" class="mr-3 lazyload" alt="出張料亭おりおり堂　ほろにが鮎と恋の刺客 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出張料亭おりおり堂　ほろにが鮎と恋の刺客 (中公文庫)</h5>
+                    <p>価格：447円、ポイント：4</p>
+                    <p>安田依央(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B079BNK1DL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079BNK1DL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41thoAElfML.jpg" class="mr-3 lazyload" alt="背教者ユリアヌス（四） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>背教者ユリアヌス（四） (中公文庫)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07CNFWL6B</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CNFWL6B?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41--W3b8rML.jpg" class="mr-3 lazyload" alt="背教者ユリアヌス（三） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>背教者ユリアヌス（三） (中公文庫)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07BRPNLSJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BRPNLSJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Ln7RJFO8L.jpg" class="mr-3 lazyload" alt="背教者ユリアヌス（二） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>背教者ユリアヌス（二） (中公文庫)</h5>
+                    <p>価格：847円、ポイント：8</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07B3VYDB2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B3VYDB2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/416MI51WcML.jpg" class="mr-3 lazyload" alt="背教者ユリアヌス（一） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>背教者ユリアヌス（一） (中公文庫)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B079B95DWV</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079B95DWV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61i-8EaaXYL.jpg" class="mr-3 lazyload" alt="出張料亭おりおり堂　ふっくらアラ煮と婚活ゾンビ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出張料亭おりおり堂　ふっくらアラ煮と婚活ゾンビ (中公文庫)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>安田依央(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B077Q98LZM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B077Q98LZM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510ivc1TOXL.jpg" class="mr-3 lazyload" alt="孤拳伝（五）　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孤拳伝（五）　新装版 (中公文庫)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>今野敏(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07CMXW81N</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CMXW81N?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GuYHF0WHL.jpg" class="mr-3 lazyload" alt="孤拳伝（四）　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孤拳伝（四）　新装版 (中公文庫)</h5>
+                    <p>価格：585円、ポイント：6</p>
+                    <p>今野敏(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07B3T8T6K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B3T8T6K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xTRhvuuPL.jpg" class="mr-3 lazyload" alt="孤拳伝（三）　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孤拳伝（三）　新装版 (中公文庫)</h5>
+                    <p>価格：601円、ポイント：6</p>
+                    <p>今野敏(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B078HT1W2Q</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078HT1W2Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NuEodcOcL.jpg" class="mr-3 lazyload" alt="孤拳伝（二）　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孤拳伝（二）　新装版 (中公文庫)</h5>
+                    <p>価格：585円、ポイント：6</p>
+                    <p>今野敏(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B076WSPP6X</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076WSPP6X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mEDLpvPxL.jpg" class="mr-3 lazyload" alt="孤拳伝（一）　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>孤拳伝（一）　新装版 (中公文庫)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>今野敏(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B075367F4Z</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B075367F4Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eJi3Qx-wL.jpg" class="mr-3 lazyload" alt="ＳＲＯ７　ブラックナイト SRO (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ７　ブラックナイト SRO (中公文庫)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07531ZXB2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07531ZXB2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519LATYc-wL.jpg" class="mr-3 lazyload" alt="ＡＩＯ民間刑務所（下） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＡＩＯ民間刑務所（下） (中公文庫)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B0718ZJLJ7</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0718ZJLJ7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xCXCfweJL.jpg" class="mr-3 lazyload" alt="ＡＩＯ民間刑務所（上） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＡＩＯ民間刑務所（上） (中公文庫)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B071NHXTD8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071NHXTD8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bVfvyRmmL.jpg" class="mr-3 lazyload" alt="手習重兵衛　刃舞　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手習重兵衛　刃舞　新装版 (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B078X6QL1X</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078X6QL1X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bDOiuWbcL.jpg" class="mr-3 lazyload" alt="手習重兵衛　暁闇　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手習重兵衛　暁闇　新装版 (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B078X6DYB2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078X6DYB2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CI2zm5NrL.jpg" class="mr-3 lazyload" alt="手習重兵衛　梵鐘　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手習重兵衛　梵鐘　新装版 (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B078X6H6ZG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078X6H6ZG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YTMqy1wHL.jpg" class="mr-3 lazyload" alt="手習重兵衛　闇討ち斬　新装版 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>手習重兵衛　闇討ち斬　新装版 (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>鈴木英治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01N39KDIB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N39KDIB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Z8HjLYpsL.jpg" class="mr-3 lazyload" alt="ゆら心霊相談所５　あの世から花束を (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆら心霊相談所５　あの世から花束を (中公文庫)</h5>
+                    <p>価格：508円、ポイント：5</p>
+                    <p>九条菜月(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07FWGWJXP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FWGWJXP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XghxQfP7L.jpg" class="mr-3 lazyload" alt="ゆら心霊相談所４　座敷わらしを連れ戻せ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆら心霊相談所４　座敷わらしを連れ戻せ (中公文庫)</h5>
+                    <p>価格：508円、ポイント：5</p>
+                    <p>九条菜月(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B079BJQSPB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079BJQSPB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XpBATsCpL.jpg" class="mr-3 lazyload" alt="ゆら心霊相談所３　火の玉寺のファントム (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆら心霊相談所３　火の玉寺のファントム (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>九条菜月(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B073DY131Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B073DY131Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nF+orlC-L.jpg" class="mr-3 lazyload" alt="ゆら心霊相談所２　キャンプ合宿と血染めの手形 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆら心霊相談所２　キャンプ合宿と血染めの手形 (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>九条菜月(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B06XN5V8NK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XN5V8NK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rD3sZdtqL.jpg" class="mr-3 lazyload" alt="ゆら心霊相談所　消えた恩師とさまよう影 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆら心霊相談所　消えた恩師とさまよう影 (中公文庫)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>九条菜月(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01LZZEWQ0</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01LZZEWQ0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Q3b6mQpxL.jpg" class="mr-3 lazyload" alt="ＳＲＯ　episode0　房子という女 SRO (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ　episode0　房子という女 SRO (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01DF0O1X8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01DF0O1X8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510DpJ2NspL.jpg" class="mr-3 lazyload" alt="殺戮の罠　オッドアイ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>殺戮の罠　オッドアイ (中公文庫)</h5>
+                    <p>価格：570円、ポイント：6</p>
+                    <p>渡辺裕之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B084C43PL4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084C43PL4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512tTSxD2+L.jpg" class="mr-3 lazyload" alt="死体島　オッドアイ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死体島　オッドアイ (中公文庫)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>渡辺裕之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07P6K9QFF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07P6K9QFF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DMq5JiMbL.jpg" class="mr-3 lazyload" alt="斬死　オッドアイ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>斬死　オッドアイ (中公文庫)</h5>
+                    <p>価格：570円、ポイント：6</p>
+                    <p>渡辺裕之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07B3VR1ZF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B3VR1ZF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517AAs-4UAL.jpg" class="mr-3 lazyload" alt="偽証　オッドアイ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>偽証　オッドアイ (中公文庫)</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>渡辺裕之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B06XCN337S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XCN337S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PRL7-xkbL.jpg" class="mr-3 lazyload" alt="叛逆捜査　オッドアイ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>叛逆捜査　オッドアイ (中公文庫)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>渡辺裕之(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B018S8YMIQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B018S8YMIQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZfbTrJbEL.jpg" class="mr-3 lazyload" alt="地球連邦の興亡４　さらば地球の旗よ"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地球連邦の興亡４　さらば地球の旗よ</h5>
+                    <p>価格：631円、ポイント：6</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B071YPPS8X</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071YPPS8X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511vfkkzzYL.jpg" class="mr-3 lazyload" alt="地球連邦の興亡３　流血の境界"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地球連邦の興亡３　流血の境界</h5>
+                    <p>価格：493円、ポイント：5</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B06XCRV989</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XCRV989?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gFIxSRinL.jpg" class="mr-3 lazyload" alt="地球連邦の興亡２　明日は銀河を"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地球連邦の興亡２　明日は銀河を</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01A9MCQQE</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01A9MCQQE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+ns30a3KL.jpg" class="mr-3 lazyload" alt="地球連邦の興亡１　オリオンに我らの旗を"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地球連邦の興亡１　オリオンに我らの旗を</h5>
+                    <p>価格：352円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B017TS9VQE</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017TS9VQE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fjSILT0VL.jpg" class="mr-3 lazyload" alt="ＳＲＯ６　四重人格 SRO (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ６　四重人格 SRO (中公文庫)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B017TS9VPU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017TS9VPU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DeJNZZvVL.jpg" class="mr-3 lazyload" alt="クランVI　警視庁内密命組織・最後の任務 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クランVI　警視庁内密命組織・最後の任務 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07B3R3MY1</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B3R3MY1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nZqyPPo7L.jpg" class="mr-3 lazyload" alt="クランV　警視庁渋谷南署巡査・足ヶ瀬直助の覚醒 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クランV　警視庁渋谷南署巡査・足ヶ瀬直助の覚醒 (中公文庫)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07531YJPK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07531YJPK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516C3+itzXL.jpg" class="mr-3 lazyload" alt="クランIV　警視庁機動分析課・上郷奈津実の執心 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クランIV　警視庁機動分析課・上郷奈津実の執心 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01N4TLTIM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N4TLTIM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KzvFZQWsL.jpg" class="mr-3 lazyload" alt="クランIII　警視庁公安部・区界浩の深謀 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クランIII　警視庁公安部・区界浩の深謀 (中公文庫)</h5>
+                    <p>価格：570円、ポイント：6</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01JA1LLXY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01JA1LLXY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eDAp1y0AL.jpg" class="mr-3 lazyload" alt="クランII　警視庁渋谷南署・岩沢誠次郎の激昂 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クランII　警視庁渋谷南署・岩沢誠次郎の激昂 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01A9MCQPA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01A9MCQPA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518goHgqOcL.jpg" class="mr-3 lazyload" alt="クランI　警視庁捜査一課・晴山旭の密命 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>クランI　警視庁捜査一課・晴山旭の密命 (中公文庫)</h5>
+                    <p>価格：374円、ポイント：4</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B0154G91HC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0154G91HC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Oa9Xw-ZIL.jpg" class="mr-3 lazyload" alt="御隠居忍法　しのぶ恋 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法　しのぶ恋 (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00YOUC65O</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00YOUC65O?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51V7kwMfjCL.jpg" class="mr-3 lazyload" alt="御隠居忍法９　刺客百鬼 中公文庫"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法９　刺客百鬼 中公文庫</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00QI1JHZ4</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00QI1JHZ4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/519ETOB+HkL.jpg" class="mr-3 lazyload" alt="リンクスIII　Crimson (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>リンクスIII　Crimson (中公文庫)</h5>
+                    <p>価格：508円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B01DF0O1VK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01DF0O1VK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518fECuHgsL.jpg" class="mr-3 lazyload" alt="リンクスII　Revive (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>リンクスII　Revive (中公文庫)</h5>
+                    <p>価格：585円、ポイント：6</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00YOUC3Q6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00YOUC3Q6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gGrXRv76L.jpg" class="mr-3 lazyload" alt="皇国の守護者（全）　１～９＋外伝集 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者（全）　１～９＋外伝集 (中公文庫)</h5>
+                    <p>価格：3850円、ポイント：39</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07RXV9QB7</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RXV9QB7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PC605iD+L.jpg" class="mr-3 lazyload" alt="皇国の守護者１～９合本 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者１～９合本 (中公文庫)</h5>
+                    <p>価格：3465円、ポイント：35</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B07RXYK63W</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RXYK63W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Gr1AqRj-L.jpg" class="mr-3 lazyload" alt="皇国の守護者９ -皇旗はためくもとで (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者９ -皇旗はためくもとで (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B010FHEFDK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B010FHEFDK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516iKIxmXgL.jpg" class="mr-3 lazyload" alt="皇国の守護者８ -楽園の凶器 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者８ -楽園の凶器 (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00V31CEJA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00V31CEJA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512E7w72XYL.jpg" class="mr-3 lazyload" alt="皇国の守護者７ -愛国者どもの宴 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者７ -愛国者どもの宴 (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00RF92N68</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00RF92N68?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jRvHhB9vL.jpg" class="mr-3 lazyload" alt="皇国の守護者６ -逆賊死すべし (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者６ -逆賊死すべし (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00NSNTK9S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00NSNTK9S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517xU57blpL.jpg" class="mr-3 lazyload" alt="皇国の守護者５ - 英雄たるの代価 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者５ - 英雄たるの代価 (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00LAO7TUE</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00LAO7TUE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51GZ+Ho6MhL.jpg" class="mr-3 lazyload" alt="皇国の守護者４ - 壙穴の城塞 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者４ - 壙穴の城塞 (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00JDC1H3A</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JDC1H3A?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pRnw0hS1L.jpg" class="mr-3 lazyload" alt="皇国の守護者３ - 灰になっても (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>皇国の守護者３ - 灰になっても (中公文庫)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐藤大輔(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00HFQHDVQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00HFQHDVQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wCHjIQXAL.jpg" class="mr-3 lazyload" alt="シュラ -警視庁墨田署刑事課特命担当・一柳美結４ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シュラ -警視庁墨田署刑事課特命担当・一柳美結４ (中公文庫)</h5>
+                    <p>価格：554円、ポイント：6</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00N0XOS3E</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00N0XOS3E?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yQK2RjcWL.jpg" class="mr-3 lazyload" alt="ネメシス - 警視庁墨田署刑事課特命担当・一柳美結３ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ネメシス - 警視庁墨田署刑事課特命担当・一柳美結３ (中公文庫)</h5>
+                    <p>価格：557円、ポイント：6</p>
+                    <p>沢村鐵(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00JDC1H4Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JDC1H4Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5152kW8qc-L.jpg" class="mr-3 lazyload" alt="献心　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>献心　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B073TSKB6Q</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B073TSKB6Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41AoB3i39aL.jpg" class="mr-3 lazyload" alt="闇夜　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>闇夜　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B073TSTRGG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B073TSTRGG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Bnq9JW3EL.jpg" class="mr-3 lazyload" alt="ＳＲＯ５　ボディーファーム (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ５　ボディーファーム (中公文庫)</h5>
+                    <p>価格：645円、ポイント：6</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00CHWMJA8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CHWMJA8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bSjIVXarL.jpg" class="mr-3 lazyload" alt="けんか茶屋お蓮 - 江東美人競 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>けんか茶屋お蓮 - 江東美人競 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00JTV9YCQ</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JTV9YCQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51fpJo251uL.jpg" class="mr-3 lazyload" alt="けんか茶屋お蓮 - 深川おんな祭り (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>けんか茶屋お蓮 - 深川おんな祭り (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00GX4HQCC</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GX4HQCC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IfIpKIZmL.jpg" class="mr-3 lazyload" alt="けんか茶屋お蓮 - あやかしの花 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>けんか茶屋お蓮 - あやかしの花 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00E7OQ00Y</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00E7OQ00Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uAeLbkvwL.jpg" class="mr-3 lazyload" alt="けんか茶屋お蓮 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>けんか茶屋お蓮 (中公文庫)</h5>
+                    <p>価格：366円、ポイント：4</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00CHWMJBC</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CHWMJBC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/510ywKc1gFL.jpg" class="mr-3 lazyload" alt="牽制　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>牽制　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B074WRBS7M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B074WRBS7M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514VMpLIQbL.jpg" class="mr-3 lazyload" alt="もぐら 凱（下） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 凱（下） (中公文庫)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00GYSBDU8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GYSBDU8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51i9+Nc76NL.jpg" class="mr-3 lazyload" alt="もぐら 凱（上） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 凱（上） (中公文庫)</h5>
+                    <p>価格：484円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00GYSBDV2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GYSBDV2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ZqNwuYbCL.jpg" class="mr-3 lazyload" alt="もぐら 戒 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 戒 (中公文庫)</h5>
+                    <p>価格：542円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00F0B4258</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00F0B4258?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514xWAX3VTL.jpg" class="mr-3 lazyload" alt="もぐら 闘 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 闘 (中公文庫)</h5>
+                    <p>価格：601円、ポイント：6</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00F0B4262</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00F0B4262?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41T7U6qe+UL.jpg" class="mr-3 lazyload" alt="もぐら 醒 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 醒 (中公文庫)</h5>
+                    <p>価格：542円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00F0B4230</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00F0B4230?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Glx8dHXlL.jpg" class="mr-3 lazyload" alt="もぐら 乱 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 乱 (中公文庫)</h5>
+                    <p>価格：586円、ポイント：6</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9CU4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9CU4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517-W7x7LFL.jpg" class="mr-3 lazyload" alt="もぐら 讐 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら 讐 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9CTU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9CTU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eq-TFvphL.jpg" class="mr-3 lazyload" alt="もぐら (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もぐら (中公文庫)</h5>
+                    <p>価格：366円、ポイント：4</p>
+                    <p>矢月秀作(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9CWM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9CWM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51926mZDDbL.jpg" class="mr-3 lazyload" alt="御隠居忍法８　振袖一揆 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法８　振袖一揆 (中公文庫)</h5>
+                    <p>価格：498円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9CSQ</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9CSQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51n8CgyKkiL.jpg" class="mr-3 lazyload" alt="御隠居忍法７　魔物 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法７　魔物 (中公文庫)</h5>
+                    <p>価格：528円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9BYQ</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9BYQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518UIfeuieL.jpg" class="mr-3 lazyload" alt="ＳＲＯ４　黒い羊 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ４　黒い羊 (中公文庫)</h5>
+                    <p>価格：557円、ポイント：6</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9BKU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9BKU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hRNsxV-gL.jpg" class="mr-3 lazyload" alt="堂島物語６　出世篇 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>堂島物語６　出世篇 (中公文庫)</h5>
+                    <p>価格：557円、ポイント：6</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9A38</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9A38?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hkJBCtfkL.jpg" class="mr-3 lazyload" alt="堂島物語５　漆黒篇 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>堂島物語５　漆黒篇 (中公文庫)</h5>
+                    <p>価格：557円、ポイント：6</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9A2E</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9A2E?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vuBjfzjzL.jpg" class="mr-3 lazyload" alt="堂島物語４　背水篇 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>堂島物語４　背水篇 (中公文庫)</h5>
+                    <p>価格：498円、ポイント：5</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY9A1K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY9A1K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bMrH+kNHL.jpg" class="mr-3 lazyload" alt="堂島物語３　立志篇 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>堂島物語３　立志篇 (中公文庫)</h5>
+                    <p>価格：498円、ポイント：5</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY99WU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY99WU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5198Lzu56dL.jpg" class="mr-3 lazyload" alt="堂島物語２　青雲篇 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>堂島物語２　青雲篇 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY99WA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY99WA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-4wTmmHuL.jpg" class="mr-3 lazyload" alt="堂島物語１　曙光篇 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>堂島物語１　曙光篇 (中公文庫)</h5>
+                    <p>価格：366円、ポイント：4</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY99T8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY99T8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51J6xQAhhAL.jpg" class="mr-3 lazyload" alt="ＳＲＯ３　キラークィーン (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ３　キラークィーン (中公文庫)</h5>
+                    <p>価格：586円、ポイント：6</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC1HDK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC1HDK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51hcVAD6HfL.jpg" class="mr-3 lazyload" alt="波紋　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>波紋　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC1GV8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC1GV8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WmX1NkRuL.jpg" class="mr-3 lazyload" alt="ＳＲＯ２　死の天使 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ２　死の天使 (中公文庫)</h5>
+                    <p>価格：542円、ポイント：5</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC1GL8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC1GL8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51F4iEtFsuL.jpg" class="mr-3 lazyload" alt="邂逅　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>邂逅　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC1EMY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC1EMY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51p24FKDkEL.jpg" class="mr-3 lazyload" alt="相剋　警視庁失踪課・高城賢吾 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>相剋　警視庁失踪課・高城賢吾 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>堂場瞬一(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00C2GWC8S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00C2GWC8S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JFm7ChutL.jpg" class="mr-3 lazyload" alt="双調平家物語１６　落日の巻（承前）　灌頂の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１６　落日の巻（承前）　灌頂の巻 (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G68AVWM</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G68AVWM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eAkWSWdKL.jpg" class="mr-3 lazyload" alt="双調平家物語１５　源氏の巻（承前）　落日の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１５　源氏の巻（承前）　落日の巻 (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G68AVJU</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G68AVJU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mfIFAnrjL.jpg" class="mr-3 lazyload" alt="双調平家物語１４　治承の巻２（承前）　源氏の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１４　治承の巻２（承前）　源氏の巻 (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G68AV3G</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G68AV3G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5143TRdjYXL.jpg" class="mr-3 lazyload" alt="双調平家物語１３　治承の巻２ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１３　治承の巻２ (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G68AUZ0</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G68AUZ0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BDDfdkXJL.jpg" class="mr-3 lazyload" alt="双調平家物語１２　治承の巻１ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１２　治承の巻１ (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G68AV2W</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G68AV2W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5111awll9aL.jpg" class="mr-3 lazyload" alt="双調平家物語１１　平家の巻（承前） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１１　平家の巻（承前） (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00G68AUUK</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G68AUUK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NKascDBML.jpg" class="mr-3 lazyload" alt="双調平家物語１０　平治の巻2　平家の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１０　平治の巻2　平家の巻 (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UZ6</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UZ6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qv1NgyQoL.jpg" class="mr-3 lazyload" alt="双調平家物語９　平治の巻1（承前） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語９　平治の巻1（承前） (中公文庫)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UT2</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UT2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51WKbkZsb0L.jpg" class="mr-3 lazyload" alt="双調平家物語８　保元の巻（承前）　平治の巻１ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語８　保元の巻（承前）　平治の巻１ (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UYC</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UYC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CGIleQcYL.jpg" class="mr-3 lazyload" alt="双調平家物語７　保元の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語７　保元の巻 (中公文庫)</h5>
+                    <p>価格：733円、ポイント：7</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UXI</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UXI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51B98JUAINL.jpg" class="mr-3 lazyload" alt="双調平家物語６　院の巻（承前） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語６　院の巻（承前） (中公文庫)</h5>
+                    <p>価格：689円、ポイント：7</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UU6</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UU6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51myWL5SfJL.jpg" class="mr-3 lazyload" alt="双調平家物語５　女帝の巻　院の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語５　女帝の巻　院の巻 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3USS</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3USS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51g65+MNl7L.jpg" class="mr-3 lazyload" alt="双調平家物語４　奈良の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語４　奈良の巻 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UWE</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UWE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VQ2ZW4VsL.jpg" class="mr-3 lazyload" alt="双調平家物語３　近江の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語３　近江の巻 (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UUQ</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UUQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BwtM4M24L.jpg" class="mr-3 lazyload" alt="双調平家物語２　飛鳥の巻（承前） (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語２　飛鳥の巻（承前） (中公文庫)</h5>
+                    <p>価格：659円、ポイント：7</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DQH3UTC</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DQH3UTC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51nQ0-8RNkL.jpg" class="mr-3 lazyload" alt="双調平家物語１　序の巻　飛鳥の巻 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>双調平家物語１　序の巻　飛鳥の巻 (中公文庫)</h5>
+                    <p>価格：461円、ポイント：5</p>
+                    <p>橋本治(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00C2GWBXO</p>
+<p>カテゴリー：日本文学,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00C2GWBXO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41lC3n+sSwL.jpg" class="mr-3 lazyload" alt="春の戴冠４ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春の戴冠４ (中公文庫)</h5>
+                    <p>価格：733円、ポイント：7</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00C2GW86Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00C2GW86Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41gNFp5Oe3L.jpg" class="mr-3 lazyload" alt="春の戴冠３ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春の戴冠３ (中公文庫)</h5>
+                    <p>価格：806円、ポイント：8</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00C2GW7XI</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00C2GW7XI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Hva6js2AL.jpg" class="mr-3 lazyload" alt="春の戴冠２ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春の戴冠２ (中公文庫)</h5>
+                    <p>価格：733円、ポイント：7</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY8VR4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY8VR4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41VsNJf8GcL.jpg" class="mr-3 lazyload" alt="春の戴冠１ (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>春の戴冠１ (中公文庫)</h5>
+                    <p>価格：524円、ポイント：5</p>
+                    <p>辻邦生(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY8VOM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY8VOM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RePC0gIRL.jpg" class="mr-3 lazyload" alt="御隠居忍法５　亡者の鐘 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法５　亡者の鐘 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00DAUL90W</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DAUL90W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516so8egvqL.jpg" class="mr-3 lazyload" alt="御隠居忍法２　不老術 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法２　不老術 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY8S6I</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY8S6I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b42KfueaL.jpg" class="mr-3 lazyload" alt="御隠居忍法４　唐船番 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法４　唐船番 (中公文庫)</h5>
+                    <p>価格：513円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00C2GW6U2</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸,歴史・時代小説</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00C2GW6U2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513ilRANfCL.jpg" class="mr-3 lazyload" alt="御隠居忍法６　恨み半蔵 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法６　恨み半蔵 (中公文庫)</h5>
+                    <p>価格：528円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC115E</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC115E?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dV4ChHoJL.jpg" class="mr-3 lazyload" alt="御隠居忍法３　鬼切丸 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法３　鬼切丸 (中公文庫)</h5>
+                    <p>価格：528円、ポイント：5</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00AQY8S04</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AQY8S04?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bD2QbTvjL.jpg" class="mr-3 lazyload" alt="御隠居忍法 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>御隠居忍法 (中公文庫)</h5>
+                    <p>価格：377円、ポイント：4</p>
+                    <p>高橋義夫(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC112C</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC112C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uc0iRxLrL.jpg" class="mr-3 lazyload" alt="ＳＲＯ１　警視庁広域捜査専任特別調査室 (中公文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＲＯ１　警視庁広域捜査専任特別調査室 (中公文庫)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>富樫倫太郎(著)</p>
+                    <p>出版社：中央公論新社、ASIN：B00ARC0T4I</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ARC0T4I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
