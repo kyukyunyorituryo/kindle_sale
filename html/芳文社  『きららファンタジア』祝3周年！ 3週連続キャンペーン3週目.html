@@ -1,0 +1,1051 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HIZVsV9ML.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　８巻【Amazon.co.jp限定描き下ろし特典付】 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　８巻【Amazon.co.jp限定描き下ろし特典付】 (まんがタイムKRコミックス)</h5>
+                    <p>価格：880円、ポイント：444</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B07WZK9WR7</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07WZK9WR7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/610YGPQcGdL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　７巻【Amazon.co.jp限定描き下ろし特典付】 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　７巻【Amazon.co.jp限定描き下ろし特典付】 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：420</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B07JMNT3M8</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JMNT3M8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61wNQC4GaHL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　６巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　６巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：420</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B076Q4TVW1</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076Q4TVW1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61umUD+DwrL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　５巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　５巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B01KVF00UI</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01KVF00UI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Z2iWruqoL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　４巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　４巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B015GVZA3E</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015GVZA3E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PeaeJSW9L.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：420</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00IZ7R7B0</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00IZ7R7B0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61J+W0bQlDL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00MIDW7J4</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MIDW7J4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Q4kbbAyLL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：420</p>
+                    <p>Ｋｏｉ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00IZ7R7LK</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00IZ7R7LK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Vs6SO9UJL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　８巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　８巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B06XG9165L</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XG9165L?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51-pbxDS7tL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　７巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　７巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B01DF0O2UK</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01DF0O2UK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sUSLoXBpL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　６巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　６巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00VSYP1EC</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00VSYP1EC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LDEbnLqYL.jpg" class="mr-3 lazyload" alt="ステラのまほう　８巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　８巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B0822JPGLV</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0822JPGLV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zEjp6AxZL.jpg" class="mr-3 lazyload" alt="ステラのまほう　７巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　７巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B07KWV8WZF</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KWV8WZF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51EtJ9qbhlL.jpg" class="mr-3 lazyload" alt="ステラのまほう　６巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　６巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B077Q6MFVL</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B077Q6MFVL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Gsum87peL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　１０巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　１０巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B07YG53LWK</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YG53LWK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HTevVRncL.jpg" class="mr-3 lazyload" alt="スロウスタートアンソロジーコミック　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スロウスタートアンソロジーコミック　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：16</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B079BF6H36</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079BF6H36?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51+cSEMzSVL.jpg" class="mr-3 lazyload" alt="ＮＥＷ　ＧＡＭＥ！　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＥＷ　ＧＡＭＥ！　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>得能正太郎(著)</p>
+                    <p>出版社：芳文社、ASIN：B00UYABOGK</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UYABOGK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51XKNuSxXlL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　９巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　９巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：246</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B07CQS5SDS</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CQS5SDS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518G7upePaL.jpg" class="mr-3 lazyload" alt="ＮＥＷ　ＧＡＭＥ！　３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＥＷ　ＧＡＭＥ！　３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>得能正太郎(著)</p>
+                    <p>出版社：芳文社、ASIN：B01AXUE7W8</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01AXUE7W8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51xfDOcXcgL.jpg" class="mr-3 lazyload" alt="ＮＥＷ　ＧＡＭＥ！　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＥＷ　ＧＡＭＥ！　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>得能正太郎(著)</p>
+                    <p>出版社：芳文社、ASIN：B00UYABOQA</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UYABOQA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515WXi33B0L.jpg" class="mr-3 lazyload" alt="Ａチャンネル　５巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　５巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00RBC83G8</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00RBC83G8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51riLvWritL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　４巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　４巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00RBC83FY</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00RBC83FY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rZBJiUgEL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00RBC83AO</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00RBC83AO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513BWiUc6bL.jpg" class="mr-3 lazyload" alt="Ａチャンネル　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａチャンネル　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>黒田ｂｂ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00RBC836S</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00RBC836S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61JFQR7HG8L.jpg" class="mr-3 lazyload" alt="ＧＡ 芸術科アートデザインクラス　３巻 GA　芸術科アートデザインクラス (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＧＡ 芸術科アートデザインクラス　３巻 GA　芸術科アートデザインクラス (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>きゆづきさとこ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA0861I</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA0861I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51B6iHq0M7L.jpg" class="mr-3 lazyload" alt="ＧＡ 芸術科アートデザインクラス　２巻 GA　芸術科アートデザインクラス (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＧＡ 芸術科アートデザインクラス　２巻 GA　芸術科アートデザインクラス (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>きゆづきさとこ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA085LE</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA085LE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NnMg9Y60L.jpg" class="mr-3 lazyload" alt="ＮＥＷ　ＧＡＭＥ！アンソロジーコミック　３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＥＷ　ＧＡＭＥ！アンソロジーコミック　３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B0747Q55YP</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0747Q55YP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ATq1wndZL.jpg" class="mr-3 lazyload" alt="ＮＥＷ　ＧＡＭＥ！アンソロジーコミック　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＥＷ　ＧＡＭＥ！アンソロジーコミック　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B0739MLS5T</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0739MLS5T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511giMUXlxL.jpg" class="mr-3 lazyload" alt="ＮＥＷ　ＧＡＭＥ！アンソロジーコミック　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＥＷ　ＧＡＭＥ！アンソロジーコミック　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B01L95D2H2</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01L95D2H2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RFYQ8nHeL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？アンソロジーコミック　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？アンソロジーコミック　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B015GVZAG6</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015GVZAG6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61n9OJ-RjeL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？アンソロジーコミック　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？アンソロジーコミック　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B015GVZA5M</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015GVZA5M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LaxtWQ3kL.jpg" class="mr-3 lazyload" alt="スロウスタート　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スロウスタート　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>篤見唯子(著)</p>
+                    <p>出版社：芳文社、ASIN：B0151GZJFI</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0151GZJFI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513RsXeEpoL.jpg" class="mr-3 lazyload" alt="幸腹グラフィティ　2巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>幸腹グラフィティ　2巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>川井マコト(著)</p>
+                    <p>出版社：芳文社、ASIN：B00UMXXVC4</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UMXXVC4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BpIqvivBL.jpg" class="mr-3 lazyload" alt="ゆゆ式　3巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆゆ式　3巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>三上小又(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA08730</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA08730?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NSZ8b5uYL.jpg" class="mr-3 lazyload" alt="ゆゆ式　2巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆゆ式　2巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>三上小又(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA0872G</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA0872G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518zcGO3ITL.jpg" class="mr-3 lazyload" alt="ＧＡ 芸術科アートデザインクラス　１巻 GA　芸術科アートデザインクラス (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＧＡ 芸術科アートデザインクラス　１巻 GA　芸術科アートデザインクラス (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>きゆづきさとこ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA08596</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA08596?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ZMwBz-Y8L.jpg" class="mr-3 lazyload" alt="あっちこっち３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっちこっち３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>異識(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA083GQ</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA083GQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51DfBDz-ZNL.jpg" class="mr-3 lazyload" alt="あっちこっち２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっちこっち２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>異識(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA083D4</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA083D4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lGBDcEWxL.jpg" class="mr-3 lazyload" alt="あっちこっち１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっちこっち１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>異識(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA083B6</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA083B6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51B7rY9CgkL.jpg" class="mr-3 lazyload" alt="甘えたい日はそばにいて。　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>甘えたい日はそばにいて。　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>川井マコト(著)</p>
+                    <p>出版社：芳文社、ASIN：B078BMFF1V</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078BMFF1V?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61XwG6tC0pL.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？ラビットハウスアンソロジー～ｃｏｆｆｅｅ　ｂｒｅａｋ～ (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？ラビットハウスアンソロジー～ｃｏｆｆｅｅ　ｂｒｅａｋ～ (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B076Q3TNZV</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076Q3TNZV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61gK1HsYXIL.jpg" class="mr-3 lazyload" alt="ステラのまほうアンソロジーコミック　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほうアンソロジーコミック　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B01MZZ2X2P</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MZZ2X2P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Fyaarcv2L.jpg" class="mr-3 lazyload" alt="ご注文はうさぎですか？チマメ隊アンソロジー～Ｈａｐｐｙ　Ｄｉａｒｙ！～ (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ご注文はうさぎですか？チマメ隊アンソロジー～Ｈａｐｐｙ　Ｄｉａｒｙ！～ (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B01N7C14KZ</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N7C14KZ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/614Q06PEovL.jpg" class="mr-3 lazyload" alt="三者三葉アンソロジーコミック　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三者三葉アンソロジーコミック　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：856円、ポイント：18</p>
+                    <p>アンソロジー(著)</p>
+                    <p>出版社：芳文社、ASIN：B01ELD407U</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01ELD407U?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5113WjFzv5L.jpg" class="mr-3 lazyload" alt="こはる日和。　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こはる日和。　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>ねこうめ(著)</p>
+                    <p>出版社：芳文社、ASIN：B01NBEDUS7</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01NBEDUS7?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mI-DG4s-L.jpg" class="mr-3 lazyload" alt="こはる日和。　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こはる日和。　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>ねこうめ(著)</p>
+                    <p>出版社：芳文社、ASIN：B018U367TG</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B018U367TG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uGxll-kCL.jpg" class="mr-3 lazyload" alt="ステラのまほう　５巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　５巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B01N6IUXZF</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N6IUXZF?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51RiB9WrseL.jpg" class="mr-3 lazyload" alt="ステラのまほう　４巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　４巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B01M30AT9B</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01M30AT9B?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61Q6AeX5BgL.jpg" class="mr-3 lazyload" alt="ステラのまほう　３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B01AXUE8DG</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01AXUE8DG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61KWBkB93DL.jpg" class="mr-3 lazyload" alt="ステラのまほう　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B017D6HW7W</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017D6HW7W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yJFdlY9dL.jpg" class="mr-3 lazyload" alt="ステラのまほう　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ステラのまほう　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>くろば・Ｕ(著)</p>
+                    <p>出版社：芳文社、ASIN：B017D6HWA4</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017D6HWA4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51V-PErW37L.jpg" class="mr-3 lazyload" alt="いちごの入ったソーダ水　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いちごの入ったソーダ水　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B016W7X74A</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B016W7X74A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51lUGOS-ZVL.jpg" class="mr-3 lazyload" alt="スロウスタート　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>スロウスタート　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>篤見唯子(著)</p>
+                    <p>出版社：芳文社、ASIN：B0151GZJGM</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0151GZJGM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51wguPkNsIL.jpg" class="mr-3 lazyload" alt="棺担ぎのクロ。～懐中旅話～　３巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>棺担ぎのクロ。～懐中旅話～　３巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>きゆづきさとこ(著)</p>
+                    <p>出版社：芳文社、ASIN：B010PRQLHS</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B010PRQLHS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KSGL1pAxL.jpg" class="mr-3 lazyload" alt="棺担ぎのクロ。～懐中旅話～　２巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>棺担ぎのクロ。～懐中旅話～　２巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>きゆづきさとこ(著)</p>
+                    <p>出版社：芳文社、ASIN：B010PRQL82</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B010PRQL82?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vEGkWUNWL.jpg" class="mr-3 lazyload" alt="棺担ぎのクロ。～懐中旅話～　１巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>棺担ぎのクロ。～懐中旅話～　１巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>きゆづきさとこ(著)</p>
+                    <p>出版社：芳文社、ASIN：B010PRQLFA</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B010PRQLFA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61O+QziOy9L.jpg" class="mr-3 lazyload" alt="ワンダフルデイズ　3巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワンダフルデイズ　3巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B00MEGHW7M</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MEGHW7M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517ijPHGATL.jpg" class="mr-3 lazyload" alt="ワンダフルデイズ　2巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワンダフルデイズ　2巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B00MEGHW18</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MEGHW18?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51E5sCqCRuL.jpg" class="mr-3 lazyload" alt="ワンダフルデイズ　1巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワンダフルデイズ　1巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B00MEGHVYG</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MEGHVYG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61FBZDFTMgL.jpg" class="mr-3 lazyload" alt="幸腹グラフィティ　1巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>幸腹グラフィティ　1巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>川井マコト(著)</p>
+                    <p>出版社：芳文社、ASIN：B00L8HSFTW</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00L8HSFTW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YcI2+ylkL.jpg" class="mr-3 lazyload" alt="ゆゆ式　1巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゆゆ式　1巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>三上小又(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA086WM</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA086WM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61YUhqWbKfL.jpg" class="mr-3 lazyload" alt="三者三葉　4巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三者三葉　4巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA084MO</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA084MO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51zD4FU5kuL.jpg" class="mr-3 lazyload" alt="三者三葉　14巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三者三葉　14巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B07MKJZPPB</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MKJZPPB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61GiAMB1RFL.jpg" class="mr-3 lazyload" alt="三者三葉　2巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三者三葉　2巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA084AQ</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA084AQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/612upb7oxIL.jpg" class="mr-3 lazyload" alt="三者三葉　1巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>三者三葉　1巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>荒井チェリー(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA0840G</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA0840G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/415de27cmQL.jpg" class="mr-3 lazyload" alt="キルミーベイベー　3巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キルミーベイベー　3巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>カヅホ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA07UDI</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA07UDI?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51oLI59Xv0L.jpg" class="mr-3 lazyload" alt="キルミーベイベー　2巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キルミーベイベー　2巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>カヅホ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA07UCE</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA07UCE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VRRWhyuqL.jpg" class="mr-3 lazyload" alt="キルミーベイベー　1巻 (まんがタイムKRコミックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キルミーベイベー　1巻 (まんがタイムKRコミックス)</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>カヅホ(著)</p>
+                    <p>出版社：芳文社、ASIN：B00CA07UBU</p>
+<p>カテゴリー：コミック,4コマまんが</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CA07UBU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
