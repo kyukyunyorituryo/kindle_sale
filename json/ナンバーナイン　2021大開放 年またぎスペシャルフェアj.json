@@ -7,9 +7,9 @@
   "Contributor": "斎創(著)",
   "Booktype": "Kindle版",
   "Title": "うちの会社の小さい先輩の話【同人版】(1)",
-  "Price": 297,
+  "Price": 693,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
+  "Points": 7
  },
  {
   "Asin": "B08DVFJLSY",
@@ -31,9 +31,21 @@
   "Contributor": "斎創(著)",
   "Booktype": "Kindle版",
   "Title": "いい夫婦の話(1)",
-  "Price": 165,
+  "Price": 231,
   "Category": "コミック・ラノベ・BL,マンガ",
   "Points": 2
+ },
+ {
+  "Asin": "B07YSJDKPK",
+  "URL": "https://www.amazon.co.jp/dp/B07YSJDKPK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/516u5UNdc1L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "西沢５ミリ(著)",
+  "Booktype": "Kindle版",
+  "Title": "女の裸を生で見たい",
+  "Price": 640,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 6
  },
  {
   "Asin": "B085RLBVHH",
@@ -43,9 +55,9 @@
   "Contributor": "斎創(著)",
   "Booktype": "Kindle版",
   "Title": "実は両思いかもしれないお姉さんと中三男子の話【同人版】(1)",
-  "Price": 440,
+  "Price": 616,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 4
+  "Points": 6
  },
  {
   "Asin": "B07XVHHQVT",
@@ -60,18 +72,6 @@
   "Points": 3
  },
  {
-  "Asin": "B07YSJDKPK",
-  "URL": "https://www.amazon.co.jp/dp/B07YSJDKPK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/516u5UNdc1L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "西沢５ミリ(著)",
-  "Booktype": "Kindle版",
-  "Title": "女の裸を生で見たい",
-  "Price": 458,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 5
- },
- {
   "Asin": "B085RP2M1D",
   "URL": "https://www.amazon.co.jp/dp/B085RP2M1D?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51V3l7IYsbL.jpg",
@@ -79,57 +79,9 @@
   "Contributor": "加川壱互(著)",
   "Booktype": "Kindle版",
   "Title": "黙っていればただの美人(1)",
-  "Price": 149,
+  "Price": 347,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 2
- },
- {
-  "Asin": "B085RNVNH4",
-  "URL": "https://www.amazon.co.jp/dp/B085RNVNH4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51lNGD9OuxL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "nonco(著)",
-  "Booktype": "Kindle版",
-  "Title": "noncoma あふれ出す煮汁",
-  "Price": 132,
-  "Category": "コミック・ラノベ・BL,4コマまんが",
-  "Points": 1
- },
- {
-  "Asin": "B08F5H9DLH",
-  "URL": "https://www.amazon.co.jp/dp/B08F5H9DLH?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51VcZJoacbL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "八木戸マト(著)",
-  "Booktype": "Kindle版",
-  "Title": "300年封印されし邪龍ちゃんと友達になりました【自費出版】",
-  "Price": 330,
-  "Category": "コミック・ラノベ・BL,ファンタジー",
-  "Points": 3
- },
- {
-  "Asin": "B084CV1YLD",
-  "URL": "https://www.amazon.co.jp/dp/B084CV1YLD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51un-iz5nLL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "西沢5ミリ(著)",
-  "Booktype": "Kindle版",
-  "Title": "他人のセックスを想像するな",
-  "Price": 229,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07T1BMCMG",
-  "URL": "https://www.amazon.co.jp/dp/B07T1BMCMG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51rpvLqLTtL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "ベニガシラ(著)",
-  "Booktype": "Kindle版",
-  "Title": "サラリーマンが異世界に行ったら四天王になった話【同人版】(1)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ファンタジー",
-  "Points": 2
+  "Points": 4
  },
  {
   "Asin": "B085RS4L9M",
@@ -144,38 +96,38 @@
   "Points": 4
  },
  {
-  "Asin": "B085RL6CZB",
-  "URL": "https://www.amazon.co.jp/dp/B085RL6CZB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51UPIkVj9NL.jpg",
+  "Asin": "B07T1BMCMG",
+  "URL": "https://www.amazon.co.jp/dp/B07T1BMCMG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51rpvLqLTtL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "ベニガシラ(著)",
+  "Booktype": "Kindle版",
+  "Title": "サラリーマンが異世界に行ったら四天王になった話【同人版】(1)",
+  "Price": 385,
+  "Category": "コミック・ラノベ・BL,ファンタジー",
+  "Points": 4
+ },
+ {
+  "Asin": "B085RNVNH4",
+  "URL": "https://www.amazon.co.jp/dp/B085RNVNH4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51lNGD9OuxL.jpg",
   "Publisher": "ナンバーナイン",
   "Contributor": "nonco(著)",
   "Booktype": "Kindle版",
-  "Title": "noncoma 2 二度目の搾汁",
+  "Title": "noncoma あふれ出す煮汁",
   "Price": 308,
   "Category": "コミック・ラノベ・BL,4コマまんが",
   "Points": 3
  },
  {
-  "Asin": "B085RHB4VK",
-  "URL": "https://www.amazon.co.jp/dp/B085RHB4VK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/41ZXJqjfKQL.jpg",
+  "Asin": "B084CV1YLD",
+  "URL": "https://www.amazon.co.jp/dp/B084CV1YLD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51un-iz5nLL.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "アキレスけん(著)",
+  "Contributor": "西沢5ミリ(著)",
   "Booktype": "Kindle版",
-  "Title": "30歳まで童貞でいたら魔法少女になりました(1)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ファンタジー",
-  "Points": 2
- },
- {
-  "Asin": "B07XL4DNKP",
-  "URL": "https://www.amazon.co.jp/dp/B07XL4DNKP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51SmxzbfsYL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "鳥原習(著)",
-  "Booktype": "Kindle版",
-  "Title": "空気が「読める」新入社員と不愛想な先輩の話【同人版】",
-  "Price": 275,
+  "Title": "他人のセックスを想像するな",
+  "Price": 320,
   "Category": "コミック・ラノベ・BL,マンガ",
   "Points": 3
  },
@@ -204,66 +156,6 @@
   "Points": 4
  },
  {
-  "Asin": "B07SC8KLXD",
-  "URL": "https://www.amazon.co.jp/dp/B07SC8KLXD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51e133PuLsL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "カミムラ晋作(著)",
-  "Booktype": "Kindle版",
-  "Title": "マジャン ～畏村奇聞～(11)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 2
- },
- {
-  "Asin": "B07SB53H8B",
-  "URL": "https://www.amazon.co.jp/dp/B07SB53H8B?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51HTvMrR86L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "カミムラ晋作(著)",
-  "Booktype": "Kindle版",
-  "Title": "マジャン ～畏村奇聞～(10)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 2
- },
- {
-  "Asin": "B07SC877JL",
-  "URL": "https://www.amazon.co.jp/dp/B07SC877JL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51hMC4U9ZKL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "カミムラ晋作(著)",
-  "Booktype": "Kindle版",
-  "Title": "マジャン ～畏村奇聞～(9)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 2
- },
- {
-  "Asin": "B07SB5SZTP",
-  "URL": "https://www.amazon.co.jp/dp/B07SB5SZTP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51CocZMZ5QL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "カミムラ晋作(著)",
-  "Booktype": "Kindle版",
-  "Title": "マジャン ～畏村奇聞～(8)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 2
- },
- {
-  "Asin": "B08JV878HK",
-  "URL": "https://www.amazon.co.jp/dp/B08JV878HK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51mdrh4zjuL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "矢野トシノリ(著)",
-  "Booktype": "Kindle版",
-  "Title": "防御力ゼロの嫁【同人版】(12)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 2
- },
- {
   "Asin": "B07DXTHDB9",
   "URL": "https://www.amazon.co.jp/dp/B07DXTHDB9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51qF7dQEBfL.jpg",
@@ -288,124 +180,28 @@
   "Points": 3
  },
  {
-  "Asin": "B08L66WMZP",
-  "URL": "https://www.amazon.co.jp/dp/B08L66WMZP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51b+kgd4CaL.jpg",
+  "Asin": "B08F5H9DLH",
+  "URL": "https://www.amazon.co.jp/dp/B08F5H9DLH?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51VcZJoacbL.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "小雨大豆(著)",
+  "Contributor": "八木戸マト(著)",
   "Booktype": "Kindle版",
-  "Title": "月歌の始まり【自費出版】2巻",
-  "Price": 616,
-  "Category": "コミック・ラノベ・BL,歴史",
-  "Points": 6
+  "Title": "300年封印されし邪龍ちゃんと友達になりました【自費出版】",
+  "Price": 462,
+  "Category": "コミック・ラノベ・BL,ファンタジー",
+  "Points": 5
  },
  {
-  "Asin": "B08FDP78XZ",
-  "URL": "https://www.amazon.co.jp/dp/B08FDP78XZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51a1IZ8rvzL.jpg",
+  "Asin": "B08JV878HK",
+  "URL": "https://www.amazon.co.jp/dp/B08JV878HK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51mdrh4zjuL.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "小雨大豆(著)",
+  "Contributor": "矢野トシノリ(著)",
   "Booktype": "Kindle版",
-  "Title": "月歌の始まり【自費出版】1巻",
-  "Price": 264,
-  "Category": "コミック・ラノベ・BL,歴史",
-  "Points": 3
- },
- {
-  "Asin": "B08F5GSF77",
-  "URL": "https://www.amazon.co.jp/dp/B08F5GSF77?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51o7+KQOH8L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "根田啓史(著)",
-  "Booktype": "Kindle版",
-  "Title": "淫魔が身持ち堅めの男の娘の部屋に入っちゃった話。(1)",
-  "Price": 138,
+  "Title": "防御力ゼロの嫁【同人版】(12)",
+  "Price": 165,
   "Category": "コミック・ラノベ・BL,マンガ",
   "Points": 2
- },
- {
-  "Asin": "B08HMPFLLY",
-  "URL": "https://www.amazon.co.jp/dp/B08HMPFLLY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51edONScrfL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "あわいけい(著)",
-  "Booktype": "Kindle版",
-  "Title": "幽霊消すんで付き合って下さい (4)",
-  "Price": 116,
-  "Category": "ジャンル別,ボーイズラブマンガ",
-  "Points": 1
- },
- {
-  "Asin": "B08F5FTXHJ",
-  "URL": "https://www.amazon.co.jp/dp/B08F5FTXHJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51NLyssIq7L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "あわいけい(著)",
-  "Booktype": "Kindle版",
-  "Title": "幽霊消すんで付き合って下さい (3)",
-  "Price": 116,
-  "Category": "ジャンル別,ボーイズラブマンガ",
-  "Points": 1
- },
- {
-  "Asin": "B08CRWLYYW",
-  "URL": "https://www.amazon.co.jp/dp/B08CRWLYYW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51-S5YOve7L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "あわいけい(著)",
-  "Booktype": "Kindle版",
-  "Title": "幽霊消すんで付き合って下さい (2)",
-  "Price": 116,
-  "Category": "ジャンル別,ボーイズラブマンガ",
-  "Points": 1
- },
- {
-  "Asin": "B08BTPKVYL",
-  "URL": "https://www.amazon.co.jp/dp/B08BTPKVYL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51BAxLHIRKL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "あわいけい(著)",
-  "Booktype": "Kindle版",
-  "Title": "幽霊消すんで付き合って下さい (1)",
-  "Price": 49,
-  "Category": "ジャンル別,ボーイズラブマンガ",
-  "Points": 0
- },
- {
-  "Asin": "B085HDHPRQ",
-  "URL": "https://www.amazon.co.jp/dp/B085HDHPRQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51OImwnwh2L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "ことり野デス子(著)",
-  "Booktype": "Kindle版",
-  "Title": "漫画家と異星人　漫画家が婚活で数学者と出会った話(1)",
-  "Price": 605,
-  "Category": "ノンフィクション,コミック,マンガ",
-  "Points": 6
- },
- {
-  "Asin": "B08BTXW6P5",
-  "URL": "https://www.amazon.co.jp/dp/B08BTXW6P5?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/510er53IHGL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "永田礼路(著)",
-  "Booktype": "Kindle版",
-  "Title": "螺旋じかけの海(3)",
-  "Price": 462,
-  "Category": "コミック・ラノベ・BL,SF",
-  "Points": 5
- },
- {
-  "Asin": "B082YDHL2N",
-  "URL": "https://www.amazon.co.jp/dp/B082YDHL2N?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51dOjZH2Y8L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "永田礼路(著)",
-  "Booktype": "Kindle版",
-  "Title": "螺旋じかけの海【新装版】(2)",
-  "Price": 462,
-  "Category": "コミック・ラノベ・BL,SF",
-  "Points": 5
  },
  {
   "Asin": "B082YDWPDP",
@@ -415,9 +211,9 @@
   "Contributor": "永田礼路(著)",
   "Booktype": "Kindle版",
   "Title": "螺旋じかけの海【新装版】(1)",
-  "Price": 198,
+  "Price": 462,
   "Category": "コミック・ラノベ・BL,SF",
-  "Points": 2
+  "Points": 265
  },
  {
   "Asin": "B07TMQLHQN",
@@ -468,30 +264,6 @@
   "Points": 3
  },
  {
-  "Asin": "B07SB5YBMK",
-  "URL": "https://www.amazon.co.jp/dp/B07SB5YBMK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51T1+iKeqKL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "カミムラ晋作(著)",
-  "Booktype": "Kindle版",
-  "Title": "マジャン ～畏村奇聞～(7)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 2
- },
- {
-  "Asin": "B07SC8J2NK",
-  "URL": "https://www.amazon.co.jp/dp/B07SC8J2NK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51LrTsd9uwL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "カミムラ晋作(著)",
-  "Booktype": "Kindle版",
-  "Title": "マジャン ～畏村奇聞～(6)",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 2
- },
- {
   "Asin": "B08BNTNCBN",
   "URL": "https://www.amazon.co.jp/dp/B08BNTNCBN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51mw2IOHT1L.jpg",
@@ -540,6 +312,42 @@
   "Points": 2
  },
  {
+  "Asin": "B085RL6CZB",
+  "URL": "https://www.amazon.co.jp/dp/B085RL6CZB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51UPIkVj9NL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "nonco(著)",
+  "Booktype": "Kindle版",
+  "Title": "noncoma 2 二度目の搾汁",
+  "Price": 308,
+  "Category": "コミック・ラノベ・BL,4コマまんが",
+  "Points": 3
+ },
+ {
+  "Asin": "B085HDHPRQ",
+  "URL": "https://www.amazon.co.jp/dp/B085HDHPRQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51OImwnwh2L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "ことり野デス子(著)",
+  "Booktype": "Kindle版",
+  "Title": "漫画家と異星人　漫画家が婚活で数学者と出会った話(1)",
+  "Price": 847,
+  "Category": "ノンフィクション,コミック,マンガ",
+  "Points": 8
+ },
+ {
+  "Asin": "B082YDHL2N",
+  "URL": "https://www.amazon.co.jp/dp/B082YDHL2N?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51dOjZH2Y8L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "永田礼路(著)",
+  "Booktype": "Kindle版",
+  "Title": "螺旋じかけの海【新装版】(2)",
+  "Price": 462,
+  "Category": "コミック・ラノベ・BL,SF",
+  "Points": 5
+ },
+ {
   "Asin": "B07YSHG432",
   "URL": "https://www.amazon.co.jp/dp/B07YSHG432?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51dgZzmHrUL.jpg",
@@ -564,28 +372,304 @@
   "Points": 2
  },
  {
-  "Asin": "B07PGGPTNM",
-  "URL": "https://www.amazon.co.jp/dp/B07PGGPTNM?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51T5tSE7ODL.jpg",
+  "Asin": "B08F5GSF77",
+  "URL": "https://www.amazon.co.jp/dp/B08F5GSF77?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51o7+KQOH8L.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "矢野トシノリ(著)",
+  "Contributor": "根田啓史(著)",
   "Booktype": "Kindle版",
-  "Title": "防御力ゼロの嫁【同人版】(4)",
-  "Price": 0,
+  "Title": "淫魔が身持ち堅めの男の娘の部屋に入っちゃった話。(1)",
+  "Price": 193,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Points": 2
  },
  {
-  "Asin": "B07MYVBGHJ",
-  "URL": "https://www.amazon.co.jp/dp/B07MYVBGHJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51kZ5qc6LHL.jpg",
+  "Asin": "B085RHB4VK",
+  "URL": "https://www.amazon.co.jp/dp/B085RHB4VK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/41ZXJqjfKQL.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "矢野トシノリ(著)",
+  "Contributor": "アキレスけん(著)",
   "Booktype": "Kindle版",
-  "Title": "防御力ゼロの嫁【同人版】(3)",
-  "Price": 0,
+  "Title": "30歳まで童貞でいたら魔法少女になりました(1)",
+  "Price": 385,
+  "Category": "コミック・ラノベ・BL,ファンタジー",
+  "Points": 221
+ },
+ {
+  "Asin": "B08BTXW6P5",
+  "URL": "https://www.amazon.co.jp/dp/B08BTXW6P5?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/510er53IHGL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "永田礼路(著)",
+  "Booktype": "Kindle版",
+  "Title": "螺旋じかけの海(3)",
+  "Price": 462,
+  "Category": "コミック・ラノベ・BL,SF",
+  "Points": 5
+ },
+ {
+  "Asin": "B07XL4DNKP",
+  "URL": "https://www.amazon.co.jp/dp/B07XL4DNKP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51SmxzbfsYL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "鳥原習(著)",
+  "Booktype": "Kindle版",
+  "Title": "空気が「読める」新入社員と不愛想な先輩の話【同人版】",
+  "Price": 385,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Points": 4
+ },
+ {
+  "Asin": "B07TMPNDBD",
+  "URL": "https://www.amazon.co.jp/dp/B07TMPNDBD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51X8eyqocVL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(14)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TJJPYP9",
+  "URL": "https://www.amazon.co.jp/dp/B07TJJPYP9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/5175ixYuknL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(13)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TNQWNBW",
+  "URL": "https://www.amazon.co.jp/dp/B07TNQWNBW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51Uq1qG3qoL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(12)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TLNK9TB",
+  "URL": "https://www.amazon.co.jp/dp/B07TLNK9TB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51AaswkfuZL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(11)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TJJPGBY",
+  "URL": "https://www.amazon.co.jp/dp/B07TJJPGBY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51hm8bfDt2L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(10)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TNRGNBV",
+  "URL": "https://www.amazon.co.jp/dp/B07TNRGNBV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51oQiH5EVfL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(9)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TLNMZQY",
+  "URL": "https://www.amazon.co.jp/dp/B07TLNMZQY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51e+DESiXEL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(8)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TMP8DQF",
+  "URL": "https://www.amazon.co.jp/dp/B07TMP8DQF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51W1Ns+RFpL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(7)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07TLNN71Y",
+  "URL": "https://www.amazon.co.jp/dp/B07TLNN71Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51vmUi-NDdL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "太田垣康男(著)",
+  "Booktype": "Kindle版",
+  "Title": "一平(6)",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B08L66WMZP",
+  "URL": "https://www.amazon.co.jp/dp/B08L66WMZP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51b+kgd4CaL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "小雨大豆(著)",
+  "Booktype": "Kindle版",
+  "Title": "月歌の始まり【自費出版】2巻",
+  "Price": 616,
+  "Category": "コミック・ラノベ・BL,歴史",
+  "Points": 6
+ },
+ {
+  "Asin": "B08FDP78XZ",
+  "URL": "https://www.amazon.co.jp/dp/B08FDP78XZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51a1IZ8rvzL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "小雨大豆(著)",
+  "Booktype": "Kindle版",
+  "Title": "月歌の始まり【自費出版】1巻",
+  "Price": 616,
+  "Category": "コミック・ラノベ・BL,歴史",
+  "Points": 6
+ },
+ {
+  "Asin": "B08CRWLYYW",
+  "URL": "https://www.amazon.co.jp/dp/B08CRWLYYW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51-S5YOve7L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "あわいけい(著)",
+  "Booktype": "Kindle版",
+  "Title": "幽霊消すんで付き合って下さい (2)",
+  "Price": 116,
+  "Category": "ジャンル別,ボーイズラブマンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B08BTPKVYL",
+  "URL": "https://www.amazon.co.jp/dp/B08BTPKVYL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51BAxLHIRKL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "あわいけい(著)",
+  "Booktype": "Kindle版",
+  "Title": "幽霊消すんで付き合って下さい (1)",
+  "Price": 116,
+  "Category": "ジャンル別,ボーイズラブマンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B07SC8KLXD",
+  "URL": "https://www.amazon.co.jp/dp/B07SC8KLXD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51e133PuLsL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(11)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 2
+ },
+ {
+  "Asin": "B07SB53H8B",
+  "URL": "https://www.amazon.co.jp/dp/B07SB53H8B?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51HTvMrR86L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(10)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 2
+ },
+ {
+  "Asin": "B07SC877JL",
+  "URL": "https://www.amazon.co.jp/dp/B07SC877JL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51hMC4U9ZKL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(9)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 2
+ },
+ {
+  "Asin": "B07SB5SZTP",
+  "URL": "https://www.amazon.co.jp/dp/B07SB5SZTP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51CocZMZ5QL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(8)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 2
+ },
+ {
+  "Asin": "B07SB5YBMK",
+  "URL": "https://www.amazon.co.jp/dp/B07SB5YBMK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51T1+iKeqKL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(7)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 2
+ },
+ {
+  "Asin": "B07SC8J2NK",
+  "URL": "https://www.amazon.co.jp/dp/B07SC8J2NK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51LrTsd9uwL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(6)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 2
+ },
+ {
+  "Asin": "B08HMPFLLY",
+  "URL": "https://www.amazon.co.jp/dp/B08HMPFLLY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51edONScrfL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "あわいけい(著)",
+  "Booktype": "Kindle版",
+  "Title": "幽霊消すんで付き合って下さい (4)",
+  "Price": 116,
+  "Category": "ジャンル別,ボーイズラブマンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B08F5FTXHJ",
+  "URL": "https://www.amazon.co.jp/dp/B08F5FTXHJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51NLyssIq7L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "あわいけい(著)",
+  "Booktype": "Kindle版",
+  "Title": "幽霊消すんで付き合って下さい (3)",
+  "Price": 116,
+  "Category": "ジャンル別,ボーイズラブマンガ",
+  "Points": 1
  },
  {
   "Asin": "B08BNVBD18",
@@ -595,9 +679,9 @@
   "Contributor": "がい子くじん(著)",
   "Booktype": "Kindle版",
   "Title": "奴隷エルフと商人【同人版】(1)",
-  "Price": 248,
+  "Price": 347,
   "Category": "コミック・ラノベ・BL,4コマまんが",
-  "Points": 2
+  "Points": 102
  },
  {
   "Asin": "B08JV6DDV3",
@@ -739,9 +823,9 @@
   "Contributor": "浜口奈津子(著)",
   "Booktype": "Kindle版",
   "Title": "Love＆Romance５美男嫌い",
-  "Price": 0,
+  "Price": 275,
   "Category": "コミック・ラノベ・BL,ミステリー,ロマンス",
-  "Points": 0
+  "Points": 3
  },
  {
   "Asin": "B082YDF4QT",
@@ -751,9 +835,9 @@
   "Contributor": "浜口奈津子(著)",
   "Booktype": "Kindle版",
   "Title": "Love＆Romance４笑わない秘書",
-  "Price": 0,
+  "Price": 275,
   "Category": "コミック・ラノベ・BL,ミステリー,ロマンス",
-  "Points": 0
+  "Points": 3
  },
  {
   "Asin": "B082PYCCV4",
@@ -792,114 +876,6 @@
   "Points": 0
  },
  {
-  "Asin": "B07TMPNDBD",
-  "URL": "https://www.amazon.co.jp/dp/B07TMPNDBD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51X8eyqocVL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(14)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TJJPYP9",
-  "URL": "https://www.amazon.co.jp/dp/B07TJJPYP9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/5175ixYuknL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(13)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TNQWNBW",
-  "URL": "https://www.amazon.co.jp/dp/B07TNQWNBW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51Uq1qG3qoL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(12)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TLNK9TB",
-  "URL": "https://www.amazon.co.jp/dp/B07TLNK9TB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51AaswkfuZL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(11)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TJJPGBY",
-  "URL": "https://www.amazon.co.jp/dp/B07TJJPGBY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51hm8bfDt2L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(10)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TNRGNBV",
-  "URL": "https://www.amazon.co.jp/dp/B07TNRGNBV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51oQiH5EVfL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(9)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TLNMZQY",
-  "URL": "https://www.amazon.co.jp/dp/B07TLNMZQY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51e+DESiXEL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(8)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TMP8DQF",
-  "URL": "https://www.amazon.co.jp/dp/B07TMP8DQF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51W1Ns+RFpL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(7)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
-  "Asin": "B07TLNN71Y",
-  "URL": "https://www.amazon.co.jp/dp/B07TLNN71Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51vmUi-NDdL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
-  "Booktype": "Kindle版",
-  "Title": "一平(6)",
-  "Price": 275,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 3
- },
- {
   "Asin": "B07TLNNX25",
   "URL": "https://www.amazon.co.jp/dp/B07TLNNX25?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51IlTOZP1QL.jpg",
@@ -907,9 +883,9 @@
   "Contributor": "太田垣康男(著)",
   "Booktype": "Kindle版",
   "Title": "一平(5)",
-  "Price": 0,
+  "Price": 275,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Points": 3
  },
  {
   "Asin": "B07TMR4T2K",
@@ -919,9 +895,9 @@
   "Contributor": "太田垣康男(著)",
   "Booktype": "Kindle版",
   "Title": "一平(4)",
-  "Price": 0,
+  "Price": 275,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Points": 275
  },
  {
   "Asin": "B07TKMRK5S",
@@ -936,28 +912,28 @@
   "Points": 0
  },
  {
-  "Asin": "B07TNRVXP8",
-  "URL": "https://www.amazon.co.jp/dp/B07TNRVXP8?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51lFrJsaZhL.jpg",
+  "Asin": "B07XL4FM95",
+  "URL": "https://www.amazon.co.jp/dp/B07XL4FM95?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51atxRWOl5L.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
+  "Contributor": "竜崎遼児(著)",
   "Booktype": "Kindle版",
-  "Title": "一平(2)",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Title": "ばっくれ一平！【合本版】(2)",
+  "Price": 1100,
+  "Category": "コミック・ラノベ・BL,スポーツ",
+  "Points": 11
  },
  {
-  "Asin": "B07TLNNYNV",
-  "URL": "https://www.amazon.co.jp/dp/B07TLNNYNV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51ZgDIWajLL.jpg",
+  "Asin": "B07XQH34B9",
+  "URL": "https://www.amazon.co.jp/dp/B07XQH34B9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51aApP6cpuL.jpg",
   "Publisher": "ナンバーナイン",
-  "Contributor": "太田垣康男(著)",
+  "Contributor": "竜崎遼児(著)",
   "Booktype": "Kindle版",
-  "Title": "一平(1)",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Title": "ばっくれ一平！【合本版】(1)",
+  "Price": 1100,
+  "Category": "コミック・ラノベ・BL,スポーツ",
+  "Points": 11
  },
  {
   "Asin": "B07SC81V6R",
@@ -967,9 +943,9 @@
   "Contributor": "カミムラ晋作(著)",
   "Booktype": "Kindle版",
   "Title": "マジャン ～畏村奇聞～(4)",
-  "Price": 0,
+  "Price": 165,
   "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
-  "Points": 0
+  "Points": 165
  },
  {
   "Asin": "B07SB4XF1C",
@@ -1020,30 +996,6 @@
   "Points": 2
  },
  {
-  "Asin": "B07SRRZ4TJ",
-  "URL": "https://www.amazon.co.jp/dp/B07SRRZ4TJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51lEUZlMpLL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "矢野トシノリ(著)",
-  "Booktype": "Kindle版",
-  "Title": "防御力ゼロの嫁【同人版】(5)",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
- },
- {
-  "Asin": "B07MDK4L7T",
-  "URL": "https://www.amazon.co.jp/dp/B07MDK4L7T?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51GYtBL9bCL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "矢野トシノリ(著)",
-  "Booktype": "Kindle版",
-  "Title": "防御力ゼロの嫁【同人版】(2)",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
- },
- {
   "Asin": "B07FW2M6WB",
   "URL": "https://www.amazon.co.jp/dp/B07FW2M6WB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51feHO8c4uL.jpg",
@@ -1080,18 +1032,6 @@
   "Points": 3
  },
  {
-  "Asin": "B07FMX5496",
-  "URL": "https://www.amazon.co.jp/dp/B07FMX5496?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51W4y5odW5L.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "森もり子(著)",
-  "Booktype": "Kindle版",
-  "Title": "さよなら、ハイスクール （1）",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
- },
- {
   "Asin": "B07DXRWMCF",
   "URL": "https://www.amazon.co.jp/dp/B07DXRWMCF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/418Iy6pHRVL.jpg",
@@ -1099,21 +1039,9 @@
   "Contributor": "山崎紗也夏(著)",
   "Booktype": "Kindle版",
   "Title": "マイナス 完全版（2）",
-  "Price": 0,
+  "Price": 275,
   "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
- },
- {
-  "Asin": "B07DXLZ5GN",
-  "URL": "https://www.amazon.co.jp/dp/B07DXLZ5GN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51zIWvq4FmL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "山崎紗也夏(著)",
-  "Booktype": "Kindle版",
-  "Title": "マイナス 完全版（1）",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
+  "Points": 3
  },
  {
   "Asin": "B07CXQPN8Y",
@@ -1140,6 +1068,18 @@
   "Points": 4
  },
  {
+  "Asin": "B07SC7VQ4W",
+  "URL": "https://www.amazon.co.jp/dp/B07SC7VQ4W?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51doQHMU-RL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "カミムラ晋作(著)",
+  "Booktype": "Kindle版",
+  "Title": "マジャン ～畏村奇聞～(5)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,ホラー,ミステリー",
+  "Points": 165
+ },
+ {
   "Asin": "B07RQL4Q7G",
   "URL": "https://www.amazon.co.jp/dp/B07RQL4Q7G?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51slalryaSL.jpg",
@@ -1147,9 +1087,21 @@
   "Contributor": "蒼木雅彦(著)",
   "Booktype": "Kindle版",
   "Title": "コミュ障お嬢様と漫画家マンション(1)",
-  "Price": 0,
+  "Price": 248,
   "Category": "コミック,ミステリー",
-  "Points": 0
+  "Points": 248
+ },
+ {
+  "Asin": "B07PGGPTNM",
+  "URL": "https://www.amazon.co.jp/dp/B07PGGPTNM?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51T5tSE7ODL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "矢野トシノリ(著)",
+  "Booktype": "Kindle版",
+  "Title": "防御力ゼロの嫁【同人版】(4)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 2
  },
  {
   "Asin": "B07H3RCWY7",
@@ -1171,6 +1123,90 @@
   "Contributor": "矢島光(著)",
   "Booktype": "Kindle版",
   "Title": "彼女のいる彼氏（完全版） 矢島光・著作集 ２",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 275
+ },
+ {
+  "Asin": "B07FMQJRNL",
+  "URL": "https://www.amazon.co.jp/dp/B07FMQJRNL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51rBvAYNukL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "森もり子(著)",
+  "Booktype": "Kindle版",
+  "Title": "さよなら、ハイスクール （2）",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 275
+ },
+ {
+  "Asin": "B07FMX5496",
+  "URL": "https://www.amazon.co.jp/dp/B07FMX5496?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51W4y5odW5L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "森もり子(著)",
+  "Booktype": "Kindle版",
+  "Title": "さよなら、ハイスクール （1）",
+  "Price": 0,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B07DXQ7D1V",
+  "URL": "https://www.amazon.co.jp/dp/B07DXQ7D1V?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/5113xeyXY8L.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "山崎紗也夏(著)",
+  "Booktype": "Kindle版",
+  "Title": "マイナス 完全版（3）",
+  "Price": 275,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 3
+ },
+ {
+  "Asin": "B07CXSSBKF",
+  "URL": "https://www.amazon.co.jp/dp/B07CXSSBKF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51UKGLa2mEL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "うめ（小沢高広・妹尾朝子）(著)",
+  "Booktype": "Kindle版",
+  "Title": "南国トムソーヤ （1）",
+  "Price": 385,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 4
+ },
+ {
+  "Asin": "B07SRRZ4TJ",
+  "URL": "https://www.amazon.co.jp/dp/B07SRRZ4TJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51lEUZlMpLL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "矢野トシノリ(著)",
+  "Booktype": "Kindle版",
+  "Title": "防御力ゼロの嫁【同人版】(5)",
+  "Price": 165,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B07MYVBGHJ",
+  "URL": "https://www.amazon.co.jp/dp/B07MYVBGHJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51kZ5qc6LHL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "矢野トシノリ(著)",
+  "Booktype": "Kindle版",
+  "Title": "防御力ゼロの嫁【同人版】(3)",
+  "Price": 0,
+  "Category": "コミック・ラノベ・BL,マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B07MDK4L7T",
+  "URL": "https://www.amazon.co.jp/dp/B07MDK4L7T?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51GYtBL9bCL.jpg",
+  "Publisher": "ナンバーナイン",
+  "Contributor": "矢野トシノリ(著)",
+  "Booktype": "Kindle版",
+  "Title": "防御力ゼロの嫁【同人版】(2)",
   "Price": 0,
   "Category": "コミック・ラノベ・BL,マンガ",
   "Points": 0
@@ -1188,40 +1224,16 @@
   "Points": 0
  },
  {
-  "Asin": "B07FMQJRNL",
-  "URL": "https://www.amazon.co.jp/dp/B07FMQJRNL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51rBvAYNukL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "森もり子(著)",
-  "Booktype": "Kindle版",
-  "Title": "さよなら、ハイスクール （2）",
-  "Price": 0,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 0
- },
- {
-  "Asin": "B07DXQ7D1V",
-  "URL": "https://www.amazon.co.jp/dp/B07DXQ7D1V?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/5113xeyXY8L.jpg",
+  "Asin": "B07DXLZ5GN",
+  "URL": "https://www.amazon.co.jp/dp/B07DXLZ5GN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51zIWvq4FmL.jpg",
   "Publisher": "ナンバーナイン",
   "Contributor": "山崎紗也夏(著)",
   "Booktype": "Kindle版",
-  "Title": "マイナス 完全版（3）",
+  "Title": "マイナス 完全版（1）",
   "Price": 0,
   "Category": "コミック・ラノベ・BL,マンガ",
   "Points": 0
- },
- {
-  "Asin": "B07CXSSBKF",
-  "URL": "https://www.amazon.co.jp/dp/B07CXSSBKF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51UKGLa2mEL.jpg",
-  "Publisher": "ナンバーナイン",
-  "Contributor": "うめ（小沢高広・妹尾朝子）(著)",
-  "Booktype": "Kindle版",
-  "Title": "南国トムソーヤ （1）",
-  "Price": 165,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 2
  },
  {
   "Asin": "B07MKR1KTQ",
