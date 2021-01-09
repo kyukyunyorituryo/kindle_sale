@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/513MTzOLYCL.jpg" class="mr-3 lazyload" alt="夢で見たあの子のために(5) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢で見たあの子のために(5) (角川コミックス・エース)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B081PVPCL6</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081PVPCL6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/515K0aMZXnL.jpg" class="mr-3 lazyload" alt="夢で見たあの子のために(3) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢で見たあの子のために(3) (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07KP2MY5R</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KP2MY5R?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51eR68skDML.jpg" class="mr-3 lazyload" alt="夢で見たあの子のために(1) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢で見たあの子のために(1) (角川コミックス・エース)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B077MB2GW8</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B077MB2GW8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61kurUYKLzL.jpg" class="mr-3 lazyload" alt="夢で見たあの子のために(2) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢で見たあの子のために(2) (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07C782LFH</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07C782LFH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41yWiGqUawL.jpg" class="mr-3 lazyload" alt="ID:INVADED（２）　#BRAKE-BROKEN (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ID:INVADED（２）　#BRAKE-BROKEN (角川コミックス・エース)</h5>
+                    <p>価格：349円、ポイント：3</p>
+                    <p>小玉 有起(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08BHVS6K9</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BHVS6K9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51ydZ21pC-L.jpg" class="mr-3 lazyload" alt="夢で見たあの子のために(4) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢で見たあの子のために(4) (角川コミックス・エース)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07S3Z31WD</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07S3Z31WD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51L9BTeO1kL.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 ＶＩ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 ＶＩ (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00VFE63Y2</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00VFE63Y2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41oKZZmBWvL.jpg" class="mr-3 lazyload" alt="ID:INVADED（１）　#BRAKE-BROKEN (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ID:INVADED（１）　#BRAKE-BROKEN (角川コミックス・エース)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>小玉 有起(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B082WS39JK</p>
+<p>カテゴリー：コミック,少年マンガ,SF</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B082WS39JK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Bj6e3RSbL.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 ＩX (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 ＩX (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01MSLQJEY</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MSLQJEY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Bx-pJXVXL.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 VIII (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 VIII (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01DIIQ9V4</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01DIIQ9V4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/511W+YyeCUL.jpg" class="mr-3 lazyload" alt="ＳＨＥＲＬＯＣＫ ベルグレービアの醜聞　（上） ＳＨＥＲＬＯＣＫ シリーズ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＨＥＲＬＯＣＫ ベルグレービアの醜聞　（上） ＳＨＥＲＬＯＣＫ シリーズ (角川コミックス・エース)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>Ｊａｙ．(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07TCDXHFY</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07TCDXHFY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Nd7CTIK1L.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 ＶＩＩ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 ＶＩＩ (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B015X4USPY</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015X4USPY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QvjC5YB6L.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 X (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 X (角川コミックス・エース)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B071CKC3L7</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071CKC3L7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512APxmakxL.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 Ｖ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 Ｖ (角川コミックス・エース)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00P23YH7M</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00P23YH7M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CnUqJO6OL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(4) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(4) (角川コミックス・エース)</h5>
+                    <p>価格：305円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00KMHSJIQ</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KMHSJIQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51puwTnkOkL.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 ＩＶ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 ＩＶ (角川コミックス・エース)</h5>
+                    <p>価格：308円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00KIG2Z9K</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KIG2Z9K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pltvzuyFL.jpg" class="mr-3 lazyload" alt="万能鑑定士Ｑの事件簿 III (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Ｑの事件簿 III (角川コミックス・エース)</h5>
+                    <p>価格：305円、ポイント：3</p>
+                    <p>神江 ちず(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00IZXB3HS</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00IZXB3HS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51HgK1XL2pL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(3) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(3) (角川コミックス・エース)</h5>
+                    <p>価格：308円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00GZK5NLK</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GZK5NLK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516LWXxvXRL.jpg" class="mr-3 lazyload" alt="万能鑑定士Qの事件簿 II 「万能鑑定士Q」シリーズ (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Qの事件簿 II 「万能鑑定士Q」シリーズ (角川文庫)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>松岡 圭祐(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0093GE3HI</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0093GE3HI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51CrRiwodiL.jpg" class="mr-3 lazyload" alt="ＳＨＥＲＬＯＣＫ ピンク色の研究 ＳＨＥＲＬＯＣＫ シリーズ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＨＥＲＬＯＣＫ ピンク色の研究 ＳＨＥＲＬＯＣＫ シリーズ (角川コミックス・エース)</h5>
+                    <p>価格：308円、ポイント：3</p>
+                    <p>Ｊａｙ．(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00F0KBAQ8</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00F0KBAQ8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51OnphCpAAL.jpg" class="mr-3 lazyload" alt="万能鑑定士Qの事件簿 I 「万能鑑定士Q」シリーズ (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>万能鑑定士Qの事件簿 I 「万能鑑定士Q」シリーズ (角川文庫)</h5>
+                    <p>価格：495円、ポイント：5</p>
+                    <p>松岡 圭祐(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0093GE1UM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0093GE1UM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PmyaZnx6L.jpg" class="mr-3 lazyload" alt="僕だけがいない街(2) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(2) (角川コミックス・エース)</h5>
+                    <p>価格：308円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00DONC1XE</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DONC1XE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/418WEXWwwWL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(1) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(1) (角川コミックス・エース)</h5>
+                    <p>価格：305円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00CM0F5PQ</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CM0F5PQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51UpVDlm6LL.jpg" class="mr-3 lazyload" alt="地獄くらやみ花もなき　（１） (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地獄くらやみ花もなき　（１） (角川コミックス・エース)</h5>
+                    <p>価格：349円、ポイント：3</p>
+                    <p>藤堂 流風(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08GFHLDMH</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08GFHLDMH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/518vE0e1LvL.jpg" class="mr-3 lazyload" alt="高校事変　Ｉ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>高校事変　Ｉ (角川コミックス・エース)</h5>
+                    <p>価格：352円、ポイント：4</p>
+                    <p>オオイシヒロト(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08BHTMZQV</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BHTMZQV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aPYEjonML.jpg" class="mr-3 lazyload" alt="キミガシネ　‐多数決デスゲーム‐　（１） (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キミガシネ　‐多数決デスゲーム‐　（１） (角川コミックス・エース)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>池上 竜矢(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B084KQW2MN</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084KQW2MN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51Ck4+Bs55L.jpg" class="mr-3 lazyload" alt="櫻子さんの足下には死体が埋まっている(2) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>櫻子さんの足下には死体が埋まっている(2) (角川コミックス・エース)</h5>
+                    <p>価格：341円、ポイント：3</p>
+                    <p>水口 十(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0796MC73Y</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0796MC73Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/514TEQ45HML.jpg" class="mr-3 lazyload" alt="櫻子さんの足下には死体が埋まっている　蝶は十一月に消えた (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>櫻子さんの足下には死体が埋まっている　蝶は十一月に消えた (角川文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>太田 紫織(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00IKF4SW8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00IKF4SW8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51IBWznT5jL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(9) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(9) (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01MSBQ6A7</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MSBQ6A7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SRJMpZfAL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(8) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(8) (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01E8BNEA4</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01E8BNEA4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51SX1znf-nL.jpg" class="mr-3 lazyload" alt="ＳＨＥＲＬＯＣＫ 大いなるゲーム ＳＨＥＲＬＯＣＫ シリーズ (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＨＥＲＬＯＣＫ 大いなるゲーム ＳＨＥＲＬＯＣＫ シリーズ (角川コミックス・エース)</h5>
+                    <p>価格：338円、ポイント：3</p>
+                    <p>Ｊａｙ．(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01BHEUZBQ</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01BHEUZBQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/619flUUEdVL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(7) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(7) (角川コミックス・エース)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B019I5E32S</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B019I5E32S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51QTD+It68L.jpg" class="mr-3 lazyload" alt="櫻子さんの足下には死体が埋まっている(1) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>櫻子さんの足下には死体が埋まっている(1) (角川コミックス・エース)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>水口 十(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0186MJR2U</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0186MJR2U?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51bk7HIvqFL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(6) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(6) (角川コミックス・エース)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B010N2825O</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B010N2825O?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51JqSMVy7qL.jpg" class="mr-3 lazyload" alt="僕だけがいない街(5) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕だけがいない街(5) (角川コミックス・エース)</h5>
+                    <p>価格：316円、ポイント：3</p>
+                    <p>三部 けい(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00R3XZNEK</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00R3XZNEK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/516B7TDlLSL.jpg" class="mr-3 lazyload" alt="ＳＨＥＲＬＯＣＫ 死を呼ぶ暗号 (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＨＥＲＬＯＣＫ 死を呼ぶ暗号 (角川コミックス・エース)</h5>
+                    <p>価格：305円、ポイント：3</p>
+                    <p>Ｊａｙ．(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00KR2TTQM</p>
+<p>カテゴリー：コミック,少年マンガ,ミステリー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KR2TTQM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51BkyglHV7L.jpg" class="mr-3 lazyload" alt="Ａｎｏｔｈｅｒ　エピソードＳ（角川文庫版） Another"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａｎｏｔｈｅｒ　エピソードＳ（角川文庫版） Another</h5>
+                    <p>価格：634円、ポイント：6</p>
+                    <p>綾辻 行人(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01H13QHO6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01H13QHO6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LkBeaqfWL.jpg" class="mr-3 lazyload" alt="Another(3) (角川コミックス・エース)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Another(3) (角川コミックス・エース)</h5>
+                    <p>価格：305円、ポイント：3</p>
+                    <p>綾辻 行人(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0093GAJOY</p>
+<p>カテゴリー：コミック,少年マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0093GAJOY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51leeMss+EL.jpg" class="mr-3 lazyload" alt="Ａｎｏｔｈｅｒ （下） Another (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａｎｏｔｈｅｒ （下） Another (角川文庫)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>綾辻 行人(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00961E6K4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00961E6K4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51vV7HToETL.jpg" class="mr-3 lazyload" alt="Ａｎｏｔｈｅｒ （上） Another (角川文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ａｎｏｔｈｅｒ （上） Another (角川文庫)</h5>
+                    <p>価格：653円、ポイント：7</p>
+                    <p>綾辻 行人(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00961E690</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00961E690?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>

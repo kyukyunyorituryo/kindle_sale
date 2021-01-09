@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61jKa75yjkL.jpg" class="mr-3 lazyload" alt="「幸福な日本」の経済学 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「幸福な日本」の経済学 (講談社選書メチエ)</h5>
+                    <p>価格：1155円、ポイント：12</p>
+                    <p>石見徹(著)</p>
+                    <p>出版社：講談社、ASIN：B077D13KYM</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B077D13KYM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51iApywoTVL.jpg" class="mr-3 lazyload" alt="国力とは何か―経済ナショナリズムの理論と政策 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>国力とは何か―経済ナショナリズムの理論と政策 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>中野剛志(著)</p>
+                    <p>出版社：講談社、ASIN：B076GVN4CT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076GVN4CT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51urtCnXN-L.jpg" class="mr-3 lazyload" alt="勇敢な日本経済論 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>勇敢な日本経済論 (講談社現代新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>高橋洋一(著)</p>
+                    <p>出版社：講談社、ASIN：B071D4JJ7Q</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071D4JJ7Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51qMPr+E1KL.jpg" class="mr-3 lazyload" alt="日本経済入門 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本経済入門 (講談社現代新書)</h5>
+                    <p>価格：413円、ポイント：4</p>
+                    <p>野口悠紀雄(著)</p>
+                    <p>出版社：講談社、ASIN：B06XDKPXRJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XDKPXRJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51mlB-MWL+L.jpg" class="mr-3 lazyload" alt="ブルジョワ　近代経済人の精神史 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ブルジョワ　近代経済人の精神史 (講談社学術文庫)</h5>
+                    <p>価格：1348円、ポイント：13</p>
+                    <p>ヴェルナー・ゾンバルト(著)</p>
+                    <p>出版社：講談社、ASIN：B01N9GRDE8</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N9GRDE8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41VCZZVM0tL.jpg" class="mr-3 lazyload" alt="経済人類学 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済人類学 (講談社学術文庫)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>栗本慎一郎(著)</p>
+                    <p>出版社：講談社、ASIN：B01NAID0IS</p>
+<p>カテゴリー：ジャンル別,世界史</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01NAID0IS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51PK3F43sTL.jpg" class="mr-3 lazyload" alt="経済数学の直観的方法　確率・統計編 (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済数学の直観的方法　確率・統計編 (ブルーバックス)</h5>
+                    <p>価格：893円、ポイント：9</p>
+                    <p>長沼伸一郎(著)</p>
+                    <p>出版社：講談社、ASIN：B01N66D7CV</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N66D7CV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51YTh4HEZfL.jpg" class="mr-3 lazyload" alt="ノーベル経済学賞　天才たちから専門家たちへ (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ノーベル経済学賞　天才たちから専門家たちへ (講談社選書メチエ)</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>根井雅弘(著)</p>
+                    <p>出版社：講談社、ASIN：B01MAY31EP</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MAY31EP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51M7olfdadL.jpg" class="mr-3 lazyload" alt="経済数学の直観的方法　マクロ経済学編 (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済数学の直観的方法　マクロ経済学編 (ブルーバックス)</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>長沼伸一郎(著)</p>
+                    <p>出版社：講談社、ASIN：B01M1RFG08</p>
+<p>カテゴリー：ジャンル別,Featured Categories,数学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01M1RFG08?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41sPgmJ50UL.jpg" class="mr-3 lazyload" alt="おトクなお金はどっち？　こっち！　クイズでわかる「貯まる！」「トクする！」お金の仕組み"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おトクなお金はどっち？　こっち！　クイズでわかる「貯まる！」「トクする！」お金の仕組み</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>荻原博子(著)</p>
+                    <p>出版社：講談社、ASIN：B01IETZKSK</p>
+<p>カテゴリー：ジャンル別,家事・生活の知識</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01IETZKSK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gJ-U8at7L.jpg" class="mr-3 lazyload" alt="江戸の市場経済　歴史制度分析からみた株仲間 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>江戸の市場経済　歴史制度分析からみた株仲間 (講談社選書メチエ)</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>岡崎哲二(著)</p>
+                    <p>出版社：講談社、ASIN：B011QIHMLY</p>
+<p>カテゴリー：日本史一般,投資・金融・会社経営,Featured Categories,投資・金融・会社経営,日本史</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B011QIHMLY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51TndiQYe0L.jpg" class="mr-3 lazyload" alt="ユダヤ人と経済生活（１）"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ユダヤ人と経済生活（１）</h5>
+                    <p>価格：770円、ポイント：52</p>
+                    <p>ゾンバルト(著)</p>
+                    <p>出版社：講談社、ASIN：B07PDFH77C</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PDFH77C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51u1ljax2JL.jpg" class="mr-3 lazyload" alt="マーケット・デザイン　オークションとマッチングの経済学 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マーケット・デザイン　オークションとマッチングの経済学 (講談社選書メチエ)</h5>
+                    <p>価格：1232円、ポイント：12</p>
+                    <p>川越敏司(著)</p>
+                    <p>出版社：講談社、ASIN：B00UUOXCN8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UUOXCN8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51b3jE6lLzL.jpg" class="mr-3 lazyload" alt="比較制度分析序説　経済システムの進化と多元性 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>比較制度分析序説　経済システムの進化と多元性 (講談社学術文庫)</h5>
+                    <p>価格：809円、ポイント：8</p>
+                    <p>青木昌彦(著)</p>
+                    <p>出版社：講談社、ASIN：B00TGU77ME</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00TGU77ME?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41ZyBV-dLoL.jpg" class="mr-3 lazyload" alt="歴代日本銀行総裁論　日本金融政策史の研究 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>歴代日本銀行総裁論　日本金融政策史の研究 (講談社学術文庫)</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>吉野俊彦(著)</p>
+                    <p>出版社：講談社、ASIN：B00S61XTZS</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00S61XTZS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51D9yW0phlL.jpg" class="mr-3 lazyload" alt="経済学の歴史 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済学の歴史 (講談社学術文庫)</h5>
+                    <p>価格：963円、ポイント：10</p>
+                    <p>根井雅弘(著)</p>
+                    <p>出版社：講談社、ASIN：B00M18VMQU</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00M18VMQU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51gglee3hwL.jpg" class="mr-3 lazyload" alt="「失敗」の経済政策史 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「失敗」の経済政策史 (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>川北隆雄(著)</p>
+                    <p>出版社：講談社、ASIN：B00LUMW7RG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00LUMW7RG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/512L+qeLvlL.jpg" class="mr-3 lazyload" alt="あなたの所得を倍増させる経済学"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あなたの所得を倍増させる経済学</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>三橋貴明(著)</p>
+                    <p>出版社：講談社、ASIN：B00LS5OOFI</p>
+<p>カテゴリー：ノンフィクション,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00LS5OOFI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41LVQEZ32kL.jpg" class="mr-3 lazyload" alt="経済学再入門 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済学再入門 (講談社学術文庫)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>根井雅弘(著)</p>
+                    <p>出版社：講談社、ASIN：B00KCL6V78</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KCL6V78?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51yOZTFwpwL.jpg" class="mr-3 lazyload" alt="暗号が通貨になる「ビットコイン」のからくり (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>暗号が通貨になる「ビットコイン」のからくり (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>吉本佳生(著)</p>
+                    <p>出版社：講談社、ASIN：B00K19KAP0</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済,投資・金融・会社経営</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00K19KAP0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51rvqUy68LL.jpg" class="mr-3 lazyload" alt="確率・統計でわかる「金融リスク」のからくり　「想定外の損失」をどう避けるか (ブルーバックス)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>確率・統計でわかる「金融リスク」のからくり　「想定外の損失」をどう避けるか (ブルーバックス)</h5>
+                    <p>価格：755円、ポイント：8</p>
+                    <p>吉本佳生(著)</p>
+                    <p>出版社：講談社、ASIN：B00JA05JZ2</p>
+<p>カテゴリー：金融・ファイナンス,Featured Categories,金融・ファイナンス</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JA05JZ2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31ndW8UtlcL.jpg" class="mr-3 lazyload" alt="中国経済の正体 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>中国経済の正体 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>門倉貴史(著)</p>
+                    <p>出版社：講談社、ASIN：B00HV9UPBC</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00HV9UPBC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/31ML9mEpK3L.jpg" class="mr-3 lazyload" alt="経済成長という病　退化に生きる、我ら (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済成長という病　退化に生きる、我ら (講談社現代新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>平川克美(著)</p>
+                    <p>出版社：講談社、ASIN：B00E3N04GK</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00E3N04GK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51o0xa2I4TL.jpg" class="mr-3 lazyload" alt="日本の景気は賃金が決める (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本の景気は賃金が決める (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>吉本佳生(著)</p>
+                    <p>出版社：講談社、ASIN：B00CE3T9RQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CE3T9RQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51st-v6zSXL.jpg" class="mr-3 lazyload" alt="中国共産党の経済政策 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>中国共産党の経済政策 (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>柴田聡(著)</p>
+                    <p>出版社：講談社、ASIN：B00BB1ZREG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00BB1ZREG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51jq8j5RNCL.jpg" class="mr-3 lazyload" alt="ダークサイド投資術　元経済ヤクザが明かす「アフター・コロナ」を生き抜く黒いマネーの流儀 (講談社＋α新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダークサイド投資術　元経済ヤクザが明かす「アフター・コロナ」を生き抜く黒いマネーの流儀 (講談社＋α新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>猫組長（菅原潮）(著)</p>
+                    <p>出版社：講談社、ASIN：B089STH6PB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B089STH6PB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41dXK3dTI3L.jpg" class="mr-3 lazyload" alt="戦国大名の経済学 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>戦国大名の経済学 (講談社現代新書)</h5>
+                    <p>価格：732円、ポイント：7</p>
+                    <p>川戸貴史(著)</p>
+                    <p>出版社：講談社、ASIN：B089SV33CX</p>
+<p>カテゴリー：歴史学,Featured Categories,歴史学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B089SV33CX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51uCbNnAT6L.jpg" class="mr-3 lazyload" alt="離婚の経済学　愛と別れの論理 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>離婚の経済学　愛と別れの論理 (講談社現代新書)</h5>
+                    <p>価格：655円、ポイント：7</p>
+                    <p>橘木俊詔(著)</p>
+                    <p>出版社：講談社、ASIN：B086SSRJRL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B086SSRJRL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KZTtb5nOL.jpg" class="mr-3 lazyload" alt="現代経済学の直観的方法"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>現代経済学の直観的方法</h5>
+                    <p>価格：1694円、ポイント：17</p>
+                    <p>長沼伸一郎(著)</p>
+                    <p>出版社：講談社、ASIN：B086JW8RYR</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B086JW8RYR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51KX2icU0mL.jpg" class="mr-3 lazyload" alt="マンガでわかる　シンプルで正しいお金の増やし方"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マンガでわかる　シンプルで正しいお金の増やし方</h5>
+                    <p>価格：886円、ポイント：9</p>
+                    <p>山崎元(著)</p>
+                    <p>出版社：講談社、ASIN：B07XDKY71P</p>
+<p>カテゴリー：コミック,ビジネス・経済,投資・金融・会社経営,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XDKY71P?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41keRswcl4L.jpg" class="mr-3 lazyload" alt="ザ・ネクストバンカー　次世代の銀行員のかたち (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ザ・ネクストバンカー　次世代の銀行員のかたち (講談社現代新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>浪川攻(著)</p>
+                    <p>出版社：講談社、ASIN：B07W555N4H</p>
+<p>カテゴリー：ノンフィクション,Featured Categories,ビジネス・経済,投資・金融・会社経営</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07W555N4H?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/517GI9ZIxpL.jpg" class="mr-3 lazyload" alt="金融ダークサイド　元経済ヤクザが明かす「マネーと暴力」の新世界"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>金融ダークサイド　元経済ヤクザが明かす「マネーと暴力」の新世界</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>猫組長（菅原潮）(著)</p>
+                    <p>出版社：講談社、ASIN：B07VC5GNVP</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07VC5GNVP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/5126qALaLjL.jpg" class="mr-3 lazyload" alt="資本主義と闘った男　宇沢弘文と経済学の世界"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>資本主義と闘った男　宇沢弘文と経済学の世界</h5>
+                    <p>価格：1887円、ポイント：19</p>
+                    <p>佐々木実(著)</p>
+                    <p>出版社：講談社、ASIN：B07PP2YZ66</p>
+<p>カテゴリー：ノンフィクション,ノンフィクション</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PP2YZ66?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41Ry4tLCyZL.jpg" class="mr-3 lazyload" alt="暗号通貨の経済学　２１世紀の貨幣論 (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>暗号通貨の経済学　２１世紀の貨幣論 (講談社選書メチエ)</h5>
+                    <p>価格：1117円、ポイント：11</p>
+                    <p>小島寛之(著)</p>
+                    <p>出版社：講談社、ASIN：B07M9NFJMW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07M9NFJMW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51dRBXdn8VL.jpg" class="mr-3 lazyload" alt="世界経済入門 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界経済入門 (講談社現代新書)</h5>
+                    <p>価格：413円、ポイント：4</p>
+                    <p>野口悠紀雄(著)</p>
+                    <p>出版社：講談社、ASIN：B07GDFKLHL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GDFKLHL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/61RAB+EH7bL.jpg" class="mr-3 lazyload" alt="中世都市　社会経済史的試論 (講談社学術文庫)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>中世都市　社会経済史的試論 (講談社学術文庫)</h5>
+                    <p>価格：963円、ポイント：10</p>
+                    <p>アンリ・ピレンヌ(著)</p>
+                    <p>出版社：講談社、ASIN：B07HFWV2H4</p>
+<p>カテゴリー：歴史学,歴史学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HFWV2H4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51q57I9dNmL.jpg" class="mr-3 lazyload" alt="大坂堂島米市場　江戸幕府ｖｓ市場経済 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大坂堂島米市場　江戸幕府ｖｓ市場経済 (講談社現代新書)</h5>
+                    <p>価格：655円、ポイント：7</p>
+                    <p>高槻泰郎(著)</p>
+                    <p>出版社：講談社、ASIN：B07FCBNN33</p>
+<p>カテゴリー：歴史学,Featured Categories,歴史学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FCBNN33?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pzqj1KN1L.jpg" class="mr-3 lazyload" alt="はじめての経済思想史　アダム・スミスから現代まで (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>はじめての経済思想史　アダム・スミスから現代まで (講談社現代新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>中村隆之(著)</p>
+                    <p>出版社：講談社、ASIN：B07DHK21YP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07DHK21YP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51NohOuTxoL.jpg" class="mr-3 lazyload" alt="プライベートバンカー　驚異の資産運用砲 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プライベートバンカー　驚異の資産運用砲 (講談社現代新書)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>杉山智一(著)</p>
+                    <p>出版社：講談社、ASIN：B07B7J5F74</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B7J5F74?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/41OcJ7yzLJL.jpg" class="mr-3 lazyload" alt="ゼロからわかる　経済学の思考法 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゼロからわかる　経済学の思考法 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>小島寛之(著)</p>
+                    <p>出版社：講談社、ASIN：B00DKX486Q</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DKX486Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/413GJ1FaoWL.jpg" class="mr-3 lazyload" alt="二つの「競争」―競争観をめぐる現代経済思想 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>二つの「競争」―競争観をめぐる現代経済思想 (講談社現代新書)</h5>
+                    <p>価格：501円、ポイント：5</p>
+                    <p>井上義朗(著)</p>
+                    <p>出版社：講談社、ASIN：B00BJ09J0W</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00BJ09J0W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51VaHeA2MoL.jpg" class="mr-3 lazyload" alt="経済学の犯罪　稀少性の経済から過剰性の経済へ (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済学の犯罪　稀少性の経済から過剰性の経済へ (講談社現代新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>佐伯啓思(著)</p>
+                    <p>出版社：講談社、ASIN：B009SM159G</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009SM159G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51pOEXwA-DL.jpg" class="mr-3 lazyload" alt="経済成長神話の終わり　減成長と日本の希望 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済成長神話の終わり　減成長と日本の希望 (講談社現代新書)</h5>
+                    <p>価格：578円、ポイント：6</p>
+                    <p>アンドリュー・Ｊ．サター(著)</p>
+                    <p>出版社：講談社、ASIN：B009I7KOWA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009I7KOWA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51LpTkGgEJL.jpg" class="mr-3 lazyload" alt="日本経済の奇妙な常識 (講談社現代新書)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本経済の奇妙な常識 (講談社現代新書)</h5>
+                    <p>価格：539円、ポイント：5</p>
+                    <p>吉本佳生(著)</p>
+                    <p>出版社：講談社、ASIN：B009I7KM7M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009I7KM7M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51sJQuZBA-L.jpg" class="mr-3 lazyload" alt="ザ・ラストバンカー　西川善文回顧録"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ザ・ラストバンカー　西川善文回顧録</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>西川善文(著)</p>
+                    <p>出版社：講談社、ASIN：B009GXM2P8</p>
+<p>カテゴリー：ノンフィクション,ビジネス・経済,投資・金融・会社経営,歴史・地理</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GXM2P8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/417fx87Z5nL.jpg" class="mr-3 lazyload" alt="経済倫理＝あなたは、なに主義？ (講談社選書メチエ)"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>経済倫理＝あなたは、なに主義？ (講談社選書メチエ)</h5>
+                    <p>価格：1386円、ポイント：14</p>
+                    <p>橋本努(著)</p>
+                    <p>出版社：講談社、ASIN：B00C1E2U60</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00C1E2U60?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img data-src="https://m.media-amazon.com/images/I/51aI56IZwWL.jpg" class="mr-3 lazyload" alt="ユーマネー　Ｆｒｅｅ（ただ）でお金と自分を成長させる方法"/>
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ユーマネー　Ｆｒｅｅ（ただ）でお金と自分を成長させる方法</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>中村祐介(著)</p>
+                    <p>出版社：講談社、ASIN：B00KV9N246</p>
+<p>カテゴリー：ジャンル別,Kindle本</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KV9N246?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
