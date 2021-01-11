@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Y-SjwFkuL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年11月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年11月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B08J4B7Y5P</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08J4B7Y5P?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Sdcm8HWlL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年10月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年10月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B08FM8ZLW4</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08FM8ZLW4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61wRXYi2h6L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年9月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年9月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B08CXY4YMQ</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08CXY4YMQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZJ-l7S-ML.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年8月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年8月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B08B68VW58</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08B68VW58?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61knMSBn2iL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年7月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年7月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B088LWXTFQ</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B088LWXTFQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61fWar0nnXL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年6月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年6月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B08732PZ8C</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08732PZ8C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51opNCn8BhL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年5月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年5月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B085W2QY3Y</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085W2QY3Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/614yEmdujML.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年4月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年4月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B084RBC8L6</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084RBC8L6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Or3AtLeRL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年3月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年3月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B083W88HRL</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B083W88HRL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61yJRsis1IL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年2月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年2月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B082S9Q1W8</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B082S9Q1W8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61XLIDsdj+L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2020年1月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2020年1月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B081DYMR6K</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081DYMR6K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jrxN8mX4L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年12月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年12月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07Z534QBZ</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07Z534QBZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61YYtUN+bbL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年11月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年11月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07XT8T94R</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XT8T94R?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61JhQvLuz2L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年10月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年10月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07WLPXV44</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07WLPXV44?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51oB7oVi+CL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年9月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年9月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07V8185LJ</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07V8185LJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51sPQVQQOAL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年8月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年8月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07T5L6NQM</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07T5L6NQM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61cA5BdbIaL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年7月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年7月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07RRTFWP5</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RRTFWP5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Ut3sgQMpL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年6月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年6月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07QML6DM1</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QML6DM1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51hasN0iY8L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年5月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年5月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07PMD6D6Q</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PMD6D6Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51fJjnHu1fL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年4月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年4月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07NP8MG9G</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NP8MG9G?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61H+huA4tCL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年3月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年3月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07MTF2LD9</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MTF2LD9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51otkETbo+L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年2月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年2月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07LBQVC2H</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07LBQVC2H?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51GS+mA0RYL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2019年1月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2019年1月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07KG93764</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KG93764?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51IgwT44DUL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年12月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年12月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07JF6S9BB</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JF6S9BB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61uCejg2yML.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年11月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年11月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07H99BGNW</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07H99BGNW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61lgVh+mPdL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年10月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年10月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07GH2GVQ5</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GH2GVQ5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51UKSqPQuCL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年9月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年9月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07FJYD7VJ</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FJYD7VJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/6106qPhah-L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年8月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年8月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07DPNQJHH</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07DPNQJHH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61gE+MeLI8L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年7月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年7月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07D385T2Z</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D385T2Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61TtmRhflJL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年6月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年6月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07C5Z1YCL</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07C5Z1YCL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61qcNcImGGL.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年5月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年5月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B07BGC4Q8Q</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BGC4Q8Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/616cK093i9L.jpg" class="mr-3 lazyload" alt="デジタル版月刊Gファンタジー 2018年4月号 [雑誌]" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>デジタル版月刊Gファンタジー 2018年4月号 [雑誌]</h5>
+                    <p>価格：100円、ポイント：1</p>
+                    <p>スクウェア・エニックス(著)</p>
+                    <p>出版社：スクウェア・エニックス、ASIN：B079SBSGSY</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ雑誌</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079SBSGSY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
