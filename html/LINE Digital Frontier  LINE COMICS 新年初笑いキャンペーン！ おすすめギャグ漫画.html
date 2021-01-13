@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EXuXiMhlL.jpg" class="mr-3 lazyload" alt="桃太郎くんは言うコトをきかない　5巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃太郎くんは言うコトをきかない　5巻 (LINEコミックス)</h5>
+                    <p>価格：638円、ポイント：6</p>
+                    <p>御守リツヒロ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08Q7B1K6M</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08Q7B1K6M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518OCC9-+qL.jpg" class="mr-3 lazyload" alt="桃太郎くんは言うコトをきかない　4巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃太郎くんは言うコトをきかない　4巻 (LINEコミックス)</h5>
+                    <p>価格：638円、ポイント：6</p>
+                    <p>御守リツヒロ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08Q7Y2T6Z</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08Q7Y2T6Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Xlx8woV3L.jpg" class="mr-3 lazyload" alt="さいこうび 5巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さいこうび 5巻 (LINEコミックス)</h5>
+                    <p>価格：682円、ポイント：7</p>
+                    <p>ななみね希(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08P7BWYQJ</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08P7BWYQJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51XyvBZG9NL.jpg" class="mr-3 lazyload" alt="さいこうび 4巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さいこうび 4巻 (LINEコミックス)</h5>
+                    <p>価格：638円、ポイント：6</p>
+                    <p>ななみね希(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08P7C6ZJB</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08P7C6ZJB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51i2AjwqizL.jpg" class="mr-3 lazyload" alt="いいねだいすき ふぁぼこちゃん 2巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いいねだいすき ふぁぼこちゃん 2巻 (LINEコミックス)</h5>
+                    <p>価格：638円、ポイント：6</p>
+                    <p>ノド山(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08N8MFG8M</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08N8MFG8M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/517rrKeXsaL.jpg" class="mr-3 lazyload" alt="不良退魔師レイナ 4巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>不良退魔師レイナ 4巻 (LINEコミックス)</h5>
+                    <p>価格：574円、ポイント：6</p>
+                    <p>OTOSAMA(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08GPGF1LV</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08GPGF1LV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Gomf6O5KL.jpg" class="mr-3 lazyload" alt="さいこうび 3巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さいこうび 3巻 (LINEコミックス)</h5>
+                    <p>価格：606円、ポイント：6</p>
+                    <p>ななみね希(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B08B36NQMH</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08B36NQMH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uKhAyn+VL.jpg" class="mr-3 lazyload" alt="いいねだいすき ふぁぼこちゃん 1巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いいねだいすき ふぁぼこちゃん 1巻 (LINEコミックス)</h5>
+                    <p>価格：319円、ポイント：3</p>
+                    <p>ノド山(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B085RSGK9Z</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085RSGK9Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51eulHiPHgL.jpg" class="mr-3 lazyload" alt="さいこうび 2巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さいこうび 2巻 (LINEコミックス)</h5>
+                    <p>価格：319円、ポイント：210</p>
+                    <p>ななみね希(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B085RFV42Z</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085RFV42Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wNjaM3UBL.jpg" class="mr-3 lazyload" alt="不良退魔師レイナ 3巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>不良退魔師レイナ 3巻 (LINEコミックス)</h5>
+                    <p>価格：614円、ポイント：6</p>
+                    <p>ＯＴＯＳＡＭＡ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B085RP1Z5N</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085RP1Z5N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51iSnpMZDwL.jpg" class="mr-3 lazyload" alt="桃太郎くんは言うコトをきかない　3巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃太郎くんは言うコトをきかない　3巻 (LINEコミックス)</h5>
+                    <p>価格：275円、ポイント：166</p>
+                    <p>御守リツヒロ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07YX28PNK</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YX28PNK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51+cu-ATuLL.jpg" class="mr-3 lazyload" alt="不良退魔師レイナ 2巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>不良退魔師レイナ 2巻 (LINEコミックス)</h5>
+                    <p>価格：253円、ポイント：3</p>
+                    <p>ＯＴＯＳＡＭＡ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07XQBGNL1</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XQBGNL1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ozxCPCq8L.jpg" class="mr-3 lazyload" alt="ラッパーに噛まれたらラッパーになる漫画 3巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラッパーに噛まれたらラッパーになる漫画 3巻</h5>
+                    <p>価格：506円、ポイント：5</p>
+                    <p>インカ帝国(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07TPH5M44</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07TPH5M44?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51XFajo3TdL.jpg" class="mr-3 lazyload" alt="月曜から金曜の男子高校生 5巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月曜から金曜の男子高校生 5巻</h5>
+                    <p>価格：506円、ポイント：5</p>
+                    <p>森つぶみ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07RK9MMRW</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RK9MMRW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51in0ikSbSL.jpg" class="mr-3 lazyload" alt="ハードボイルド園児 宇宙くん  9巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハードボイルド園児 宇宙くん  9巻</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>福星英春(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07J5JHD5S</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07J5JHD5S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Zfn4gjy8L.jpg" class="mr-3 lazyload" alt="ハードボイルド園児 宇宙くん  8巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハードボイルド園児 宇宙くん  8巻</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>福星英春(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07J9VXXPM</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07J9VXXPM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51D0RLhJtxL.jpg" class="mr-3 lazyload" alt="月曜から金曜の男子高校生 4巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月曜から金曜の男子高校生 4巻</h5>
+                    <p>価格：506円、ポイント：5</p>
+                    <p>森つぶみ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07H7CR8YR</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07H7CR8YR?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Q4rDQrJOL.jpg" class="mr-3 lazyload" alt="ラッパーに噛まれたらラッパーになる漫画　2巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ラッパーに噛まれたらラッパーになる漫画　2巻</h5>
+                    <p>価格：253円、ポイント：3</p>
+                    <p>インカ帝国(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07F1Q6JWP</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07F1Q6JWP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Fk3Ic60fL.jpg" class="mr-3 lazyload" alt="ハードボイルド園児 宇宙くん　7巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハードボイルド園児 宇宙くん　7巻 (LINEコミックス)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>福星英春(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07D1KP87H</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D1KP87H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51GWfH+jo3L.jpg" class="mr-3 lazyload" alt="ハードボイルド園児 宇宙くん　6巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハードボイルド園児 宇宙くん　6巻 (LINEコミックス)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>福星英春(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07D1L1QTD</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D1L1QTD?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51TMWBZFLuL.jpg" class="mr-3 lazyload" alt="月曜から金曜の男子高校生　3巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月曜から金曜の男子高校生　3巻 (LINEコミックス)</h5>
+                    <p>価格：253円、ポイント：3</p>
+                    <p>森つぶみ(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B07CFWTB6H</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CFWTB6H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ICq5ru-bL.jpg" class="mr-3 lazyload" alt="ハードボイルド園児 宇宙くん　5巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハードボイルド園児 宇宙くん　5巻</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>福星英春(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B071X6H116</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071X6H116?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61fMJM+rTkL.jpg" class="mr-3 lazyload" alt="ハードボイルド園児 宇宙くん　4巻 (LINEコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハードボイルド園児 宇宙くん　4巻 (LINEコミックス)</h5>
+                    <p>価格：275円、ポイント：3</p>
+                    <p>福星英春(著)</p>
+                    <p>出版社：LINE Digital Frontier、ASIN：B01N10PTLG</p>
+<p>カテゴリー：コミック,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N10PTLG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Qvv-LNbzL.jpg" class="mr-3 lazyload" alt="ガンニバル 4" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ガンニバル 4</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>二宮正明(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B0813DPDV3</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0813DPDV3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51B7CEBxOVL.jpg" class="mr-3 lazyload" alt="ガンニバル 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ガンニバル 3</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>二宮正明(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07WJWWWDM</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07WJWWWDM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61+2sCnlkfL.jpg" class="mr-3 lazyload" alt="男塾外伝　死天王 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　死天王 1</h5>
+                    <p>価格：421円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B085Y7XDVY</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085Y7XDVY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61jnZZ6OYjL.jpg" class="mr-3 lazyload" alt="男塾外伝　赤石剛次 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　赤石剛次 3</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07F2FCHCT</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07F2FCHCT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61nXNOtTJ+L.jpg" class="mr-3 lazyload" alt="男塾外伝　伊達臣人 4" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　伊達臣人 4</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B01MQNTV7G</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MQNTV7G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61SYDNM66yL.jpg" class="mr-3 lazyload" alt="極！！男塾 4" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極！！男塾 4</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B017XKJDQ6</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017XKJDQ6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/616P6KVFiAL.jpg" class="mr-3 lazyload" alt="僕！！男塾 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕！！男塾 1</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07CSY64DK</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CSY64DK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Xcd8qwulL.jpg" class="mr-3 lazyload" alt="真！！男塾 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真！！男塾 3</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07C97T18H</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07C97T18H?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61TqgrJ++gL.jpg" class="mr-3 lazyload" alt="男塾外伝　赤石剛次 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　赤石剛次 2</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B0792W732T</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0792W732T?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61e7iK14t2L.jpg" class="mr-3 lazyload" alt="真！！男塾 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真！！男塾 2</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B076V9N6MM</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076V9N6MM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51lt6KPcBFL.jpg" class="mr-3 lazyload" alt="男塾外伝　大豪院邪鬼 4" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　大豪院邪鬼 4</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B076HNHH12</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076HNHH12?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51peXqBejGL.jpg" class="mr-3 lazyload" alt="男塾外伝　紅！！女塾 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　紅！！女塾 3</h5>
+                    <p>価格：419円、ポイント：4</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B01J5OH1ZS</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01J5OH1ZS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EpDsxTh8L.jpg" class="mr-3 lazyload" alt="男塾外伝　大豪院邪鬼 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　大豪院邪鬼 3</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B06Y1Z8JPT</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06Y1Z8JPT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61u18fdv-ML.jpg" class="mr-3 lazyload" alt="男塾外伝　伊達臣人 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　伊達臣人 3</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B01FQE49KQ</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01FQE49KQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/513WLf-TNWL.jpg" class="mr-3 lazyload" alt="男塾外伝　紅！！女塾 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　紅！！女塾 2</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B01AVU5FAS</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01AVU5FAS?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61y0e+XTeiL.jpg" class="mr-3 lazyload" alt="極！！男塾 3" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極！！男塾 3</h5>
+                    <p>価格：299円、ポイント：3</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B00XHIEQ8Y</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00XHIEQ8Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51yL9t9M-4L.jpg" class="mr-3 lazyload" alt="ガンニバル 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ガンニバル 2</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>二宮正明(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07RWLXK5P</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RWLXK5P?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nyZub5aVL.jpg" class="mr-3 lazyload" alt="ガンニバル 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ガンニバル 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>二宮正明(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07NQJBF6G</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NQJBF6G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61pgYpM8zGL.jpg" class="mr-3 lazyload" alt="真！！男塾 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>真！！男塾 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B07175N9V1</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07175N9V1?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51UkN3xU5IL.jpg" class="mr-3 lazyload" alt="男塾外伝　大豪院邪鬼 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　大豪院邪鬼 2</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B01L1BILU2</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01L1BILU2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uiJtaiMQL.jpg" class="mr-3 lazyload" alt="男塾外伝　大豪院邪鬼 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　大豪院邪鬼 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B019WTGL6Q</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B019WTGL6Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5133HBUqJxL.jpg" class="mr-3 lazyload" alt="男塾外伝　紅！！女塾 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　紅！！女塾 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B016UHYHG4</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B016UHYHG4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61HwJCTlaHL.jpg" class="mr-3 lazyload" alt="男塾外伝　伊達臣人 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　伊達臣人 2</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B0167ZFCMC</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0167ZFCMC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/516DCBi3Y8L.jpg" class="mr-3 lazyload" alt="男塾外伝　伊達臣人 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　伊達臣人 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B00SFHL3I8</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00SFHL3I8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/610o7ueO95L.jpg" class="mr-3 lazyload" alt="極！！男塾 2" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極！！男塾 2</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B00SFHL38I</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00SFHL38I?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qQEVsrl7L.jpg" class="mr-3 lazyload" alt="極！！男塾 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極！！男塾 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B00O0F75V8</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00O0F75V8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61860jIMKSL.jpg" class="mr-3 lazyload" alt="男塾外伝　赤石剛次 1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>男塾外伝　赤石剛次 1</h5>
+                    <p>価格：0円、ポイント：0</p>
+                    <p>宮下あきら(著)</p>
+                    <p>出版社：日本文芸社、ASIN：B01MS4AFIA</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MS4AFIA?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
