@@ -1,0 +1,1025 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="新刊チェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>新刊チェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51X9xwj53rL.jpg" class="mr-3 lazyload" alt="日本の伝統　発酵の科学 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本の伝統　発酵の科学 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>中島春紫(著)</p>
+                    <p>出版社：講談社、ASIN：B078TPCQ4Z</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078TPCQ4Z?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JKb+R-PmL.jpg" class="mr-3 lazyload" alt="「健康食品」ウソ・ホント　「効能・効果」の科学的根拠を検証する (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「健康食品」ウソ・ホント　「効能・効果」の科学的根拠を検証する (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>高橋久仁子(著)</p>
+                    <p>出版社：講談社、ASIN：B01HB24WVC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01HB24WVC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61YSdb9VrzL.jpg" class="mr-3 lazyload" alt="路面電車の走る街（１）　江ノ電 (講談社シリーズＭＯＯＫ)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>路面電車の走る街（１）　江ノ電 (講談社シリーズＭＯＯＫ)</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>講談社(編集)</p>
+                    <p>出版社：講談社、ASIN：B00ESBJ5D0</p>
+<p>カテゴリー：鉄道,産業研究,鉄道</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ESBJ5D0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51eG8B1sBwL.jpg" class="mr-3 lazyload" alt="ウォーキングの科学　１０歳若返る、本当に効果的な歩き方 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウォーキングの科学　１０歳若返る、本当に効果的な歩き方 (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>能勢博(著)</p>
+                    <p>出版社：講談社、ASIN：B07YTYGY9N</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YTYGY9N?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61pEZromcxL.jpg" class="mr-3 lazyload" alt="城の科学　個性豊かな天守の「超」技術 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>城の科学　個性豊かな天守の「超」技術 (ブルーバックス)</h5>
+                    <p>価格：924円、ポイント：9</p>
+                    <p>萩原さちこ(著)</p>
+                    <p>出版社：講談社、ASIN：B077CXMZNP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B077CXMZNP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51zw7MI7ccL.jpg" class="mr-3 lazyload" alt="体の中の異物「毒」の科学　ふつうの食べものに含まれる危ない物質 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>体の中の異物「毒」の科学　ふつうの食べものに含まれる危ない物質 (ブルーバックス)</h5>
+                    <p>価格：832円、ポイント：8</p>
+                    <p>小城勝相(著)</p>
+                    <p>出版社：講談社、ASIN：B01NAKSEIH</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01NAKSEIH?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41ZpyfwotZL.jpg" class="mr-3 lazyload" alt="チーズの科学　ミルクの力、発酵・熟成の神秘 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>チーズの科学　ミルクの力、発酵・熟成の神秘 (ブルーバックス)</h5>
+                    <p>価格：755円、ポイント：8</p>
+                    <p>齋藤忠夫(著)</p>
+                    <p>出版社：講談社、ASIN：B01MYPTGFN</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MYPTGFN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/419YmlrHAbL.jpg" class="mr-3 lazyload" alt="コーヒーの科学　「おいしさ」はどこで生まれるのか (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>コーヒーの科学　「おいしさ」はどこで生まれるのか (ブルーバックス)</h5>
+                    <p>価格：832円、ポイント：8</p>
+                    <p>旦部幸博(著)</p>
+                    <p>出版社：講談社、ASIN：B01C3P4G8G</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01C3P4G8G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uBumsrRVL.jpg" class="mr-3 lazyload" alt="図解　船の科学　超高速船・超巨大船のメカニズム (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>図解　船の科学　超高速船・超巨大船のメカニズム (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>池田良穂(著)</p>
+                    <p>出版社：講談社、ASIN：B01851E2KO</p>
+<p>カテゴリー：都市開発・都市問題,Featured Categories,都市開発・都市問題,地球科学・エコロジー,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01851E2KO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51YgrJmoQ0L.jpg" class="mr-3 lazyload" alt="新薬に挑んだ日本人科学者たち　世界の患者を救った創薬の物語 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新薬に挑んだ日本人科学者たち　世界の患者を救った創薬の物語 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>塚崎朝子(著)</p>
+                    <p>出版社：講談社、ASIN：B01851E32G</p>
+<p>カテゴリー：ジャンル別,Featured Categories,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01851E32G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51OMfp9M29L.jpg" class="mr-3 lazyload" alt="すごいぞ！　身のまわりの表面科学　ツルツル、ピカピカ、ザラザラの不思議 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>すごいぞ！　身のまわりの表面科学　ツルツル、ピカピカ、ザラザラの不思議 (ブルーバックス)</h5>
+                    <p>価格：755円、ポイント：8</p>
+                    <p>日本表面科学会(編集)</p>
+                    <p>出版社：講談社、ASIN：B016UE8RF4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B016UE8RF4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51yJhjRfG1L.jpg" class="mr-3 lazyload" alt="日本酒の科学　水・米・麹の伝統の技 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>日本酒の科学　水・米・麹の伝統の技 (ブルーバックス)</h5>
+                    <p>価格：832円、ポイント：8</p>
+                    <p>和田美代子(著)</p>
+                    <p>出版社：講談社、ASIN：B015J527WO</p>
+<p>カテゴリー：ジャンル別,Featured Categories,化学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015J527WO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51O-9o2QRBL.jpg" class="mr-3 lazyload" alt="図解　首都高速の科学　建設技術から渋滞判定のしくみまで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>図解　首都高速の科学　建設技術から渋滞判定のしくみまで (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>川辺謙一(著)</p>
+                    <p>出版社：講談社、ASIN：B00ZR7XX8M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ZR7XX8M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/516UKlCiPTL.jpg" class="mr-3 lazyload" alt="新しい航空管制の科学　宇宙から見守る「空の交通整理」 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新しい航空管制の科学　宇宙から見守る「空の交通整理」 (ブルーバックス)</h5>
+                    <p>価格：724円、ポイント：7</p>
+                    <p>園山耕司(著)</p>
+                    <p>出版社：講談社、ASIN：B00YA3SVW2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00YA3SVW2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51K7c10TVrL.jpg" class="mr-3 lazyload" alt="ナノカーボンの科学　セレンディピティーから始まった大発見の物語 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ナノカーボンの科学　セレンディピティーから始まった大発見の物語 (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>篠原久典(著)</p>
+                    <p>出版社：講談社、ASIN：B00RXCOPZ4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,化学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00RXCOPZ4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51x4ju20QXL.jpg" class="mr-3 lazyload" alt="「流れる臓器」血液の科学　血球たちの姿と働き (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「流れる臓器」血液の科学　血球たちの姿と働き (ブルーバックス)</h5>
+                    <p>価格：631円、ポイント：6</p>
+                    <p>中竹俊彦(著)</p>
+                    <p>出版社：講談社、ASIN：B00POVFQCM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00POVFQCM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51TZtuIddHL.jpg" class="mr-3 lazyload" alt="牛乳とタマゴの科学　完全栄養食品の秘密 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>牛乳とタマゴの科学　完全栄養食品の秘密 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>酒井仙吉(著)</p>
+                    <p>出版社：講談社、ASIN：B00POVFRF8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,趣味・実用</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00POVFRF8?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51TzcZrkZQL.jpg" class="mr-3 lazyload" alt="極限の科学　低温・高圧・強磁場の物理 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>極限の科学　低温・高圧・強磁場の物理 (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>伊達宗行(著)</p>
+                    <p>出版社：講談社、ASIN：B00POVFQPO</p>
+<p>カテゴリー：ジャンル別,Featured Categories,物理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00POVFQPO?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xskoUdKWL.jpg" class="mr-3 lazyload" alt="リンパの科学　第二の体液循環系のふしぎ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>リンパの科学　第二の体液循環系のふしぎ (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>加藤征治(著)</p>
+                    <p>出版社：講談社、ASIN：B00LA9AB68</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00LA9AB68?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vo1oV5HOL.jpg" class="mr-3 lazyload" alt="図解　台風の科学　発生・発達のしくみから地球温暖化の影響まで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>図解　台風の科学　発生・発達のしくみから地球温暖化の影響まで (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>上野充(著)</p>
+                    <p>出版社：講談社、ASIN：B00JA05J6Q</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JA05J6Q?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51dwLaQeQ9L.jpg" class="mr-3 lazyload" alt="麻酔の科学　第２版　手術を支える力持ち (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>麻酔の科学　第２版　手術を支える力持ち (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>諏訪邦夫(著)</p>
+                    <p>出版社：講談社、ASIN：B00J9YQF2A</p>
+<p>カテゴリー：ジャンル別,Featured Categories,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00J9YQF2A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jnD2RwedL.jpg" class="mr-3 lazyload" alt="麺の科学　粉が生み出す豊かな食感・香り・うまみ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>麺の科学　粉が生み出す豊かな食感・香り・うまみ (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>山田昌治(著)</p>
+                    <p>出版社：講談社、ASIN：B07TYF5XJB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07TYF5XJB?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41JQBzR03bL.jpg" class="mr-3 lazyload" alt="鳥！　驚異の知能　道具をつくり、心を読み、確率を理解する (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>鳥！　驚異の知能　道具をつくり、心を読み、確率を理解する (ブルーバックス)</h5>
+                    <p>価格：1001円、ポイント：10</p>
+                    <p>ジェニファー・アッカーマン(著)</p>
+                    <p>出版社：講談社、ASIN：B07B7HVR5K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B7HVR5K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51oY6JiPmIL.jpg" class="mr-3 lazyload" alt="推計学のすすめ　決定と計画の科学 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>推計学のすすめ　決定と計画の科学 (ブルーバックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>佐藤信(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHY4RK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHY4RK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Qy3rJT1oL.jpg" class="mr-3 lazyload" alt="海に沈んだ大陸の謎　最新科学が解き明かす激動の地球史 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>海に沈んだ大陸の謎　最新科学が解き明かす激動の地球史 (ブルーバックス)</h5>
+                    <p>価格：755円、ポイント：8</p>
+                    <p>佐野貴司(著)</p>
+                    <p>出版社：講談社、ASIN：B0741517SX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,地球科学・エコロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0741517SX?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZqTFVZwSL.jpg" class="mr-3 lazyload" alt="「香り」の科学　匂いの正体からその効能まで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「香り」の科学　匂いの正体からその効能まで (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>平山令明(著)</p>
+                    <p>出版社：講談社、ASIN：B071GTG3T6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071GTG3T6?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/417U+OHuj1L.jpg" class="mr-3 lazyload" alt="お茶の科学　「色・香り・味」を生み出す茶葉のひみつ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お茶の科学　「色・香り・味」を生み出す茶葉のひみつ (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>大森正司(著)</p>
+                    <p>出版社：講談社、ASIN：B072LV5H45</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B072LV5H45?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51FJqZ47GeL.jpg" class="mr-3 lazyload" alt="サッカー上達の科学　いやでも巧くなるトレーニングメソッド (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サッカー上達の科学　いやでも巧くなるトレーニングメソッド (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>村松尚登(著)</p>
+                    <p>出版社：講談社、ASIN：B01ESWLF18</p>
+<p>カテゴリー：スポーツ,Featured Categories,スポーツ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01ESWLF18?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rpO1UiFOL.jpg" class="mr-3 lazyload" alt="ダイヤモンドの科学　美しさと硬さの秘密 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ダイヤモンドの科学　美しさと硬さの秘密 (ブルーバックス)</h5>
+                    <p>価格：724円、ポイント：7</p>
+                    <p>松原聰(著)</p>
+                    <p>出版社：講談社、ASIN：B01851E150</p>
+<p>カテゴリー：ジャンル別,Featured Categories,化学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01851E150?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51tocmyn3zL.jpg" class="mr-3 lazyload" alt="競走馬の科学　速い馬とはこういう馬だ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>競走馬の科学　速い馬とはこういう馬だ (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>ＪＲＡ競走馬総合研究所(編集)</p>
+                    <p>出版社：講談社、ASIN：B01851E3MG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01851E3MG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51bgZCAArjL.jpg" class="mr-3 lazyload" alt="音のなんでも実験室　遊んでわかる音のしくみ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>音のなんでも実験室　遊んでわかる音のしくみ (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>吉澤純夫(著)</p>
+                    <p>出版社：講談社、ASIN：B01851E17S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,物理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01851E17S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/512-Zd02bAL.jpg" class="mr-3 lazyload" alt="新しい電池の科学 　高性能乾電池から燃料電池まで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新しい電池の科学 　高性能乾電池から燃料電池まで (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>梅尾良之(著)</p>
+                    <p>出版社：講談社、ASIN：B01851E16Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,物理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01851E16Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51H4hBK2pDL.jpg" class="mr-3 lazyload" alt="ＳＮＳって面白いの？　何が便利で、何が怖いのか (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＳＮＳって面白いの？　何が便利で、何が怖いのか (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>草野真一(著)</p>
+                    <p>出版社：講談社、ASIN：B0126LHIFU</p>
+<p>カテゴリー：コンピュータ・IT,Featured Categories,コンピュータ・IT,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0126LHIFU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51tEhdcG1nL.jpg" class="mr-3 lazyload" alt="見えない巨大水脈　地下水の科学　使えばすぐには戻らない「意外な希少資源」 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>見えない巨大水脈　地下水の科学　使えばすぐには戻らない「意外な希少資源」 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>日本地下水学会(著)</p>
+                    <p>出版社：講談社、ASIN：B011QCXSH2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,地球科学・エコロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B011QCXSH2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Dy4FkVOoL.jpg" class="mr-3 lazyload" alt="もの忘れの脳科学　最新の認知心理学が解き明かす記憶のふしぎ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>もの忘れの脳科学　最新の認知心理学が解き明かす記憶のふしぎ (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>苧阪満里子(著)</p>
+                    <p>出版社：講談社、ASIN：B00ZR7XZB2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ZR7XZB2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51MS8Ija0tL.jpg" class="mr-3 lazyload" alt="驚異の小器官　耳の科学　聞こえる仕組みから、めまい、耳掃除まで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>驚異の小器官　耳の科学　聞こえる仕組みから、めまい、耳掃除まで (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>杉浦彩子(著)</p>
+                    <p>出版社：講談社、ASIN：B00ZR7XZO4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ZR7XZO4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51AQka7sNLL.jpg" class="mr-3 lazyload" alt="科学・考えもしなかった４１の素朴な疑問　突飛なようで奥が深い！ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>科学・考えもしなかった４１の素朴な疑問　突飛なようで奥が深い！ (ブルーバックス)</h5>
+                    <p>価格：724円、ポイント：7</p>
+                    <p>松森靖夫(編集)</p>
+                    <p>出版社：講談社、ASIN：B00ZR7YCYQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ZR7YCYQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vfPwvRPvL.jpg" class="mr-3 lazyload" alt="おいしい穀物の科学　コメ、ムギ、トウモロコシからソバ、雑穀まで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>おいしい穀物の科学　コメ、ムギ、トウモロコシからソバ、雑穀まで (ブルーバックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>井上直人(著)</p>
+                    <p>出版社：講談社、ASIN：B00ZR7XZ4E</p>
+<p>カテゴリー：ジャンル別,Featured Categories,農学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ZR7XZ4E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41syqaeZsvL.jpg" class="mr-3 lazyload" alt="サイエンス異人伝　科学が残した「夢の痕跡」 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サイエンス異人伝　科学が残した「夢の痕跡」 (ブルーバックス)</h5>
+                    <p>価格：986円、ポイント：10</p>
+                    <p>荒俣宏(著)</p>
+                    <p>出版社：講談社、ASIN：B00UT1RJC2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UT1RJC2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nP+RhsR9L.jpg" class="mr-3 lazyload" alt="あっと驚く科学の数字　最新宇宙論から生命の不思議まで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>あっと驚く科学の数字　最新宇宙論から生命の不思議まで (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>数から科学を読む研究会(著)</p>
+                    <p>出版社：講談社、ASIN：B00UT1RJ86</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UT1RJ86?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51MQ0AOSqnL.jpg" class="mr-3 lazyload" alt="伝承農法を活かす家庭菜園の科学　自然のしくみを利用した栽培術 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>伝承農法を活かす家庭菜園の科学　自然のしくみを利用した栽培術 (ブルーバックス)</h5>
+                    <p>価格：724円、ポイント：7</p>
+                    <p>木嶋利男(著)</p>
+                    <p>出版社：講談社、ASIN：B00S67X72W</p>
+<p>カテゴリー：家庭菜園,Featured Categories,ガーデニング,農学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00S67X72W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rJ4POb3BL.jpg" class="mr-3 lazyload" alt="「育つ土」を作る家庭菜園の科学　有機物や堆肥をどう活かすか (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「育つ土」を作る家庭菜園の科学　有機物や堆肥をどう活かすか (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>木嶋利男(著)</p>
+                    <p>出版社：講談社、ASIN：B00S67X75Y</p>
+<p>カテゴリー：家庭菜園,Featured Categories,ガーデニング,農学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00S67X75Y?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Y1lgDVLEL.jpg" class="mr-3 lazyload" alt="怪談の科学　幽霊はなぜ現れる (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>怪談の科学　幽霊はなぜ現れる (ブルーバックス)</h5>
+                    <p>価格：568円、ポイント：6</p>
+                    <p>中村希明(著)</p>
+                    <p>出版社：講談社、ASIN：B00KV54VR2</p>
+<p>カテゴリー：心理学入門,読みもの,Featured Categories,心理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KV54VR2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rjd2h8kyL.jpg" class="mr-3 lazyload" alt="光と色彩の科学　発色の原理から色の見える仕組みまで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>光と色彩の科学　発色の原理から色の見える仕組みまで (ブルーバックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>齋藤勝裕(著)</p>
+                    <p>出版社：講談社、ASIN：B00POVFR2G</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00POVFR2G?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51T9oxsdspL.jpg" class="mr-3 lazyload" alt="地球環境を映す鏡　南極の科学　氷に覆われた大陸のすべて (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地球環境を映す鏡　南極の科学　氷に覆われた大陸のすべて (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>神沼克伊(著)</p>
+                    <p>出版社：講談社、ASIN：B00POVFQP4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,地球科学・エコロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00POVFQP4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51yQj-jTV-L.jpg" class="mr-3 lazyload" alt="山に登る前に読む本　運動生理学からみた科学的登山術 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>山に登る前に読む本　運動生理学からみた科学的登山術 (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>能勢博(著)</p>
+                    <p>出版社：講談社、ASIN：B00ORJPKJQ</p>
+<p>カテゴリー：登山・ハイキング,Featured Categories,登山・ハイキング</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ORJPKJQ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51oWmnD2xwL.jpg" class="mr-3 lazyload" alt="魚の行動習性を利用する　釣り入門　科学が明かした「水面下の生態」のすべて (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>魚の行動習性を利用する　釣り入門　科学が明かした「水面下の生態」のすべて (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>川村軍蔵(著)</p>
+                    <p>出版社：講談社、ASIN：B00KCL6RPE</p>
+<p>カテゴリー：スポーツ・アウトドア,Featured Categories,スポーツ・アウトドア</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KCL6RPE?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51QZ-3VYo2L.jpg" class="mr-3 lazyload" alt="食欲の科学　食べるだけでは満たされない絶妙で皮肉なしくみ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>食欲の科学　食べるだけでは満たされない絶妙で皮肉なしくみ (ブルーバックス)</h5>
+                    <p>価格：631円、ポイント：6</p>
+                    <p>櫻井武(著)</p>
+                    <p>出版社：講談社、ASIN：B00KCL6ROU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KCL6ROU?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LV4WRDF6L.jpg" class="mr-3 lazyload" alt="オリンピックに勝つ物理学　「摩擦」と「抵抗」に勝機を見出せ！ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>オリンピックに勝つ物理学　「摩擦」と「抵抗」に勝機を見出せ！ (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>望月修(著)</p>
+                    <p>出版社：講談社、ASIN：B00JA05J7K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JA05J7K?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51e-XcleLcL.jpg" class="mr-3 lazyload" alt="図解　地下鉄の科学　トンネル構造から車両のしくみまで (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>図解　地下鉄の科学　トンネル構造から車両のしくみまで (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>川辺謙一(著)</p>
+                    <p>出版社：講談社、ASIN：B00J9YQFDY</p>
+<p>カテゴリー：鉄道,Featured Categories,産業研究,鉄道</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00J9YQFDY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51WvHmpLfXL.jpg" class="mr-3 lazyload" alt="アスリートの科学　能力を極限まで引き出す秘密 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アスリートの科学　能力を極限まで引き出す秘密 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>久木留毅(著)</p>
+                    <p>出版社：講談社、ASIN：B08CDNCPNW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08CDNCPNW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Ln34czY8L.jpg" class="mr-3 lazyload" alt="作曲の科学　美しい音楽を生み出す「理論」と「法則」 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>作曲の科学　美しい音楽を生み出す「理論」と「法則」 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>フランソワ・デュボワ(著)</p>
+                    <p>出版社：講談社、ASIN：B07XRSLRYT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,音楽</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XRSLRYT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51TbXcJjbiL.jpg" class="mr-3 lazyload" alt="独楽の科学　回転する物体はなぜ倒れないのか？ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>独楽の科学　回転する物体はなぜ倒れないのか？ (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>山崎詩郎(著)</p>
+                    <p>出版社：講談社、ASIN：B07K9LGRHK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07K9LGRHK?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51W2T45ZpqL.jpg" class="mr-3 lazyload" alt="カラー版　ビールの科学　麦芽とホップが生み出す「旨さ」の秘密 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>カラー版　ビールの科学　麦芽とホップが生み出す「旨さ」の秘密 (ブルーバックス)</h5>
+                    <p>価格：986円、ポイント：10</p>
+                    <p>渡淳二(著)</p>
+                    <p>出版社：講談社、ASIN：B07DHHZXC5</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07DHHZXC5?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518ug+X-y4L.jpg" class="mr-3 lazyload" alt="パンの科学　しあわせな香りと食感の秘密 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パンの科学　しあわせな香りと食感の秘密 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>吉野精一(著)</p>
+                    <p>出版社：講談社、ASIN：B07D31X4YT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D31X4YT?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41ZQ2o3NTeL.jpg" class="mr-3 lazyload" alt="最新　ウイスキーの科学　熟成の香味を生む驚きのプロセス (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最新　ウイスキーの科学　熟成の香味を生む驚きのプロセス (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>古賀邦正(著)</p>
+                    <p>出版社：講談社、ASIN：B079S2FCTL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079S2FCTL?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JshAdSUzL.jpg" class="mr-3 lazyload" alt="「砂糖は太る」の誤解　科学で見る砂糖の素顔 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「砂糖は太る」の誤解　科学で見る砂糖の素顔 (ブルーバックス)</h5>
+                    <p>価格：616円、ポイント：6</p>
+                    <p>高田明和(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHYR5E</p>
+<p>カテゴリー：ジャンル別,Featured Categories,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHYR5E?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wwQ6K2bwL.jpg" class="mr-3 lazyload" alt="死因事典　人はどのように死んでいくのか (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死因事典　人はどのように死んでいくのか (ブルーバックス)</h5>
+                    <p>価格：878円、ポイント：9</p>
+                    <p>東嶋和子(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHYNOY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHYNOY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51DgXyYzxVL.jpg" class="mr-3 lazyload" alt="アミノ酸の科学　その効果を検証する (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アミノ酸の科学　その効果を検証する (ブルーバックス)</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>櫻庭雅文(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHYH6S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,化学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHYH6S?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51luunZLL+L.jpg" class="mr-3 lazyload" alt="ワインの科学　「私のワイン」のさがし方 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワインの科学　「私のワイン」のさがし方 (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>清水健一(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHYF4M</p>
+<p>カテゴリー：ジャンル別,Featured Categories,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHYF4M?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51G1mBcAuKL.jpg" class="mr-3 lazyload" alt="ジムに通う前に読む本　スポーツ科学からみたトレーニング (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジムに通う前に読む本　スポーツ科学からみたトレーニング (ブルーバックス)</h5>
+                    <p>価格：770円、ポイント：8</p>
+                    <p>桜井静香(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHYAB0</p>
+<p>カテゴリー：スポーツ,Featured Categories,スポーツ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHYAB0?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ng6K8p0xL.jpg" class="mr-3 lazyload" alt="紙ヒコーキで知る飛行の原理　身近に学ぶ航空力学 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>紙ヒコーキで知る飛行の原理　身近に学ぶ航空力学 (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>小林昭夫(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHYA4C</p>
+<p>カテゴリー：ジャンル別,Featured Categories,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHYA4C?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gW26cdV5L.jpg" class="mr-3 lazyload" alt="格闘技「奥義」の科学　わざの真髄 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>格闘技「奥義」の科学　わざの真髄 (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>吉福康郎(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHY7ZY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHY7ZY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51DwSeS2hqL.jpg" class="mr-3 lazyload" alt="武術「奥義」の科学　最強の身体技法 (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武術「奥義」の科学　最強の身体技法 (ブルーバックス)</h5>
+                    <p>価格：662円、ポイント：7</p>
+                    <p>吉福康郎(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHY4SY</p>
+<p>カテゴリー：スポーツ,Featured Categories,スポーツ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHY4SY?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51YWCJvsCDL.jpg" class="mr-3 lazyload" alt="霊はあるか　科学の視点から (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>霊はあるか　科学の視点から (ブルーバックス)</h5>
+                    <p>価格：678円、ポイント：7</p>
+                    <p>安斎育郎(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHY2WC</p>
+<p>カテゴリー：心理学入門,読みもの,Featured Categories,心理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHY2WC?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vHasTNtrL.jpg" class="mr-3 lazyload" alt="図解・鉄道の科学 : 安全・快適・高速・省エネ運転のしくみ (ブルーバックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>図解・鉄道の科学 : 安全・快適・高速・省エネ運転のしくみ (ブルーバックス)</h5>
+                    <p>価格：708円、ポイント：7</p>
+                    <p>宮本昌幸(著)</p>
+                    <p>出版社：講談社、ASIN：B00GHHXW0A</p>
+<p>カテゴリー：鉄道,Featured Categories,産業研究,鉄道</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GHHXW0A?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
