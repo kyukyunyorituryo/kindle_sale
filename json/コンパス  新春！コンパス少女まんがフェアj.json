@@ -1,19 +1,19 @@
 [
  {
-  "Asin": "B08RCZ56Y1",
-  "URL": "https://www.amazon.co.jp/dp/B08RCZ56Y1?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51ViIC+mkYL.jpg",
+  "Asin": "B08NPVDGWR",
+  "URL": "https://www.amazon.co.jp/dp/B08NPVDGWR?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51vKv0quT5L.jpg",
   "Publisher": "コンパス",
   "Contributor": "橘裕(著)",
   "Booktype": "Kindle版",
-  "Title": "秘密のサイコさん（分冊版1）【期間限定　無料お試し版】 秘密のサイコさん 分冊版 (コンパスコミックス)",
-  "Price": 0,
+  "Title": "秘密のサイコさん（1） (コンパスコミックス)",
+  "Price": 396,
   "Category": "コミック,マンガ",
-  "Points": 0
+  "Points": 4
  },
  {
   "Asin": "B08NPB13NZ",
-  "URL": "https://www.amazon.co.jp/dp/B08NPB13NZ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08NPB13NZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61kbP70QsKL.jpg",
   "Publisher": "コンパス",
   "Contributor": "杉本亜未(著)",
@@ -25,7 +25,7 @@
  },
  {
   "Asin": "B08L4NLHSQ",
-  "URL": "https://www.amazon.co.jp/dp/B08L4NLHSQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08L4NLHSQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51HuahRuGbL.jpg",
   "Publisher": "コンパス",
   "Contributor": "松原ミホ(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B08L4MWNBY",
-  "URL": "https://www.amazon.co.jp/dp/B08L4MWNBY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08L4MWNBY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/515YSkqcUNL.jpg",
   "Publisher": "コンパス",
   "Contributor": "松原ミホ(著)",
@@ -48,20 +48,20 @@
   "Points": 2
  },
  {
-  "Asin": "B08RD1KS1Z",
-  "URL": "https://www.amazon.co.jp/dp/B08RD1KS1Z?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51vQ-5OeQUL.jpg",
+  "Asin": "B08L4MQBW6",
+  "URL": "https://www.amazon.co.jp/dp/B08L4MQBW6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51MPBZ+gRvL.jpg",
   "Publisher": "コンパス",
   "Contributor": "八咫緑(著)",
   "Booktype": "Kindle版",
-  "Title": "悪魔人形の廻る夜（分冊版１）【期間限定　無料お試し版】 悪魔人形の廻る夜 分冊版 (コンパスコミックス)",
-  "Price": 0,
+  "Title": "悪魔人形の廻る夜（１） (コンパスコミックス)",
+  "Price": 528,
   "Category": "コミック,マンガ",
-  "Points": 0
+  "Points": 5
  },
  {
   "Asin": "B08KWJ2CHP",
-  "URL": "https://www.amazon.co.jp/dp/B08KWJ2CHP?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08KWJ2CHP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51v72KcoQKL.jpg",
   "Publisher": "コンパス",
   "Contributor": "丹野いち子(著)",
@@ -73,7 +73,7 @@
  },
  {
   "Asin": "B08H5CYDNM",
-  "URL": "https://www.amazon.co.jp/dp/B08H5CYDNM?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08H5CYDNM?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51zmbE3p82L.jpg",
   "Publisher": "コンパス",
   "Contributor": "浩峰尚(著)",
@@ -85,7 +85,7 @@
  },
  {
   "Asin": "B08H5B64XD",
-  "URL": "https://www.amazon.co.jp/dp/B08H5B64XD?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08H5B64XD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51HT-d5wMAL.jpg",
   "Publisher": "コンパス",
   "Contributor": "浩峰尚(著)",
@@ -96,20 +96,20 @@
   "Points": 4
  },
  {
-  "Asin": "B08RD2K54T",
-  "URL": "https://www.amazon.co.jp/dp/B08RD2K54T?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51FlOsBikPL.jpg",
+  "Asin": "B08G18HT5Y",
+  "URL": "https://www.amazon.co.jp/dp/B08G18HT5Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51t60SMk9JL.jpg",
   "Publisher": "コンパス",
   "Contributor": "杉本亜未(著)",
   "Booktype": "Kindle版",
-  "Title": "ブラッディチャイナタウン（分冊版1）【期間限定　無料お試し版】 ブラッディチャイナタウン（分冊版） (コンパスコミックス)",
-  "Price": 0,
+  "Title": "ブラッディチャイナタウン（1） (コンパスコミックス)",
+  "Price": 462,
   "Category": "コミック,マンガ",
-  "Points": 0
+  "Points": 5
  },
  {
   "Asin": "B08CL3CLGR",
-  "URL": "https://www.amazon.co.jp/dp/B08CL3CLGR?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08CL3CLGR?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41L1Z69-uiL.jpg",
   "Publisher": "コンパス",
   "Contributor": "藍(著)",
@@ -121,7 +121,7 @@
  },
  {
   "Asin": "B0872T3W4Q",
-  "URL": "https://www.amazon.co.jp/dp/B0872T3W4Q?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0872T3W4Q?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51a28OSBbEL.jpg",
   "Publisher": "コンパス",
   "Contributor": "鈴川ふうみ(著)",
@@ -133,7 +133,7 @@
  },
  {
   "Asin": "B086QMFT7X",
-  "URL": "https://www.amazon.co.jp/dp/B086QMFT7X?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B086QMFT7X?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51SB50XbuTL.jpg",
   "Publisher": "コンパス",
   "Contributor": "あべまりな(著)",
@@ -145,7 +145,7 @@
  },
  {
   "Asin": "B0863N3LQ1",
-  "URL": "https://www.amazon.co.jp/dp/B0863N3LQ1?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0863N3LQ1?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51abHxSwHSL.jpg",
   "Publisher": "コンパス",
   "Contributor": "喜多桐スズメ(著)",
@@ -157,7 +157,7 @@
  },
  {
   "Asin": "B085VWDGSG",
-  "URL": "https://www.amazon.co.jp/dp/B085VWDGSG?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B085VWDGSG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51iNdThNnIL.jpg",
   "Publisher": "コンパス",
   "Contributor": "藍(著)",
@@ -169,7 +169,7 @@
  },
  {
   "Asin": "B085VCST1R",
-  "URL": "https://www.amazon.co.jp/dp/B085VCST1R?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B085VCST1R?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41JHmSVGncL.jpg",
   "Publisher": "コンパス",
   "Contributor": "藍(著)",
@@ -181,7 +181,7 @@
  },
  {
   "Asin": "B085VJZQZX",
-  "URL": "https://www.amazon.co.jp/dp/B085VJZQZX?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B085VJZQZX?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41huOZzoZbL.jpg",
   "Publisher": "コンパス",
   "Contributor": "藍(著)",
@@ -193,7 +193,7 @@
  },
  {
   "Asin": "B085VL2DWH",
-  "URL": "https://www.amazon.co.jp/dp/B085VL2DWH?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B085VL2DWH?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41tgsP4FrlL.jpg",
   "Publisher": "コンパス",
   "Contributor": "藍(著)",
@@ -205,7 +205,7 @@
  },
  {
   "Asin": "B085VFMTPB",
-  "URL": "https://www.amazon.co.jp/dp/B085VFMTPB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B085VFMTPB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51uSZsqGCkL.jpg",
   "Publisher": "コンパス",
   "Contributor": "佐倉イサミ(著)",
@@ -217,7 +217,7 @@
  },
  {
   "Asin": "B084D1L8FF",
-  "URL": "https://www.amazon.co.jp/dp/B084D1L8FF?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B084D1L8FF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61Q4klU2H2L.jpg",
   "Publisher": "コンパス",
   "Contributor": "晏芸嘉三(著)",
@@ -229,7 +229,7 @@
  },
  {
   "Asin": "B084DB9BL4",
-  "URL": "https://www.amazon.co.jp/dp/B084DB9BL4?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B084DB9BL4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51bvU5D4FUL.jpg",
   "Publisher": "コンパス",
   "Contributor": "小柳かおり(著)",
@@ -241,7 +241,7 @@
  },
  {
   "Asin": "B083XZJRB2",
-  "URL": "https://www.amazon.co.jp/dp/B083XZJRB2?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B083XZJRB2?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/4118p37QJWL.jpg",
   "Publisher": "コンパス",
   "Contributor": "深水チロリ(著)",
@@ -253,7 +253,7 @@
  },
  {
   "Asin": "B083XZK662",
-  "URL": "https://www.amazon.co.jp/dp/B083XZK662?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B083XZK662?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51PPuNRZ7cL.jpg",
   "Publisher": "コンパス",
   "Contributor": "深水チロリ(著)",
@@ -265,7 +265,7 @@
  },
  {
   "Asin": "B082Y9HK9G",
-  "URL": "https://www.amazon.co.jp/dp/B082Y9HK9G?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082Y9HK9G?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51dNLgzQj+L.jpg",
   "Publisher": "コンパス",
   "Contributor": "ｍｏｃａ(著)",
@@ -277,7 +277,7 @@
  },
  {
   "Asin": "B082Y8S35T",
-  "URL": "https://www.amazon.co.jp/dp/B082Y8S35T?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082Y8S35T?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51xrC-OeHaL.jpg",
   "Publisher": "コンパス",
   "Contributor": "ぷろとん(著)",
@@ -288,8 +288,20 @@
   "Points": 4
  },
  {
+  "Asin": "B082Y9N98L",
+  "URL": "https://www.amazon.co.jp/dp/B082Y9N98L?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/515+znDPWqL.jpg",
+  "Publisher": "コンパス",
+  "Contributor": "ぷろとん(著)",
+  "Booktype": "Kindle版",
+  "Title": "冷蔵庫物語　お蔵だし　上 (コンパスコミックス)",
+  "Price": 220,
+  "Category": "コミック,マンガ",
+  "Points": 2
+ },
+ {
   "Asin": "B082Y9CJPV",
-  "URL": "https://www.amazon.co.jp/dp/B082Y9CJPV?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082Y9CJPV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51-FcMR-06L.jpg",
   "Publisher": "コンパス",
   "Contributor": "ぷろとん(著)",
@@ -301,7 +313,7 @@
  },
  {
   "Asin": "B082Y97YWW",
-  "URL": "https://www.amazon.co.jp/dp/B082Y97YWW?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082Y97YWW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/412xX9KUwyL.jpg",
   "Publisher": "コンパス",
   "Contributor": "ぷろとん(著)",
@@ -313,7 +325,7 @@
  },
  {
   "Asin": "B082Y94KYN",
-  "URL": "https://www.amazon.co.jp/dp/B082Y94KYN?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082Y94KYN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51y3Tna22AL.jpg",
   "Publisher": "コンパス",
   "Contributor": "ぷろとん(著)",
@@ -325,7 +337,7 @@
  },
  {
   "Asin": "B082Y87YSD",
-  "URL": "https://www.amazon.co.jp/dp/B082Y87YSD?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082Y87YSD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41TUAdFZ8jL.jpg",
   "Publisher": "コンパス",
   "Contributor": "ぷろとん(著)",
@@ -337,7 +349,7 @@
  },
  {
   "Asin": "B082F48KDZ",
-  "URL": "https://www.amazon.co.jp/dp/B082F48KDZ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082F48KDZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41RKdG+jQfL.jpg",
   "Publisher": "コンパス",
   "Contributor": "ひよりゆか(著)",
@@ -349,7 +361,7 @@
  },
  {
   "Asin": "B082B4STBN",
-  "URL": "https://www.amazon.co.jp/dp/B082B4STBN?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082B4STBN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51Y41PGCT1L.jpg",
   "Publisher": "コンパス",
   "Contributor": "あずやちとせ(著)",
@@ -361,7 +373,7 @@
  },
  {
   "Asin": "B082B5RCKD",
-  "URL": "https://www.amazon.co.jp/dp/B082B5RCKD?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082B5RCKD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51dnvFoDrqL.jpg",
   "Publisher": "コンパス",
   "Contributor": "夏目ひらら(著)",
@@ -373,7 +385,7 @@
  },
  {
   "Asin": "B0821D413L",
-  "URL": "https://www.amazon.co.jp/dp/B0821D413L?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0821D413L?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51kIblgw4oL.jpg",
   "Publisher": "コンパス",
   "Contributor": "早坂いあん(著)",
@@ -385,7 +397,7 @@
  },
  {
   "Asin": "B0821DDZ6N",
-  "URL": "https://www.amazon.co.jp/dp/B0821DDZ6N?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0821DDZ6N?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51rk2Iz2PiL.jpg",
   "Publisher": "コンパス",
   "Contributor": "みかみふみ(著)",
@@ -396,8 +408,20 @@
   "Points": 4
  },
  {
+  "Asin": "B07S2BB974",
+  "URL": "https://www.amazon.co.jp/dp/B07S2BB974?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51zgZedqMUL.jpg",
+  "Publisher": "なし",
+  "Contributor": "中村朝(著)",
+  "Booktype": "Kindle版",
+  "Title": "きみが小説家を見つけたら",
+  "Price": 200,
+  "Category": "ジャンル別,文学・評論,読み物",
+  "Points": 2
+ },
+ {
   "Asin": "B0821F9G28",
-  "URL": "https://www.amazon.co.jp/dp/B0821F9G28?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0821F9G28?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51t4edMpagL.jpg",
   "Publisher": "コンパス",
   "Contributor": "島田ちえ(著)",
@@ -409,7 +433,7 @@
  },
  {
   "Asin": "B0821DMYQS",
-  "URL": "https://www.amazon.co.jp/dp/B0821DMYQS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0821DMYQS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51yRmnCzWfL.jpg",
   "Publisher": "コンパス",
   "Contributor": "島田ちえ(著)",
@@ -421,7 +445,7 @@
  },
  {
   "Asin": "B0821FFMTJ",
-  "URL": "https://www.amazon.co.jp/dp/B0821FFMTJ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0821FFMTJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51TAzYDS0rL.jpg",
   "Publisher": "コンパス",
   "Contributor": "空カケル(著)",
