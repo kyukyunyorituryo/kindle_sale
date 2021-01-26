@@ -1,0 +1,1324 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="キンドルセールチェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>キンドルセールチェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5193Ft1cjwL.jpg" class="mr-3 lazyload" alt="ぜんしゅの跫 比嘉姉妹シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぜんしゅの跫 比嘉姉妹シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：634円、ポイント：6</p>
+                    <p>澤村伊智(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08SCD8X52</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08SCD8X52?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41MSGHtT0-L.jpg" class="mr-3 lazyload" alt="OFF　猟奇犯罪分析官・中島保 猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>OFF　猟奇犯罪分析官・中島保 猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08HLYHG25</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08HLYHG25?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jS2JxmAuL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　最後の七不思議 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　最後の七不思議 (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08C79FPQM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08C79FPQM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/512yRR7Q2TL.jpg" class="mr-3 lazyload" alt="祭火小夜の再会 祭火小夜シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>祭火小夜の再会 祭火小夜シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>秋竹 サラダ(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08C79JBWR</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08C79JBWR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51XUS8rw-0L.jpg" class="mr-3 lazyload" alt="祭火小夜の後悔 祭火小夜シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>祭火小夜の後悔 祭火小夜シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>秋竹 サラダ(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B085XQCCY8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085XQCCY8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51fP-CYxWvL.jpg" class="mr-3 lazyload" alt="ししりばの家 比嘉姉妹シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ししりばの家 比嘉姉妹シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>澤村伊智(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B083YW3GDH</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B083YW3GDH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41Qgudanq1L.jpg" class="mr-3 lazyload" alt="記憶屋０ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>記憶屋０ (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>織守きょうや(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B081HY7JYH</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081HY7JYH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51GXXYHephL.jpg" class="mr-3 lazyload" alt="出航 (角川書店単行本)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>出航 (角川書店単行本)</h5>
+                    <p>価格：1296円、ポイント：13</p>
+                    <p>北見 崇史(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07ZK2QFQY</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZK2QFQY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-SKv25v9L.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　夜を視る、星を撒く (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　夜を視る、星を撒く (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07Z8RKC9X</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07Z8RKC9X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LtCoWAe3L.jpg" class="mr-3 lazyload" alt="お孵り (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お孵り (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>滝川 さり(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07Z8RTTVM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07Z8RTTVM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Ty+ndcniL.jpg" class="mr-3 lazyload" alt="迷い家 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>迷い家 (角川ホラー文庫)</h5>
+                    <p>価格：580円、ポイント：6</p>
+                    <p>山吹 静吽(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07XV99TBQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XV99TBQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51RHY7QZf+L.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　秋の猫は緋の色 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　秋の猫は緋の色 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07PT41GG6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PT41GG6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51oj-SAjNUL.jpg" class="mr-3 lazyload" alt="庵堂三兄弟の聖職 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>庵堂三兄弟の聖職 (角川ホラー文庫)</h5>
+                    <p>価格：450円、ポイント：5</p>
+                    <p>真藤 順丈(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07N8MZ9JF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07N8MZ9JF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51C4g1HTv5L.jpg" class="mr-3 lazyload" alt="BURN　上　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BURN　上　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07MWSVSBR</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MWSVSBR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41XCkP2DWEL.jpg" class="mr-3 lazyload" alt="BURN　下　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BURN　下　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07MWV2YBP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MWV2YBP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51z9qoU+yTL.jpg" class="mr-3 lazyload" alt="などらきの首 比嘉姉妹シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>などらきの首 比嘉姉妹シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>澤村伊智(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07JJCC21B</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JJCC21B?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51n-may7YeL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　夏と花火と百物語 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　夏と花火と百物語 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07JHKGHZX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JHKGHZX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xUe9UHmZL.jpg" class="mr-3 lazyload" alt="奇奇奇譚編集部　怪鳥の丘 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>奇奇奇譚編集部　怪鳥の丘 (角川ホラー文庫)</h5>
+                    <p>価格：549円、ポイント：5</p>
+                    <p>木犀 あこ(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07HGSK9RX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HGSK9RX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511iJrGni-L.jpg" class="mr-3 lazyload" alt="きみといたい、朽ち果てるまで (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きみといたい、朽ち果てるまで (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>坊木 椎哉(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07GN8PQT2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GN8PQT2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61oqSCoaAhL.jpg" class="mr-3 lazyload" alt="サークル　猟奇犯罪捜査官・厚田巌夫 猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サークル　猟奇犯罪捜査官・厚田巌夫 猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07GN4WM7Q</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GN4WM7Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51sxWpbZ+aL.jpg" class="mr-3 lazyload" alt="ずうのめ人形 比嘉姉妹シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ずうのめ人形 比嘉姉妹シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：580円、ポイント：6</p>
+                    <p>澤村伊智(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07FNHY6VX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FNHY6VX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Ny5jcnwDL.jpg" class="mr-3 lazyload" alt="粘膜探偵 「粘膜」シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>粘膜探偵 「粘膜」シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：549円、ポイント：5</p>
+                    <p>飴村 行(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07D6JS58F</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D6JS58F?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61K+PRm6mSL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　墓守は笑わない (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　墓守は笑わない (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07BKSQZKP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BKSQZKP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LgPv138+L.jpg" class="mr-3 lazyload" alt="奇奇奇譚編集部　幽霊取材は命がけ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>奇奇奇譚編集部　幽霊取材は命がけ (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>木犀 あこ(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07BJY6VGD</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BJY6VGD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rPDv9aygL.jpg" class="mr-3 lazyload" alt="ぼぎわんが、来る 比嘉姉妹シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぼぎわんが、来る 比嘉姉妹シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：371円、ポイント：4</p>
+                    <p>澤村伊智(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B079XX7HBC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079XX7HBC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Y72cJwFJL.jpg" class="mr-3 lazyload" alt="COPY　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>COPY　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B079Y1LZJT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B079Y1LZJT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LPiuuUGgL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　水無月のひとしずく (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　水無月のひとしずく (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B076LJHSY8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076LJHSY8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51n+xquTbgL.jpg" class="mr-3 lazyload" alt="ハラサキ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ハラサキ (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>野城 亮(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B076LNBPGV</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076LNBPGV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51zxNlbasEL.jpg" class="mr-3 lazyload" alt="奇奇奇譚編集部　ホラー作家はおばけが怖い (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>奇奇奇譚編集部　ホラー作家はおばけが怖い (角川ホラー文庫)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>木犀 あこ(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B075R5DWSS</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B075R5DWSS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/516AcO6dupL.jpg" class="mr-3 lazyload" alt="二階の王 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>二階の王 (角川ホラー文庫)</h5>
+                    <p>価格：580円、ポイント：6</p>
+                    <p>名梁 和泉(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B075R1WFGB</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B075R1WFGB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Ll2Aqi2CL.jpg" class="mr-3 lazyload" alt="ＭＩＸ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＭＩＸ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0741QWRGP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0741QWRGP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LlPD8S5bL.jpg" class="mr-3 lazyload" alt="パンドラ　猟奇犯罪検死官・石上妙子 猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>パンドラ　猟奇犯罪検死官・石上妙子 猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B06ZYS41MN</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06ZYS41MN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51bVEOroYHL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　白い椿と落ちにけり (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　白い椿と落ちにけり (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B06XRV6PYZ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XRV6PYZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51HAwXq0L2L.jpg" class="mr-3 lazyload" alt="ＢＡＣＫ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＢＡＣＫ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01MSY6CUT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MSY6CUT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51sFympxnFL.jpg" class="mr-3 lazyload" alt="夜葬 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜葬 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>最東 対地(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01MFA53BP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MFA53BP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61GaenS1M8L.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　きみと惑いと菜の花と (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　きみと惑いと菜の花と (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01M8KQL91</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01M8KQL91?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511U2rzeepL.jpg" class="mr-3 lazyload" alt="死と呪いの島で、僕らは (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死と呪いの島で、僕らは (角川ホラー文庫)</h5>
+                    <p>価格：549円、ポイント：5</p>
+                    <p>雪富 千晶紀(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01M15HTXW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01M15HTXW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ZoReX0tCL.jpg" class="mr-3 lazyload" alt="サンマイ崩れ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サンマイ崩れ (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>吉岡 暁(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01K9G7HNM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01K9G7HNM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41269Nd198L.jpg" class="mr-3 lazyload" alt="お初の繭 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お初の繭 (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>一路 晃司(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01K9G7OW6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01K9G7OW6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-S2tOV2cL.jpg" class="mr-3 lazyload" alt="ＯＮＥ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＯＮＥ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01IOFNXII</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01IOFNXII?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51mDbGonVAL.jpg" class="mr-3 lazyload" alt="ＺＥＲＯ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＺＥＲＯ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01H13QHQY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01H13QHQY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41ya+J2VeKL.jpg" class="mr-3 lazyload" alt="記憶屋ＩＩＩ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>記憶屋ＩＩＩ (角川ホラー文庫)</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>織守きょうや(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01H13QH6E</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01H13QH6E?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41qIQTKnfxL.jpg" class="mr-3 lazyload" alt="記憶屋ＩＩ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>記憶屋ＩＩ (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>織守きょうや(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01FVG05H0</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01FVG05H0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61XXQd3j3CL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　春でおぼろで桜月 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　春でおぼろで桜月 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01D43MP7U</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01D43MP7U?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51iuXq+PbLL.jpg" class="mr-3 lazyload" alt="ＬＥＡＫ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＬＥＡＫ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01ASK4OO4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01ASK4OO4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51E6sZs4UXL.jpg" class="mr-3 lazyload" alt="相続人 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>相続人 (角川ホラー文庫)</h5>
+                    <p>価格：503円、ポイント：5</p>
+                    <p>保科 昌彦(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B01AL11EIE</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01AL11EIE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61D05WOT0nL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　この子のななつのお祝いに (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　この子のななつのお祝いに (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B016VNDNHQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B016VNDNHQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51p9CiU0hgL.jpg" class="mr-3 lazyload" alt="記憶屋 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>記憶屋 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>織守きょうや(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B016VNDPJC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B016VNDPJC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51+we1y1LHL.jpg" class="mr-3 lazyload" alt="かにみそ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>かにみそ (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>倉狩 聡(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B015F5N060</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015F5N060?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51SchGTTSuL.jpg" class="mr-3 lazyload" alt="ＡＩＤ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＡＩＤ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B0145Z9XSU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0145Z9XSU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/415q4kEDzoL.jpg" class="mr-3 lazyload" alt="レフトハンド (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レフトハンド (角川ホラー文庫)</h5>
+                    <p>価格：610円、ポイント：6</p>
+                    <p>中井 拓志(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00WLII5OM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00WLII5OM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51s+e4tSgkL.jpg" class="mr-3 lazyload" alt="ＣＵＴ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＣＵＴ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00UWRCYXC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UWRCYXC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51NAIK0b35L.jpg" class="mr-3 lazyload" alt="バイロケーション (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>バイロケーション (角川ホラー文庫)</h5>
+                    <p>価格：503円、ポイント：5</p>
+                    <p>法条 遥(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00MQJZ1SO</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MQJZ1SO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51BsfTfYEcL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　なくせない鍵 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　なくせない鍵 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00TRUS6EQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00TRUS6EQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41sFEJSi8LL.jpg" class="mr-3 lazyload" alt="ブルキナ・ファソの夜 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ブルキナ・ファソの夜 (角川ホラー文庫)</h5>
+                    <p>価格：368円、ポイント：4</p>
+                    <p>櫻沢 順(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00SXTPB4U</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00SXTPB4U?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41ajuLmcenL.jpg" class="mr-3 lazyload" alt="レテの支流 角川ホラー文庫" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>レテの支流 角川ホラー文庫</h5>
+                    <p>価格：534円、ポイント：5</p>
+                    <p>早瀬 乱(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00QKD6MDA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00QKD6MDA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41NvbAThoSL.jpg" class="mr-3 lazyload" alt="お葬式" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お葬式</h5>
+                    <p>価格：366円、ポイント：4</p>
+                    <p>瀬川 ことび(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00QKD6LOK</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00QKD6LOK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511W0vBnRbL.jpg" class="mr-3 lazyload" alt="牛家 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>牛家 (角川ホラー文庫)</h5>
+                    <p>価格：366円、ポイント：4</p>
+                    <p>岩城 裕明(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00PRPWHMM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00PRPWHMM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wzyP37hsL.jpg" class="mr-3 lazyload" alt="お見世出し (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お見世出し (角川ホラー文庫)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>森山 東(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00Q4K0A2S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00Q4K0A2S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JKVPBU3NL.jpg" class="mr-3 lazyload" alt="ＯＮ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＯＮ　猟奇犯罪捜査班・藤堂比奈子 (角川ホラー文庫)</h5>
+                    <p>価格：488円、ポイント：5</p>
+                    <p>内藤 了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00OQ1ITU2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00OQ1ITU2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Vqt4TJfPL.jpg" class="mr-3 lazyload" alt="先導者 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>先導者 (角川ホラー文庫)</h5>
+                    <p>価格：427円、ポイント：4</p>
+                    <p>小杉 英了(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00OQ1IT3Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00OQ1IT3Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Jo18XeRFL.jpg" class="mr-3 lazyload" alt="余は如何にして服部ヒロシとなりしか (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>余は如何にして服部ヒロシとなりしか (角川ホラー文庫)</h5>
+                    <p>価格：351円、ポイント：4</p>
+                    <p>あせごのまん(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00NIEWW38</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00NIEWW38?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518r5OS2XvL.jpg" class="mr-3 lazyload" alt="玩具修理者 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>玩具修理者 (角川ホラー文庫)</h5>
+                    <p>価格：351円、ポイント：4</p>
+                    <p>小林 泰三(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00E60AXV6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00E60AXV6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51HIV3xzPRL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　雨のち雪月夜 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　雨のち雪月夜 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00LWWOAGK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00LWWOAGK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61yKEyT7-oL.jpg" class="mr-3 lazyload" alt="蟲 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蟲 (角川ホラー文庫)</h5>
+                    <p>価格：382円、ポイント：4</p>
+                    <p>坂東 眞砂子(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00LF1PXMI</p>
+<p>カテゴリー：101-125回,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00LF1PXMI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511UCl4EZXL.jpg" class="mr-3 lazyload" alt="ぼっけえ、きょうてえ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ぼっけえ、きょうてえ (角川ホラー文庫)</h5>
+                    <p>価格：351円、ポイント：4</p>
+                    <p>岩井 志麻子(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMUKS</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMUKS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51ITbS5HHBL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　恋する終末論者 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　恋する終末論者 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00IKF4RLU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00IKF4RLU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41eVO4DwzmL.jpg" class="mr-3 lazyload" alt="紗央里ちゃんの家 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>紗央里ちゃんの家 (角川ホラー文庫)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>矢部 嵩(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00HA7E0IO</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00HA7E0IO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51KFjuBbg6L.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　死者の花嫁 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　死者の花嫁 (角川ホラー文庫)</h5>
+                    <p>価格：458円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00G6E8IQW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00G6E8IQW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51N2YrSQYhL.jpg" class="mr-3 lazyload" alt="ウラミズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ウラミズ (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>佐島 佑(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00FB4S52U</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00FB4S52U?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41LFzKYb6uL.jpg" class="mr-3 lazyload" alt="白い部屋で月の歌を (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>白い部屋で月の歌を (角川ホラー文庫)</h5>
+                    <p>価格：411円、ポイント：4</p>
+                    <p>朱川 湊人(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00EKZTJQ2</p>
+<p>カテゴリー：126-150回,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00EKZTJQ2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61sq0uQo4aL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　桜の宵の満開の下 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　桜の宵の満開の下 (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00CU33L6A</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00CU33L6A?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/519A+a4UidL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　幽霊たちとチョコレート (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　幽霊たちとチョコレート (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00BAPP2M0</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ミステリー・サスペンス・ハードボイルド,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00BAPP2M0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jS2JxmAuL.jpg" class="mr-3 lazyload" alt="ホーンテッド・キャンパス　最後の七不思議 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ホーンテッド・キャンパス　最後の七不思議 (角川ホラー文庫)</h5>
+                    <p>価格：518円、ポイント：5</p>
+                    <p>櫛木 理宇(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B08C79FPQM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08C79FPQM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41EKJxH8KqL.jpg" class="mr-3 lazyload" alt="粘膜戦士 「粘膜」シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>粘膜戦士 「粘膜」シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>飴村 行(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00APUMRCO</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00APUMRCO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5199ssgDm-L.jpg" class="mr-3 lazyload" alt="十三番目の人格　ISOLA (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>十三番目の人格　ISOLA (角川ホラー文庫)</h5>
+                    <p>価格：503円、ポイント：5</p>
+                    <p>貴志 祐介(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00AIITE6K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00AIITE6K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61pWdYWuHbL.jpg" class="mr-3 lazyload" alt="黒い家 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>黒い家 (角川ホラー文庫)</h5>
+                    <p>価格：503円、ポイント：5</p>
+                    <p>貴志 祐介(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPM5GM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPM5GM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51lacydDVaL.jpg" class="mr-3 lazyload" alt="穴らしきものに入る (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>穴らしきものに入る (角川ホラー文庫)</h5>
+                    <p>価格：411円、ポイント：4</p>
+                    <p>国広 正人(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMFHG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMFHG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51S3dV2H-4L.jpg" class="mr-3 lazyload" alt="なまづま (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なまづま (角川ホラー文庫)</h5>
+                    <p>価格：411円、ポイント：4</p>
+                    <p>堀井 拓馬(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMFFI</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMFFI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/618ZrEDC0WL.jpg" class="mr-3 lazyload" alt="Ｄ-ブリッジ・テープ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Ｄ-ブリッジ・テープ (角川ホラー文庫)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>沙藤 一樹(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPME1I</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPME1I?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/4157ychbWGL.jpg" class="mr-3 lazyload" alt="粘膜人間 「粘膜」シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>粘膜人間 「粘膜」シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：382円、ポイント：4</p>
+                    <p>飴村 行(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMRPG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMRPG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518cFwZKJ9L.jpg" class="mr-3 lazyload" alt="鼻 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>鼻 (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>曽根 圭介(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMSSW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMSSW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41KDVi8T+eL.jpg" class="mr-3 lazyload" alt="粘膜蜥蜴 「粘膜」シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>粘膜蜥蜴 「粘膜」シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：503円、ポイント：5</p>
+                    <p>飴村 行(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMHGA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMHGA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41VqsvlZUFL.jpg" class="mr-3 lazyload" alt="粘膜兄弟 「粘膜」シリーズ (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>粘膜兄弟 「粘膜」シリーズ (角川ホラー文庫)</h5>
+                    <p>価格：564円、ポイント：6</p>
+                    <p>飴村 行(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMHGU</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMHGU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rj4czym4L.jpg" class="mr-3 lazyload" alt="夏の滴 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夏の滴 (角川ホラー文庫)</h5>
+                    <p>価格：564円、ポイント：6</p>
+                    <p>桐生 祐狩(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009TPQRLS</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009TPQRLS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gdouaZ2SL.jpg" class="mr-3 lazyload" alt="ジュリエット (角川文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ジュリエット (角川文庫)</h5>
+                    <p>価格：503円、ポイント：5</p>
+                    <p>伊島 りすと(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009TPQROA</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009TPQROA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EFmn8QIAL.jpg" class="mr-3 lazyload" alt="姉飼 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>姉飼 (角川ホラー文庫)</h5>
+                    <p>価格：320円、ポイント：3</p>
+                    <p>遠藤 徹(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPM4U4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPM4U4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51LOHdVcj2L.jpg" class="mr-3 lazyload" alt="化身 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>化身 (角川ホラー文庫)</h5>
+                    <p>価格：442円、ポイント：4</p>
+                    <p>宮ノ川 顕(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMHPQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMHPQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41RW5Bhhh7L.jpg" class="mr-3 lazyload" alt="夜市 (角川ホラー文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夜市 (角川ホラー文庫)</h5>
+                    <p>価格：382円、ポイント：4</p>
+                    <p>恒川 光太郎(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B009GPMSIC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,SF・ホラー・ファンタジー,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009GPMSIC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
