@@ -172,25 +172,6 @@ queryword=decodeURI(query)
 document.getElementById('searchtext').value=queryword
 }
 
-//frameに子要素がなかったら実行する
-child=document.getElementById('frame').children
 
-if (child.length==0){
-nextday='グループゼロ'
-json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+nextday+"j.json"
-json_data = encodeURI(json_data)
-getJSON(json_data)
-    for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
-}
-else{
-
-var url = location.href ;
-date=url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1]
-date=decodeURI(date)
-json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+date+"j.json"
-json_data = encodeURI(json_data)
-getJSON(json_data)
-    for (let i = 0; i < nav.length; i++) {$('#frame').append(nav[i]);}
-}
-dosearch()
+//dosearch()
   });
