@@ -1,0 +1,1246 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--OGP -->
+    <meta property="og:title" content="kindleセール品のチェック" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg" />
+<meta property="og:site_name" content="キンドルセールチェック" />
+<meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+<meta name="twitter:creator" content="@99nyorituryo">
+<meta name="twitter:title" content="キンドルセールチェック">
+<meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.jpg">
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>キンドルセールチェック</title>
+    <!-- BootstrapのCSS読み込み -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93342586-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+ <!-- 追加した部分 -->
+       <script defer type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../js/ejs.min.js"></script>
+<script type="text/javascript" src="../js/new_pub.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="Navber">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                    </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                  </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <div class="container ">
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div>
+            <ul class="list-group list-group-horizontal-md ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+         <h2 class="alert alert-success">絞り込み検索</h2>
+<p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+<input type="file" id="csvfile" accept="text/csv,.csv">
+
+<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+<script src="../js/hikaku.js"></script>
+<hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+                <div class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0"  id="search">検索</button>
+                </div>
+
+<div class="nondisplayFrame">
+        <h2 class="alert alert-success">カテゴリの選択</h2>
+<button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+<button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+<button id='bl' type="button" class="btn btn-outline-success">BL</button>
+<button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+<button id='other' type="button" class="btn btn-outline-warning">その他</button>
+<button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+<button id='literature'  type="button" class="btn btn-outline-dark">文学・評論</button>
+<button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+</div>
+<style type="text/css">
+.nondisplayFrame {
+  display:inline;
+}
+</style>
+<!-- 
+後で追加
+<button  type="button" class="btn btn-outline-light">ムック</button>
+-->
+
+<style type="text/css">
+img.mr-3 {
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+  text-align: center;
+}
+.img-container--table-cell {
+ position: relative;
+ width: 180px;
+ height: 250px;
+ display: table-cell;
+ vertical-align: middle;
+ text-align: center;
+ border: 1px solid darkgray
+ }
+</style>
+        <h2 id='release' class="alert alert-success">セール本</h2>
+        
+        <ul id='frame' class="list-unstyled border alert alert-primary" >
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rkLo1GbuL.jpg" class="mr-3 lazyload" alt="えんま様のもっと！忙しい４９日間　新宿中央公園の幽霊 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えんま様のもっと！忙しい４９日間　新宿中央公園の幽霊 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>霜月りつ(著)</p>
+                    <p>出版社：小学館、ASIN：B08M9GXLPF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08M9GXLPF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/516yFnnoTEL.jpg" class="mr-3 lazyload" alt="夢探偵フロイト　－邪神が売る殺意－ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢探偵フロイト　－邪神が売る殺意－ (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>内藤了(著)</p>
+                    <p>出版社：小学館、ASIN：B0828QM6SY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0828QM6SY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518JfIANb7L.jpg" class="mr-3 lazyload" alt="派遣社員あすみの家計簿 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>派遣社員あすみの家計簿 (小学館文庫キャラブン！)</h5>
+                    <p>価格：492円、ポイント：5</p>
+                    <p>青木祐子(著)</p>
+                    <p>出版社：小学館、ASIN：B07ZVHYWYP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZVHYWYP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Eh7-VMAFL.jpg" class="mr-3 lazyload" alt="なぞとき遺跡発掘部　～弥生人はどう眠りますか？～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なぞとき遺跡発掘部　～弥生人はどう眠りますか？～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：431円、ポイント：4</p>
+                    <p>日向夏(著)</p>
+                    <p>出版社：小学館、ASIN：B07Q71J5YQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07Q71J5YQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51CU6qO7mFL.jpg" class="mr-3 lazyload" alt="こっこ屋のお狐さま　銀の嵐と黒狐 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こっこ屋のお狐さま　銀の嵐と黒狐 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>後藤リウ(著)</p>
+                    <p>出版社：小学館、ASIN：B07NMJ3L1F</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NMJ3L1F?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gh8UAWiaL.jpg" class="mr-3 lazyload" alt="神様の護り猫　最後の願い叶えます (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>神様の護り猫　最後の願い叶えます (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>朝比奈希夜(著)</p>
+                    <p>出版社：小学館、ASIN：B07GDDL7Z1</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GDDL7Z1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Re1ZgyzQL.jpg" class="mr-3 lazyload" alt="夢探偵フロイト　－マッド・モラン連続死事件－ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢探偵フロイト　－マッド・モラン連続死事件－ (小学館文庫キャラブン！)</h5>
+                    <p>価格：485円、ポイント：5</p>
+                    <p>内藤了(著)</p>
+                    <p>出版社：小学館、ASIN：B07B95BLZ4</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B95BLZ4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51fpe0neAjL.jpg" class="mr-3 lazyload" alt="ようこそ紅葉坂萬年堂 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ようこそ紅葉坂萬年堂 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>神尾あるみ(著)</p>
+                    <p>出版社：小学館、ASIN：B08M9KRGKZ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08M9KRGKZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61OHdVkmtQL.jpg" class="mr-3 lazyload" alt="猫に嫁入り　～黄泉路横丁の縁結び～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>猫に嫁入り　～黄泉路横丁の縁結び～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：492円、ポイント：5</p>
+                    <p>沖田円(著)</p>
+                    <p>出版社：小学館、ASIN：B08KG8PQD6</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08KG8PQD6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qZQLSKsTL.jpg" class="mr-3 lazyload" alt="札幌夜パフェ「紅うさぎ」の裏メニュー (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>札幌夜パフェ「紅うさぎ」の裏メニュー (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>浅水ハヅキ(著)</p>
+                    <p>出版社：小学館、ASIN：B08KG6HMJL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08KG6HMJL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51BMCta4cML.jpg" class="mr-3 lazyload" alt="大阪マダム、後宮妃になる！ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大阪マダム、後宮妃になる！ (小学館文庫キャラブン！)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>田井ノエル(著)</p>
+                    <p>出版社：小学館、ASIN：B08H56YCZ2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08H56YCZ2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/612hqulBfCL.jpg" class="mr-3 lazyload" alt="ヴァンパイア探偵２　戦慄の血塗られし狩人 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヴァンパイア探偵２　戦慄の血塗られし狩人 (小学館文庫キャラブン！)</h5>
+                    <p>価格：485円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：小学館、ASIN：B08H55TMVQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08H55TMVQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Oje6zhukL.jpg" class="mr-3 lazyload" alt="色にや恋ひむ　ひひらぎ草紙 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>色にや恋ひむ　ひひらぎ草紙 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>深山くのえ(著)</p>
+                    <p>出版社：小学館、ASIN：B08H4VMQGL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08H4VMQGL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/516SDfjCDbL.jpg" class="mr-3 lazyload" alt="蟲愛づる姫君の純潔 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蟲愛づる姫君の純潔 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>宮野美嘉(著)</p>
+                    <p>出版社：小学館、ASIN：B08DYF94ZJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08DYF94ZJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61oPVxvdi2L.jpg" class="mr-3 lazyload" alt="咎人の刻印　ジャック・ザ・リッパー・ファントム (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>咎人の刻印　ジャック・ザ・リッパー・ファントム (小学館文庫キャラブン！)</h5>
+                    <p>価格：431円、ポイント：4</p>
+                    <p>蒼月海里(著)</p>
+                    <p>出版社：小学館、ASIN：B08DYF1JPJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08DYF1JPJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61WF2b7nWwL.jpg" class="mr-3 lazyload" alt="廃妃は再び玉座に昇る　耀帝後宮異史 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>廃妃は再び玉座に昇る　耀帝後宮異史 (小学館文庫キャラブン！)</h5>
+                    <p>価格：523円、ポイント：5</p>
+                    <p>はるおかりの(著)</p>
+                    <p>出版社：小学館、ASIN：B08BZGP1K9</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BZGP1K9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JCnL+T0BL.jpg" class="mr-3 lazyload" alt="こちら亀有幽霊相談所…ではありません！ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こちら亀有幽霊相談所…ではありません！ (小学館文庫キャラブン！)</h5>
+                    <p>価格：431円、ポイント：4</p>
+                    <p>瑞山いつき(著)</p>
+                    <p>出版社：小学館、ASIN：B08BZFX7VW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BZFX7VW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51kvyo+mrwL.jpg" class="mr-3 lazyload" alt="浅草ばけもの甘味祓い　～兼業陰陽師だけれど、お隣に“鬼上司”が住んでいます～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>浅草ばけもの甘味祓い　～兼業陰陽師だけれど、お隣に“鬼上司”が住んでいます～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>江本マシメサ(著)</p>
+                    <p>出版社：小学館、ASIN：B089CM46XV</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B089CM46XV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JWYI-ydnL.jpg" class="mr-3 lazyload" alt="星の鏡は輝かない　紫微国後宮秘話 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>星の鏡は輝かない　紫微国後宮秘話 (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>宮池貴巳(著)</p>
+                    <p>出版社：小学館、ASIN：B087Q9B9YQ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B087Q9B9YQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/512UuNT1r+L.jpg" class="mr-3 lazyload" alt="華夏　時をかける皇子 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>華夏　時をかける皇子 (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>美波フユ(著)</p>
+                    <p>出版社：小学館、ASIN：B087Q9YXC2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B087Q9YXC2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51hwKWivwmL.jpg" class="mr-3 lazyload" alt="咎人の刻印 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>咎人の刻印 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>蒼月海里(著)</p>
+                    <p>出版社：小学館、ASIN：B086L9NKKY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B086L9NKKY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61kZ4-87qXL.jpg" class="mr-3 lazyload" alt="えんま様のもっと！忙しい４９日間　新宿発地獄行き (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えんま様のもっと！忙しい４９日間　新宿発地獄行き (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>霜月りつ(著)</p>
+                    <p>出版社：小学館、ASIN：B086L9PD2H</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B086L9PD2H?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61L0jm2PvvL.jpg" class="mr-3 lazyload" alt="蟲愛づる姫君の蜜月 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蟲愛づる姫君の蜜月 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>宮野美嘉(著)</p>
+                    <p>出版社：小学館、ASIN：B085979666</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B085979666?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vbB9JcHKL.jpg" class="mr-3 lazyload" alt="裏世界旅行 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>裏世界旅行 (小学館文庫キャラブン！)</h5>
+                    <p>価格：492円、ポイント：5</p>
+                    <p>二宮敦人(著)</p>
+                    <p>出版社：小学館、ASIN：B08595SD81</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08595SD81?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51dHiZaT8eL.jpg" class="mr-3 lazyload" alt="京都鴨川あやかし酒造　龍神さまの花嫁 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>京都鴨川あやかし酒造　龍神さまの花嫁 (小学館文庫キャラブン！)</h5>
+                    <p>価格：485円、ポイント：5</p>
+                    <p>朝比奈希夜(著)</p>
+                    <p>出版社：小学館、ASIN：B084CVNNWW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084CVNNWW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qpls4AJ8L.jpg" class="mr-3 lazyload" alt="陰陽師と綺羅のあやかし (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>陰陽師と綺羅のあやかし (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>中村ふみ(著)</p>
+                    <p>出版社：小学館、ASIN：B084D2J3GK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084D2J3GK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51M9QTbCsNL.jpg" class="mr-3 lazyload" alt="シンプル・カオス ２ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シンプル・カオス ２ (小学館文庫キャラブン！)</h5>
+                    <p>価格：431円、ポイント：4</p>
+                    <p>ごとうしのぶ(著)</p>
+                    <p>出版社：小学館、ASIN：B083HR2652</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B083HR2652?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51YrGNj8oOL.jpg" class="mr-3 lazyload" alt="恋をし恋ひば　かんなり草紙 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>恋をし恋ひば　かんなり草紙 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>深山くのえ(著)</p>
+                    <p>出版社：小学館、ASIN：B083HQJ7RH</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B083HQJ7RH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/513-t-bAglL.jpg" class="mr-3 lazyload" alt="新米獣医ですが、妖怪の診療はじめます。 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>新米獣医ですが、妖怪の診療はじめます。 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>片瀬由良(著)</p>
+                    <p>出版社：小学館、ASIN：B0828RD9T1</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0828RD9T1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/618XQtR7VDL.jpg" class="mr-3 lazyload" alt="蟲愛づる姫君の寵愛 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蟲愛づる姫君の寵愛 (小学館文庫キャラブン！)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>宮野美嘉(著)</p>
+                    <p>出版社：小学館、ASIN：B07ZVJ25FK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZVJ25FK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/512TdHbtPoL.jpg" class="mr-3 lazyload" alt="月と星の還るところ　紫微国妖夜話 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>月と星の還るところ　紫微国妖夜話 (小学館文庫キャラブン！)</h5>
+                    <p>価格：431円、ポイント：4</p>
+                    <p>宮池貴巳(著)</p>
+                    <p>出版社：小学館、ASIN：B07YG2531Y</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YG2531Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qwLZBWU0L.jpg" class="mr-3 lazyload" alt="死神執事のカーテンコール　時限爆弾の少年 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死神執事のカーテンコール　時限爆弾の少年 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>栗原ちひろ(著)</p>
+                    <p>出版社：小学館、ASIN：B07YG3HXGF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YG3HXGF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518s8mtS9JL.jpg" class="mr-3 lazyload" alt="浅草ばけもの甘味祓い　～兼業陰陽師だけれど、上司が最強の妖怪だった～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>浅草ばけもの甘味祓い　～兼業陰陽師だけれど、上司が最強の妖怪だった～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>江本マシメサ(著)</p>
+                    <p>出版社：小学館、ASIN：B07YG2VGL5</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YG2VGL5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51cHIAZJMnL.jpg" class="mr-3 lazyload" alt="マエストロ・ガールズ　このコルネット、憑いてます。 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マエストロ・ガールズ　このコルネット、憑いてます。 (小学館文庫キャラブン！)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>天沢夏月(著)</p>
+                    <p>出版社：小学館、ASIN：B07X1JFCYM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07X1JFCYM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/510517DiHBL.jpg" class="mr-3 lazyload" alt="陰陽師と無慈悲なあやかし (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>陰陽師と無慈悲なあやかし (小学館文庫キャラブン！)</h5>
+                    <p>価格：485円、ポイント：5</p>
+                    <p>中村ふみ(著)</p>
+                    <p>出版社：小学館、ASIN：B07X9K3ZTX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07X9K3ZTX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51leUS7dX-L.jpg" class="mr-3 lazyload" alt="返却はお早めに　あやかし文庫へようこそ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>返却はお早めに　あやかし文庫へようこそ (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>椎名蓮月(著)</p>
+                    <p>出版社：小学館、ASIN：B07VVGGR2F</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07VVGGR2F?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61+hrTKsaLL.jpg" class="mr-3 lazyload" alt="ヴァンパイア探偵　－－禁断の運命の血－－ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ヴァンパイア探偵　－－禁断の運命の血－－ (小学館文庫キャラブン！)</h5>
+                    <p>価格：492円、ポイント：5</p>
+                    <p>喜多喜久(著)</p>
+                    <p>出版社：小学館、ASIN：B07W1W1H1K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07W1W1H1K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rvZ7TIlhL.jpg" class="mr-3 lazyload" alt="拝み屋カフェ　巡縁堂 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>拝み屋カフェ　巡縁堂 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>宇津田晴(著)</p>
+                    <p>出版社：小学館、ASIN：B07THXD9FY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07THXD9FY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61Wlo5ZQ8-L.jpg" class="mr-3 lazyload" alt="えんま様の忙しい４９日間　光る藤の頃 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えんま様の忙しい４９日間　光る藤の頃 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>霜月りつ(著)</p>
+                    <p>出版社：小学館、ASIN：B07TFDJXK2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07TFDJXK2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/6166EfCeF4L.jpg" class="mr-3 lazyload" alt="蟲愛づる姫君の婚姻 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>蟲愛づる姫君の婚姻 (小学館文庫キャラブン！)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>宮野美嘉(著)</p>
+                    <p>出版社：小学館、ASIN：B07SNP7KK2</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07SNP7KK2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51YS0C2toQL.jpg" class="mr-3 lazyload" alt="獣の牢番　妖怪科學研究所 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>獣の牢番　妖怪科學研究所 (小学館文庫キャラブン！)</h5>
+                    <p>価格：492円、ポイント：5</p>
+                    <p>久我有加(著)</p>
+                    <p>出版社：小学館、ASIN：B07SG86491</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07SG86491?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51HEJEqjCKL.jpg" class="mr-3 lazyload" alt="流星の消える日まで (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>流星の消える日まで (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>沖田円(著)</p>
+                    <p>出版社：小学館、ASIN：B07R1XJG4D</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07R1XJG4D?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qwLZBWU0L.jpg" class="mr-3 lazyload" alt="死神執事のカーテンコール　時限爆弾の少年 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死神執事のカーテンコール　時限爆弾の少年 (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>栗原ちひろ(著)</p>
+                    <p>出版社：小学館、ASIN：B07YG3HXGF</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YG3HXGF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51jmZ5m40SL.jpg" class="mr-3 lazyload" alt="京都上賀茂　あやかし甘味処　鬼神さまの豆大福 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>京都上賀茂　あやかし甘味処　鬼神さまの豆大福 (小学館文庫キャラブン！)</h5>
+                    <p>価格：477円、ポイント：5</p>
+                    <p>朝比奈希夜(著)</p>
+                    <p>出版社：小学館、ASIN：B07QXJZSNG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QXJZSNG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51m5SG7K7aL.jpg" class="mr-3 lazyload" alt="桃源郷ラビリンス　群雄割拠スクランブル！ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃源郷ラビリンス　群雄割拠スクランブル！ (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>岡山ヒロミ(著)</p>
+                    <p>出版社：小学館、ASIN：B07Q3TKS67</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07Q3TKS67?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/518sbYdQyEL.jpg" class="mr-3 lazyload" alt="反時計回りのシャーロック (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>反時計回りのシャーロック (小学館文庫キャラブン！)</h5>
+                    <p>価格：431円、ポイント：4</p>
+                    <p>七海花音(著)</p>
+                    <p>出版社：小学館、ASIN：B07PLGX28X</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PLGX28X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EyFx1hkDL.jpg" class="mr-3 lazyload" alt="王宮の凶鳥姫 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>王宮の凶鳥姫 (小学館文庫キャラブン！)</h5>
+                    <p>価格：454円、ポイント：5</p>
+                    <p>相内藍(著)</p>
+                    <p>出版社：小学館、ASIN：B07PJHLWZY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PJHLWZY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51hRZGkaQnL.jpg" class="mr-3 lazyload" alt="BANANA FISH（３） ＢＡＮＡＮＡ　ＦＩＳＨ (フラワーコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BANANA FISH（３） ＢＡＮＡＮＡ　ＦＩＳＨ (フラワーコミックス)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>吉田秋生(著)</p>
+                    <p>出版社：小学館、ASIN：B009JZGB46</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009JZGB46?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51IzgrBjBXL.jpg" class="mr-3 lazyload" alt="長崎新地中華街の薬屋カフェ　中秋の月に照らされて (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>長崎新地中華街の薬屋カフェ　中秋の月に照らされて (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>江本マシメサ(著)</p>
+                    <p>出版社：小学館、ASIN：B07NMDPL4V</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NMDPL4V?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-jMvbUDhL.jpg" class="mr-3 lazyload" alt="BANANA FISH（２） ＢＡＮＡＮＡ　ＦＩＳＨ (フラワーコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BANANA FISH（２） ＢＡＮＡＮＡ　ＦＩＳＨ (フラワーコミックス)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>吉田秋生(著)</p>
+                    <p>出版社：小学館、ASIN：B009JZGAZG</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009JZGAZG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vV1CN0uFL.jpg" class="mr-3 lazyload" alt="太陽と月の眠るところ　紫微国妖夜話 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>太陽と月の眠るところ　紫微国妖夜話 (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>宮池貴巳(著)</p>
+                    <p>出版社：小学館、ASIN：B07MT7L6LX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MT7L6LX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gALMLaZTL.jpg" class="mr-3 lazyload" alt="そして８日目に愛を謳った。 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>そして８日目に愛を謳った。 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>沖田円(著)</p>
+                    <p>出版社：小学館、ASIN：B07MT7NXBY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MT7NXBY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wjI5ayP-L.jpg" class="mr-3 lazyload" alt="シンプル・カオス (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シンプル・カオス (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>ごとうしのぶ(著)</p>
+                    <p>出版社：小学館、ASIN：B07LG38XWM</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07LG38XWM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51A0sa-6PJL.jpg" class="mr-3 lazyload" alt="えんま様の忙しい４９日間　散り桜の頃 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えんま様の忙しい４９日間　散り桜の頃 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>霜月りつ(著)</p>
+                    <p>出版社：小学館、ASIN：B07LG2QZLG</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07LG2QZLG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51pE3dcxRzL.jpg" class="mr-3 lazyload" alt="夢探偵フロイト　－てるてる坊主殺人事件－ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>夢探偵フロイト　－てるてる坊主殺人事件－ (小学館文庫キャラブン！)</h5>
+                    <p>価格：485円、ポイント：5</p>
+                    <p>内藤了(著)</p>
+                    <p>出版社：小学館、ASIN：B07KF91D34</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KF91D34?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51WJADd2L9L.jpg" class="mr-3 lazyload" alt="BANANA FISH（１） ＢＡＮＡＮＡ　ＦＩＳＨ (フラワーコミックス)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>BANANA FISH（１） ＢＡＮＡＮＡ　ＦＩＳＨ (フラワーコミックス)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>吉田秋生(著)</p>
+                    <p>出版社：小学館、ASIN：B009JZGC9K</p>
+<p>カテゴリー：コミック,少女マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009JZGC9K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uoRs8eHoL.jpg" class="mr-3 lazyload" alt="図書室の神様たち (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>図書室の神様たち (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>櫻いいよ(著)</p>
+                    <p>出版社：小学館、ASIN：B07KF8DKQ7</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KF8DKQ7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61NOQJETm4L.jpg" class="mr-3 lazyload" alt="死神憑きの浮世堂　迷宮の戻り人 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死神憑きの浮世堂　迷宮の戻り人 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>中村ふみ(著)</p>
+                    <p>出版社：小学館、ASIN：B07KF7TPHX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KF7TPHX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Iep9xyP7L.jpg" class="mr-3 lazyload" alt="僕の耳に響く君の小説 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>僕の耳に響く君の小説 (小学館文庫キャラブン！)</h5>
+                    <p>価格：485円、ポイント：5</p>
+                    <p>安倍雄太郎(著)</p>
+                    <p>出版社：小学館、ASIN：B07JF25SRY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JF25SRY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5192SuIUKML.jpg" class="mr-3 lazyload" alt="学園ゴーストバスターズ　～夏のおもいで～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>学園ゴーストバスターズ　～夏のおもいで～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>三國青葉(著)</p>
+                    <p>出版社：小学館、ASIN：B07JFXCDPN</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JFXCDPN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51KC+ppFKJL.jpg" class="mr-3 lazyload" alt="女神様の料理帖　～恋の予感と思い出ごはん～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女神様の料理帖　～恋の予感と思い出ごはん～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>相内藍(著)</p>
+                    <p>出版社：小学館、ASIN：B07HC7HCT8</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HC7HCT8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wLly8ITHL.jpg" class="mr-3 lazyload" alt="なぞとき遺跡発掘部　～甕棺には誰がいますか？～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なぞとき遺跡発掘部　～甕棺には誰がいますか？～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>日向夏(著)</p>
+                    <p>出版社：小学館、ASIN：B07HC874X5</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HC874X5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61aEFlGP3rL.jpg" class="mr-3 lazyload" alt="さくら花店　～毒物図鑑　夏の悪夢～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さくら花店　～毒物図鑑　夏の悪夢～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>宮野美嘉(著)</p>
+                    <p>出版社：小学館、ASIN：B07HCB3CQL</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HCB3CQL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61RumYTDPdL.jpg" class="mr-3 lazyload" alt="桃源郷ラビリンス (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>桃源郷ラビリンス (小学館文庫キャラブン！)</h5>
+                    <p>価格：377円、ポイント：4</p>
+                    <p>岡山ヒロミ(著)</p>
+                    <p>出版社：小学館、ASIN：B07GDF7CPT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GDF7CPT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Nvwh3uSPL.jpg" class="mr-3 lazyload" alt="本日は曇天なり (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>本日は曇天なり (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>桜堂莉緒(著)</p>
+                    <p>出版社：小学館、ASIN：B07FMS3KCW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FMS3KCW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61LL5K+OeWL.jpg" class="mr-3 lazyload" alt="原之内菊子の憂鬱なインタビュー (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>原之内菊子の憂鬱なインタビュー (小学館文庫キャラブン！)</h5>
+                    <p>価格：515円、ポイント：5</p>
+                    <p>大山淳子(著)</p>
+                    <p>出版社：小学館、ASIN：B07FMRPCGY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FMRPCGY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511oomQ6hEL.jpg" class="mr-3 lazyload" alt="英国紅茶予言師　古城の悪魔 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>英国紅茶予言師　古城の悪魔 (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>七海花音(著)</p>
+                    <p>出版社：小学館、ASIN：B07GDCM2SW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GDCM2SW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61SWweS57GL.jpg" class="mr-3 lazyload" alt="長崎新地中華街の薬屋カフェ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>長崎新地中華街の薬屋カフェ (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>江本マシメサ(著)</p>
+                    <p>出版社：小学館、ASIN：B07FMMPVQT</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07FMMPVQT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61ntCyR60FL.jpg" class="mr-3 lazyload" alt="田園調布のおばけ屋敷 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田園調布のおばけ屋敷 (小学館文庫キャラブン！)</h5>
+                    <p>価格：377円、ポイント：4</p>
+                    <p>篠原まこと(著)</p>
+                    <p>出版社：小学館、ASIN：B07DHKX66W</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07DHKX66W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61NOQJETm4L.jpg" class="mr-3 lazyload" alt="死神憑きの浮世堂　迷宮の戻り人 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>死神憑きの浮世堂　迷宮の戻り人 (小学館文庫キャラブン！)</h5>
+                    <p>価格：446円、ポイント：4</p>
+                    <p>中村ふみ(著)</p>
+                    <p>出版社：小学館、ASIN：B07KF7TPHX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KF7TPHX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61kZ4-87qXL.jpg" class="mr-3 lazyload" alt="えんま様のもっと！忙しい４９日間　新宿発地獄行き (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>えんま様のもっと！忙しい４９日間　新宿発地獄行き (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>霜月りつ(著)</p>
+                    <p>出版社：小学館、ASIN：B086L9PD2H</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B086L9PD2H?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51icR3q0LHL.jpg" class="mr-3 lazyload" alt="海と月の喫茶店 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>海と月の喫茶店 (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>櫻いいよ(著)</p>
+                    <p>出版社：小学館、ASIN：B07DHJQQBK</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07DHJQQBK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61-6IBstXOL.jpg" class="mr-3 lazyload" alt="女神様の料理帖 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>女神様の料理帖 (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>相内藍(著)</p>
+                    <p>出版社：小学館、ASIN：B07CWMVMJV</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CWMVMJV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/613AYr3gLOL.jpg" class="mr-3 lazyload" alt="鉄道リドル　～いすみ鉄道で妖精の森に迷いこむ～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>鉄道リドル　～いすみ鉄道で妖精の森に迷いこむ～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：469円、ポイント：5</p>
+                    <p>佐藤青南(著)</p>
+                    <p>出版社：小学館、ASIN：B07CWM7S7K</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CWM7S7K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61LnvIt28KL.jpg" class="mr-3 lazyload" alt="こっこ屋のお狐さま (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>こっこ屋のお狐さま (小学館文庫キャラブン！)</h5>
+                    <p>価格：462円、ポイント：5</p>
+                    <p>後藤リウ(著)</p>
+                    <p>出版社：小学館、ASIN：B07CWMJWGY</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CWMJWGY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qOn4nn6JL.jpg" class="mr-3 lazyload" alt="３２歳ひとり不幸ＯＬが幸せ引き寄せちゃう話 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>３２歳ひとり不幸ＯＬが幸せ引き寄せちゃう話 (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>櫻井千姫(著)</p>
+                    <p>出版社：小学館、ASIN：B07CWM343W</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CWM343W?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61oOGVqKcsL.jpg" class="mr-3 lazyload" alt="２１グラムのタイムトラベラー (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>２１グラムのタイムトラベラー (小学館文庫キャラブン！)</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>天沢夏月(著)</p>
+                    <p>出版社：小学館、ASIN：B07BZPLP1L</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BZPLP1L?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61zWzRbT+ZL.jpg" class="mr-3 lazyload" alt="さくら花店　～毒物図鑑～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>さくら花店　～毒物図鑑～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>宮野美嘉(著)</p>
+                    <p>出版社：小学館、ASIN：B07BZLVKGC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BZLVKGC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/5192SuIUKML.jpg" class="mr-3 lazyload" alt="学園ゴーストバスターズ　～夏のおもいで～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>学園ゴーストバスターズ　～夏のおもいで～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：392円、ポイント：4</p>
+                    <p>三國青葉(著)</p>
+                    <p>出版社：小学館、ASIN：B07JFXCDPN</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07JFXCDPN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61yRBSzuMlL.jpg" class="mr-3 lazyload" alt="無限回廊案内人 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>無限回廊案内人 (小学館文庫キャラブン！)</h5>
+                    <p>価格：377円、ポイント：4</p>
+                    <p>千年(著)</p>
+                    <p>出版社：小学館、ASIN：B07B94TNVP</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B94TNVP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61FRcTrfHxL.jpg" class="mr-3 lazyload" alt="なぞとき遺跡発掘部　～卑弥呼様はどちらにいますか？～ (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なぞとき遺跡発掘部　～卑弥呼様はどちらにいますか？～ (小学館文庫キャラブン！)</h5>
+                    <p>価格：438円、ポイント：4</p>
+                    <p>日向夏(著)</p>
+                    <p>出版社：小学館、ASIN：B07B94YJSH</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B94YJSH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61MR7YL876L.jpg" class="mr-3 lazyload" alt="君のいない町が白く染まる (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>君のいない町が白く染まる (小学館文庫キャラブン！)</h5>
+                    <p>価格：500円、ポイント：5</p>
+                    <p>安倍雄太郎(著)</p>
+                    <p>出版社：小学館、ASIN：B07B91NB4S</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B91NB4S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511oomQ6hEL.jpg" class="mr-3 lazyload" alt="英国紅茶予言師　古城の悪魔 (小学館文庫キャラブン！)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>英国紅茶予言師　古城の悪魔 (小学館文庫キャラブン！)</h5>
+                    <p>価格：415円、ポイント：4</p>
+                    <p>七海花音(著)</p>
+                    <p>出版社：小学館、ASIN：B07GDCM2SW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ライトノベル</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GDCM2SW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button">Amazonで詳細を見る</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>lazyload();
+    </script>
+</body>
+</html>
