@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B076BLX7DZ",
-  "URL": "https://www.amazon.co.jp/dp/B076BLX7DZ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B076BLX7DZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51PWu9ol9LL.jpg",
   "Publisher": "講談社",
   "Contributor": "支援ＢＩＳ(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B077MGYZQV",
-  "URL": "https://www.amazon.co.jp/dp/B077MGYZQV?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B077MGYZQV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/611Iwhr3vGL.jpg",
   "Publisher": "講談社",
   "Contributor": "ＦＵＮＡ(著)",
@@ -24,20 +24,20 @@
   "Points": 0
  },
  {
-  "Asin": "B00BFAS2V8",
-  "URL": "https://www.amazon.co.jp/dp/B00BFAS2V8?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51oVvK3qcDL.jpg",
+  "Asin": "B076SMCF36",
+  "URL": "https://www.amazon.co.jp/dp/B076SMCF36?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51PrMfVv32L.jpg",
   "Publisher": "講談社",
   "Contributor": "鏡貴也(著)",
   "Booktype": "Kindle版",
-  "Title": "終わりのセラフ１　一瀬グレン、１６歳の破滅 (講談社ラノベ文庫)",
-  "Price": 550,
-  "Category": "ライトノベル,Featured Categories,ライトノベル",
-  "Points": 6
+  "Title": "終わりのセラフ　一瀬グレン、１６歳の破滅（１） (月刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
  },
  {
   "Asin": "B076SH6VD1",
-  "URL": "https://www.amazon.co.jp/dp/B076SH6VD1?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B076SH6VD1?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51JLGxzWx8L.jpg",
   "Publisher": "講談社",
   "Contributor": "ＦＵＮＡ(著)",
@@ -49,7 +49,7 @@
  },
  {
   "Asin": "B06ZZFSMP8",
-  "URL": "https://www.amazon.co.jp/dp/B06ZZFSMP8?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B06ZZFSMP8?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61argAg61RL.jpg",
   "Publisher": "講談社",
   "Contributor": "桑原太矩(著)",
@@ -61,7 +61,7 @@
  },
  {
   "Asin": "B06XFRTGKS",
-  "URL": "https://www.amazon.co.jp/dp/B06XFRTGKS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B06XFRTGKS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51cjt5lZHpL.jpg",
   "Publisher": "講談社",
   "Contributor": "支援ＢＩＳ(著)",
@@ -73,7 +73,7 @@
  },
  {
   "Asin": "B01MCWIC9L",
-  "URL": "https://www.amazon.co.jp/dp/B01MCWIC9L?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01MCWIC9L?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61DkUjFcd-L.jpg",
   "Publisher": "講談社",
   "Contributor": "桑原太矩(著)",
@@ -85,7 +85,7 @@
  },
  {
   "Asin": "B00L5SYQ2E",
-  "URL": "https://www.amazon.co.jp/dp/B00L5SYQ2E?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00L5SYQ2E?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51idc-L50AL.jpg",
   "Publisher": "講談社",
   "Contributor": "赤松健(著)",
@@ -97,7 +97,7 @@
  },
  {
   "Asin": "B00JAW5QIA",
-  "URL": "https://www.amazon.co.jp/dp/B00JAW5QIA?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00JAW5QIA?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51mExszKyJL.jpg",
   "Publisher": "講談社",
   "Contributor": "赤松健(著)",
@@ -109,7 +109,7 @@
  },
  {
   "Asin": "B08BWWM2CL",
-  "URL": "https://www.amazon.co.jp/dp/B08BWWM2CL?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08BWWM2CL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51AV7yHHv+L.jpg",
   "Publisher": "講談社",
   "Contributor": "外池達宏(著)",
@@ -121,7 +121,7 @@
  },
  {
   "Asin": "B00JAW5Q76",
-  "URL": "https://www.amazon.co.jp/dp/B00JAW5Q76?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00JAW5Q76?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51zXKqq5pNL.jpg",
   "Publisher": "講談社",
   "Contributor": "赤松健(著)",
@@ -133,7 +133,7 @@
  },
  {
   "Asin": "B087J973WD",
-  "URL": "https://www.amazon.co.jp/dp/B087J973WD?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B087J973WD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51yzyNGVd-L.jpg",
   "Publisher": "講談社",
   "Contributor": "小原ヨシツグ(著)",
@@ -145,7 +145,7 @@
  },
  {
   "Asin": "B086GYKDY7",
-  "URL": "https://www.amazon.co.jp/dp/B086GYKDY7?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B086GYKDY7?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51qT5cWCg2L.jpg",
   "Publisher": "講談社",
   "Contributor": "あし(著)",
@@ -157,7 +157,7 @@
  },
  {
   "Asin": "B07ZPXL823",
-  "URL": "https://www.amazon.co.jp/dp/B07ZPXL823?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07ZPXL823?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51brKLJHlQL.jpg",
   "Publisher": "講談社",
   "Contributor": "ｎｏｎｃｏ(著)",
@@ -169,7 +169,7 @@
  },
  {
   "Asin": "B07VW9PQ4P",
-  "URL": "https://www.amazon.co.jp/dp/B07VW9PQ4P?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07VW9PQ4P?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51vOeouJTBL.jpg",
   "Publisher": "講談社",
   "Contributor": "ｎｏｎｃｏ(著)",
@@ -181,7 +181,7 @@
  },
  {
   "Asin": "B07JP2LTDS",
-  "URL": "https://www.amazon.co.jp/dp/B07JP2LTDS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07JP2LTDS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51BQhTo0RJL.jpg",
   "Publisher": "講談社",
   "Contributor": "中丸洋介(著)",
@@ -193,7 +193,7 @@
  },
  {
   "Asin": "B07F1MHR3G",
-  "URL": "https://www.amazon.co.jp/dp/B07F1MHR3G?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07F1MHR3G?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51h5wuxCVFL.jpg",
   "Publisher": "講談社",
   "Contributor": "中丸洋介(著)",
@@ -205,7 +205,7 @@
  },
  {
   "Asin": "B07CJNPWBM",
-  "URL": "https://www.amazon.co.jp/dp/B07CJNPWBM?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07CJNPWBM?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51V9pYtWpQL.jpg",
   "Publisher": "講談社",
   "Contributor": "中丸洋介(著)",
@@ -216,27 +216,27 @@
   "Points": 0
  },
  {
-  "Asin": "B00EDH55WO",
-  "URL": "https://www.amazon.co.jp/dp/B00EDH55WO?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51rpp0u+yHL.jpg",
+  "Asin": "B07BMR3W44",
+  "URL": "https://www.amazon.co.jp/dp/B07BMR3W44?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51aYsx-ivwL.jpg",
   "Publisher": "講談社",
   "Contributor": "鏡貴也(著)",
   "Booktype": "Kindle版",
-  "Title": "終わりのセラフ２　一瀬グレン、１６歳の破滅 (講談社ラノベ文庫)",
-  "Price": 550,
-  "Category": "ライトノベル,Featured Categories,ライトノベル",
-  "Points": 6
+  "Title": "終わりのセラフ　一瀬グレン、１６歳の破滅（２） (月刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
  },
  {
-  "Asin": "B07WYYFFBV",
-  "URL": "https://www.amazon.co.jp/dp/B07WYYFFBV?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51HZom06NAL.jpg",
+  "Asin": "B07WPTFJ1H",
+  "URL": "https://www.amazon.co.jp/dp/B07WPTFJ1H?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51ZDOjmPlbL.jpg",
   "Publisher": "講談社",
   "Contributor": "ＴＮＳＫ(著)",
   "Booktype": "Kindle版",
-  "Title": "うちの師匠はしっぽがない（１）【電子限定特装版】 うちの師匠はしっぽがない【電子限定特装版】（１） (アフタヌーンコミックス)",
-  "Price": 990,
+  "Title": "うちの師匠はしっぽがない（１） (アフタヌーンコミックス)",
+  "Price": 0,
   "Category": "コミック,青年マンガ",
-  "Points": 10
+  "Points": 0
  }
 ]
