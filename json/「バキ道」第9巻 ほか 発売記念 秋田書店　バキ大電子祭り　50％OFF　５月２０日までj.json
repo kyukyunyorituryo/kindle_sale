@@ -1,5 +1,29 @@
 [
  {
+  "Asin": "B07NPM2KJC",
+  "URL": "https://www.amazon.co.jp/dp/B07NPM2KJC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51d9NhltCUL._SL500_.jpg",
+  "Publisher": "秋田書店",
+  "Contributor": "板垣恵介(著)",
+  "Booktype": "Kindle版",
+  "Title": "バキ道　１ (少年チャンピオン・コミックス)",
+  "Price": 237,
+  "Category": "コミック,少年マンガ",
+  "Points": 47
+ },
+ {
+  "Asin": "B07NPM8M9Y",
+  "URL": "https://www.amazon.co.jp/dp/B07NPM8M9Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51OYRy2HX7L._SL500_.jpg",
+  "Publisher": "秋田書店",
+  "Contributor": "板垣恵介(著)",
+  "Booktype": "Kindle版",
+  "Title": "バキ道　２ (少年チャンピオン・コミックス)",
+  "Price": 237,
+  "Category": "コミック,少年マンガ",
+  "Points": 2
+ },
+ {
   "Asin": "B07CJC8DRF",
   "URL": "https://www.amazon.co.jp/dp/B07CJC8DRF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61eHKzQWaOL._SL500_.jpg",
@@ -36,28 +60,40 @@
   "Points": 75
  },
  {
-  "Asin": "B00I3BNA0U",
-  "URL": "https://www.amazon.co.jp/dp/B00I3BNA0U?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51FEVnmgCeL._SL500_.jpg",
+  "Asin": "B075N9WZ53",
+  "URL": "https://www.amazon.co.jp/dp/B075N9WZ53?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51vaasnJ-nL._SL500_.jpg",
   "Publisher": "秋田書店",
-  "Contributor": "野部優美(著)",
+  "Contributor": "板垣恵介(著)",
   "Booktype": "Kindle版",
-  "Title": "真・餓狼伝　３ (少年チャンピオン・コミックス)",
-  "Price": 440,
+  "Title": "餓狼伝　１ (少年チャンピオン・コミックス)",
+  "Price": 220,
   "Category": "コミック,少年マンガ",
-  "Points": 4
+  "Points": 44
  },
  {
-  "Asin": "B00HS9USEO",
-  "URL": "https://www.amazon.co.jp/dp/B00HS9USEO?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51zZUVtA0NL._SL500_.jpg",
+  "Asin": "B075N9NKG1",
+  "URL": "https://www.amazon.co.jp/dp/B075N9NKG1?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61xf9yfjYML._SL500_.jpg",
   "Publisher": "秋田書店",
-  "Contributor": "野部優美(著)",
+  "Contributor": "板垣恵介(著)",
   "Booktype": "Kindle版",
-  "Title": "真・餓狼伝　２ (少年チャンピオン・コミックス)",
-  "Price": 440,
+  "Title": "餓狼伝　２ (少年チャンピオン・コミックス)",
+  "Price": 220,
   "Category": "コミック,少年マンガ",
-  "Points": 4
+  "Points": 2
+ },
+ {
+  "Asin": "B075N7NZPG",
+  "URL": "https://www.amazon.co.jp/dp/B075N7NZPG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61Thz1bIC0L._SL500_.jpg",
+  "Publisher": "秋田書店",
+  "Contributor": "板垣恵介(著)",
+  "Booktype": "Kindle版",
+  "Title": "餓狼伝　３ (少年チャンピオン・コミックス)",
+  "Price": 220,
+  "Category": "コミック,少年マンガ",
+  "Points": 2
  },
  {
   "Asin": "B00ZR2C9JQ",
@@ -204,16 +240,40 @@
   "Points": 58
  },
  {
-  "Asin": "B093BSCH39",
-  "URL": "https://www.amazon.co.jp/dp/B093BSCH39?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51heGj4gMmS._SL500_.jpg",
+  "Asin": "B00D44I6RI",
+  "URL": "https://www.amazon.co.jp/dp/B00D44I6RI?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51m7yJJCOFL._SL500_.jpg",
   "Publisher": "秋田書店",
-  "Contributor": "陸井栄史(著)",
+  "Contributor": "板垣恵介(著)",
   "Booktype": "Kindle版",
-  "Title": "バキ外伝 烈海王は異世界転生しても一向にかまわんッッ　１",
-  "Price": 660,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 7
+  "Title": "バキ(1) (少年チャンピオン・コミックス)",
+  "Price": 220,
+  "Category": "コミック,少年マンガ",
+  "Points": 44
+ },
+ {
+  "Asin": "B00D44I6XM",
+  "URL": "https://www.amazon.co.jp/dp/B00D44I6XM?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/512cul9VsuL._SL500_.jpg",
+  "Publisher": "秋田書店",
+  "Contributor": "板垣恵介(著)",
+  "Booktype": "Kindle版",
+  "Title": "バキ(2) (少年チャンピオン・コミックス)",
+  "Price": 220,
+  "Category": "コミック,少年マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B00D44I77C",
+  "URL": "https://www.amazon.co.jp/dp/B00D44I77C?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51Z8WLJdHKL._SL500_.jpg",
+  "Publisher": "秋田書店",
+  "Contributor": "板垣恵介(著)",
+  "Booktype": "Kindle版",
+  "Title": "バキ(3) (少年チャンピオン・コミックス)",
+  "Price": 220,
+  "Category": "コミック,少年マンガ",
+  "Points": 2
  },
  {
   "Asin": "B00AQY7ITQ",
