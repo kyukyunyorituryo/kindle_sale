@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B0842MP96H",
-  "URL": "https://www.amazon.co.jp/dp/B0842MP96H?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0842MP96H?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51mkwTOkQFL._SL500_.jpg",
   "Publisher": "マッグガーデン",
   "Contributor": "ながワサビ64(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B07CNZQ8K5",
-  "URL": "https://www.amazon.co.jp/dp/B07CNZQ8K5?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07CNZQ8K5?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51fLUNHfcBL._SL500_.jpg",
   "Publisher": "マッグガーデン",
   "Contributor": "ケンイチ(著)",
@@ -25,7 +25,7 @@
  },
  {
   "Asin": "B075ZPJLZS",
-  "URL": "https://www.amazon.co.jp/dp/B075ZPJLZS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B075ZPJLZS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51rP1gWQQbL._SL500_.jpg",
   "Publisher": "マッグガーデン",
   "Contributor": "ケンイチ(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B0989VSXZF",
-  "URL": "https://www.amazon.co.jp/dp/B0989VSXZF?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0989VSXZF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51-HoYMxSuS._SL500_.jpg",
   "Publisher": "マッグガーデン",
   "Contributor": "しばの番茶(著)",
@@ -46,5 +46,29 @@
   "Price": 574,
   "Category": "コミック,マンガ",
   "Points": 6
+ },
+ {
+  "Asin": "B087WH6P9Y",
+  "URL": "https://www.amazon.co.jp/dp/B087WH6P9Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/5174QETQHzL._SL500_.jpg",
+  "Publisher": "マッグガーデン",
+  "Contributor": "空野進(著)",
+  "Booktype": "Kindle版",
+  "Title": "スローライフがしたい大賢者、娘を拾う。 1巻 (マッグガーデンコミックスBeat'sシリーズ)",
+  "Price": 0,
+  "Category": "コミック,マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B07MC7DX4C",
+  "URL": "https://www.amazon.co.jp/dp/B07MC7DX4C?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51XLl4-0G0L._SL500_.jpg",
+  "Publisher": "マッグガーデン",
+  "Contributor": "しばの番茶(著)",
+  "Booktype": "Kindle版",
+  "Title": "異世界転生の冒険者　1巻 (マッグガーデンコミックスBeat'sシリーズ)",
+  "Price": 0,
+  "Category": "コミック,マンガ",
+  "Points": 0
  }
 ]
