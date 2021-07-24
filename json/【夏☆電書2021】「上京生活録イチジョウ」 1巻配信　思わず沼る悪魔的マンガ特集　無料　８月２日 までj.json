@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B075651Q1K",
-  "URL": "https://www.amazon.co.jp/dp/B075651Q1K?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B075651Q1K?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61NGXXXTdPL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "福本伸行(著)",
@@ -12,20 +12,20 @@
   "Points": 0
  },
  {
-  "Asin": "B093HH4TLT",
-  "URL": "https://www.amazon.co.jp/dp/B093HH4TLT?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51q4XdelQpS._SL500_.jpg",
+  "Asin": "B0723G567Y",
+  "URL": "https://www.amazon.co.jp/dp/B0723G567Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51V-awBHYbL._SL500_.jpg",
   "Publisher": "講談社",
-  "Contributor": "上原求(著)",
+  "Contributor": "福本伸行(著)",
   "Booktype": "Kindle版",
-  "Title": "１日外出録ハンチョウ（１１） (ヤングマガジンコミックス)",
-  "Price": 660,
+  "Title": "１日外出録ハンチョウ（１） (ヤングマガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,青年マンガ",
-  "Points": 7
+  "Points": 0
  },
  {
   "Asin": "B01J130PPQ",
-  "URL": "https://www.amazon.co.jp/dp/B01J130PPQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01J130PPQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/615MQzTsp3L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "萩原天晴(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B01IUUX6IY",
-  "URL": "https://www.amazon.co.jp/dp/B01IUUX6IY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01IUUX6IY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61sn9XnXuRL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "萩原天晴(著)",
@@ -49,7 +49,7 @@
  },
  {
   "Asin": "B01IUUX6IO",
-  "URL": "https://www.amazon.co.jp/dp/B01IUUX6IO?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01IUUX6IO?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/613s46FESBL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "萩原天晴(著)",
@@ -61,7 +61,7 @@
  },
  {
   "Asin": "B010N9I4NC",
-  "URL": "https://www.amazon.co.jp/dp/B010N9I4NC?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B010N9I4NC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/513KDfXpLsL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -73,7 +73,7 @@
  },
  {
   "Asin": "B00URE8S5S",
-  "URL": "https://www.amazon.co.jp/dp/B00URE8S5S?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00URE8S5S?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51AOT7x24oL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -85,7 +85,7 @@
  },
  {
   "Asin": "B00QETQTXI",
-  "URL": "https://www.amazon.co.jp/dp/B00QETQTXI?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00QETQTXI?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51Yp5BHml9L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -97,7 +97,7 @@
  },
  {
   "Asin": "B009SNA30M",
-  "URL": "https://www.amazon.co.jp/dp/B009SNA30M?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009SNA30M?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51kMzoBCQ3L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -109,7 +109,7 @@
  },
  {
   "Asin": "B009SNA302",
-  "URL": "https://www.amazon.co.jp/dp/B009SNA302?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009SNA302?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51ngz2lPjYL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -121,7 +121,7 @@
  },
  {
   "Asin": "B009KYBFZ6",
-  "URL": "https://www.amazon.co.jp/dp/B009KYBFZ6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009KYBFZ6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/512ML5y4LuL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -133,7 +133,7 @@
  },
  {
   "Asin": "B009KYBFYC",
-  "URL": "https://www.amazon.co.jp/dp/B009KYBFYC?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009KYBFYC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51p+naDpcVL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -145,7 +145,7 @@
  },
  {
   "Asin": "B009KYBFXS",
-  "URL": "https://www.amazon.co.jp/dp/B009KYBFXS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009KYBFXS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51oOk63+-uL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
@@ -157,7 +157,7 @@
  },
  {
   "Asin": "B009SNA2ZS",
-  "URL": "https://www.amazon.co.jp/dp/B009SNA2ZS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009SNA2ZS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51Pj9bnU7CL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本光司(著)",
