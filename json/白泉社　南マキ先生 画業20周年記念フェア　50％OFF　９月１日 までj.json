@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B07X32RJ5W",
-  "URL": "https://www.amazon.co.jp/dp/B07X32RJ5W?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07X32RJ5W?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/510g0FM5ypL._SL500_.jpg",
   "Publisher": "白泉社",
   "Contributor": "南マキ(著)",
@@ -13,12 +13,48 @@
  },
  {
   "Asin": "B011NBWYR6",
-  "URL": "https://www.amazon.co.jp/dp/B011NBWYR6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B011NBWYR6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51umLftceBL._SL500_.jpg",
   "Publisher": "白泉社",
   "Contributor": "南マキ(著)",
   "Booktype": "Kindle版",
   "Title": "キミはガールフレンド (花とゆめコミックス)",
+  "Price": 247,
+  "Category": "コミック,少女マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B07MFXFFR5",
+  "URL": "https://www.amazon.co.jp/dp/B07MFXFFR5?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51LqD-KnZfL._SL500_.jpg",
+  "Publisher": "白泉社",
+  "Contributor": "南マキ(著)",
+  "Booktype": "Kindle版",
+  "Title": "シアワセ食卓 (花とゆめコミックス)",
+  "Price": 247,
+  "Category": "コミック,少女マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B07M7MC8NN",
+  "URL": "https://www.amazon.co.jp/dp/B07M7MC8NN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51o0LTDFh+L._SL500_.jpg",
+  "Publisher": "白泉社",
+  "Contributor": "南マキ(著)",
+  "Booktype": "Kindle版",
+  "Title": "アネ☆モネ生花店～南マキ傑作短編集～ (花とゆめコミックス)",
+  "Price": 247,
+  "Category": "コミック,少女マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B01ABM98NQ",
+  "URL": "https://www.amazon.co.jp/dp/B01ABM98NQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51lDstcohVL._SL500_.jpg",
+  "Publisher": "白泉社",
+  "Contributor": "南マキ(著)",
+  "Booktype": "Kindle版",
+  "Title": "S・A(スペシャル・エー) -場外乱闘- (花とゆめコミックス)",
   "Price": 247,
   "Category": "コミック,少女マンガ",
   "Points": 2
