@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B09DP7KDWX",
-  "URL": "https://www.amazon.co.jp/dp/B09DP7KDWX?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B09DP7KDWX?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51OLOjizA6L._SL500_.jpg",
   "Publisher": "フレックスコミックス",
   "Contributor": "ポロロッカ(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B09DNZ3SS1",
-  "URL": "https://www.amazon.co.jp/dp/B09DNZ3SS1?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B09DNZ3SS1?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51Bjo6S-5oL._SL500_.jpg",
   "Publisher": "フレックスコミックス",
   "Contributor": "三簾真也(著)",
@@ -25,7 +25,7 @@
  },
  {
   "Asin": "B09DP98TVQ",
-  "URL": "https://www.amazon.co.jp/dp/B09DP98TVQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B09DP98TVQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51SnGTqw9hL._SL500_.jpg",
   "Publisher": "フレックスコミックス",
   "Contributor": "水崎弘明(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B08YD13ZTY",
-  "URL": "https://www.amazon.co.jp/dp/B08YD13ZTY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08YD13ZTY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51Eek2RPYiL._SL500_.jpg",
   "Publisher": "フレックスコミックス",
   "Contributor": "三簾真也(著)",
@@ -48,15 +48,15 @@
   "Points": 3
  },
  {
-  "Asin": "B09HC7R1PS",
-  "URL": "https://www.amazon.co.jp/dp/B09HC7R1PS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51eoj8sHFJL._SL500_.jpg",
+  "Asin": "B08KDDZL1G",
+  "URL": "https://www.amazon.co.jp/dp/B08KDDZL1G?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51eAYWf7YaL._SL500_.jpg",
   "Publisher": "フレックスコミックス",
   "Contributor": "ポロロッカ(著)",
   "Booktype": "Kindle版",
-  "Title": "【期間限定 無料お試し版 閲覧期限2021年10月25日】手玉に取りたい黒木屋さん(1) (メテオCOMICS)",
-  "Price": 0,
+  "Title": "手玉に取りたい黒木屋さん(1) (メテオCOMICS)",
+  "Price": 594,
   "Category": "コミック,マンガ",
-  "Points": 0
+  "Points": 299
  }
 ]
