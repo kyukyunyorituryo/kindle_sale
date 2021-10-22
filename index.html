@@ -4,47 +4,50 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="kindleのセール本を各セールの内容を一覧として表示しているしています。キンドル以外のセールで対抗してセールになっている商品も見つけられます。">
     <!--OGP -->
     <meta property="og:title" content="キンドルセールチェック" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
-<meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.png" />
-<meta property="og:site_name" content="キンドルセールチェック" />
-<meta property="og:description" content="キンドルセール品を一覧で表示する「キンドルセールチェック」" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
+    <meta property="og:image" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.png" />
+    <meta property="og:site_name" content="キンドルセールチェック" />
+    <meta property="og:description" content="キンドルセール品を一覧で表示する「キンドルセールチェック」" />
     <!--Twitterカード -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@99nyorituryo">
-<meta name="twitter:creator" content="@99nyorituryo">
-<meta name="twitter:title" content="キンドルセールチェック">
-<meta name="twitter:description" content="キンドルセール品を一覧で表示する「キンドルセールチェック」">
-<meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.png">
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" /> 
-<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta name="twitter:creator" content="@99nyorituryo">
+    <meta name="twitter:title" content="キンドルセールチェック">
+    <meta name="twitter:description" content="キンドルセール品を一覧で表示する「キンドルセールチェック」">
+    <meta name="twitter:image:src" content="https://kyukyunyorituryo.github.io/kindle_sale/twitter.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
     <title>開催中のキンドルセール一覧</title>
     <!-- BootstrapのCSS読み込み -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Google Analytics -->
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-93342586-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-93342586-1', 'auto');
+        ga('send', 'pageview');
 
-</script>
+    </script>
     <!-- jQuery読み込み -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
- <!-- 追加した部分 -->
-       <script defer type="text/javascript" src="js/share.js"></script>
-<script type="text/javascript" src="js/ejs.min.js"></script>
+    <!-- 追加した部分 -->
+    <script defer type="text/javascript" src="js/share.js"></script>
+    <script type="text/javascript" src="js/ejs.min.js"></script>
 </head>
 <body>
 <style>]
@@ -117,14 +120,6 @@ footer.pb-5 {
         <ul class="list-group list-group-flush">
 
             <li class="list-group-item"><a rel="noreferrer" target="_blank" href="html/月替りセール.html">Kindle月替わりタイトル</a></li>
-
-            <li class="list-group-item">
-                <a rel="noreferrer" target="_blank" href="html/講談社 現代新書クラシックスフェア　30％OFF　１０月２１日 まで.html">
-
-                    講談社 現代新書クラシックスフェア　30％OFF　１０月２１日 まで
-                </a>
-            </li>
-
 
 
         </ul>
@@ -221,19 +216,6 @@ footer.pb-5 {
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/山と溪谷社 秋の読書フェア 【エッセイ・ノンフィクション】　50％OFF １０月２１日 まで.html">
-
-                        山と溪谷社 秋の読書フェア 【エッセイ・ノンフィクション】　50％OFF １０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/アムコミ 一般アラカルト キャンペーン　無料 １０月２１日 まで.html">
-
-                        アムコミ 一般アラカルト キャンペーン　無料 １０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
                     <a rel="noreferrer" target="_blank" href="html/ナンバーナイン ラブサマーセール　30％OFF １０月２２日 まで.html">
 
                         ナンバーナイン ラブサマーセール　30％OFF １０月２２日 まで
@@ -246,25 +228,6 @@ footer.pb-5 {
                     </a>
                 </li>
 
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/学研グループ 男性コミック 秋の特大セール　最大70％OFF １０月２１日 まで.html">
-
-                        学研グループ 男性コミック 秋の特大セール　最大70％OFF １０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/学研グループ 女性コミック 秋の特大セール　50％OFF １０月２１日 まで.html">
-
-                        学研グループ 女性コミック 秋の特大セール　50％OFF １０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/学研グループ 秋の特大セール　最大70％OFF １０月２１日 まで.html">
-
-                        学研グループ 秋の特大セール　最大70％OFF １０月２１日 まで
-                    </a>
-                </li>
                 <li class="list-group-item">
                     <a rel="noreferrer" target="_blank" href="html/祥伝社　3か月連続刊行第1弾　 「花のあすか組！」シリーズおさらい特集　50％OFF、その他 １０月２２日 まで.html">
 
@@ -285,53 +248,6 @@ footer.pb-5 {
                     </a>
                 </li>
 
-
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/CoMax　麻宮騎亜ワールド　無料＆割引 １０月２１日 まで.html">
-
-                        CoMax　麻宮騎亜ワールド　無料＆割引 １０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/CoMax　人間ドラマ特集 ～男の愛がここにある～　無料＆割引　１０月２１日 まで.html">
-
-                        CoMax　人間ドラマ特集 ～男の愛がここにある～　無料＆割引　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/文友舎　読書の秋！書籍大セール　50％OFF、その他　１０月２１日 まで.html">
-
-                        文友舎　読書の秋！書籍大セール　50％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/「WORST外伝　ゼットン先生」最新4巻　 「もういっぽん！」最新15巻ほか発売記念フェア　50％OFF、その他　１０月２１日 まで.html">
-
-                        「WORST外伝　ゼットン先生」最新4巻　 「もういっぽん！」最新15巻ほか発売記念フェア　50％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/「丸山遊女～復讐の蕾～」新刊記念　 復讐劇フェア　無料＆割引、その他　１０月２１日 まで.html">
-
-                        「丸山遊女～復讐の蕾～」新刊記念　 復讐劇フェア　無料＆割引、その他　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/「妻の知らない婚前契約」配信記念　 裏切りフェア　無料＆割引、その他　１０月２１日 まで.html">
-
-                        「妻の知らない婚前契約」配信記念　 裏切りフェア　無料＆割引、その他　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/新潮社 バンチコミックス 10月新刊フェア　最大83％OFF、その他　１０月２１日 まで.html">
-
-                        新潮社 バンチコミックス 10月新刊フェア　最大83％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
                 <li class="list-group-item">
                     <a rel="noreferrer" target="_blank" href="html/ビーグリー　「日本沈没」 ドラマ放送記念！メディア化作品＆一色登希彦フェア　無料＆割引、その他　１０月２３日 まで.html">
 
@@ -370,12 +286,6 @@ footer.pb-5 {
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/オフィス漫の 堂々立ち読みフェア 第3週　無料　１０月２１日 まで.html">
-
-                        オフィス漫の 堂々立ち読みフェア 第3週　無料　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
                     <a rel="noreferrer" target="_blank" href="html/TOブックス「本好きの下剋上」 TVアニメ再放送記念キャンペーン　最大91％OFF、その他　１０月２８日 まで.html">
 
                         TOブックス「本好きの下剋上」 TVアニメ再放送記念キャンペーン　最大91％OFF、その他　１０月２８日 まで
@@ -410,12 +320,6 @@ footer.pb-5 {
                     <a rel="noreferrer" target="_blank" href="html/アムコミ 一般アラカルト キャンペーン　無料　１０月２８日 まで.html">
 
                         アムコミ 一般アラカルト キャンペーン　無料　１０月２８日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/ナンバーナイン大感謝祭vol．3　無料　１０月２１日 まで.html">
-
-                        ナンバーナイン大感謝祭vol．3　無料　１０月２１日 まで
                     </a>
                 </li>
 
@@ -589,60 +493,48 @@ footer.pb-5 {
                         白泉社「GAME～スーツの隙間～」5巻　 「GAME -in ハイスクール-」1巻配信記念　最大80％OFF　１１月２日 まで
                     </a>
                 </li>
+                <li class="list-group-item">
+                    <a rel="noreferrer" target="_blank" href="html/コアミックス 秋の新刊配信記念フェア　最大50％OFF、その他　１１月２日 まで.html">
 
+                        コアミックス 秋の新刊配信記念フェア　最大50％OFF、その他　１１月２日 まで
+                    </a>
+                </li>
 
+                <li class="list-group-item">
+                    <a rel="noreferrer" target="_blank" href="html/美しくなれば愛される『パンドラ美容外科』 お仕事ドラマフェア　無料＆割引、その他　１１月３日 まで.html">
 
+                        美しくなれば愛される?『パンドラ美容外科』 お仕事ドラマフェア　無料＆割引、その他　１１月３日 まで
+                    </a>
+                </li>
+
+                <li class="list-group-item">
+                    <a rel="noreferrer" target="_blank" href="html/オフィス漫 4週連続スペシャルフェア FINAL　30％OFF　１０月２７日 まで.html">
+
+                        オフィス漫 4週連続スペシャルフェア FINAL　30％OFF　１０月２７日 まで
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a rel="noreferrer" target="_blank" href="html/竹書房「日々、君」 ２巻発売　完結記念キャンペーン　50％OFF、その他　１０月２７日 まで.html">
+
+                        竹書房「日々、君」 ２巻発売　完結記念キャンペーン　50％OFF、その他　１０月２７日 まで
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a rel="noreferrer" target="_blank" href="html/スクウェア・エニックス 10月新刊発売特集　第3弾　50％OFF　１１月１１日 まで.html">
+
+                        スクウェア・エニックス 10月新刊発売特集　第3弾　50％OFF　１１月１１日 まで
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a rel="noreferrer" target="_blank" href="html/双葉社 twitterで話題　「フォロワーさんの本当にあった怖い話」新刊フェア　20％OFF、その他　１１月３日 まで.html">
+
+                        双葉社 twitterで話題　「フォロワーさんの本当にあった怖い話」新刊フェア　20％OFF、その他　１１月３日 まで
+                    </a>
+                </li>
             </ul>
             <h3 class="alert alert-success">講談社</h3>
             <ul class="list-group list-group-flush">
 
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/講談社　第67回受賞作配信記念　 江戸川乱歩賞フェア　最大30％OFF、その他　１０月２１日 まで.html">
-
-                        講談社　第67回受賞作配信記念　 江戸川乱歩賞フェア　最大30％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/講談社　新刊＆Gシリーズ合本配信　 森博嗣フェア　最大30％OFF、その他　１０月２１日 まで.html">
-
-                        講談社　新刊＆Gシリーズ合本配信　 森博嗣フェア　最大30％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/講談社　あなたはどっちが好き　 犬系男子VS猫系男子フェア　無料　１０月２１日 まで.html">
-
-                        講談社　あなたはどっちが好き　 犬系男子VS猫系男子フェア　無料　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/講談社「ブルーピリオド」TVアニメ絶賛放映中　アートを題材にした漫画、集めました。　無料　１０月２１日 まで.html">
-
-                        講談社「ブルーピリオド」TVアニメ絶賛放映中　アートを題材にした漫画、集めました。　無料　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/講談社 今月のオススメ異世界ファンタジー　無料　１０月２１日 まで.html">
-
-                        講談社 今月のオススメ異世界ファンタジー　無料　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/講談社　祝日がない月、生きてるだけでえらい説。 自己肯定感爆上げしてくれるマンガ特集　無料　１０月２１日 まで.html">
-
-                        講談社　祝日がない月、生きてるだけでえらい説。 自己肯定感爆上げしてくれるマンガ特集　無料　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/世界観がすごい！ 講談社　少女漫画特集　無料、その他　１０月２１日 まで.html">
-
-                        世界観がすごい！ 講談社　少女漫画特集　無料、その他　１０月２１日 まで
-                    </a>
-                </li>
 
                 <li class="list-group-item">
                     <a rel="noreferrer" target="_blank" href="html/講談社　サクッと読める  ３巻以内で完結の少女マンガ祭り　無料＆割引　１０月２３日 まで.html">
@@ -710,49 +602,6 @@ footer.pb-5 {
 
 
 
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/ニコニコカドカワ祭り2021 第2弾　コミック　50％OFF　１０月２１日 まで.html">
-
-                        ニコニコカドカワ祭り2021 第2弾　コミック　50％OFF　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/ニコニコカドカワ祭り2021 第2弾　ライトノベル　50％OFF　１０月２１日 まで.html">
-
-                        ニコニコカドカワ祭り2021 第2弾　ライトノベル　50％OFF　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/ニコニコカドカワ祭り2021 第2弾　小説　50％OFF　１０月２１日 まで.html">
-
-                        ニコニコカドカワ祭り2021 第2弾　小説　50％OFF　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/ニコニコカドカワ祭り2021 第2弾　ビジネス・実用　50％OFF　１０月２１日 まで.html">
-
-                        ニコニコカドカワ祭り2021 第2弾　ビジネス・実用　50％OFF　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/ニコニコカドカワ祭り2021 第2弾　雑誌・他　50％OFF　１０月２１日 まで.html">
-
-                        ニコニコカドカワ祭り2021 第2弾　雑誌・他　50％OFF　１０月２１日 まで
-                    </a>
-                </li>
-
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/KADOKAWA 2021秋アニメフェア　コミック　最大50％OFF、その他　１０月２１日 まで.html">
-
-                        KADOKAWA 2021秋アニメフェア　コミック　最大50％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a rel="noreferrer" target="_blank" href="html/KADOKAWA 2021秋アニメフェア　ライトノベル他　最大50％OFF、その他　１０月２１日 まで.html">
-
-                        KADOKAWA 2021秋アニメフェア　ライトノベル　最大50％OFF、その他　１０月２１日 まで
-                    </a>
-                </li>
 
                 <li class="list-group-item">
                     <a rel="noreferrer" target="_blank" href="html/ニコニコカドカワ祭り2021 第3弾 コミック　50％OFF　１０月２８日 まで.html">
