@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="月替りセール">
+ 
     <!--OGP -->
     <meta property="og:title" content="月替りセール" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/" />
-<meta property="og:image" content="https://m.media-amazon.com/images/I/518jza90ppL._SL500_.jpg" />
+<meta property="og:image" content="https://m.media-amazon.com/images/I/51O1rS81+6L._SL500_.jpg" />
 <meta property="og:site_name" content="キンドルセールチェック" />
 <meta property="og:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」" />
     <!--Twitterカード -->
@@ -17,12 +19,12 @@
 <meta name="twitter:creator" content="@99nyorituryo">
 <meta name="twitter:title" content="月替りセール">
 <meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
-<meta name="twitter:image:src" content="https://m.media-amazon.com/images/I/518jza90ppL._SL500_.jpg">
+<meta name="twitter:image:src" content="https://m.media-amazon.com/images/I/51O1rS81+6L._SL500_.jpg">
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" /> 
 <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
     <title>月替りセール</title>
     <!-- BootstrapのCSS読み込み -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Google Analytics -->
     <script>
@@ -36,11 +38,11 @@
 
 </script>
     <!-- jQuery読み込み -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script></script>
     <!--Lazy Load RemasteredのJS読み込み -->
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
@@ -48,6 +50,7 @@
        <script defer type="text/javascript" src="../js/share.js"></script>
 <script type="text/javascript" src="../js/ejs.min.js"></script>
 <script type="text/javascript" src="../js/new_pub.js"></script>
+<script type="text/javascript" src="../js/paginathing.min.js"></script>
 </head>
 <body>
 
@@ -86,18 +89,6 @@
     </header>
     <div class="container ">
 
-        <h2 class="alert alert-success">絞り込み検索</h2>
-        <p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
-        <input type="file" id="csvfile" accept="text/csv,.csv">
-
-        <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
-        <script src="../js/hikaku.js"></script>
-        <hr>
-        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
-        <div class="form-inline my-2 my-lg-0">
-            <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
-            <button type="submit" class="btn btn-outline-success my-2 my-sm-0" id="search">検索</button>
-        </div>
 
         <div class="nondisplayFrame">
             <h2 class="alert alert-success">カテゴリの選択</h2>
@@ -144,1575 +135,1432 @@
         <ul id='frame' class="list-unstyled border alert alert-primary">
                         <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/518jza90ppL._SL500_.jpg" class="mr-3 lazyload" alt="サピエンス全史　上下合本版　文明の構造と人類の幸福" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51O1rS81+6L._SL500_.jpg" class="mr-3 lazyload" alt="ゼロ・トゥ・ワン　君はゼロから何を生み出せるか" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>サピエンス全史　上下合本版　文明の構造と人類の幸福</h5>
-                    <p>価格：2376円、ポイント：24</p>
-                    <p>ユヴァル・ノア・ハラリ(著)</p>
-                    <p>出版社：河出書房新社、ASIN：B01KLAFEZ4</p>
-<p>カテゴリー：歴史学,歴史学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01KLAFEZ4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41HjnPMVVOL._SL500_.jpg" class="mr-3 lazyload" alt="ホモ・デウス　上下合本版　テクノロジーとサピエンスの未来" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ホモ・デウス　上下合本版　テクノロジーとサピエンスの未来</h5>
-                    <p>価格：2376円、ポイント：24</p>
-                    <p>ユヴァル・ノア・ハラリ(著)</p>
-                    <p>出版社：河出書房新社、ASIN：B07GGF5HLH</p>
-<p>カテゴリー：ジャンル別,Kindle本</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GGF5HLH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51z6m4a-c1S._SL500_.jpg" class="mr-3 lazyload" alt="多様性の科学　画一的で凋落する組織、複数の視点で問題を解決する組織" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>多様性の科学　画一的で凋落する組織、複数の視点で問題を解決する組織</h5>
-                    <p>価格：1100円、ポイント：11</p>
-                    <p>マシュー・サイド(著)</p>
-                    <p>出版社：ディスカヴァー・トゥエンティワン、ASIN：B0957B1LD5</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0957B1LD5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41JJqPXGGFL._SL500_.jpg" class="mr-3 lazyload" alt="チーズはどこへ消えた？ (扶桑社ＢＯＯＫＳ)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>チーズはどこへ消えた？ (扶桑社ＢＯＯＫＳ)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>スペンサー・ジョンソン(著)</p>
-                    <p>出版社：扶桑社、ASIN：B00KD2IK4S</p>
-<p>カテゴリー：人生論,人生論・教訓,自己啓発,倫理学・道徳,哲学・思想,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KD2IK4S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/519-OiA9qLL._SL500_.jpg" class="mr-3 lazyload" alt="その英語、本当にあってる？ ネイティブならこう答えます" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>その英語、本当にあってる？ ネイティブならこう答えます</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>Kevin&#39;s English Room(著)</p>
-                    <p>出版社：KADOKAWA、ASIN：B08XYJDHNT</p>
-<p>カテゴリー：ジャンル別,言語学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08XYJDHNT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51e1dPpNK0L._SL500_.jpg" class="mr-3 lazyload" alt="お経で読む仏教 NHK出版　学びのきほん" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>お経で読む仏教 NHK出版　学びのきほん</h5>
-                    <p>価格：299円、ポイント：3</p>
-                    <p>釈 徹宗(著)</p>
-                    <p>出版社：NHK出版、ASIN：B08R78DJQL</p>
-<p>カテゴリー：仏教入門,仏教</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08R78DJQL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61pzr6WumKL._SL500_.jpg" class="mr-3 lazyload" alt="お金の流れでわかる世界の歴史　富、経済、権力……はこう「動いた」" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>お金の流れでわかる世界の歴史　富、経済、権力……はこう「動いた」</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>大村 大次郎(著)</p>
-                    <p>出版社：KADOKAWA、ASIN：B0192JV7C4</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0192JV7C4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FbE+h4-eS._SL500_.jpg" class="mr-3 lazyload" alt="恋愛の方程式って東大入試よりムズい ｈｉｌｉａ　ＴＡＬＫ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>恋愛の方程式って東大入試よりムズい ｈｉｌｉａ　ＴＡＬＫ</h5>
-                    <p>価格：660円、ポイント：7</p>
-                    <p>ジェラシーくるみ(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B098Q8H85X</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B098Q8H85X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51b+2ZGv8tL._SL500_.jpg" class="mr-3 lazyload" alt="仁義なきキリスト教史 (ちくま文庫)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>仁義なきキリスト教史 (ちくま文庫)</h5>
-                    <p>価格：399円、ポイント：4</p>
-                    <p>架神恭介(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B01N21CJRG</p>
-<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01N21CJRG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OH0rVLPzS._SL500_.jpg" class="mr-3 lazyload" alt="なぜ、あなたの思っていることはなかなか相手に伝わらないのか?" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>なぜ、あなたの思っていることはなかなか相手に伝わらないのか?</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>西 剛志(著)</p>
-                    <p>出版社：アスコム、ASIN：B097GNTPP6</p>
-<p>カテゴリー：心理学入門,読みもの,社会学概論,心理学,社会学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097GNTPP6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51arSpPCf7S._SL500_.jpg" class="mr-3 lazyload" alt="１０年かかって地味ごはん。" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>１０年かかって地味ごはん。</h5>
-                    <p>価格：715円、ポイント：7</p>
-                    <p>和田明日香(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B092D14BG6</p>
-<p>カテゴリー：簡単レシピ,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B092D14BG6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51R7pbrZckL._SL500_.jpg" class="mr-3 lazyload" alt="独学応援！ホントにわかる！簿記2級工業簿記　『わかってうかる』を目指す人のための解説書 『ふくしままさゆきのホントに』シリーズ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>独学応援！ホントにわかる！簿記2級工業簿記　『わかってうかる』を目指す人のための解説書 『ふくしままさゆきのホントに』シリーズ</h5>
-                    <p>価格：249円、ポイント：2</p>
-                    <p>ふくしままさゆき(著)</p>
-                    <p>出版社：花嶋生花、ASIN：B00JBTOBQK</p>
-<p>カテゴリー：簿記検定,簿記,経理・アカウンティング,社会学,事務関連</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JBTOBQK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xut7qbflS._SL500_.jpg" class="mr-3 lazyload" alt="子どもの心を強くする　すごい声かけ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>子どもの心を強くする　すごい声かけ</h5>
-                    <p>価格：770円、ポイント：8</p>
-                    <p>足立 啓美(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B0972XNV89</p>
-<p>カテゴリー：生涯教育,教育学,妊娠・出産・子育て</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0972XNV89?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FkKLLZGXL._SL500_.jpg" class="mr-3 lazyload" alt="人は、なぜ他人を許せないのか？" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>人は、なぜ他人を許せないのか？</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>中野 信子(著)</p>
-                    <p>出版社：アスコム、ASIN：B0844GP2GP</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0844GP2GP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51SkG4EsX0L._SL500_.jpg" class="mr-3 lazyload" alt="独学応援！ホントに理屈っぽい！簿記2級商業簿記　理屈で解きたい人のための解説書【改訂版】" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>独学応援！ホントに理屈っぽい！簿記2級商業簿記　理屈で解きたい人のための解説書【改訂版】</h5>
-                    <p>価格：500円、ポイント：5</p>
-                    <p>ふくしままさゆき(著)</p>
-                    <p>出版社：なし、ASIN：B07NYWWHHL</p>
-<p>カテゴリー：ジャンル別,事務関連</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NYWWHHL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41rwLsbCVzL._SL500_.jpg" class="mr-3 lazyload" alt="論理的思考のコアスキル (ちくま新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>論理的思考のコアスキル (ちくま新書)</h5>
-                    <p>価格：399円、ポイント：4</p>
-                    <p>波頭亮(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B07QB1YD39</p>
-<p>カテゴリー：ロジカル・シンキング,Featured Categories,ビジネス教育</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QB1YD39?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/31tKvEM2MhS._SL500_.jpg" class="mr-3 lazyload" alt="学者の暴走 (扶桑社ＢＯＯＫＳ新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>学者の暴走 (扶桑社ＢＯＯＫＳ新書)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>掛谷 英紀(著)</p>
-                    <p>出版社：扶桑社、ASIN：B098DJZ8XV</p>
-<p>カテゴリー：社会学概論,社会学,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B098DJZ8XV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41onVJXlrbS._SL500_.jpg" class="mr-3 lazyload" alt="いくつになっても恥をかける人になる【DL特典　恥克服ワークシート】" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>いくつになっても恥をかける人になる【DL特典　恥克服ワークシート】</h5>
-                    <p>価格：825円、ポイント：8</p>
-                    <p>中川諒(著)</p>
-                    <p>出版社：ディスカヴァー・トゥエンティワン、ASIN：B0957C5VFK</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0957C5VFK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51z8LckBY6S._SL500_.jpg" class="mr-3 lazyload" alt="結局、「しつこい人」がすべてを手に入れる" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>結局、「しつこい人」がすべてを手に入れる</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>伊庭 正康(著)</p>
-                    <p>出版社：アスコム、ASIN：B095BKH4VJ</p>
-<p>カテゴリー：人生論・教訓,自己啓発,ビジネス・経済,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B095BKH4VJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41-2FWf-XSL._SL500_.jpg" class="mr-3 lazyload" alt="科学哲学への招待 (ちくま学芸文庫)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>科学哲学への招待 (ちくま学芸文庫)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>野家啓一(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B015SUBJNI</p>
-<p>カテゴリー：思想,Featured Categories,哲学・思想</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B015SUBJNI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bWFLF-79S._SL500_.jpg" class="mr-3 lazyload" alt="ＭＲ (幻冬舎単行本)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ＭＲ (幻冬舎単行本)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>久坂部羊(著)</p>
-                    <p>出版社：幻冬舎、ASIN：B091Y6HMQX</p>
-<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B091Y6HMQX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41Qm5UPdipL._SL500_.jpg" class="mr-3 lazyload" alt="ドキュメント　宇宙飛行士選抜試験 (光文社新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ドキュメント　宇宙飛行士選抜試験 (光文社新書)</h5>
-                    <p>価格：299円、ポイント：3</p>
-                    <p>大鐘 良一(著)</p>
-                    <p>出版社：光文社、ASIN：B009KZ40RA</p>
-<p>カテゴリー：一般,Featured Categories,宇宙学・天文学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009KZ40RA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51f1pksDrzL._SL500_.jpg" class="mr-3 lazyload" alt="ネガティブな感情が成功を呼ぶ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ネガティブな感情が成功を呼ぶ</h5>
-                    <p>価格：935円、ポイント：9</p>
-                    <p>ロバート ビスワス=ディーナー(著)</p>
-                    <p>出版社：草思社、ASIN：B017XHTFX0</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017XHTFX0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51eQ1T3t6pS._SL500_.jpg" class="mr-3 lazyload" alt="普通の会社員でもできる 日本版FIRE超入門" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>普通の会社員でもできる 日本版FIRE超入門</h5>
-                    <p>価格：880円、ポイント：9</p>
-                    <p>山崎俊輔(著)</p>
-                    <p>出版社：ディスカヴァー・トゥエンティワン、ASIN：B097MNXBXP</p>
-<p>カテゴリー：ジャンル別,投資</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097MNXBXP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41CwxUhxoHL._SL500_.jpg" class="mr-3 lazyload" alt="精講　漢文 (ちくま学芸文庫)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>精講　漢文 (ちくま学芸文庫)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>前野直彬(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B07K21T6V8</p>
-<p>カテゴリー：日本語研究,Featured Categories,言語学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07K21T6V8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51zJ+L1iGdL._SL500_.jpg" class="mr-3 lazyload" alt="【電子版限定！　豪華特典レシピつき】ロジカル和食― 苦手な揚げ物も煮物も魚料理も得意料理に変わる" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>【電子版限定！　豪華特典レシピつき】ロジカル和食― 苦手な揚げ物も煮物も魚料理も得意料理に変わる</h5>
-                    <p>価格：715円、ポイント：7</p>
-                    <p>前田 量子(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B07ZQXNNNF</p>
-<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZQXNNNF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51obQAgNHSS._SL500_.jpg" class="mr-3 lazyload" alt="巨大中国を動かす紅い方程式　モンスター化する９０００万人党組織の世界戦略" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>巨大中国を動かす紅い方程式　モンスター化する９０００万人党組織の世界戦略</h5>
-                    <p>価格：1010円、ポイント：10</p>
-                    <p>中川コージ(著)</p>
-                    <p>出版社：徳間書店、ASIN：B097TPD5RY</p>
-<p>カテゴリー：政治入門,政治</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097TPD5RY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41RNr0WGRsS._SL500_.jpg" class="mr-3 lazyload" alt="「疑う」からはじめる。 これからの時代を生き抜く思考・行動の源泉" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>「疑う」からはじめる。 これからの時代を生き抜く思考・行動の源泉</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>澤 円(著)</p>
-                    <p>出版社：アスコム、ASIN：B092V7X2VY</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発,社会・政治</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B092V7X2VY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51uKUxpqyBL._SL500_.jpg" class="mr-3 lazyload" alt="おうちで一流レストランの味になるロジカル洋食" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>おうちで一流レストランの味になるロジカル洋食</h5>
-                    <p>価格：759円、ポイント：8</p>
-                    <p>前田 量子(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B08JX8499M</p>
-<p>カテゴリー：料理の基礎,簡単レシピ,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08JX8499M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41kaT1QjFpS._SL500_.jpg" class="mr-3 lazyload" alt="東大式時間術 (扶桑社ＢＯＯＫＳ)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>東大式時間術 (扶桑社ＢＯＯＫＳ)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>布施川 天馬(著)</p>
-                    <p>出版社：扶桑社、ASIN：B098DNBZKK</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B098DNBZKK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51lRuo7L6RL._SL500_.jpg" class="mr-3 lazyload" alt="ゲンロン0 観光客の哲学" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ゲンロン0 観光客の哲学</h5>
-                    <p>価格：1214円、ポイント：12</p>
-                    <p>東 浩紀(著)</p>
-                    <p>出版社：株式会社ゲンロン、ASIN：B078DXR5Y2</p>
-<p>カテゴリー：ジャンル別,Kindle本</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078DXR5Y2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41R5Spvy1wL._SL500_.jpg" class="mr-3 lazyload" alt="読書の価値 (ＮＨＫ出版新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>読書の価値 (ＮＨＫ出版新書)</h5>
-                    <p>価格：499円、ポイント：8</p>
-                    <p>森 博嗣(著)</p>
-                    <p>出版社：NHK出版、ASIN：B07CBHQQV4</p>
-<p>カテゴリー：読書法,本・図書館</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07CBHQQV4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51x8sBpN0JL._SL500_.jpg" class="mr-3 lazyload" alt="江夏の21球 (角川新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>江夏の21球 (角川新書)</h5>
-                    <p>価格：399円、ポイント：4</p>
-                    <p>山際 淳司(著)</p>
-                    <p>出版社：KADOKAWA、ASIN：B073QHQSP9</p>
-<p>カテゴリー：スポーツ,Featured Categories,スポーツ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B073QHQSP9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51kso6-rwrS._SL500_.jpg" class="mr-3 lazyload" alt="中国、朝鮮、ベトナム、日本――極東アジアの地政学 (扶桑社ＢＯＯＫＳ)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>中国、朝鮮、ベトナム、日本――極東アジアの地政学 (扶桑社ＢＯＯＫＳ)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>川島 博之(著)</p>
-                    <p>出版社：扶桑社、ASIN：B097PDFZCZ</p>
-<p>カテゴリー：政治入門,政治学,政治史・比較政治,国際政治情勢,軍事入門,軍事情勢,戦略・戦術,その他,韓国・朝鮮史,世界史,政治,軍事</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097PDFZCZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41cOyebKybS._SL500_.jpg" class="mr-3 lazyload" alt="喜ばれる人になりなさい 母が残してくれた、たった１つの大切なこと" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>喜ばれる人になりなさい 母が残してくれた、たった１つの大切なこと</h5>
+                    <h5>ゼロ・トゥ・ワン　君はゼロから何を生み出せるか</h5>
                     <p>価格：799円、ポイント：8</p>
-                    <p>永松 茂久(著)</p>
-                    <p>出版社：すばる舎、ASIN：B08ZY6GF7S</p>
-<p>カテゴリー：人生論・教訓,ノンフィクション,自己啓発,ノンフィクション,倫理学・道徳,自己啓発,歴史・地理</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08ZY6GF7S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>ピーター・ティール(著)</p>
+                    <p>出版社：NHK出版、ASIN：B00NQ3QONK</p>
+<p>カテゴリー：ジャンル別,マーケティング・セールス,産業研究</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00NQ3QONK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41T8FWSdT2L._SL500_.jpg" class="mr-3 lazyload" alt="医師のつくった「頭のよさ」テスト～認知特性から見た６つのパターン～ (光文社新書)" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51Oug5qD8bL._SL500_.jpg" class="mr-3 lazyload" alt="不安と折り合いをつけて うまいこと老いる生き方" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>医師のつくった「頭のよさ」テスト～認知特性から見た６つのパターン～ (光文社新書)</h5>
-                    <p>価格：299円、ポイント：3</p>
-                    <p>本田 真美(著)</p>
-                    <p>出版社：光文社、ASIN：B009KZ45RU</p>
-<p>カテゴリー：一般,Featured Categories,教育学,教育・学参・受験</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009KZ45RU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <h5>不安と折り合いをつけて うまいこと老いる生き方</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>中村 恒子(著)</p>
+                    <p>出版社：すばる舎、ASIN：B097XZJ37S</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097XZJ37S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51amnyBN2CL._SL500_.jpg" class="mr-3 lazyload" alt="史記１　本紀 (ちくま学芸文庫)" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51xG6HXuBhL._SL500_.jpg" class="mr-3 lazyload" alt="今さら聞けない！政治のキホンが２時間で全部頭に入る" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>史記１　本紀 (ちくま学芸文庫)</h5>
+                    <h5>今さら聞けない！政治のキホンが２時間で全部頭に入る</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>馬屋原 吉博(著)</p>
+                    <p>出版社：すばる舎、ASIN：B07HQ58BLM</p>
+<p>カテゴリー：政治入門,議会・国会,行政・官公庁,政治</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07HQ58BLM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gJGG3u28L._SL500_.jpg" class="mr-3 lazyload" alt="時間は存在しない" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>時間は存在しない</h5>
+                    <p>価格：1249円、ポイント：12</p>
+                    <p>カルロ・ロヴェッリ(著)</p>
+                    <p>出版社：NHK出版、ASIN：B07XBDKG5B</p>
+<p>カテゴリー：理論物理学,物理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XBDKG5B?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EjgraEJ8L._SL500_.jpg" class="mr-3 lazyload" alt="正体" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>正体</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>染井 為人(著)</p>
+                    <p>出版社：光文社、ASIN：B083VTKXSH</p>
+<p>カテゴリー：ジャンル別,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B083VTKXSH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51QuNeo2tlL._SL500_.jpg" class="mr-3 lazyload" alt="[新装版] 企業参謀 戦略的思考とは何か" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>[新装版] 企業参謀 戦略的思考とは何か</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>大前 研一(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B00BANJ84A</p>
+<p>カテゴリー：人生論・教訓,ロジカル・シンキング,自己啓発,ビジネス教育,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00BANJ84A?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41Vkjz+PhrL._SL500_.jpg" class="mr-3 lazyload" alt="シャンプーをやめると、髪が増える　抜け毛、薄毛、パサつきは“洗いすぎ”が原因だった！ (角川書店単行本)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シャンプーをやめると、髪が増える　抜け毛、薄毛、パサつきは“洗いすぎ”が原因だった！ (角川書店単行本)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>宇津木 龍一(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00EPZCJWS</p>
+<p>カテゴリー：ジャンル別,暮らし・健康・子育て</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00EPZCJWS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51UUjlM8GfL._SL500_.jpg" class="mr-3 lazyload" alt="世界のエリートが学んでいるＭＢＡ必読書５０冊を１冊にまとめてみた" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界のエリートが学んでいるＭＢＡ必読書５０冊を１冊にまとめてみた</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>永井孝尚(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07R33HGCQ</p>
+<p>カテゴリー：MBA(経営学修士),ビジネス教育</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07R33HGCQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51WwuHCYgyS._SL500_.jpg" class="mr-3 lazyload" alt="その気遣い、むしろ無礼になってます！" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>その気遣い、むしろ無礼になってます！</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>三上 ナナエ(著)</p>
+                    <p>出版社：すばる舎、ASIN：B095RG8WGZ</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B095RG8WGZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51n+IrZBesL._SL500_.jpg" class="mr-3 lazyload" alt="思考の教室" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>思考の教室</h5>
+                    <p>価格：1099円、ポイント：11</p>
+                    <p>戸田山 和久(著)</p>
+                    <p>出版社：NHK出版、ASIN：B08LNXL7LZ</p>
+<p>カテゴリー：ジャンル別,文学・評論</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08LNXL7LZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51RD+KFIIxL._SL500_.jpg" class="mr-3 lazyload" alt="ややこしくない絵の描き方" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ややこしくない絵の描き方</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>松村上久郎(著)</p>
+                    <p>出版社：秀和システム、ASIN：B08SQC58SH</p>
+<p>カテゴリー：ジャンル別,アート・建築・デザイン</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08SQC58SH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41AvcbzqzDL._SL500_.jpg" class="mr-3 lazyload" alt="ワーク・シフト　─孤独と貧困から自由になる働き方の未来図&lt;2025&gt;" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ワーク・シフト　─孤独と貧困から自由になる働き方の未来図&lt;2025&gt;</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>リンダ グラットン(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B009DFJE9Q</p>
+<p>カテゴリー：労働問題,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009DFJE9Q?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51sU4PLIiIL._SL500_.jpg" class="mr-3 lazyload" alt="いい気分になることだけしかしなくていい！無敵になって生きたいように生きる方法。20分で読めるシリーズ" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>いい気分になることだけしかしなくていい！無敵になって生きたいように生きる方法。20分で読めるシリーズ</h5>
+                    <p>価格：219円、ポイント：2</p>
+                    <p>ぼへみ(著)</p>
+                    <p>出版社：まんがびと、ASIN：B088T75CRZ</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B088T75CRZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51rtwrrr0DL._SL500_.jpg" class="mr-3 lazyload" alt="ドラッカー・スクールのセルフマネジメント教室――Transform Your Results" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ドラッカー・スクールのセルフマネジメント教室――Transform Your Results</h5>
+                    <p>価格：935円、ポイント：9</p>
+                    <p>ジェレミー・ハンター(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B0855TNND8</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0855TNND8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51+W1YNpaRL._SL500_.jpg" class="mr-3 lazyload" alt="プログラミング超初心者が初心者になるためのPython入門（１）　セットアップ・文字列・数値編" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>プログラミング超初心者が初心者になるためのPython入門（１）　セットアップ・文字列・数値編</h5>
+                    <p>価格：125円、ポイント：1</p>
+                    <p>たっく(著)</p>
+                    <p>出版社：なし、ASIN：B00SH9TZV6</p>
+<p>カテゴリー：プログラミング入門書,ソフトウェア開発・言語,一般・入門書,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00SH9TZV6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61SeCYSMZ+L._SL500_.jpg" class="mr-3 lazyload" alt="年収は「住むところ」で決まる ─ 雇用とイノベーションの都市経済学" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>年収は「住むところ」で決まる ─ 雇用とイノベーションの都市経済学</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>エンリコ モレッティ(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B00JUDYNSS</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JUDYNSS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41qwNI4rFjL._SL500_.jpg" class="mr-3 lazyload" alt="科学的に正しい筋トレ 最強の教科書" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>科学的に正しい筋トレ 最強の教科書</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>庵野 拓将(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07NQ47HWV</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NQ47HWV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51BIUx6dA8L._SL500_.jpg" class="mr-3 lazyload" alt="武器になる哲学　人生を生き抜くための哲学・思想のキーコンセプト50" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>武器になる哲学　人生を生き抜くための哲学・思想のキーコンセプト50</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>山口 周(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B07D3KS4CH</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D3KS4CH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51u4xjghGgL._SL500_.jpg" class="mr-3 lazyload" alt="アナスタシア: 響きわたるシベリア杉 シリーズ1" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アナスタシア: 響きわたるシベリア杉 シリーズ1</h5>
+                    <p>価格：625円、ポイント：6</p>
+                    <p>ウラジ-ミル・メグレ(著)</p>
+                    <p>出版社：ナチュラルスピリット、ASIN：B01IEZTHX8</p>
+<p>カテゴリー：形而上学・存在論,人生論・教訓,思想,自己啓発,倫理学・道徳,哲学・思想,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01IEZTHX8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51mj7z9cOpL._SL500_.jpg" class="mr-3 lazyload" alt="オレの嫁は俺 （１）" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>オレの嫁は俺 （１）</h5>
+                    <p>価格：300円、ポイント：3</p>
+                    <p>きっさー(著)</p>
+                    <p>出版社：なし、ASIN：B08HPNTYMH</p>
+<p>カテゴリー：コミック,少年マンガ,ファンタジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08HPNTYMH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51XLVMwdmDL._SL500_.jpg" class="mr-3 lazyload" alt="2030年ジャック・アタリの未来予測―不確実な世の中をサバイブせよ！" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>2030年ジャック・アタリの未来予測―不確実な世の中をサバイブせよ！</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>ジャック・アタリ(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B074NSCZB5</p>
+<p>カテゴリー：社会学概論,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B074NSCZB5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41tG4w1PJQL._SL500_.jpg" class="mr-3 lazyload" alt="「読まなくてもいい本」の読書案内　──知の最前線を５日間で探検する (ちくま文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「読まなくてもいい本」の読書案内　──知の最前線を５日間で探検する (ちくま文庫)</h5>
+                    <p>価格：399円、ポイント：4</p>
+                    <p>橘玲(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B07RXZLKPX</p>
+<p>カテゴリー：ジャンル別,Featured Categories,Kindle本</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RXZLKPX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51DOnKMktHL._SL500_.jpg" class="mr-3 lazyload" alt="なぜハーバード・ビジネス・スクールでは営業を教えないのか？" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>なぜハーバード・ビジネス・スクールでは営業を教えないのか？</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>フィリップ デルヴス ブロートン(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B00F9N25UQ</p>
+<p>カテゴリー：人生論・教訓,MBA(経営学修士),自己啓発,ビジネス教育,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00F9N25UQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/31D-Q5-0aqL._SL500_.jpg" class="mr-3 lazyload" alt="最貧困女子" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最貧困女子</h5>
+                    <p>価格：399円、ポイント：4</p>
+                    <p>鈴木大介(著)</p>
+                    <p>出版社：幻冬舎、ASIN：B00OZHJ53M</p>
+<p>カテゴリー：家族問題,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00OZHJ53M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51fMx-Uuj7L._SL500_.jpg" class="mr-3 lazyload" alt="誰でも１回で味が決まるロジカル調理" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>誰でも１回で味が決まるロジカル調理</h5>
+                    <p>価格：660円、ポイント：7</p>
+                    <p>主婦の友社(編集)</p>
+                    <p>出版社：主婦の友社、ASIN：B07BZQNKMK</p>
+<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BZQNKMK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51cvim71OjL._SL500_.jpg" class="mr-3 lazyload" alt="子どもが笑顔で動き出す 本当に伝わる言葉がけ" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子どもが笑顔で動き出す 本当に伝わる言葉がけ</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>小川 大介(著)</p>
+                    <p>出版社：すばる舎、ASIN：B097XZXQGX</p>
+<p>カテゴリー：一般,子育て,教育学,教育・学参・受験,妊娠・出産・子育て</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097XZXQGX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Wt02cDimL._SL500_.jpg" class="mr-3 lazyload" alt="ゴルフ データ革命" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ゴルフ データ革命</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>マーク ブローディ(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B00UAIFQMO</p>
+<p>カテゴリー：スポーツ,スポーツ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00UAIFQMO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51sUiYx9+DL._SL500_.jpg" class="mr-3 lazyload" alt="外資系コンサルが実践する　図解作成の基本" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>外資系コンサルが実践する　図解作成の基本</h5>
+                    <p>価格：999円、ポイント：10</p>
+                    <p>吉澤 準特(著)</p>
+                    <p>出版社：すばる舎、ASIN：B07F1189D3</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07F1189D3?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51gJS7xegvL._SL500_.jpg" class="mr-3 lazyload" alt="1日3時間だけ働いておだやかに暮らすための思考法" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>1日3時間だけ働いておだやかに暮らすための思考法</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>山口 揚平(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B07P6JV9BD</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07P6JV9BD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51xYMNqO8EL._SL500_.jpg" class="mr-3 lazyload" alt="Process Visionary――デジタル時代のプロセス変革リーダー" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>Process Visionary――デジタル時代のプロセス変革リーダー</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>山本 政樹(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B07ZKCSRFV</p>
+<p>カテゴリー：ジャンル別,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZKCSRFV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-e-SDrd4L._SL500_.jpg" class="mr-3 lazyload" alt="小売再生――リアル店舗はメディアになる" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小売再生――リアル店舗はメディアになる</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>ダグ・スティーブンス(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B07D9BBR1K</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D9BBR1K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41yP5HnBQlL._SL500_.jpg" class="mr-3 lazyload" alt="〈インターネット〉の次に来るもの　未来を決める１２の法則" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>〈インターネット〉の次に来るもの　未来を決める１２の法則</h5>
+                    <p>価格：1249円、ポイント：12</p>
+                    <p>ケヴィン・ケリー(著)</p>
+                    <p>出版社：NHK出版、ASIN：B01HQJ5DY0</p>
+<p>カテゴリー：ジャンル別,マーケティング・セールス,産業研究</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01HQJ5DY0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nBSJIqCLL._SL500_.jpg" class="mr-3 lazyload" alt="一倉定の社長学――伝説の経営コンサルタント" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>一倉定の社長学――伝説の経営コンサルタント</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>作間 信司(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B081ZZ6XLQ</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081ZZ6XLQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51MUmqBrQuL._SL500_.jpg" class="mr-3 lazyload" alt="実践！　５０歳からのライフシフト術　葛藤・挫折・不安を乗り越えた２２人" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>実践！　５０歳からのライフシフト術　葛藤・挫折・不安を乗り越えた２２人</h5>
+                    <p>価格：849円、ポイント：8</p>
+                    <p>大野 誠一(著)</p>
+                    <p>出版社：NHK出版、ASIN：B07MNJ55LG</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MNJ55LG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41Z4PTHJ2RL._SL500_.jpg" class="mr-3 lazyload" alt="アート思考――ビジネスと芸術で人々の幸福を高める方法" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>アート思考――ビジネスと芸術で人々の幸福を高める方法</h5>
+                    <p>価格：935円、ポイント：9</p>
+                    <p>秋元 雄史(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B07ZNRND3S</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZNRND3S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51G-A9qm14L._SL500_.jpg" class="mr-3 lazyload" alt="矛盾社会序説" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>矛盾社会序説</h5>
+                    <p>価格：842円、ポイント：8</p>
+                    <p>御田寺圭(著)</p>
+                    <p>出版社：イースト・プレス、ASIN：B07L9DQXDS</p>
+<p>カテゴリー：社会学概論,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07L9DQXDS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51iEKSmHS0L._SL500_.jpg" class="mr-3 lazyload" alt="たった4つの言葉で幸せになれる！心が楽になるホ・オポノポノの教え" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>たった4つの言葉で幸せになれる！心が楽になるホ・オポノポノの教え</h5>
+                    <p>価格：710円、ポイント：7</p>
+                    <p>イハレアカラ・ヒューレン(著)</p>
+                    <p>出版社：イースト・プレス、ASIN：B01G1OSTJC</p>
+<p>カテゴリー：超心理学・心霊,心理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01G1OSTJC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41O6KHU6JrL._SL500_.jpg" class="mr-3 lazyload" alt="贈与論 (ちくま学芸文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>贈与論 (ちくま学芸文庫)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>マルセル・モース(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B0105DMUQ8</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0105DMUQ8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51-0OJBTgoL._SL500_.jpg" class="mr-3 lazyload" alt="最強の「リーダーシップ理論」集中講義" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>最強の「リーダーシップ理論」集中講義</h5>
+                    <p>価格：792円、ポイント：8</p>
+                    <p>小野善生(著)</p>
+                    <p>出版社：日本実業出版社、ASIN：B00W6SM098</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00W6SM098?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51I3NKS16DL._SL500_.jpg" class="mr-3 lazyload" alt="多肉植物　エケべリア ＮＨＫ趣味の園芸　１２か月栽培ナビNEO" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>多肉植物　エケべリア ＮＨＫ趣味の園芸　１２か月栽培ナビNEO</h5>
+                    <p>価格：899円、ポイント：9</p>
+                    <p>松岡 修一(著)</p>
+                    <p>出版社：NHK出版、ASIN：B08ZXS1MHG</p>
+<p>カテゴリー：ガーデニング,ガーデニング</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08ZXS1MHG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51SOLeaB91S._SL500_.jpg" class="mr-3 lazyload" alt="不登校は子どもからの「メッセージ」　不登校から抜け出し家族に笑顔を取り戻す習慣" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>不登校は子どもからの「メッセージ」　不登校から抜け出し家族に笑顔を取り戻す習慣</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>鈴木 理子(著)</p>
+                    <p>出版社：ごきげんビジネス出版 ブランディング、ASIN：B098XCBFQB</p>
+<p>カテゴリー：家庭・性倫理,心理学入門,読みもの,生涯教育,倫理学・道徳,心理学,教育学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B098XCBFQB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Sd0myCKeL._SL500_.jpg" class="mr-3 lazyload" alt="人も自分も操れる！ 暗示大全" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人も自分も操れる！ 暗示大全</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>内藤 誼人(著)</p>
+                    <p>出版社：すばる舎、ASIN：B07VPNJS2Z</p>
+<p>カテゴリー：心理学入門,読みもの,ビジネス・経済,心理学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07VPNJS2Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41f4bX4zF2L._SL500_.jpg" class="mr-3 lazyload" alt="機会発見 ― 生活者起点で市場をつくる" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>機会発見 ― 生活者起点で市場をつくる</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>岩嵜博論(著)</p>
+                    <p>出版社：英治出版、ASIN：B01M13ZNWU</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01M13ZNWU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Pvn+nCsbS._SL500_.jpg" class="mr-3 lazyload" alt="中国経済の属国ニッポン　マスコミが言わない隣国の支配戦略 (幻冬舎新書)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>中国経済の属国ニッポン　マスコミが言わない隣国の支配戦略 (幻冬舎新書)</h5>
+                    <p>価格：399円、ポイント：4</p>
+                    <p>加谷珪一(著)</p>
+                    <p>出版社：幻冬舎、ASIN：B0957BZF99</p>
+<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0957BZF99?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uqNTYmoML._SL500_.jpg" class="mr-3 lazyload" alt="お熱いのがお好き？" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>お熱いのがお好き？</h5>
+                    <p>価格：396円、ポイント：4</p>
+                    <p>大町テラス(著)</p>
+                    <p>出版社：イースト・プレス、ASIN：B07QNX96FR</p>
+<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QNX96FR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51u6nYglfDL._SL500_.jpg" class="mr-3 lazyload" alt="９割の会社が人事評価制度で失敗する理由―――ストーリー形式で学ぶ失敗の本質と正しい取り組み方" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>９割の会社が人事評価制度で失敗する理由―――ストーリー形式で学ぶ失敗の本質と正しい取り組み方</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>森中謙介(著)</p>
+                    <p>出版社：あさ出版、ASIN：B07XZB3GJK</p>
+<p>カテゴリー：ジャンル別,リーダーシップ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XZB3GJK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Agw86QaOL._SL500_.jpg" class="mr-3 lazyload" alt="「悩みすぎる」人のトリセツ あなたとまわりの不安を一瞬で0にする" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「悩みすぎる」人のトリセツ あなたとまわりの不安を一瞬で0にする</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>大嶋信頼(著)</p>
+                    <p>出版社：秀和システム、ASIN：B08XM8N33P</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08XM8N33P?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/511rxUbUdFL._SL500_.jpg" class="mr-3 lazyload" alt="幻影の戦 水使いの森 (創元推理文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>幻影の戦 水使いの森 (創元推理文庫)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>庵野 ゆき(著)</p>
+                    <p>出版社：東京創元社、ASIN：B08FQQN715</p>
+<p>カテゴリー：ジャンル別,Featured Categories,日本の小説・文芸</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08FQQN715?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51b6qSAjPxL._SL500_.jpg" class="mr-3 lazyload" alt="世界の経営学者はいま何を考えているのか ― 知られざるビジネスの知のフロンティア" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>世界の経営学者はいま何を考えているのか ― 知られざるビジネスの知のフロンティア</h5>
+                    <p>価格：1045円、ポイント：10</p>
+                    <p>入山章栄(著)</p>
+                    <p>出版社：英治出版、ASIN：B00MQOX050</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MQOX050?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vovBXGBaL._SL500_.jpg" class="mr-3 lazyload" alt="小学生のうちに身につけたい！「勉強」のキホン―――「中１ショック」＆「反抗期」までに【親がやるべき】こと" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小学生のうちに身につけたい！「勉強」のキホン―――「中１ショック」＆「反抗期」までに【親がやるべき】こと</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>國立拓治(著)</p>
+                    <p>出版社：あさ出版、ASIN：B07QG9299N</p>
+<p>カテゴリー：人生論・教訓,自己啓発,教育・学参・受験,倫理学・道徳,自己啓発,中学教科書・参考書</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QG9299N?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51TF7L-VETL._SL500_.jpg" class="mr-3 lazyload" alt="ささいなことに動揺してしまう 敏感すぎる人の「仕事の不安」がなくなる本" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ささいなことに動揺してしまう 敏感すぎる人の「仕事の不安」がなくなる本</h5>
+                    <p>価格：743円、ポイント：7</p>
+                    <p>みさきじゅり(著)</p>
+                    <p>出版社：秀和システム、ASIN：B07RVJJKCL</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RVJJKCL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51BRMHZYdjL._SL500_.jpg" class="mr-3 lazyload" alt="賢い冷蔵庫　ラクするためのおいしい下ごしらえ" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>賢い冷蔵庫　ラクするためのおいしい下ごしらえ</h5>
+                    <p>価格：749円、ポイント：7</p>
+                    <p>瀬尾 幸子(著)</p>
+                    <p>出版社：NHK出版、ASIN：B07Y19LR6S</p>
+<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07Y19LR6S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51+-uRbQ-iL._SL500_.jpg" class="mr-3 lazyload" alt="角川インターネット講座１　インターネットの基礎　情報革命を支えるインフラストラクチャー (角川学芸出版全集)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>角川インターネット講座１　インターネットの基礎　情報革命を支えるインフラストラクチャー (角川学芸出版全集)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>村井 純(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B00OLCSKJG</p>
+<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00OLCSKJG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41YWzOx5JSL._SL500_.jpg" class="mr-3 lazyload" alt="憲法で読むアメリカ史（全） (ちくま学芸文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>憲法で読むアメリカ史（全） (ちくま学芸文庫)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>阿川尚之(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B012M4DZBW</p>
+<p>カテゴリー：ジャンル別,Featured Categories,世界史</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B012M4DZBW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51qz1eJDhxL._SL500_.jpg" class="mr-3 lazyload" alt="史記７　列伝三 (ちくま学芸文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>史記７　列伝三 (ちくま学芸文庫)</h5>
                     <p>価格：499円、ポイント：5</p>
                     <p>司馬遷(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B0794VBWQ4</p>
+                    <p>出版社：筑摩書房、ASIN：B0794W1TPF</p>
 <p>カテゴリー：歴史学,Featured Categories,歴史学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0794VBWQ4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0794W1TPF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517PyRqyoTS._SL500_.jpg" class="mr-3 lazyload" alt="バズレシピ 番外編 給料日前ごはん (扶桑社ムック)" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/41BnvMGy36L._SL500_.jpg" class="mr-3 lazyload" alt="文章予測　読解力の鍛え方 (角川ソフィア文庫)" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>バズレシピ 番外編 給料日前ごはん (扶桑社ムック)</h5>
+                    <h5>文章予測　読解力の鍛え方 (角川ソフィア文庫)</h5>
                     <p>価格：399円、ポイント：4</p>
-                    <p>リュウジ(著)</p>
-                    <p>出版社：扶桑社、ASIN：B096KG17BG</p>
-<p>カテゴリー：イタリアン,簡単レシピ,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B096KG17BG?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>石黒圭(著)</p>
+                    <p>出版社：KADOKAWA、ASIN：B075QZB6TC</p>
+<p>カテゴリー：ジャンル別,Featured Categories,趣味・実用</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B075QZB6TC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41uHbvQAEoL._SL500_.jpg" class="mr-3 lazyload" alt="ヤマケイ新書 山を買う" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/515XEC+QquL._SL500_.jpg" class="mr-3 lazyload" alt="英語が話せるようになりたければ、今すぐオンライン英会話をやりなさい！" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>ヤマケイ新書 山を買う</h5>
-                    <p>価格：550円、ポイント：6</p>
-                    <p>福崎 剛(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B08W4VVW7Z</p>
-<p>カテゴリー：キャンプ,不動産,スポーツ,キャンプ,法律,地球科学・エコロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08W4VVW7Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51xvsd9sNPL._SL500_.jpg" class="mr-3 lazyload" alt="毎日かあさん14　卒母編" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>毎日かあさん14　卒母編</h5>
-                    <p>価格：99円、ポイント：1</p>
-                    <p>西原 理恵子(著)</p>
-                    <p>出版社：毎日新聞出版（インプレス）、ASIN：B0776V4H11</p>
-<p>カテゴリー：ジャンル別,Kindle本</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0776V4H11?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51h5oKW1S7L._SL500_.jpg" class="mr-3 lazyload" alt="やせる！ (光文社新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>やせる！ (光文社新書)</h5>
-                    <p>価格：299円、ポイント：3</p>
-                    <p>勝間 和代(著)</p>
-                    <p>出版社：光文社、ASIN：B00BWI0TY6</p>
-<p>カテゴリー：ジャンル別,Featured Categories,美容・ダイエット</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00BWI0TY6?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51vXGKYIyLS._SL500_.jpg" class="mr-3 lazyload" alt="Yuuのラクうま 野菜まるごとレシピ (扶桑社ムック)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>Yuuのラクうま 野菜まるごとレシピ (扶桑社ムック)</h5>
+                    <h5>英語が話せるようになりたければ、今すぐオンライン英会話をやりなさい！</h5>
                     <p>価格：499円、ポイント：5</p>
-                    <p>Yuu(著)</p>
-                    <p>出版社：扶桑社、ASIN：B095NW8Z2Z</p>
-<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B095NW8Z2Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>安河内 哲也(著)</p>
+                    <p>出版社：NHK出版、ASIN：B08XJNMDBR</p>
+<p>カテゴリー：英文読解,言語学,英語</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08XJNMDBR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/418gafRG+gL._SL500_.jpg" class="mr-3 lazyload" alt="ビジネスデータサイエンスの教科書" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/412GvIDv+cL._SL500_.jpg" class="mr-3 lazyload" alt="初版　金枝篇　上 (ちくま学芸文庫)" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>ビジネスデータサイエンスの教科書</h5>
-                    <p>価格：1999円、ポイント：20</p>
-                    <p>マット・タディ(著)</p>
-                    <p>出版社：すばる舎、ASIN：B0894GP1RP</p>
-<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,ビジネス・経済,工学,数学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0894GP1RP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/5194-qrOweL._SL500_.jpg" class="mr-3 lazyload" alt="翔太と猫のインサイトの夏休み　哲学的諸問題へのいざない (ちくま学芸文庫)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>翔太と猫のインサイトの夏休み　哲学的諸問題へのいざない (ちくま学芸文庫)</h5>
-                    <p>価格：399円、ポイント：4</p>
-                    <p>永井均(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B00FWOUSDS</p>
-<p>カテゴリー：思想,Featured Categories,哲学・思想</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00FWOUSDS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Nxg9JAWdL._SL500_.jpg" class="mr-3 lazyload" alt="新説 恐竜学" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>新説 恐竜学</h5>
-                    <p>価格：950円、ポイント：10</p>
-                    <p>平山 廉(著)</p>
-                    <p>出版社：カンゼン、ASIN：B07W83T6YR</p>
-<p>カテゴリー：ジャンル別,地球科学・エコロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07W83T6YR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fZY7wRGMS._SL500_.jpg" class="mr-3 lazyload" alt="未経験から稼げる「書く副業」のはじめ方｜現役Webライター考案の独学勉強法！ コロナ時代の在宅ワークを１か月で身につけて月５万円の副収入を稼ぐ 文章起業家シリーズ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>未経験から稼げる「書く副業」のはじめ方｜現役Webライター考案の独学勉強法！ コロナ時代の在宅ワークを１か月で身につけて月５万円の副収入を稼ぐ 文章起業家シリーズ</h5>
-                    <p>価格：490円、ポイント：5</p>
-                    <p>藤原 将(著)</p>
-                    <p>出版社：ユートミー出版、ASIN：B0949KDSJV</p>
-<p>カテゴリー：参考図書,インターネット・Web開発,ネットワーク,ライティング,実践経営・リーダーシップ,在宅ワーク,知識資本,言語学,語学・辞事典・年鑑,コンピュータ・情報処理,ビジネス関連</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0949KDSJV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/418WXqMhw3L._SL500_.jpg" class="mr-3 lazyload" alt="ただ坐る～生きる自信が湧く　一日１５分座禅～ (光文社新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ただ坐る～生きる自信が湧く　一日１５分座禅～ (光文社新書)</h5>
-                    <p>価格：299円、ポイント：3</p>
-                    <p>ネルケ 無方(著)</p>
-                    <p>出版社：光文社、ASIN：B009KZ45Z2</p>
-<p>カテゴリー：宗教入門,Featured Categories,宗教入門</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009KZ45Z2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BpB2hdMtS._SL500_.jpg" class="mr-3 lazyload" alt="大人の発達障害&amp;HSP 困りごとがスッキリ！　生きづらさを感じるあなたが自分らしく生きられるヒント" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>大人の発達障害&amp;HSP 困りごとがスッキリ！　生きづらさを感じるあなたが自分らしく生きられるヒント</h5>
-                    <p>価格：385円、ポイント：4</p>
-                    <p>結城 操(著)</p>
-                    <p>出版社：ごきげんビジネス出版 ブランディング、ASIN：B0989R8DX8</p>
-<p>カテゴリー：発達心理学,障害児教育,哲学・思想,心理学,教育学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0989R8DX8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51NHngUGOFL._SL500_.jpg" class="mr-3 lazyload" alt="ＯＯＤＡ　ＬＯＯＰ（ウーダループ）―次世代の最強組織に進化する意思決定スキル" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ＯＯＤＡ　ＬＯＯＰ（ウーダループ）―次世代の最強組織に進化する意思決定スキル</h5>
-                    <p>価格：1307円、ポイント：13</p>
-                    <p>チェット リチャーズ(著)</p>
-                    <p>出版社：東洋経済新報社、ASIN：B07ND6QTN4</p>
-<p>カテゴリー：人生論・教訓,自己啓発,ビジネス・経済,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ND6QTN4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41OlyEqzNZL._SL500_.jpg" class="mr-3 lazyload" alt="思考停止という病" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>思考停止という病</h5>
-                    <p>価格：486円、ポイント：5</p>
-                    <p>苫米地英人(著)</p>
-                    <p>出版社：なし、ASIN：B07VCP5X72</p>
-<p>カテゴリー：心理学入門,読みもの,心理学,社会・政治</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07VCP5X72?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fToG6RzRL._SL500_.jpg" class="mr-3 lazyload" alt="起業家はどこで選択を誤るのか ― スタートアップが必ず陥る9つのジレンマ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>起業家はどこで選択を誤るのか ― スタートアップが必ず陥る9つのジレンマ</h5>
-                    <p>価格：1925円、ポイント：19</p>
-                    <p>ノーム・ワッサーマン(著)</p>
-                    <p>出版社：英治出版、ASIN：B00MRRF3II</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MRRF3II?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41WYAlf6uuS._SL500_.jpg" class="mr-3 lazyload" alt="在宅医療の真実 (光文社新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>在宅医療の真実 (光文社新書)</h5>
+                    <h5>初版　金枝篇　上 (ちくま学芸文庫)</h5>
                     <p>価格：499円、ポイント：5</p>
-                    <p>小豆畑 丈夫(著)</p>
-                    <p>出版社：光文社、ASIN：B0948TMXV2</p>
-<p>カテゴリー：家族問題,ケアマネジャー,Featured Categories,社会学,食品・衛生・福祉</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0948TMXV2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>Ｊ．Ｇ．フレイザー(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B01M5BEWM5</p>
+<p>カテゴリー：ジャンル別,Featured Categories,世界史</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01M5BEWM5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Vsk8BPAoL._SL500_.jpg" class="mr-3 lazyload" alt="神メモ 紙１枚で人生がうまくいくメモの技術" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/41be3Qia-eL._SL500_.jpg" class="mr-3 lazyload" alt="シリアル・イノベーター ─ 「非シリコンバレー型」イノベーションの流儀" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>神メモ 紙１枚で人生がうまくいくメモの技術</h5>
-                    <p>価格：799円、ポイント：8</p>
-                    <p>原 邦雄(著)</p>
-                    <p>出版社：すばる舎、ASIN：B08R8DTKKY</p>
-<p>カテゴリー：人生論・教訓,自己啓発,ビジネス・経済,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08R8DTKKY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41PuONFS2tL._SL500_.jpg" class="mr-3 lazyload" alt="戦略人事のビジョン～制度で縛るな、ストーリーを語れ～ (光文社新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>戦略人事のビジョン～制度で縛るな、ストーリーを語れ～ (光文社新書)</h5>
-                    <p>価格：299円、ポイント：3</p>
-                    <p>八木 洋介(著)</p>
-                    <p>出版社：光文社、ASIN：B009KZ45J8</p>
-<p>カテゴリー：ジャンル別,Featured Categories,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009KZ45J8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QEIbKhi2L._SL500_.jpg" class="mr-3 lazyload" alt="くらべてわかる きのこ (原寸大)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>くらべてわかる きのこ (原寸大)</h5>
-                    <p>価格：792円、ポイント：8</p>
-                    <p>大作 晃一(写真)</p>
-                    <p>出版社：山と溪谷社、ASIN：B017CMUV7K</p>
-<p>カテゴリー：民間信仰・俗信,文化人類学・民俗学,クッキング・レシピ,地球科学・エコロジー,生物・バイオテクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017CMUV7K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61eVnjSG4xL._SL500_.jpg" class="mr-3 lazyload" alt="山怪 参 山人が語る不思議な話" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>山怪 参 山人が語る不思議な話</h5>
-                    <p>価格：528円、ポイント：5</p>
-                    <p>田中康弘(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B07GSMJNH4</p>
-<p>カテゴリー：登山・ハイキング,スポーツ,登山・ハイキング,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07GSMJNH4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51XWrqG2JoL._SL500_.jpg" class="mr-3 lazyload" alt="最難関のリーダーシップ ― 変革をやり遂げる意志とスキル" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>最難関のリーダーシップ ― 変革をやり遂げる意志とスキル</h5>
-                    <p>価格：1320円、ポイント：13</p>
-                    <p>ロナルド・Ａ・ハイフェッツ(著)</p>
-                    <p>出版社：英治出版、ASIN：B0753YJBCY</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0753YJBCY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41vAAEcMrFS._SL500_.jpg" class="mr-3 lazyload" alt="「自由な国」日本から見た「不自由な国」韓国 (扶桑社ＢＯＯＫＳ)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>「自由な国」日本から見た「不自由な国」韓国 (扶桑社ＢＯＯＫＳ)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>シンシアリー(著)</p>
-                    <p>出版社：扶桑社、ASIN：B093LMYLS1</p>
-<p>カテゴリー：社会学概論,社会学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B093LMYLS1?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ulO5Lg8oL._SL500_.jpg" class="mr-3 lazyload" alt="転生幼女はあきらめない (サーガフォレスト)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>転生幼女はあきらめない (サーガフォレスト)</h5>
-                    <p>価格：660円、ポイント：7</p>
-                    <p>カヤ(著)</p>
-                    <p>出版社：一二三書房、ASIN：B07NDDN4Z9</p>
-<p>カテゴリー：ジャンル別,ライトノベル</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NDDN4Z9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41P5EyhgwcL._SL500_.jpg" class="mr-3 lazyload" alt="リフレクティブ・マネジャー～一流はつねに内省する～ (光文社新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>リフレクティブ・マネジャー～一流はつねに内省する～ (光文社新書)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>中原 淳(著)</p>
-                    <p>出版社：光文社、ASIN：B00GU4R8SC</p>
-<p>カテゴリー：人生論・教訓,自己啓発,Featured Categories,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GU4R8SC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41MkxeUbQbL._SL500_.jpg" class="mr-3 lazyload" alt="それ、勝手な決めつけかもよ？だれかの正解にしばられない「解釈」の練習【SNSシェア機能付き】 (Discover Next D)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>それ、勝手な決めつけかもよ？だれかの正解にしばられない「解釈」の練習【SNSシェア機能付き】 (Discover Next D)</h5>
+                    <h5>シリアル・イノベーター ─ 「非シリコンバレー型」イノベーションの流儀</h5>
                     <p>価格：825円、ポイント：8</p>
-                    <p>阿部広太郎(著)</p>
-                    <p>出版社：ディスカヴァー・トゥエンティワン、ASIN：B092J7CVJX</p>
+                    <p>アビー グリフィン(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B00JFMACIO</p>
+<p>カテゴリー：MBA(経営学修士),ビジネス教育</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00JFMACIO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nuN6wRp4L._SL500_.jpg" class="mr-3 lazyload" alt="[新装版]干支の活学 ［新装版］人間学講話" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>[新装版]干支の活学 ［新装版］人間学講話</h5>
+                    <p>価格：935円、ポイント：9</p>
+                    <p>安岡 正篤(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B01447AVN0</p>
 <p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B092J7CVJX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01447AVN0?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/513VC1+iKiL._SL500_.jpg" class="mr-3 lazyload" alt="ランニング革命 もっと速く、長く、ずっと怪我なく走るための方法" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51ilPSdhdWL._SL500_.jpg" class="mr-3 lazyload" alt="とろふわ筋トレ 美女ヂカラ" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>ランニング革命 もっと速く、長く、ずっと怪我なく走るための方法</h5>
-                    <p>価格：1188円、ポイント：12</p>
-                    <p>ニコラス・ロマノフ(著)</p>
-                    <p>出版社：カンゼン、ASIN：B08C358QZS</p>
-<p>カテゴリー：スポーツ,スポーツ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08C358QZS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41acs9mXlwL._SL500_.jpg" class="mr-3 lazyload" alt="日本人が海外で最高の仕事をする方法 ― スキルよりも大切なもの" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>日本人が海外で最高の仕事をする方法 ― スキルよりも大切なもの</h5>
-                    <p>価格：880円、ポイント：9</p>
-                    <p>糸木公廣(著)</p>
-                    <p>出版社：英治出版、ASIN：B00MRRF3IS</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00MRRF3IS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/511hQYgD2cL._SL500_.jpg" class="mr-3 lazyload" alt="自分を浄化すると幸せになれる 人生のステージを高めればすべてうまくいく" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>自分を浄化すると幸せになれる 人生のステージを高めればすべてうまくいく</h5>
-                    <p>価格：799円、ポイント：8</p>
-                    <p>岩崎順子(著)</p>
-                    <p>出版社：あさ出版、ASIN：B08YNDKHF2</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08YNDKHF2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51ez4jydQZL._SL500_.jpg" class="mr-3 lazyload" alt="親子で一緒にやるからできる　中学生の勉強大全" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>親子で一緒にやるからできる　中学生の勉強大全</h5>
-                    <p>価格：770円、ポイント：8</p>
-                    <p>道山ケイ(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B08X1PX8GW</p>
-<p>カテゴリー：一般,中学教科書・参考書,教育学,中学教科書・参考書</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08X1PX8GW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51iQZOFTtYL._SL500_.jpg" class="mr-3 lazyload" alt="家族と社会が壊れるとき (ＮＨＫ出版新書)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>家族と社会が壊れるとき (ＮＨＫ出版新書)</h5>
+                    <h5>とろふわ筋トレ 美女ヂカラ</h5>
                     <p>価格：499円、ポイント：5</p>
-                    <p>是枝 裕和(著)</p>
-                    <p>出版社：NHK出版、ASIN：B08PZ69TW7</p>
-<p>カテゴリー：ジャンル別,映画</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08PZ69TW7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>ねこまき（にゃんとまた旅）(イラスト)</p>
+                    <p>出版社：リベラル社、ASIN：B08L3VB5C7</p>
+<p>カテゴリー：ジャンル別,美容・ダイエット</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08L3VB5C7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51alJpM0I1L._SL500_.jpg" class="mr-3 lazyload" alt="MARVEL 倒産から逆転No.1となった映画会社の知られざる秘密" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51pIJTG25BL._SL500_.jpg" class="mr-3 lazyload" alt="まんがでできる 営業の見える化 (Business ComicSeries)" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>MARVEL 倒産から逆転No.1となった映画会社の知られざる秘密</h5>
-                    <p>価格：999円、ポイント：73</p>
-                    <p>チャーリー・ウェッツェル(著)</p>
-                    <p>出版社：すばる舎、ASIN：B08DCR78Q4</p>
-<p>カテゴリー：ノンフィクション,映画,ノンフィクション,産業研究,投資・金融・会社経営</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08DCR78Q4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61bUqiq+n9L._SL500_.jpg" class="mr-3 lazyload" alt="山怪 弐" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>山怪 弐</h5>
-                    <p>価格：528円、ポイント：5</p>
-                    <p>田中 康弘(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B01MZ933CB</p>
-<p>カテゴリー：文化人類学一般,昔話・伝承,文化人類学・民俗学,占い,スポーツ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MZ933CB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OnqMJ6iQL._SL500_.jpg" class="mr-3 lazyload" alt="人生、このままでいいの？ 最高の未来をつくる11の質問ノート" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>人生、このままでいいの？ 最高の未来をつくる11の質問ノート</h5>
-                    <p>価格：528円、ポイント：5</p>
-                    <p>河田 真誠(著)</p>
-                    <p>出版社：ＣＣＣメディアハウス、ASIN：B07NS811BD</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NS811BD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/514Q00pO5WL._SL500_.jpg" class="mr-3 lazyload" alt="はじめてのホツマツタヱ　人の巻" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>はじめてのホツマツタヱ　人の巻</h5>
-                    <p>価格：990円、ポイント：10</p>
-                    <p>今村 聰夫(著)</p>
-                    <p>出版社：かざひの文庫、ASIN：B07ZNBNT1V</p>
-<p>カテゴリー：ジャンル別,歴史・地理</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07ZNBNT1V?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51a-VmNkpsL._SL500_.jpg" class="mr-3 lazyload" alt="少年イン・ザ・フッド（１） (ＳＰＡ！コミックス)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>少年イン・ザ・フッド（１） (ＳＰＡ！コミックス)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>SITE(Ghetto Hollywood)(著)</p>
-                    <p>出版社：扶桑社、ASIN：B08FBYXQF4</p>
-<p>カテゴリー：コミック,マンガ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08FBYXQF4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QuYkPQ9xL._SL500_.jpg" class="mr-3 lazyload" alt="若手ITエンジニア 最強の指南書" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>若手ITエンジニア 最強の指南書</h5>
-                    <p>価格：1307円、ポイント：13</p>
-                    <p>日経SYSTEMS(著)</p>
-                    <p>出版社：日経BP、ASIN：B07BKRRG8B</p>
-<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BKRRG8B?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51bL7x4RZ7L._SL500_.jpg" class="mr-3 lazyload" alt="完食！家ごはん" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>完食！家ごはん</h5>
-                    <p>価格：715円、ポイント：7</p>
-                    <p>藤原 美樹(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B08QZ4V51P</p>
-<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08QZ4V51P?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-kpSuvVeL._SL500_.jpg" class="mr-3 lazyload" alt="【増補改訂版】はじめての英語論文　引ける・使える　パターン表現＆文例集" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>【増補改訂版】はじめての英語論文　引ける・使える　パターン表現＆文例集</h5>
-                    <p>価格：999円、ポイント：10</p>
-                    <p>和田 朋子(著)</p>
-                    <p>出版社：すばる舎、ASIN：B00ISKRPF2</p>
-<p>カテゴリー：英語よみもの,言語学,英語</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00ISKRPF2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61coytU++3L._SL500_.jpg" class="mr-3 lazyload" alt="山怪 山人が語る不思議な話" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>山怪 山人が語る不思議な話</h5>
-                    <p>価格：528円、ポイント：5</p>
-                    <p>田中 康弘(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B00YGRC60U</p>
-<p>カテゴリー：登山・ハイキング,登山・ハイキング</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00YGRC60U?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51CQH+23EiL._SL500_.jpg" class="mr-3 lazyload" alt="１０万円から始める高配当株投資術―――低リスク、低予算で１億円儲ける方法" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>１０万円から始める高配当株投資術―――低リスク、低予算で１億円儲ける方法</h5>
+                    <h5>まんがでできる 営業の見える化 (Business ComicSeries)</h5>
                     <p>価格：699円、ポイント：7</p>
-                    <p>坂本彰(著)</p>
-                    <p>出版社：あさ出版、ASIN：B072ML4PXV</p>
-<p>カテゴリー：ジャンル別,投資</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B072ML4PXV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LJYadud2L._SL500_.jpg" class="mr-3 lazyload" alt="評価経済社会・電子版プラス" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>評価経済社会・電子版プラス</h5>
-                    <p>価格：413円、ポイント：4</p>
-                    <p>岡田斗司夫 FREEex(著)</p>
-                    <p>出版社：株式会社ロケット、ASIN：B00DVN2VEQ</p>
-<p>カテゴリー：社会学概論,経済学,社会学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DVN2VEQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41+mZ807yaL._SL500_.jpg" class="mr-3 lazyload" alt="ヤマケイ登山学校　登山入門" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ヤマケイ登山学校　登山入門</h5>
-                    <p>価格：792円、ポイント：8</p>
-                    <p>佐藤 勇介(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B07PZ5R9XP</p>
-<p>カテゴリー：登山・ハイキング,スポーツ,登山・ハイキング</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07PZ5R9XP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51O2jyp7q5L._SL500_.jpg" class="mr-3 lazyload" alt="看護の現場ですぐに役立つ 解剖生理学のキホン" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>看護の現場ですぐに役立つ 解剖生理学のキホン</h5>
-                    <p>価格：792円、ポイント：8</p>
-                    <p>野溝明子(著)</p>
-                    <p>出版社：秀和システム、ASIN：B07H4BVJGL</p>
-<p>カテゴリー：ジャンル別,医学・薬学,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07H4BVJGL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qXSpJ+7IS._SL500_.jpg" class="mr-3 lazyload" alt="富や名声なんて何度でも手にできる！ 逆境の成功哲学" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>富や名声なんて何度でも手にできる！ 逆境の成功哲学</h5>
-                    <p>価格：799円、ポイント：8</p>
-                    <p>稲村 徹也(著)</p>
-                    <p>出版社：すばる舎、ASIN：B093B143SD</p>
-<p>カテゴリー：人生論・教訓,自己啓発,ビジネス・経済,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B093B143SD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51O-H8IYJ+L._SL500_.jpg" class="mr-3 lazyload" alt="身近にいる「やっかいな人」から身を守る方法" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>身近にいる「やっかいな人」から身を守る方法</h5>
-                    <p>価格：699円、ポイント：7</p>
-                    <p>マーク・ゴールストン(著)</p>
-                    <p>出版社：あさ出版、ASIN：B07DNWRJGV</p>
-<p>カテゴリー：心理学入門,読みもの,心理学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07DNWRJGV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41JoHZOU8RL._SL500_.jpg" class="mr-3 lazyload" alt="消えたい　──虐待された人の生き方から知る心の幸せ (ちくま文庫)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>消えたい　──虐待された人の生き方から知る心の幸せ (ちくま文庫)</h5>
-                    <p>価格：399円、ポイント：4</p>
-                    <p>高橋和巳(著)</p>
-                    <p>出版社：筑摩書房、ASIN：B074PPJJJF</p>
-<p>カテゴリー：心理学入門,読みもの,Featured Categories,心理学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B074PPJJJF?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51WhTOf6HKL._SL500_.jpg" class="mr-3 lazyload" alt="四十肩・五十肩は自分で治せる！" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>四十肩・五十肩は自分で治せる！</h5>
-                    <p>価格：605円、ポイント：6</p>
-                    <p>酒井 慎太郎(著)</p>
-                    <p>出版社：学研プラス、ASIN：B07YS5636R</p>
-<p>カテゴリー：ジャンル別,医学・薬学,家庭医学・健康,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07YS5636R?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/516KNehfXVL._SL500_.jpg" class="mr-3 lazyload" alt="誰も教えてくれなかった システム企画・提案 実践マニュアル（日経BP Next ICT選書）" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>誰も教えてくれなかった システム企画・提案 実践マニュアル（日経BP Next ICT選書）</h5>
-                    <p>価格：1782円、ポイント：34</p>
-                    <p>水田 哲郎(著)</p>
-                    <p>出版社：日経BP、ASIN：B017SH874S</p>
-<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B017SH874S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51A6Ha2f81L._SL500_.jpg" class="mr-3 lazyload" alt="まんがで変わる！　仕事は楽しいかね？ (きこ書房)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>まんがで変わる！　仕事は楽しいかね？ (きこ書房)</h5>
-                    <p>価格：525円、ポイント：5</p>
-                    <p>デイル・ドーテン(著)</p>
-                    <p>出版社：きこ書房、ASIN：B01EMWRPSQ</p>
-<p>カテゴリー：消費者問題,コミック,ビジネス・経済,マンガ,社会学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01EMWRPSQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51oagLiI-4S._SL500_.jpg" class="mr-3 lazyload" alt="プロレス深夜特急 プロレスラーは世界をめぐる旅芸人" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>プロレス深夜特急 プロレスラーは世界をめぐる旅芸人</h5>
-                    <p>価格：1069円、ポイント：11</p>
-                    <p>TAJIRI(著)</p>
-                    <p>出版社：徳間書店、ASIN：B097TN5BZY</p>
-<p>カテゴリー：スポーツ,スポーツ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B097TN5BZY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51FhqVQmKuL._SL500_.jpg" class="mr-3 lazyload" alt="お客様が集まる！ 「ぼくだけ」の売り方" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>お客様が集まる！ 「ぼくだけ」の売り方</h5>
-                    <p>価格：799円、ポイント：8</p>
-                    <p>松野 恵介(著)</p>
-                    <p>出版社：すばる舎、ASIN：B0939YQ42T</p>
-<p>カテゴリー：ジャンル別,マーケティング・セールス,産業研究</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0939YQ42T?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61yJUXeebUS._SL500_.jpg" class="mr-3 lazyload" alt="100日で収束しない日本のコロナ禍 (扶桑社ＢＯＯＫＳ)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>100日で収束しない日本のコロナ禍 (扶桑社ＢＯＯＫＳ)</h5>
-                    <p>価格：499円、ポイント：5</p>
-                    <p>ぼうごなつこ(著)</p>
-                    <p>出版社：扶桑社、ASIN：B09837SGL5</p>
-<p>カテゴリー：政治入門,社会学概論,趣味・実用,政治,社会学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B09837SGL5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51aU1zvWu5L._SL500_.jpg" class="mr-3 lazyload" alt="ひとりぶんのスパイスカレー" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ひとりぶんのスパイスカレー</h5>
-                    <p>価格：572円、ポイント：6</p>
-                    <p>印度カリー子(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B07RZR9GFS</p>
-<p>カテゴリー：クッキング・レシピ,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07RZR9GFS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51IU3GCLdGS._SL500_.jpg" class="mr-3 lazyload" alt="ソムリエ×料理人が家飲み用に本気で考えた　おうちペアリング" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ソムリエ×料理人が家飲み用に本気で考えた　おうちペアリング</h5>
-                    <p>価格：880円、ポイント：9</p>
-                    <p>上田 淳子(著)</p>
-                    <p>出版社：主婦の友社、ASIN：B092ZFSLBV</p>
-<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B092ZFSLBV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/517UeCR+RnL._SL500_.jpg" class="mr-3 lazyload" alt="看護師1年目から身につけたい 一生を支える大切なスキル 新人看護師のための目からウロコの43の気づき" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>看護師1年目から身につけたい 一生を支える大切なスキル 新人看護師のための目からウロコの43の気づき</h5>
-                    <p>価格：693円、ポイント：7</p>
-                    <p>原田高志(著)</p>
-                    <p>出版社：秀和システム、ASIN：B088ZBCCVK</p>
-<p>カテゴリー：ジャンル別,医学・薬学,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B088ZBCCVK?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41RaEJjRBCL._SL500_.jpg" class="mr-3 lazyload" alt="あなたの大切な人が「うつ」になったら" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>あなたの大切な人が「うつ」になったら</h5>
-                    <p>価格：600円、ポイント：6</p>
-                    <p>小野 一之(著)</p>
-                    <p>出版社：すばる舎、ASIN：B00E87F6UA</p>
-<p>カテゴリー：心理学入門,読みもの,心理学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00E87F6UA?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qAugdbO6L._SL500_.jpg" class="mr-3 lazyload" alt="会話力があがる　大人のはきはき「滑舌」上達ドリル　1日3分言葉の体操で口元・表情・脳を活性化 コツがわかる本" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>会話力があがる　大人のはきはき「滑舌」上達ドリル　1日3分言葉の体操で口元・表情・脳を活性化 コツがわかる本</h5>
-                    <p>価格：759円、ポイント：8</p>
-                    <p>花形 一実(著)</p>
-                    <p>出版社：メイツ出版、ASIN：B06XCHSJZD</p>
-<p>カテゴリー：人生論・教訓,社会学概論,自己啓発,倫理学・道徳,医学・薬学,自己啓発,社会学,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XCHSJZD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51QiYXfMC1L._SL500_.jpg" class="mr-3 lazyload" alt="異世界ゆるっとサバイバル生活～学校の皆と異世界の無人島に転移したけど俺だけ楽勝です～ (ブレイブ文庫)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>異世界ゆるっとサバイバル生活～学校の皆と異世界の無人島に転移したけど俺だけ楽勝です～ (ブレイブ文庫)</h5>
-                    <p>価格：418円、ポイント：4</p>
-                    <p>絢乃(著)</p>
-                    <p>出版社：一二三書房、ASIN：B0863DDXWZ</p>
-<p>カテゴリー：ジャンル別,ライトノベル</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0863DDXWZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OkaWJfunL._SL500_.jpg" class="mr-3 lazyload" alt="悟りを生きる: 非二元へのシンプルなガイド" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>悟りを生きる: 非二元へのシンプルなガイド</h5>
-                    <p>価格：625円、ポイント：6</p>
-                    <p>スコット・キロビー(著)</p>
-                    <p>出版社：なし、ASIN：B086V3YV1S</p>
-<p>カテゴリー：形而上学・存在論,心理学入門,読みもの,思想,哲学・思想,心理学,占い</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B086V3YV1S?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51XGy4vOdFL._SL500_.jpg" class="mr-3 lazyload" alt="まんがで身につくアドラー 明日を変える心理学―――誰でも３日で変われる。(Business ComicSeries)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>まんがで身につくアドラー 明日を変える心理学―――誰でも３日で変われる。(Business ComicSeries)</h5>
-                    <p>価格：699円、ポイント：7</p>
-                    <p>鈴木義也(著)</p>
-                    <p>出版社：あさ出版、ASIN：B01JADEBX4</p>
+                    <p>長尾一洋(著)</p>
+                    <p>出版社：あさ出版、ASIN：B01JADEJ68</p>
 <p>カテゴリー：人生論・教訓,自己啓発,コミック,倫理学・道徳,自己啓発,マンガ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01JADEBX4?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01JADEJ68?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51LWLt+HlfL._SL500_.jpg" class="mr-3 lazyload" alt="人生のすべてがうまくいく！最強のチャクラ開発法" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/61Ir+tgNZyL._SL500_.jpg" class="mr-3 lazyload" alt="まんがで身につくPDCA―――「その他大勢」から抜け出すために(Business ComicSeries)" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>人生のすべてがうまくいく！最強のチャクラ開発法</h5>
-                    <p>価格：500円、ポイント：5</p>
-                    <p>齋藤順(著)</p>
-                    <p>出版社：なし、ASIN：B08X21ZLVZ</p>
-<p>カテゴリー：宗教入門,宗教入門,美容・ダイエット</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08X21ZLVZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51KW-eKcIaL._SL500_.jpg" class="mr-3 lazyload" alt="選ばれるプロフェッショナル ― クライアントが本当に求めていること" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>選ばれるプロフェッショナル ― クライアントが本当に求めていること</h5>
-                    <p>価格：1100円、ポイント：11</p>
-                    <p>ジャグディシュ・Ｎ・シース(著)</p>
-                    <p>出版社：英治出版、ASIN：B071W31V1K</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B071W31V1K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41Gm7nL0WpL._SL500_.jpg" class="mr-3 lazyload" alt="あるがままに生きる" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>あるがままに生きる</h5>
-                    <p>価格：454円、ポイント：5</p>
-                    <p>足立 幸子(著)</p>
-                    <p>出版社：なし、ASIN：B06XY4HKJN</p>
-<p>カテゴリー：形而上学・存在論,論文・評論・講演集,思想,哲学・思想</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B06XY4HKJN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51fJFaTB38L._SL500_.jpg" class="mr-3 lazyload" alt="あなたの才能があなたを苦しめる" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>あなたの才能があなたを苦しめる</h5>
-                    <p>価格：799円、ポイント：8</p>
-                    <p>大嶋 信頼(著)</p>
-                    <p>出版社：すばる舎、ASIN：B08BR1PK51</p>
-<p>カテゴリー：人生論・教訓,心理学入門,読みもの,自己啓発,倫理学・道徳,心理学,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BR1PK51?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51aQAzNQsXL._SL500_.jpg" class="mr-3 lazyload" alt="結果を勝ち取る！実戦のFXテクニカル" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>結果を勝ち取る！実戦のFXテクニカル</h5>
-                    <p>価格：990円、ポイント：10</p>
-                    <p>中野 佑也(著)</p>
-                    <p>出版社：standards、ASIN：B08H4GCQLY</p>
-<p>カテゴリー：ジャンル別,ビジネス・経済,投資・金融・会社経営</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08H4GCQLY?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51qBpNMAGcL._SL500_.jpg" class="mr-3 lazyload" alt="移動力" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>移動力</h5>
-                    <p>価格：799円、ポイント：8</p>
-                    <p>長倉 顕太(著)</p>
-                    <p>出版社：すばる舎、ASIN：B07P9YT8P5</p>
-<p>カテゴリー：人生論・教訓,自己啓発,ビジネス・経済,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07P9YT8P5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51r801CDI5L._SL500_.jpg" class="mr-3 lazyload" alt="病気にならない「強い体」をつくる食べ方―――「プチ不調」がみるみる改善！" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>病気にならない「強い体」をつくる食べ方―――「プチ不調」がみるみる改善！</h5>
+                    <h5>まんがで身につくPDCA―――「その他大勢」から抜け出すために(Business ComicSeries)</h5>
                     <p>価格：699円、ポイント：7</p>
-                    <p>内海聡(著)</p>
-                    <p>出版社：あさ出版、ASIN：B01LZA99WT</p>
-<p>カテゴリー：食事療法,家庭医学・健康,美容・ダイエット</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01LZA99WT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>原マサヒコ(著)</p>
+                    <p>出版社：あさ出版、ASIN：B01JADEGLQ</p>
+<p>カテゴリー：人生論・教訓,自己啓発,コミック,倫理学・道徳,自己啓発,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01JADEGLQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51-NfEUbCaL._SL500_.jpg" class="mr-3 lazyload" alt="生きづらさの正体はアダルトチルドレン。その根本原因を解消し、楽な生き方を手に入れる。30分で読めるシリーズ" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51nO6jPJpIL._SL500_.jpg" class="mr-3 lazyload" alt="経営者のノート 会社の「あり方」と「やり方」を定める100の指針 経営者のノート 会社の「あり方」と「やり方」を定める１００の指針" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>生きづらさの正体はアダルトチルドレン。その根本原因を解消し、楽な生き方を手に入れる。30分で読めるシリーズ</h5>
-                    <p>価格：164円、ポイント：2</p>
-                    <p>梅岡幸子(著)</p>
-                    <p>出版社：まんがびと、ASIN：B075CHFGJV</p>
-<p>カテゴリー：心理学入門,読みもの,心理学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B075CHFGJV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <h5>経営者のノート 会社の「あり方」と「やり方」を定める100の指針 経営者のノート 会社の「あり方」と「やり方」を定める１００の指針</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>坂本光司(著)</p>
+                    <p>出版社：あさ出版、ASIN：B08CMHT74Z</p>
+<p>カテゴリー：ジャンル別,経営学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08CMHT74Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41JlorrvpQL._SL500_.jpg" class="mr-3 lazyload" alt="ヤマケイ登山学校 登山ボディ" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/416PYYQCQhL._SL500_.jpg" class="mr-3 lazyload" alt="バタイユ入門 (ちくま新書)" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>ヤマケイ登山学校 登山ボディ</h5>
-                    <p>価格：836円、ポイント：8</p>
-                    <p>芳須 勲(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B081YBFT2J</p>
-<p>カテゴリー：登山・ハイキング,スポーツ,登山・ハイキング</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081YBFT2J?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <h5>バタイユ入門 (ちくま新書)</h5>
+                    <p>価格：399円、ポイント：4</p>
+                    <p>酒井健(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B00FGY5ARS</p>
+<p>カテゴリー：ジャンル別,Featured Categories,Kindle本</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00FGY5ARS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51OpJ1ybKaL._SL500_.jpg" class="mr-3 lazyload" alt="Docker Desktop for Windows/Macでつくるクリーンな開発環境構築入門(Python版)" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51hcDhYT19L._SL500_.jpg" class="mr-3 lazyload" alt="もっとかんたん、もっとおいしい　もっとつくおき (美人時間ブック)" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>Docker Desktop for Windows/Macでつくるクリーンな開発環境構築入門(Python版)</h5>
-                    <p>価格：600円、ポイント：6</p>
-                    <p>太田 和樹(著)</p>
-                    <p>出版社：なし、ASIN：B08D8TXXHD</p>
-<p>カテゴリー：Linux,OS,工学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08D8TXXHD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51hRAhCLeXL._SL500_.jpg" class="mr-3 lazyload" alt="｢ケトン体｣こそ人類史上､最強の薬である 病気にならない体へ変わる“正しい糖質制限”" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>｢ケトン体｣こそ人類史上､最強の薬である 病気にならない体へ変わる“正しい糖質制限”</h5>
-                    <p>価格：891円、ポイント：9</p>
-                    <p>宗田 哲男(著)</p>
-                    <p>出版社：カンゼン、ASIN：B081ZV3WX7</p>
-<p>カテゴリー：ジャンル別,医学・薬学,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B081ZV3WX7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51gM4GphGfL._SL500_.jpg" class="mr-3 lazyload" alt="NHK基礎英語　使いこなし　中学英文法　「シチュエーション」で要点をつかむ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>NHK基礎英語　使いこなし　中学英文法　「シチュエーション」で要点をつかむ</h5>
-                    <p>価格：849円、ポイント：16</p>
-                    <p>阿野 幸一(著)</p>
-                    <p>出版社：NHK出版、ASIN：B07B7NSNT8</p>
-<p>カテゴリー：英文法・語法,英語,言語学,中学教科書・参考書,英語</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B7NSNT8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41UdQf0hfzL._SL500_.jpg" class="mr-3 lazyload" alt="ドキュメント単独行遭難" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ドキュメント単独行遭難</h5>
-                    <p>価格：704円、ポイント：7</p>
-                    <p>羽根田 治(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B00DNZ0KFE</p>
-<p>カテゴリー：登山・ハイキング,登山・ハイキング</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00DNZ0KFE?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/61XOryf4EML._SL500_.jpg" class="mr-3 lazyload" alt="ヤマケイ文庫 野性伝説 羆風／飴色角と三本指" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ヤマケイ文庫 野性伝説 羆風／飴色角と三本指</h5>
-                    <p>価格：704円、ポイント：7</p>
-                    <p>戸川幸夫(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B07D9D2D9J</p>
-<p>カテゴリー：登山・ハイキング,スポーツ,登山・ハイキング</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07D9D2D9J?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51mjWQwaynL._SL500_.jpg" class="mr-3 lazyload" alt="ガベージブレイブ 【異世界に召喚され捨てられた勇者の復讐物語】（サーガフォレスト）" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>ガベージブレイブ 【異世界に召喚され捨てられた勇者の復讐物語】（サーガフォレスト）</h5>
-                    <p>価格：660円、ポイント：7</p>
-                    <p>なんじゃもんじゃ(著)</p>
-                    <p>出版社：一二三書房、ASIN：B07H5GPGHR</p>
-<p>カテゴリー：ジャンル別,ライトノベル</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07H5GPGHR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51SE3ju3PqL._SL500_.jpg" class="mr-3 lazyload" alt="AUTOSPORT (オートスポーツ) 特別編集 レーシングカートテクニック完結編 AUTOSPORT特別編集" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>AUTOSPORT (オートスポーツ) 特別編集 レーシングカートテクニック完結編 AUTOSPORT特別編集</h5>
-                    <p>価格：1155円、ポイント：12</p>
-                    <p>鈴木立一(著)</p>
-                    <p>出版社：三栄、ASIN：B00TZNN7Z8</p>
-<p>カテゴリー：スポーツ,産業研究,スポーツ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00TZNN7Z8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/612sUoQxEUL._SL500_.jpg" class="mr-3 lazyload" alt="はじめてのアフィニティデザイナー(Windows対応版): 最新改定３版 イラストレーションから画像加工まで、本格的なデザインソフト”Affinity Designer”の日本語解説書です。この一冊で、あなたはプロのデザイナー！" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>はじめてのアフィニティデザイナー(Windows対応版): 最新改定３版 イラストレーションから画像加工まで、本格的なデザインソフト”Affinity Designer”の日本語解説書です。この一冊で、あなたはプロのデザイナー！</h5>
-                    <p>価格：589円、ポイント：6</p>
-                    <p>桑原　明(著)</p>
-                    <p>出版社：有限会社ゲームインデックス・ドット・ネット、ASIN：B01NCO827X</p>
-<p>カテゴリー：Windows入門書,グラフィックス,アプリケーション,一般・入門書,工学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01NCO827X?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/31oJ3rLdATL._SL500_.jpg" class="mr-3 lazyload" alt="決断力の磨き方 人に決められる人生でいいのか 仕事の教科書ＢＯＯＫＳ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>決断力の磨き方 人に決められる人生でいいのか 仕事の教科書ＢＯＯＫＳ</h5>
-                    <p>価格：743円、ポイント：7</p>
-                    <p>池田貴将(著)</p>
-                    <p>出版社：学研プラス、ASIN：B014QJ2KL2</p>
-<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B014QJ2KL2?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/31JE8-flUFL._SL500_.jpg" class="mr-3 lazyload" alt="発達障害で生まれてくれてありがとう～シングルマザーがわが子を東大に入れるまで～" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>発達障害で生まれてくれてありがとう～シングルマザーがわが子を東大に入れるまで～</h5>
+                    <h5>もっとかんたん、もっとおいしい　もっとつくおき (美人時間ブック)</h5>
                     <p>価格：499円、ポイント：5</p>
-                    <p>菊地 ユキ(著)</p>
-                    <p>出版社：光文社、ASIN：B08G85S1WQ</p>
-<p>カテゴリー：子育て,妊娠・出産・子育て</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08G85S1WQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51w9uMmNdKL._SL500_.jpg" class="mr-3 lazyload" alt="iPadはかどる! 仕事技2021(全iPad・iPadOS 14対応/リモートワークにも最適な仕事技が満載)" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>iPadはかどる! 仕事技2021(全iPad・iPadOS 14対応/リモートワークにも最適な仕事技が満載)</h5>
-                    <p>価格：792円、ポイント：8</p>
-                    <p>standards(編集)</p>
-                    <p>出版社：standards、ASIN：B08KVV6QDW</p>
-<p>カテゴリー：コンピュータ・IT,コンピュータ・IT,工学</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08KVV6QDW?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51WmYzbA6FL._SL500_.jpg" class="mr-3 lazyload" alt="介護施設で働く、看護師・介護職員のための症状別　伝えかたとチェック項目: 医師監修〜必要なのは、『詳細な医療知識』ではなく『報告のスキル』だ！〜 介護施設の看護師・介護士のためのはじめての医療の教科書" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>介護施設で働く、看護師・介護職員のための症状別　伝えかたとチェック項目: 医師監修〜必要なのは、『詳細な医療知識』ではなく『報告のスキル』だ！〜 介護施設の看護師・介護士のためのはじめての医療の教科書</h5>
-                    <p>価格：550円、ポイント：6</p>
-                    <p>本を書く医師(著)</p>
-                    <p>出版社：なし、ASIN：B07KZTWBSB</p>
-<p>カテゴリー：ジャンル別,医学・薬学,科学・テクノロジー</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07KZTWBSB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51kerUTFkyL._SL500_.jpg" class="mr-3 lazyload" alt="メスティン自動レシピ" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>メスティン自動レシピ</h5>
-                    <p>価格：572円、ポイント：6</p>
-                    <p>メスティン愛好会(著)</p>
-                    <p>出版社：山と溪谷社、ASIN：B07V7X3SFH</p>
-<p>カテゴリー：キャンプ,スポーツ,キャンプ,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07V7X3SFH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
-                </div>
-            </li>
-            <li class="media mb-3 alert-warning ">
-  <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/41Y2gSQF9hL._SL500_.jpg" class="mr-3 lazyload" alt="おもくない！ふとらない！スパイスとカレー入門" loading="lazy" />
-  </div>
-                <div class="media-body ml-3">
-                    <h5>おもくない！ふとらない！スパイスとカレー入門</h5>
-                    <p>価格：792円、ポイント：8</p>
-                    <p>印度カリー子(著)</p>
-                    <p>出版社：standards、ASIN：B07SM562CJ</p>
+                    <p>ｎｏｚｏｍｉ(著)</p>
+                    <p>出版社：光文社、ASIN：B01FVJBYZO</p>
 <p>カテゴリー：ジャンル別,クッキング・レシピ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07SM562CJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01FVJBYZO?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51BEdlu1f+L._SL500_.jpg" class="mr-3 lazyload" alt="すぐ泣く女に機関銃【特装版】 (恋するソワレ＋)" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51+uZ-f2aHL._SL500_.jpg" class="mr-3 lazyload" alt="日本型PMIの方法論――中堅・中小企業を成長させるポストM&amp;Aのプロセス" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>すぐ泣く女に機関銃【特装版】 (恋するソワレ＋)</h5>
+                    <h5>日本型PMIの方法論――中堅・中小企業を成長させるポストM&amp;Aのプロセス</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>竹林 信幸(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B07P7LTM77</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07P7LTM77?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51T455XWoUL._SL500_.jpg" class="mr-3 lazyload" alt="エクセレント・カンパニー Eijipress business classics" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>エクセレント・カンパニー Eijipress business classics</h5>
+                    <p>価格：1210円、ポイント：12</p>
+                    <p>トム・ピーターズ(著)</p>
+                    <p>出版社：英治出版、ASIN：B07BZBMF7K</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07BZBMF7K?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51hcQkSTZJL._SL500_.jpg" class="mr-3 lazyload" alt="まんがでわかる 中村天風の教え―――人生は心一つの置きどころ (Business ComicSeries)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがでわかる 中村天風の教え―――人生は心一つの置きどころ (Business ComicSeries)</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>さとうもえ(著)</p>
+                    <p>出版社：あさ出版、ASIN：B01MCXKZXJ</p>
+<p>カテゴリー：思想,コミック,哲学・思想,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01MCXKZXJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/616GKDkWrNL._SL500_.jpg" class="mr-3 lazyload" alt="心にのこる絵の描き方 強い印象を与えるための35の方法" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>心にのこる絵の描き方 強い印象を与えるための35の方法</h5>
+                    <p>価格：693円、ポイント：7</p>
+                    <p>松村上久郎(著)</p>
+                    <p>出版社：秀和システム、ASIN：B01NAGHNKH</p>
+<p>カテゴリー：ジャンル別,アート・建築・デザイン</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01NAGHNKH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51uJy262IjL._SL500_.jpg" class="mr-3 lazyload" alt="やまと尼寺　精進日記" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>やまと尼寺　精進日記</h5>
+                    <p>価格：949円、ポイント：9</p>
+                    <p>ＮＨＫ「やまと尼寺精進日記」制作班(著)</p>
+                    <p>出版社：NHK出版、ASIN：B07G9W8GPD</p>
+<p>カテゴリー：ジャンル別,仏教</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07G9W8GPD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51bgve3IKaS._SL500_.jpg" class="mr-3 lazyload" alt="大人女子のゆるっと漢方生活" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大人女子のゆるっと漢方生活</h5>
+                    <p>価格：715円、ポイント：7</p>
+                    <p>櫻井 大典(監修)</p>
+                    <p>出版社：主婦の友社、ASIN：B09572MHZB</p>
+<p>カテゴリー：ジャンル別,医学・薬学,美容・ダイエット,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B09572MHZB?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41c2PjWv-zS._SL500_.jpg" class="mr-3 lazyload" alt="だから、あの人は嫌われる　対人関係がうまくいかない人の解決策 (幻冬舎新書)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>だから、あの人は嫌われる　対人関係がうまくいかない人の解決策 (幻冬舎新書)</h5>
+                    <p>価格：399円、ポイント：4</p>
+                    <p>吉原珠央(著)</p>
+                    <p>出版社：幻冬舎、ASIN：B0957BL12N</p>
+<p>カテゴリー：人生論・教訓,自己啓発,Featured Categories,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0957BL12N?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/413gWy4VvfL._SL500_.jpg" class="mr-3 lazyload" alt="精神現象学　上 (ちくま学芸文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>精神現象学　上 (ちくま学芸文庫)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>Ｇ．Ｗ．Ｆ．ヘーゲル(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B07QKXCQVQ</p>
+<p>カテゴリー：思想,Featured Categories,哲学・思想</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QKXCQVQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Mr1BghHaL._SL500_.jpg" class="mr-3 lazyload" alt="地球へ…[カラーイラスト完全版デジタルエディション] 1巻" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>地球へ…[カラーイラスト完全版デジタルエディション] 1巻</h5>
+                    <p>価格：220円、ポイント：2</p>
+                    <p>竹宮 惠子(著)</p>
+                    <p>出版社：三栄、ASIN：B073R6HCX9</p>
+<p>カテゴリー：コミック・ラノベ・BL,SF</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B073R6HCX9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61PdvuzXGDL._SL500_.jpg" class="mr-3 lazyload" alt="田口護のスペシャルティコーヒー大全　知識編" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>田口護のスペシャルティコーヒー大全　知識編</h5>
                     <p>価格：299円、ポイント：3</p>
-                    <p>和田依子(著)</p>
-                    <p>出版社：ソルマーレ編集部、ASIN：B07TS46HG8</p>
-<p>カテゴリー：コミック・ラノベ・BL,マンガ</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07TS46HG8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <p>田口 護(著)</p>
+                    <p>出版社：NHK出版、ASIN：B00GBV19E8</p>
+<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00GBV19E8?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
   <div class="img-container--table-cell d-flex align-items-center">
-    <img src="https://m.media-amazon.com/images/I/51Fu9mT08+L._SL500_.jpg" class="mr-3 lazyload" alt="神と呼ばれる鉄道YouTuber スーツの素顔" loading="lazy" />
+    <img src="https://m.media-amazon.com/images/I/51YHQVMoscL._SL500_.jpg" class="mr-3 lazyload" alt="経営戦略としての知財" loading="lazy" />
   </div>
                 <div class="media-body ml-3">
-                    <h5>神と呼ばれる鉄道YouTuber スーツの素顔</h5>
-                    <p>価格：600円、ポイント：6</p>
-                    <p>スーツ(著)</p>
-                    <p>出版社：三才ブックス、ASIN：B08L4HSDWN</p>
-<p>カテゴリー：近現代の作品,鉄道,産業研究,鉄道,エッセー・随筆</p>
-<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08L4HSDWN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                    <h5>経営戦略としての知財</h5>
+                    <p>価格：704円、ポイント：7</p>
+                    <p>久慈 直登(著)</p>
+                    <p>出版社：ＣＣＣメディアハウス、ASIN：B07P99XMNX</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07P99XMNX?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51AqlCyy5nL._SL500_.jpg" class="mr-3 lazyload" alt="不動産投資の常識を極度に打ち破る！　物件無料ゲット法" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>不動産投資の常識を極度に打ち破る！　物件無料ゲット法</h5>
+                    <p>価格：550円、ポイント：6</p>
+                    <p>村上 祐章(著)</p>
+                    <p>出版社：ごきげんビジネス出版、ASIN：B07QXWFBFH</p>
+<p>カテゴリー：社会学概論,消費者問題,不動産投資,ビジネス・経済,投資・金融・会社経営,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07QXWFBFH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51JITCGXN3L._SL500_.jpg" class="mr-3 lazyload" alt="会社では教えてもらえない　残業ゼロの人の段取りのキホン 【会社では教えてもらえないシリーズ】" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>会社では教えてもらえない　残業ゼロの人の段取りのキホン 【会社では教えてもらえないシリーズ】</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>伊庭 正康(著)</p>
+                    <p>出版社：すばる舎、ASIN：B074FW59M9</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B074FW59M9?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51lNrGdlOQL._SL500_.jpg" class="mr-3 lazyload" alt="ふたたびの微分・積分" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ふたたびの微分・積分</h5>
+                    <p>価格：999円、ポイント：10</p>
+                    <p>永野 裕之(著)</p>
+                    <p>出版社：すばる舎、ASIN：B00KFXYVWU</p>
+<p>カテゴリー：ジャンル別,数学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00KFXYVWU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51Ys8r7yRgL._SL500_.jpg" class="mr-3 lazyload" alt="ＮＨＫ出版　からだのための食材大全" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＨＫ出版　からだのための食材大全</h5>
+                    <p>価格：1549円、ポイント：15</p>
+                    <p>ＮＨＫ出版(編集)</p>
+                    <p>出版社：NHK出版、ASIN：B07NKSB2J5</p>
+<p>カテゴリー：ジャンル別,医学・薬学,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07NKSB2J5?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51vThTvlw3L._SL500_.jpg" class="mr-3 lazyload" alt="GIG WORK（ギグワーク)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>GIG WORK（ギグワーク)</h5>
+                    <p>価格：799円、ポイント：32</p>
+                    <p>長倉 顕太(著)</p>
+                    <p>出版社：すばる舎、ASIN：B07X53Y7XL</p>
+<p>カテゴリー：人生論・教訓,自己啓発,ビジネス・経済,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07X53Y7XL?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61nIhcM4fsL._SL500_.jpg" class="mr-3 lazyload" alt="小さな会社は経営計画で人を育てなさい！―――経営計画・作成・運用に必要なフォーマット入り" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>小さな会社は経営計画で人を育てなさい！―――経営計画・作成・運用に必要なフォーマット入り</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>山元浩二(著)</p>
+                    <p>出版社：あさ出版、ASIN：B076HNH2VQ</p>
+<p>カテゴリー：ジャンル別,経営学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B076HNH2VQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/412TwuSJT1L._SL500_.jpg" class="mr-3 lazyload" alt="グーグル　ネット覇者の真実" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>グーグル　ネット覇者の真実</h5>
+                    <p>価格：732円、ポイント：7</p>
+                    <p>スティーブン・レヴィ(著)</p>
+                    <p>出版社：CCCメディアハウス、ASIN：B009LFBL4Y</p>
+<p>カテゴリー：IT,コンピュータ・IT,実践経営・リーダーシップ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009LFBL4Y?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51wE-3a6SOL._SL500_.jpg" class="mr-3 lazyload" alt="ＮＨＫきょうの料理 　大原千鶴の絶品手づくりだれ料理帖" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＨＫきょうの料理 　大原千鶴の絶品手づくりだれ料理帖</h5>
+                    <p>価格：849円、ポイント：8</p>
+                    <p>大原 千鶴(著)</p>
+                    <p>出版社：NHK出版、ASIN：B084FGX6JS</p>
+<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084FGX6JS?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51puqY5LLzL._SL500_.jpg" class="mr-3 lazyload" alt="まんがで学ぶ 世界の宗教―――日本人は無宗教？　宗教って難しくない(Business ComicSeries)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがで学ぶ 世界の宗教―――日本人は無宗教？　宗教って難しくない(Business ComicSeries)</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>さとうもえ(著)</p>
+                    <p>出版社：あさ出版、ASIN：B01JADEFHQ</p>
+<p>カテゴリー：コミック,家庭医学・健康,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01JADEFHQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51QCZkJmqCL._SL500_.jpg" class="mr-3 lazyload" alt="稼げる講師、稼げない講師どこが違うか" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>稼げる講師、稼げない講師どこが違うか</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>五十嵐康雄(著)</p>
+                    <p>出版社：あさ出版、ASIN：B083NQ66X7</p>
+<p>カテゴリー：ジャンル別,ビジネススキル,投資・金融・会社経営</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B083NQ66X7?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/419seQGTj-L._SL500_.jpg" class="mr-3 lazyload" alt="きのこの教科書　観察と種同定の入門" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きのこの教科書　観察と種同定の入門</h5>
+                    <p>価格：968円、ポイント：10</p>
+                    <p>佐久間 大輔(著)</p>
+                    <p>出版社：山と溪谷社、ASIN：B07XLC46PR</p>
+<p>カテゴリー：ジャンル別,クッキング・レシピ,地球科学・エコロジー,生物・バイオテクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07XLC46PR?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51D3DgRQVuL._SL500_.jpg" class="mr-3 lazyload" alt="「あと１品」がすぐ決まる！　野菜のおかず３６５ 別冊ＮＨＫきょうの料理" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>「あと１品」がすぐ決まる！　野菜のおかず３６５ 別冊ＮＨＫきょうの料理</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>ＮＨＫ出版(編集)</p>
+                    <p>出版社：NHK出版、ASIN：B0769W6T1Z</p>
+<p>カテゴリー：簡単レシピ,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0769W6T1Z?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41yf2VRIpIL._SL500_.jpg" class="mr-3 lazyload" alt="英語類義語活用辞典 (ちくま学芸文庫)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>英語類義語活用辞典 (ちくま学芸文庫)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>最所フミ(著)</p>
+                    <p>出版社：筑摩書房、ASIN：B07MFKP2WJ</p>
+<p>カテゴリー：ジャンル別,Featured Categories,言語学,英語</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07MFKP2WJ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/515tO+u62-L._SL500_.jpg" class="mr-3 lazyload" alt="未来に希望を創る 「副業」「起業」を見つける教科書" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>未来に希望を創る 「副業」「起業」を見つける教科書</h5>
+                    <p>価格：440円、ポイント：4</p>
+                    <p>北塔 久見子(著)</p>
+                    <p>出版社：ごきげんビジネス出版、ASIN：B08CRN1T1C</p>
+<p>カテゴリー：人生論・教訓,社会学概論,自己啓発,マーケティング・セールス,産業研究,倫理学・道徳,自己啓発,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08CRN1T1C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41BgqBNIDBL._SL500_.jpg" class="mr-3 lazyload" alt="マルティナさんの　カラフル糸で編むレッグウエア　Martina&#39;s colorful Botties, socks, leg warmers" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>マルティナさんの　カラフル糸で編むレッグウエア　Martina&#39;s colorful Botties, socks, leg warmers</h5>
+                    <p>価格：1049円、ポイント：10</p>
+                    <p>梅村 マルティナ(著)</p>
+                    <p>出版社：NHK出版、ASIN：B08MCKRLKV</p>
+<p>カテゴリー：手芸,手芸,暮らし・健康・子育て</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08MCKRLKV?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41uKcS8RM8L._SL500_.jpg" class="mr-3 lazyload" alt="きょうも傍聴席にいます (幻冬舎新書)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>きょうも傍聴席にいます (幻冬舎新書)</h5>
+                    <p>価格：399円、ポイント：4</p>
+                    <p>朝日新聞社会部(著)</p>
+                    <p>出版社：幻冬舎、ASIN：B078429C7C</p>
+<p>カテゴリー：社会学概論,Featured Categories,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B078429C7C?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nJkvzsLdL._SL500_.jpg" class="mr-3 lazyload" alt="サラリーマンを「副業」にしよう" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>サラリーマンを「副業」にしよう</h5>
+                    <p>価格：825円、ポイント：8</p>
+                    <p>俣野 成敏(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B08BYTZJ42</p>
+<p>カテゴリー：人生論・教訓,自己啓発,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BYTZJ42?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51EKTIsDwYL._SL500_.jpg" class="mr-3 lazyload" alt="腸活先生が教える病気を遠ざける食事術 炭水化物は冷まして食べなさい。" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>腸活先生が教える病気を遠ざける食事術 炭水化物は冷まして食べなさい。</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>笠岡 誠一(著)</p>
+                    <p>出版社：アスコム、ASIN：B08GFBBDWT</p>
+<p>カテゴリー：食事療法,医学・薬学,美容・ダイエット,科学・テクノロジー</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08GFBBDWT?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51nyLINDGIL._SL500_.jpg" class="mr-3 lazyload" alt="トヨタの危機管理――どんな時代でも「黒字化」できる底力" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>トヨタの危機管理――どんな時代でも「黒字化」できる底力</h5>
+                    <p>価格：880円、ポイント：9</p>
+                    <p>野地 秩嘉(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B08QRNJVLH</p>
+<p>カテゴリー：ノンフィクション,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08QRNJVLH?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/61l34Pdnu7L._SL500_.jpg" class="mr-3 lazyload" alt="まんがでわかる 論語―――失敗するから、成長できる。 (Business Comic Series) Business ComicSeries" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>まんがでわかる 論語―――失敗するから、成長できる。 (Business Comic Series) Business ComicSeries</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>備前やすのり(著)</p>
+                    <p>出版社：あさ出版、ASIN：B01JADEHLU</p>
+<p>カテゴリー：人生論・教訓,自己啓発,コミック,倫理学・道徳,自己啓発,マンガ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01JADEHLU?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51kaw3X5L1L._SL500_.jpg" class="mr-3 lazyload" alt="キャリア設計論　エンジニアの本音、エージェントが語る転職の真実" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャリア設計論　エンジニアの本音、エージェントが語る転職の真実</h5>
+                    <p>価格：385円、ポイント：4</p>
+                    <p>佐々木康介(著)</p>
+                    <p>出版社：まんがびと、ASIN：B087D1KQ3L</p>
+<p>カテゴリー：ジャンル別,工学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B087D1KQ3L?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51c84MHbY4L._SL500_.jpg" class="mr-3 lazyload" alt="キャッチコピーの教科書" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>キャッチコピーの教科書</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>さわらぎ 寛子(著)</p>
+                    <p>出版社：すばる舎、ASIN：B072P6214M</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B072P6214M?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51SJecmQNcL._SL500_.jpg" class="mr-3 lazyload" alt="シンプルがおいしい　飛田さんの野菜レシピ" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>シンプルがおいしい　飛田さんの野菜レシピ</h5>
+                    <p>価格：649円、ポイント：6</p>
+                    <p>飛田 和緒(著)</p>
+                    <p>出版社：NHK出版、ASIN：B07L2H3RBP</p>
+<p>カテゴリー：簡単レシピ,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07L2H3RBP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41dVPD2VtSL._SL500_.jpg" class="mr-3 lazyload" alt="決定力を鍛える―チェス世界王者に学ぶ生き方の秘訣" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>決定力を鍛える―チェス世界王者に学ぶ生き方の秘訣</h5>
+                    <p>価格：849円、ポイント：8</p>
+                    <p>ガルリ・カスパロフ(著)</p>
+                    <p>出版社：NHK出版、ASIN：B009QW63CM</p>
+<p>カテゴリー：人生論・教訓,自己啓発,実践経営・リーダーシップ,倫理学・道徳,自己啓発</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B009QW63CM?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51o7GbXMB1L._SL500_.jpg" class="mr-3 lazyload" alt="子どもの才能を伸ばす最高の方法モンテッソーリ・メソッド―――「自律した子」の育て方すべて" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>子どもの才能を伸ばす最高の方法モンテッソーリ・メソッド―――「自律した子」の育て方すべて</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>堀田はるな(著)</p>
+                    <p>出版社：あさ出版、ASIN：B07B2RPGSN</p>
+<p>カテゴリー：一般,教育学,教育・学参・受験</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07B2RPGSN?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51YCk3freXL._SL500_.jpg" class="mr-3 lazyload" alt="ＮＨＫ実践ビジネス英語　対話力アップ　ビジネス英語フレーズ８００" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ＮＨＫ実践ビジネス英語　対話力アップ　ビジネス英語フレーズ８００</h5>
+                    <p>価格：699円、ポイント：7</p>
+                    <p>杉田敏(著)</p>
+                    <p>出版社：NHK出版、ASIN：B00NT5BNWC</p>
+<p>カテゴリー：英文法・語法,言語学,英語</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B00NT5BNWC?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51w9FrE6iDL._SL500_.jpg" class="mr-3 lazyload" alt="ビジネスエリートが身につける教養　ウイスキーの愉しみ方" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>ビジネスエリートが身につける教養　ウイスキーの愉しみ方</h5>
+                    <p>価格：799円、ポイント：8</p>
+                    <p>橋口孝司(著)</p>
+                    <p>出版社：あさ出版、ASIN：B08VRVM7ST</p>
+<p>カテゴリー：ジャンル別,クッキング・レシピ</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08VRVM7ST?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/519fGvgtsUL._SL500_.jpg" class="mr-3 lazyload" alt="映画制作の教科書　プロが教える60のコツ～企画・撮影・編集・上映～ コツがわかる本" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>映画制作の教科書　プロが教える60のコツ～企画・撮影・編集・上映～ コツがわかる本</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>衣笠 竜屯(監修)</p>
+                    <p>出版社：メイツ出版、ASIN：B084QG2DFP</p>
+<p>カテゴリー：演劇,映画,演劇・舞台</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B084QG2DFP?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51VwTFs0vjL._SL500_.jpg" class="mr-3 lazyload" alt="チャーチル・ファクター たった一人で歴史と世界を変える力" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>チャーチル・ファクター たった一人で歴史と世界を変える力</h5>
+                    <p>価格：1265円、ポイント：13</p>
+                    <p>ボリス・ジョンソン(著)</p>
+                    <p>出版社：プレジデント社、ASIN：B01EKZQCTI</p>
+<p>カテゴリー：ジャンル別,歴史・地理</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01EKZQCTI?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51t2ldhG+6L._SL500_.jpg" class="mr-3 lazyload" alt="組織は変われるか ― 経営トップから始まる「組織開発」" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>組織は変われるか ― 経営トップから始まる「組織開発」</h5>
+                    <p>価格：990円、ポイント：10</p>
+                    <p>加藤雅則(著)</p>
+                    <p>出版社：英治出版、ASIN：B077X6CGQQ</p>
+<p>カテゴリー：ジャンル別,ビジネス・経済</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B077X6CGQQ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/51o3VVBuEOL._SL500_.jpg" class="mr-3 lazyload" alt="人類の選択　「ポスト・コロナ」を世界史で解く (ＮＨＫ出版新書)" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>人類の選択　「ポスト・コロナ」を世界史で解く (ＮＨＫ出版新書)</h5>
+                    <p>価格：499円、ポイント：5</p>
+                    <p>佐藤 優(著)</p>
+                    <p>出版社：NHK出版、ASIN：B08GPGS7CZ</p>
+<p>カテゴリー：ジャンル別,社会・政治</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08GPGS7CZ?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/41gMOysp+3L._SL500_.jpg" class="mr-3 lazyload" alt="近代の虚妄―現代文明論序説" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>近代の虚妄―現代文明論序説</h5>
+                    <p>価格：1663円、ポイント：17</p>
+                    <p>佐伯 啓思(著)</p>
+                    <p>出版社：東洋経済新報社、ASIN：B08HM831ZD</p>
+<p>カテゴリー：社会学概論,思想,哲学・思想,社会学</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08HM831ZD?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
+                </div>
+            </li>
+            <li class="media mb-3 alert-warning ">
+  <div class="img-container--table-cell d-flex align-items-center">
+    <img src="https://m.media-amazon.com/images/I/517yVdVOgJL._SL500_.jpg" class="mr-3 lazyload" alt="大山康晴名局集" loading="lazy" />
+  </div>
+                <div class="media-body ml-3">
+                    <h5>大山康晴名局集</h5>
+                    <p>価格：1478円、ポイント：15</p>
+                    <p>大山 康晴(著)</p>
+                    <p>出版社：マイナビ出版（日本将棋連盟発行）、ASIN：B01CSNX922</p>
+<p>カテゴリー：ノンフィクション,趣味・実用</p>
+<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B01CSNX922?tag=99hatena-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る </a>
                 </div>
             </li>
             <li class="media mb-3 alert-warning ">
@@ -1730,6 +1578,18 @@
                 </div>
             </li>
         </ul>
+        <h2 class="alert alert-success">絞り込み検索</h2>
+        <p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+        <input type="file" id="csvfile" accept="text/csv,.csv">
+
+        <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+        <script src="../js/hikaku.js"></script>
+        <hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+        <div class="form-inline my-2 my-lg-0">
+            <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0" id="search">検索</button>
+        </div>
 
         <h2 class="alert alert-success">SNSでシェア</h2>
         <!-- snsボタン -->
@@ -1751,5 +1611,15 @@
         </div>
         <!-- snsボタン終了 -->
     </div>
+    <!-- pagination -->
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('.list-unstyled').paginathing({
+	    		perPage: 20,
+	    		containerClass: 'panel-footer',
+	    		  liClass: 'page-item'
+		})
+	});
+</script>
 </body>
 </html>
