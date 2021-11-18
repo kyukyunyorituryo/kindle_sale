@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B01DVPBWAC",
-  "URL": "https://www.amazon.co.jp/dp/B01DVPBWAC?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01DVPBWAC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51x1BXvjnIL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "城平京(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B0188LNNM4",
-  "URL": "https://www.amazon.co.jp/dp/B0188LNNM4?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0188LNNM4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51XVFf1fM-L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "城平京(著)",
@@ -25,7 +25,7 @@
  },
  {
   "Asin": "B0776Q5LKK",
-  "URL": "https://www.amazon.co.jp/dp/B0776Q5LKK?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0776Q5LKK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51xFIFuWioL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "猪ノ谷言葉(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B017GUUV0U",
-  "URL": "https://www.amazon.co.jp/dp/B017GUUV0U?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B017GUUV0U?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51SNwvOrepL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "城平京(著)",
@@ -49,7 +49,7 @@
  },
  {
   "Asin": "B075CY2RRQ",
-  "URL": "https://www.amazon.co.jp/dp/B075CY2RRQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B075CY2RRQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51fix11xO5L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "猪ノ谷言葉(著)",
@@ -60,20 +60,20 @@
   "Points": 0
  },
  {
-  "Asin": "B00TGX7WG2",
-  "URL": "https://www.amazon.co.jp/dp/B00TGX7WG2?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/61IoXkjp1hL._SL500_.jpg",
+  "Asin": "B00DFXHCXW",
+  "URL": "https://www.amazon.co.jp/dp/B00DFXHCXW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/613YBve6m+L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "鈴木央(著)",
   "Booktype": "Kindle版",
-  "Title": "迷え！七つの大罪学園！（１） (週刊少年マガジンコミックス)",
-  "Price": 462,
+  "Title": "七つの大罪（１） (週刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 5
+  "Points": 0
  },
  {
   "Asin": "B07K43H7TS",
-  "URL": "https://www.amazon.co.jp/dp/B07K43H7TS?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07K43H7TS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/513z4HAq8TL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "金城宗幸(著)",
@@ -84,44 +84,56 @@
   "Points": 0
  },
  {
-  "Asin": "B07K6L4769",
-  "URL": "https://www.amazon.co.jp/dp/B07K6L4769?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51cR+qFT1dL._SL500_.jpg",
+  "Asin": "B07K46NH85",
+  "URL": "https://www.amazon.co.jp/dp/B07K46NH85?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51109DGwXeL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "西尾維新(著)",
   "Booktype": "Kindle版",
-  "Title": "化物語　特装版（３） (週刊少年マガジンコミックス)",
-  "Price": 1628,
+  "Title": "化物語（３） (週刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 16
+  "Points": 0
  },
  {
-  "Asin": "B07G75Q3ZW",
-  "URL": "https://www.amazon.co.jp/dp/B07G75Q3ZW?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/518NwoioQuL._SL500_.jpg",
+  "Asin": "B07G75S29M",
+  "URL": "https://www.amazon.co.jp/dp/B07G75S29M?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51JZwqGJEbL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "西尾維新(著)",
   "Booktype": "Kindle版",
-  "Title": "化物語　特装版（２） (週刊少年マガジンコミックス)",
-  "Price": 1628,
+  "Title": "化物語（２） (週刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 16
+  "Points": 0
  },
  {
-  "Asin": "B09HQLZCRQ",
-  "URL": "https://www.amazon.co.jp/dp/B09HQLZCRQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51cjply2odL._SL500_.jpg",
+  "Asin": "B07DHL76JK",
+  "URL": "https://www.amazon.co.jp/dp/B07DHL76JK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61QR35VruUL._SL500_.jpg",
   "Publisher": "講談社",
-  "Contributor": "田中文(著)",
+  "Contributor": "西尾維新(著)",
   "Booktype": "Kindle版",
-  "Title": "ＳＨＡＭＡＮ　ＫＩＮＧ　ＦＡＵＳＴ８　永遠のエリザ（１） (マガジンポケットコミックス)",
-  "Price": 660,
+  "Title": "化物語（１） (週刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B07CM387GX",
+  "URL": "https://www.amazon.co.jp/dp/B07CM387GX?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51FvCZYccnL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "武井宏之(著)",
+  "Booktype": "Kindle版",
+  "Title": "ＳＨＡＭＡＮ　ＫＩＮＧ（１） (少年マガジンエッジコミックス)",
+  "Price": 0,
   "Category": "コミック,マンガ",
-  "Points": 7
+  "Points": 0
  },
  {
   "Asin": "B009YDLFK8",
-  "URL": "https://www.amazon.co.jp/dp/B009YDLFK8?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009YDLFK8?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51PR2IvnySL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -133,7 +145,7 @@
  },
  {
   "Asin": "B009YDLFJY",
-  "URL": "https://www.amazon.co.jp/dp/B009YDLFJY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009YDLFJY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51LNx4dHavL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -145,7 +157,7 @@
  },
  {
   "Asin": "B009YDLFI0",
-  "URL": "https://www.amazon.co.jp/dp/B009YDLFI0?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B009YDLFI0?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51i0ovgBeEL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -156,44 +168,44 @@
   "Points": 0
  },
  {
-  "Asin": "B08HVP8QCV",
-  "URL": "https://www.amazon.co.jp/dp/B08HVP8QCV?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51SN9KtzdRL._SL500_.jpg",
+  "Asin": "B009KYC5L4",
+  "URL": "https://www.amazon.co.jp/dp/B009KYC5L4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51hJ96o7MdL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
   "Booktype": "Kindle版",
-  "Title": "修羅の門　超合本版（３） (月刊少年マガジンコミックス)",
-  "Price": 2310,
+  "Title": "修羅の門（３） (月刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 23
+  "Points": 0
  },
  {
-  "Asin": "B0171AT2O6",
-  "URL": "https://www.amazon.co.jp/dp/B0171AT2O6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51t5+4WHH-L._SL500_.jpg",
+  "Asin": "B009KYC5IW",
+  "URL": "https://www.amazon.co.jp/dp/B009KYC5IW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51oJ--WpYtL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
   "Booktype": "Kindle版",
-  "Title": "修羅の門　第弐門（１８） (月刊少年マガジンコミックス)",
-  "Price": 462,
+  "Title": "修羅の門(２) (月刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 5
+  "Points": 0
  },
  {
-  "Asin": "B08HVCYQGW",
-  "URL": "https://www.amazon.co.jp/dp/B08HVCYQGW?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51-Ueg5e2tL._SL500_.jpg",
+  "Asin": "B009KYC5JG",
+  "URL": "https://www.amazon.co.jp/dp/B009KYC5JG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/517+nmyyb+L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
   "Booktype": "Kindle版",
-  "Title": "修羅の門　超合本（１） 修羅の門　超合本版 (月刊少年マガジンコミックス)",
-  "Price": 2310,
+  "Title": "修羅の門(１) (月刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 23
+  "Points": 0
  },
  {
   "Asin": "B073P24BCC",
-  "URL": "https://www.amazon.co.jp/dp/B073P24BCC?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B073P24BCC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51U619+L7dL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -205,7 +217,7 @@
  },
  {
   "Asin": "B06XW6PHQ9",
-  "URL": "https://www.amazon.co.jp/dp/B06XW6PHQ9?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B06XW6PHQ9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51kL+2NkTZL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -217,7 +229,7 @@
  },
  {
   "Asin": "B01N5HM2OF",
-  "URL": "https://www.amazon.co.jp/dp/B01N5HM2OF?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01N5HM2OF?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51EfdAifvEL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -229,7 +241,7 @@
  },
  {
   "Asin": "B01EWH2MGG",
-  "URL": "https://www.amazon.co.jp/dp/B01EWH2MGG?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01EWH2MGG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51htMmBMmwL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "寺嶋裕二(著)",
@@ -241,7 +253,7 @@
  },
  {
   "Asin": "B01BHKMUD6",
-  "URL": "https://www.amazon.co.jp/dp/B01BHKMUD6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01BHKMUD6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51avzzmG57L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "寺嶋裕二(著)",
@@ -253,7 +265,7 @@
  },
  {
   "Asin": "B01BL84WSU",
-  "URL": "https://www.amazon.co.jp/dp/B01BL84WSU?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01BL84WSU?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51jpCd77VOL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "大久保篤(著)",
@@ -265,7 +277,7 @@
  },
  {
   "Asin": "B017NDDCH4",
-  "URL": "https://www.amazon.co.jp/dp/B017NDDCH4?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B017NDDCH4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/514n6Pox+EL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "寺嶋裕二(著)",
@@ -276,44 +288,44 @@
   "Points": 0
  },
  {
-  "Asin": "B07B7HHN68",
-  "URL": "https://www.amazon.co.jp/dp/B07B7HHN68?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51S78uBeMxL._SL500_.jpg",
+  "Asin": "B00HJYUJ9W",
+  "URL": "https://www.amazon.co.jp/dp/B00HJYUJ9W?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51hpwhUWyaL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "安田剛士(著)",
   "Booktype": "Kindle版",
-  "Title": "ＤＡＹＳ外伝（３）",
-  "Price": 462,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 22
+  "Title": "ＤＡＹＳ（３） (週刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
  },
  {
-  "Asin": "B074K8GPLB",
-  "URL": "https://www.amazon.co.jp/dp/B074K8GPLB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/517Cs9ssPhL._SL500_.jpg",
+  "Asin": "B00HJYUJ9M",
+  "URL": "https://www.amazon.co.jp/dp/B00HJYUJ9M?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51bbTiBBBiL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "安田剛士(著)",
   "Booktype": "Kindle版",
-  "Title": "ＤＡＹＳ外伝（２）",
-  "Price": 462,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 18
+  "Title": "ＤＡＹＳ（２） (週刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
  },
  {
-  "Asin": "B06XFRQD4S",
-  "URL": "https://www.amazon.co.jp/dp/B06XFRQD4S?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51seiTBAU7L._SL500_.jpg",
+  "Asin": "B00HJYUJ6K",
+  "URL": "https://www.amazon.co.jp/dp/B00HJYUJ6K?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51TtakOxSgL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "安田剛士(著)",
   "Booktype": "Kindle版",
-  "Title": "ＤＡＹＳ外伝（１）",
-  "Price": 462,
-  "Category": "コミック・ラノベ・BL,マンガ",
-  "Points": 5
+  "Title": "ＤＡＹＳ（１） (週刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
  },
  {
   "Asin": "B00DFXHDZE",
-  "URL": "https://www.amazon.co.jp/dp/B00DFXHDZE?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00DFXHDZE?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51WY6vG+XtL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -324,20 +336,20 @@
   "Points": 0
  },
  {
-  "Asin": "B0171AT2O6",
-  "URL": "https://www.amazon.co.jp/dp/B0171AT2O6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51t5+4WHH-L._SL500_.jpg",
+  "Asin": "B00DFXHES0",
+  "URL": "https://www.amazon.co.jp/dp/B00DFXHES0?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51dXAt1BDTL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
   "Booktype": "Kindle版",
-  "Title": "修羅の門　第弐門（１８） (月刊少年マガジンコミックス)",
-  "Price": 462,
+  "Title": "修羅の門　第弐門（２） (月刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 5
+  "Points": 0
  },
  {
   "Asin": "B00DFXHDKY",
-  "URL": "https://www.amazon.co.jp/dp/B00DFXHDKY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00DFXHDKY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51PimXqTWLL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "川原正敏(著)",
@@ -348,32 +360,32 @@
   "Points": 0
  },
  {
-  "Asin": "B072KD1YC9",
-  "URL": "https://www.amazon.co.jp/dp/B072KD1YC9?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/61WXZ1-UmtL._SL500_.jpg",
+  "Asin": "B00ARBWG6S",
+  "URL": "https://www.amazon.co.jp/dp/B00ARBWG6S?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61r+O1GxhHL._SL500_.jpg",
   "Publisher": "講談社",
-  "Contributor": "小林裕和(著)",
+  "Contributor": "カトウコトノ(著)",
   "Booktype": "Kindle版",
-  "Title": "将国のアルタイル嵬伝／嶌国のスバル（２） (シリウスコミックス)",
-  "Price": 660,
+  "Title": "将国のアルタイル（２） (シリウスコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 44
+  "Points": 0
  },
  {
-  "Asin": "B01N9VNQD9",
-  "URL": "https://www.amazon.co.jp/dp/B01N9VNQD9?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/61TnZQpJ3xL._SL500_.jpg",
+  "Asin": "B00ARBWG1I",
+  "URL": "https://www.amazon.co.jp/dp/B00ARBWG1I?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51hR5y2rjrL._SL500_.jpg",
   "Publisher": "講談社",
-  "Contributor": "小林裕和(著)",
+  "Contributor": "カトウコトノ(著)",
   "Booktype": "Kindle版",
-  "Title": "将国のアルタイル嵬伝／嶌国のスバル（１） (シリウスコミックス)",
-  "Price": 660,
+  "Title": "将国のアルタイル（１） (シリウスコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 40
+  "Points": 0
  },
  {
   "Asin": "B00AIG3W7Y",
-  "URL": "https://www.amazon.co.jp/dp/B00AIG3W7Y?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00AIG3W7Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51T81tFoCPL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "竹内友(著)",
@@ -385,7 +397,7 @@
  },
  {
   "Asin": "B086TVQSKG",
-  "URL": "https://www.amazon.co.jp/dp/B086TVQSKG?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B086TVQSKG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51K3x+vH5fL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松岡健太(著)",
@@ -397,7 +409,7 @@
  },
  {
   "Asin": "B07TVMZ8M6",
-  "URL": "https://www.amazon.co.jp/dp/B07TVMZ8M6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07TVMZ8M6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51+s70n8MNL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "八神ひろき(著)",
@@ -409,7 +421,7 @@
  },
  {
   "Asin": "B07PFHYGJB",
-  "URL": "https://www.amazon.co.jp/dp/B07PFHYGJB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07PFHYGJB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51DHpn6eujL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "八神ひろき(著)",
@@ -421,7 +433,7 @@
  },
  {
   "Asin": "B07NCVTLZB",
-  "URL": "https://www.amazon.co.jp/dp/B07NCVTLZB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07NCVTLZB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51LGlXF4yTL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "真島ヒロ(著)",
@@ -433,7 +445,7 @@
  },
  {
   "Asin": "B07K3VFHKQ",
-  "URL": "https://www.amazon.co.jp/dp/B07K3VFHKQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07K3VFHKQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51MG5lYk-vL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "真島ヒロ(著)",
@@ -444,20 +456,20 @@
   "Points": 0
  },
  {
-  "Asin": "B07H78S4SQ",
-  "URL": "https://www.amazon.co.jp/dp/B07H78S4SQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51ISudWScbL._SL500_.jpg",
+  "Asin": "B07H78TY6Z",
+  "URL": "https://www.amazon.co.jp/dp/B07H78TY6Z?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51XiEZluNtL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "真島ヒロ(著)",
   "Booktype": "Kindle版",
-  "Title": "ＥＤＥＮＳ　ＺＥＲＯ　特装版（１） (週刊少年マガジンコミックス)",
-  "Price": 990,
+  "Title": "ＥＤＥＮＳ　ＺＥＲＯ（１） (週刊少年マガジンコミックス)",
+  "Price": 0,
   "Category": "コミック,少年マンガ",
-  "Points": 10
+  "Points": 0
  },
  {
   "Asin": "B07G44GHKJ",
-  "URL": "https://www.amazon.co.jp/dp/B07G44GHKJ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07G44GHKJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61qVnZ3AUBL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "大高忍(著)",
@@ -466,17 +478,5 @@
   "Price": 0,
   "Category": "コミック,少年マンガ",
   "Points": 0
- },
- {
-  "Asin": "B07DHLT81Q",
-  "URL": "https://www.amazon.co.jp/dp/B07DHLT81Q?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51Gb6DjqDoL._SL500_.jpg",
-  "Publisher": "講談社",
-  "Contributor": "西尾維新(著)",
-  "Booktype": "Kindle版",
-  "Title": "化物語　特装版（１） (週刊少年マガジンコミックス)",
-  "Price": 1628,
-  "Category": "コミック,少年マンガ",
-  "Points": 16
  }
 ]
