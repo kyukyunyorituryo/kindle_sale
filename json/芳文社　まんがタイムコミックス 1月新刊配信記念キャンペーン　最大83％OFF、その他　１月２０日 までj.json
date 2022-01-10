@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B09NNFTDBQ",
-  "URL": "https://www.amazon.co.jp/dp/B09NNFTDBQ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B09NNFTDBQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/514QpdaiFYL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B09NNDXMSB",
-  "URL": "https://www.amazon.co.jp/dp/B09NNDXMSB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B09NNDXMSB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51iGcTwTAyL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "西岡さち(著)",
@@ -24,20 +24,20 @@
   "Points": 7
  },
  {
-  "Asin": "B09NNDXMSB",
-  "URL": "https://www.amazon.co.jp/dp/B09NNDXMSB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51iGcTwTAyL._SL500_.jpg",
+  "Asin": "B09CKPX392",
+  "URL": "https://www.amazon.co.jp/dp/B09CKPX392?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51va1QKrAvL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "西岡さち(著)",
   "Booktype": "Kindle版",
-  "Title": "六畳一間の憑き物石　２巻 (まんがタイムコミックス)",
+  "Title": "六畳一間の憑き物石　１巻 (まんがタイムコミックス)",
   "Price": 660,
   "Category": "コミック,4コマまんが",
-  "Points": 7
+  "Points": 202
  },
  {
   "Asin": "B09NNFVFVT",
-  "URL": "https://www.amazon.co.jp/dp/B09NNFVFVT?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B09NNFVFVT?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51UCBiN+iaL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "いちかわ壱(著)",
@@ -49,7 +49,7 @@
  },
  {
   "Asin": "B097BPC9X6",
-  "URL": "https://www.amazon.co.jp/dp/B097BPC9X6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B097BPC9X6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51UTuYzaSpS._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "いちかわ壱(著)",
@@ -61,7 +61,7 @@
  },
  {
   "Asin": "B08ZCBPS1H",
-  "URL": "https://www.amazon.co.jp/dp/B08ZCBPS1H?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08ZCBPS1H?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51HysC8N45L._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "いちかわ壱(著)",
@@ -73,7 +73,7 @@
  },
  {
   "Asin": "B06XXGBDHT",
-  "URL": "https://www.amazon.co.jp/dp/B06XXGBDHT?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B06XXGBDHT?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51gvJWaTnEL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "西岡さち(著)",
@@ -85,7 +85,7 @@
  },
  {
   "Asin": "B07R2D96JR",
-  "URL": "https://www.amazon.co.jp/dp/B07R2D96JR?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07R2D96JR?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51rUbkrPA2L._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -97,7 +97,7 @@
  },
  {
   "Asin": "B01FHPVDNK",
-  "URL": "https://www.amazon.co.jp/dp/B01FHPVDNK?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01FHPVDNK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51q45i34OgL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -109,7 +109,7 @@
  },
  {
   "Asin": "B00W50KT9K",
-  "URL": "https://www.amazon.co.jp/dp/B00W50KT9K?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00W50KT9K?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51P-4LySrKL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -121,7 +121,7 @@
  },
  {
   "Asin": "B00W50KTFO",
-  "URL": "https://www.amazon.co.jp/dp/B00W50KTFO?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00W50KTFO?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51RSzTFwcYL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -133,7 +133,7 @@
  },
  {
   "Asin": "B00W50KU0I",
-  "URL": "https://www.amazon.co.jp/dp/B00W50KU0I?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00W50KU0I?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/511yP9T0UEL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -145,7 +145,7 @@
  },
  {
   "Asin": "B00W50KT40",
-  "URL": "https://www.amazon.co.jp/dp/B00W50KT40?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00W50KT40?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51O9910sZjL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -157,7 +157,7 @@
  },
  {
   "Asin": "B079BCKDGK",
-  "URL": "https://www.amazon.co.jp/dp/B079BCKDGK?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B079BCKDGK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51nX4GpPRLL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "いちかわ壱(著)",
@@ -169,7 +169,7 @@
  },
  {
   "Asin": "B0722KGRNH",
-  "URL": "https://www.amazon.co.jp/dp/B0722KGRNH?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0722KGRNH?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51IL1keMy6L._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "いちかわ壱(著)",
@@ -181,7 +181,7 @@
  },
  {
   "Asin": "B07HRL5WQN",
-  "URL": "https://www.amazon.co.jp/dp/B07HRL5WQN?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07HRL5WQN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51K1zsg8RvL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "西岡さち(著)",
@@ -193,7 +193,7 @@
  },
  {
   "Asin": "B076Q41BVW",
-  "URL": "https://www.amazon.co.jp/dp/B076Q41BVW?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B076Q41BVW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/513QaYJOwSL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "西岡さち(著)",
@@ -205,7 +205,7 @@
  },
  {
   "Asin": "B08QVDZ123",
-  "URL": "https://www.amazon.co.jp/dp/B08QVDZ123?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08QVDZ123?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51u+AVA-F6L._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -217,7 +217,7 @@
  },
  {
   "Asin": "B08573HRWV",
-  "URL": "https://www.amazon.co.jp/dp/B08573HRWV?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08573HRWV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51xHnJBd60L._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -229,7 +229,7 @@
  },
  {
   "Asin": "B07CPTFPR6",
-  "URL": "https://www.amazon.co.jp/dp/B07CPTFPR6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07CPTFPR6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/517hFCu1wIL._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
@@ -241,7 +241,7 @@
  },
  {
   "Asin": "B06XWZXS6W",
-  "URL": "https://www.amazon.co.jp/dp/B06XWZXS6W?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B06XWZXS6W?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51I4bdh4S0L._SL500_.jpg",
   "Publisher": "芳文社",
   "Contributor": "宮成樂(著)",
