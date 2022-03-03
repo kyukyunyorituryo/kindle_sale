@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B078CR8XT9",
-  "URL": "https://www.amazon.co.jp/dp/B078CR8XT9?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B078CR8XT9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51vZvj25ucL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "赤松健(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B078JR1KMN",
-  "URL": "https://www.amazon.co.jp/dp/B078JR1KMN?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B078JR1KMN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51lEOlyV6IL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "赤松健(著)",
@@ -25,7 +25,7 @@
  },
  {
   "Asin": "B077994SQ5",
-  "URL": "https://www.amazon.co.jp/dp/B077994SQ5?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B077994SQ5?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51kK-lJFlmL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "寺井赤音(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B01MQNM3EZ",
-  "URL": "https://www.amazon.co.jp/dp/B01MQNM3EZ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01MQNM3EZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51nRR1VwPnL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "アズ(著)",
@@ -49,7 +49,7 @@
  },
  {
   "Asin": "B01J7F7I30",
-  "URL": "https://www.amazon.co.jp/dp/B01J7F7I30?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01J7F7I30?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51JiAsM-GcL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "アズ(著)",
@@ -61,7 +61,7 @@
  },
  {
   "Asin": "B01I0ZY4EE",
-  "URL": "https://www.amazon.co.jp/dp/B01I0ZY4EE?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01I0ZY4EE?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51M7nWX+ebL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "松本明澄(著)",
@@ -73,7 +73,7 @@
  },
  {
   "Asin": "B00N1W4BC2",
-  "URL": "https://www.amazon.co.jp/dp/B00N1W4BC2?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00N1W4BC2?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/517wICC9Q0L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "雨隠ギド(著)",
@@ -85,7 +85,7 @@
  },
  {
   "Asin": "B00JL2EVGW",
-  "URL": "https://www.amazon.co.jp/dp/B00JL2EVGW?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00JL2EVGW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/411pjCR0jlL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "ヒロユキ(著)",
@@ -96,20 +96,8 @@
   "Points": 0
  },
  {
-  "Asin": "B00IMSVLVE",
-  "URL": "https://www.amazon.co.jp/dp/B00IMSVLVE?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51aPthi2W4L._SL500_.jpg",
-  "Publisher": "講談社",
-  "Contributor": "雨隠ギド(著)",
-  "Booktype": "Kindle版",
-  "Title": "甘々と稲妻（２） (アフタヌーンコミックス)",
-  "Price": 0,
-  "Category": "コミック,青年マンガ",
-  "Points": 0
- },
- {
   "Asin": "B00HD9IUTY",
-  "URL": "https://www.amazon.co.jp/dp/B00HD9IUTY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00HD9IUTY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41LnDpbZdPL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "ヒロユキ(著)",
@@ -121,7 +109,7 @@
  },
  {
   "Asin": "B00ESD51K4",
-  "URL": "https://www.amazon.co.jp/dp/B00ESD51K4?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B00ESD51K4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51LBhbXM66L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "雨隠ギド(著)",
@@ -133,7 +121,7 @@
  },
  {
   "Asin": "B08BWXJ54Q",
-  "URL": "https://www.amazon.co.jp/dp/B08BWXJ54Q?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08BWXJ54Q?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51iQLG16MAL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "泉乃せん(著)",
@@ -145,7 +133,7 @@
  },
  {
   "Asin": "B086H172JR",
-  "URL": "https://www.amazon.co.jp/dp/B086H172JR?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B086H172JR?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/41WC60yOKeL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "雪本愁二(著)",
@@ -157,7 +145,7 @@
  },
  {
   "Asin": "B07D8Q4Y4Y",
-  "URL": "https://www.amazon.co.jp/dp/B07D8Q4Y4Y?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07D8Q4Y4Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51XARXNdj-L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "田口ホシノ(著)",
@@ -169,7 +157,7 @@
  },
  {
   "Asin": "B07CS1YXB2",
-  "URL": "https://www.amazon.co.jp/dp/B07CS1YXB2?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07CS1YXB2?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51qIVMih3LL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "寺井赤音(著)",
@@ -180,32 +168,8 @@
   "Points": 0
  },
  {
-  "Asin": "B00DRZTWJA",
-  "URL": "https://www.amazon.co.jp/dp/B00DRZTWJA?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/41omYg1m1LL._SL500_.jpg",
-  "Publisher": "講談社",
-  "Contributor": "ヒロユキ(著)",
-  "Booktype": "Kindle版",
-  "Title": "アホガール（１） (週刊少年マガジンコミックス)",
-  "Price": 0,
-  "Category": "コミック,少年マンガ",
-  "Points": 0
- },
- {
-  "Asin": "B0832DG9DJ",
-  "URL": "https://www.amazon.co.jp/dp/B0832DG9DJ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51IzAXqGKSL._SL500_.jpg",
-  "Publisher": "講談社",
-  "Contributor": "猫又ぬこ(著)",
-  "Booktype": "Kindle版",
-  "Title": "こいつらの正体が女だと俺だけが知っている（１） (シリウスコミックス)",
-  "Price": 0,
-  "Category": "コミック,少年マンガ",
-  "Points": 0
- },
- {
   "Asin": "B07HH58NP6",
-  "URL": "https://www.amazon.co.jp/dp/B07HH58NP6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07HH58NP6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51DoHGRSu2L._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "木尾士目(著)",
@@ -217,7 +181,7 @@
  },
  {
   "Asin": "B07HH5ZZ37",
-  "URL": "https://www.amazon.co.jp/dp/B07HH5ZZ37?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07HH5ZZ37?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51mBU2whXEL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "木尾士目(著)",
@@ -228,15 +192,51 @@
   "Points": 22
  },
  {
-  "Asin": "B07HGLMKLR",
-  "URL": "https://www.amazon.co.jp/dp/B07HGLMKLR?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51ey0s1lWYL._SL500_.jpg",
+  "Asin": "B00IMSVLVE",
+  "URL": "https://www.amazon.co.jp/dp/B00IMSVLVE?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51aPthi2W4L._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "雨隠ギド(著)",
+  "Booktype": "Kindle版",
+  "Title": "甘々と稲妻（２） (アフタヌーンコミックス)",
+  "Price": 0,
+  "Category": "コミック,青年マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B00DRZTWJA",
+  "URL": "https://www.amazon.co.jp/dp/B00DRZTWJA?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/41omYg1m1LL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "ヒロユキ(著)",
+  "Booktype": "Kindle版",
+  "Title": "アホガール（１） (週刊少年マガジンコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B0832DG9DJ",
+  "URL": "https://www.amazon.co.jp/dp/B0832DG9DJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51IzAXqGKSL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "猫又ぬこ(著)",
+  "Booktype": "Kindle版",
+  "Title": "こいつらの正体が女だと俺だけが知っている（１） (シリウスコミックス)",
+  "Price": 0,
+  "Category": "コミック,少年マンガ",
+  "Points": 0
+ },
+ {
+  "Asin": "B009KYCQIQ",
+  "URL": "https://www.amazon.co.jp/dp/B009KYCQIQ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51V4C4lGPvL._SL500_.jpg",
   "Publisher": "講談社",
   "Contributor": "木尾士目(著)",
   "Booktype": "Kindle版",
-  "Title": "げんしけん　超合本版（１） (アフタヌーンコミックス)",
-  "Price": 2750,
+  "Title": "げんしけん（１） (アフタヌーンコミックス)",
+  "Price": 0,
   "Category": "コミック,青年マンガ",
-  "Points": 28
+  "Points": 0
  }
 ]
