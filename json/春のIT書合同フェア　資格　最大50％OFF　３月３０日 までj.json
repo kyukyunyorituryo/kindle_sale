@@ -1,0 +1,98 @@
+[
+ {
+  "Asin": "B0976LT94B",
+  "URL": "https://www.amazon.co.jp/dp/B0976LT94B?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51w10O5LmCS._SL500_.jpg",
+  "Publisher": "インプレス",
+  "Contributor": "スキルアップAI株式会社 明松 真司(著)",
+  "Booktype": "Kindle版",
+  "Title": "徹底攻略ディープラーニングG検定ジェネラリスト問題集 第2版 徹底攻略シリーズ",
+  "Price": 1155,
+  "Category": "ジャンル別,工学",
+  "Points": 12
+ },
+ {
+  "Asin": "B07485SSV3",
+  "URL": "https://www.amazon.co.jp/dp/B07485SSV3?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51AIxI4xfoL._SL500_.jpg",
+  "Publisher": "マイナビ出版",
+  "Contributor": "大藤 幹(著)",
+  "Booktype": "Kindle版",
+  "Title": "HTML5プロフェッショナル認定試験 レベル1 対策テキスト＆問題集　Ver2.0対応版",
+  "Price": 1749,
+  "Category": "Web構築・管理,コンピュータ・IT,工学",
+  "Points": 17
+ },
+ {
+  "Asin": "B085HNTY17",
+  "URL": "https://www.amazon.co.jp/dp/B085HNTY17?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51mOax+f7GL._SL500_.jpg",
+  "Publisher": "秀和システム",
+  "Contributor": "山下長義(著)",
+  "Booktype": "Kindle版",
+  "Title": "これ1冊で最短合格 ディープラーニングG検定ジェネラリスト要点整理テキスト＆問題集",
+  "Price": 1238,
+  "Category": "ジャンル別,工学",
+  "Points": 12
+ },
+ {
+  "Asin": "B01LAH0X7Q",
+  "URL": "https://www.amazon.co.jp/dp/B01LAH0X7Q?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51IK6EwjbgL._SL500_.jpg",
+  "Publisher": "インプレス",
+  "Contributor": "株式会社ソキウス・ジャパン(著)",
+  "Booktype": "Kindle版",
+  "Title": "徹底攻略Cisco CCENT/CCNA Routing & Switching教科書ICND1編［100-105J］［200-125J］V3.0対応 徹底攻略シリーズ",
+  "Price": 2090,
+  "Category": "CCNA・CCNP・CCIE,コンピュータ・IT,工学,コンピュータ・情報処理",
+  "Points": 21
+ },
+ {
+  "Asin": "B08Z3KQ2FN",
+  "URL": "https://www.amazon.co.jp/dp/B08Z3KQ2FN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51UMFmvi0-L._SL500_.jpg",
+  "Publisher": "インプレス",
+  "Contributor": "ダン・サリバン(著)",
+  "Booktype": "Kindle版",
+  "Title": "Google Cloud認定資格Associate Cloud Engineer公式ガイド",
+  "Price": 3300,
+  "Category": "コンピュータ・IT,コンピュータ・IT,工学",
+  "Points": 33
+ },
+ {
+  "Asin": "B01N39K9LD",
+  "URL": "https://www.amazon.co.jp/dp/B01N39K9LD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51Fr+P758qL._SL500_.jpg",
+  "Publisher": "インプレス",
+  "Contributor": "株式会社ソキウス・ジャパン(著)",
+  "Booktype": "Kindle版",
+  "Title": "(スマホ問題集付)徹底攻略 Cisco CCNA Routing & Switching教科書ICND2編［200-105J］［200-125J］V3.0対応 徹底攻略シリーズ",
+  "Price": 2200,
+  "Category": "CCNA・CCNP・CCIE,コンピュータ・IT,コンピュータ・情報処理",
+  "Points": 22
+ },
+ {
+  "Asin": "B01H1N62U0",
+  "URL": "https://www.amazon.co.jp/dp/B01H1N62U0?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/41a9p4oiqfL._SL500_.jpg",
+  "Publisher": "近代科学社",
+  "Contributor": "國友 義久(著)",
+  "Booktype": "Kindle版",
+  "Title": "ITの基礎（ファーストステップ）",
+  "Price": 1210,
+  "Category": "コンピュータ・IT,コンピュータ・IT,工学",
+  "Points": 12
+ },
+ {
+  "Asin": "B01DVFWDVY",
+  "URL": "https://www.amazon.co.jp/dp/B01DVFWDVY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/414VdnizYkL._SL500_.jpg",
+  "Publisher": "近代科学社",
+  "Contributor": "インターネットコンテンツ審査監視機構(編集)",
+  "Booktype": "Kindle版",
+  "Title": "デジタルコンテンツアセッサ入門　―DCA資格 2級・3級テキスト―",
+  "Price": 1320,
+  "Category": "コンピュータ・IT,コンピュータ・IT",
+  "Points": 13
+ }
+]
