@@ -12,30 +12,6 @@
   "Points": 3
  },
  {
-  "Asin": "B07N8ZG4LC",
-  "URL": "https://www.amazon.co.jp/dp/B07N8ZG4LC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51sItZtGoKL._SL500_.jpg",
-  "Publisher": "スクウェア・エニックス",
-  "Contributor": "おつじ(著)",
-  "Booktype": "Kindle版",
-  "Title": "通りがかりにワンポイントアドバイスしていくタイプのヤンキー 1巻 (デジタル版ガンガンコミックスpixiv)",
-  "Price": 448,
-  "Category": "コミック,少年マンガ",
-  "Points": 5
- },
- {
-  "Asin": "B08KDQDQ7X",
-  "URL": "https://www.amazon.co.jp/dp/B08KDQDQ7X?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51gnpcC3QDL._SL500_.jpg",
-  "Publisher": "スクウェア・エニックス",
-  "Contributor": "舞（ＧＡノベル／ＳＢクリエイティブ刊）(著)",
-  "Booktype": "Kindle版",
-  "Title": "ただ幸せな異世界家族生活　～転生して今度こそ幸せに暮らします～ 1巻 (デジタル版Gファンタジーコミックス)",
-  "Price": 330,
-  "Category": "コミック,少年マンガ,ファンタジー",
-  "Points": 3
- },
- {
   "Asin": "B089D81479",
   "URL": "https://www.amazon.co.jp/dp/B089D81479?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51w4XHxFfNL._SL500_.jpg",
@@ -46,6 +22,18 @@
   "Price": 330,
   "Category": "コミック,少年マンガ,ファンタジー",
   "Points": 3
+ },
+ {
+  "Asin": "B07N8ZG4LC",
+  "URL": "https://www.amazon.co.jp/dp/B07N8ZG4LC?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51sItZtGoKL._SL500_.jpg",
+  "Publisher": "スクウェア・エニックス",
+  "Contributor": "おつじ(著)",
+  "Booktype": "Kindle版",
+  "Title": "通りがかりにワンポイントアドバイスしていくタイプのヤンキー 1巻 (デジタル版ガンガンコミックスpixiv)",
+  "Price": 448,
+  "Category": "コミック,少年マンガ",
+  "Points": 5
  },
  {
   "Asin": "B08VDBNJXT",
@@ -60,13 +48,13 @@
   "Points": 3
  },
  {
-  "Asin": "B07VW7VTVT",
-  "URL": "https://www.amazon.co.jp/dp/B07VW7VTVT?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51v+UsG-SaL._SL500_.jpg",
+  "Asin": "B08KDQDQ7X",
+  "URL": "https://www.amazon.co.jp/dp/B08KDQDQ7X?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51gnpcC3QDL._SL500_.jpg",
   "Publisher": "スクウェア・エニックス",
-  "Contributor": "下等妙人(著)",
+  "Contributor": "舞（ＧＡノベル／ＳＢクリエイティブ刊）(著)",
   "Booktype": "Kindle版",
-  "Title": "史上最強の大魔王、 村人Ａに転生する 1巻 (デジタル版ビッグガンガンコミックス)",
+  "Title": "ただ幸せな異世界家族生活　～転生して今度こそ幸せに暮らします～ 1巻 (デジタル版Gファンタジーコミックス)",
   "Price": 330,
   "Category": "コミック,少年マンガ,ファンタジー",
   "Points": 3
@@ -82,6 +70,18 @@
   "Price": 340,
   "Category": "コミック,少年マンガ,ファンタジー",
   "Points": 4
+ },
+ {
+  "Asin": "B07VW7VTVT",
+  "URL": "https://www.amazon.co.jp/dp/B07VW7VTVT?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51v+UsG-SaL._SL500_.jpg",
+  "Publisher": "スクウェア・エニックス",
+  "Contributor": "下等妙人(著)",
+  "Booktype": "Kindle版",
+  "Title": "史上最強の大魔王、 村人Ａに転生する 1巻 (デジタル版ビッグガンガンコミックス)",
+  "Price": 330,
+  "Category": "コミック,少年マンガ,ファンタジー",
+  "Points": 3
  },
  {
   "Asin": "B08XQH6FHP",
