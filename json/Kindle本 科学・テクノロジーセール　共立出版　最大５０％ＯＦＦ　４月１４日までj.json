@@ -1,0 +1,50 @@
+[
+ {
+  "Asin": "B09BDWRCXN",
+  "URL": "https://www.amazon.co.jp/dp/B09BDWRCXN?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/412SvuymCKL._SL500_.jpg",
+  "Publisher": "共立出版",
+  "Contributor": "ドナルド・C・ゴース(著)",
+  "Booktype": "Kindle版",
+  "Title": "ライト、ついてますか　問題発見の人間学",
+  "Price": 1100,
+  "Category": "心理学入門,読みもの,産業研究,心理学",
+  "Points": 11
+ },
+ {
+  "Asin": "B09BDX249Y",
+  "URL": "https://www.amazon.co.jp/dp/B09BDX249Y?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/41bherArzIL._SL500_.jpg",
+  "Publisher": "共立出版",
+  "Contributor": "G.M.ワインバーグ(著)",
+  "Booktype": "Kindle版",
+  "Title": "コンサルタントの秘密　技術アドバイスの人間学",
+  "Price": 1595,
+  "Category": "ジャンル別,産業研究",
+  "Points": 16
+ },
+ {
+  "Asin": "B09BDVP5BV",
+  "URL": "https://www.amazon.co.jp/dp/B09BDVP5BV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/412ryC8lUNL._SL500_.jpg",
+  "Publisher": "共立出版",
+  "Contributor": "G.M.ワインバーグ(著)",
+  "Booktype": "Kindle版",
+  "Title": "スーパーエンジニアへの道　技術リーダーシップの人間学",
+  "Price": 1595,
+  "Category": "ジャンル別,産業研究,工学",
+  "Points": 16
+ },
+ {
+  "Asin": "B09724YXZJ",
+  "URL": "https://www.amazon.co.jp/dp/B09724YXZJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/41HsJRQwv7S._SL500_.jpg",
+  "Publisher": "共立出版",
+  "Contributor": "Vincent Francois-Lavet(著)",
+  "Booktype": "Kindle版",
+  "Title": "深層強化学習入門",
+  "Price": 1595,
+  "Category": "コンピュータ・IT,コンピュータ・IT",
+  "Points": 16
+ }
+]
