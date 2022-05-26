@@ -1,7 +1,7 @@
 [
  {
   "Asin": "B094MZCK9X",
-  "URL": "https://www.amazon.co.jp/dp/B094MZCK9X?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B094MZCK9X?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51LZVMmb57S._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "土屋 浩(著)",
@@ -13,7 +13,7 @@
  },
  {
   "Asin": "B08YN8JBBJ",
-  "URL": "https://www.amazon.co.jp/dp/B08YN8JBBJ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08YN8JBBJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51+2Z3343sL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "仁科 裕貴(著)",
@@ -25,7 +25,7 @@
  },
  {
   "Asin": "B08XPZZ3NK",
-  "URL": "https://www.amazon.co.jp/dp/B08XPZZ3NK?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08XPZZ3NK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51MvQ-egGkL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "岡達 英茉(著)",
@@ -37,7 +37,7 @@
  },
  {
   "Asin": "B08W9FXYWP",
-  "URL": "https://www.amazon.co.jp/dp/B08W9FXYWP?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08W9FXYWP?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51BE-zSRrfL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "早見 慎司(著)",
@@ -49,7 +49,7 @@
  },
  {
   "Asin": "B08W9FCPB7",
-  "URL": "https://www.amazon.co.jp/dp/B08W9FCPB7?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08W9FCPB7?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51gAkn3aSTL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "梅谷 百(著)",
@@ -61,7 +61,7 @@
  },
  {
   "Asin": "B08N41Z5XZ",
-  "URL": "https://www.amazon.co.jp/dp/B08N41Z5XZ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08N41Z5XZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61iUrsAzHpL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "柳 なつき(著)",
@@ -72,20 +72,20 @@
   "Points": 5
  },
  {
-  "Asin": "B08W9FXYWP",
-  "URL": "https://www.amazon.co.jp/dp/B08W9FXYWP?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51BE-zSRrfL._SL500_.jpg",
+  "Asin": "B08HPSZW9C",
+  "URL": "https://www.amazon.co.jp/dp/B08HPSZW9C?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51FK7289aEL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "早見 慎司(著)",
   "Booktype": "Kindle版",
-  "Title": "青蘭国後宮みがわり草紙　第二巻 (メディアワークス文庫)",
-  "Price": 510,
+  "Title": "青蘭国後宮みがわり草紙 (メディアワークス文庫)",
+  "Price": 354,
   "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
-  "Points": 5
+  "Points": 4
  },
  {
   "Asin": "B08DQXXG4D",
-  "URL": "https://www.amazon.co.jp/dp/B08DQXXG4D?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08DQXXG4D?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51t7H4QyzqL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "佐々木 禎子(著)",
@@ -97,7 +97,7 @@
  },
  {
   "Asin": "B08CD84LF3",
-  "URL": "https://www.amazon.co.jp/dp/B08CD84LF3?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B08CD84LF3?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51CsMACPBKL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "梅谷 百(著)",
@@ -109,7 +109,7 @@
  },
  {
   "Asin": "B089JF927V",
-  "URL": "https://www.amazon.co.jp/dp/B089JF927V?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B089JF927V?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51GZcXlOmvL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "喜咲冬子(著)",
@@ -121,7 +121,7 @@
  },
  {
   "Asin": "B089KF951C",
-  "URL": "https://www.amazon.co.jp/dp/B089KF951C?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B089KF951C?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51YUNLs9AzL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "しきみ 彰(著)",
@@ -133,7 +133,7 @@
  },
  {
   "Asin": "B084VDZJTL",
-  "URL": "https://www.amazon.co.jp/dp/B084VDZJTL?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B084VDZJTL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51EjECOV6JL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "仁科 裕貴(著)",
@@ -145,7 +145,7 @@
  },
  {
   "Asin": "B082DVRX6M",
-  "URL": "https://www.amazon.co.jp/dp/B082DVRX6M?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082DVRX6M?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/616qwchPQFL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "佐々木 禎子(著)",
@@ -157,7 +157,7 @@
  },
  {
   "Asin": "B082DTNMBJ",
-  "URL": "https://www.amazon.co.jp/dp/B082DTNMBJ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B082DTNMBJ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51kLwELBC8L._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "しきみ 彰(著)",
@@ -169,7 +169,7 @@
  },
  {
   "Asin": "B07TX5QV6C",
-  "URL": "https://www.amazon.co.jp/dp/B07TX5QV6C?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07TX5QV6C?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61wDYFF5EFL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "柊平 ハルモ(著)",
@@ -180,20 +180,20 @@
   "Points": 5
  },
  {
-  "Asin": "B084VDZJTL",
-  "URL": "https://www.amazon.co.jp/dp/B084VDZJTL?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/51EjECOV6JL._SL500_.jpg",
+  "Asin": "B07RX3YG63",
+  "URL": "https://www.amazon.co.jp/dp/B07RX3YG63?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51z9jHNdGZL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "仁科 裕貴(著)",
   "Booktype": "Kindle版",
-  "Title": "後宮の夜叉姫２ (メディアワークス文庫)",
-  "Price": 495,
+  "Title": "後宮の夜叉姫 (メディアワークス文庫)",
+  "Price": 354,
   "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
-  "Points": 5
+  "Points": 4
  },
  {
   "Asin": "B07RMT7PWG",
-  "URL": "https://www.amazon.co.jp/dp/B07RMT7PWG?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07RMT7PWG?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51SRnK-MrpL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "しきみ 彰(著)",
@@ -205,7 +205,7 @@
  },
  {
   "Asin": "B07RK6D83X",
-  "URL": "https://www.amazon.co.jp/dp/B07RK6D83X?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07RK6D83X?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61r1QT14WCL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "佐々木 禎子(著)",
@@ -217,7 +217,7 @@
  },
  {
   "Asin": "B07PMGDS4C",
-  "URL": "https://www.amazon.co.jp/dp/B07PMGDS4C?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07PMGDS4C?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51sIqs7-gTL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "七水 美咲(著)",
@@ -229,7 +229,7 @@
  },
  {
   "Asin": "B07NHLL3Y9",
-  "URL": "https://www.amazon.co.jp/dp/B07NHLL3Y9?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07NHLL3Y9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51wTZbCkCsL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "羽根川 牧人(著)",
@@ -240,20 +240,20 @@
   "Points": 5
  },
  {
-  "Asin": "B08VDCGGJB",
-  "URL": "https://www.amazon.co.jp/dp/B08VDCGGJB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/61q6gOL1MtL._SL500_.jpg",
+  "Asin": "B07FD3WMKK",
+  "URL": "https://www.amazon.co.jp/dp/B07FD3WMKK?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61DonkUcU9L._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "佐々木 禎子(著)",
   "Booktype": "Kindle版",
-  "Title": "暁花薬殿物語　第五巻 (富士見L文庫)",
-  "Price": 614,
+  "Title": "暁花薬殿物語 (富士見L文庫)",
+  "Price": 338,
   "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
-  "Points": 6
+  "Points": 3
  },
  {
   "Asin": "B07DN5WBV4",
-  "URL": "https://www.amazon.co.jp/dp/B07DN5WBV4?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B07DN5WBV4?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51urqmDduzL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "羽根川 牧人(著)",
@@ -265,7 +265,7 @@
  },
  {
   "Asin": "B076B7RGC9",
-  "URL": "https://www.amazon.co.jp/dp/B076B7RGC9?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B076B7RGC9?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61VhWkeiQXL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "柊平 ハルモ(著)",
@@ -277,7 +277,7 @@
  },
  {
   "Asin": "B01M59W5TB",
-  "URL": "https://www.amazon.co.jp/dp/B01M59W5TB?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B01M59W5TB?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/61ex17ZzYlL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "柊平 ハルモ(著)",
@@ -286,5 +286,101 @@
   "Price": 316,
   "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
   "Points": 3
+ },
+ {
+  "Asin": "B0871R1B1L",
+  "URL": "https://www.amazon.co.jp/dp/B0871R1B1L?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51KrsU0dMXL._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "冬馬 倫(著)",
+  "Booktype": "Kindle版",
+  "Title": "宮廷医の娘 (メディアワークス文庫)",
+  "Price": 354,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 4
+ },
+ {
+  "Asin": "B08L2XG2VY",
+  "URL": "https://www.amazon.co.jp/dp/B08L2XG2VY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51yWqIidieL._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "冬馬 倫(著)",
+  "Booktype": "Kindle版",
+  "Title": "宮廷医の娘２ (メディアワークス文庫)",
+  "Price": 495,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 5
+ },
+ {
+  "Asin": "B0928338DT",
+  "URL": "https://www.amazon.co.jp/dp/B0928338DT?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51RYbIa7BZS._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "冬馬 倫(著)",
+  "Booktype": "Kindle版",
+  "Title": "宮廷医の娘３ (メディアワークス文庫)",
+  "Price": 495,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 5
+ },
+ {
+  "Asin": "B09HZFTCS2",
+  "URL": "https://www.amazon.co.jp/dp/B09HZFTCS2?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51bHE6d0xpL._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "冬馬 倫(著)",
+  "Booktype": "Kindle版",
+  "Title": "宮廷医の娘４ (メディアワークス文庫)",
+  "Price": 495,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 5
+ },
+ {
+  "Asin": "B0B11R91RZ",
+  "URL": "https://www.amazon.co.jp/dp/B0B11R91RZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51t-tLTGrJL._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "冬馬 倫(著)",
+  "Booktype": "Kindle版",
+  "Title": "宮廷医の娘５ (メディアワークス文庫)",
+  "Price": 663,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 7
+ },
+ {
+  "Asin": "B091G71S5M",
+  "URL": "https://www.amazon.co.jp/dp/B091G71S5M?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51l-oZVNE6S._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "都月 きく音(著)",
+  "Booktype": "Kindle版",
+  "Title": "雪花妃伝 ～藍帝後宮始末記～ 一 (富士見L文庫)",
+  "Price": 349,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 3
+ },
+ {
+  "Asin": "B093G8BDNH",
+  "URL": "https://www.amazon.co.jp/dp/B093G8BDNH?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51jA-4-st+S._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "都月 きく音(著)",
+  "Booktype": "Kindle版",
+  "Title": "雪花妃伝 ～藍帝後宮始末記～ 二 (富士見L文庫)",
+  "Price": 458,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 5
+ },
+ {
+  "Asin": "B091G8C9W8",
+  "URL": "https://www.amazon.co.jp/dp/B091G8C9W8?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51msIamA7AL._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "唐澤 和希(著)",
+  "Booktype": "Kindle版",
+  "Title": "後宮茶妃伝　寵妃は愛より茶が欲しい (富士見L文庫)",
+  "Price": 503,
+  "Category": "ジャンル別,Featured Categories,日本の小説・文芸",
+  "Points": 5
  }
 ]
