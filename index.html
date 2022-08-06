@@ -23,15 +23,15 @@
     <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
     <title>開催中のキンドルセール一覧</title>
     <!-- BootstrapのCSS読み込み -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-93342586-1', 'auto');
@@ -41,8 +41,8 @@
     <!-- jQuery読み込み -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <!-- BootstrapのJS読み込み -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- 追加した部分 -->
     <script defer type="text/javascript" src="js/share.js"></script>
 </head>
@@ -53,40 +53,39 @@ footer.pb-5 {
     padding-bottom: 3rem;
 }
 </style>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-<a  rel="noreferrer" target="_blank"class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="Navber">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a rel="noreferrer" target="_blank" class="nav-link" href="https://99nyorituryo.hatenablog.com/">ブログ <span class="sr-only">(現位置)</span></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://99nyorituryo.hatenablog.com/">ブログ </a>
                     </li>
                     <li class="nav-item">
-                        <a rel="noreferrer" target="_blank" class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                        <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
                     </li>
                     <li class="nav-item">
-                        <a rel="noreferrer" target="_blank" class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                        <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
                     </li>
                     <li class="nav-item">
-                        <a rel="noreferrer" target="_blank" class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                        <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
                     </li>
                     <li class="nav-item">
-                        <a rel="noreferrer" target="_blank" class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                        <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
                     </li>
-
                     <li class="nav-item">
-                        <a rel="noreferrer" target="_blank" class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
+                        <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">kindleセール</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </nav>
 
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </header>
+</header>
     <div class="container ">
 
 
