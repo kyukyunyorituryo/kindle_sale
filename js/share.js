@@ -18,23 +18,23 @@ function setSnsShare(shareUrl, description) {
 
 
 function setTwitterLink(shareSelector, shareUrl, description) {
-    $(shareSelector).attr("href", "https://twitter.com/intent/tweet?url=" + shareUrl + "&text=" + encodeURIComponent(description));
+    document.querySelector(shareSelector).setAttribute("href", "https://twitter.com/intent/tweet?url=" + shareUrl + "&text=" + encodeURIComponent(description));
     setShareEvent(shareSelector, 'Twitter', shareUrl);
 }
 
 function setFacebookLink(shareSelector, shareUrl, description) {
-    $(shareSelector).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareUrl + "&t=" + encodeURIComponent(description));    
+    document.querySelector(shareSelector).setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareUrl + "&t=" + encodeURIComponent(description));    
     setShareEvent(shareSelector, 'Facebook', shareUrl);
 }
 
 
 function setHatebuLink(shareSelector, shareUrl, description) {
-    $(shareSelector).attr("href", "http://b.hatena.ne.jp/add?url=" + shareUrl + "&description=" + encodeURIComponent(description));
+    document.querySelector(shareSelector).setAttribute("href", "http://b.hatena.ne.jp/add?url=" + shareUrl + "&description=" + encodeURIComponent(description));
     setShareEvent(shareSelector, 'Hatena Bookmark', shareUrl);
 }
 
 function setLineLink(shareSelector, shareUrl, description) {
-    $(shareSelector).attr("href", "http://line.me/R/msg/text/?" + encodeURIComponent(description + " " + shareUrl));
+    document.querySelector(shareSelector).setAttribute("href", "http://line.me/R/msg/text/?" + encodeURIComponent(description + " " + shareUrl));
     setShareEvent(shareSelector, 'LINE', shareUrl);
 }
 
@@ -45,7 +45,7 @@ function setLineLink(shareSelector, shareUrl, description) {
  *  @param shareUrl シェア対象のURL（Googleアナリティクス上の表示に使われる）
  */
 function setShareEvent(selector, snsName, shareUrl) {
-    $(selector).on('click', function(e){
+    document.querySelector(selector).addEventListener('click', function(e){
         var current = this;
         //　*** Googleアナリティクスにイベント送らないなら、以下のコードは不要 ***
         // 'share'の文字列は任意に変えてもよい（Googleアナリティクス上の表示文字列として使われる）
