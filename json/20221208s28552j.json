@@ -1,0 +1,50 @@
+[
+ {
+  "Asin": "B00SSJDD36",
+  "URL": "https://www.amazon.co.jp/dp/B00SSJDD36?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51peyDvj6VL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "高瀬綾(著)",
+  "Booktype": "Kindle版",
+  "Title": "聖ルームメート (なかよしコミックス)",
+  "Price": 231,
+  "Category": "コミック,少女マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B00SV3NLAY",
+  "URL": "https://www.amazon.co.jp/dp/B00SV3NLAY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51CfSYKsvGL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "安藤なつみ(著)",
+  "Booktype": "Kindle版",
+  "Title": "スマイルでいこう（１） (なかよしコミックス)",
+  "Price": 231,
+  "Category": "コミック,少女マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B08B7ZJRWX",
+  "URL": "https://www.amazon.co.jp/dp/B08B7ZJRWX?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51GqjnkI-zL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "日生佑稀(著)",
+  "Booktype": "Kindle版",
+  "Title": "兄とわたしと先生のヒミツ（１） (パルシィコミックス)",
+  "Price": 231,
+  "Category": "コミック,マンガ",
+  "Points": 2
+ },
+ {
+  "Asin": "B09MRZP4SS",
+  "URL": "https://www.amazon.co.jp/dp/B09MRZP4SS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51DeECH0YqL._SL500_.jpg",
+  "Publisher": "講談社",
+  "Contributor": "雨玉さき(著)",
+  "Booktype": "Kindle版",
+  "Title": "純潔と東雲先生（１） (パルシィコミックス)",
+  "Price": 242,
+  "Category": "コミック,マンガ",
+  "Points": 2
+ }
+]
