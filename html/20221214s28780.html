@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="「Kindleセール」宝島社　ビジネス書から写真集まで！ ひかくてき高額本キャンペーン　最大50％OFF　１２月１４日 まで">
+
+    <!--OGP -->
+    <meta property="og:title" content="「Kindleセール」宝島社　ビジネス書から写真集まで！ ひかくてき高額本キャンペーン　最大50％OFF　１２月１４日 まで" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kyukyunyorituryo.github.io/kindle_sale/html/20221214s28780.html" />
+    <meta property="og:image" content="https://m.media-amazon.com/images/I/51xNiRHkb9L._SL500_.jpg" />
+    <meta property="og:site_name" content="キンドルセールチェック" />
+    <meta property="og:description" content="「Kindleセール」宝島社　ビジネス書から写真集まで！ ひかくてき高額本キャンペーン　最大50％OFF　１２月１４日 まで" />
+    <!--Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@99nyorituryo">
+    <meta name="twitter:creator" content="@99nyorituryo">
+    <meta name="twitter:title" content="「Kindleセール」宝島社　ビジネス書から写真集まで！ ひかくてき高額本キャンペーン　最大50％OFF　１２月１４日 まで">
+    <meta name="twitter:description" content="キンドルのセール品を一覧で表示する「キンドルセールチェック」">
+    <meta name="twitter:image:src" content="https://m.media-amazon.com/images/I/51xNiRHkb9L._SL500_.jpg">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>「Kindleセール」宝島社　ビジネス書から写真集まで！ ひかくてき高額本キャンペーン　最大50％OFF　１２月１４日 まで</title>
+    <!-- BootstrapのCSS読み込み --><!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93342586-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-93342586-1');
+    </script>
+
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <!-- BootstrapのJS読み込み -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--Lazy Load RemasteredのJS読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
+    <!-- 追加した部分 -->
+    <script type="text/javascript" src="../js/share.js"></script>
+    <script type="text/javascript" src="../js/ejs.min.js"></script>
+    <script type="text/javascript" src="../js/kindle_sale.js"></script>
+    <script type="text/javascript" src="../js/paginathing.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://kyukyunyorituryo.github.io/">Topページ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://99nyorituryo.hatenablog.com/">ブログ </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.amazon.co.jp/-/e/B07Q2TZFCN">キンドル著者ページ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/kyukyunyorituryo/">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://kyukyunyorituryo.github.io/kindle_sale/">Kindleセール</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container ">
+        <!--
+
+        <div class="nondisplayFrame">
+            <h2 class="alert alert-success">カテゴリの選択</h2>
+            <button id='comic' type="button" class="btn btn-outline-primary">コミック</button>
+            <button id='adult' type="button" class="btn btn-outline-secondary">アダルト</button>
+            <button id='bl' type="button" class="btn btn-outline-success">BL</button>
+            <button id='business' type="button" class="btn btn-outline-danger">ビジネス・経済</button>
+            <button id='other' type="button" class="btn btn-outline-warning">その他</button>
+            <button id='hobby' type="button" class="btn btn-outline-info">趣味・実用</button>
+            <button id='literature' type="button" class="btn btn-outline-dark">文学・評論</button>
+            <button id='picturebook' type="button" class="btn btn-outline-primary">絵本・児童書</button>
+        </div>
+        <style type="text/css">
+            .nondisplayFrame {
+                display: inline;
+            }
+        </style>
+
+    後で追加
+    <button  type="button" class="btn btn-outline-light">ムック</button>
+    -->
+
+        <style type="text/css">
+            img.mr-3 {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                text-align: center;
+            }
+
+            .img-container--table-cell {
+                position: relative;
+                width: 180px;
+                height: 250px;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                border: 1px solid darkgray
+            }
+        </style>
+        <h2 id='release' class="alert alert-success">「Kindleセール」宝島社　ビジネス書から写真集まで！ ひかくてき高額本キャンペーン　最大50％OFF　１２月１４日 まで</h2>
+        <div class="pagenation"></div>
+        <ul id='frame' class="list-unstyled border alert alert-primary">
+            
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51xNiRHkb9L._SL500_.jpg" class="mr-3 lazyload" alt="くらべる！決算書図鑑 比較でわかる同業他社の意外な戦略＆儲けのしくみ" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					くらべる！決算書図鑑 比較でわかる同業他社の意外な戦略＆儲けのしくみ
+				</h5>
+				<p class="card-text">
+					価格：1122円、ポイント：11
+				</p>
+				<p class="card-text">
+					田中道昭(監修)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B09Q61GS4W
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ビジネス・経済
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B09Q61GS4W?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/416d63WpXbL._SL500_.jpg" class="mr-3 lazyload" alt="Excel、データ整理＆分析、画像処理の自動化ワザを完全網羅！ 超速Python仕事術大全" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					Excel、データ整理＆分析、画像処理の自動化ワザを完全網羅！ 超速Python仕事術大全
+				</h5>
+				<p class="card-text">
+					価格：1584円、ポイント：16
+				</p>
+				<p class="card-text">
+					伊沢剛(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B09NLZFTK3
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ビジネス・経済
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B09NLZFTK3?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51XRm8G+xwL._SL500_.jpg" class="mr-3 lazyload" alt="人気イラストレーターとつくった 絶対に使えるアクションポーズ集" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					人気イラストレーターとつくった 絶対に使えるアクションポーズ集
+				</h5>
+				<p class="card-text">
+					価格：1386円、ポイント：14
+				</p>
+				<p class="card-text">
+					こちも(監修)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B09DSQL8DJ
+				</p>
+					<p class="card-text">
+						カテゴリー：グラフィックデザイン,デザイン
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B09DSQL8DJ?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/41L1LxA23eL._SL500_.jpg" class="mr-3 lazyload" alt="もっとかわいくなれる ひよんＴｉｐｓ my sweet plan" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					もっとかわいくなれる ひよんＴｉｐｓ my sweet plan
+				</h5>
+				<p class="card-text">
+					価格：1386円、ポイント：14
+				</p>
+				<p class="card-text">
+					ひよん(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B09CGJHXMN
+				</p>
+					<p class="card-text">
+						カテゴリー：演劇,演劇・舞台
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B09CGJHXMN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51mQt50sE4S._SL500_.jpg" class="mr-3 lazyload" alt="世界＆日本の販売戦略がイラストでわかる 最新マーケティング図鑑" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					世界＆日本の販売戦略がイラストでわかる 最新マーケティング図鑑
+				</h5>
+				<p class="card-text">
+					価格：1308円、ポイント：13
+				</p>
+				<p class="card-text">
+					平野敦士カール(監修)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B0956QCKXP
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,マーケティング・セールス,産業研究
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B0956QCKXP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51iskuMCScL._SL500_.jpg" class="mr-3 lazyload" alt="教養としての世界史 天才たちの人生図鑑" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					教養としての世界史 天才たちの人生図鑑
+				</h5>
+				<p class="card-text">
+					価格：1188円、ポイント：12
+				</p>
+				<p class="card-text">
+					山﨑圭一(監修)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08Z85MSZ2
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,世界史
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08Z85MSZ2?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51UIGyLUeVL._SL500_.jpg" class="mr-3 lazyload" alt="教養としての日本史 偉人たちの人生図鑑" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					教養としての日本史 偉人たちの人生図鑑
+				</h5>
+				<p class="card-text">
+					価格：1188円、ポイント：12
+				</p>
+				<p class="card-text">
+					山﨑圭一(監修)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08Z7H82NM
+				</p>
+					<p class="card-text">
+						カテゴリー：日本史一般,日本史
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08Z7H82NM?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51eKXS6QZdL._SL500_.jpg" class="mr-3 lazyload" alt="ゼロから始める無農薬栽培 自然菜園で育てる健康野菜" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					ゼロから始める無農薬栽培 自然菜園で育てる健康野菜
+				</h5>
+				<p class="card-text">
+					価格：1122円、ポイント：11
+				</p>
+				<p class="card-text">
+					新田穂高(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08X1ZF2LW
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ガーデニング
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08X1ZF2LW?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51gdGSLs18L._SL500_.jpg" class="mr-3 lazyload" alt="伝説のファンドマネジャーが教える 図解 株の暴落サインを見抜く法" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					伝説のファンドマネジャーが教える 図解 株の暴落サインを見抜く法
+				</h5>
+				<p class="card-text">
+					価格：1309円、ポイント：13
+				</p>
+				<p class="card-text">
+					林則行(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08TLQ14DG
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ビジネス・経済,投資・金融・会社経営
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08TLQ14DG?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51kXmOyacZL._SL500_.jpg" class="mr-3 lazyload" alt="CYBERJAPAN DANCERS 1st PHOTOBOOK" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					CYBERJAPAN DANCERS 1st PHOTOBOOK
+				</h5>
+				<p class="card-text">
+					価格：979円、ポイント：10
+				</p>
+				<p class="card-text">
+					CYBERJAPANDANCERS(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08MDXZNBV
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,タレント写真集
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08MDXZNBV?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51V8lUm06XL._SL500_.jpg" class="mr-3 lazyload" alt="Yummy！" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					Yummy！
+				</h5>
+				<p class="card-text">
+					価格：1265円、ポイント：13
+				</p>
+				<p class="card-text">
+					CYBERJAPANDANCERS(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08MDXR6MP
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,タレント写真集
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08MDXR6MP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/516d3JvEk+L._SL500_.jpg" class="mr-3 lazyload" alt="クリエイターのためのファンタジー世界構築教典" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					クリエイターのためのファンタジー世界構築教典
+				</h5>
+				<p class="card-text">
+					価格：1540円、ポイント：15
+				</p>
+				<p class="card-text">
+					宮永忠将(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08JCHDTG4
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,趣味・実用
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08JCHDTG4?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51tiXKMwPqL._SL500_.jpg" class="mr-3 lazyload" alt="めんどうな作業が秒速で終わる！ Excel×Python自動化の超基本" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					めんどうな作業が秒速で終わる！ Excel×Python自動化の超基本
+				</h5>
+				<p class="card-text">
+					価格：1307円、ポイント：13
+				</p>
+				<p class="card-text">
+					伊沢剛(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08DCQ6FVP
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ビジネス・経済
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08DCQ6FVP?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51h6htiTCYL._SL500_.jpg" class="mr-3 lazyload" alt="アマゾンで私が学んだ 新しいビジネスの作り方" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					アマゾンで私が学んだ 新しいビジネスの作り方
+				</h5>
+				<p class="card-text">
+					価格：990円、ポイント：10
+				</p>
+				<p class="card-text">
+					太田理加(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B08BJ3SYRN
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ビジネス・経済
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08BJ3SYRN?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+<li class="media mb-3 alert-warning ">
+<div class="card mb-3" style="max-width: 800px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img data-src="https://m.media-amazon.com/images/I/51WTW-LFzQL._SL500_.jpg" class="mr-3 lazyload" alt="アマゾンのすごいルール" loading="lazy" />
+
+		</div>
+		<div class="col-md-8 alert-warning">
+			<div class="card-body alert-warning">
+				<h5 class="card-title">
+					アマゾンのすごいルール
+				</h5>
+				<p class="card-text">
+					価格：990円、ポイント：10
+				</p>
+				<p class="card-text">
+					佐藤将之(著)
+				</p>	
+				<p class="card-text">
+					出版社：宝島社、ASIN：B07V27TFJ9
+				</p>
+					<p class="card-text">
+						カテゴリー：ジャンル別,ビジネス・経済
+					</p>
+				<a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B07V27TFJ9?tag=99hatena-22&amp;linkCode=osi&amp;th=1&amp;psc=1" role="button"  rel="noreferrer" target="_blank">Amazonで詳細を見る
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</li>
+
+            <li class="media mb-3 alert-warning ">
+                <div class="card mb-3" style="max-width: 800px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://m.media-amazon.com/images/I/51RDWy2L5FL._SL500_.png" class="mr-3 lazyload" alt="電子書籍セールチェック" loading="lazy" />
+
+                        </div>
+                        <div class="col-md-8 alert-warning">
+                            <div class="card-body alert-warning">
+                                <h5 class="card-title">
+                                    電子書籍セールチェック
+                                </h5>
+                                <p class="card-text">
+                                    価格：0円、ポイント：0
+                                </p>
+                                <p class="card-text">
+                                    kyukyunyorituryo(著)
+                                </p>
+                                <p class="card-text">
+                                    出版社：なし、ASIN：B08NK73QGL
+                                </p>
+                                <p class="card-text">
+                                    カテゴリー：アプリ
+                                </p>
+                                <a class="btn btn-warning" href="https://www.amazon.co.jp/dp/B08NK73QGL?tag=99hatena-22&linkCode=ogi&th=1&psc=1" role="button" rel="noreferrer" target="_blank">Amazonで詳細を見る </a> <a class="btn btn-dark" href="https://play.google.com/store/apps/details?id=com.websarva.wings.android.newepubcheck&hl=ja" role="button" rel="noreferrer" target="_blank">GooglePlayで手に入れる </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="pagination2"></div><!-- 追加 -->
+
+        <h2 class="alert alert-success">絞り込み検索</h2>
+        <!--
+             <p>Kindle.csvを使って蔵書を除外。<a href="https://qiita.com/taka_hira/items/8a9181c0733de2c9f8ee">Kindle蔵書一覧を取得する方法</a></p>
+             <input type="file" id="csvfile" accept="text/csv,.csv">
+
+             <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+             <script src="../js/hikaku.js"></script>
+    -->
+        <hr>
+        <p>著者名、タイトル、カテゴリなどから絞り込みができます。</p>
+        <div class="form-inline my-2 my-lg-0">
+            <input type="search" class="form-control mr-sm-2" id="searchtext" placeholder="検索..." aria-label="検索...">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0" id="search">検索</button>
+        </div>
+        <footer class="pb-5"></footer>
+        <h2 class="alert alert-success">SNSでシェア</h2>
+        <!-- snsボタン -->
+        <div class="fixed-bottom">
+            <ul class="list-group list-group-horizontal ">
+                <li class="list-group-item">
+                    <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img src="../images/FB-f-Logo__blue_100.png" alt="facebook" width="50" height="50"><p>facebook</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img src="../images/Twitter_Social.svg" alt="twitter" width="50" height="50"><p>twitter</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon  hatena_back"><a href="" target="_blank" title="はてなブックマークに登録"><img src="../images/hatenabookmark-logomark.svg" alt="はてなブックマーク" width="50" height="50"><p>hatena</p></a></div>
+                </li>
+                <li class="list-group-item">
+                    <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img src="../images/line-share.png" alt="LINE" width="50" height="50"><p>line</p></a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- snsボタン終了 -->
+    </div>
+        <!-- pagination -->
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('.list-unstyled').paginathing({
+                    perPage: 20,
+                    containerClass: 'panel-footer',
+                    liClass: 'page-item',
+                    firstText: '初め',
+                    prevText: '前へ',
+                    nextText: '次へ',
+                    lastText: '最後',
+                    insertAfter: '.pagenation',
+                });
+                $('.list-unstyled').paginathing({
+                    perPage: 20,
+                    containerClass: 'panel-footer',
+                    liClass: 'page-item',
+                    firstText: '初め',
+                    prevText: '前へ',
+                    nextText: '次へ',
+                    lastText: '最後',
+                    insertAfter: '.pagination2',
+                });
+
+            });
+/*
+            ,
+              limitPagination: 10
+            */
+        </script>
+</body>
+</html>
