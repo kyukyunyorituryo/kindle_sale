@@ -1,0 +1,110 @@
+[
+ {
+  "Asin": "B0819WQH81",
+  "URL": "https://www.amazon.co.jp/dp/B0819WQH81?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51IpX1paoEL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "飯田育浩(著)",
+  "Booktype": "Kindle版",
+  "Title": "ビジュアル版　経済・戦争・宗教から見る教養の世界史",
+  "Price": 743,
+  "Category": "ジャンル別,世界史",
+  "Points": 7
+ },
+ {
+  "Asin": "B00O4RMWSS",
+  "URL": "https://www.amazon.co.jp/dp/B00O4RMWSS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51vJfmxCSCL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "佐久協(読み手)",
+  "Booktype": "Kindle版",
+  "Title": "カラー版 イチから知りたい！論語の本",
+  "Price": 550,
+  "Category": "思想,哲学・思想",
+  "Points": 6
+ },
+ {
+  "Asin": "B08PFWZB6S",
+  "URL": "https://www.amazon.co.jp/dp/B08PFWZB6S?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/511eOEUivUL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "飯田育浩(著)",
+  "Booktype": "Kindle版",
+  "Title": "ビジュアル版　経済・戦争・宗教から見る　教養の日本史",
+  "Price": 743,
+  "Category": "日本史一般,日本史",
+  "Points": 7
+ },
+ {
+  "Asin": "B00O9UYJ54",
+  "URL": "https://www.amazon.co.jp/dp/B00O9UYJ54?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51SGd6AWLzL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "渡辺精一(読み手)",
+  "Booktype": "Kindle版",
+  "Title": "オールカラーでわかりやすい！三国志 [三国志徹底マスター]",
+  "Price": 440,
+  "Category": "ジャンル別,世界史",
+  "Points": 4
+ },
+ {
+  "Asin": "B07P7FJ5PW",
+  "URL": "https://www.amazon.co.jp/dp/B07P7FJ5PW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51UILiWHSYL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "山本博文(読み手)",
+  "Booktype": "Kindle版",
+  "Title": "ビジュアル百科 写真と図解でわかる！ 天皇〈125代〉の歴史",
+  "Price": 545,
+  "Category": "政治入門,政治",
+  "Points": 5
+ },
+ {
+  "Asin": "B00JAEEALW",
+  "URL": "https://www.amazon.co.jp/dp/B00JAEEALW?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/41zPIfvD04L._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "秦野勝(著)",
+  "Booktype": "Kindle版",
+  "Title": "面白いほどよくわかる！ 哲学の本",
+  "Price": 770,
+  "Category": "思想,哲学・思想",
+  "Points": 8
+ },
+ {
+  "Asin": "B07R2CZJ2P",
+  "URL": "https://www.amazon.co.jp/dp/B07R2CZJ2P?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51x6cwUlrGL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "橋場日月(著)",
+  "Booktype": "Kindle版",
+  "Title": "図解 面白いほどよくわかる！日本史",
+  "Price": 484,
+  "Category": "日本史一般,日本史",
+  "Points": 5
+ },
+ {
+  "Asin": "B07VQHF4WV",
+  "URL": "https://www.amazon.co.jp/dp/B07VQHF4WV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/610OlBdL8CL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "矢部健太郎(読み手)",
+  "Booktype": "Kindle版",
+  "Title": "超ビジュアル！ マンガ 戦国時代　乱世到来編（1467～1582年頃）",
+  "Price": 644,
+  "Category": "日本史一般,コミック,日本史,マンガ",
+  "Points": 6
+ },
+ {
+  "Asin": "B07W56SG77",
+  "URL": "https://www.amazon.co.jp/dp/B07W56SG77?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61-Xhtek8aL._SL500_.jpg",
+  "Publisher": "西東社",
+  "Contributor": "矢部健太郎(読み手)",
+  "Booktype": "Kindle版",
+  "Title": "超ビジュアル！ マンガ 戦国時代　天下統一編（1582～1616年頃）",
+  "Price": 644,
+  "Category": "日本史一般,コミック,日本史,マンガ",
+  "Points": 6
+ }
+]
