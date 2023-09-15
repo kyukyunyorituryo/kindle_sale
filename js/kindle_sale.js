@@ -76,7 +76,7 @@ document.getElementById('searchtext').value=queryword
 var url = location.href ;
 date=url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1]
 date=decodeURI(date)
-json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+date+"j.json"
+json_data= "https://kyukyunyorituryo.github.io/kindle_sale/json/"+date+".json"
 json_data = encodeURI(json_data)
 getJSON(json_data)
 
