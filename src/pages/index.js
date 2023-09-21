@@ -16,36 +16,6 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading"><a aria-current="page" class="" href="/">Amazon主催のセール</a></h1>
       <ol style={{ listStyle: `none` }}
       >
-                  <li >
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                <a rel="noreferrer" target="_blank" href="https://amzn.to/44W3Hvb">
-                    Kindle本ポイントキャンペーン　30％ポイント還元　９月２１日 まで
-                </a>
-                  </h2>
-                </header>
-              </article>
-            </li>
-                 <li >
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                <a rel="noreferrer" target="_blank" href="https://amzn.to/48kj0kk">
-                    Kindle本ポイントキャンペーン | SBクリエイティブ特集　30％ポイント還元　９月２１日 まで
-                </a>
-                  </h2>
-                </header>
-              </article>
-            </li>
                  <li >
               <article
                 className="post-list-item"
