@@ -24,36 +24,6 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                <a rel="noreferrer" target="_blank" href="https://amzn.to/48jHudh">
-                    Kindle本 マンガ・ライトノベルセール　最大70％OFF　９月２８日 まで
-                </a>
-                  </h2>
-                </header>
-              </article>
-            </li>
-                 <li >
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                <a rel="noreferrer" target="_blank" href="https://amzn.to/3sQrQps">
-                    1200点以上！幻冬舎電本フェス後夜祭　最大70％OFF　９月２８日 まで
-                </a>
-                  </h2>
-                </header>
-              </article>
-            </li>
-                 <li >
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
                 <a rel="noreferrer" target="_blank" href="https://amzn.to/3ZmSnqz">
                     ４社合同　池井戸潤フェア　最大30％オフ　９月２９日 まで
                 </a>
@@ -61,23 +31,8 @@ const BlogIndex = ({ data, location }) => {
                 </header>
               </article>
             </li>
-                 <li >
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                <a rel="noreferrer" target="_blank" href="https://amzn.to/3ZiUMTp">
-                    空の日セール（150点以上）　最大50%OFF　９月２８日 まで
-                </a>
-                  </h2>
-                </header>
-              </article>
-            </li>
                   </ol>
-                  <h1 class="main-heading"><a aria-current="page" class="" href="/">その他のセール</a></h1>
+                  <h1 class="main-heading"><a aria-current="page" class="" href="/">出版社別のセール</a></h1>
                   <ol style={{ listStyle: `none` }}
       >
         {posts.map(post => {
