@@ -22,7 +22,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{data.file.childrenJson[0].Saletitle}</h1>
+          <h1 itemProp="headline">「Kindleセール」　{data.file.childrenJson[0].Saletitle}</h1>
           <p>{data.file.childrenJson[0].Date}</p>
         </header>
         <Amazons book={book} />
