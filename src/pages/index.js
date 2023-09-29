@@ -30,6 +30,20 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                 </header>
               </article>
+            </li>                 <li >
+              <article
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h2>
+                <a rel="noreferrer" target="_blank" href="https://amzn.to/3EZOoXP">
+                    講談社　フィクション本　6,000冊以上　50％ポイント還元　１０月１２日 まで
+                </a>
+                  </h2>
+                </header>
+              </article>
             </li>
                   </ol>
                   <h1 class="main-heading"><a aria-current="page" class="" href="/">出版社別のセール</a></h1>
