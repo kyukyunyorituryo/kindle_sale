@@ -17,7 +17,7 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading"><a aria-current="page" class="" href="/">Amazon主催のセール</a></h1>
       <ol style={{ listStyle: `none` }}
       >
-      <List url="https://amzn.to/3ZmSnqz" title="４社合同　池井戸潤フェア　最大30％オフ　９月２９日 まで" />
+
       <List url="https://amzn.to/3EZOoXP" title="講談社　フィクション本　6,000冊以上　50％ポイント還元　１０月１２日 まで" />
       <List url="https://amzn.to/3tfKQht" title="ニコニコカドカワ祭り 第１弾 【最大50%OFF】　計10,000点以上!" />
       <List url="https://amzn.to/3REf6MY" title="ニコニコカドカワ祭り 第１弾 コミック/ コミックエッセイ 最大50%OFF" />
