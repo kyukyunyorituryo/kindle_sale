@@ -23,6 +23,7 @@ const Sort = ({ data, location }) => {
       <List url="https://amzn.to/46cOvew" title="ニコニコカドカワ祭り 第１弾 ライトノベル 最大50%OFF" />
       <List url="https://amzn.to/3EYx5pU" title="ニコニコカドカワ祭り 第１弾  小説 エッセイ 最大50%OFF" />
       <List url="https://amzn.to/3EYXqEy" title="ニコニコカドカワ祭り 第１弾  ビジネス 趣味・実用 最大50%OFF" />
+      <List url="https://amzn.to/45hrc1M" title="Kindle本読書の秋キャンペーン　最大50％OFF　１０月１２日 まで" />
                   </ol>
                   <h1 class="main-heading"><a aria-current="page" class="" href="/">その他のセール</a></h1>
                   <ol style={{ listStyle: `none` }}
