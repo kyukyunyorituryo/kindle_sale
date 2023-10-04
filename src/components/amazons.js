@@ -21,7 +21,7 @@ book[i].image_s=image_s;
     <div  id="book">
       {uniqueUsers.map(e => (
      <div key={e.Asin}>
-        <a className="amazon-card-container" href={e.URL}>
+        <a className="amazon-card-container" target="_blank" rel="noopener noreferrer" href={e.URL}>
           <div className="amazon-card-body">
             <div className="amazon-card-title">{e.Title}</div>
             <div className="amazon-card-domain">価格：{e.Price}円、ポイント：{e.Points}、{e.Contributor}、出版社：{e.Publisher}、カテゴリー：{e.Category}</div>

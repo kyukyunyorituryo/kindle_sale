@@ -19,11 +19,11 @@ const BlogIndex = ({ data, location }) => {
       >
 
       <List url="https://amzn.to/3EZOoXP" title="講談社　フィクション本　6,000冊以上　50％ポイント還元　１０月１２日 まで" />
-      <List url="https://amzn.to/3tfKQht" title="ニコニコカドカワ祭り 第１弾 【最大50%OFF】　計10,000点以上!" />
-      <List url="https://amzn.to/3REf6MY" title="ニコニコカドカワ祭り 第１弾 コミック/ コミックエッセイ 最大50%OFF" />
-      <List url="https://amzn.to/46cOvew" title="ニコニコカドカワ祭り 第１弾 ライトノベル 最大50%OFF" />
-      <List url="https://amzn.to/3EYx5pU" title="ニコニコカドカワ祭り 第１弾  小説 エッセイ 最大50%OFF" />
-      <List url="https://amzn.to/3EYXqEy" title="ニコニコカドカワ祭り 第１弾  ビジネス 趣味・実用 最大50%OFF" />
+      <List url="https://amzn.to/3tfKQht" title="ニコニコカドカワ祭り 第１弾 【最大50%OFF】　計10,000点以上!　１０月１２日 まで" />
+      <List url="https://amzn.to/3REf6MY" title="ニコニコカドカワ祭り 第１弾 コミック/ コミックエッセイ 最大50%OFF　１０月１２日 まで" />
+      <List url="https://amzn.to/46cOvew" title="ニコニコカドカワ祭り 第１弾 ライトノベル 最大50%OFF　１０月１２日 まで" />
+      <List url="https://amzn.to/3EYx5pU" title="ニコニコカドカワ祭り 第１弾  小説 エッセイ 最大50%OFF　１０月１２日 まで" />
+      <List url="https://amzn.to/3EYXqEy" title="ニコニコカドカワ祭り 第１弾  ビジネス 趣味・実用 最大50%OFF　１０月１２日 まで" />
       <List url="https://amzn.to/45hrc1M" title="Kindle本読書の秋キャンペーン　最大50％OFF　１０月１２日 まで" />
       <List url="https://amzn.to/46c5uxA" title="薬屋のひとりごとTVアニメ放映開始＆最新刊配信！　 ヒーロー文庫11周年記念Kindle Unlimited読み放題フェア　最大90％OFF　１０月１５日 まで" />
                   </ol>
