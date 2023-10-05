@@ -14,7 +14,7 @@ const Sort = ({ data, location }) => {
   return (
       <Layout location={location} title={siteTitle}>
 <p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<a rel="noreferrer" target="_blank" href="index2.html">旧ページはこちら</a></p>
-<h1 class="main-heading"><a aria-current="page" class="" href="/">Amazon主催のセール</a></h1>
+<h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
       <List url="https://amzn.to/3EZOoXP" title="講談社　フィクション本　6,000冊以上　50％ポイント還元　１０月１２日 まで" />
@@ -25,7 +25,7 @@ const Sort = ({ data, location }) => {
       <List url="https://amzn.to/3EYXqEy" title="ニコニコカドカワ祭り 第１弾  ビジネス 趣味・実用 最大50%OFF" />
       <List url="https://amzn.to/46c5uxA" title="薬屋のひとりごとTVアニメ放映開始＆最新刊配信！　 ヒーロー文庫11周年記念Kindle Unlimited読み放題フェア　最大90％OFF　１０月１５日 まで" />
                   </ol>
-                  <h1 class="main-heading"><a aria-current="page" class="" href="/">その他のセール</a></h1>
+                  <h1 class="main-heading">その他のセール</h1>
                   <ol style={{ listStyle: `none` }}
       >
         {posts.map(post => {
