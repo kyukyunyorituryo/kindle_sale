@@ -44,11 +44,13 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
             Twitterをフォロー
           </a>
+          {`　`}
+          <a href="https://kyukyunyorituryo.github.io/i/privacy-policy/">プライバシーポリシー</a>
         </p>
       )}
     </div>
