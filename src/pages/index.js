@@ -17,10 +17,7 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://t.co/sStXmdvrMn" title="Prime感謝祭｜KADOKAWAのKindle本ポイントキャンペーン　50％還元　１０月１５日まで" />
               <List url="https://t.co/fJKjZTxS5h" title="Kindle本ストア11周年キャンペーン　最大60％OFF　１０月２６日まで" />
-              <List url="https://t.co/B6LiXPBhHm" title="Prime感謝祭｜ Kindle本キャンペーン　最大70％OFF　１０月１５日まで" />
-              <List url="https://amzn.to/46c5uxA" title="薬屋のひとりごとTVアニメ放映開始＆最新刊配信！　 ヒーロー文庫11周年記念Kindle Unlimited読み放題フェア　最大90％OFF　１０月１５日 まで" />
               <List url="https://amzn.to/3tqxJKz" title="Gakkenグループ 秋の特大フェア　最大70％OFF　1,000冊 以上　１０月１９日 まで" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
