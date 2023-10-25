@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1615,6 +1615,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231031s36159.html</loc>
+    <lastmod>2023-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231031s36192.html</loc>
+    <lastmod>2023-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231031s36199.html</loc>
+    <lastmod>2023-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231101s35633.html</loc>
     <lastmod>2023-09-28</lastmod>
     <changefreq>daily</changefreq>
@@ -1695,6 +1713,12 @@
   <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231102s36059.html</loc>
     <lastmod>2023-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231102s36061.html</loc>
+    <lastmod>2023-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1795,8 +1819,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231107s36193.html</loc>
+    <lastmod>2023-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231107s36194.html</loc>
+    <lastmod>2023-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231107s36200.html</loc>
     <lastmod>2023-10-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231107s36216.html</loc>
+    <lastmod>2023-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
