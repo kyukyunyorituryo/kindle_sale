@@ -1,24 +1,36 @@
 [
  {
-  "Asin": "B0CMQ1BY8F",
-  "URL": "https://www.amazon.co.jp/dp/B0CMQ1BY8F?tag=99hatena-22&linkCode=osi&th=1&psc=1",
-  "ImageURL": "https://m.media-amazon.com/images/I/01MKUOLsA5L._SL500_.gif",
+  "Asin": "B0CDKSVVS2",
+  "URL": "https://www.amazon.co.jp/dp/B0CDKSVVS2?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/61hi8I5-OxL._SL500_.jpg",
+  "Publisher": "KADOKAWA",
+  "Contributor": "長田 信織(著)",
+  "Booktype": "Kindle版",
+  "Title": "異世界のすみっこで快適ものづくり生活　～女神さまのくれた工房はちょっとやりすぎ性能だった～ (電撃の新文芸)",
+  "Price": 1040,
+  "Category": "ジャンル別,ライトノベル,日本の小説・文芸",
+  "Points": 18,
+  "Day": "20231123s36550",
+  "Saletitle": "KADOKAWA 男子ラノベキャンペーン　最大85％OFF　１１月２３日 まで",
+  "Date": "2023-11-10 16:34:55",
+  "Pubtag": "KADOKAWA",
+  "Catetag": "ジャンル別,ライトノベル,日本の小説・文芸"
+ },
+ {
+  "Asin": "B0C7766FYS",
+  "URL": "https://www.amazon.co.jp/dp/B0C7766FYS?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
+  "ImageURL": "https://m.media-amazon.com/images/I/51P7-7RCJIL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "恵比須 清司(著)",
   "Booktype": "Kindle版",
-  "Title": "あなたの事が好きなわたしを推してくれますか？２ (富士見ファンタジア文庫)",
-  "Price": 836,
+  "Title": "あなたの事が好きなわたしを推してくれますか？ (富士見ファンタジア文庫)",
+  "Price": 616,
   "Category": "ライトノベル,ライトノベル,日本の小説・文芸",
-  "Points": 8,
-  "Day": "20231123s36550",
-  "Saletitle": "KADOKAWA 男子ラノベキャンペーン　最大85％OFF　１１月２３日 まで",
-  "Date": "2023-11-10 15:40:53",
-  "Pubtag": "KADOKAWA",
-  "Catetag": "ライトノベル,日本の小説・文芸"
+  "Points": 10
  },
  {
   "Asin": "B0C36ND2JL",
-  "URL": "https://www.amazon.co.jp/dp/B0C36ND2JL?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0C36ND2JL?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51HPk1Q82dL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "鏡 遊(著)",
@@ -30,7 +42,7 @@
  },
  {
   "Asin": "B0BQH9K7DD",
-  "URL": "https://www.amazon.co.jp/dp/B0BQH9K7DD?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0BQH9K7DD?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/512JKFfxZQL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "秋(著)",
@@ -42,7 +54,7 @@
  },
  {
   "Asin": "B0BQH9KP4T",
-  "URL": "https://www.amazon.co.jp/dp/B0BQH9KP4T?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0BQH9KP4T?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51FnUnf4lhL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "暁 佳奈(著)",
@@ -54,7 +66,7 @@
  },
  {
   "Asin": "B0BKKLRCSH",
-  "URL": "https://www.amazon.co.jp/dp/B0BKKLRCSH?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0BKKLRCSH?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51D+h+qIs6L._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "鏡 遊(著)",
@@ -66,7 +78,7 @@
  },
  {
   "Asin": "B0CLXR6ZHX",
-  "URL": "https://www.amazon.co.jp/dp/B0CLXR6ZHX?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0CLXR6ZHX?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51V-B8THjXL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "秋(著)",
@@ -78,7 +90,7 @@
  },
  {
   "Asin": "B0B4Z2B8LY",
-  "URL": "https://www.amazon.co.jp/dp/B0B4Z2B8LY?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0B4Z2B8LY?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51y3FKvchrL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "暁 佳奈(著)",
@@ -90,7 +102,7 @@
  },
  {
   "Asin": "B0B4Z2LYC6",
-  "URL": "https://www.amazon.co.jp/dp/B0B4Z2LYC6?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0B4Z2LYC6?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51wYfAbxAGL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "暁 佳奈(著)",
@@ -102,7 +114,7 @@
  },
  {
   "Asin": "B0B2HYRXJV",
-  "URL": "https://www.amazon.co.jp/dp/B0B2HYRXJV?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0B2HYRXJV?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51glSccGFiL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "鏡 遊(著)",
@@ -114,7 +126,7 @@
  },
  {
   "Asin": "B0CLXPB2PZ",
-  "URL": "https://www.amazon.co.jp/dp/B0CLXPB2PZ?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0CLXPB2PZ?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51-ZrDlbjSL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "鏡 遊(著)",
@@ -126,7 +138,7 @@
  },
  {
   "Asin": "B0914Z428X",
-  "URL": "https://www.amazon.co.jp/dp/B0914Z428X?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0914Z428X?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51W42ikqr9L._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "暁 佳奈(著)",
@@ -138,7 +150,7 @@
  },
  {
   "Asin": "B0915R4LM7",
-  "URL": "https://www.amazon.co.jp/dp/B0915R4LM7?tag=99hatena-22&linkCode=osi&th=1&psc=1",
+  "URL": "https://www.amazon.co.jp/dp/B0915R4LM7?tag=99hatena-22&linkCode=ogi&th=1&psc=1",
   "ImageURL": "https://m.media-amazon.com/images/I/51PlTWHmXcL._SL500_.jpg",
   "Publisher": "KADOKAWA",
   "Contributor": "暁 佳奈(著)",
