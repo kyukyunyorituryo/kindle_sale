@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}
       >
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
-              <List url="https://amzn.to/46cKcix" title="2023年冬 ぴっかぴか小デジ！感謝祭　３０％OFF　１１月２３日 まで" />
+
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
                   <ol style={{ listStyle: `none` }}
