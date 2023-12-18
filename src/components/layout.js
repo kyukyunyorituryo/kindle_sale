@@ -8,15 +8,34 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
+    <>
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
       </h1>
+      <nav >
+        <ul>
+    <li><a href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a></li>
+    <li><a href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a></li>
+    <li><a href="https://kyukyunyorituryo.github.io/i/"> 電書ニュース</a></li>
+
+  </ul>
+      </nav>
+      </>
     )
   } else {
     header = (
+        <>
       <Link className="header-link-home" to="/">
         {title}
       </Link>
+            <nav >
+        <ul>
+    <li><a href="https://kyukyunyorituryo.github.io/new_epub/">kindle新刊</a></li>
+    <li><a href="https://kyukyunyorituryo.github.io/new_pub/">紙の新刊</a></li>
+    <li><a href="https://kyukyunyorituryo.github.io/i/"> 電書ニュース</a></li>
+  </ul>
+      </nav>
+      </>
     )
   }
 

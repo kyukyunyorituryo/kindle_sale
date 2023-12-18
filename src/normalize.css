@@ -365,3 +365,13 @@ summary {
         margin-right: 1em;
     }
 }
+nav{
+  width: 500px;
+}
+ul{
+ display: flex;
+}
+li{
+  list-style: none;
+  margin-left: 20px;
+}
