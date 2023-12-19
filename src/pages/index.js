@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
       <Layout location={location} title={siteTitle}>
-<p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<a rel="noreferrer" target="_blank" href="index2.html">旧ページはこちら</a></p>
+<p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<a rel="noreferrer" target="_blank" href="index2.html">旧ページはこちら</a>、<a rel="noreferrer" target="_blank" href="sort">新しい順番に表示</a></p>
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
