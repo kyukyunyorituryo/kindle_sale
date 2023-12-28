@@ -17,6 +17,7 @@ const Sort = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
+              <List url="https://amzn.to/47dOAhG" title="Kindle本 年末年始セール｜SBクリエイティブ特集　１月１１日 まで" />
               <List url="https://amzn.to/41qNJcs" title="【最大80％OFF】Kindle本クリスマスセール　１２月２８日 まで" />
               <List url="https://amzn.to/3vliKlK" title="【最大60％OFF】Kindle本 年末年始セール　１月１１日 まで" />
               <List url="https://amzn.to/3GWepIE" title="【最大70%OFF】　計10,000点以上!　カドカワ祭りニューイヤー 　１月１１日 まで　１月１１日 まで" />
