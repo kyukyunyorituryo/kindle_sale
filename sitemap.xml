@@ -2,49 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/202310258s35993.html</loc>
     <lastmod>2023-10-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231231s36980.html</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231231s36994.html</loc>
-    <lastmod>2023-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231231s37350.html</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231231s37634.html</loc>
-    <lastmod>2023-12-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231231s37636.html</loc>
-    <lastmod>2023-12-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20231231s37734.html</loc>
-    <lastmod>2023-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -391,6 +355,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240108s37705.html</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240108s37793.html</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240108s37898.html</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240109s37196.html</loc>
     <lastmod>2023-12-28</lastmod>
     <changefreq>daily</changefreq>
@@ -429,6 +411,12 @@
   <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240109s37753.html</loc>
     <lastmod>2024-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240109s37761.html</loc>
+    <lastmod>2024-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -625,6 +613,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240112s37808.html</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240114s37830.html</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240114s37925.html</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/20240118s37751.html</loc>
     <lastmod>2023-12-29</lastmod>
     <changefreq>daily</changefreq>
@@ -644,7 +650,7 @@
   </url>
   <url>
     <loc>https://kyukyunyorituryo.github.io/kindle_sale/html/Monthly-Change.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
