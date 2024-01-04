@@ -12,6 +12,10 @@ const BlogPostTemplate = ({
   location,
 }) => {
 var book = data.file.childrenJson
+var pubtag=data.file.childrenJson[0].Pubtag.split(',')
+var catetag=data.file.childrenJson[0].Catetag.split(',')
+pubtag.length=10
+catetag.length=10
 const siteTitle = data.site.siteMetadata?.title || `Title`
     return (
     <>
@@ -23,7 +27,20 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
       >
         <header>
           <h1 itemProp="headline">「Kindleセール」　{data.file.childrenJson[0].Saletitle}</h1>
-          <p>{data.file.childrenJson[0].Date}</p>
+          <p>{data.file.childrenJson[0].Date}　出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
+          return (
+                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                    <button>{pubtag}</button>
+                 // </Link>
+          )
+          })}カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
+          return (
+                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                    <button>{catetag}</button>
+                 // </Link>
+          )
+          })}
+          </p>
         </header>
         <Amazons book={book} />
         <hr />
@@ -67,6 +84,8 @@ query MyQuery($slug: String!)  {
       URL
       Saletitle
       Date(formatString: "YYYY年MM月DD日")
+      Catetag
+      Pubtag
     }
       fields {
       slug

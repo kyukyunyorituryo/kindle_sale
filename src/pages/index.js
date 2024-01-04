@@ -27,7 +27,10 @@ const BlogIndex = ({ data, location }) => {
       >
         {posts.map(post => {
           const title = post.childJson.Saletitle || post.fields.slug
-
+          var pubtag=post.childJson.Pubtag.split(',')
+          var catetag=post.childJson.Catetag.split(',')
+          pubtag.length=10
+          catetag.length=5
           return (
             <li key={post.fields.slug}>
               <article
@@ -42,6 +45,22 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <small>{post.childJson.Date}</small>
+                  <div className="tags-article">
+                   出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
+                  return (
+                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                    <button>{pubtag}</button>
+                  //</Link>
+                      )
+                    })}
+                   カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
+                  return (
+                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                    <button>{catetag}</button>
+                  //</Link>
+                      )
+                    })}
+                </div>
                 </header>
               </article>
             </li>
@@ -64,11 +83,11 @@ export const Head = () => <Seo title="kindle本セール品を一覧で表示す
 
 export const pageQuery = graphql`
 query MyQuery {
-   site {
-      siteMetadata {
-        title
-      }
+  site {
+    siteMetadata {
+      title
     }
+  }
   allFile(
     sort: {fields: {slug: ASC}}
     limit: 1000
@@ -80,6 +99,8 @@ query MyQuery {
         Day
         Title
         Date(formatString: "YYYY年MM月DD日")
+        Catetag
+        Pubtag
       }
       fields {
         slug
