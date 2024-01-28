@@ -17,8 +17,8 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://amzn.to/3RZq7Hd" title="【最大70％OFF】Kindle ビジネス・ファイナンス本 セール　１月２５日 まで" />
-              <List url="https://amzn.to/3RW1prj" title="SBクリエイティブ　ビジネス書キャンペーン 50％OFF　１月２５日 まで" />
+              <List url="https://amzn.to/48RfcXr" title="【最大70％OFF】Kindle マンガ・ライトノベル セール　２月８日 まで" />
+              <List url="https://amzn.to/42dlAG1" title="幻冬舎【最大70%OFF】電本フェス　前夜祭 約1200点対象　２月８日 まで" />
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
