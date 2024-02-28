@@ -18,10 +18,6 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}
       >
 
-              <List url="https://amzn.to/3Uw1Ag3" title="【最大50％OFF】Kindle 語学・教育関連本キャンペーン　２月２２日 まで" />
-
-              <List url="https://amzn.to/3HSnVN4" title="【最大70%OFF】計2,500点以上！幻冬舎電本フェス本祭　２月２２日 まで" />
-
               <List url="https://amzn.to/3I0rukm" title="【最大50％還元】Kindle本ポイントキャンペーン　２月２９日 まで" />
 
               <List url="https://amzn.to/3wr3vIA" title="【最大50％還元】Kindle本ポイントキャンペーン : SBクリエイティブ　２月２９日 まで" />
@@ -31,6 +27,8 @@ const BlogIndex = ({ data, location }) => {
               <List url="https://amzn.to/3I0Rz2U" title="【Kindle50%ポイント還元】東洋経済のビジネス&実用書 2023年 ベスト200　２月２９日 まで" />
 
               <List url="https://amzn.to/3I4dpCy" title="【最大60%OFF】　計9,000点以上！ カドカワ祭ウィンター　２月２９日 まで" />
+
+              <List url="https://amzn.to/3Iggz6i" title="【最大70％OFF】Kindle本 新生活セール　３月５日 まで" />
 
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
