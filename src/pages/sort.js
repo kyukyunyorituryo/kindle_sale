@@ -18,16 +18,6 @@ const Sort = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}
       >
 
-              <List url="https://amzn.to/3I0rukm" title="【最大50％還元】Kindle本ポイントキャンペーン　２月２９日 まで" />
-
-              <List url="https://amzn.to/3wr3vIA" title="【最大50％還元】Kindle本ポイントキャンペーン : SBクリエイティブ　２月２９日 まで" />
-
-              <List url="https://amzn.to/42I6CIk" title="【最大50％還元】Kindle本ポイントキャンペーン : 日経BP　２月２９日 まで" />
-
-              <List url="https://amzn.to/3I0Rz2U" title="【Kindle50%ポイント還元】東洋経済のビジネス&実用書 2023年 ベスト200　２月２９日 まで" />
-
-              <List url="https://amzn.to/3I4dpCy" title="【最大60%OFF】　計9,000点以上！ カドカワ祭ウィンター　２月２９日 まで" />
-
               <List url="https://amzn.to/3Iggz6i" title="【最大70％OFF】Kindle本 新生活セール　３月５日 まで" />
 
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
