@@ -12,8 +12,10 @@ const BlogPostTemplate = ({
   location,
 }) => {
 var book = data.file.childrenJson
+ const catesafe =data.site.siteMetadata.catesafe
 var pubtag=data.file.childrenJson[0].Pubtag.split(',')
 var catetag=data.file.childrenJson[0].Catetag.split(',')
+catetag=catetag.filter(x => catesafe.includes(x))
 pubtag.length=10
 catetag.length=10
 const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -95,6 +97,7 @@ query MyQuery($slug: String!)  {
       siteMetadata {
         title
         siteUrl
+        catesafe
       }
     }
 }`
