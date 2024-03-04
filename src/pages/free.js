@@ -1,0 +1,108 @@
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import Amazons from "../components/amazons"
+import Share from "../components/share"
+
+const Free = ({
+  data,
+  location,
+}) => {
+var book = data.allJson.nodes
+ const catesafe =data.site.siteMetadata.catesafe
+var pubtag=data.allJson.nodes[0].Pubtag.split(',')
+var catetag=data.allJson.nodes[0].Catetag.split(',')
+catetag=catetag.filter(x => catesafe.includes(x))
+var freetitle=`無料本まとめ`
+pubtag.length=10
+catetag.length=10
+const siteTitle = data.site.siteMetadata?.title || `Title`
+    return (
+    <>
+        <Layout location={location} title={siteTitle}>
+      <article
+        className="blog-post"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        <header>
+          <h1 itemProp="headline"> {`「Kindleセール」`+ freetitle}</h1>
+          {/*
+          <p>{data.allJson.nodes[0].Date}　出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
+          return (
+                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                    <button>{pubtag}</button>
+                 // </Link>
+          )
+          })}カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
+          return (
+                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                    <button>{catetag}</button>
+                 // </Link>
+          )
+          })}
+          </p>
+          */}
+        </header>
+        <Amazons book={book} />
+        <hr />
+        <Share
+          title={freetitle}
+          url={`${data.site.siteMetadata.siteUrl}/free`}
+          />
+        <footer>
+          <Bio />
+        </footer>
+          </article>
+        </Layout>
+        </>
+    )
+}
+export const Head = ({ data}) => {
+  return (
+    <Seo
+      title={`無料本まとめ`}
+      ogpimage={data.allJson.nodes[0].ImageURL}
+    />
+  )
+}
+
+export default Free
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+//export const Head = () => <Seo title="kindle本セール品を一覧で表示する「kindleセールチェック」" />
+
+export const pageQuery = graphql`
+query MyQuery {
+  allJson(filter: {Price: {eq: 0}}) {
+    nodes {
+      Asin
+      Booktype
+      Category
+      Contributor
+      ImageURL
+      Points
+      Price
+      Publisher
+      Title
+      URL
+      Saletitle
+      Date(formatString: "YYYY年MM月DD日")
+      Catetag
+      Pubtag
+    }
+  }      site {
+      siteMetadata {
+        title
+        siteUrl
+        catesafe
+      }
+    }
+}
+`
