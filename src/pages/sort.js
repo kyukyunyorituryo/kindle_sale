@@ -18,8 +18,6 @@ const Sort = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}
       >
 
-              <List url="https://amzn.to/3Iggz6i" title="【最大70％OFF】Kindle本 新生活セール　３月５日 まで" />
-
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
