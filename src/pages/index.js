@@ -14,15 +14,17 @@ const BlogIndex = ({ data, location }) => {
   const catesafe =data.site.siteMetadata.catesafe
   return (
       <Layout location={location} title={siteTitle}>
-<p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<a rel="noreferrer" target="_blank" href="index2.html">旧ページはこちら</a>、<Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
+<p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<br/><Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
 <p>出版社ごとのセール一覧：<Link to="/kadokawa">KADOKAWA</Link>、<Link to="/kodansha">講談社</Link>、<Link to="/akitashoten">秋田書店</Link>、<Link to="/hakusensha">白泉社</Link></p>
 <p>カテゴリごとのセール一覧：<Link to="/manga">漫画</Link>、<Link to="/lightnovel">ライトノベル</Link>、<Link to="/novel">小説</Link></p>
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-
-
+              <List url="https://amzn.to/4c9zXj5" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　３月２１日 まで" />
+              <List url="https://amzn.to/3Pc4sLq" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　日経BPのおすすめタイトル　３月２１日 まで" />
+              <List url="https://amzn.to/3TqIR4n" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　講談社のおすすめタイトル　３月２１日 まで" />
+              <List url="https://amzn.to/3Pcwq9Z" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　秀和システムのおすすめタイトル　３月２１日 まで" />
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
