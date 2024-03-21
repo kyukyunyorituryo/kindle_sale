@@ -43,6 +43,7 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
+      <>
         <p>
           <strong>{author.name}</strong> {author?.summary || null}
           {` `}
@@ -51,7 +52,9 @@ const Bio = () => {
           </a>
           {`　`}
           <a href="https://kyukyunyorituryo.github.io/i/privacy-policy/">プライバシーポリシー</a>
-        </p>
+        <br/>
+        アンドロイドアプリ：<a href="https://www.amazon.co.jp/dp/B08NK73QGL?tag=99hatena-22&linkCode=ogi&th=1&psc=1">アマゾン</a>。<a href="https://play.google.com/store/apps/details?id=com.websarva.wings.android.newepubcheck&hl=ja">グーグル</a></p>
+        </>
       )}
     </div>
   )
