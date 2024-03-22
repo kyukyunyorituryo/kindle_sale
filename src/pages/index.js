@@ -21,11 +21,9 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://amzn.to/4c9zXj5" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　３月２１日 まで" />
-              <List url="https://amzn.to/3Pc4sLq" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　日経BPのおすすめタイトル　３月２１日 まで" />
-              <List url="https://amzn.to/3TqIR4n" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　講談社のおすすめタイトル　３月２１日 まで" />
-              <List url="https://amzn.to/3Pcwq9Z" title="【最大50％OFF】Kindle本 科学・テクノロジーセール　秀和システムのおすすめタイトル　３月２１日 まで" />
-              <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
+              <List url="https://amzn.to/3PzjRWp" title="【最大80％OFF】Kindle本新生活セール　４月１日 まで" />
+              <List url="https://amzn.to/4cCLZC2" title="【最大20％還元】本のポイント還元キャンペーン　４月１日 まで" />
+              <List url="ttps://amzn.to/3TNCMiX" title="【最大50%OFF】 春のコンピュータ・IT書フェア 出版社合同（1600点以上）　４月１日 まで" />              <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
                   <ol style={{ listStyle: `none` }}
