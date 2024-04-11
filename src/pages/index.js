@@ -21,7 +21,9 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://amzn.to/3U1DDMQ" title="集英社 春マン!! 2024: Kindleストア　最大50％ポイント還元　４月８日 まで" />
+              <List url="https://amzn.to/3xrKiHx" title="集英社 春マン!! 2024: Kindleストア　最大50％ポイント還元　５月８日 まで" />
+              <List url="https://amzn.to/4anyJ2D" title="Kindleマンガ対象のシリーズ第1巻購入で100%ポイント還元（期間限定ポイント）　４月１８日 まで" />
+              <List url="https://amzn.to/3VN2jdb" title="【最大60％OFF】Kindle本 社会・歴史・哲学・政治書セール　４月１８日 まで" />
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
