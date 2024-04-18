@@ -63,8 +63,9 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
 export const Head = ({ data}) => {
   return (
     <Seo
-      title={`無料本まとめ`}
+      title={`kindle無料本まとめ`}
       ogpimage={data.allJson.nodes[0].ImageURL}
+      description={`kindle無料本まとめ、kindleセール品の中で無料のものを一覧で表示します。`}
     />
   )
 }

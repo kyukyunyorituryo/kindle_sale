@@ -15,7 +15,7 @@ const Manga = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
 <p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
-                  <h1 class="main-heading">漫画セールのまとめ</h1>
+                  <h1 class="main-heading">kindleの漫画セール一覧</h1>
                   <ol style={{ listStyle: `none` }}
       >
         {posts.map(post => {
@@ -62,8 +62,9 @@ const Manga = ({ data, location }) => {
         })}
       </ol>
         <Share
-          title={siteTitle}
+          title={`kindleの漫画セール一覧`}
           url={`${data.site.siteMetadata.siteUrl}/manga`}
+          description={`kindleの漫画セール一覧`}
           />
             <Bio />
           </Layout>
@@ -77,7 +78,8 @@ export default Manga
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="kindle本セール品を一覧で表示する「kindleセールチェック」" />
+export const Head = () => <Seo title="kindleの漫画セール一覧、kindle本セール品を一覧で表示する「kindleセールチェック」" 
+description={`kindleの漫画セール一覧、kindleセール品の中で漫画のものを一覧で表示します。`}/>
 
 export const pageQuery = graphql`
 query MyQuery {

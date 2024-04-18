@@ -16,12 +16,12 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
 <p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<br/><Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
-<p>出版社ごとのセール一覧：<Link to="/kadokawa">KADOKAWA</Link>、<Link to="/kodansha">講談社</Link>、<Link to="/akitashoten">秋田書店</Link>、<Link to="/hakusensha">白泉社</Link></p>
+<p>出版社ごとのセール一覧：<Link to="/kadokawa">KADOKAWA</Link>、<Link to="/kodansha">講談社</Link>、<Link to="/akitashoten">秋田書店</Link>、<Link to="/hakusensha">白泉社</Link>、<Link to="/shueisha">集英社</Link>、<Link to="/tokuma">徳間書店</Link></p>
 <p>カテゴリごとのセール一覧：<Link to="/manga">漫画</Link>、<Link to="/lightnovel">ライトノベル</Link>、<Link to="/novel">小説</Link></p>
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://amzn.to/3xrKiHx" title="集英社 春マン!! 2024: Kindleストア　最大50％ポイント還元　５月８日 まで" />
+              <List url="https://amzn.to/43ZpsLQ" title="【最大50％OFF】Kindle本 高額書籍セール　４月２５日 まで" />              <List url="https://amzn.to/3xrKiHx" title="集英社 春マン!! 2024: Kindleストア　最大50％ポイント還元　５月８日 まで" />
               <List url="https://amzn.to/4anyJ2D" title="Kindleマンガ対象のシリーズ第1巻購入で100%ポイント還元（期間限定ポイント）　４月１８日 まで" />
               <List url="https://amzn.to/3VN2jdb" title="【最大60％OFF】Kindle本 社会・歴史・哲学・政治書セール　４月１８日 まで" />
               <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />

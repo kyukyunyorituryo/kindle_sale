@@ -63,6 +63,7 @@ export const Head = ({ data}) => {
     <Seo
       title={data.file.childrenJson[0].Saletitle}
       ogpimage={data.file.childrenJson[0].ImageURL}
+      description={data.file.childrenJson[0].Saletitle}
     />
   )
 }

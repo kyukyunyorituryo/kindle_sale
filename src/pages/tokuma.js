@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Share from "../components/share"
 
-const Novel = ({ data, location }) => {
+const Hakusensha = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allFile.nodes
   const catesafe =data.site.siteMetadata.catesafe
@@ -15,7 +15,7 @@ const Novel = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
 <p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
-                  <h1 class="main-heading">Kindle小説セールのまとめ</h1>
+                  <h1 class="main-heading">kindleの徳間書店セール一覧</h1>
                   <ol style={{ listStyle: `none` }}
       >
         {posts.map(post => {
@@ -62,22 +62,24 @@ const Novel = ({ data, location }) => {
         })}
       </ol>
         <Share
-          title={siteTitle}
-          url={`${data.site.siteMetadata.siteUrl}/novel`}
+          title={`kindleの徳間書店セール一覧`}
+          url={`${data.site.siteMetadata.siteUrl}/hakusensha`}
+          description={`kindleの徳間書店セール一覧`}
           />
             <Bio />
           </Layout>
   )
 }
 
-export default Novel
+export default Hakusensha
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="kindle本の小説セール品を一覧で表示「kindleセールチェック」" description="Kindle小説セールの一覧表示"/>
+export const Head = () => <Seo title="kindleの徳間書店セール一覧、kindle本セール品を一覧で表示する「kindleセールチェック」" 
+description={`kindleの徳間書店セール一覧、kindleセール品の中で徳間書店のものを一覧で表示します。`}/>
 
 export const pageQuery = graphql`
 query MyQuery {
@@ -91,7 +93,7 @@ query MyQuery {
   allFile(
     sort: {fields: {slug: ASC}}
     limit: 1000
-    filter: {extension: {eq: "json"}, childJson: {Catetag: {regex: "/小説/"}}}
+    filter: {extension: {eq: "json"}, childJson: {Pubtag: {regex: "/徳間書店/"}}}
   ) {
     nodes {
       childJson {
