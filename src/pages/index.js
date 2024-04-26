@@ -22,10 +22,10 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}
       >
               <List url="https://amzn.to/3Qc1pTU" title="【50%OFF】　計6,000点以上!　カドカワ祭ゴールデン2024　第１弾　５月２日 まで" />
-              <List url="https://amzn.to/43ZpsLQ" title="【最大50％OFF】Kindle本 高額書籍セール　４月２５日 まで" />
+              <List url="https://amzn.to/4aRWAaK" title="【最大75％OFF】Kindle本 ゴールデンウィークセール　５月２日 まで" />
               <List url="https://amzn.to/3xrKiHx" title="集英社 春マン!! 2024: Kindleストア　最大50％ポイント還元　５月８日 まで" />
-
-              <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
+              <List url="https://amzn.to/4b9OXw1" title="【最大85％OFF】Kindle本 ゴールデンウィークセール (後半)　５月９日 まで" />
+              <List url="https://amzn.to/3UJVXe1" title="【最大30％OFF】Kindle本 マンガシリーズ全巻 まとめ買いセール　５月９日 まで" />              <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
                   <ol style={{ listStyle: `none` }}

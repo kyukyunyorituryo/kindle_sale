@@ -12,8 +12,16 @@ const Free = ({
 }) => {
 var book = data.allJson.nodes
  const catesafe =data.site.siteMetadata.catesafe
+ if(data.allJson.nodes[0].Pubtag){
 var pubtag=data.allJson.nodes[0].Pubtag.split(',')
+}else {
+  pubtag=["出版社なし"]
+}
+ if(data.allJson.nodes[0].Catetag){
 var catetag=data.allJson.nodes[0].Catetag.split(',')
+}else {
+  catetag=["カテゴリーなし"]
+}
 catetag=catetag.filter(x => catesafe.includes(x))
 var freetitle=`無料本まとめ`
 pubtag.length=10
