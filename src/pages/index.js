@@ -16,16 +16,23 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
 <p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<br/><Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
-<p>出版社ごとのセール一覧：<Link to="/kadokawa">KADOKAWA</Link>、<Link to="/kodansha">講談社</Link>、<Link to="/akitashoten">秋田書店</Link>、<Link to="/hakusensha">白泉社</Link>、<Link to="/shueisha">集英社</Link>、<Link to="/tokuma">徳間書店</Link></p>
+<p>出版社ごとのセール一覧：<Link to="/kadokawa">KADOKAWA</Link>、<Link to="/kodansha">講談社</Link>、<Link to="/akitashoten">秋田書店</Link>、<Link to="/hakusensha">白泉社</Link>、<Link to="/shueisha">集英社</Link>、<Link to="/tokuma">徳間書店</Link>、<Link to="/shougakukan">小学館</Link></p>
 <p>カテゴリごとのセール一覧：<Link to="/manga">漫画</Link>、<Link to="/lightnovel">ライトノベル</Link>、<Link to="/novel">小説</Link></p>
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://amzn.to/3Qc1pTU" title="【50%OFF】　計6,000点以上!　カドカワ祭ゴールデン2024　第１弾　５月２日 まで" />
-              <List url="https://amzn.to/4aRWAaK" title="【最大75％OFF】Kindle本 ゴールデンウィークセール　５月２日 まで" />
-              <List url="https://amzn.to/3xrKiHx" title="集英社 春マン!! 2024: Kindleストア　最大50％ポイント還元　５月８日 まで" />
-              <List url="https://amzn.to/4b9OXw1" title="【最大85％OFF】Kindle本 ゴールデンウィークセール (後半)　５月９日 まで" />
-              <List url="https://amzn.to/3UJVXe1" title="【最大30％OFF】Kindle本 マンガシリーズ全巻 まとめ買いセール　５月９日 まで" />              <List url="https://amzn.to/3u0PAI3" title="Kindle Unlimited定額読み放題" />
+              <List url="https://amzn.to/4apng1E" title="【最大50％還元】Kindle本 ポイントキャンペーン　５月３０日 まで" />
+              <List url="https://amzn.to/4arwXN7" title="【最大50％還元】Kindle本 ポイントキャンペーン｜SBクリエイティブ特集　５月３０日 まで" />
+              <List url="https://amzn.to/3yqBZvV" title="【最大50％還元】Kindle本 ポイントキャンペーン　漫画　５月３０日 まで" />
+              <List url="https://amzn.to/3K6r4tN" title="【最大50％還元】Kindle本 ポイントキャンペーン　ライトノベル　５月３０日 まで" />
+              <List url="https://amzn.to/3wIQY3P" title="【最大50％還元】Kindle本 ポイントキャンペーン　小説　５月３０日 まで" />
+              <List url="https://amzn.to/4bJD4gF" title="【最大50％還元】Kindle本 ポイントキャンペーン　趣味・実用　５月３０日 まで" />
+              <List url="https://amzn.to/4ax2hK9" title="【最大50％還元】Kindle本 ポイントキャンペーン　タレント写真集　５月３０日 まで" />
+
+              <List url="https://amzn.to/3Ka1l3G" title="【最大50％還元】Kindle本 ポイントキャンペーン　竹書房のおすすめ　５月３０日 まで" />
+              <List url="https://amzn.to/3K3YV6V" title="【最大50％還元】Kindle本 ポイントキャンペーン　文藝春秋のおすすめ　５月３０日 まで" />
+
+
                   </ol>
                   <h1 class="main-heading">出版社別のセール</h1>
                   <ol style={{ listStyle: `none` }}

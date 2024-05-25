@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Share from "../components/share"
 
-const Shueisha = ({ data, location }) => {
+const Shougaukan = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allFile.nodes
   const catesafe =data.site.siteMetadata.catesafe
@@ -15,7 +15,7 @@ const Shueisha = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
 <p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
-                  <h1 class="main-heading">kindleの集英社セール一覧</h1>
+                  <h1 class="main-heading">kindleの小学館セール一覧</h1>
                   <ol style={{ listStyle: `none` }}
       >
         {posts.map(post => {
@@ -62,24 +62,24 @@ const Shueisha = ({ data, location }) => {
         })}
       </ol>
         <Share
-          title={`kindleの集英社セール一覧`}
-          url={`${data.site.siteMetadata.siteUrl}/shueisha`}
-          description={`kindleの集英社セール一覧`}
+          title={`kindleの小学館セール一覧`}
+          url={`${data.site.siteMetadata.siteUrl}/shougaukan`}
+          description={`kindleの小学館セール一覧`}
           />
             <Bio />
           </Layout>
   )
 }
 
-export default Shueisha
+export default Shougaukan
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="kindleの集英社セール一覧、kindle本セール品を一覧で表示する「kindleセールチェック」" 
-description={`kindleの集英社セール一覧、kindleセール品の中で集英社のものを一覧で表示します。`}/>
+export const Head = () => <Seo title="kindleの小学館セール一覧、kindle本セール品を一覧で表示する「kindleセールチェック」" 
+description={`kindleの小学館セール一覧、kindleセール品の中で小学館のものを一覧で表示します。`}/>
 
 export const pageQuery = graphql`
 query MyQuery {
@@ -93,7 +93,7 @@ query MyQuery {
   allFile(
     sort: {fields: {slug: ASC}}
     limit: 1000
-    filter: {extension: {eq: "json"}, childJson: {Pubtag: {regex: "/集英社/"}}}
+    filter: {extension: {eq: "json"}, childJson: {Pubtag: {regex: "/小学館/"}}}
   ) {
     nodes {
       childJson {
