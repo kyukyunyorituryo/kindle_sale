@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Amazons from "../components/amazons"
+import Paginate from "../components/paginate"
 import Share from "../components/share"
 
 const BlogPostTemplate = ({
@@ -44,7 +44,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           })}
           </p>
         </header>
-        <Amazons book={book} />
+        <Paginate itemsPerPage={10} items={book} />
         <hr />
         <Share
           title={data.file.childrenJson[0].Saletitle}

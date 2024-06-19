@@ -21,16 +21,11 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-              <List url="https://amzn.to/4apng1E" title="【最大50％還元】Kindle本 ポイントキャンペーン　５月３０日 まで" />
-              <List url="https://amzn.to/4arwXN7" title="【最大50％還元】Kindle本 ポイントキャンペーン｜SBクリエイティブ特集　５月３０日 まで" />
-              <List url="https://amzn.to/3yqBZvV" title="【最大50％還元】Kindle本 ポイントキャンペーン　漫画　５月３０日 まで" />
-              <List url="https://amzn.to/3K6r4tN" title="【最大50％還元】Kindle本 ポイントキャンペーン　ライトノベル　５月３０日 まで" />
-              <List url="https://amzn.to/3wIQY3P" title="【最大50％還元】Kindle本 ポイントキャンペーン　小説　５月３０日 まで" />
-              <List url="https://amzn.to/4bJD4gF" title="【最大50％還元】Kindle本 ポイントキャンペーン　趣味・実用　５月３０日 まで" />
-              <List url="https://amzn.to/4ax2hK9" title="【最大50％還元】Kindle本 ポイントキャンペーン　タレント写真集　５月３０日 まで" />
 
-              <List url="https://amzn.to/3Ka1l3G" title="【最大50％還元】Kindle本 ポイントキャンペーン　竹書房のおすすめ　５月３０日 まで" />
-              <List url="https://amzn.to/3K3YV6V" title="【最大50％還元】Kindle本 ポイントキャンペーン　文藝春秋のおすすめ　５月３０日 まで" />
+
+<List url="https://amzn.to/3Vgp0ov" title="Gakkenグループ 夏の特大フェア　最大70%off　６月２０日 まで" />
+<List url="https://amzn.to/4bftPV7" title="Kindle本 ノンフィクションセール　最大60％OFF　６月２３日 まで" />
+<List url="https://amzn.to/4aC9ucd" title="Kindle Unlimited定額読み放題" />
 
 
                   </ol>
