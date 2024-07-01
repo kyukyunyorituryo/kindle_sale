@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react"
 import {  graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Share from "../components/share"
-import Paginate from "../components/paginate"
+import Search from "../components/search"
 const Free = ({
   data,
   location,
@@ -27,10 +27,10 @@ catetag=catetag.filter(x => catesafe.includes(x))
 var freetitle=`無料本まとめ`
 pubtag.length=10
 catetag.length=10
-console.log(book.length)//.slice(2, 5))
+//console.log(book)//.slice(2, 5))
 const siteTitle = data.site.siteMetadata?.title || `Title`
   // Example items, to simulate fetching from another resources.
-  
+
 
     return (
     <>
@@ -44,7 +44,8 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           <h1 itemProp="headline"> {`「Kindleセール」`+ freetitle}</h1>
           {}
         </header>
-        <Paginate itemsPerPage={10} items={book} />
+                      <Search book={book} catetag={catetag}/>
+
         <hr />
         <Share
           title={freetitle}

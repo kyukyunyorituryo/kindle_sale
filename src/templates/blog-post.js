@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Paginate from "../components/paginate"
+import Search from "../components/search"
 import Share from "../components/share"
 
 const BlogPostTemplate = ({
@@ -35,16 +35,19 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
                     <button>{pubtag}</button>
                  // </Link>
           )
-          })}カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
+          })}
+              {/*
+          カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
           return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
                     <button>{catetag}</button>
                  // </Link>
           )
           })}
+          */}
           </p>
         </header>
-        <Paginate itemsPerPage={10} items={book} />
+                      <Search book={book} catetag={catetag}/>
         <hr />
         <Share
           title={data.file.childrenJson[0].Saletitle}

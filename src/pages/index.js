@@ -23,8 +23,11 @@ const BlogIndex = ({ data, location }) => {
       >
 
 
-<List url="https://amzn.to/3Vgp0ov" title="Gakkenグループ 夏の特大フェア　最大70%off　６月２０日 まで" />
-<List url="https://amzn.to/4bftPV7" title="Kindle本 ノンフィクションセール　最大60％OFF　６月２３日 まで" />
+<List url="https://amzn.to/3L1ysYc" title="【Prime Day】 最大80%OFF Kindle本(電子書籍) セール　７月１７日 まで" />
+<List url="https://amzn.to/4eCTDxa" title="【Prime Day】マンガ・コミックのおすすめタイトル　最大80%OFF　７月１７日 まで" />
+<List url="https://amzn.to/45NArbZ" title="【Prime Day】秋田書店のおすすめタイトル　最大80%OFF　７月１７日 まで" />
+<List url="https://amzn.to/3zf1iSe" title="【Prime Day】一迅社のおすすめタイトル　最大80%OFF　７月１７日 まで" />
+<List url="https://amzn.to/3VHE3Yf" title="【Prime Day】早川書房のおすすめタイトル　最大80%OFF　７月１７日 まで" />
 <List url="https://amzn.to/4aC9ucd" title="Kindle Unlimited定額読み放題" />
 
 

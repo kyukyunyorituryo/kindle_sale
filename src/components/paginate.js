@@ -19,7 +19,7 @@ const Paginate = ({ itemsPerPage,items }) => {
     // (This could be items from props; or items loaded in a local state
     // from an API endpoint with useEffect and useState)
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+//    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = items.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(items.length / itemsPerPage);
   
@@ -36,22 +36,28 @@ const Paginate = ({ itemsPerPage,items }) => {
       <>
            <ReactPaginate
           breakLabel="..."
-          nextLabel="next >"
+          nextLabel="次へ>"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={3}
           pageCount={pageCount}
-          previousLabel="< previous"
+          previousLabel="<前へ"
           renderOnZeroPageCount={null}
+          containerClassName={'pagination'} /* as this work same as bootstrap class */
+subContainerClassName={'pages pagination'} /* as this work same as bootstrap class */
+activeClassName={'active'} /* as this work same as bootstrap class */
         />
         <Items currentItems={currentItems} />
         <ReactPaginate
           breakLabel="..."
-          nextLabel="next >"
+          nextLabel="次へ>"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={3}
           pageCount={pageCount}
-          previousLabel="< previous"
+          previousLabel="<前へ"
           renderOnZeroPageCount={null}
+          containerClassName={'pagination'} /* as this work same as bootstrap class */
+subContainerClassName={'pages pagination'} /* as this work same as bootstrap class */
+activeClassName={'active'} /* as this work same as bootstrap class */
         />
       </>
     );

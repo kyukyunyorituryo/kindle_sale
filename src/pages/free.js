@@ -1,10 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Amazons from "../components/amazons"
 import Share from "../components/share"
+import Paginate from "../components/paginate"
 
 const Free = ({
   data,
@@ -37,6 +37,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
       >
         <header>
           <h1 itemProp="headline"> {`「Kindleセール」`+ freetitle}</h1>
+          <p>セール全体から無料の本をまとめたページ</p>
           {/*
           <p>{data.allJson.nodes[0].Date}　出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
           return (
@@ -54,7 +55,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           </p>
           */}
         </header>
-        <Amazons book={book} />
+        <Paginate itemsPerPage={10} items={book} />
         <hr />
         <Share
           title={freetitle}
