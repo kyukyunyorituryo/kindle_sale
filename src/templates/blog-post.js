@@ -32,7 +32,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           <p>{data.file.childrenJson[0].Date}　出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
           return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <button>{pubtag}</button>
+                    <label>{pubtag}</label>
                  // </Link>
           )
           })}
@@ -40,7 +40,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
           return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <button>{catetag}</button>
+                    <label>{catetag}</label>
                  // </Link>
           )
           })}
