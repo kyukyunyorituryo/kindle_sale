@@ -54,9 +54,9 @@ const Search = ({ book, catetag }) => {
       {/* カテゴリー選択ボタン */}
       <div>
         <h4>クリックしてカテゴリーで絞り込みが可能</h4>
-        <button onClick={() => selectCategory("all")}>全て</button>
+        <button className="categorybutton" onClick={() => selectCategory("all")}>全て</button>
         {categories.map((category) => (
-          <button onClick={() => selectCategory(category)}>{category}</button>
+          <button className="categorybutton" onClick={() => selectCategory(category)}>{category}</button>
         ))}
       </div>
             {/* フリーキーワード検索フォーム */}

@@ -21,8 +21,8 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-
-
+<List url="https://amzn.to/3xzNNfu" title="Gakkenグループ大感謝フェア　40%ポイントバック　７月１７日 まで" />
+<List url="https://amzn.to/45Pp57r" title="Prime Day 「ヤングジャンプ」大人気シリーズが最大50%ポイント還元　７月１７日 まで" />
 <List url="https://amzn.to/3L1ysYc" title="【Prime Day】 最大80%OFF Kindle本(電子書籍) セール　７月１７日 まで" />
 <List url="https://amzn.to/4eCTDxa" title="【Prime Day】マンガ・コミックのおすすめタイトル　最大80%OFF　７月１７日 まで" />
 <List url="https://amzn.to/45NArbZ" title="【Prime Day】秋田書店のおすすめタイトル　最大80%OFF　７月１７日 まで" />
@@ -60,14 +60,14 @@ const BlogIndex = ({ data, location }) => {
                    出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
                   return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <button>{pubtag}</button>
+                    <label>{pubtag}</label>
                   //</Link>
                       )
                     })}
                    カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
                   return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <button>{catetag}</button>
+                    <label>{catetag}</label>
                   //</Link>
                       )
                     })}

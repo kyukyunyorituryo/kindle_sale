@@ -38,13 +38,6 @@ pathPrefix: "/kindle_sale",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -59,7 +52,7 @@ pathPrefix: "/kindle_sale",
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/static/json/`,
+        path: `${__dirname}/content/json/`,
       },
     },
     {
