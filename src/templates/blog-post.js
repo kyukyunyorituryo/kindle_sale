@@ -16,8 +16,6 @@ var book = data.file.childrenJson
 var pubtag=data.file.childrenJson[0].Pubtag.split(',')
 var catetag=data.file.childrenJson[0].Catetag.split(',')
 catetag=catetag.filter(x => catesafe.includes(x))
-pubtag.length=10
-catetag.length=10
 const siteTitle = data.site.siteMetadata?.title || `Title`
     return (
     <>
@@ -29,25 +27,10 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
       >
         <header>
           <h1 itemProp="headline">「Kindleセール」　{data.file.childrenJson[0].Saletitle}</h1>
-          <p>{data.file.childrenJson[0].Date}　出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
-          return (
-                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <label>{pubtag}</label>
-                 // </Link>
-          )
-          })}
-              {/*
-          カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
-          return (
-                  //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <label>{catetag}</label>
-                 // </Link>
-          )
-          })}
-          */}
+          <p>{data.file.childrenJson[0].Date}
           </p>
         </header>
-                      <Search book={book} catetag={catetag}/>
+                      <Search book={book} catetag={catetag} pubtag={pubtag}/>
         <hr />
         <Share
           title={data.file.childrenJson[0].Saletitle}

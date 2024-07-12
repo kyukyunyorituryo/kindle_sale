@@ -94,7 +94,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="kindle本セール品を一覧で表示する「kindleセールチェック」" />
+export const Head = ({data}) => <Seo title="kindle本セール品を一覧で表示する「kindleセールチェック」"  ogpimage="https://kyukyunyorituryo.github.io/i/densho512.png" description={data.site.siteMetadata.description}/>
 
 export const pageQuery = graphql`
 query MyQuery {
@@ -103,6 +103,7 @@ query MyQuery {
       title
       catesafe
       siteUrl
+      description
     }
   }
   allFile(

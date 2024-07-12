@@ -43,14 +43,14 @@ const Manga = ({ data, location }) => {
                    出版社：{pubtag && pubtag.length > 0 && pubtag.map(pubtag => {
                   return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <button>{pubtag}</button>
+                    <label>{pubtag}</label>
                   //</Link>
                       )
                     })}
                    カテゴリ：{catetag && catetag.length > 0 && catetag.map(catetag => {
                   return (
                   //<Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                    <button>{catetag}</button>
+                    <label>{catetag}</label>
                   //</Link>
                       )
                     })}

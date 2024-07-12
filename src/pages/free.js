@@ -4,7 +4,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Share from "../components/share"
-import Paginate from "../components/paginate"
+import Search from "../components/search"
 
 const Free = ({
   data,
@@ -12,20 +12,20 @@ const Free = ({
 }) => {
 var book = data.allJson.nodes
  const catesafe =data.site.siteMetadata.catesafe
- if(data.allJson.nodes[0].Pubtag){
-var pubtag=data.allJson.nodes[0].Pubtag.split(',')
-}else {
-  pubtag=["出版社なし"]
-}
- if(data.allJson.nodes[0].Catetag){
-var catetag=data.allJson.nodes[0].Catetag.split(',')
-}else {
-  catetag=["カテゴリーなし"]
-}
+const publist = book.map((num) => {
+  return num.Publisher;
+});
+
+const pubtag=[...new Set(publist)];
+
+const catelist = book.flatMap((num) => {
+  return num.Category.split(',');
+});
+
+var catetag=[...new Set(catelist)];
+
 catetag=catetag.filter(x => catesafe.includes(x))
 var freetitle=`無料本まとめ`
-pubtag.length=10
-catetag.length=10
 const siteTitle = data.site.siteMetadata?.title || `Title`
     return (
     <>
@@ -55,7 +55,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           </p>
           */}
         </header>
-        <Paginate itemsPerPage={10} items={book} />
+                      <Search book={book} catetag={catetag} pubtag={pubtag}/>
         <hr />
         <Share
           title={freetitle}
@@ -106,6 +106,9 @@ query MyQuery {
       Date(formatString: "YYYY年MM月DD日")
       Catetag
       Pubtag
+      ReleaseDate
+      ImageURL_m
+      ImageURL_s
     }
   }      site {
       siteMetadata {
