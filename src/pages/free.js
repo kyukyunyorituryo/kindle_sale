@@ -104,8 +104,6 @@ query MyQuery {
       URL
       Saletitle
       Date(formatString: "YYYY年MM月DD日")
-      Catetag
-      Pubtag
       ReleaseDate
       ImageURL_m
       ImageURL_s

@@ -37,7 +37,7 @@ query MyQuery {
         posts.forEach(({ node, getNode }) => {
             createPage({
                 path: node.fields.slug,
-                component: path.resolve(`src/templates/blog-post.js`),
+                component: path.resolve(__dirname, `src/templates/blog-post.js`),
                 context: {
                     // Data passed to context is available
                     // in page queries as GraphQL variables.
@@ -60,3 +60,17 @@ if (node.internal.mediaType === 'application/json') {
   }
 
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type Json implements Node {
+      ReleaseDate: String,
+      ImageURL_m: String,
+      ImageURL_s: String,
+    }
+  `
+  createTypes(typeDefs)
+}
+
+{/**/}

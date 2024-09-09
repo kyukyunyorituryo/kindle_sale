@@ -14,21 +14,13 @@ const BlogIndex = ({ data, location }) => {
   const catesafe =data.site.siteMetadata.catesafe
   return (
       <Layout location={location} title={siteTitle}>
-<p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<br/><Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
 
-<p>出版社ごとのセール一覧：<Link to="/kadokawa">KADOKAWA</Link>、<Link to="/kodansha">講談社</Link>、<Link to="/akitashoten">秋田書店</Link>、<Link to="/hakusensha">白泉社</Link>、<Link to="/shueisha">集英社</Link>、<Link to="/tokuma">徳間書店</Link>、<Link to="/shougakukan">小学館</Link></p>
-<p>カテゴリごとのセール一覧：<Link to="/manga">漫画</Link>、<Link to="/lightnovel">ライトノベル</Link>、<Link to="/novel">小説</Link></p>
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-<List url="https://amzn.to/3xzNNfu" title="Gakkenグループ大感謝フェア　40%ポイントバック　７月１７日 まで" />
-<List url="https://amzn.to/45Pp57r" title="Prime Day 「ヤングジャンプ」大人気シリーズが最大50%ポイント還元　７月１７日 まで" />
-<List url="https://amzn.to/3L1ysYc" title="【Prime Day】 最大80%OFF Kindle本(電子書籍) セール　７月１７日 まで" />
-<List url="https://amzn.to/4eCTDxa" title="【Prime Day】マンガ・コミックのおすすめタイトル　最大80%OFF　７月１７日 まで" />
-<List url="https://amzn.to/45NArbZ" title="【Prime Day】秋田書店のおすすめタイトル　最大80%OFF　７月１７日 まで" />
-<List url="https://amzn.to/3zf1iSe" title="【Prime Day】一迅社のおすすめタイトル　最大80%OFF　７月１７日 まで" />
-<List url="https://amzn.to/3VHE3Yf" title="【Prime Day】早川書房のおすすめタイトル　最大80%OFF　７月１７日 まで" />
-<List url="https://amzn.to/4aC9ucd" title="Kindle Unlimited定額読み放題" />
+<List url="https://amzn.to/3ARLhm2" title="幻冬舎　本祭 約2500冊が最大70％OFF　９月２６日まで" />
+<List url="https://amzn.to/3ZeUcb0" title="【最大70%OFF】 電本フェス　前夜祭 約1000 点対象　９月１２日まで" />
+<List url="https://amzn.to/4cO3Tk6" title="【最大80％OFF】Kindle本(電子書籍) マンガ・ライトノベル セール　９月１２日まで" />
 
 
                   </ol>

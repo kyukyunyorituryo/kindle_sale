@@ -13,7 +13,7 @@ const Kodansha = ({ data, location }) => {
   const catesafe =data.site.siteMetadata.catesafe
   return (
       <Layout location={location} title={siteTitle}>
-<p>Kindle本のセールを一覧で表示するサイトです。アマゾン以外のセール品と比較することで、アマゾンサイトで紹介されていないセール品まで網羅しています。<Link to="/sort">新しい順番に表示</Link>、<Link to="/free">無料本まとめ</Link></p>
+
 
                   <h1 class="main-heading">kindleの講談社セール一覧</h1>
                   <ol style={{ listStyle: `none` }}
