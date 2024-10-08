@@ -5,7 +5,7 @@ import Paginate from "../components/paginate"
 const Search = ({ book, catetag, pubtag }) => {
   const [showPosts, setShowPosts] = useState(book);
   const [inputValue, setInputValue] = useState();
-console.log(book)
+//console.log(book)
   // カテゴリーリスト
   const categories =catetag //["コミック","小説","少年コミック"]
   // カテゴリー絞り込み

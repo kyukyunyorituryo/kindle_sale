@@ -18,9 +18,14 @@ const BlogIndex = ({ data, location }) => {
 <h1 class="main-heading">Amazon主催のセール</h1>
       <ol style={{ listStyle: `none` }}
       >
-<List url="https://amzn.to/3ARLhm2" title="幻冬舎　本祭 約2500冊が最大70％OFF　９月２６日まで" />
-<List url="https://amzn.to/3ZeUcb0" title="【最大70%OFF】 電本フェス　前夜祭 約1000 点対象　９月１２日まで" />
-<List url="https://amzn.to/4cO3Tk6" title="【最大80％OFF】Kindle本(電子書籍) マンガ・ライトノベル セール　９月１２日まで" />
+<List url="https://amzn.to/3TUgImn" title="秋マン!!2024 ジャンプコミックス 50%ポイント還元" />
+<List url="https://amzn.to/47Vcgta" title="秋マン!!2024 ジャンプコミックス 50%ポイント還元　１０月１６日まで" />
+<List url="https://amzn.to/3Y2tlgu" title="Gakkenグループ 秋の特大フェア １０月１７日まで" />
+<List url="https://amzn.to/3XHkQXO" title="【最大70％OFF】Kindle本(電子書籍) 読書の秋セール　１０月１０日まで" />
+<List url="https://amzn.to/3zCDGHC" title="【50%OFF】　計8,000点以上!　ニコニコカドカワ祭2024　第１弾　１０月１０日まで" />
+<List url="https://amzn.to/4eIFcHg" title="講談社 Kindle本フェア" />
+<List url="https://amzn.to/4gtBWAS" title="Amazonマンガ　セール＆キャンペーン" />
+<List url="https://amzn.to/3XJ3OcV" title="出版社おすすめ セール＆キャンペーン" />
 
 
                   </ol>
