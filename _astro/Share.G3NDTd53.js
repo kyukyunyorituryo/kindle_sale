@@ -11,7 +11,7 @@ import{j as l}from"./jsx-runtime.u17CrQMm.js";import{a as w}from"./index.BzTowqF
           items-center\r
           justify-center\r
           gap-4\r
-        `,children:[l.jsx(ae,{url:r,title:`「電書ニュース記事」
+        `,children:[l.jsx(ae,{url:r,title:`「kndleセール」
 `+e,className:`\r
             transition\r
             hover:scale-110\r
