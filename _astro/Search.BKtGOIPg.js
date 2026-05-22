@@ -26,7 +26,7 @@ import{j as e}from"./jsx-runtime.u17CrQMm.js";import{a as x}from"./index.BzTowqF
                 `,children:r.Title}),e.jsxs("div",{className:`\r
                   text-xs text-gray-600\r
                   line-clamp-6\r
-                `,children:["価格：",Number(r.Price)||"なし","円",e.jsx("br",{}),"ポイント：",r.Points??0,e.jsx("br",{}),r.Contributor,e.jsx("br",{}),"出版社：",r.Publisher,e.jsx("br",{}),"カテゴリー：",r.Category?.split(",").slice(0,3).join(","),e.jsx("br",{}),"発売日：",s]})]})]},r.Asin||r.Title)})})},w=({itemsPerPage:t=20,items:c=[]})=>{const r=Array.isArray(c)?c:[],[s,h]=x.useState(0),a=Math.max(1,Math.ceil(r.length/t)),b=s*t,o=r.slice(b,b+t),l=u=>{h(u),typeof window<"u"&&window.scrollTo({top:0,behavior:"smooth"})},i=e.jsxs("div",{className:`\r
+                `,children:["価格：",r.Price!=null?`${Number(r.Price)}円`:"なし",e.jsx("br",{}),"ポイント：",r.Points??0,e.jsx("br",{}),r.Contributor,e.jsx("br",{}),"出版社：",r.Publisher,e.jsx("br",{}),"カテゴリー：",r.Category?.split(",").slice(0,3).join(","),e.jsx("br",{}),"発売日：",s]})]})]},r.Asin||r.Title)})})},w=({itemsPerPage:t=20,items:c=[]})=>{const r=Array.isArray(c)?c:[],[s,h]=x.useState(0),a=Math.max(1,Math.ceil(r.length/t)),b=s*t,o=r.slice(b,b+t),l=u=>{h(u),typeof window<"u"&&window.scrollTo({top:0,behavior:"smooth"})},i=e.jsxs("div",{className:`\r
       flex flex-wrap gap-2\r
       justify-center my-6\r
     `,children:[e.jsx("button",{onClick:()=>l(0),disabled:s===0,className:`\r
