@@ -22,7 +22,7 @@ import{j as e}from"./jsx-runtime.u17CrQMm.js";import{a as x}from"./index.BzTowqF
                 break-words\r
               `,children:[e.jsx("div",{className:`\r
                   text-sm font-semibold\r
-                  text-gray-900 line-clamp-2\r
+                  text-gray-900 line-clamp-3\r
                 `,children:r.Title}),e.jsxs("div",{className:`\r
                   text-xs text-gray-600\r
                   line-clamp-6\r
