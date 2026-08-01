@@ -12,7 +12,8 @@ import{j as l}from"./jsx-runtime.u17CrQMm.js";import{a as w}from"./index.BzTowqF
           justify-center\r
           gap-4\r
         `,children:[l.jsx(ae,{url:r,title:`「kndleセール」
-`+e,className:`\r
+`+e+`
+`,className:`\r
             transition\r
             hover:scale-110\r
           `,children:l.jsx(St,{round:!0,size:n})}),l.jsx(re,{url:r,className:`\r
