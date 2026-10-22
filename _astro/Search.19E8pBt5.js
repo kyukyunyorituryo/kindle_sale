@@ -1,4 +1,4 @@
-import{r as e,t}from"./react.DRF9c-uj.js";import{t as n}from"./jsx-runtime.F4oUwWSU.js";var r=e(t(),1),i=n(),a=({book:e=[]})=>{let t=r.useMemo(()=>{if(!Array.isArray(e))return[];let t=e.map(e=>{let t=e.ImageURL_m||e.ImageURL?.replace(/_SL500_/,`_SL160_`)||``,n=e.ImageURL_s||e.ImageURL?.replace(/_SL500_/,`_SL75_`)||``;return{...e,image_m:t,image_s:n}});return Array.from(new Map(t.map(e=>[e.Asin,e])).values())},[e]);return t.length===0?(0,i.jsx)(`div`,{id:`book`,children:`表示する商品がありません`}):(0,i.jsx)(`div`,{id:`book`,className:`\r
+import{r as e,t}from"./react.U0K16dSI.js";import{t as n}from"./jsx-runtime.BStGhoz9.js";var r=e(t(),1),i=n(),a=({book:e=[]})=>{let t=r.useMemo(()=>{if(!Array.isArray(e))return[];let t=e.map(e=>{let t=e.ImageURL_m||e.ImageURL?.replace(/_SL500_/,`_SL160_`)||``,n=e.ImageURL_s||e.ImageURL?.replace(/_SL500_/,`_SL75_`)||``;return{...e,image_m:t,image_s:n}});return Array.from(new Map(t.map(e=>[e.Asin,e])).values())},[e]);return t.length===0?(0,i.jsx)(`div`,{id:`book`,children:`表示する商品がありません`}):(0,i.jsx)(`div`,{id:`book`,className:`\r
         max-w-6xl mx-auto px-4 py-6\r
         grid gap-6\r
         grid-cols-2\r
